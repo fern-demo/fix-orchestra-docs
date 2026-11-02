@@ -17,19 +17,19 @@ The QuoteAck(35=CW) is available for optional use to acknowledge the request to 
 | 117 | [QuoteID](/fix/fields/tags-0-199#tag-117) | String | Optional | Contains the QuoteID(117) of a single Quote(35=S). |
 | 1166 | [QuoteMsgID](/fix/fields/tags-1000-1199#tag-1166) | String | Optional | Contains the QuoteMsgID(1166) of a single Quote(35=S) or QuoteCancel(35=Z). |
 | 131 | [QuoteReqID](/fix/fields/tags-0-199#tag-131) | String | Optional | Unique identifier for a QuoteRequest(35=R). |
-| 537 | [QuoteType](/fix/fields/tags-400-599#tag-537) | QuoteTypeCodeSet | Optional | Identifies the type of quote. An indicative quote is used to inform a counterparty of a market. An indicative quote does not result directly in a trade. A tradeable quote is submitted to a market and will result directly in a trade against other orders and quotes in a market. A restricted tradeable… |
+| 537 | [QuoteType](/fix/fields/tags-400-599#tag-537) | QuoteTypeCodeSet | Optional | Identifies the type of quote. An indicative quote is used to inform a counterparty of a market. An indicative quote does not result directly in a trade. A… |
 | 298 | [QuoteCancelType](/fix/fields/tags-200-399#tag-298) | QuoteCancelTypeCodeSet | Optional | Identifies the type of quote cancel. |
 | 1751 | [SecondaryQuoteID](/fix/fields/tags-1600-1799#tag-1751) | String | Optional | Assigned by the party which accepts the quote. Can be used to provide the quote identifier assigned by an exchange, marketplace or executing system. |
 | 1865 | [QuoteAckStatus](/fix/fields/tags-1800-1999#tag-1865) | QuoteAckStatusCodeSet | **Required** | Acknowledgement status of a Quote(35=S) or QuoteCancel(35=Z) message submission. |
 | 300 | [QuoteRejectReason](/fix/fields/tags-200-399#tag-300) | QuoteRejectReasonCodeSet | Optional | Conditionally required when QuoteAckStatus(1865) = 2(Rejected). |
 | 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328) | String | Optional | Identifies the reason for rejection. |
 | 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedRejectText(1665) field. |
-| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. If used, the ASCII (English) representation should also be specified in the RejectText(1328) field. |
-| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
-| 2706 | [QuoteAttributeGrp](/fix/groups/quote-attribute-grp) | Repeating group | Optional | The QuoteAttributeGrp component provides additional attributes about the quote. Attributes included in this component are primarily "indicators" that may be associated with regulatory requirements and are typically not part of normal trading activities. |
+| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. If used, the… |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
+| 2706 | [QuoteAttributeGrp](/fix/groups/quote-attribute-grp) | Repeating group | Optional | The QuoteAttributeGrp component provides additional attributes about the quote. Attributes included in this component are primarily "indicators" that may be… |
 | 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
 | 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text(58) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

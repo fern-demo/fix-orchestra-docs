@@ -18,7 +18,7 @@ subtitle: "The Settlement Instructions message provides the broker’s, the inst
 | 792 | [SettlInstReqRejCode](/fix/fields/tags-600-799#tag-792) | SettlInstReqRejCodeCodeSet | Optional | Required for SettlInstMode = 5. Used to provide reason for rejecting a Settlement Instruction Request message. |
 | 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Can be used to provide any additional rejection text where rejecting a Settlement Instruction Request message. |
 | 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text(58) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
 | 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | Required for SettlInstMode(160) = 4 and when referring to orders that where electronically submitted over FIX or otherwise assigned a ClOrdID. |
 | 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | **Required** | Date/time this message was generated |
 | 778 | [SettlInstGrp](/fix/groups/settl-inst-grp) | Repeating group | Optional |  |

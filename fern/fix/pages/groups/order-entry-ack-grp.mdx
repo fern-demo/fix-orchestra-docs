@@ -21,18 +21,18 @@ Each repetition starts with the first member listed. The count of repetitions is
 | 2429 | [OrderEntryAction](/fix/fields/tags-2400-2599#tag-2429) | OrderEntryActionCodeSet | Optional | Specifies the action to be taken for the given order. |
 | 2430 | [OrderEntryID](/fix/fields/tags-2400-2599#tag-2430) | int | Optional | Conditionally required when neither ClOrdID(11) nor OrderID(37) is provided. |
 | 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | Conditionally required when neither OrderEntryID(2430) nor OrderID(37) is provided. |
-| 41 | [OrigClOrdID](/fix/fields/tags-0-199#tag-41) | String | Optional | ClOrdID(11) of the previous non rejected order (NOT the initial order of the day) when canceling or replacing an order. Conditionally required when ClOrdID(11) is provided and message-chaining model is used. |
+| 41 | [OrigClOrdID](/fix/fields/tags-0-199#tag-41) | String | Optional | ClOrdID(11) of the previous non rejected order (NOT the initial order of the day) when canceling or replacing an order. Conditionally required when ClOrdID(11)… |
 | 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | Optional | Conditionally required when neither OrderEntryID(2430) nor ClOrdID(11) is provided. |
 | 103 | [OrdRejReason](/fix/fields/tags-0-199#tag-103) | OrdRejReasonCodeSet | Optional | Code to identify reason for order rejection. Note: Values 3, 4, and 5 will be used when rejecting an order due to pre-allocation information errors. |
 | 14 | [CumQty](/fix/fields/tags-0-199#tag-14) | Qty | Optional | Use to explicitly provide executed quantity. |
 | 151 | [LeavesQty](/fix/fields/tags-0-199#tag-151) | Qty | Optional | Use to explicitly provide remaining quantity. |
 | 84 | [CxlQty](/fix/fields/tags-0-199#tag-84) | Qty | Optional | Use to explicitly provide cancelled quantity. |
-| 40 | [OrdType](/fix/fields/tags-0-199#tag-40) | OrdTypeCodeSet | Optional | Order type. \*\*\* SOME VALUES ARE NO LONGER USED - See "Deprecated (Phased-out) Features and Supported Approach" \*\*\* (see Volume : "Glossary" for value definitions) |
+| 40 | [OrdType](/fix/fields/tags-0-199#tag-40) | OrdTypeCodeSet | Optional | Order type. \*\*\* SOME VALUES ARE NO LONGER USED - See "Deprecated (Phased-out) Features and Supported Approach" \*\*\* (see Volume : "Glossary" for value… |
 | 44 | [Price](/fix/fields/tags-0-199#tag-44) | Price | Optional | Price per unit of quantity (e.g. per share) |
 | 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | Optional | Side of order (see Volume : "Glossary" for value definitions) |
 | 59 | [TimeInForce](/fix/fields/tags-0-199#tag-59) | TimeInForceCodeSet | Optional | Specifies how long the order remains in effect. Absence of this field is interpreted as DAY. NOTE not applicable to CIV Orders. |
-| | [OrderQtyData](/fix/components/order-qty-data) | Component | Optional | The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is marked as "required" in a message either one of these three fields must be used to identify the amount: OrderQty, CashOrderQty or OrderPercent… |
-| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [OrderQtyData](/fix/components/order-qty-data) | Component | Optional | The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is… |
+| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 
 </StickyTable>
 

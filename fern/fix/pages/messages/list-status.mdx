@@ -12,12 +12,12 @@ subtitle: "The list status message is issued as the response to a List Status Re
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 66 | [ListID](/fix/fields/tags-0-199#tag-66) | String | **Required** | Unique identifier for list as assigned by institution, used to associate multiple individual orders. Uniqueness must be guaranteed within a single trading day. Firms which generate multi-day orders should consider embedding a date within the ListID field to assure uniqueness across days. |
+| 66 | [ListID](/fix/fields/tags-0-199#tag-66) | String | **Required** | Unique identifier for list as assigned by institution, used to associate multiple individual orders. Uniqueness must be guaranteed within a single trading day.… |
 | 429 | [ListStatusType](/fix/fields/tags-400-599#tag-429) | ListStatusTypeCodeSet | **Required** | Code to represent the status type. |
 | 82 | [NoRpts](/fix/fields/tags-0-199#tag-82) | int | **Required** | Total number of messages required to status complete list. |
 | 431 | [ListOrderStatus](/fix/fields/tags-400-599#tag-431) | ListOrderStatusCodeSet | **Required** | Code to represent the status of a list order. |
 | 1385 | [ContingencyType](/fix/fields/tags-1200-1399#tag-1385) | ContingencyTypeCodeSet | Optional | Defines the type of contingency. |
-| 1386 | [ListRejectReason](/fix/fields/tags-1200-1399#tag-1386) | ListRejectReasonCodeSet | Optional | Identifies the reason for rejection of a New Order List message. Note that OrdRejReason(103) is used if the rejection is based on properties of an individual order part of the List. |
+| 1386 | [ListRejectReason](/fix/fields/tags-1200-1399#tag-1386) | ListRejectReasonCodeSet | Optional | Identifies the reason for rejection of a New Order List message. Note that OrdRejReason(103) is used if the rejection is based on properties of an individual… |
 | 83 | [RptSeq](/fix/fields/tags-0-199#tag-83) | int | **Required** | Sequence number of this report message. |
 | 444 | [ListStatusText](/fix/fields/tags-400-599#tag-444) | String | Optional | Free format text string related to List Status. |
 | 445 | [EncodedListStatusTextLen](/fix/fields/tags-400-599#tag-445) | Length | Optional | Must be set if EncodedListStatusText field is specified and must immediately precede it. |

@@ -12,7 +12,7 @@ subtitle: "The TradeMatchReport(35=DC) message is used by exchanges and ECN’s 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and… |
 | 880 | [TrdMatchID](/fix/fields/tags-800-999#tag-880) | String | **Required** | Unique identifier common for all trades included in a match event. |
 | 574 | [MatchType](/fix/fields/tags-400-599#tag-574) | MatchTypeCodeSet | Optional | The point in the matching process at which this trade was matched. |
 | 856 | [TradeReportType](/fix/fields/tags-800-999#tag-856) | TradeReportTypeCodeSet | Optional | Type of Trade Report |
@@ -22,12 +22,12 @@ subtitle: "The TradeMatchReport(35=DC) message is used by exchanges and ECN’s 
 | 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | Optional | Used when reporting other than current day trades. |
 | 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Identifies the market |
 | 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is determined by market or counterparties. To specify good for session where session spans more than one calendar day, use TimeInForce = 0… |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures markets to identify exchange specific execution time bracket codes as required by US market regulations. Bilaterally agreed values of data… |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
 | 1430 | [VenueType](/fix/fields/tags-1400-1599#tag-1430) | VenueTypeCodeSet | Optional | Identifies the type of venue where a trade was executed |
-| 1888 | [TradeMatchTimestamp](/fix/fields/tags-1800-1999#tag-1888) | UTCTimestamp | Optional | Timestamp of the match event. For off-exchange trades the time at which the deal was matched by the exchange. This timestamp will be the same on all the trades and will not change when a trade is modified. |
+| 1888 | [TradeMatchTimestamp](/fix/fields/tags-1800-1999#tag-1888) | UTCTimestamp | Optional | Timestamp of the match event. For off-exchange trades the time at which the deal was matched by the exchange. This timestamp will be the same on all the trades… |
 | 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Time of the match event or transaction that resulted in this match report. |
-| 442 | [MultiLegReportingType](/fix/fields/tags-400-599#tag-442) | MultiLegReportingTypeCodeSet | Optional | Differentiates match events involving complex instruments (MultiLegReportingType(442)=3(multileg security)) from those only involving simple instruments (MultiLegReportingType(442)=1(single security)). MultiLegReportingType(442)=2(individual leg of multileg security) should not be used. |
+| 442 | [MultiLegReportingType](/fix/fields/tags-400-599#tag-442) | MultiLegReportingTypeCodeSet | Optional | Differentiates match events involving complex instruments (MultiLegReportingType(442)=3(multileg security)) from those only involving simple instruments… |
 | 1889 | [InstrmtMatchSideGrp](/fix/groups/instrmt-match-side-grp) | Repeating group | Optional | The InstrmtMatchSideGrp component is used to convey all trades for a given match event reported by instrument and trade side. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 

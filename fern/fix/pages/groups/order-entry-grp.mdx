@@ -18,12 +18,12 @@ Each repetition starts with the first member listed. The count of repetitions is
 | 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | Conditionally required when neither OrderEntryID(2430) nor OrderID(37) is provided. |
 | 41 | [OrigClOrdID](/fix/fields/tags-0-199#tag-41) | String | Optional | Conditionally required when OrderEntryAction(2429) is not "1" (Add), ClOrdID(11) was provided in original order, and message-chaining model is used. |
 | 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | Optional | Conditionally required when OrderEntryAction(2429) is not "1" (Add) and neither OrderEntryID(2430) nor ClOrdID(11) is provided. |
-| 40 | [OrdType](/fix/fields/tags-0-199#tag-40) | OrdTypeCodeSet | Optional | Conditionally required when OrderEntryAction (2429) = 1 (Add) or 2 (Modify). Only a subset of OrdType(40) values permitted that do not require additional pricing fields other than Price(44) field. |
+| 40 | [OrdType](/fix/fields/tags-0-199#tag-40) | OrdTypeCodeSet | Optional | Conditionally required when OrderEntryAction (2429) = 1 (Add) or 2 (Modify). Only a subset of OrdType(40) values permitted that do not require additional… |
 | 44 | [Price](/fix/fields/tags-0-199#tag-44) | Price | Optional | Conditionally required when OrdType(40) = 2 (Limit) |
 | 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | Optional | Conditionally required when OrderEntryAction(2429) = 1 (Add) or 2 (Modify) |
 | 59 | [TimeInForce](/fix/fields/tags-0-199#tag-59) | TimeInForceCodeSet | Optional | Only subset of values permitted that do not require additional fields |
-| | [OrderQtyData](/fix/components/order-qty-data) | Component | Optional | The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is marked as "required" in a message either one of these three fields must be used to identify the amount: OrderQty, CashOrderQty or OrderPercent… |
-| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [OrderQtyData](/fix/components/order-qty-data) | Component | Optional | The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is… |
+| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 
 </StickyTable>
 

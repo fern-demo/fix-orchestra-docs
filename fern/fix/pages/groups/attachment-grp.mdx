@@ -15,13 +15,13 @@ Each repetition starts with the first member listed. The count of repetitions is
 |---|---|---|---|---|
 | 2105 | [AttachmentName](/fix/fields/tags-2000-2199#tag-2105) | String | Optional | Required if NoAttachments(2104) &gt; 0. |
 | 2106 | [AttachmentMediaType](/fix/fields/tags-2000-2199#tag-2106) | String | Optional | Required if EncodedAttachment(2112) is present. |
-| 2107 | [AttachmentClassification](/fix/fields/tags-2000-2199#tag-2107) | String | Optional | Specifies semantically the type of the attached document from a business perspective. The default classification scheme reuses the FIX standard classification scheme of a high level section (pretrade, trade, posttrade, etc.) and a category, then a specific application or document type. The… |
+| 2107 | [AttachmentClassification](/fix/fields/tags-2000-2199#tag-2107) | String | Optional | Specifies semantically the type of the attached document from a business perspective. The default classification scheme reuses the FIX standard classification… |
 | 2108 | [AttachmentExternalURL](/fix/fields/tags-2000-2199#tag-2108) | String | Optional | Either AttachmentExternalURL(2108) or EncodedAttachment(2112) must be specified if NoAttachments(2104) &gt; 0. |
 | 2109 | [AttachmentEncodingType](/fix/fields/tags-2000-2199#tag-2109) | AttachmentEncodingTypeCodeSet | Optional | Required if EncodedAttachment(2112) is present. |
 | 2110 | [UnencodedAttachmentLen](/fix/fields/tags-2000-2199#tag-2110) | int | Optional | Unencoded content length in bytes. Can be used to validate successful unencoding. |
 | 2111 | [EncodedAttachmentLen](/fix/fields/tags-2000-2199#tag-2111) | Length | Optional | Must be set if EncodedAttachment(2112) is specified and must immediately precede it. |
 | 2112 | [EncodedAttachment](/fix/fields/tags-2000-2199#tag-2112) | data | Optional | Either AttachmentExternalURL(2108) or EncodedAttachment(2112) must be specified if NoAttachments(2104) &gt; 0. |
-| 2113 | [AttachmentKeywordGrp](/fix/groups/attachment-keyword-grp) | Repeating group | Optional | The AttachmentKeywordGrp component provides a place to associate keywords with an attachment document to support the current approach of tagging to support metadata. |
+| 2113 | [AttachmentKeywordGrp](/fix/groups/attachment-keyword-grp) | Repeating group | Optional | The AttachmentKeywordGrp component provides a place to associate keywords with an attachment document to support the current approach of tagging to support… |
 
 </StickyTable>
 

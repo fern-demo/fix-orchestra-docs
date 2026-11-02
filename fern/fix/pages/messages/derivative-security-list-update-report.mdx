@@ -12,12 +12,12 @@ subtitle: "The Derivative Security List Update Report message is used to send up
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and… |
 | 320 | [SecurityReqID](/fix/fields/tags-200-399#tag-320) | String | Optional | Unique ID of a Security Definition Request. |
 | 322 | [SecurityResponseID](/fix/fields/tags-200-399#tag-322) | String | Optional | Identifier for the Derivative Security List message |
 | 560 | [SecurityRequestResult](/fix/fields/tags-400-599#tag-560) | SecurityRequestResultCodeSet | Optional | Result of the Security Request identified by SecurityReqID |
 | 980 | [SecurityUpdateAction](/fix/fields/tags-800-999#tag-980) | SecurityUpdateActionCodeSet | Optional | Updates can be applied to Underlying or option class. If Series information provided, then Series has explicitly changed |
-| | [UnderlyingInstrument](/fix/components/underlying-instrument) | Component | Optional | The UnderlyingInstrument component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In the case of the UnderlyingInstrument component block it describes an instrument which underlies the primary instrument Refer to the Instrument… |
+| | [UnderlyingInstrument](/fix/components/underlying-instrument) | Component | Optional | The UnderlyingInstrument component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In… |
 | | [DerivativeSecurityDefinition](/fix/components/derivative-security-definition) | Component | Optional |  |
 | 779 | [LastUpdateTime](/fix/fields/tags-600-799#tag-779) | UTCTimestamp | Optional | Represents the time at which a security was last updated |
 | 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |

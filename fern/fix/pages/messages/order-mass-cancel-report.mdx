@@ -12,7 +12,7 @@ subtitle: "The Order Mass Cancel Report is used to acknowledge an Order Mass Can
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | ClOrdID provided on the Order Mass Cancel Request. Unavailable in case of an unsolicited report, such as after a trading halt or a corporate action requiring the deletion of outstanding orders. |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | ClOrdID provided on the Order Mass Cancel Request. Unavailable in case of an unsolicited report, such as after a trading halt or a corporate action requiring… |
 | 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
 | 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | **Required** | Unique Identifier for the Order Mass Cancel Request assigned by the recipient of the Order Mass Cancel Request. |
 | 1369 | [MassActionReportID](/fix/fields/tags-1200-1399#tag-1369) | String | **Required** | Unique Identifier for the Order Mass Cancel Report assigned by the recipient of the Order Mass Cancel Request |
@@ -24,11 +24,11 @@ subtitle: "The Order Mass Cancel Report is used to acknowledge an Order Mass Can
 | 534 | [AffectedOrdGrp](/fix/groups/affected-ord-grp) | Repeating group | Optional |  |
 | 1370 | [NotAffectedOrdGrp](/fix/groups/not-affected-ord-grp) | Repeating group | Optional |  |
 | 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Trading Session in which orders are to be canceled |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures markets to identify exchange specific execution time bracket codes as required by US market regulations. Bilaterally agreed values of data… |
-| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
 | 1461 | [TargetParties](/fix/groups/target-parties) | Repeating group | Optional |  |
-| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
-| | [UnderlyingInstrument](/fix/components/underlying-instrument) | Component | Optional | The UnderlyingInstrument component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In the case of the UnderlyingInstrument component block it describes an instrument which underlies the primary instrument Refer to the Instrument… |
+| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
+| | [UnderlyingInstrument](/fix/components/underlying-instrument) | Component | Optional | The UnderlyingInstrument component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In… |
 | 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Identifies the market |
 | 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
 | 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | Optional | Side of the market specified on the Order Mass Cancel Request |

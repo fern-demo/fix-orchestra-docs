@@ -12,7 +12,7 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1824 | [AffectedOrigClOrdID](/fix/fields/tags-1800-1999#tag-1824) | String | Optional | Required if NoAffectedOrders(534) &gt; 0. Indicates the client order id of an order affected by this request. If order(s) were manually delivered (or otherwise not delivered over FIX and not assigned a ClOrdID(11)) this field should contain string "MANUAL". |
+| 1824 | [AffectedOrigClOrdID](/fix/fields/tags-1800-1999#tag-1824) | String | Optional | Required if NoAffectedOrders(534) &gt; 0. Indicates the client order id of an order affected by this request. If order(s) were manually delivered (or otherwise not… |
 | 535 | [AffectedOrderID](/fix/fields/tags-400-599#tag-535) | String | Optional | Contains the OrderID(37) assigned by the counterparty of an affected order. Conditionally required when AffectedOrigClOrdID(1824) = "MANUAL". |
 | 536 | [AffectedSecondaryOrderID](/fix/fields/tags-400-599#tag-536) | String | Optional | Contains the SecondaryOrderID(198) assigned by the counterparty of an affected order. |
 

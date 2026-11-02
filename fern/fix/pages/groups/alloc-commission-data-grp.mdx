@@ -15,15 +15,15 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2654 | [AllocCommissionAmount](/fix/fields/tags-2600-2799#tag-2654) | Amt | Optional | Required if NoAllocCommissions(2653) &gt; 0. If the commission is based on a percentage of trade quantity or a factor of "unit of measure", AllocCommissionRate(2660) and AllocCommissionUnitOfMeasure(2658) may also be specified as appropriate. |
+| 2654 | [AllocCommissionAmount](/fix/fields/tags-2600-2799#tag-2654) | Amt | Optional | Required if NoAllocCommissions(2653) &gt; 0. If the commission is based on a percentage of trade quantity or a factor of "unit of measure",… |
 | 2655 | [AllocCommissionAmountType](/fix/fields/tags-2600-2799#tag-2655) | CommissionAmountTypeCodeSet | Optional | Required if NoAllocCommissions(2653) &gt; 0. |
 | 2726 | [AllocCommissionAmountSubType](/fix/fields/tags-2600-2799#tag-2726) | CommissionAmountSubTypeCodeSet | Optional | Further sub classification of the AllocCommissionAmountType(2655). |
 | 2656 | [AllocCommissionBasis](/fix/fields/tags-2600-2799#tag-2656) | CommTypeCodeSet | Optional | Required if NoAllocCommissions(2653) &gt; 0. |
 | 2657 | [AllocCommissionCurrency](/fix/fields/tags-2600-2799#tag-2657) | Currency | Optional | Specifies the currency denomination of the commission amount if different from the trade's currency. Uses ISO 4217 currency codes. |
 | 2658 | [AllocCommissionUnitOfMeasure](/fix/fields/tags-2600-2799#tag-2658) | UnitOfMeasureCodeSet | Optional | The commission rate unit of measure. |
 | 2659 | [AllocCommissionUnitOfMeasureCurrency](/fix/fields/tags-2600-2799#tag-2659) | Currency | Optional | Indicates the currency of the unit of measure. Conditionally required when AllocCommissionUnitOfMeasure(2658) = Ccy (Currency). |
-| 2660 | [AllocCommissionRate](/fix/fields/tags-2600-2799#tag-2660) | float | Optional | The commission rate when AllocCommissionAmount(2654) is based on a percentage of quantity, amount per unit or a factor of "unit of measure". If the rate is a percentage or expressed in basis points, use the decimalized form, e.g. "0.05" for a 5% commission or "0.005" for 50 basis points. |
-| 2661 | [AllocCommissionSharedIndicator](/fix/fields/tags-2600-2799#tag-2661) | Boolean | Optional | Indicates whether the amount in AllocCommissionAmount(2654) is to be shared with a third party, e.g. as part of a directed brokerage commission sharing arrangement. |
+| 2660 | [AllocCommissionRate](/fix/fields/tags-2600-2799#tag-2660) | float | Optional | The commission rate when AllocCommissionAmount(2654) is based on a percentage of quantity, amount per unit or a factor of "unit of measure". If the rate is a… |
+| 2661 | [AllocCommissionSharedIndicator](/fix/fields/tags-2600-2799#tag-2661) | Boolean | Optional | Indicates whether the amount in AllocCommissionAmount(2654) is to be shared with a third party, e.g. as part of a directed brokerage commission sharing… |
 | 2662 | [AllocCommissionAmountShared](/fix/fields/tags-2600-2799#tag-2662) | Amt | Optional | If specified, AllocCommissionSharedIndicator(2661) must be set to "Y". |
 | 2663 | [AllocCommissionLegRefID](/fix/fields/tags-2600-2799#tag-2663) | String | Optional | This field may be used for multi-leg trades sent as a single message to indicate that the entry applies only to a specific leg. |
 | 2664 | [AllocCommissionDesc](/fix/fields/tags-2600-2799#tag-2664) | String | Optional | Description of the commission. |

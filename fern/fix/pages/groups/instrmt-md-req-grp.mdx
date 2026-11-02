@@ -12,18 +12,18 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | | [InstrumentExtension](/fix/components/instrument-extension) | Component | Optional | The InstrumentExtension component block identifies additional security attributes that are more commonly found for Fixed Income securities. |
-| | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This component identifies the legal agreement under which the deal was made and other unique characteristics of the transaction. For example, the… |
+| | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This… |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
-| 1647 | [RelatedInstrumentGrp](/fix/groups/related-instrument-grp) | Repeating group | Optional | The RelatedInstrumentGrp is a repeating component at the same hierarchical level as the Instrument component, describing relationships and linkages between the Instrument, UnderlyingInstrument and InstrumentLeg entries. If all instances of the UnderlyingInstrument in the message are true underliers… |
+| 1647 | [RelatedInstrumentGrp](/fix/groups/related-instrument-grp) | Repeating group | Optional | The RelatedInstrumentGrp is a repeating component at the same hierarchical level as the Instrument component, describing relationships and linkages between the… |
 | | [SpreadOrBenchmarkCurveData](/fix/components/spread-or-benchmark-curve-data) | Component | Optional | The SpreadOrBenchmarkCurveData component block is primarily used for Fixed Income to convey spread to a benchmark security or curve. |
-| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency value whenever possible. See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values. |
-| 537 | [QuoteType](/fix/fields/tags-400-599#tag-537) | QuoteTypeCodeSet | Optional | Identifies the type of quote. An indicative quote is used to inform a counterparty of a market. An indicative quote does not result directly in a trade. A tradeable quote is submitted to a market and will result directly in a trade against other orders and quotes in a market. A restricted tradeable… |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
+| 537 | [QuoteType](/fix/fields/tags-400-599#tag-537) | QuoteTypeCodeSet | Optional | Identifies the type of quote. An indicative quote is used to inform a counterparty of a market. An indicative quote does not result directly in a trade. A… |
 | 63 | [SettlType](/fix/fields/tags-0-199#tag-63) | SettlTypeCodeSet | Optional | For NDFs either SettlType (specifying the tenor) or SettlDate must be specified. |
 | 64 | [SettlDate](/fix/fields/tags-0-199#tag-64) | LocalMktDate | Optional | SettlType (specifying the tenor) or SettlDate must be specified. |
-| 271 | [MDEntrySize](/fix/fields/tags-200-399#tag-271) | Qty | Optional | Quantity or volume represented by the Market Data Entry. In the context of the Market Data Request this allows the Initiator to indicate the quantity of the market data request. Specific to FX this field indicates the ceiling amount the customer is seeking prices for. |
+| 271 | [MDEntrySize](/fix/fields/tags-200-399#tag-271) | Qty | Optional | Quantity or volume represented by the Market Data Entry. In the context of the Market Data Request this allows the Initiator to indicate the quantity of the… |
 | 1500 | [MDStreamID](/fix/fields/tags-1400-1599#tag-1500) | String | Optional | The identifier or name of the price stream. |
 
 </StickyTable>

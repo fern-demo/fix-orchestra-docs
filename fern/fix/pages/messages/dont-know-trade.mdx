@@ -16,11 +16,11 @@ subtitle: "The Don’t Know Trade (DK) message notifies a trading partner that a
 | 198 | [SecondaryOrderID](/fix/fields/tags-0-199#tag-198) | String | Optional | Assigned by the party which accepts the order. Can be used to provide the OrderID (37) used by an exchange or executing system. |
 | 17 | [ExecID](/fix/fields/tags-0-199#tag-17) | String | **Required** | Execution ID of problem execution |
 | 127 | [DKReason](/fix/fields/tags-0-199#tag-127) | DKReasonCodeSet | **Required** | Reason for execution rejection. |
-| | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
 | 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | **Required** | Side of order (see Volume : "Glossary" for value definitions) |
-| | [OrderQtyData](/fix/components/order-qty-data) | Component | **Required** | The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is marked as "required" in a message either one of these three fields must be used to identify the amount: OrderQty, CashOrderQty or OrderPercent… |
+| | [OrderQtyData](/fix/components/order-qty-data) | Component | **Required** | The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is… |
 | 32 | [LastQty](/fix/fields/tags-0-199#tag-32) | Qty | Optional | Required if specified on the ExecutionRpt |
 | 31 | [LastPx](/fix/fields/tags-0-199#tag-31) | Price | Optional | Required if specified on the ExecutionRpt |
 | 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |

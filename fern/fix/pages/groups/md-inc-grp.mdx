@@ -17,20 +17,20 @@ Each repetition starts with the first member listed. The count of repetitions is
 | 1173 | [MDSubBookType](/fix/fields/tags-1000-1199#tag-1173) | int | Optional | Can be used to define a subordinate book. |
 | 264 | [MarketDepth](/fix/fields/tags-200-399#tag-264) | int | Optional | Can be used to define the current depth of the book. |
 | 269 | [MDEntryType](/fix/fields/tags-200-399#tag-269) | MDEntryTypeCodeSet | Optional | Conditionally required if MDUpdateAction(279) = 0 (New). Cannot be changed. |
-| 278 | [MDEntryID](/fix/fields/tags-200-399#tag-278) | String | Optional | If specified, must be unique among currently active entries if MDUpdateAction(279) = 0 (New); must be the same as a previous MDEntryID(278) if MDUpdateAction(279) = 2 (Delete); must be the same as a previous MDEntryID(278) if MDUpdateAction(279) = 1 (Change) and MDEntryRefID(280) is not specified;… |
-| 280 | [MDEntryRefID](/fix/fields/tags-200-399#tag-280) | String | Optional | If MDUpdateAction(279) = 0 (New), for the first market data entry in a message, either this field or a security symbol must be specified. If MDUpdateAction(279) = 1 (Change), this must refer to a previous MDEntryID(278). |
+| 278 | [MDEntryID](/fix/fields/tags-200-399#tag-278) | String | Optional | If specified, must be unique among currently active entries if MDUpdateAction(279) = 0 (New); must be the same as a previous MDEntryID(278) if… |
+| 280 | [MDEntryRefID](/fix/fields/tags-200-399#tag-280) | String | Optional | If MDUpdateAction(279) = 0 (New), for the first market data entry in a message, either this field or a security symbol must be specified. If MDUpdateAction(279)… |
 | 1500 | [MDStreamID](/fix/fields/tags-1400-1599#tag-1500) | String | Optional | The identifier or name of the price stream. |
-| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | | [InstrumentExtension](/fix/components/instrument-extension) | Component | Optional | The InstrumentExtension component block identifies additional security attributes that are more commonly found for Fixed Income securities. |
-| | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This component identifies the legal agreement under which the deal was made and other unique characteristics of the transaction. For example, the… |
+| | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This… |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
-| 1647 | [RelatedInstrumentGrp](/fix/groups/related-instrument-grp) | Repeating group | Optional | The RelatedInstrumentGrp is a repeating component at the same hierarchical level as the Instrument component, describing relationships and linkages between the Instrument, UnderlyingInstrument and InstrumentLeg entries. If all instances of the UnderlyingInstrument in the message are true underliers… |
+| 1647 | [RelatedInstrumentGrp](/fix/groups/related-instrument-grp) | Repeating group | Optional | The RelatedInstrumentGrp is a repeating component at the same hierarchical level as the Instrument component, describing relationships and linkages between the… |
 | 291 | [FinancialStatus](/fix/fields/tags-200-399#tag-291) | FinancialStatusCodeSet | Optional | Identifies a firm's or a security's financial status |
 | 292 | [CorporateAction](/fix/fields/tags-200-399#tag-292) | CorporateActionCodeSet | Optional | Identifies the type of Corporate Action. |
-| 270 | [MDEntryPx](/fix/fields/tags-200-399#tag-270) | Price | Optional | Conditionally required when MDUpdateAction(279) = 0 (New) and MDEntryType(269) is not A (Imbalance), B (Trade volume), or C (Open interest). Conditionally required when MDEntryType(269) = Q (Auction clearing price). |
+| 270 | [MDEntryPx](/fix/fields/tags-200-399#tag-270) | Price | Optional | Conditionally required when MDUpdateAction(279) = 0 (New) and MDEntryType(269) is not A (Imbalance), B (Trade volume), or C (Open interest). Conditionally… |
 | 423 | [PriceType](/fix/fields/tags-400-599#tag-423) | PriceTypeCodeSet | Optional | Code to represent the price type. |
-| 2709 | [PriceQualifierGrp](/fix/groups/price-qualifier-grp) | Repeating group | Optional | The PriceQualifierGrp component clarifies the composition of the price when standard market practice for the security calls for a price that is atypical when traded in other markets, or when a price can be expressed in more than one way. |
+| 2709 | [PriceQualifierGrp](/fix/groups/price-qualifier-grp) | Repeating group | Optional | The PriceQualifierGrp component clarifies the composition of the price when standard market practice for the security calls for a price that is atypical when… |
 | 819 | [AvgPxIndicator](/fix/fields/tags-800-999#tag-819) | AvgPxIndicatorCodeSet | Optional | Average pricing indicator. |
 | | [YieldData](/fix/components/yield-data) | Component | Optional | The YieldData component block conveys yield information for a given Fixed Income security. |
 | | [SpreadOrBenchmarkCurveData](/fix/components/spread-or-benchmark-curve-data) | Component | Optional | The SpreadOrBenchmarkCurveData component block is primarily used for Fixed Income to convey spread to a benchmark security or curve. |
@@ -45,12 +45,12 @@ Each repetition starts with the first member listed. The count of repetitions is
 | 273 | [MDEntryTime](/fix/fields/tags-200-399#tag-273) | UTCTimeOnly | Optional | Time of Market Data Entry. |
 | 274 | [TickDirection](/fix/fields/tags-200-399#tag-274) | TickDirectionCodeSet | Optional | Direction of the "tick". |
 | 275 | [MDMkt](/fix/fields/tags-200-399#tag-275) | Exchange | Optional | Market posting quote / trade. Valid values: See Volume 6: Appendix 6-C |
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is determined by market or counterparties. To specify good for session where session spans more than one calendar day, use TimeInForce = 0… |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures markets to identify exchange specific execution time bracket codes as required by US market regulations. Bilaterally agreed values of data… |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
 | 326 | [SecurityTradingStatus](/fix/fields/tags-200-399#tag-326) | SecurityTradingStatusCodeSet | Optional | Identifies the trading status applicable to the transaction. |
 | 327 | [HaltReason](/fix/fields/tags-200-399#tag-327) | HaltReasonCodeSet | Optional | Denotes the reason for the Opening Delay or Trading Halt. |
 | 2447 | [FastMarketIndicator](/fix/fields/tags-2400-2599#tag-2447) | Boolean | Optional | Indicates if the instrument is in "fast market" state. |
-| 2705 | [MarketCondition](/fix/fields/tags-2600-2799#tag-2705) | MarketConditionCodeSet | Optional | Market condition. In the context of ESMA RTS 8 it is important that trading venues communicate the condition of the market, particularly "stressed" and "exceptional", in order to provide incentives for firms contributing to liquidity. |
+| 2705 | [MarketCondition](/fix/fields/tags-2600-2799#tag-2705) | MarketConditionCodeSet | Optional | Market condition. In the context of ESMA RTS 8 it is important that trading venues communicate the condition of the market, particularly "stressed" and… |
 | 276 | [QuoteCondition](/fix/fields/tags-200-399#tag-276) | QuoteConditionCodeSet | Optional | Space-delimited list of conditions describing a quote. |
 | 277 | [TradeCondition](/fix/fields/tags-200-399#tag-277) | TradeConditionCodeSet | Optional | Space-delimited list of conditions describing a trade |
 | 1838 | [TradePriceConditionGrp](/fix/groups/trade-price-condition-grp) | Repeating group | Optional | Price conditions associated with a trade that impact trade price. |
@@ -64,10 +64,10 @@ Each repetition starts with the first member listed. The count of repetitions is
 | 574 | [MatchType](/fix/fields/tags-400-599#tag-574) | MatchTypeCodeSet | Optional | For optional use in reporting trades. |
 | 1115 | [OrderCategory](/fix/fields/tags-1000-1199#tag-1115) | OrderCategoryCodeSet | Optional | Defines the type of interest behind a trade (fill or partial fill). |
 | 1390 | [TradePublishIndicator](/fix/fields/tags-1200-1399#tag-1390) | TradePublishIndicatorCodeSet | Optional | For optional use in reporting trades. |
-| 2668 | [TrdRegPublicationGrp](/fix/groups/trd-reg-publication-grp) | Repeating group | Optional | The TrdRegPublicationGrp component is used to express trade publication reasons that are required by regulatory agencies. Reasons may include deferrals, exemptions, waivers, etc. |
-| 2373 | [IntraFirmTradeIndicator](/fix/fields/tags-2200-2399#tag-2373) | Boolean | Optional | Indicates whether the trade or position was entered into as an intra-group transaction, i.e. between two units of the same parent entity having majority ownership interest in both counterparties. |
+| 2668 | [TrdRegPublicationGrp](/fix/groups/trd-reg-publication-grp) | Repeating group | Optional | The TrdRegPublicationGrp component is used to express trade publication reasons that are required by regulatory agencies. Reasons may include deferrals,… |
+| 2373 | [IntraFirmTradeIndicator](/fix/fields/tags-2200-2399#tag-2373) | Boolean | Optional | Indicates whether the trade or position was entered into as an intra-group transaction, i.e. between two units of the same parent entity having majority… |
 | 570 | [PreviouslyReported](/fix/fields/tags-400-599#tag-570) | PreviouslyReportedCodeSet | Optional | Indicates if the transaction was previously reported to the counterparty or market. |
-| 1855 | [RelatedTradeGrp](/fix/groups/related-trade-grp) | Repeating group | Optional | This component is used to identify trades that are related to each other for a business purpose, such as netting of forwards. This component should not be used in lieu of explicit FIX fields that denote specific semantic relationships, but rather should be used when no such fields exist. |
+| 1855 | [RelatedTradeGrp](/fix/groups/related-trade-grp) | Repeating group | Optional | This component is used to identify trades that are related to each other for a business purpose, such as netting of forwards. This component should not be used… |
 | 282 | [MDEntryOriginator](/fix/fields/tags-200-399#tag-282) | String | Optional | Originator of a Market Data Entry |
 | 283 | [LocationID](/fix/fields/tags-200-399#tag-283) | String | Optional | Identification of a Market Maker's location |
 | 284 | [DeskID](/fix/fields/tags-200-399#tag-284) | String | Optional | Identification of a Market Maker's desk |
@@ -84,7 +84,7 @@ Each repetition starts with the first member listed. The count of repetitions is
 | 198 | [SecondaryOrderID](/fix/fields/tags-0-199#tag-198) | String | Optional | For optional use to support Hit/Take (selecting a specific order from the feed) without disclosing a private order id. |
 | 299 | [QuoteEntryID](/fix/fields/tags-200-399#tag-299) | String | Optional | For optional use when this Bid, Offer, or Trade represents a quote |
 | 1003 | [TradeID](/fix/fields/tags-1000-1199#tag-1003) | String | Optional | For optional use in reporting Trades |
-| 1851 | [StrategyLinkID](/fix/fields/tags-1800-1999#tag-1851) | String | Optional | For optional use in reporting Trades. May be used to link together trades that are reported separately but are part of the same overall trade, e.g. spread trade and their constituent trades. |
+| 1851 | [StrategyLinkID](/fix/fields/tags-1800-1999#tag-1851) | String | Optional | For optional use in reporting Trades. May be used to link together trades that are reported separately but are part of the same overall trade, e.g. spread trade… |
 | 288 | [MDEntryBuyer](/fix/fields/tags-200-399#tag-288) | String | Optional | For optional use in reporting Trades |
 | 289 | [MDEntrySeller](/fix/fields/tags-200-399#tag-289) | String | Optional | For optional use in reporting Trades |
 | 2449 | [NumberOfBuyOrders](/fix/fields/tags-2400-2599#tag-2449) | int | Optional | For optional use when reporting trades |
@@ -92,13 +92,13 @@ Each repetition starts with the first member listed. The count of repetitions is
 | 346 | [NumberOfOrders](/fix/fields/tags-200-399#tag-346) | int | Optional | In an Aggregated Book, used to show how many individual orders make up an MDEntry |
 | 290 | [MDEntryPositionNo](/fix/fields/tags-200-399#tag-290) | int | Optional | Display position of a bid or offer, numbered from most competitive to least competitive, per market side, beginning with 1 |
 | 546 | [Scope](/fix/fields/tags-400-599#tag-546) | ScopeCodeSet | Optional | Specifies the market scope of the market data. |
-| 811 | [PriceDelta](/fix/fields/tags-800-999#tag-811) | float | Optional | The rate of change in the price of a derivative with respect to the movement in the price of the underlying instrument(s) upon which the derivative instrument price is based. This value is normally between -1.0 and 1.0. |
+| 811 | [PriceDelta](/fix/fields/tags-800-999#tag-811) | float | Optional | The rate of change in the price of a derivative with respect to the movement in the price of the underlying instrument(s) upon which the derivative instrument… |
 | 451 | [NetChgPrevDay](/fix/fields/tags-400-599#tag-451) | PriceOffset | Optional | Net change from previous day's closing price vs. last traded price. |
 | 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Text to describe the Market Data Entry. Part of repeating group. |
 | 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
 | 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
-| 1023 | [MDPriceLevel](/fix/fields/tags-1000-1199#tag-1023) | int | Optional | Integer to convey the level of a bid or offer at a given price level. This is in contrast to MDEntryPositionNo which is used to convey the position of an order within a Price level |
-| 528 | [OrderCapacity](/fix/fields/tags-400-599#tag-528) | OrderCapacityCodeSet | Optional | Designates the capacity of the firm placing the order. (as of FIX 4.3, this field replaced Rule80A (tag 47) --used in conjunction with OrderRestrictions (529) field) (see Volume : "Glossary" for value definitions) |
+| 1023 | [MDPriceLevel](/fix/fields/tags-1000-1199#tag-1023) | int | Optional | Integer to convey the level of a bid or offer at a given price level. This is in contrast to MDEntryPositionNo which is used to convey the position of an order… |
+| 528 | [OrderCapacity](/fix/fields/tags-400-599#tag-528) | OrderCapacityCodeSet | Optional | Designates the capacity of the firm placing the order. (as of FIX 4.3, this field replaced Rule80A (tag 47) --used in conjunction with OrderRestrictions (529)… |
 | 1024 | [MDOriginType](/fix/fields/tags-1000-1199#tag-1024) | MDOriginTypeCodeSet | Optional | Used to describe the origin of the market data entry. |
 | 332 | [HighPx](/fix/fields/tags-200-399#tag-332) | Price | Optional | Represents an indication of the high end of the price range for a security prior to the open or reopen |
 | 333 | [LowPx](/fix/fields/tags-200-399#tag-333) | Price | Optional | Represents an indication of the low end of the price range for a security prior to the open or reopen |
@@ -110,7 +110,7 @@ Each repetition starts with the first member listed. The count of repetitions is
 | 1143 | [MaxPriceVariation](/fix/fields/tags-1000-1199#tag-1143) | float | Optional | The maximum price variation of an execution from one event to the next for a given security. Expressed in absolute price terms. |
 | 731 | [SettlPriceType](/fix/fields/tags-600-799#tag-731) | SettlPriceTypeCodeSet | Optional | Type of settlement price |
 | 2451 | [SettlPriceDeterminationMethod](/fix/fields/tags-2400-2599#tag-2451) | int | Optional | Calculation method used to determine settlement price. |
-| 63 | [SettlType](/fix/fields/tags-0-199#tag-63) | SettlTypeCodeSet | Optional | Indicates order settlement period. If present, SettlDate (64) overrides this field. If both SettlType (63) and SettDate (64) are omitted, the default for SettlType (63) is 0 (Regular) Regular is defined as the default settlement period for the particular security on the exchange of execution. In… |
+| 63 | [SettlType](/fix/fields/tags-0-199#tag-63) | SettlTypeCodeSet | Optional | Indicates order settlement period. If present, SettlDate (64) overrides this field. If both SettlType (63) and SettDate (64) are omitted, the default for… |
 | 64 | [SettlDate](/fix/fields/tags-0-199#tag-64) | LocalMktDate | Optional | Indicates date on which instrument will settle. For NDFs required for specifying the "value date". |
 | 483 | [TransBkdTime](/fix/fields/tags-400-599#tag-483) | UTCTimestamp | Optional | For optional use in reporting Trades. Used to specify the time of trade agreement for privately negotiated trades. |
 | 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | For optional use in reporting Trades. Used to specify the time of matching. |
@@ -120,9 +120,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 | 83 | [RptSeq](/fix/fields/tags-0-199#tag-83) | int | Optional | Allows sequence number to be specified within a feed type |
 | 1048 | [DealingCapacity](/fix/fields/tags-1000-1199#tag-1048) | DealingCapacityCodeSet | Optional | Identifies role of dealer; Agent, Principal, RisklessPrincipal |
 | 1026 | [MDEntrySpotRate](/fix/fields/tags-1000-1199#tag-1026) | float | Optional | The spot rate for an FX entry |
-| 1027 | [MDEntryForwardPoints](/fix/fields/tags-1000-1199#tag-1027) | PriceOffset | Optional | Used for an F/X entry. The forward points to be added to or subtracted from the spot rate to get the "all-in" rate in MDEntryPx. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199 |
+| 1027 | [MDEntryForwardPoints](/fix/fields/tags-1000-1199#tag-1027) | PriceOffset | Optional | Used for an F/X entry. The forward points to be added to or subtracted from the spot rate to get the "all-in" rate in MDEntryPx. Expressed in decimal form. For… |
 | 1175 | [StatsIndGrp](/fix/groups/stats-ind-grp) | Repeating group | Optional |  |
-| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
 
 </StickyTable>
 

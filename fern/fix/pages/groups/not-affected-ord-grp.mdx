@@ -12,8 +12,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1372 | [NotAffOrigClOrdID](/fix/fields/tags-1200-1399#tag-1372) | String | Optional | Required if NoNotAffectedOrders(1370) &gt; 0 and must be the first repeating field in the group. Indicates the client order identifier of an order not affected by the request. If order(s) were manually delivered (or otherwise not delivered over FIX and not assigned a ClOrdID(11)) this field should… |
-| 1371 | [NotAffectedOrderID](/fix/fields/tags-1200-1399#tag-1371) | String | Optional | Contains the OrderID(37) assigned by the counterparty of an unaffected order. Not required as part of the repeating group if NotAffOrigClOrdID(1372) has a value other than "MANUAL". |
+| 1372 | [NotAffOrigClOrdID](/fix/fields/tags-1200-1399#tag-1372) | String | Optional | Required if NoNotAffectedOrders(1370) &gt; 0 and must be the first repeating field in the group. Indicates the client order identifier of an order not affected by… |
+| 1371 | [NotAffectedOrderID](/fix/fields/tags-1200-1399#tag-1371) | String | Optional | Contains the OrderID(37) assigned by the counterparty of an unaffected order. Not required as part of the repeating group if NotAffOrigClOrdID(1372) has a value… |
 | 1825 | [NotAffSecondaryOrderID](/fix/fields/tags-1800-1999#tag-1825) | String | Optional | Contains the SecondaryOrderID(198) assigned by the counterparty of an unaffected order. Not required as part of the repeating group. |
 | 2677 | [NotAffectedReason](/fix/fields/tags-2600-2799#tag-2677) | NotAffectedReasonCodeSet | Optional | Can be used to provide a reason for excluding this order from the scope of the mass action. |
 

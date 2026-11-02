@@ -12,7 +12,7 @@ subtitle: "The news message is a general free format message between the broker 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and… |
 | 1472 | [NewsID](/fix/fields/tags-1400-1599#tag-1472) | String | Optional | Unique identifer for News message |
 | 1475 | [NewsRefGrp](/fix/groups/news-ref-grp) | Repeating group | Optional |  |
 | 1473 | [NewsCategory](/fix/fields/tags-1400-1599#tag-1473) | NewsCategoryCodeSet | Optional | Category of news mesage. |
@@ -22,7 +22,7 @@ subtitle: "The news message is a general free format message between the broker 
 | 148 | [Headline](/fix/fields/tags-0-199#tag-148) | String | **Required** | Specifies the headline text |
 | 358 | [EncodedHeadlineLen](/fix/fields/tags-200-399#tag-358) | Length | Optional | Must be set if EncodedHeadline field is specified and must immediately precede it. |
 | 359 | [EncodedHeadline](/fix/fields/tags-200-399#tag-359) | data | Optional | Encoded (non-ASCII characters) representation of the Headline field in the encoded format specified via the MessageEncoding field. |
-| 215 | [RoutingGrp](/fix/groups/routing-grp) | Repeating group | Optional | The RoutingGrp is used to allow the application message sender to instruct the intermediary distributing the message who to further send the application message to. The original sender may also instruct who is not allowed to receive the message. When provided, the routing instructions provided in… |
+| 215 | [RoutingGrp](/fix/groups/routing-grp) | Repeating group | Optional | The RoutingGrp is used to allow the application message sender to instruct the intermediary distributing the message who to further send the application message… |
 | 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Used to optionally specify the market to which this News applies. |
 | 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Used to optionally specify the market segment to which this News applies. |
 | 146 | [InstrmtGrp](/fix/groups/instrmt-grp) | Repeating group | Optional |  |

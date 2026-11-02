@@ -17,17 +17,17 @@ The Parties component and PtysSubGrp sub-component are used to describe the clea
 | 1699 | [AccountSummaryReportID](/fix/fields/tags-1600-1799#tag-1699) | String | **Required** | Unique identifier for the AccountSummaryReport(35=CQ). |
 | 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | **Required** | The business date for which the trade is expected to be cleared. |
 | 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies the base reporting currency used in this report. |
-| 900 | [TotalNetValue](/fix/fields/tags-800-999#tag-900) | Amt | Optional | TotalNetValue is determined as follows: At the initial collateral assignment TotalNetValue is the sum of (UnderlyingStartValue \* (1-haircut)). In a collateral substitution TotalNetValue is the sum of (UnderlyingCurrentValue \* (1-haircut)). For listed derivatives clearing margin management, this is… |
+| 900 | [TotalNetValue](/fix/fields/tags-800-999#tag-900) | Amt | Optional | TotalNetValue is determined as follows: At the initial collateral assignment TotalNetValue is the sum of (UnderlyingStartValue \* (1-haircut)). In a collateral… |
 | 899 | [MarginExcess](/fix/fields/tags-800-999#tag-899) | Amt | Optional | Excess margin amount (deficit if value is negative) |
 | 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716) | SettlSessIDCodeSet | Optional | Identifies a specific settlement session |
 | 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717) | String | Optional | SubID value associated with SettlSessID(716) |
 | 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
 | 1700 | [SettlementAmountGrp](/fix/groups/settlement-amount-grp) | Repeating group | Optional | The Settlement Amount Group component block is a repeating group of settlement amounts for an account |
 | 1643 | [MarginAmount](/fix/groups/margin-amount) | Repeating group | Optional |  |
-| 453 | [Parties](/fix/groups/parties) | Repeating group | **Required** | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
-| 1703 | [CollateralAmountGrp](/fix/groups/collateral-amount-grp) | Repeating group | Optional | The Collateral Amount Group component block is a repeating group that provides the current value of the collateral type on deposit. The currency of the collateral value may be optionally included. |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | **Required** | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
+| 1703 | [CollateralAmountGrp](/fix/groups/collateral-amount-grp) | Repeating group | Optional | The Collateral Amount Group component block is a repeating group that provides the current value of the collateral type on deposit. The currency of the… |
 | 1707 | [PayCollectGrp](/fix/groups/pay-collect-grp) | Repeating group | Optional | The Pay Collect Group component block is a repeatable block intended to report individual pay/collect items to be considered when calculating net settlement. |
-| 753 | [PositionAmountData](/fix/groups/position-amount-data) | Repeating group | Optional | The PositionAmountData component block is used to report netted amounts associated with position quantities. In the listed derivatives market the amount is generally expressing a type of futures variation or option premium. In the equities market this may be the net pay or collect on a given… |
+| 753 | [PositionAmountData](/fix/groups/position-amount-data) | Repeating group | Optional | The PositionAmountData component block is used to report netted amounts associated with position quantities. In the listed derivatives market the amount is… |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | Optional | The standard FIX message trailer |
 
 </StickyTable>

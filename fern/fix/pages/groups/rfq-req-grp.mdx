@@ -12,14 +12,14 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
 | 140 | [PrevClosePx](/fix/fields/tags-0-199#tag-140) | Price | Optional | Useful for verifying security identification |
 | 303 | [QuoteRequestType](/fix/fields/tags-200-399#tag-303) | QuoteRequestTypeCodeSet | Optional | Indicates the type of Quote Request (e.g. Manual vs. Automatic) being generated. |
 | 537 | [QuoteType](/fix/fields/tags-400-599#tag-537) | QuoteTypeCodeSet | Optional | Type of quote being requested from counterparty or market (e.g. Indicative, Firm, or Restricted Tradeable) |
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is determined by market or counterparties. To specify good for session where session spans more than one calendar day, use TimeInForce = 0… |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures markets to identify exchange specific execution time bracket codes as required by US market regulations. Bilaterally agreed values of data… |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
 
 </StickyTable>
 

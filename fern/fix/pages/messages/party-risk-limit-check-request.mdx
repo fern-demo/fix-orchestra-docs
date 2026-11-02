@@ -12,7 +12,7 @@ subtitle: "PartyRiskLimitCheckRequest is used to request for approval of credit 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 2318 | [RiskLimitCheckRequestID](/fix/fields/tags-2200-2399#tag-2318) | String | Optional | Either RiskLimitCheckRequestID(2318) or RiskLimitCheckID(2319) must be specified. RiskLimitCheckRequestID(2318) is conditionally required in a message-chaining model in which a subsequent message may refer to a prior message via RiskLimitCheckRequestRefID(2322). The alternative is an entity-based… |
+| 2318 | [RiskLimitCheckRequestID](/fix/fields/tags-2200-2399#tag-2318) | String | Optional | Either RiskLimitCheckRequestID(2318) or RiskLimitCheckID(2319) must be specified. RiskLimitCheckRequestID(2318) is conditionally required in a message-chaining… |
 | 2319 | [RiskLimitCheckID](/fix/fields/tags-2200-2399#tag-2319) | String | Optional | Either RiskLimitCheckRequestID(2318) or RiskLimitCheckID(2319) must be specified. |
 | 2320 | [RiskLimitCheckTransType](/fix/fields/tags-2200-2399#tag-2320) | RiskLimitCheckTransTypeCodeSet | **Required** | Specifies the transaction type of the risk limit check request. |
 | 2321 | [RiskLimitCheckType](/fix/fields/tags-2200-2399#tag-2321) | RiskLimitCheckTypeCodeSet | **Required** | Specifies the type of limit check message. |
@@ -21,12 +21,12 @@ subtitle: "PartyRiskLimitCheckRequest is used to request for approval of credit 
 | 1081 | [RefOrderIDSource](/fix/fields/tags-1000-1199#tag-1081) | RefOrderIDSourceCodeSet | Optional | Identifies the type of reference specified in RefOrderID(1080) for this limit check request. |
 | 2323 | [RiskLimitCheckRequestType](/fix/fields/tags-2200-2399#tag-2323) | RiskLimitCheckRequestTypeCodeSet | Optional | Specifies the type of limit amount check being requested. |
 | 2324 | [RiskLimitCheckAmount](/fix/fields/tags-2200-2399#tag-2324) | Amt | Optional | Specifies the amount being requested or consumed, as indicated by RiskLimitCheckType(2321). |
-| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency value whenever possible. See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values. |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
 | 1670 | [RiskLimitID](/fix/fields/tags-1600-1799#tag-1670) | String | Optional | Unique reference identifier for a specific risk limit defined for the specified party. |
 | 1657 | [RequestingPartyGrp](/fix/groups/requesting-party-grp) | Repeating group | Optional | Identifies the party making the request. |
-| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
 | 1562 | [RelatedPartyDetailGrp](/fix/groups/related-party-detail-grp) | Repeating group | Optional | Party details for parties related to the Party specified in the PartyDetailGrp. |
-| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | 555 | [LegOrdGrp](/fix/groups/leg-ord-grp) | Repeating group | Optional |  |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
 | 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | Optional | Side of order (see Volume : "Glossary" for value definitions) |

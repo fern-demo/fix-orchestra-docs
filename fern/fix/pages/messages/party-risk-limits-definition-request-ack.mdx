@@ -16,10 +16,10 @@ subtitle: "PartyRiskLimitDefinitionRequestAck is used for accepting (with or wit
 | 1761 | [RiskLimitRequestResult](/fix/fields/tags-1600-1799#tag-1761) | RiskLimitRequestResultCodeSet | Optional | Result of risk limit definition request. |
 | 1762 | [RiskLimitRequestStatus](/fix/fields/tags-1600-1799#tag-1762) | PartyDetailRequestStatusCodeSet | **Required** | Status of risk limit definition request. |
 | 1657 | [RequestingPartyGrp](/fix/groups/requesting-party-grp) | Repeating group | Optional | Identifies the party making the request. |
-| 1677 | [PartyRiskLimitsAckGrp](/fix/groups/party-risk-limits-ack-grp) | Repeating group | Optional | This new block is a repeating group based on the existing block &lt;PartyRiskLimitsGrp&gt; with an additional field RiskLimitStatus(1763) to accept (with or without changes) or reject individual risk limits. It is only used in PartyRiskLimitDefinitionRequestAck, the response to the request to define risk… |
+| 1677 | [PartyRiskLimitsAckGrp](/fix/groups/party-risk-limits-ack-grp) | Repeating group | Optional | This new block is a repeating group based on the existing block &lt;PartyRiskLimitsGrp&gt; with an additional field RiskLimitStatus(1763) to accept (with or without… |
 | 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
 | 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text(58) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

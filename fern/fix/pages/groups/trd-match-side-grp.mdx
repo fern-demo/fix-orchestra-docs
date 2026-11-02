@@ -18,7 +18,7 @@ Each repetition starts with the first member listed. The count of repetitions is
 | 1900 | [SideExecRefID](/fix/fields/tags-1800-1999#tag-1900) | String | Optional | Used to reference the value from SideExecID(1427). |
 | 1506 | [SideTradeID](/fix/fields/tags-1400-1599#tag-1506) | String | Optional | Used to represent the trade ID for each side of the trade assigned by an intermediary. |
 | 1005 | [SideTradeReportID](/fix/fields/tags-1000-1199#tag-1005) | String | Optional | Used on a multi-sided trade to designate the ReportID |
-| 1428 | [OrderDelay](/fix/fields/tags-1400-1599#tag-1428) | int | Optional | Time lapsed from order entry until match, based on the unit of time specified in OrderDelayUnit. Default is seconds if OrderDelayUnit is not specified. Value = 0, indicates the aggressor (the initiating side of the trade). |
+| 1428 | [OrderDelay](/fix/fields/tags-1400-1599#tag-1428) | int | Optional | Time lapsed from order entry until match, based on the unit of time specified in OrderDelayUnit. Default is seconds if OrderDelayUnit is not specified. Value =… |
 | 1429 | [OrderDelayUnit](/fix/fields/tags-1400-1599#tag-1429) | OrderDelayUnitCodeSet | Optional | Time unit in which the OrderDelay(1428) is expressed |
 | 1009 | [SideLastQty](/fix/fields/tags-1000-1199#tag-1009) | Qty | Optional | Required if NoTrdMatchSides(1890) &gt; 0. Used to indicate the matched quantity for this trade side as a result of the match event. |
 | 1597 | [SideClearingTradePrice](/fix/fields/tags-1400-1599#tag-1597) | Price | Optional | Alternate clearing price for the side being reported. |
@@ -30,7 +30,7 @@ Each repetition starts with the first member listed. The count of repetitions is
 | 430 | [NetGrossInd](/fix/fields/tags-400-599#tag-430) | NetGrossIndCodeSet | Optional | Code to represent whether value is net (inclusive of tax) or gross. |
 | 1154 | [SideCurrency](/fix/fields/tags-1000-1199#tag-1154) | Currency | Optional | Used to identify the trading currency on the Trade Capture Report Side |
 | 1155 | [SideSettlCurrency](/fix/fields/tags-1000-1199#tag-1155) | Currency | Optional | Used to identify the settlement currency on the Trade Capture Report Side |
-| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
 | 578 | [TradeInputSource](/fix/fields/tags-400-599#tag-578) | String | Optional | Type of input device or system from which the trade was entered. |
 | 579 | [TradeInputDevice](/fix/fields/tags-400-599#tag-579) | String | Optional | Specific device number, terminal number or station where trade was entered |
 | 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
@@ -41,7 +41,7 @@ Each repetition starts with the first member listed. The count of repetitions is
 | 582 | [CustOrderCapacity](/fix/fields/tags-400-599#tag-582) | CustOrderCapacityCodeSet | Optional | Capacity of customer placing the order. |
 | 943 | [TimeBracket](/fix/fields/tags-800-999#tag-943) | String | Optional | A code that represents a time interval in which a fill or trade occurred. Required for US futures markets. |
 | 77 | [PositionEffect](/fix/fields/tags-0-199#tag-77) | PositionEffectCodeSet | Optional | For use in derivatives omnibus accounting. |
-| 825 | [ExchangeRule](/fix/fields/tags-800-999#tag-825) | String | Optional | Used to report any exchange rules that apply to this trade. Primarily intended for US futures markets. Certain trading practices are permitted by the CFTC, such as large lot trading, block trading, all or none trades. If the rules are used, the exchanges are required to indicate these rules on the… |
+| 825 | [ExchangeRule](/fix/fields/tags-800-999#tag-825) | String | Optional | Used to report any exchange rules that apply to this trade. Primarily intended for US futures markets. Certain trading practices are permitted by the CFTC, such… |
 | 826 | [TradeAllocIndicator](/fix/fields/tags-800-999#tag-826) | TradeAllocIndicatorCodeSet | Optional | Identifies if, and how, the trade is to be allocated or split. |
 | 591 | [PreallocMethod](/fix/fields/tags-400-599#tag-591) | PreallocMethodCodeSet | Optional | Indicates the method of preallocation. |
 | 70 | [AllocID](/fix/fields/tags-0-199#tag-70) | String | Optional | Unique identifier for allocation message. (Prior to FIX 4.1 this field was of type int) |
@@ -52,17 +52,17 @@ Each repetition starts with the first member listed. The count of repetitions is
 | 1690 | [SideShortSaleExemptionReason](/fix/fields/tags-1600-1799#tag-1690) | ShortSaleExemptionReasonCodeSet | Optional | Indicates the reason a short sale is exempted from applicable regulation (e.g. Reg SHO addendum (b)(1) in the U.S.) |
 | 1115 | [OrderCategory](/fix/fields/tags-1000-1199#tag-1115) | OrderCategoryCodeSet | Optional | Defines the type of interest behind a trade (fill or partial fill). |
 | 819 | [AvgPxIndicator](/fix/fields/tags-800-999#tag-819) | AvgPxIndicatorCodeSet | Optional | Average pricing indicator. |
-| 1731 | [AvgPxGroupID](/fix/fields/tags-1600-1799#tag-1731) | String | Optional | Used by submitting firm to group trades being allocated into an average price group. The trades in average price group will be used to calculate an average price for the group. |
+| 1731 | [AvgPxGroupID](/fix/fields/tags-1600-1799#tag-1731) | String | Optional | Used by submitting firm to group trades being allocated into an average price group. The trades in average price group will be used to calculate an average… |
 | 1898 | [SideMarketSegmentID](/fix/fields/tags-1800-1999#tag-1898) | String | Optional | Can be used if the match event results in matches across different market segments for this side. |
 | 1899 | [SideVenueType](/fix/fields/tags-1800-1999#tag-1899) | VenueTypeCodeSet | Optional | Can be used if the match event results in matches across different venue types for this side. |
-| 635 | [ClearingFeeIndicator](/fix/fields/tags-600-799#tag-635) | ClearingFeeIndicatorCodeSet | Optional | Indicates type of fee being assessed of the customer for trade executions at an exchange. Applicable for futures markets only at this time. (Values source CBOT, CME, NYBOT, and NYMEX): |
+| 635 | [ClearingFeeIndicator](/fix/fields/tags-600-799#tag-635) | ClearingFeeIndicatorCodeSet | Optional | Indicates type of fee being assessed of the customer for trade executions at an exchange. Applicable for futures markets only at this time. (Values source CBOT,… |
 | | [TradeReportOrderDetail](/fix/components/trade-report-order-detail) | Component | Optional |  |
 | 1892 | [TrdInstrmtLegExecGrp](/fix/groups/trd-instrmt-leg-exec-grp) | Repeating group | Optional | The TrdInstrmtLegExecGrp component comprises individual executions for legs of the trade side of a trade match report for a specific instrument. |
-| 1031 | [CustOrderHandlingInst](/fix/fields/tags-1000-1199#tag-1031) | CustOrderHandlingInstCodeSet | Optional | Codes that apply special information that the Broker / Dealer needs to report, as specified by the customer. NOTE: This field and its values have no bearing on the ExecInst and TimeInForce fields. These values should not be used instead of ExecInst or TimeInForce. This field and its values are… |
-| 1032 | [OrderHandlingInstSource](/fix/fields/tags-1000-1199#tag-1032) | OrderHandlingInstSourceCodeSet | Optional | Identifies the class or source of the order handling instruction values.  Scope of this will apply to both CustOrderHandlingInst(1031) and DeskOrderHandlingInst(1035). Conditionally required when CustOrderHandlingInst(1031) or DeskOrderHandlingInst(1035) is specified. |
+| 1031 | [CustOrderHandlingInst](/fix/fields/tags-1000-1199#tag-1031) | CustOrderHandlingInstCodeSet | Optional | Codes that apply special information that the Broker / Dealer needs to report, as specified by the customer. NOTE: This field and its values have no bearing on… |
+| 1032 | [OrderHandlingInstSource](/fix/fields/tags-1000-1199#tag-1032) | OrderHandlingInstSourceCodeSet | Optional | Identifies the class or source of the order handling instruction values.  Scope of this will apply to both CustOrderHandlingInst(1031) and… |
 | 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Can be used to include text included in the order submission. |
 | 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text(58) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
 
 </StickyTable>
 

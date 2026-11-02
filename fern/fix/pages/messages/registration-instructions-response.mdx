@@ -16,11 +16,11 @@ subtitle: "The Registration Instructions Response message type may be used by br
 | 514 | [RegistTransType](/fix/fields/tags-400-599#tag-514) | RegistTransTypeCodeSet | **Required** | Identifies original Registration Instructions transaction type |
 | 508 | [RegistRefID](/fix/fields/tags-400-599#tag-508) | String | **Required** | Required for Cancel and Replace RegistTransType messages |
 | 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | Unique identifier of the order as assigned by institution or intermediary. |
-| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
 | 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
-| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in their system. |
+| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
 | 506 | [RegistStatus](/fix/fields/tags-400-599#tag-506) | RegistStatusCodeSet | **Required** | Registration status as returned by the broker or (for CIV) the fund manager: |
-| 507 | [RegistRejReasonCode](/fix/fields/tags-400-599#tag-507) | RegistRejReasonCodeCodeSet | Optional | Reason(s) why Registration Instructions has been rejected. The reason may be further amplified in the RegistRejReasonCode field. Possible values of reason code include: |
+| 507 | [RegistRejReasonCode](/fix/fields/tags-400-599#tag-507) | RegistRejReasonCodeCodeSet | Optional | Reason(s) why Registration Instructions has been rejected. The reason may be further amplified in the RegistRejReasonCode field. Possible values of reason code… |
 | 496 | [RegistRejReasonText](/fix/fields/tags-400-599#tag-496) | String | Optional | Text indicating reason(s) why a Registration Instruction has been rejected. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 

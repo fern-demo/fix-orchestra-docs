@@ -12,14 +12,14 @@ subtitle: "The Settlement Obligation Report message provides a central counterpa
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and… |
 | 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | Optional | The business date for which the trade is expected to be cleared. |
 | 1153 | [SettlementCycleNo](/fix/fields/tags-1000-1199#tag-1153) | int | Optional | Settlement cycle in which the settlement obligation was generated |
 | 1160 | [SettlObligMsgID](/fix/fields/tags-1000-1199#tag-1160) | String | **Required** | Unique identifier for this message |
 | 1159 | [SettlObligMode](/fix/fields/tags-1000-1199#tag-1159) | SettlObligModeCodeSet | **Required** | Used to identify the reporting mode of the settlement obligation which is either preliminary or final |
 | 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Can be used to provide any additional rejection text where rejecting a Settlement Instruction Request message. |
 | 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text(58) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
 | 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Time when the Settlemnt Obligation Report was created. |
 | 1165 | [SettlObligationInstructions](/fix/groups/settl-obligation-instructions) | Repeating group | **Required** |  |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |

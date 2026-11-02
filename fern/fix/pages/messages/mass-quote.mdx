@@ -17,14 +17,14 @@ subtitle: "The Mass Quote message can contain quotes for multiple securities to 
 | 537 | [QuoteType](/fix/fields/tags-400-599#tag-537) | QuoteTypeCodeSet | Optional | Type of Quote Default is Indicative if not specified |
 | 2403 | [QuoteModelType](/fix/fields/tags-2400-2599#tag-2403) | QuoteModelTypeCodeSet | Optional | Quote model type |
 | 301 | [QuoteResponseLevel](/fix/fields/tags-200-399#tag-301) | QuoteResponseLevelCodeSet | Optional | Level of Response requested from receiver of quote messages. |
-| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
 | 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
-| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in their system. |
+| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
 | 581 | [AccountType](/fix/fields/tags-400-599#tag-581) | AccountTypeCodeSet | Optional | Type of account associated with the order (Origin) |
 | 293 | [DefBidSize](/fix/fields/tags-200-399#tag-293) | Qty | Optional | Default Bid Size for quote contained within this quote message - if not explicitly provided. |
 | 294 | [DefOfferSize](/fix/fields/tags-200-399#tag-294) | Qty | Optional | Default Offer Size for quotes contained within this quote message - if not explicitly provided. |
 | 296 | [QuotSetGrp](/fix/groups/quot-set-grp) | Repeating group | **Required** |  |
-| 2362 | [SelfMatchPreventionID](/fix/fields/tags-2200-2399#tag-2362) | String | Optional | Identifies an order or trade that should not be matched to an opposite order or trade if both buy and sell orders for the same asset contain the same SelfMatchPreventionID(2362) and submitted by the same firm. |
+| 2362 | [SelfMatchPreventionID](/fix/fields/tags-2200-2399#tag-2362) | String | Optional | Identifies an order or trade that should not be matched to an opposite order or trade if both buy and sell orders for the same asset contain the same… |
 | 1685 | [ThrottleInst](/fix/fields/tags-1600-1799#tag-1685) | ThrottleInstCodeSet | Optional | Describes action recipient should take if a throttle limit were exceeded. |
 | 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
 | 2404 | [ComplianceText](/fix/fields/tags-2400-2599#tag-2404) | String | Optional | Free text for compliance information required for regulatory reporting. |

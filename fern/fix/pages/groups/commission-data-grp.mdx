@@ -15,14 +15,14 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2640 | [CommissionAmount](/fix/fields/tags-2600-2799#tag-2640) | Amt | Optional | Required if NoCommissions(2639) &gt; 0. If the commission is based on a percentage of trade quantity or a factor of "unit of measure", CommissionRate(2646) and CommissionUnitOfMeasure(2644) may also be specified as appropriate. |
+| 2640 | [CommissionAmount](/fix/fields/tags-2600-2799#tag-2640) | Amt | Optional | Required if NoCommissions(2639) &gt; 0. If the commission is based on a percentage of trade quantity or a factor of "unit of measure", CommissionRate(2646) and… |
 | 2641 | [CommissionAmountType](/fix/fields/tags-2600-2799#tag-2641) | CommissionAmountTypeCodeSet | Optional | Required if NoCommissions(2639) &gt; 0. |
 | 2725 | [CommissionAmountSubType](/fix/fields/tags-2600-2799#tag-2725) | CommissionAmountSubTypeCodeSet | Optional | Further sub classification of the CommissionAmountType(2641). |
 | 2642 | [CommissionBasis](/fix/fields/tags-2600-2799#tag-2642) | CommTypeCodeSet | Optional | Required if NoCommissions(2639) &gt; 0. |
 | 2643 | [CommissionCurrency](/fix/fields/tags-2600-2799#tag-2643) | Currency | Optional | Specifies the currency denomination of the commission amount if different from the trade's currency. Uses ISO 4217 currency codes. |
 | 2644 | [CommissionUnitOfMeasure](/fix/fields/tags-2600-2799#tag-2644) | UnitOfMeasureCodeSet | Optional | The commission rate unit of measure. |
 | 2645 | [CommissionUnitOfMeasureCurrency](/fix/fields/tags-2600-2799#tag-2645) | Currency | Optional | Indicates the currency of the unit of measure. Conditionally required when CommissionUnitOfMeasure(2644) = Ccy (Amount of currency). |
-| 2646 | [CommissionRate](/fix/fields/tags-2600-2799#tag-2646) | float | Optional | The commission rate when CommissionAmount(2640) is based on a percentage of quantity, amount per unit or a factor of "unit of measure". If the rate is a percentage or expressed in basis points, use the decimalized form, e.g. "0.05" for a 5% commission or "0.005" for 50 basis points. |
+| 2646 | [CommissionRate](/fix/fields/tags-2600-2799#tag-2646) | float | Optional | The commission rate when CommissionAmount(2640) is based on a percentage of quantity, amount per unit or a factor of "unit of measure". If the rate is a… |
 | 2647 | [CommissionSharedIndicator](/fix/fields/tags-2600-2799#tag-2647) | Boolean | Optional | Indicates whether the amount in CommissionAmount(2640) is to be shared with a third party, e.g. as part of a directed brokerage commission sharing arrangement. |
 | 2648 | [CommissionAmountShared](/fix/fields/tags-2600-2799#tag-2648) | Amt | Optional | If specified, CommissionSharedIndicator(2647) must be set to "Y". |
 | 2649 | [CommissionLegRefID](/fix/fields/tags-2600-2799#tag-2649) | String | Optional | This field may be used for multi-leg trades sent as a single message to indicate that the entry applies only to a specific leg. |

@@ -13,11 +13,11 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| | [MDStatisticParameters](/fix/components/md-statistic-parameters) | Component | Optional | This component comprises all parameters that can be used to describe the market data statistics. These can be part of the request as well as the response. All parameters defined on the MarketDataStatisticsRequest(35=DO) message should be echoed in the MarketDataStatisticsReport(35=DP) message as the… |
+| | [MDStatisticParameters](/fix/components/md-statistic-parameters) | Component | Optional | This component comprises all parameters that can be used to describe the market data statistics. These can be part of the request as well as the response. All… |
 | 2475 | [MDStatisticID](/fix/fields/tags-2400-2599#tag-2475) | String | Optional | Required if NoMDStatistics(2474) &gt; 0. |
 | 2476 | [MDStatisticTime](/fix/fields/tags-2400-2599#tag-2476) | UTCTimestamp | Optional | Conditionally required when MDStatisticValue(2478) is specified. |
-| 2477 | [MDStatisticStatus](/fix/fields/tags-2400-2599#tag-2477) | MDStatisticStatusCodeSet | Optional | May be used when sending reference data only to establish MDStatisticID(2475) as a reference to a set of parameters specified in MDStatisticParameters component. If not specified the default is MDStatisticStatus(2477)=1 (Active). |
-| 2478 | [MDStatisticValue](/fix/fields/tags-2400-2599#tag-2478) | float | Optional | Conditionally required unless sending reference data only to establish MDStatisticID(2475) as a reference to a set of parameters specified in MDStatisticParameters component. |
+| 2477 | [MDStatisticStatus](/fix/fields/tags-2400-2599#tag-2477) | MDStatisticStatusCodeSet | Optional | May be used when sending reference data only to establish MDStatisticID(2475) as a reference to a set of parameters specified in MDStatisticParameters… |
+| 2478 | [MDStatisticValue](/fix/fields/tags-2400-2599#tag-2478) | float | Optional | Conditionally required unless sending reference data only to establish MDStatisticID(2475) as a reference to a set of parameters specified in… |
 | 2479 | [MDStatisticValueType](/fix/fields/tags-2400-2599#tag-2479) | MDStatisticValueTypeCodeSet | Optional | Type of statistical value. |
 | 2480 | [MDStatisticValueUnit](/fix/fields/tags-2400-2599#tag-2480) | OrderDelayUnitCodeSet | Optional | Unit of time for statistical value. |
 

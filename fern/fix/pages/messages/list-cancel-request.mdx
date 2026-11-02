@@ -12,10 +12,10 @@ subtitle: "The List Cancel Request message type is used by institutions wishing 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 66 | [ListID](/fix/fields/tags-0-199#tag-66) | String | **Required** | Unique identifier for list as assigned by institution, used to associate multiple individual orders. Uniqueness must be guaranteed within a single trading day. Firms which generate multi-day orders should consider embedding a date within the ListID field to assure uniqueness across days. |
-| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 66 | [ListID](/fix/fields/tags-0-199#tag-66) | String | **Required** | Unique identifier for list as assigned by institution, used to associate multiple individual orders. Uniqueness must be guaranteed within a single trading day.… |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
 | 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | **Required** | Time this order request was initiated/released by the trader or trading system. |
-| 229 | [TradeOriginationDate](/fix/fields/tags-200-399#tag-229) | LocalMktDate | Optional | Used with Fixed Income for Muncipal New Issue Market. Agreement in principal between counter-parties prior to actual trade date. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to FIX 4.4 field was of type UTCDate) |
+| 229 | [TradeOriginationDate](/fix/fields/tags-200-399#tag-229) | LocalMktDate | Optional | Used with Fixed Income for Muncipal New Issue Market. Agreement in principal between counter-parties prior to actual trade date. (Note tag # was reserved in FIX… |
 | 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | Optional | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
 | 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
 | 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |

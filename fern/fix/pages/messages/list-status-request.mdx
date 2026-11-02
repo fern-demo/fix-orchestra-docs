@@ -12,7 +12,7 @@ subtitle: "The list status request message type is used by institutions to instr
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 66 | [ListID](/fix/fields/tags-0-199#tag-66) | String | **Required** | Unique identifier for list as assigned by institution, used to associate multiple individual orders. Uniqueness must be guaranteed within a single trading day. Firms which generate multi-day orders should consider embedding a date within the ListID field to assure uniqueness across days. |
+| 66 | [ListID](/fix/fields/tags-0-199#tag-66) | String | **Required** | Unique identifier for list as assigned by institution, used to associate multiple individual orders. Uniqueness must be guaranteed within a single trading day.… |
 | 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
 | 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
 | 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |

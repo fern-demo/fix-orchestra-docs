@@ -12,15 +12,15 @@ subtitle: "The Contrary Intention Report is used for reporting of contrary expir
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and… |
 | 977 | [ContIntRptID](/fix/fields/tags-800-999#tag-977) | String | **Required** | Unique identifier for the Contrary Intention report |
 | 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Time the contrary intention was received by clearing organization. |
 | 978 | [LateIndicator](/fix/fields/tags-800-999#tag-978) | Boolean | Optional | Indicates if the contrary intention was received after the exchange imposed cutoff time |
 | 979 | [InputSource](/fix/fields/tags-800-999#tag-979) | String | Optional | Source of the contrary intention |
 | 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | **Required** | Business date of contrary intention |
-| 453 | [Parties](/fix/groups/parties) | Repeating group | **Required** | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | **Required** | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
 | 981 | [ExpirationQty](/fix/groups/expiration-qty) | Repeating group | **Required** | The ExpirationQty component block identified the expiration quantities and type of expiration. |
-| | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
 | 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
 | 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |

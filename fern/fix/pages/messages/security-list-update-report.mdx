@@ -12,13 +12,13 @@ subtitle: "The Security List Update Report is used for reporting updates to a Co
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and… |
 | 964 | [SecurityReportID](/fix/fields/tags-800-999#tag-964) | int | Optional | Identifier for the Security List Update message in a bulk transfer environment (No Request/Response) |
 | 1465 | [SecurityListID](/fix/fields/tags-1400-1599#tag-1465) | String | Optional | Identifies a specific Security List entity |
 | 1466 | [SecurityListRefID](/fix/fields/tags-1400-1599#tag-1466) | String | Optional | Provides a reference to another Security List |
 | 1467 | [SecurityListDesc](/fix/fields/tags-1400-1599#tag-1467) | String | Optional | Specifies a description or name of a Security List. |
 | 1468 | [EncodedSecurityListDescLen](/fix/fields/tags-1400-1599#tag-1468) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedSecurityListDesc (tbd) field. |
-| 1469 | [EncodedSecurityListDesc](/fix/fields/tags-1400-1599#tag-1469) | data | Optional | Encoded (non-ASCII characters) representation of the SecurityListDesc (1467) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the SecurityListDesc field. |
+| 1469 | [EncodedSecurityListDesc](/fix/fields/tags-1400-1599#tag-1469) | data | Optional | Encoded (non-ASCII characters) representation of the SecurityListDesc (1467) field in the encoded format specified via the MessageEncoding (347) field. If used,… |
 | 1470 | [SecurityListType](/fix/fields/tags-1400-1599#tag-1470) | SecurityListTypeCodeSet | Optional | Identifies a list type |
 | 1471 | [SecurityListTypeSource](/fix/fields/tags-1400-1599#tag-1471) | SecurityListTypeSourceCodeSet | Optional | Identifies the sourec as a listype |
 | 320 | [SecurityReqID](/fix/fields/tags-200-399#tag-320) | String | Optional | Unique ID of a Security Definition Request. |

@@ -12,7 +12,7 @@ subtitle: "The Market Data message for incremental updates may contain any combi
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and… |
 | 1021 | [MDBookType](/fix/fields/tags-1000-1199#tag-1021) | MDBookTypeCodeSet | Optional | Describes the type of book for which the feed is intended. Can be used when multiple feeds are provided over the same connection |
 | 1022 | [MDFeedType](/fix/fields/tags-1000-1199#tag-1022) | String | Optional | Describes a class of service for a given data feed, ie Regular and Market Maker |
 | 1683 | [MDSubFeedType](/fix/fields/tags-1600-1799#tag-1683) | String | Optional | Describes a sub-class for a given class of service defined by MDFeedType (1022) |
@@ -23,7 +23,7 @@ subtitle: "The Market Data message for incremental updates may contain any combi
 | 268 | [MDIncGrp](/fix/groups/md-inc-grp) | Repeating group | **Required** |  |
 | 813 | [ApplQueueDepth](/fix/fields/tags-800-999#tag-813) | int | Optional | Depth of application messages queued for transmission as of delivery of this message |
 | 814 | [ApplQueueResolution](/fix/fields/tags-800-999#tag-814) | ApplQueueResolutionCodeSet | Optional | Action taken to resolve application queuing |
-| 215 | [RoutingGrp](/fix/groups/routing-grp) | Repeating group | Optional | The RoutingGrp is used to allow the application message sender to instruct the intermediary distributing the message who to further send the application message to. The original sender may also instruct who is not allowed to receive the message. When provided, the routing instructions provided in… |
+| 215 | [RoutingGrp](/fix/groups/routing-grp) | Repeating group | Optional | The RoutingGrp is used to allow the application message sender to instruct the intermediary distributing the message who to further send the application message… |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

@@ -16,15 +16,15 @@ Each repetition starts with the first member listed. The count of repetitions is
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | 1648 | [RelatedInstrumentType](/fix/fields/tags-1600-1799#tag-1648) | RelatedInstrumentTypeCodeSet | Optional | Conditionally required when NoRelatedInstruments &gt; 0 |
-| 1649 | [RelatedSymbol](/fix/fields/tags-1600-1799#tag-1649) | String | Optional | Either RelatedSymbol(1649) or RelatedSecurityID(1650) must be specified. For RelatedInstrumentType(1648)=1 ("hedges for" instrument) this would be the instrument being used to offset the option Instrument. If one of the "related to" fields is specified, this is the UnderlyingSymbol(311) of an… |
-| 1650 | [RelatedSecurityID](/fix/fields/tags-1600-1799#tag-1650) | String | Optional | Either RelatedSymbol(1649) or RelatedSecurityID(1650) must be specified. If one of the "related to" fields is specified, this is the UnderlyingSecurityID(309) of an underlying instrument defining the related security in the current message. |
+| 1649 | [RelatedSymbol](/fix/fields/tags-1600-1799#tag-1649) | String | Optional | Either RelatedSymbol(1649) or RelatedSecurityID(1650) must be specified. For RelatedInstrumentType(1648)=1 ("hedges for" instrument) this would be the… |
+| 1650 | [RelatedSecurityID](/fix/fields/tags-1600-1799#tag-1650) | String | Optional | Either RelatedSymbol(1649) or RelatedSecurityID(1650) must be specified. If one of the "related to" fields is specified, this is the UnderlyingSecurityID(309)… |
 | 1651 | [RelatedSecurityIDSource](/fix/fields/tags-1600-1799#tag-1651) | SecurityIDSourceCodeSet | Optional | Conditionally required when RelatedSecurityID(1650) is specified. |
 | 1652 | [RelatedSecurityType](/fix/fields/tags-1600-1799#tag-1652) | String | Optional | May be omitted if RelatedSecurityID(1650) or RelatedSymbol(1649) refers to an underlying instrument in the current message. |
 | 1653 | [RelatedMaturityMonthYear](/fix/fields/tags-1600-1799#tag-1653) | MonthYear | Optional | May be omitted if RelatedSecurityID(1650) or RelatedSymbol(1649) refers to an underlying instrument in the current message. |
-| 2413 | [RelatedToSecurityID](/fix/fields/tags-2400-2599#tag-2413) | String | Optional | Mutually exclusive with RelatedToStreamXIDRef(2415) and RelatedToDividendPeriodXIDRef(2417). If correlation is with the security in Instrument component then all "related to" fields may be omitted. |
+| 2413 | [RelatedToSecurityID](/fix/fields/tags-2400-2599#tag-2413) | String | Optional | Mutually exclusive with RelatedToStreamXIDRef(2415) and RelatedToDividendPeriodXIDRef(2417). If correlation is with the security in Instrument component then… |
 | 2414 | [RelatedToSecurityIDSource](/fix/fields/tags-2400-2599#tag-2414) | SecurityIDSourceCodeSet | Optional | Conditionally required when RelatedToSecurityID(2413) is specified. |
-| 2415 | [RelatedToStreamXIDRef](/fix/fields/tags-2400-2599#tag-2415) | XIDREF | Optional | Mutually exclusive with RelatedToSecurityID(2413) and RelatedToDividendPeriodXIDRef(2417). If correlation is with the security in Instrument component then all "related to" fields may be omitted. |
-| 2417 | [RelatedToDividendPeriodXIDRef](/fix/fields/tags-2400-2599#tag-2417) | XIDREF | Optional | Mutually exclusive with RelatedToSecurityID(2413) and RelatedToStreamXIDRef(2415). If correlation is with the security in Instrument component then all "related to" fields may be omitted. |
+| 2415 | [RelatedToStreamXIDRef](/fix/fields/tags-2400-2599#tag-2415) | XIDREF | Optional | Mutually exclusive with RelatedToSecurityID(2413) and RelatedToDividendPeriodXIDRef(2417). If correlation is with the security in Instrument component then all… |
+| 2417 | [RelatedToDividendPeriodXIDRef](/fix/fields/tags-2400-2599#tag-2417) | XIDREF | Optional | Mutually exclusive with RelatedToSecurityID(2413) and RelatedToStreamXIDRef(2415). If correlation is with the security in Instrument component then all "related… |
 
 </StickyTable>
 

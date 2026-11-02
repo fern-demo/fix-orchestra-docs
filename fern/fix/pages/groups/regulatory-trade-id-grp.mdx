@@ -15,10 +15,10 @@ Each repetition starts with the first member listed. The count of repetitions is
 |---|---|---|---|---|
 | 1903 | [RegulatoryTradeID](/fix/fields/tags-1800-1999#tag-1903) | String | Optional | Required if NoRegulatoryTradeIDs(1907) &gt; 0. |
 | 1905 | [RegulatoryTradeIDSource](/fix/fields/tags-1800-1999#tag-1905) | String | Optional | Identifies the reporting entity that originated the value in RegulatoryTradeID(1903). The reporting entitiy identifier may be assigned by a regulator. |
-| 1904 | [RegulatoryTradeIDEvent](/fix/fields/tags-1800-1999#tag-1904) | RegulatoryTradeIDEventCodeSet | Optional | Identifies the event which caused origination of the identifier in RegulatoryTradeID(1903). When more than one event is the cause, use the higher enumeration value. For example, if the identifier is originated due to an allocated trade which was cleared and reported, use the enumeration value 2… |
-| 1906 | [RegulatoryTradeIDType](/fix/fields/tags-1800-1999#tag-1906) | RegulatoryTradeIDTypeCodeSet | Optional | Specifies the type of trade identifier provided in RegulatoryTradeID(1903). Contextual hierarchy of events for the same trade or transaction maybe captured through use of the different RegulatoryTradeIDType(1906) values using multiple instances of the repeating group as needed for regulatory… |
+| 1904 | [RegulatoryTradeIDEvent](/fix/fields/tags-1800-1999#tag-1904) | RegulatoryTradeIDEventCodeSet | Optional | Identifies the event which caused origination of the identifier in RegulatoryTradeID(1903). When more than one event is the cause, use the higher enumeration… |
+| 1906 | [RegulatoryTradeIDType](/fix/fields/tags-1800-1999#tag-1906) | RegulatoryTradeIDTypeCodeSet | Optional | Specifies the type of trade identifier provided in RegulatoryTradeID(1903). Contextual hierarchy of events for the same trade or transaction maybe captured… |
 | 2411 | [RegulatoryLegRefID](/fix/fields/tags-2400-2599#tag-2411) | String | Optional | This field may be is used for multi-leg trades sent as a single message to indicate that the entry applies only to a specific leg. |
-| 2397 | [RegulatoryTradeIDScope](/fix/fields/tags-2200-2399#tag-2397) | RegulatoryTradeIDScopeCodeSet | Optional | Specifies the scope to which the RegulatoryTradeID(1903) applies. Used when a trade must be assigned more than one identifier, e.g. one for the clearing member and another for the client on a cleared trade as with the principal model in Europe. |
+| 2397 | [RegulatoryTradeIDScope](/fix/fields/tags-2200-2399#tag-2397) | RegulatoryTradeIDScopeCodeSet | Optional | Specifies the scope to which the RegulatoryTradeID(1903) applies. Used when a trade must be assigned more than one identifier, e.g. one for the clearing member… |
 
 </StickyTable>
 

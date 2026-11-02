@@ -15,14 +15,14 @@ subtitle: "The Trade Capture Request Ack message is used to: - Provide an acknow
 | 568 | [TradeRequestID](/fix/fields/tags-400-599#tag-568) | String | **Required** | Identifier for the trade request |
 | 1003 | [TradeID](/fix/fields/tags-1000-1199#tag-1003) | String | Optional | The unique ID assigned to the trade entity once it is received or matched by the exchange or central counterparty. |
 | 1040 | [SecondaryTradeID](/fix/fields/tags-1000-1199#tag-1040) | String | Optional | Used to carry an internal trade entity ID which may or may not be reported to the firm |
-| 1041 | [FirmTradeID](/fix/fields/tags-1000-1199#tag-1041) | String | Optional | The ID assigned to a trade by the Firm to track a trade within the Firm system. This ID can be assigned either before or after submission to the exchange or central counterpary |
+| 1041 | [FirmTradeID](/fix/fields/tags-1000-1199#tag-1041) | String | Optional | The ID assigned to a trade by the Firm to track a trade within the Firm system. This ID can be assigned either before or after submission to the exchange or… |
 | 1042 | [SecondaryFirmTradeID](/fix/fields/tags-1000-1199#tag-1042) | String | Optional | Used to carry an internal firm assigned ID which may or may not be reported to the exchange or central counterpary |
 | 569 | [TradeRequestType](/fix/fields/tags-400-599#tag-569) | TradeRequestTypeCodeSet | **Required** | Type of Trade Capture Report. |
 | 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263) | SubscriptionRequestTypeCodeSet | Optional | Used to subscribe / unsubscribe for trade capture reports If the field is absent, the value 0 will be the default |
 | 748 | [TotNumTradeReports](/fix/fields/tags-600-799#tag-748) | int | Optional | Number of trade reports returned |
 | 749 | [TradeRequestResult](/fix/fields/tags-600-799#tag-749) | TradeRequestResultCodeSet | **Required** | Result of Trade Request |
 | 750 | [TradeRequestStatus](/fix/fields/tags-600-799#tag-750) | TradeRequestStatusCodeSet | **Required** | Status of Trade Request |
-| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | | [InstrumentExtension](/fix/components/instrument-extension) | Component | Optional | The InstrumentExtension component block identifies additional security attributes that are more commonly found for Fixed Income securities. |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
