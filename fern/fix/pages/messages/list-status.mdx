@@ -1,0 +1,39 @@
+---
+title: "ListStatus"
+subtitle: "The list status message is issued as the response to a List Status Request message sent in an unsolicited fashion by the sell-side. It indicates the current state of the orders within the list as they exist at the broker's site. This…"
+---
+
+<Badge intent="info">MsgType N</Badge> <Badge intent="note" minimal>Program Trading</Badge> <Badge intent="tip" minimal>Trade</Badge> <Badge intent="success" minimal>Added FIX.2.7</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 66 | [ListID](/fix/fields/tags-0-199#tag-66) | String | **Required** | Unique identifier for list as assigned by institution, used to associate multiple individual orders. Uniqueness must be guaranteed within a single trading day. Firms which generate multi-day orders should consider embedding a date within the ListID field to assure uniqueness across days. |
+| 429 | [ListStatusType](/fix/fields/tags-400-599#tag-429) | ListStatusTypeCodeSet | **Required** | Code to represent the status type. |
+| 82 | [NoRpts](/fix/fields/tags-0-199#tag-82) | int | **Required** | Total number of messages required to status complete list. |
+| 431 | [ListOrderStatus](/fix/fields/tags-400-599#tag-431) | ListOrderStatusCodeSet | **Required** | Code to represent the status of a list order. |
+| 1385 | [ContingencyType](/fix/fields/tags-1200-1399#tag-1385) | ContingencyTypeCodeSet | Optional | Defines the type of contingency. |
+| 1386 | [ListRejectReason](/fix/fields/tags-1200-1399#tag-1386) | ListRejectReasonCodeSet | Optional | Identifies the reason for rejection of a New Order List message. Note that OrdRejReason(103) is used if the rejection is based on properties of an individual order part of the List. |
+| 83 | [RptSeq](/fix/fields/tags-0-199#tag-83) | int | **Required** | Sequence number of this report message. |
+| 444 | [ListStatusText](/fix/fields/tags-400-599#tag-444) | String | Optional | Free format text string related to List Status. |
+| 445 | [EncodedListStatusTextLen](/fix/fields/tags-400-599#tag-445) | Length | Optional | Must be set if EncodedListStatusText field is specified and must immediately precede it. |
+| 446 | [EncodedListStatusText](/fix/fields/tags-400-599#tag-446) | data | Optional | Encoded (non-ASCII characters) representation of the ListStatusText field in the encoded format specified via the MessageEncoding field. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 68 | [TotNoOrders](/fix/fields/tags-0-199#tag-68) | int | **Required** | Used to support fragmentation. Sum of NoOrders across all messages with the same ListID. |
+| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893) | LastFragmentCodeSet | Optional | Indicates whether this is the last fragment in a sequence of message fragments. Only required where message has been fragmented. |
+| 73 | [OrdListStatGrp](/fix/groups/ord-list-stat-grp) | Repeating group | **Required** |  |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="ListStatus" wordWrap
+8=FIXT.1.1|9=146|35=N|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|66=ABC123|429=1|82=1|431=1|83=1|68=1|73=1|11=ABC123|14=100|39=0|151=100|84=100|6=10.25|10=144|
+```

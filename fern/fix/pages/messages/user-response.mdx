@@ -1,0 +1,30 @@
+---
+title: "UserResponse"
+subtitle: "This message is used to respond to a user request message, it reports the status of the user after the completion of any action requested in the user request message."
+---
+
+<Badge intent="info">MsgType BF</Badge> <Badge intent="note" minimal>User Management</Badge> <Badge intent="tip" minimal>Infrastructure</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 923 | [UserRequestID](/fix/fields/tags-800-999#tag-923) | String | **Required** | Unique identifier for a User Request. |
+| 553 | [Username](/fix/fields/tags-400-599#tag-553) | String | **Required** | Userid or username. |
+| 926 | [UserStatus](/fix/fields/tags-800-999#tag-926) | UserStatusCodeSet | Optional | Indicates the status of a user |
+| 1610 | [ThrottleParamsGrp](/fix/groups/throttle-params-grp) | Repeating group | Optional |  |
+| 927 | [UserStatusText](/fix/fields/tags-800-999#tag-927) | String | Optional | Reason a request was not carried out |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="UserResponse" wordWrap
+8=FIXT.1.1|9=82|35=BF|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|923=ABC123|553=ABC123|10=111|
+```

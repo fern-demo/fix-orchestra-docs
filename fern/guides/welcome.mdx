@@ -1,0 +1,35 @@
+---
+title: Welcome
+subtitle: Trade with Acme Markets over the FIX protocol
+---
+
+Acme Markets accepts orders and publishes execution reports over FIX (FIXT.1.1 session layer, FIX Latest application messages). This site documents every message, component, repeating group and field the venue supports.
+
+<CardGroup cols={2}>
+  <Card title="Messages" icon="envelope" href="/fix/messages">
+    Order entry, market data, post-trade and session messages
+  </Card>
+  <Card title="Fields" icon="hashtag" href="/fix/fields">
+    Look up any tag number, its datatype and valid values
+  </Card>
+  <Card title="NewOrderSingle (35=D)" icon="cart-shopping" href="/fix/messages/new-order-single">
+    Submit a new order
+  </Card>
+  <Card title="ExecutionReport (35=8)" icon="file-invoice" href="/fix/messages/execution-report">
+    Order acknowledgements, fills and rejects
+  </Card>
+</CardGroup>
+
+## Connect
+
+<Steps>
+  <Step title="Request a session">
+    Ask your Acme account manager for a `SenderCompID`/`TargetCompID` pair and the certification environment host.
+  </Step>
+  <Step title="Log on">
+    Send a [Logon](/fix/messages/logon) message with `HeartBtInt` (108) set to 30 seconds.
+  </Step>
+  <Step title="Send an order">
+    Send a [NewOrderSingle](/fix/messages/new-order-single) and wait for an [ExecutionReport](/fix/messages/execution-report).
+  </Step>
+</Steps>

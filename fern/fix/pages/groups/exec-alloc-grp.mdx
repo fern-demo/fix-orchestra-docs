@@ -1,0 +1,32 @@
+---
+title: "ExecAllocGrp"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 124</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoExecs (124)](/fix/fields/tags-0-199#tag-124).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 32 | [LastQty](/fix/fields/tags-0-199#tag-32) | Qty | Optional | Amount of quantity (e.g. number of shares) in individual execution. Required if NoExecs &gt; 0 |
+| 17 | [ExecID](/fix/fields/tags-0-199#tag-17) | String | Optional | Unique identifier of execution message as assigned by sell-side (broker, exchange, ECN) (will be 0 (zero) for ExecType (150)=I (Order Status)). Uniqueness must be guaranteed within a single trading day or the life of a multi-day order. Firms which accept multi-day orders should consider embedding a… |
+| 527 | [SecondaryExecID](/fix/fields/tags-400-599#tag-527) | String | Optional | Assigned by the party which accepts the order. Can be used to provide the ExecID (17) used by an exchange or executing system. |
+| 31 | [LastPx](/fix/fields/tags-0-199#tag-31) | Price | Optional | Price of individual execution. Required if NoExecs &gt; 0. For FX, if specified, expressed in terms of Currency(15). |
+| 669 | [LastParPx](/fix/fields/tags-600-799#tag-669) | Price | Optional | Last price expressed in percent-of-par. Conditionally required for Fixed Income trades when LastPx is expressed in Yield, Spread, Discount or any other price type |
+| 29 | [LastCapacity](/fix/fields/tags-0-199#tag-29) | LastCapacityCodeSet | Optional | Used to identify whether the trade was executed on an agency or principal basis. |
+| 1003 | [TradeID](/fix/fields/tags-1000-1199#tag-1003) | String | Optional | The unique ID assigned to the trade entity once it is received or matched by the exchange or central counterparty. |
+| 1041 | [FirmTradeID](/fix/fields/tags-1000-1199#tag-1041) | String | Optional | The ID assigned to a trade by the Firm to track a trade within the Firm system. This ID can be assigned either before or after submission to the exchange or central counterpary |
+| 2749 | [ExecutionTimestamp](/fix/fields/tags-2600-2799#tag-2749) | UTCTimestamp | Optional | Time of the individual execution. |
+| 2524 | [TradeReportingIndicator](/fix/fields/tags-2400-2599#tag-2524) | TradeReportingIndicatorCodeSet | Optional | Used between parties to convey trade reporting status. |
+| 2668 | [TrdRegPublicationGrp](/fix/groups/trd-reg-publication-grp) | Repeating group | Optional | The TrdRegPublicationGrp component is used to express trade publication reasons that are required by regulatory agencies. Reasons may include deferrals, exemptions, waivers, etc. |
+| 1838 | [TradePriceConditionGrp](/fix/groups/trade-price-condition-grp) | Repeating group | Optional | Price conditions associated with a trade that impact trade price. |
+
+</StickyTable>
+
+## Used in
+
+[AllocationInstruction](/fix/messages/allocation-instruction), [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationReport](/fix/messages/allocation-report), [Confirmation](/fix/messages/confirmation)

@@ -1,0 +1,22 @@
+---
+title: "PaymentStreamPricingBusinessCenterGrp"
+subtitle: "The PaymentStreamPricingBusinessCenterGrp is a repeating subcomponent of the PaymentStreamFloatingRate component used to specify the set of business centers whose calendars drive date adjustment. Used only to override the business centers…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41192</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPaymentStreamPricingBusinessCenters (41192)](/fix/fields/tags-41000-41199#tag-41192).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41193 | [PaymentStreamPricingBusinessCenter](/fix/fields/tags-41000-41199#tag-41193) | String | Optional | Required if NoPaymentStreamPricingBusinessCenters(41192) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)

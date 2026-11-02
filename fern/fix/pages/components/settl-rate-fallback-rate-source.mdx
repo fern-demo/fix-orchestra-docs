@@ -1,0 +1,21 @@
+---
+title: "SettlRateFallbackRateSource"
+subtitle: "SettlRateFallbackRateSource is a subcomponent of the SettlRateDisruptionFallbackGrp component used to specify the rate source in the event of rate disruption fallback."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40373 | [SettlRateFallbackRateSource](/fix/fields/tags-40200-40399#tag-40373) | RateSourceCodeSet | Optional | Identifies the source of rate information. |
+| 40655 | [SettlRateFallbackReferencePage](/fix/fields/tags-40600-40799#tag-40655) | String | Optional | Conditionally required when SettlRateFallbackRateSource(40373) = 3 (ISDA Settlement Rate Option) or 99 (Other). |
+
+</StickyTable>
+
+## Used in
+
+[SettlRateDisruptionFallbackGrp](/fix/groups/settl-rate-disruption-fallback-grp)

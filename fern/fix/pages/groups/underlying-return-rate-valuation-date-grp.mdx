@@ -1,0 +1,23 @@
+---
+title: "UnderlyingReturnRateValuationDateGrp"
+subtitle: "UnderlyingReturnRateValuationDateGrp is a repeating subcomponent within the UnderlyingReturnRateDateGrp component. It is used to specify the fixed valuation dates for an equity return swap payment stream."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 43071</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingReturnRateValuationDates (43071)](/fix/fields/tags-43000-43199#tag-43071).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 43072 | [UnderlyingReturnRateValuationDate](/fix/fields/tags-43000-43199#tag-43072) | LocalMktDate | Optional | Required if NoUnderlyingReturnRateValuationDates(43071) &gt; 0. |
+| 43073 | [UnderlyingReturnRateValuationDateType](/fix/fields/tags-43000-43199#tag-43073) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date instance but to all subsequent date instances in the group until overridden when a new type is specified. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingReturnRateDateGrp](/fix/groups/underlying-return-rate-date-grp)

@@ -1,0 +1,23 @@
+---
+title: "PaymentSettlPtysSubGrp"
+subtitle: "PaymentSettlSubParties is a repeating component within the PaymentSettlParties component used to extend information to be reported for the party."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40238</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPaymentSettlPartySubIDs (40238)](/fix/fields/tags-40200-40399#tag-40238).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40239 | [PaymentSettlPartySubID](/fix/fields/tags-40200-40399#tag-40239) | String | Optional | Required if NoPaymentSettlPartySubIDs(40238) &gt; 0. |
+| 40240 | [PaymentSettlPartySubIDType](/fix/fields/tags-40200-40399#tag-40240) | PartySubIDTypeCodeSet | Optional | Required if NoPaymentSettlPartySubIDs(40238) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[PaymentSettlParties](/fix/groups/payment-settl-parties)

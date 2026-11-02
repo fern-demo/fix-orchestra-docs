@@ -1,0 +1,23 @@
+---
+title: "RoutingGrp"
+subtitle: "The RoutingGrp is used to allow the application message sender to instruct the intermediary distributing the message who to further send the application message to. The original sender may also instruct who is not allowed to receive the…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 215</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRoutingIDs (215)](/fix/fields/tags-200-399#tag-215).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 216 | [RoutingType](/fix/fields/tags-200-399#tag-216) | RoutingTypeCodeSet | Optional | Indicates type of RoutingID. Required if NoRoutingIDs is &gt; 0. |
+| 217 | [RoutingID](/fix/fields/tags-200-399#tag-217) | String | Optional | Identifies routing destination. Required if NoRoutingIDs is &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[Advertisement](/fix/messages/advertisement), [Email](/fix/messages/email), [IOI](/fix/messages/ioi), [MarketDataIncrementalRefresh](/fix/messages/market-data-incremental-refresh), [MarketDataSnapshotFullRefresh](/fix/messages/market-data-snapshot-full-refresh), [News](/fix/messages/news), [Quote](/fix/messages/quote)

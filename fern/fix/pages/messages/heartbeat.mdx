@@ -1,0 +1,26 @@
+---
+title: "Heartbeat"
+subtitle: "The Heartbeat monitors the status of the communication link and identifies when the last of a string of messages was not received."
+---
+
+<Badge intent="info">MsgType 0</Badge> <Badge intent="note" minimal>Session</Badge> <Badge intent="tip" minimal>Session</Badge> <Badge intent="success" minimal>Added FIX.2.7</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 112 | [TestReqID](/fix/fields/tags-0-199#tag-112) | String | Optional | Required when the heartbeat is the result of a Test Request message. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="Heartbeat" wordWrap
+8=FIXT.1.1|9=59|35=0|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|10=172|
+```

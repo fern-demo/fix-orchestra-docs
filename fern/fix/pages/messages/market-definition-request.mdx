@@ -1,0 +1,30 @@
+---
+title: "MarketDefinitionRequest"
+subtitle: "The Market Definition Request message is used to request for market structure information from the Respondent that receives this request."
+---
+
+<Badge intent="info">MsgType BT</Badge> <Badge intent="note" minimal>Market Structure Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 1393 | [MarketReqID](/fix/fields/tags-1200-1399#tag-1393) | String | **Required** | Must be unique, or the ID of previous Market Segment Request to disable if SubscriptionRequestType = Disable previous Snapshot + Updates Request(2). |
+| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263) | SubscriptionRequestTypeCodeSet | **Required** | Subscription Request Type |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Conditionally required if MarketSegmentID(1300) is specified on the request |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
+| 1325 | [ParentMktSegmID](/fix/fields/tags-1200-1399#tag-1325) | String | Optional | Specifies that the Market Segment is a sub segment of the Market Segment defined in this field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="MarketDefinitionRequest" wordWrap
+8=FIXT.1.1|9=78|35=BT|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|1393=ABC123|263=0|10=134|
+```

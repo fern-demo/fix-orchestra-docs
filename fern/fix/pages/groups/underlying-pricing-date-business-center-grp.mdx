@@ -1,0 +1,22 @@
+---
+title: "UnderlyingPricingDateBusinessCenterGrp"
+subtitle: "UnderlyingPricingDateBusinessCenterGrp is a repeating subcomponent of the UnderlyingPricingDateTime component used to specify the set of business centers whose calendars drive date adjustment. Used only to override the business centers…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41947</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingPricingDateBusinessCenters (41947)](/fix/fields/tags-41800-41999#tag-41947).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41948 | [UnderlyingPricingDateBusinessCenter](/fix/fields/tags-41800-41999#tag-41948) | String | Optional | Required if NoUnderlyingPricingDateBusinessCenters(41947) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingPricingDateTime](/fix/components/underlying-pricing-date-time)

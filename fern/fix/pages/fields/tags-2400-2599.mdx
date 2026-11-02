@@ -1,0 +1,2734 @@
+---
+title: "Tags 2400–2599"
+subtitle: "200 fields"
+---
+
+## 2400 · EffectiveBusinessDate [#tag-2400]
+
+<Badge intent="info" minimal>Tag 2400</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies an explicit business date for associated reference data or transaction. Used when an implicit date is not sufficiently specific.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [MarketDefinition](/fix/messages/market-definition), [MarketDefinitionUpdateReport](/fix/messages/market-definition-update-report), [PartyActionReport](/fix/messages/party-action-report), [SecurityDefinition](/fix/messages/security-definition), [SecurityDefinitionUpdateReport](/fix/messages/security-definition-update-report)
+
+## 2401 · ListManualOrderIndicator [#tag-2401]
+
+<Badge intent="info" minimal>Tag 2401</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates if the list of orders was initially received manually (as opposed to electronically) or if it was entered manually (as opposed to entered by automated trading software).
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [NewOrderList](/fix/messages/new-order-list)
+
+## 2402 · EntitlementSubType [#tag-2402]
+
+<Badge intent="info" minimal>Tag 2402</Badge> <Badge intent="note" minimal>EntitlementSubTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Subtype of an entitlement specified in EntitlementType(1775).
+
+Code set **EntitlementSubTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | OrderEntry | Order entry |
+| `2` | HItLift | Hit/Lift |
+| `3` | ViewIndicativePx | View indicative prices |
+| `4` | ViewExecutablePx | View executable prices |
+| `5` | SingleQuote | Single quote |
+| `6` | StreamingQuotes | Streaming quotes |
+| `7` | SingleBroker | Single broker |
+| `8` | MultiBrokers | Multi brokers |
+
+Used in: [EntitlementGrp](/fix/groups/entitlement-grp), [EntitlementTypeGrp](/fix/groups/entitlement-type-grp)
+
+## 2403 · QuoteModelType [#tag-2403]
+
+<Badge intent="info" minimal>Tag 2403</Badge> <Badge intent="note" minimal>QuoteModelTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Quote model type
+
+Code set **QuoteModelTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | QuoteEntry | Quote entry |
+| `2` | QuoteModification | Quote modification |
+
+Used in: [MassQuote](/fix/messages/mass-quote), [Quote](/fix/messages/quote)
+
+## 2404 · ComplianceText [#tag-2404]
+
+<Badge intent="info" minimal>Tag 2404</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Free text for compliance information required for regulatory reporting.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [CrossRequest](/fix/messages/cross-request), [CrossRequestAck](/fix/messages/cross-request-ack), [ExecutionReport](/fix/messages/execution-report), [ListOrdGrp](/fix/groups/list-ord-grp), [MassQuote](/fix/messages/mass-quote), [MassQuoteAck](/fix/messages/mass-quote-ack), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [OrderCancelRequest](/fix/messages/order-cancel-request), [OrderMassActionReport](/fix/messages/order-mass-action-report), [OrderMassActionRequest](/fix/messages/order-mass-action-request), [Quote](/fix/messages/quote), [QuoteRequest](/fix/messages/quote-request), [SecurityDefinitionRequest](/fix/messages/security-definition-request), [SideCrossOrdCxlGrp](/fix/groups/side-cross-ord-cxl-grp), [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
+
+## 2405 · ExecMethod [#tag-2405]
+
+<Badge intent="info" minimal>Tag 2405</Badge> <Badge intent="note" minimal>ExecMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies how the transaction was executed, e.g. via an automated execution platform or other method.
+
+Code set **ExecMethodCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Unspecified | Undefined/unspecified - (default when not specified) |
+| `1` | Manual | Manual |
+| `2` | Automated | Automated |
+| `3` | VoiceBrokered | Voice brokered |
+
+Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 2406 · AllocRegulatoryLegRefID [#tag-2406]
+
+<Badge intent="info" minimal>Tag 2406</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the leg of the trade the entry applies to by referencing the leg's LegID(1788).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [AllocRegulatoryTradeIDGrp](/fix/groups/alloc-regulatory-trade-id-grp)
+
+## 2407 · ComplexEventSpotRate [#tag-2407]
+
+<Badge intent="info" minimal>Tag 2407</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+FX spot rate.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [ComplexEvents](/fix/groups/complex-events)
+
+## 2408 · ComplexEventForwardPoints [#tag-2408]
+
+<Badge intent="info" minimal>Tag 2408</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+FX forward points added to spot rate. May be a negative value.
+
+Type: [PriceOffset](/fix/datatypes#price-offset)
+
+Used in: [ComplexEvents](/fix/groups/complex-events)
+
+## 2409 · LegComplexEventSpotRate [#tag-2409]
+
+<Badge intent="info" minimal>Tag 2409</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+FX spot rate.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [LegComplexEvents](/fix/groups/leg-complex-events)
+
+## 2410 · LegComplexEventForwardPoints [#tag-2410]
+
+<Badge intent="info" minimal>Tag 2410</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+FX forward points added to spot rate. May be a negative value.
+
+Type: [PriceOffset](/fix/datatypes#price-offset)
+
+Used in: [LegComplexEvents](/fix/groups/leg-complex-events)
+
+## 2411 · RegulatoryLegRefID [#tag-2411]
+
+<Badge intent="info" minimal>Tag 2411</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the leg of the trade the entry applies to by referencing the leg's LegID(1788).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [RegulatoryTradeIDGrp](/fix/groups/regulatory-trade-id-grp)
+
+## 2412 · RateSourceReferemcePageHeading [#tag-2412]
+
+<Badge intent="info" minimal>Tag 2412</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the page heading from the rate source.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [RateSource](/fix/groups/rate-source)
+
+## 2413 · RelatedToSecurityID [#tag-2413]
+
+<Badge intent="info" minimal>Tag 2413</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The security identifier of the instrument, instrument leg or underlying instrument with which the related instrument has correlation.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [RelatedInstrumentGrp](/fix/groups/related-instrument-grp)
+
+## 2414 · RelatedToSecurityIDSource [#tag-2414]
+
+<Badge intent="info" minimal>Tag 2414</Badge> <Badge intent="note" minimal>SecurityIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies class or source of the RelatedToSecurityID(2413) value.
+
+Code set **SecurityIDSourceCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | CUSIP | CUSIP |
+| `2` | SEDOL | SEDOL |
+| `3` | QUIK | QUIK |
+| `4` | ISINNumber | ISIN |
+| `5` | RICCode | RIC |
+| `6` | ISOCurrencyCode | ISO Currency Code |
+| `7` | ISOCountryCode | ISO Country Code |
+| `8` | ExchangeSymbol | Exchange symbol |
+| `9` | ConsolidatedTapeAssociation | Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format) |
+| `A` | BloombergSymbol | Bloomberg Symbol |
+| `B` | Wertpapier | Wertpapier |
+| `C` | Dutch | Dutch |
+| `D` | Valoren | Valoren |
+| `E` | Sicovam | Sicovam |
+| `F` | Belgian | Belgian |
+| `G` | Common | "Common" (Clearstream and Euroclear) |
+| `H` | ClearingHouse | Clearing house / Clearing organization |
+| `I` | ISDAFpMLSpecification | ISDA/FpML product specification (XML in SecurityXML(1185)) |
+| `J` | OptionPriceReportingAuthority | Option Price Reporting Authority |
+| `K` | ISDAFpMLURL | ISDA/FpML product URL (URL in SecurityID(48)) |
+| `L` | LetterOfCredit | Letter of credit |
+| `M` | MarketplaceAssignedIdentifier | Marketplace-assigned Identifier |
+| `N` | MarkitREDEntityCLIP | Markit RED entity CLIP |
+| `P` | MarkitREDPairCLIP | Markit RED pair CLIP |
+| `Q` | CFTCCommodityCode | CFTC commodity code |
+| `R` | ISDACommodityReferencePrice | ISDA Commodity Reference Price |
+| `S` | FinancialInstrumentGlobalIdentifier | Financial Instrument Global Identifier |
+| `T` | LegalEntityIdentifier | Legal entity identifier |
+| `U` | Synthetic | Synthetic |
+| `V` | FidessaInstrumentMnemonic | Fidessa Instrument Mnemonic (FIM) |
+| `W` | IndexName | Index name |
+| `X` | UniformSymbol | Uniform Symbol (UMTF Symbol) |
+
+Used in: [RelatedInstrumentGrp](/fix/groups/related-instrument-grp)
+
+## 2415 · RelatedToStreamXIDRef [#tag-2415]
+
+<Badge intent="info" minimal>Tag 2415</Badge> <Badge intent="note" minimal>XIDREF</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+StreamXID(41303), LegStreamXID(41700) or UnderlyingStreamXID(42016) of the stream with which the related instrument has correlation.
+
+Type: [XIDREF](/fix/datatypes#xidref)
+
+Used in: [RelatedInstrumentGrp](/fix/groups/related-instrument-grp)
+
+## 2416 · SideRegulatoryLegRefID [#tag-2416]
+
+<Badge intent="info" minimal>Tag 2416</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the leg of the trade the entry applies to by referencing the leg's LegID(1788).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [SideRegulatoryTradeIDGrp](/fix/groups/side-regulatory-trade-id-grp)
+
+## 2417 · RelatedToDividendPeriodXIDRef [#tag-2417]
+
+<Badge intent="info" minimal>Tag 2417</Badge> <Badge intent="note" minimal>XIDREF</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The DividendPeriodXID(42293) of the stream dividend period with which the related instrument has correlation.
+
+Type: [XIDREF](/fix/datatypes#xidref)
+
+Used in: [RelatedInstrumentGrp](/fix/groups/related-instrument-grp)
+
+## 2418 · FirmTradeEventID [#tag-2418]
+
+<Badge intent="info" minimal>Tag 2418</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+An identifier created by the trading party for the life cycle event associated with this report.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp)
+
+## 2419 · UnderlyingComplexEventSpotRate [#tag-2419]
+
+<Badge intent="info" minimal>Tag 2419</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+FX spot rate.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [UnderlyingComplexEvents](/fix/groups/underlying-complex-events)
+
+## 2420 · UnderlyingComplexEventForwardPoints [#tag-2420]
+
+<Badge intent="info" minimal>Tag 2420</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+FX forward points added to spot rate. May be a negative value.
+
+Type: [PriceOffset](/fix/datatypes#price-offset)
+
+Used in: [UnderlyingComplexEvents](/fix/groups/underlying-complex-events)
+
+## 2421 · FillRefID [#tag-2421]
+
+<Badge intent="info" minimal>Tag 2421</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A reference to either the value of the FillExecID(1363) or an implicit position of a fills instance in the FillsGrp component.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [InstrmtLegExecGrp](/fix/groups/instrmt-leg-exec-grp)
+
+## 2422 · OrderRequestID [#tag-2422]
+
+<Badge intent="info" minimal>Tag 2422</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Unique message identifier for an order request as assigned by the submitter of the request.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [CrossOrderCancelReplaceRequest](/fix/messages/cross-order-cancel-replace-request), [CrossOrderCancelRequest](/fix/messages/cross-order-cancel-request), [ExecutionReport](/fix/messages/execution-report), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderCross](/fix/messages/new-order-cross), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReject](/fix/messages/order-cancel-reject), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [OrderCancelRequest](/fix/messages/order-cancel-request), [SecurityDefinition](/fix/messages/security-definition)
+
+## 2423 · MassOrderRequestID [#tag-2423]
+
+<Badge intent="info" minimal>Tag 2423</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Unique message identifier for a mass order request as assigned by the submitter of the orders.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [MassOrder](/fix/messages/mass-order), [MassOrderAck](/fix/messages/mass-order-ack)
+
+## 2424 · MassOrderReportID [#tag-2424]
+
+<Badge intent="info" minimal>Tag 2424</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Unique message identifier for a mass order request as assigned by the receiver of the orders.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [MassOrderAck](/fix/messages/mass-order-ack)
+
+## 2425 · MassOrderRequestStatus [#tag-2425]
+
+<Badge intent="info" minimal>Tag 2425</Badge> <Badge intent="note" minimal>MassOrderRequestStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Status of mass order request.
+
+Code set **MassOrderRequestStatusCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Accepted | Accepted |
+| `2` | AcceptedWithAdditionalEvents | Accepted with additional events |
+| `3` | Rejected | Rejected |
+
+Used in: [MassOrderAck](/fix/messages/mass-order-ack)
+
+## 2426 · MassOrderRequestResult [#tag-2426]
+
+<Badge intent="info" minimal>Tag 2426</Badge> <Badge intent="note" minimal>MassOrderRequestResultCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Request result of mass order request.
+
+Code set **MassOrderRequestResultCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Successful | Successful |
+| `1` | ResponseLevelNotSupported | Response level not supported |
+| `2` | InvalidMarket | Invalid market |
+| `3` | InvalidMarketSegment | Invalid market segment |
+| `99` | Other | Other |
+
+Used in: [MassOrderAck](/fix/messages/mass-order-ack)
+
+## 2427 · OrderResponseLevel [#tag-2427]
+
+<Badge intent="info" minimal>Tag 2427</Badge> <Badge intent="note" minimal>OrderResponseLevelCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The level of response requested from receiver of mass order messages. A default value should be bilaterally agreed.
+
+Code set **OrderResponseLevelCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NoAck | No acknowledgement |
+| `1` | MinimumAck | Minimum acknowledgement |
+| `2` | AckEach | Acknowledge each order |
+| `3` | SummaryAck | Summary acknowledgement |
+
+Used in: [MassOrder](/fix/messages/mass-order), [MassOrderAck](/fix/messages/mass-order-ack)
+
+## 2428 · NoOrderEntries [#tag-2428]
+
+<Badge intent="info" minimal>Tag 2428</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of order entries.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [OrderEntryAckGrp](/fix/groups/order-entry-ack-grp), [OrderEntryGrp](/fix/groups/order-entry-grp)
+
+## 2429 · OrderEntryAction [#tag-2429]
+
+<Badge intent="info" minimal>Tag 2429</Badge> <Badge intent="note" minimal>OrderEntryActionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the action to be taken for the given order.
+
+Code set **OrderEntryActionCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Add | Add |
+| `2` | Modify | Modify |
+| `3` | Delete | Delete / Cancel |
+| `4` | Suspend | Suspend |
+| `5` | Release | Release |
+
+Used in: [OrderEntryAckGrp](/fix/groups/order-entry-ack-grp), [OrderEntryGrp](/fix/groups/order-entry-grp)
+
+## 2430 · OrderEntryID [#tag-2430]
+
+<Badge intent="info" minimal>Tag 2430</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Unique identifier for an order within a single MassOrder(35=DJ) message that can be used as a reference in the MassOrderAck(35=DK) message.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [OrderEntryAckGrp](/fix/groups/order-entry-ack-grp), [OrderEntryGrp](/fix/groups/order-entry-grp)
+
+## 2431 · ExecTypeReason [#tag-2431]
+
+<Badge intent="info" minimal>Tag 2431</Badge> <Badge intent="note" minimal>ExecTypeReasonCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The initiating event when an ExecutionReport(35=8) is sent.
+
+Code set **ExecTypeReasonCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | OrdAddedOnRequest | Order added upon request |
+| `2` | OrdReplacedOnRequest | Order replaced upon request |
+| `3` | OrdCxldOnRequest | Order cancelled upon request |
+| `4` | UnsolicitedOrdCxl | Unsolicited order cancellation |
+| `5` | NonRestingOrdAddedOnRequest | Non-resting order added upon request |
+| `6` | OrdReplacedWithNonRestingOrdOnRequest | Order replaced with non-resting order upon request |
+| `7` | TriggerOrdReplacedOnRequest | Trigger order replaced upon request |
+| `8` | SuspendedOrdReplacedOnRequest | Suspended order replaced upon request |
+| `9` | SuspendedOrdCxldOnRequest | Suspended order canceled upon request |
+| `10` | OrdCxlPending | Order cancellation pending |
+| `11` | PendingCxlExecuted | Pending cancellation executed |
+| `12` | RestingOrdTriggered | Resting order triggered |
+| `13` | SuspendedOrdActivated | Suspended order activated |
+| `14` | ActiveOrdSuspended | Active order suspended |
+| `15` | OrdExpired | Order expired |
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [OrderEntryAckGrp](/fix/groups/order-entry-ack-grp)
+
+## 2432 · TotNoOrderEntries [#tag-2432]
+
+<Badge intent="info" minimal>Tag 2432</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Totals number of orders for a mass order or its acknowledgment being fragmented across multiple messages.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [MassOrder](/fix/messages/mass-order), [MassOrderAck](/fix/messages/mass-order-ack)
+
+## 2433 · NoTargetPartySubIDs [#tag-2433]
+
+<Badge intent="info" minimal>Tag 2433</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of target party sub IDs in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [TargetPtysSubGrp](/fix/groups/target-ptys-sub-grp)
+
+## 2434 · TargetPartySubID [#tag-2434]
+
+<Badge intent="info" minimal>Tag 2434</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Party sub-identifier value within a target party repeating group.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TargetPtysSubGrp](/fix/groups/target-ptys-sub-grp)
+
+## 2435 · TargetPartySubIDType [#tag-2435]
+
+<Badge intent="info" minimal>Tag 2435</Badge> <Badge intent="note" minimal>PartySubIDTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Type of TargetPartySubID(2434) value.
+
+Code set **PartySubIDTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Firm | Firm |
+| `2` | Person | Person |
+| `3` | System | System |
+| `4` | Application | Application |
+| `5` | FullLegalNameOfFirm | Full legal name of firm |
+| `6` | PostalAddress | Postal address |
+| `7` | PhoneNumber | Phone number |
+| `8` | EmailAddress | Email address |
+| `9` | ContactName | Contact name |
+| `10` | SecuritiesAccountNumber | Securities account number (for settlement instructions) |
+| `11` | RegistrationNumber | Registration number (for settlement instructions and confirmations) |
+| `12` | RegisteredAddressForConfirmation | Registered address (for confirmation purposes) |
+| `13` | RegulatoryStatus | Regulatory status (for confirmation purposes) |
+| `14` | RegistrationName | Registration name (for settlement instructions) |
+| `15` | CashAccountNumber | Cash account number (for settlement instructions) |
+| `16` | BIC | BIC |
+| `17` | CSDParticipantMemberCode | CSD participant member code |
+| `18` | RegisteredAddress | Registered address |
+| `19` | FundAccountName | Fund account name |
+| `20` | TelexNumber | Telex number |
+| `21` | FaxNumber | Fax number |
+| `22` | SecuritiesAccountName | Securities account name |
+| `23` | CashAccountName | Cash account name |
+| `24` | Department | Department |
+| `25` | LocationDesk | Location desk |
+| `26` | PositionAccountType | Position account type |
+| `27` | SecurityLocateID | Security locate ID |
+| `28` | MarketMaker | Market maker |
+| `29` | EligibleCounterparty | Eligible counterparty |
+| `30` | ProfessionalClient | Professional client |
+| `31` | Location | Location |
+| `32` | ExecutionVenue | Execution venue |
+| `33` | CurrencyDeliveryIdentifier | Currency delivery identifier |
+| `34` | AddressCity | Address City |
+| `35` | AddressStateOrProvince | Address State/Province |
+| `36` | AddressPostalCode | Address Postal Code |
+| `37` | AddressStreet | Address Street |
+| `38` | AddressISOCountryCode | Address Country (ISO country code) |
+| `39` | ISOCountryCode | ISO country code |
+| `40` | MarketSegment | Market segment |
+| `41` | CustomerAccountType | Customer account type |
+| `42` | OmnibusAccount | Omnibus account |
+| `43` | FundsSegregationType | Funds segregation type |
+| `44` | GuaranteeFund | Guarantee fund |
+| `45` | SwapDealer | Swap dealer |
+| `46` | MajorParticipant | Major participant |
+| `47` | FinancialEntity | Financial entity |
+| `48` | USPerson | U.S. person |
+| `49` | ReportingEntityIndicator | Reporting entity indicator |
+| `50` | ElectedClearingRequirementException | Elected clearing requirement exception |
+| `51` | BusinessCenter | Business center |
+| `52` | ReferenceText | Reference text |
+| `53` | ShortMarkingExemptAccount | Short-marking exempt account |
+| `54` | ParentFirmIdentifier | Parent firm identifier |
+| `55` | ParentFirmName | Parent firm name |
+| `56` | DealIdentifier | Deal identifier |
+| `57` | SystemTradeID | System trade identifier |
+| `58` | SystemTradeSubID | System trade sub-identifier |
+| `59` | FCMCode | Futures Commission Merchant (FCM) code |
+| `60` | DlvryTrmlCode | Delivery terminal customer account/code |
+| `61` | VolntyRptEntity | Voluntary reporting entity |
+| `62` | RptObligJursdctn | Reporting obligation jurisdiction |
+| `63` | VolntyRptJursdctn | Voluntary reporting jurisdiction |
+| `64` | CompanyActivities | Company activities |
+| `65` | EEAreaDomiciled | European Economic Area domiciled |
+| `66` | ContractLinked | Contract linked to commercial or treasury financing for this counterparty |
+| `67` | ContractAbove | Contract above clearing threshold for this counterparty |
+| `68` | VolntyRptPty | Voluntary reporting party |
+| `69` | EndUser | End user |
+| `70` | LocationOrJurisdiction | Location or jurisdiction |
+| `71` | DerivativesDealer | Derivatives dealer |
+| `72` | Domicile | Domicile |
+| `73` | ExemptFromRecognition | Exempt from recognition |
+| `74` | Payer | Payer |
+| `75` | Receiver | Receiver |
+| `76` | SystematicInternaliser | Systematic Internaliser (SI) |
+| `77` | PublishingEntityIndicator | Publishing entity indicator |
+| `78` | FirstName | First name |
+| `79` | Surname | Surname |
+| `80` | DateOfBirth | Date of birth |
+| `81` | OrderTransmittingFirm | Order transmitting firm |
+| `82` | OrderTransmittingFirmBuyer | Order transmitting firm for buyer |
+| `83` | OrderTransmitterSeller | Order transmitter for seller |
+| `84` | LegalEntityIdentifier | Legal Entity Identifier (ISO 17442) LEI |
+| `85` | SubSectorClassification | Sub-sector classification |
+| `86` | PartySide | Party side |
+| `87` | LegalRegistrationCountry | Legal registration country |
+
+Used in: [TargetPtysSubGrp](/fix/groups/target-ptys-sub-grp)
+
+## 2436 · TransferInstructionID [#tag-2436]
+
+<Badge intent="info" minimal>Tag 2436</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Unique identifier for the transfer instruction assigned by the submitter.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PositionTransferInstruction](/fix/messages/position-transfer-instruction), [PositionTransferInstructionAck](/fix/messages/position-transfer-instruction-ack), [PositionTransferReport](/fix/messages/position-transfer-report)
+
+## 2437 · TransferID [#tag-2437]
+
+<Badge intent="info" minimal>Tag 2437</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unique identifier assigned to the transfer entity once it is received, for example, by the CCP or the party governing the transfer process. Generally this same identifier for the transfer is used by all parties involved.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PositionTransferInstruction](/fix/messages/position-transfer-instruction), [PositionTransferInstructionAck](/fix/messages/position-transfer-instruction-ack), [PositionTransferReport](/fix/messages/position-transfer-report)
+
+## 2438 · TransferReportID [#tag-2438]
+
+<Badge intent="info" minimal>Tag 2438</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Unique identifier for the transfer report message.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PositionTransferReport](/fix/messages/position-transfer-report)
+
+## 2439 · TransferTransType [#tag-2439]
+
+<Badge intent="info" minimal>Tag 2439</Badge> <Badge intent="note" minimal>TransferTransTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates the type of transfer transaction.
+
+Code set **TransferTransTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | New | New |
+| `1` | Replace | Replace |
+| `2` | Cancel | Cancel |
+
+Used in: [PositionTransferInstruction](/fix/messages/position-transfer-instruction), [PositionTransferInstructionAck](/fix/messages/position-transfer-instruction-ack), [PositionTransferReport](/fix/messages/position-transfer-report)
+
+## 2440 · TransferType [#tag-2440]
+
+<Badge intent="info" minimal>Tag 2440</Badge> <Badge intent="note" minimal>TransferTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates the type of transfer request.
+
+Code set **TransferTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | RequestTransfer | Request transfer |
+| `1` | AcceptTransfer | Accept transfer |
+| `2` | DeclineTransfer | Decline transfer |
+
+Used in: [PositionTransferInstruction](/fix/messages/position-transfer-instruction), [PositionTransferInstructionAck](/fix/messages/position-transfer-instruction-ack)
+
+## 2441 · TransferScope [#tag-2441]
+
+<Badge intent="info" minimal>Tag 2441</Badge> <Badge intent="note" minimal>TransferScopeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates the type of transfer.
+
+Code set **TransferScopeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | InterFirmTransfer | Inter-firm transfer |
+| `1` | IntraFirmTransfer | Intra-firm transfer |
+| `2` | CMTA | Clearing Member Trade Assignment |
+
+Used in: [PositionTransferInstruction](/fix/messages/position-transfer-instruction), [PositionTransferInstructionAck](/fix/messages/position-transfer-instruction-ack), [PositionTransferReport](/fix/messages/position-transfer-report)
+
+## 2442 · TransferStatus [#tag-2442]
+
+<Badge intent="info" minimal>Tag 2442</Badge> <Badge intent="note" minimal>TransferStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Status of the transfer.
+
+Code set **TransferStatusCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Received | Received |
+| `1` | RejectedByIntermediary | Rejected by intermediary |
+| `2` | AcceptPending | Accept pending |
+| `3` | Accepted | Accepted |
+| `4` | Declined | Declined |
+| `5` | Cancelled | Cancelled |
+
+Used in: [PositionTransferInstructionAck](/fix/messages/position-transfer-instruction-ack), [PositionTransferReport](/fix/messages/position-transfer-report)
+
+## 2443 · TransferRejectReason [#tag-2443]
+
+<Badge intent="info" minimal>Tag 2443</Badge> <Badge intent="note" minimal>TransferRejectReasonCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Reason the transfer instruction was rejected.
+
+Code set **TransferRejectReasonCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Success | Success |
+| `1` | InvalidParty | Invalid party |
+| `2` | UnknownInstrument | Unknown instrument |
+| `3` | UnauthorizedToSubmitXfer | Not authorized to submit transfers |
+| `4` | UnknownPosition | Unknown position |
+| `99` | Other | Other |
+
+Used in: [PositionTransferInstructionAck](/fix/messages/position-transfer-instruction-ack), [PositionTransferReport](/fix/messages/position-transfer-report)
+
+## 2444 · TransferReportType [#tag-2444]
+
+<Badge intent="info" minimal>Tag 2444</Badge> <Badge intent="note" minimal>TransferReportTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates the type of transfer report.
+
+Code set **TransferReportTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Submit | Submit |
+| `1` | Alleged | Alleged |
+
+Used in: [PositionTransferReport](/fix/messages/position-transfer-report)
+
+## 2445 · AggressorTime [#tag-2445]
+
+<Badge intent="info" minimal>Tag 2445</Badge> <Badge intent="note" minimal>UTCTimestamp</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Timestamp of aggressive order or quote resulting in match event.
+
+Type: [UTCTimestamp](/fix/datatypes#utc-timestamp)
+
+Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
+
+## 2446 · AggressorSide [#tag-2446]
+
+<Badge intent="info" minimal>Tag 2446</Badge> <Badge intent="note" minimal>SideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Side of aggressive order or quote resulting in match event.
+
+Code set **SideCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Buy | Buy |
+| `2` | Sell | Sell |
+| `3` | BuyMinus | Buy minus |
+| `4` | SellPlus | Sell plus |
+| `5` | SellShort | Sell short |
+| `6` | SellShortExempt | Sell short exempt |
+| `7` | Undisclosed | Undisclosed |
+| `8` | Cross | Cross (orders where counterparty is an exchange, valid for all messages except IOIs) |
+| `9` | CrossShort | Cross short |
+| `A` | CrossShortExempt | Cross short exempt |
+| `B` | AsDefined | "As Defined" (for use with multileg instruments) |
+| `C` | Opposite | "Opposite" (for use with multileg instruments) |
+| `D` | Subscribe | Subscribe (e.g. CIV) |
+| `E` | Redeem | Redeem (e.g. CIV) |
+| `F` | Lend | Lend (FINANCING - identifies direction of collateral) |
+| `G` | Borrow | Borrow (FINANCING - identifies direction of collateral) |
+| `H` | SellUndisclosed | Sell undisclosed |
+
+Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
+
+## 2447 · FastMarketIndicator [#tag-2447]
+
+<Badge intent="info" minimal>Tag 2447</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates if the instrument is in "fast market" state.
+
+A "fast market" is a state in which market rules are applied to instrument(s) or entire trading session when market events causes significant price movements due to public information.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [MarketDataRequest](/fix/messages/market-data-request), [QuoteSizeRuleGrp](/fix/groups/quote-size-rule-grp), [SecurityMassStatus](/fix/messages/security-mass-status), [SecurityStatus](/fix/messages/security-status), [TradingSessionStatus](/fix/messages/trading-session-status)
+
+## 2448 · LinkageHandlingIndicator [#tag-2448]
+
+<Badge intent="info" minimal>Tag 2448</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicate whether linkage handling is in effect for an instrument or not.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [SecurityStatus](/fix/messages/security-status)
+
+## 2449 · NumberOfBuyOrders [#tag-2449]
+
+<Badge intent="info" minimal>Tag 2449</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of buy orders involved in a trade.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
+
+## 2450 · NumberOfSellOrders [#tag-2450]
+
+<Badge intent="info" minimal>Tag 2450</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of sell orders involved in a trade.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
+
+## 2451 · SettlPriceDeterminationMethod [#tag-2451]
+
+<Badge intent="info" minimal>Tag 2451</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Calculation method used to determine settlement price.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [SecurityStatus](/fix/messages/security-status)
+
+## 2452 · MDStatisticReqID [#tag-2452]
+
+<Badge intent="info" minimal>Tag 2452</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Message identifier for a statistics request.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [MarketDataStatisticsReport](/fix/messages/market-data-statistics-report), [MarketDataStatisticsRequest](/fix/messages/market-data-statistics-request)
+
+## 2453 · MDStatisticRptID [#tag-2453]
+
+<Badge intent="info" minimal>Tag 2453</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Message identifier for a statistics report.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [MarketDataStatisticsReport](/fix/messages/market-data-statistics-report)
+
+## 2454 · MDStatisticName [#tag-2454]
+
+<Badge intent="info" minimal>Tag 2454</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The short name or acronym for a set of statistic parameters.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2455 · MDStatisticDesc [#tag-2455]
+
+<Badge intent="info" minimal>Tag 2455</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Can be used to provide an optional textual description for a statistic.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2456 · MDStatisticType [#tag-2456]
+
+<Badge intent="info" minimal>Tag 2456</Badge> <Badge intent="note" minimal>MDStatisticTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Type of statistic value.
+
+Code set **MDStatisticTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Count | Count |
+| `2` | AverageVolume | Average volume |
+| `3` | TotalVolume | Total volume |
+| `4` | Distribution | Distribution |
+| `5` | Ratio | Ratio |
+| `6` | Liquidity | Liquidity |
+| `7` | VWAP | Volume weighted average price (VWAP) |
+| `8` | Volatility | Volatility |
+| `9` | Duration | Duration |
+| `10` | Tick | Tick |
+| `11` | AverageValue | Average value |
+| `12` | TotalValue | Total value |
+| `13` | High | High |
+| `14` | Low | Low |
+| `15` | Midpoint | Midpoint |
+| `16` | First | First |
+| `17` | Last | Last |
+| `18` | Final | Final |
+| `19` | ExchangeBest | Exchange best |
+| `20` | ExchangeBestWithVolume | Exchange best with volume |
+| `21` | ConsolidatedBest | Consolidated best |
+| `22` | ConsolidatedBestWithVolume | Consolidated best with volume |
+| `23` | TWAP | Time weighted average price (TWAP) |
+| `24` | AverageDuration | Average duration |
+| `25` | AveragePrice | Average price |
+| `26` | TotalFees | Total fees |
+| `27` | TotalBenefits | Total benefits |
+| `28` | MedianValue | Median value |
+| `29` | AverageLiquidity | Average liquidity |
+| `30` | MedianDuration | Median duration |
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2457 · MDStatisticScope [#tag-2457]
+
+<Badge intent="info" minimal>Tag 2457</Badge> <Badge intent="note" minimal>MDStatisticScopeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Entities used as basis for the statistics.
+
+Code set **MDStatisticScopeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | BidPrices | Bid prices |
+| `2` | OfferPrices | Offer prices |
+| `3` | BidDepth | Bid depth |
+| `4` | OfferDepth | Offer depth |
+| `5` | Orders | Orders |
+| `6` | Quotes | Quotes |
+| `7` | OrdersAndQuotes | Orders and Quotes |
+| `8` | Trades | Trades |
+| `9` | TradePrices | Trade prices |
+| `10` | AuctionPrices | Auction prices |
+| `11` | OpeningPrices | Opening prices |
+| `12` | ClosingPrices | Closing prices |
+| `13` | SettlementPrices | Settlement prices |
+| `14` | UnderlyingPrices | Underlying prices |
+| `15` | OpenInterest | Open interest |
+| `16` | IndexValues | Index values |
+| `17` | MarginRates | Margin rates |
+| `18` | Outages | Outages |
+| `19` | ScheduledAuctions | Scheduled auctions |
+| `20` | ReferencePrices | Reference prices |
+| `21` | TradeValue | Trade value |
+| `22` | MarketDataFeeItems | Market data fee items |
+| `23` | Rebates | Rebates |
+| `24` | Discounts | Discounts |
+| `25` | Payments | Payments |
+| `26` | Taxes | Taxes |
+| `27` | Levies | Levies |
+| `28` | Benefits | Benefits |
+| `29` | Fees | Fees |
+| `30` | OrdersRFQs | Orders and RFQs (Request for quotes) |
+| `31` | MarketMakers | Market makers |
+| `32` | TradingInterruptions | Trading interruptions |
+| `33` | TradingSuspensions | Trading suspensions |
+| `34` | NoQuotes | No quotes |
+| `35` | RequestForQuotes | Request for quotes |
+| `36` | TradeVolume | Trade volume |
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2458 · MDStatisticSubScope [#tag-2458]
+
+<Badge intent="info" minimal>Tag 2458</Badge> <Badge intent="note" minimal>MDStatisticSubScopeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Sub-scope of the statistics to further reduce the entities used as basis for the statistics.
+
+Code set **MDStatisticSubScopeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Visible | Visible |
+| `2` | Hidden | Hidden |
+| `3` | Indicative | Indicative |
+| `4` | Tradeable | Tradeable |
+| `5` | Passive | Passive |
+| `6` | MarketConsensus | Market consensus |
+| `7` | Power | Power |
+| `8` | HardwareError | Hardware error |
+| `9` | SoftwareError | Software error |
+| `10` | NetworkError | Network error |
+| `11` | Failed | Failed |
+| `12` | Executed | Executed |
+| `13` | Entered | Entered |
+| `14` | Modified | Modified |
+| `15` | Cancelled | Cancelled |
+| `16` | MarketDataAccess | Market data access |
+| `17` | TerminalAccess | Terminal access |
+| `18` | Volume | Volume |
+| `19` | Cleared | Cleared |
+| `20` | Settled | Settled |
+| `21` | Other | Other |
+| `22` | Monetary | Monetary |
+| `23` | NonMonetary | Non-monetary |
+| `24` | Gross | Gross |
+| `25` | LargeInScale | Large in scale |
+| `26` | NeitherHiddenNorLargeInScale | Neither hidden nor large in scale |
+| `27` | CorporateAction | Corporate action |
+| `28` | VenueDecision | Venue decision |
+| `29` | MinimumTimePeriod | Minimum time period |
+| `30` | Open | Open |
+| `31` | NotExecuted | Not executed |
+| `32` | Aggressive | Aggressive |
+| `33` | Directed | Directed |
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2459 · MDStatisticScopeType [#tag-2459]
+
+<Badge intent="info" minimal>Tag 2459</Badge> <Badge intent="note" minimal>MDStatisticScopeTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Scope details of the statistics to reduce the number of events being used as basis for the statistics.
+
+Code set **MDStatisticScopeTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | EntryRate | Entry rate |
+| `2` | ModificationRate | Modification rate |
+| `3` | CancelRate | Cancel rate |
+| `4` | DownwardMove | Downward move |
+| `5` | UpwardMove | Upward move |
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2460 · MDStatisticFrequencyPeriod [#tag-2460]
+
+<Badge intent="info" minimal>Tag 2460</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Dissemination frequency of statistics. Special meaning for a value of zero which represents an event-driven dissemination in real time (e.g. as soon as a new trade occurs).
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2461 · MDStatisticFrequencyUnit [#tag-2461]
+
+<Badge intent="info" minimal>Tag 2461</Badge> <Badge intent="note" minimal>OrderDelayUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit for MDStatisticFrequencyPeriod(2460).
+
+Code set **OrderDelayUnitCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Seconds | Seconds (default if not specified) |
+| `1` | TenthsOfASecond | Tenths of a second |
+| `2` | HundredthsOfASecond | Hundredths of a second |
+| `3` | Milliseconds | milliseconds |
+| `4` | Microseconds | microseconds |
+| `5` | Nanoseconds | nanoseconds |
+| `10` | Minutes | minutes |
+| `11` | Hours | hours |
+| `12` | Days | days |
+| `13` | Weeks | weeks |
+| `14` | Months | months |
+| `15` | Years | years |
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2462 · MDStatisticDelayPeriod [#tag-2462]
+
+<Badge intent="info" minimal>Tag 2462</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of time units between the calculation of the statistic and its dissemination. Can be used to defer or delay publication.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2463 · MDStatisticDelayUnit [#tag-2463]
+
+<Badge intent="info" minimal>Tag 2463</Badge> <Badge intent="note" minimal>OrderDelayUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit for MDStatisticDelayPeriod(2462).
+
+Code set **OrderDelayUnitCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Seconds | Seconds (default if not specified) |
+| `1` | TenthsOfASecond | Tenths of a second |
+| `2` | HundredthsOfASecond | Hundredths of a second |
+| `3` | Milliseconds | milliseconds |
+| `4` | Microseconds | microseconds |
+| `5` | Nanoseconds | nanoseconds |
+| `10` | Minutes | minutes |
+| `11` | Hours | hours |
+| `12` | Days | days |
+| `13` | Weeks | weeks |
+| `14` | Months | months |
+| `15` | Years | years |
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2464 · MDStatisticIntervalType [#tag-2464]
+
+<Badge intent="info" minimal>Tag 2464</Badge> <Badge intent="note" minimal>MDStatisticIntervalTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Type of interval over which statistic is calculated.
+
+Code set **MDStatisticIntervalTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | SlidingWindow | Sliding window |
+| `2` | SlidingWindowPeak | Sliding window peak |
+| `3` | FixedDateRange | Fixed date range |
+| `4` | FixedTimeRange | Fixed time range |
+| `5` | CurrentTimeUnit | Current time unit |
+| `6` | PreviousTimeUnit | Previous time unit |
+| `7` | MaximumRange | Maximum range |
+| `8` | MaximumRangeUpToPreviousTimeUnit | Maximum range up to previous time unit |
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2465 · MDStatisticIntervalTypeUnit [#tag-2465]
+
+<Badge intent="info" minimal>Tag 2465</Badge> <Badge intent="note" minimal>TimeUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit for MDStatisticIntervalType(2464).
+
+Code set **TimeUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `H` | Hour | Hour |
+| `Min` | Minute | Minute |
+| `S` | Second | Second |
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+| `Q` | Quarter | Quarter |
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2466 · MDStatisticIntervalPeriod [#tag-2466]
+
+<Badge intent="info" minimal>Tag 2466</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Length of time over which the statistic is calculated. Special meaning for a value of zero to express that there is no aggregation over time. Can be used with other interval types expressing relative date and time ranges to combine them with sliding window peaks, e.g. highest volume across 1 minute intervals of the previous day.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2467 · MDStatisticIntervalUnit [#tag-2467]
+
+<Badge intent="info" minimal>Tag 2467</Badge> <Badge intent="note" minimal>OrderDelayUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit for MDStatisticIntervalPeriod(2466).
+
+Code set **OrderDelayUnitCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Seconds | Seconds (default if not specified) |
+| `1` | TenthsOfASecond | Tenths of a second |
+| `2` | HundredthsOfASecond | Hundredths of a second |
+| `3` | Milliseconds | milliseconds |
+| `4` | Microseconds | microseconds |
+| `5` | Nanoseconds | nanoseconds |
+| `10` | Minutes | minutes |
+| `11` | Hours | hours |
+| `12` | Days | days |
+| `13` | Weeks | weeks |
+| `14` | Months | months |
+| `15` | Years | years |
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2468 · MDStatisticStartDate [#tag-2468]
+
+<Badge intent="info" minimal>Tag 2468</Badge> <Badge intent="note" minimal>UTCTimestamp</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+First day of range for which statistical data is collected.
+
+Type: [UTCTimestamp](/fix/datatypes#utc-timestamp)
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2469 · MDStatisticEndDate [#tag-2469]
+
+<Badge intent="info" minimal>Tag 2469</Badge> <Badge intent="note" minimal>UTCTimestamp</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Last day of range for which statistical data is collected.
+
+Type: [UTCTimestamp](/fix/datatypes#utc-timestamp)
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2470 · MDStatisticStartTime [#tag-2470]
+
+<Badge intent="info" minimal>Tag 2470</Badge> <Badge intent="note" minimal>UTCTimeOnly</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Start time of the time range for which statistical data is collected.
+
+Type: [UTCTimeOnly](/fix/datatypes#utc-time-only)
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2471 · MDStatisticEndTime [#tag-2471]
+
+<Badge intent="info" minimal>Tag 2471</Badge> <Badge intent="note" minimal>UTCTimeOnly</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+End time of the time range for which statistical data is collected.
+
+Type: [UTCTimeOnly](/fix/datatypes#utc-time-only)
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2472 · MDStatisticRatioType [#tag-2472]
+
+<Badge intent="info" minimal>Tag 2472</Badge> <Badge intent="note" minimal>MDStatisticRatioTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Ratios between various entities.
+
+Code set **MDStatisticRatioTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | BuyersToSellers | Buyers to sellers |
+| `2` | UpticksToDownticks | Upticks to downticks |
+| `3` | MarketMakerToNonMarketMaker | Market maker to non-market maker |
+| `4` | AutomatedToNonAutomated | Automated to non-automated |
+| `5` | OrdersToTrades | Orders to trades |
+| `6` | QuotesToTrades | Quotes to trades |
+| `7` | OrdersAndQuotesToTrades | Orders and quotes to trades |
+| `8` | FailedToTotalTradedValue | Failed to total traded value |
+| `9` | BenefitsToTotalTradedValue | Benefits to total traded value |
+| `10` | FeesToTotalTradedValue | Fees to total traded value |
+| `11` | TradeVolumeToTotalTradedVolume | Trade volume to total traded volume |
+| `12` | OrdersToTotalNumberOrders | Orders to total number of orders |
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2473 · MDStatisticRequestResult [#tag-2473]
+
+<Badge intent="info" minimal>Tag 2473</Badge> <Badge intent="note" minimal>MDStatisticRequestResultCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Result returned in response to MarketDataStatisticsRequest (35=DO).
+
+Code set **MDStatisticRequestResultCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Successful | Successful (default) |
+| `1` | InvalidOrUnknownMarket | Invalid or unknown market |
+| `2` | InvalidOrUnknownMarketSegment | Invalid or unknown market segment |
+| `3` | InvalidOrUnknownSecurityList | Invalid or unknown security list |
+| `4` | InvalidOrUnknownInstruments | Invalid or unknown instrument(s) |
+| `5` | InvalidParties | Invalid parties |
+| `6` | TradeDateOutOfSupportedRange | Trade date out of supported range |
+| `7` | UnsupportedStatisticType | Statistic type not supported |
+| `8` | UnsupportedScopeOrSubScope | Scope or sub-scope not supported |
+| `9` | UnsupportedScopeType | Scope type not supported |
+| `10` | MarketDepthNotSupported | Market depth not supported |
+| `11` | FrequencyNotSupported | Frequency not supported |
+| `12` | UnsupportedStatisticInterval | Statistic interval not supported |
+| `13` | UnsupportedStatisticDateRange | Statistic date range not supported |
+| `14` | UnsupportedStatisticTimeRange | Statistic time range not supported |
+| `15` | UnsupportedRatioType | Ratio type not supported |
+| `16` | InvalidOrUnknownTradeInputSource | Invalid or unknown trade input source |
+| `17` | InvalidOrUnknownTradingSession | Invalid or unknown trading session |
+| `18` | UnauthorizedForStatisticRequest | Unauthorized for statistic request |
+| `99` | Other | Other (further information in Text (58) field) |
+
+Used in: [MarketDataStatisticsReport](/fix/messages/market-data-statistics-report)
+
+## 2474 · NoMDStatistics [#tag-2474]
+
+<Badge intent="info" minimal>Tag 2474</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of market data statistics.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [MDStatisticReqGrp](/fix/groups/md-statistic-req-grp), [MDStatisticRptGrp](/fix/groups/md-statistic-rpt-grp)
+
+## 2475 · MDStatisticID [#tag-2475]
+
+<Badge intent="info" minimal>Tag 2475</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Unique identifier for a statistic.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [MDStatisticReqGrp](/fix/groups/md-statistic-req-grp), [MDStatisticRptGrp](/fix/groups/md-statistic-rpt-grp)
+
+## 2476 · MDStatisticTime [#tag-2476]
+
+<Badge intent="info" minimal>Tag 2476</Badge> <Badge intent="note" minimal>UTCTimestamp</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time of calculation of a statistic.
+
+Type: [UTCTimestamp](/fix/datatypes#utc-timestamp)
+
+Used in: [MDStatisticRptGrp](/fix/groups/md-statistic-rpt-grp)
+
+## 2477 · MDStatisticStatus [#tag-2477]
+
+<Badge intent="info" minimal>Tag 2477</Badge> <Badge intent="note" minimal>MDStatisticStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Status for a statistic to indicate its availability.
+
+Code set **MDStatisticStatusCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Active | Active (default) |
+| `2` | Inactive | Inactive (not disseminated) |
+
+Used in: [MDStatisticRptGrp](/fix/groups/md-statistic-rpt-grp)
+
+## 2478 · MDStatisticValue [#tag-2478]
+
+<Badge intent="info" minimal>Tag 2478</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Statistical value.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [MDStatisticRptGrp](/fix/groups/md-statistic-rpt-grp)
+
+## 2479 · MDStatisticValueType [#tag-2479]
+
+<Badge intent="info" minimal>Tag 2479</Badge> <Badge intent="note" minimal>MDStatisticValueTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Type of statistical value.
+
+Code set **MDStatisticValueTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Absolute | Absolute |
+| `2` | Percentage | Percentage |
+
+Used in: [MDStatisticRptGrp](/fix/groups/md-statistic-rpt-grp)
+
+## 2480 · MDStatisticValueUnit [#tag-2480]
+
+<Badge intent="info" minimal>Tag 2480</Badge> <Badge intent="note" minimal>OrderDelayUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Unit of time for statistical value.
+
+Code set **OrderDelayUnitCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Seconds | Seconds (default if not specified) |
+| `1` | TenthsOfASecond | Tenths of a second |
+| `2` | HundredthsOfASecond | Hundredths of a second |
+| `3` | Milliseconds | milliseconds |
+| `4` | Microseconds | microseconds |
+| `5` | Nanoseconds | nanoseconds |
+| `10` | Minutes | minutes |
+| `11` | Hours | hours |
+| `12` | Days | days |
+| `13` | Weeks | weeks |
+| `14` | Months | months |
+| `15` | Years | years |
+
+Used in: [MDStatisticRptGrp](/fix/groups/md-statistic-rpt-grp)
+
+## 2481 · EncodedMDStatisticDescLen [#tag-2481]
+
+<Badge intent="info" minimal>Tag 2481</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Byte length of encoded (non-ASCII characters) EncodedMDStatisticDesc(2482) field.
+
+Type: [Length](/fix/datatypes#length)
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2482 · EncodedMDStatisticDesc [#tag-2482]
+
+<Badge intent="info" minimal>Tag 2482</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Encoded (non-ASCII characters) representation of the MDStatisticDesc(2455) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the MDStatisticDesc(2455) field.
+
+Type: [data](/fix/datatypes#data)
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2483 · AllocRiskLimitCheckStatus [#tag-2483]
+
+<Badge intent="info" minimal>Tag 2483</Badge> <Badge intent="note" minimal>RiskLimitCheckStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates the status of the risk limit check performed on a trade for this allocation instance.
+
+Code set **RiskLimitCheckStatusCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Accepted | Accepted |
+| `1` | Rejected | Rejected |
+| `2` | ClaimRequired | Claim required |
+| `3` | PreDefinedLimitCheckSucceeded | Pre-defined limit check succeeded |
+| `4` | PreDefinedLimitCheckFailed | Pre-defined limit check failed |
+| `5` | PreDefinedAutoAcceptRuleInvoked | Pre-defined auto-accept rule invoked |
+| `6` | PreDefinedAutoRejectRuleInvoked | Pre-defined auto-reject rule invoked |
+| `7` | AcceptedByClearingFirm | Accepted by clearing firm |
+| `8` | RejectedByClearingFirm | Rejected by clearing firm |
+| `9` | Pending | Pending |
+| `10` | AcceptedByCreditHub | Accepted by credit hub |
+| `11` | RejectedByCreditHub | Rejected by credit hub |
+| `12` | PendingCreditHubCheck | Pending credit hub check |
+| `13` | AcceptedByExecVenue | Accepted by execution venue |
+| `14` | RejectedByExecVenue | Rejected by execution venue |
+
+Used in: [AllocGrp](/fix/groups/alloc-grp)
+
+## 2484 · FirmTransactionID [#tag-2484]
+
+<Badge intent="info" minimal>Tag 2484</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unique transaction entity identifier assigned by the firm.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [CollateralAssignment](/fix/messages/collateral-assignment), [CollateralReport](/fix/messages/collateral-report), [CollateralResponse](/fix/messages/collateral-response)
+
+## 2485 · TransactionID [#tag-2485]
+
+<Badge intent="info" minimal>Tag 2485</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unique transaction entity identifier.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [CollateralAssignment](/fix/messages/collateral-assignment), [CollateralReport](/fix/messages/collateral-report), [CollateralResponse](/fix/messages/collateral-response)
+
+## 2486 · WireReference [#tag-2486]
+
+<Badge intent="info" minimal>Tag 2486</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The reference to a wire transfer associated with the transaction. Wire references done via wire services such as Fedwire Output Message Accountabilitty Data "OMAD" or SWIFT Output Sequence Number "OSN".
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [CollateralAssignment](/fix/messages/collateral-assignment), [CollateralReport](/fix/messages/collateral-report), [CollateralResponse](/fix/messages/collateral-response)
+
+## 2487 · CollRptRejectReason [#tag-2487]
+
+<Badge intent="info" minimal>Tag 2487</Badge> <Badge intent="note" minimal>CollRptRejectReasonCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Reject reason code for rejecting the collateral report.
+
+Code set **CollRptRejectReasonCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | UnknownTrade | Unknown trade or transaction |
+| `1` | UnknownInstrument | Unknown or invalid instrument |
+| `2` | UnknownCounterparty | Unknown or invalid counterparty |
+| `3` | UnknownPosition | Unknown or invalid position |
+| `4` | UnacceptableCollateral | Unacceptable or invalid type of collateral |
+| `99` | Other | Other |
+
+Used in: [CollateralReportAck](/fix/messages/collateral-report-ack)
+
+## 2488 · CollRptStatus [#tag-2488]
+
+<Badge intent="info" minimal>Tag 2488</Badge> <Badge intent="note" minimal>CollRptStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The status of the collateral report.
+
+Code set **CollRptStatusCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Accepted | Accepted (successfully processed) |
+| `1` | Received | Received (not yet processed) |
+| `2` | Rejected | Rejected |
+
+Used in: [CollateralReportAck](/fix/messages/collateral-report-ack)
+
+## 2489 · PackageID [#tag-2489]
+
+<Badge intent="info" minimal>Tag 2489</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifier assigned to a collection of trades so that they can be analyzed as one atomic unit for risk assessment and clearing.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 2490 · TradeNumber [#tag-2490]
+
+<Badge intent="info" minimal>Tag 2490</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Ordinal number of the trade within a series of related trades.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 2491 · UnderlyingAssetGroup [#tag-2491]
+
+<Badge intent="info" minimal>Tag 2491</Badge> <Badge intent="note" minimal>AssetGroupCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates the broad product or asset classification. May be used to provide grouping for the product taxonomy (Product(460), SecurityType(167), etc.) and/or the risk taxonomy (AssetClass(1938), AssetSubClass(1939), AssetType(1940), etc.).
+
+Code set **AssetGroupCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Financials | Financials |
+| `2` | Commodities | Commodities |
+| `3` | AlternativeInvestments | Alternative investments |
+
+Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
+
+## 2492 · LegDifferentialPrice [#tag-2492]
+
+<Badge intent="info" minimal>Tag 2492</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used in pricing a group of individual Trade at Settlement (TAS) and Trade At Marker (TAM) contracts as an atomic unit. The value is the negotiated currency offset either at settlement (TAS) or at the time specified in the product definition (TAM). The final contract price is reported in LegLastPx(637).
+
+Type: [PriceOffset](/fix/datatypes#price-offset)
+
+Used in: [TrdInstrmtLegGrp](/fix/groups/trd-instrmt-leg-grp)
+
+## 2493 · EncodedLegDocumentationText [#tag-2493]
+
+<Badge intent="info" minimal>Tag 2493</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Encoded (non-ASCII characters) representation of the LegDocumentationText(2505) field in the encoded format specified via the MessageEncoding(347) field. If used, the ASCII (English) representation should also be specified in the LegDocumentationText(2505) field.
+
+Type: [data](/fix/datatypes#data)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2494 · EncodedLegDocumentationTextLen [#tag-2494]
+
+<Badge intent="info" minimal>Tag 2494</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Byte length of encoded (non-ASCII characters) EncodedLegDocumentationText(2493) field.
+
+Type: [Length](/fix/datatypes#length)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2495 · LegAgreementCurrency [#tag-2495]
+
+<Badge intent="info" minimal>Tag 2495</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Contractual currency forming the basis of a financing agreement and associated transactions. Usually, but not always, the same as the trade currency.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2496 · LegAgreementDate [#tag-2496]
+
+<Badge intent="info" minimal>Tag 2496</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A reference to the date the underlying agreement specified by LegAgreementID(2498) and LegAgreementDesc(2497) was executed.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2497 · LegAgreementDesc [#tag-2497]
+
+<Badge intent="info" minimal>Tag 2497</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The full name of the base standard agreement, annexes and amendments in place between the principals applicable to a financing transaction. See http://www.fpml.org/coding-scheme/master-agreement-type for derivative values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2498 · LegAgreementID [#tag-2498]
+
+<Badge intent="info" minimal>Tag 2498</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A common reference to the applicable standing agreement between the counterparties to a financing transaction.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2499 · LegAgreementVersion [#tag-2499]
+
+<Badge intent="info" minimal>Tag 2499</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The version of the master agreement.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2500 · LegBrokerConfirmationDesc [#tag-2500]
+
+<Badge intent="info" minimal>Tag 2500</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Describes the type of broker confirmation executed between the parties. Can be used as an alternative to MasterConfirmationDesc(1962). See http://www.fpml.org/coding-scheme/broker-confirmation-type for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2501 · LegCreditSupportAgreementDate [#tag-2501]
+
+<Badge intent="info" minimal>Tag 2501</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The date of the ISDA Credit Support Agreement executed between the parties and intended to govern collateral arrangements for all OTC derivatives transactions between those parties.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2502 · LegCreditSupportAgreementDesc [#tag-2502]
+
+<Badge intent="info" minimal>Tag 2502</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The type of ISDA Credit Support Agreement. See http://www.fpml.org/coding-scheme/credit-support-agreement-type for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2503 · LegCreditSupportAgreementID [#tag-2503]
+
+<Badge intent="info" minimal>Tag 2503</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A common reference or unique identifier to identify the ISDA Credit Support Agreement executed between the parties.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2504 · LegDeliveryType [#tag-2504]
+
+<Badge intent="info" minimal>Tag 2504</Badge> <Badge intent="note" minimal>DeliveryTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies type of settlement.
+
+Code set **DeliveryTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | VersusPayment | "Versus Payment": Deliver (if sell) or Receive (if buy) vs. (against) Payment |
+| `1` | Free | "Free": Deliver (if sell) or Receive (if buy) Free |
+| `2` | TriParty | Tri-Party |
+| `3` | HoldInCustody | Hold In Custody |
+| `4` | DeliverByValue | Deliver-by-Value |
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2505 · LegDocumentationText [#tag-2505]
+
+<Badge intent="info" minimal>Tag 2505</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A sentence or phrase pertinent to the trade, not a reference to an external document. E.g. "To be registered with the U.S. Environmental Protection Agency, Acid Rain Division, SO2 Allowance Tracking System".
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2506 · LegEndDate [#tag-2506]
+
+<Badge intent="info" minimal>Tag 2506</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+End date of a financing deal, i.e. the date the seller reimburses the buyer and takes back control of the collateral.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2507 · LegGoverningLaw [#tag-2507]
+
+<Badge intent="info" minimal>Tag 2507</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identification of the law governing the transaction. See http://www.fpml.org/coding-scheme/governing-law for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2508 · LegMarginRatio [#tag-2508]
+
+<Badge intent="info" minimal>Tag 2508</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The fraction of the cash consideration that must be collateralized, expressed as a percent. A MarginRatio of 2% indicates that the value of the collateral (after deducting for "haircut") must exceed the cash consideration by 2%.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2509 · LegMasterConfirmationAnnexDate [#tag-2509]
+
+<Badge intent="info" minimal>Tag 2509</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The date that an annexation to the master confirmation was executed between the parties.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2510 · LegMasterConfirmationDate [#tag-2510]
+
+<Badge intent="info" minimal>Tag 2510</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Alternative to broker confirmation. The date of the confirmation executed between the parties and intended to govern all relevant transactions between those parties.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2511 · LegMasterConfirmationDesc [#tag-2511]
+
+<Badge intent="info" minimal>Tag 2511</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The type of master confirmation executed between the parties. See http://www.fpml.org/coding-scheme/master-confirmation-type for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2512 · LegMasterConfirmationAnnexDesc [#tag-2512]
+
+<Badge intent="info" minimal>Tag 2512</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The type of master confirmation annexation executed between the parties. See http://www.fpml.org/coding-scheme/master-confirmation-annex-type for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2513 · LegStartDate [#tag-2513]
+
+<Badge intent="info" minimal>Tag 2513</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Start date of a financing deal, i.e. the date the buyer pays the seller cash and takes control of the collateral.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2514 · LegTerminationType [#tag-2514]
+
+<Badge intent="info" minimal>Tag 2514</Badge> <Badge intent="note" minimal>TerminationTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Type of financing termination.
+
+Code set **TerminationTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Overnight | Overnight |
+| `2` | Term | Term |
+| `3` | Flexible | Flexible |
+| `4` | Open | Open |
+
+Used in: [LegFinancingDetails](/fix/components/leg-financing-details)
+
+## 2515 · AllocCalculatedCcyQty [#tag-2515]
+
+<Badge intent="info" minimal>Tag 2515</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used for the calculated quantity of the other side of the currency trade applicable to the allocation instance.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [AllocAckGrp](/fix/groups/alloc-ack-grp), [AllocGrp](/fix/groups/alloc-grp), [TrdAllocGrp](/fix/groups/trd-alloc-grp)
+
+## 2516 · CollateralRequestInstruction [#tag-2516]
+
+<Badge intent="info" minimal>Tag 2516</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+An encoded collateral request processing instruction to the receiver.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [CollateralAssignment](/fix/messages/collateral-assignment), [CollateralResponse](/fix/messages/collateral-response)
+
+## 2517 · CollateralRequestLinkID [#tag-2517]
+
+<Badge intent="info" minimal>Tag 2517</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A unique identifier to link together a set or group of requests.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [CollateralAssignment](/fix/messages/collateral-assignment), [CollateralResponse](/fix/messages/collateral-response)
+
+## 2518 · CollateralRequestNumber [#tag-2518]
+
+<Badge intent="info" minimal>Tag 2518</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Ordinal number of the request within a set or group of requests.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [CollateralAssignment](/fix/messages/collateral-assignment), [CollateralResponse](/fix/messages/collateral-response)
+
+## 2519 · TotNumCollateralRequests [#tag-2519]
+
+<Badge intent="info" minimal>Tag 2519</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Total number of request messages within a set or group of requests.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [CollateralAssignment](/fix/messages/collateral-assignment), [CollateralResponse](/fix/messages/collateral-response)
+
+## 2520 · WarningText [#tag-2520]
+
+<Badge intent="info" minimal>Tag 2520</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Communicates the underlying condition when the request response indicates "warning".
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [CollateralResponse](/fix/messages/collateral-response)
+
+## 2521 · EncodedWarningText [#tag-2521]
+
+<Badge intent="info" minimal>Tag 2521</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Encoded (non-ASCII characters) representation of the WarningText(2520) field in the encoded format specified via the MessageEncoding(347) field. If used, the ASCII (English) representation should also be specified in the WarningText(2520) field.
+
+Type: [data](/fix/datatypes#data)
+
+Used in: [CollateralResponse](/fix/messages/collateral-response)
+
+## 2522 · EncodedWarningTextLen [#tag-2522]
+
+<Badge intent="info" minimal>Tag 2522</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Byte length of encoded (non-ASCII characters) EncodedWarningtText(2521) field.
+
+Type: [Length](/fix/datatypes#length)
+
+Used in: [CollateralResponse](/fix/messages/collateral-response)
+
+## 2523 · CrossedIndicator [#tag-2523]
+
+<Badge intent="info" minimal>Tag 2523</Badge> <Badge intent="note" minimal>CrossedIndicatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether the order or quote was crossed with another order or quote having the same context, e.g. having accounts with a common ownership.
+
+Code set **CrossedIndicatorCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NoCross | No cross |
+| `1` | CrossRejected | Cross rejected |
+| `2` | CrossAccepted | Cross accepted |
+
+Used in: [ExecutionReport](/fix/messages/execution-report)
+
+## 2524 · TradeReportingIndicator [#tag-2524]
+
+<Badge intent="info" minimal>Tag 2524</Badge> <Badge intent="note" minimal>TradeReportingIndicatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used between parties to convey trade reporting status.
+
+In the context of regulatory reporting, this field may be used by the reporting party (e.g. party obligated to report to regulators) to inform their trading counterparty or other interested parties the trade reporting status.
+
+Code set **TradeReportingIndicatorCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotReported | Trade has not (yet) been reported |
+| `1` | OnBook | Trade has been or will be reported by a trading venue as an "on-book" trade |
+| `2` | SISeller | Trade has been or will be reported as a "systematic internaliser" seller trade |
+| `3` | SIBuyer | Trade has been or will be reported as a "systematic internaliser" buyer trade |
+| `4` | NonSISeller | Trade has been or will be reported as a "non-systematic internaliser" seller trade |
+| `5` | SubDelegationByFirm | Trade has been or will be reported under a sub-delegation arrangement by an investment firm to a reporting facility (e.g. APA) on behalf of another investment firm |
+| `6` | Reportable | Trade has been or will be reported |
+| `7` | NonSIBuyer | Trade has been or will be reported as a "non-Systematic Internaliser" buyer trade |
+| `8` | OffBook | Trade has been or will be reported by a trading venue as an "off-book" trade |
+| `9` | NotReportable | Trade is not reportable |
+
+Used in: [ExecAllocGrp](/fix/groups/exec-alloc-grp), [ExecutionReport](/fix/messages/execution-report), [NewOrderSingle](/fix/messages/new-order-single), [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 2525 · AffiliatedFirmsTradeIndicator [#tag-2525]
+
+<Badge intent="info" minimal>Tag 2525</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether the transaction or position was entered into between two affiliated firms. I.e. one counterparty has an ownership interest in the other counterparty but less than the majority interest.
+
+This trade attribute was identified under and applies to the Canadian CSA trade reporting regulations.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [NewOrderSingle](/fix/messages/new-order-single), [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 2526 · InternationalSwapIndicator [#tag-2526]
+
+<Badge intent="info" minimal>Tag 2526</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the swap trade as an "international" transaction.
+
+In the context of CFTC Regulation 45.3(h), an international swap is required by U.S. law and the law of another jurisdiction to be reported both to a US Swaps Data Repository and to a different trade repository registered within the other jurisdiction. The additional SDRs must be identified in the appropriate Parties component with PartyRole(452) = 102 (Data repository), PartyRoleQualifier(2376) = 11 (Additional international trade repository) and PartySubIDType(803) = 70 (Location or jurisdiction).
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 2527 · MultiAssetSwapIndicator [#tag-2527]
+
+<Badge intent="info" minimal>Tag 2527</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates a swap that does not have one easily identifiable primary underlying asset, but instead involves multiple underlying assets within one trade repository's jurisdiction that belong to different asset classes.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 2528 · ClearingSettlPrice [#tag-2528]
+
+<Badge intent="info" minimal>Tag 2528</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Clearing settlement price.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [ClearingPriceParametersGrp](/fix/groups/clearing-price-parameters-grp)
+
+## 2529 · NoRelativeValues [#tag-2529]
+
+<Badge intent="info" minimal>Tag 2529</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of relative value metrics entries in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [RelativeValueGrp](/fix/groups/relative-value-grp)
+
+## 2530 · RelativeValueType [#tag-2530]
+
+<Badge intent="info" minimal>Tag 2530</Badge> <Badge intent="note" minimal>RelativeValueTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates the type of relative value measurement being specified.
+
+Code set **RelativeValueTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | ASWSpread | Asset Swap Spread |
+| `2` | OIS | Overnight Indexed Swap Spread |
+| `3` | ZSpread | Zero Volatility Spread |
+| `4` | DiscountMargin | Discount Margin |
+| `5` | ISpread | Interpolated Spread |
+| `6` | OAS | Option Adjusted Spread |
+| `7` | GSpread | G-Spread |
+| `8` | CDSBasis | CDS Basis |
+| `9` | CDSInterpolatedBasis | CDS Interpolated Basis |
+
+Used in: [RelativeValueGrp](/fix/groups/relative-value-grp)
+
+## 2531 · RelativeValue [#tag-2531]
+
+<Badge intent="info" minimal>Tag 2531</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The valuation of an instrument relative to a base measurement specified in RelativeValueType(2530). This value can be negative.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [RelativeValueGrp](/fix/groups/relative-value-grp)
+
+## 2532 · RelativeValueSide [#tag-2532]
+
+<Badge intent="info" minimal>Tag 2532</Badge> <Badge intent="note" minimal>RelativeValueSideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the side of the relative value.
+
+Code set **RelativeValueSideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Bid | Bid |
+| `2` | Mid | Mid |
+| `3` | Offer | Offer |
+
+Used in: [RelativeValueGrp](/fix/groups/relative-value-grp)
+
+## 2533 · BidSpread [#tag-2533]
+
+<Badge intent="info" minimal>Tag 2533</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Basis points relative to a benchmark curve on the bid side, such as LIBOR, or a known security, such as 10Y US Treasury bond. The benchmark security or curve name is specified in the SpreadOrBenchmarkCurveData component.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [Quote](/fix/messages/quote)
+
+## 2534 · OfferSpread [#tag-2534]
+
+<Badge intent="info" minimal>Tag 2534</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Basis points relative to a benchmark curve on the offer side, such as LIBOR, or a known security, such as 10Y US Treasury bond. The benchmark security or curve name is specified in the SpreadOrBenchmarkCurveData component.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [Quote](/fix/messages/quote)
+
+## 2535 · MDReportEvent [#tag-2535]
+
+<Badge intent="info" minimal>Tag 2535</Badge> <Badge intent="note" minimal>MDReportEventCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Technical event within market data feed.
+
+Code set **MDReportEventCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | StartInstrumentRefData | Start of instrument reference data |
+| `2` | EndInstrumentRefData | End of instrument reference data |
+| `3` | StartOffMarketTrades | Start of off-market trades |
+| `4` | EndOffMarketTrades | End of off-market trades |
+| `5` | StartOrderBookTrades | Start of order book trades |
+| `6` | EndOrderBookTrades | End of order book trades |
+| `7` | StartOpenInterest | Start of open interest |
+| `8` | EndOpenInterest | End of open interest |
+| `9` | StartSettlementPrices | Start of settlement prices |
+| `10` | EndSettlementPrices | End of settlement prices |
+| `11` | StartStatsRefData | Start of statistics reference data |
+| `12` | EndStatsRefData | End of statistics reference data |
+| `13` | StartStatistics | Start of statistics |
+| `14` | EndStatistics | End of statistics |
+
+Used in: [MarketDataReport](/fix/messages/market-data-report)
+
+## 2536 · MDReportCount [#tag-2536]
+
+<Badge intent="info" minimal>Tag 2536</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of reference and market data messages in-between two MarketDataReport(35=DR) messages.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [MarketDataReport](/fix/messages/market-data-report)
+
+## 2537 · TotNoMarketSegmentReports [#tag-2537]
+
+<Badge intent="info" minimal>Tag 2537</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Total number of reports related to market segments.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [MarketDataReport](/fix/messages/market-data-report)
+
+## 2538 · TotNoInstrumentReports [#tag-2538]
+
+<Badge intent="info" minimal>Tag 2538</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Total number of reports related to instruments.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [MarketDataReport](/fix/messages/market-data-report)
+
+## 2539 · TotNoPartyDetailReports [#tag-2539]
+
+<Badge intent="info" minimal>Tag 2539</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Total number of reports related to party detail information.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [MarketDataReport](/fix/messages/market-data-report)
+
+## 2540 · TotNoEntitlementReports [#tag-2540]
+
+<Badge intent="info" minimal>Tag 2540</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Total number of reports related to party entitlement information.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [MarketDataReport](/fix/messages/market-data-report)
+
+## 2541 · TotNoRiskLimitReports [#tag-2541]
+
+<Badge intent="info" minimal>Tag 2541</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Total number of reports related to party risk limit information.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [MarketDataReport](/fix/messages/market-data-report)
+
+## 2542 · MarketSegmentStatus [#tag-2542]
+
+<Badge intent="info" minimal>Tag 2542</Badge> <Badge intent="note" minimal>MarketSegmentStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Status of market segment.
+
+Code set **MarketSegmentStatusCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Active | Active |
+| `2` | Inactive | Inactive |
+| `3` | Published | Published |
+
+Used in: [MarketDefinition](/fix/messages/market-definition), [MarketDefinitionUpdateReport](/fix/messages/market-definition-update-report)
+
+## 2543 · MarketSegmentType [#tag-2543]
+
+<Badge intent="info" minimal>Tag 2543</Badge> <Badge intent="note" minimal>MarketSegmentTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used to classify the type of market segment.
+
+Code set **MarketSegmentTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Pool | Pool |
+| `2` | Retail | Retail |
+| `3` | Wholesale | Wholesale |
+
+Used in: [MarketDefinition](/fix/messages/market-definition), [MarketDefinitionUpdateReport](/fix/messages/market-definition-update-report)
+
+## 2544 · MarketSegmentSubType [#tag-2544]
+
+<Badge intent="info" minimal>Tag 2544</Badge> <Badge intent="note" minimal>MarketSegmentSubTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used to further categorize market segments within a MarketSegmentType(2543).
+
+Code set **MarketSegmentSubTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | InterProductSpread | Inter-product spread |
+
+Used in: [MarketDefinition](/fix/messages/market-definition), [MarketDefinitionUpdateReport](/fix/messages/market-definition-update-report)
+
+## 2545 · NoRelatedMarketSegments [#tag-2545]
+
+<Badge intent="info" minimal>Tag 2545</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of related market segments.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [RelatedMarketSegmentGrp](/fix/groups/related-market-segment-grp)
+
+## 2546 · RelatedMarketSegmentID [#tag-2546]
+
+<Badge intent="info" minimal>Tag 2546</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies a related market segment.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [RelatedMarketSegmentGrp](/fix/groups/related-market-segment-grp)
+
+## 2547 · MarketSegmentRelationship [#tag-2547]
+
+<Badge intent="info" minimal>Tag 2547</Badge> <Badge intent="note" minimal>MarketSegmentRelationshipCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Type of relationship between two or more market segments.
+
+Code set **MarketSegmentRelationshipCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | MarketSegmentPoolMember | Market segment pool member |
+| `2` | RetailSegment | Retail segment |
+| `3` | WholesaleSegment | Wholesale segment |
+
+Used in: [RelatedMarketSegmentGrp](/fix/groups/related-market-segment-grp)
+
+## 2548 · NoAuctionTypeRules [#tag-2548]
+
+<Badge intent="info" minimal>Tag 2548</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of auction order types.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [AuctionTypeRuleGrp](/fix/groups/auction-type-rule-grp)
+
+## 2549 · AuctionTypeProductComplex [#tag-2549]
+
+<Badge intent="info" minimal>Tag 2549</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies an entire suite of products for which the auction order type rule applies.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [AuctionTypeRuleGrp](/fix/groups/auction-type-rule-grp)
+
+## 2550 · NoPriceRangeRules [#tag-2550]
+
+<Badge intent="info" minimal>Tag 2550</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of rules related to price ranges.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [PriceRangeRuleGrp](/fix/groups/price-range-rule-grp)
+
+## 2551 · StartPriceRange [#tag-2551]
+
+<Badge intent="info" minimal>Tag 2551</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Lower boundary for price range.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [PriceRangeRuleGrp](/fix/groups/price-range-rule-grp)
+
+## 2552 · EndPriceRange [#tag-2552]
+
+<Badge intent="info" minimal>Tag 2552</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Upper boundary for price range.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [PriceRangeRuleGrp](/fix/groups/price-range-rule-grp)
+
+## 2553 · PriceRangeValue [#tag-2553]
+
+<Badge intent="info" minimal>Tag 2553</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Maximum range expressed as absolute value.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [PriceRangeRuleGrp](/fix/groups/price-range-rule-grp)
+
+## 2554 · PriceRangePercentage [#tag-2554]
+
+<Badge intent="info" minimal>Tag 2554</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Maximum range expressed as percentage.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [PriceRangeRuleGrp](/fix/groups/price-range-rule-grp)
+
+## 2555 · PriceRangeProductComplex [#tag-2555]
+
+<Badge intent="info" minimal>Tag 2555</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies an entire suite of products in the context of trading rules related to price ranges.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PriceRangeRuleGrp](/fix/groups/price-range-rule-grp)
+
+## 2556 · PriceRangeRuleID [#tag-2556]
+
+<Badge intent="info" minimal>Tag 2556</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifier for a price range rule.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PriceRangeRuleGrp](/fix/groups/price-range-rule-grp)
+
+## 2557 · FastMarketPercentage [#tag-2557]
+
+<Badge intent="info" minimal>Tag 2557</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The percentage factor to be applied to trading rule parameters (e.g. price ranges, size ranges, etc.) when fast market conditions are applicable.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [BaseTradingRules](/fix/components/base-trading-rules)
+
+## 2558 · NoQuoteSizeRules [#tag-2558]
+
+<Badge intent="info" minimal>Tag 2558</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of rules related to quote sizes.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [QuoteSizeRuleGrp](/fix/groups/quote-size-rule-grp)
+
+## 2559 · QuoteSideIndicator [#tag-2559]
+
+<Badge intent="info" minimal>Tag 2559</Badge> <Badge intent="note" minimal>QuoteSideIndicatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether single sided quotes are allowed.
+
+Code set **QuoteSideIndicatorCodeSet** ([Boolean](/fix/datatypes#boolean))
+
+| Value | Name | Description |
+|---|---|---|
+| `N` | No | Single sided quotes are not allowed |
+| `Y` | Yes | Single sided quotes are allowed |
+
+Used in: [BaseTradingRules](/fix/components/base-trading-rules)
+
+## 2560 · NoFlexProductEligibilities [#tag-2560]
+
+<Badge intent="info" minimal>Tag 2560</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of eligibility indicators for the creation of flexible securities.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [FlexProductEligibilityGrp](/fix/groups/flex-product-eligibility-grp)
+
+## 2561 · FlexProductEligibilityComplex [#tag-2561]
+
+<Badge intent="info" minimal>Tag 2561</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies an entire suite of products which are eligible for the creation of flexible securities.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [FlexProductEligibilityGrp](/fix/groups/flex-product-eligibility-grp)
+
+## 2562 · NumOfComplexInstruments [#tag-2562]
+
+<Badge intent="info" minimal>Tag 2562</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Represents the total number of multileg securities or user defined securities that make up the security.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [SecurityDefinition](/fix/messages/security-definition), [SecurityDefinitionUpdateReport](/fix/messages/security-definition-update-report)
+
+## 2563 · MarketDepthTimeInterval [#tag-2563]
+
+<Badge intent="info" minimal>Tag 2563</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the time interval used for netting market data in a price depth feed.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [MarketDataFeedTypes](/fix/groups/market-data-feed-types)
+
+## 2564 · MarketDepthTimeIntervalUnit [#tag-2564]
+
+<Badge intent="info" minimal>Tag 2564</Badge> <Badge intent="note" minimal>OrderDelayUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The time unit associated with the time interval of the netting of market data in a price depth feed.
+
+Code set **OrderDelayUnitCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Seconds | Seconds (default if not specified) |
+| `1` | TenthsOfASecond | Tenths of a second |
+| `2` | HundredthsOfASecond | Hundredths of a second |
+| `3` | Milliseconds | milliseconds |
+| `4` | Microseconds | microseconds |
+| `5` | Nanoseconds | nanoseconds |
+| `10` | Minutes | minutes |
+| `11` | Hours | hours |
+| `12` | Days | days |
+| `13` | Weeks | weeks |
+| `14` | Months | months |
+| `15` | Years | years |
+
+Used in: [MarketDataFeedTypes](/fix/groups/market-data-feed-types)
+
+## 2565 · MDRecoveryTimeInterval [#tag-2565]
+
+<Badge intent="info" minimal>Tag 2565</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the time interval between two repetitions of the same market data for cyclic recovery feeds.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [MarketDataFeedTypes](/fix/groups/market-data-feed-types)
+
+## 2566 · MDRecoveryTimeIntervalUnit [#tag-2566]
+
+<Badge intent="info" minimal>Tag 2566</Badge> <Badge intent="note" minimal>OrderDelayUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The time unit associated with the time interval between two cycles of the same market data in cyclic data recovery feeds.
+
+Code set **OrderDelayUnitCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Seconds | Seconds (default if not specified) |
+| `1` | TenthsOfASecond | Tenths of a second |
+| `2` | HundredthsOfASecond | Hundredths of a second |
+| `3` | Milliseconds | milliseconds |
+| `4` | Microseconds | microseconds |
+| `5` | Nanoseconds | nanoseconds |
+| `10` | Minutes | minutes |
+| `11` | Hours | hours |
+| `12` | Days | days |
+| `13` | Weeks | weeks |
+| `14` | Months | months |
+| `15` | Years | years |
+
+Used in: [MarketDataFeedTypes](/fix/groups/market-data-feed-types)
+
+## 2567 · PrimaryServiceLocationID [#tag-2567]
+
+<Badge intent="info" minimal>Tag 2567</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Primary service location identifier.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [MarketDataFeedTypes](/fix/groups/market-data-feed-types)
+
+## 2568 · SecondaryServiceLocationID [#tag-2568]
+
+<Badge intent="info" minimal>Tag 2568</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Secondary or alternate service location identifier.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [MarketDataFeedTypes](/fix/groups/market-data-feed-types)
+
+## 2569 · MatchRuleProductComplex [#tag-2569]
+
+<Badge intent="info" minimal>Tag 2569</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies an entire suite of products for which the matching rule applies.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [MatchRules](/fix/groups/match-rules)
+
+## 2570 · CustomerPriority [#tag-2570]
+
+<Badge intent="info" minimal>Tag 2570</Badge> <Badge intent="note" minimal>CustomerPriorityCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the kind of priority given to customers.
+
+Code set **CustomerPriorityCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NoPriority | No priority |
+| `1` | UnconditionalPriority | Unconditional priority |
+
+Used in: [MatchRules](/fix/groups/match-rules)
+
+## 2571 · TickRuleProductComplex [#tag-2571]
+
+<Badge intent="info" minimal>Tag 2571</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies an entire suite of products for which the price tick rule applies.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TickRules](/fix/groups/tick-rules)
+
+## 2572 · PreviousAdjustedOpenInterest [#tag-2572]
+
+<Badge intent="info" minimal>Tag 2572</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Previous day's adjusted open interest.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [SecurityDefinition](/fix/messages/security-definition), [SecurityDefinitionUpdateReport](/fix/messages/security-definition-update-report)
+
+## 2573 · PreviousUnadjustedOpenInterest [#tag-2573]
+
+<Badge intent="info" minimal>Tag 2573</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Previous day's unadjusted open interest.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [SecurityDefinition](/fix/messages/security-definition), [SecurityDefinitionUpdateReport](/fix/messages/security-definition-update-report)
+
+## 2574 · LowExercisePriceOptionIndicator [#tag-2574]
+
+<Badge intent="info" minimal>Tag 2574</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates if a given option instrument permits low exercise prices (LEPO).
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 2575 · BlockTradeEligibilityIndicator [#tag-2575]
+
+<Badge intent="info" minimal>Tag 2575</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates if a given instrument is eligible for block trading.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 2576 · InstrumentPricePrecision [#tag-2576]
+
+<Badge intent="info" minimal>Tag 2576</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the number of decimal places for instrument prices.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 2577 · StrikePricePrecision [#tag-2577]
+
+<Badge intent="info" minimal>Tag 2577</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the number of decimal places for exercise price.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 2578 · OrigStrikePrice [#tag-2578]
+
+<Badge intent="info" minimal>Tag 2578</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Original exercise price, e.g. after corporate action requiring changes.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 2579 · SettlSubMethod [#tag-2579]
+
+<Badge intent="info" minimal>Tag 2579</Badge> <Badge intent="note" minimal>SettlSubMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies a suitable settlement sub-method for a given settlement method.
+
+Code set **SettlSubMethodCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Shares | Shares |
+| `2` | Derivatives | Derivatives |
+| `3` | PaymentVsPayment | Payment vs payment |
+| `4` | Notional | Notional |
+| `5` | Cascade | Cascade |
+| `6` | Repurchase | Repurchase |
+| `99` | Other | Other |
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 2580 · NoClearingPriceParameters [#tag-2580]
+
+<Badge intent="info" minimal>Tag 2580</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of parameter sets for clearing prices.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [ClearingPriceParametersGrp](/fix/groups/clearing-price-parameters-grp)
+
+## 2581 · BusinessDayType [#tag-2581]
+
+<Badge intent="info" minimal>Tag 2581</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Relative identification of a business day.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [ClearingPriceParametersGrp](/fix/groups/clearing-price-parameters-grp)
+
+## 2582 · ClearingPriceOffset [#tag-2582]
+
+<Badge intent="info" minimal>Tag 2582</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Constant value required for the calculation of the clearing price, e.g. for variance futures.
+
+Type: [PriceOffset](/fix/datatypes#price-offset)
+
+Used in: [ClearingPriceParametersGrp](/fix/groups/clearing-price-parameters-grp)
+
+## 2583 · VegaMultiplier [#tag-2583]
+
+<Badge intent="info" minimal>Tag 2583</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Constant value required for the calculation of the clearing quantity, e.g. for variance futures.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [ClearingPriceParametersGrp](/fix/groups/clearing-price-parameters-grp)
+
+## 2584 · AnnualTradingBusinessDays [#tag-2584]
+
+<Badge intent="info" minimal>Tag 2584</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of trading business days in a year.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ClearingPriceParametersGrp](/fix/groups/clearing-price-parameters-grp), [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 2585 · TotalTradingBusinessDays [#tag-2585]
+
+<Badge intent="info" minimal>Tag 2585</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of trading business days over the lifetime of an instrument.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ClearingPriceParametersGrp](/fix/groups/clearing-price-parameters-grp)
+
+## 2586 · TradingBusinessDays [#tag-2586]
+
+<Badge intent="info" minimal>Tag 2586</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of actual trading business days of an instrument.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ClearingPriceParametersGrp](/fix/groups/clearing-price-parameters-grp)
+
+## 2587 · RealizedVariance [#tag-2587]
+
+<Badge intent="info" minimal>Tag 2587</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Actual or realized variance of an instrument used to calculate settlement prices, e.g. for variance futures.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [ClearingPriceParametersGrp](/fix/groups/clearing-price-parameters-grp)
+
+## 2588 · StandardVariance [#tag-2588]
+
+<Badge intent="info" minimal>Tag 2588</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Standard variance (over the lifetime of an instrument) or initial variance used to calculate settlement prices, e.g. for variance futures.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [ClearingPriceParametersGrp](/fix/groups/clearing-price-parameters-grp)
+
+## 2589 · RelatedClosePrice [#tag-2589]
+
+<Badge intent="info" minimal>Tag 2589</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Closing price of the underlying required to calculate the RealizedVariance(2587).
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [ClearingPriceParametersGrp](/fix/groups/clearing-price-parameters-grp)
+
+## 2590 · OvernightInterestRate [#tag-2590]
+
+<Badge intent="info" minimal>Tag 2590</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Overnight interest rate.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [ClearingPriceParametersGrp](/fix/groups/clearing-price-parameters-grp)
+
+## 2591 · AccumulatedReturnModifiedVariationMargin [#tag-2591]
+
+<Badge intent="info" minimal>Tag 2591</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The economic cost of the variation margin from one trading day to the next.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [ClearingPriceParametersGrp](/fix/groups/clearing-price-parameters-grp)
+
+## 2592 · CalculationMethod [#tag-2592]
+
+<Badge intent="info" minimal>Tag 2592</Badge> <Badge intent="note" minimal>CalculationMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies how the calculation will be made.
+
+Code set **CalculationMethodCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Automatic | Automatic (default) |
+| `1` | Manual | Manual |
+
+Used in: [ClearingPriceParametersGrp](/fix/groups/clearing-price-parameters-grp)
+
+## 2593 · NoOrderAttributes [#tag-2593]
+
+<Badge intent="info" minimal>Tag 2593</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of order attribute entries.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [OrderAttributeGrp](/fix/groups/order-attribute-grp)
+
+## 2594 · OrderAttributeType [#tag-2594]
+
+<Badge intent="info" minimal>Tag 2594</Badge> <Badge intent="note" minimal>OrderAttributeTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The type of order attribute.
+
+Code set **OrderAttributeTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | AggregatedOrder | Aggregated order |
+| `1` | PendingAllocation | Order pending allocation |
+| `2` | LiquidityProvisionActivityOrder | Liquidity provision activity order |
+| `3` | RiskReductionOrder | Risk reduction order |
+| `4` | AlgorithmicOrder | Algorithmic order |
+| `5` | SystemicInternaliserOrder | Systemic internaliser order |
+| `6` | AllExecutionsSubmittedToAPA | All executions for the order are to be submitted to an APA |
+| `7` | OrderExecutionInstructedByClient | Order execution instructed by client |
+| `8` | LargeInScale | Large in scale order |
+| `9` | Hidden | Hidden order |
+| `10` | SubjectToEUSTO | Subject to EU share trading obligation (STO) |
+| `11` | SubjectToUKSTO | Subject to UK share trading obligation (STO) |
+| `12` | RepresentativeOrder | Representative order |
+| `13` | LinkageType | Linkage type |
+| `14` | ExemptFromSTO | Exempt from share trading obligation (STO) |
+
+Used in: [OrderAttributeGrp](/fix/groups/order-attribute-grp)
+
+## 2595 · OrderAttributeValue [#tag-2595]
+
+<Badge intent="info" minimal>Tag 2595</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The value associated with the order attribute type specified in OrderAttributeType(2594).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [OrderAttributeGrp](/fix/groups/order-attribute-grp)
+
+## 2596 · DeltaCrossed [#tag-2596]
+
+<Badge intent="info" minimal>Tag 2596</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates that the party has taken a position on both a put and a call on the same underlying asset.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 2597 · ComplexEventFuturesPriceValuation [#tag-2597]
+
+<Badge intent="info" minimal>Tag 2597</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether the official settlement price as announced by the related exchange is applicable, in accordance with the ISDA 2002 definitions. Applicable only to futures contracts.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [ComplexEvents](/fix/groups/complex-events)
+
+## 2598 · ComplexEventOptionsPriceValuation [#tag-2598]
+
+<Badge intent="info" minimal>Tag 2598</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether the official settlement price as announced by the related exchange is applicable, in accordance with the ISDA 2002 definitions. Applicable only to options contracts.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [ComplexEvents](/fix/groups/complex-events)
+
+## 2599 · ComplexEventPVFinalPriceElectionFallback [#tag-2599]
+
+<Badge intent="info" minimal>Tag 2599</Badge> <Badge intent="note" minimal>ComplexEventPVFinalPriceElectionFallbackCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the fallback provisions for the hedging party in the determination of the final settlement price.
+
+Code set **ComplexEventPVFinalPriceElectionFallbackCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Close | Close |
+| `1` | HedgeElection | Hedge election |
+
+Used in: [ComplexEvents](/fix/groups/complex-events)
+

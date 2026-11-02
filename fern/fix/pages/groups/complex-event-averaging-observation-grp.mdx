@@ -1,0 +1,23 @@
+---
+title: "ComplexEventAveragingObservationGrp"
+subtitle: "The ComplexEventAveragingObservationGrp is an optional subcomponent of ComplexEventPeriodGrp for specifying the weight of each of the dated observations."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40994</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoComplexEventAveragingObservations (40994)](/fix/fields/tags-40800-40999#tag-40994).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40995 | [ComplexEventAveragingObservationNumber](/fix/fields/tags-40800-40999#tag-40995) | int | Optional | Required if NoComplexEventAveragingObservations(40994) &gt; 0. |
+| 40996 | [ComplexEventAveragingWeight](/fix/fields/tags-40800-40999#tag-40996) | float | Optional | The weight factor to be applied to the observation. |
+
+</StickyTable>
+
+## Used in
+
+[ComplexEventPeriodGrp](/fix/groups/complex-event-period-grp)

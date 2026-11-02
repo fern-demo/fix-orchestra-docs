@@ -1,0 +1,63 @@
+---
+title: "PaymentGrp"
+subtitle: "The PaymentGrp is a repeating component used to report additional payments or bullet payments."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40212</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+This component is positioned outside the Instrument component as it is used to specify payments based on the price and terms of the contract, e.g. upfront fee, premium amount, security lending fee and contract-based rebates. When PaymentFrequencyUnit(43103) and PaymentFrequencyPeriod(43102) are specified the payments are deemed to be periodic for the specified PaymentType(40213).
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPayments (40212)](/fix/fields/tags-40200-40399#tag-40212).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40213 | [PaymentType](/fix/fields/tags-40200-40399#tag-40213) | PaymentTypeCodeSet | Optional | Required if NoPayments(40212) &gt; 0. |
+| 40993 | [PaymentSubType](/fix/fields/tags-40800-40999#tag-40993) | PaymentSubTypeCodeSet | Optional | Used to further clarify the value of PaymentType(40213). |
+| 40214 | [PaymentPaySide](/fix/fields/tags-40200-40399#tag-40214) | PaymentPaySideCodeSet | Optional | The side of the party paying the payment. |
+| 40215 | [PaymentReceiveSide](/fix/fields/tags-40200-40399#tag-40215) | PaymentPaySideCodeSet | Optional | The side of the party receiving the payment. |
+| 43087 | [PaymentDesc](/fix/fields/tags-43000-43199#tag-43087) | String | Optional | A short descriptive name given to the payment, e.g. Premium, Upfront, etc. The description has no intrinsic meaning but should be arbitrarily chosen by the remitter as reference. |
+| 40216 | [PaymentCurrency](/fix/fields/tags-40200-40399#tag-40216) | Currency | Optional | Specifies the currency in which PaymentAmount(40217) is denominated. Uses ISO 4271 currency codes. |
+| 40217 | [PaymentAmount](/fix/fields/tags-40200-40399#tag-40217) | Amt | Optional | Either PaymentAmount(40217), PaymentFixedRate(43097) or PaymentRFloatingRateIndex(43098) must be specified. |
+| 42598 | [PaymentAmountRelativeTo](/fix/fields/tags-42400-42599#tag-42598) | int | Optional | Specifies the reference amount when the payment amount is relative to another amount in the message. See http://www.fixtradingcommunity.org/codelists#Payment\_Amount\_Relative\_To for code list of relative amounts. |
+| 42599 | [PaymentAmountDeterminationMethod](/fix/fields/tags-42400-42599#tag-42599) | String | Optional | Specifies the method by which a payment amount is determined. See http://www.fpml.org/coding-scheme/determination-method for values. |
+| 43097 | [PaymentFixedRate](/fix/fields/tags-43000-43199#tag-43097) | Percentage | Optional | Either PaymentAmount(40217), PaymentFixedRate(43097) or PaymentFloatingRateIndex(43098) must be specified. |
+| 43098 | [PaymentFloatingRateIndex](/fix/fields/tags-43000-43199#tag-43098) | String | Optional | Either PaymentAmount(40217), PaymentFixedRate(43097) or PaymentFloatingRateIndex(43098) must be specified. |
+| 43100 | [PaymentFloatingRateIndexCurveUnit](/fix/fields/tags-43000-43199#tag-43100) | PaymentStreamRateIndexCurveUnitCodeSet | Optional | Conditionally required when PaymentFloatingRateIndexCurvePeriod(43099) is specified. |
+| 43099 | [PaymentFloatingRateIndexCurvePeriod](/fix/fields/tags-43000-43199#tag-43099) | int | Optional | Conditionally required when PaymentFloatingRateIndexCurveUnit(43100) is specified. |
+| 43101 | [PaymentFloatingRateSpread](/fix/fields/tags-43000-43199#tag-43101) | PriceOffset | Optional | Conditionally required when PaymentFloatingRateIndex(43098) is specified and the spread to the index is not "zero". When the spread to the index is "zero" this may be omitted. |
+| 43105 | [PaymentRateResetFrequencyUnit](/fix/fields/tags-43000-43199#tag-43105) | PaymentStreamRateIndexCurveUnitCodeSet | Optional | Conditionally required when PaymentRateResetFrequencyPeriod(43104) is specified. |
+| 43104 | [PaymentRateResetFrequencyPeriod](/fix/fields/tags-43000-43199#tag-43104) | int | Optional | Conditionally required when PaymentRateResetFrequencyUnit(43105) is specified. |
+| 43103 | [PaymentFrequencyUnit](/fix/fields/tags-43000-43199#tag-43103) | PaymentStreamRateIndexCurveUnitCodeSet | Optional | Conditionally required when PaymentFrequencyPeriod(43102) is specified. |
+| 43102 | [PaymentFrequencyPeriod](/fix/fields/tags-43000-43199#tag-43102) | int | Optional | Conditionally required when PaymentFrequencyUnitPeriod(43103) is specified. |
+| 40218 | [PaymentPrice](/fix/fields/tags-40200-40399#tag-40218) | Price | Optional | The price determining the payment amount expressed in terms specified in PaymentPriceType(40919) and expressed in market format. |
+| 40919 | [PaymentPriceType](/fix/fields/tags-40800-40999#tag-40919) | PriceTypeCodeSet | Optional | Specifies the type of price for PaymentPrice(40218). |
+| 41155 | [PaymentUnitOfMeasure](/fix/fields/tags-41000-41199#tag-41155) | UnitOfMeasureCodeSet | Optional | Used to express the unit of measure (UOM) of the payment amount if not in the currency of the trade. |
+| 40219 | [PaymentDateUnadjusted](/fix/fields/tags-40200-40399#tag-40219) | LocalMktDate | Optional | The unadjusted payment date. |
+| 40220 | [PaymentBusinessDayConvention](/fix/fields/tags-40200-40399#tag-40220) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this instance of the payment information. |
+| 40944 | [PaymentBusinessCenterGrp](/fix/groups/payment-business-center-grp) | Repeating group | Optional | PaymentBusinessCenterGrp is a repeating subcomponent within the PaymentGrp component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the DateAdjustment component in Instrument. |
+| 41156 | [PaymentDateRelativeTo](/fix/fields/tags-41000-41199#tag-41156) | int | Optional | Specifies the anchor date when the payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 41157 | [PaymentDateOffsetPeriod](/fix/fields/tags-41000-41199#tag-41157) | int | Optional | Conditionally required when PaymentDateOffsetUnit(41158) is specified. |
+| 41158 | [PaymentDateOffsetUnit](/fix/fields/tags-41000-41199#tag-41158) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when PaymentDateOffsetPeriod(41157) is specified. |
+| 41159 | [PaymentDateOffsetDayType](/fix/fields/tags-41000-41199#tag-41159) | PaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative payment date offset. |
+| 40222 | [PaymentDateAdjusted](/fix/fields/tags-40200-40399#tag-40222) | LocalMktDate | Optional | The adjusted payment date. |
+| 41160 | [PaymentForwardStartType](/fix/fields/tags-41000-41199#tag-41160) | PaymentForwardStartTypeCodeSet | Optional | Forward start premium type. |
+| 40224 | [PaymentDiscountFactor](/fix/fields/tags-40200-40399#tag-40224) | float | Optional | The value representing the discount factor used to calculate the present value of the cash flow. |
+| 40225 | [PaymentPresentValueAmount](/fix/fields/tags-40200-40399#tag-40225) | Amt | Optional | The amount representing the present value of the forecast payment. |
+| 40226 | [PaymentPresentValueCurrency](/fix/fields/tags-40200-40399#tag-40226) | Currency | Optional | Specifies the currency the PaymentPresentValueAmount(40225) is denominated in. Uses ISO 4217 currency codes. |
+| 40227 | [PaymentSettlStyle](/fix/fields/tags-40200-40399#tag-40227) | PaymentSettlStyleCodeSet | Optional | Payment settlement style. |
+| 492 | [PaymentMethod](/fix/fields/tags-400-599#tag-492) | PaymentMethodCodeSet | Optional | A code identifying the Settlement payment method. 16 through 998 are reserved for future use Values above 1000 are available for use by private agreement among counterparties |
+| 40230 | [PaymentSettlGrp](/fix/groups/payment-settl-grp) | Repeating group | Optional | The PaymentSettlGrp is a repeating subcomponent of the PaymentGrp component used to report payment settlement as a single or split payment. |
+| 41304 | [PaymentLegRefID](/fix/fields/tags-41200-41399#tag-41304) | String | Optional | Used to link a payment back to its parent InstrumentLeg by using the same value as the parent’s LegID(1788). |
+| 40229 | [PaymentText](/fix/fields/tags-40200-40399#tag-40229) | String | Optional | Free form text to specify additional information or enumeration description when a sdtandard value does not apply. Identifies the payment type when PaymentType(40213) = 99 (Other). |
+| 40984 | [EncodedPaymentTextLen](/fix/fields/tags-40800-40999#tag-40984) | Length | Optional | Must be set if EncodedPaymentText(40985) field is specified and must immediately precede it. |
+| 40985 | [EncodedPaymentText](/fix/fields/tags-40800-40999#tag-40985) | data | Optional | Encoded (non-ASCII characters) representation of the PaymentText(40229) field in the encoded format specified via the MessageEncoding(347) field. |
+
+</StickyTable>
+
+## Used in
+
+[ExecutionReport](/fix/messages/execution-report), [PositionMaintenanceReport](/fix/messages/position-maintenance-report), [PositionReport](/fix/messages/position-report), [TradeCaptureReport](/fix/messages/trade-capture-report)

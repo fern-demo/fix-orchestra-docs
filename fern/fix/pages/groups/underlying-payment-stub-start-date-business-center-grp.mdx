@@ -1,0 +1,22 @@
+---
+title: "UnderlyingPaymentStubStartDateBusinessCenterGrp"
+subtitle: "UnderlyingPaymentStubStartDateBusinessCenterGrp is a repeating subcomponent within the UnderlyingPaymentStubStartDate component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 43000</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingPaymentStubStartDateBusinessCenters (43000)](/fix/fields/tags-43000-43199#tag-43000).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 43001 | [UnderlyingPaymentStubStartDateBusinessCenter](/fix/fields/tags-43000-43199#tag-43001) | String | Optional | Required if NoUnderlyingPaymentStubStartDateBusinessCenters(43000) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingPaymentStubStartDate](/fix/components/underlying-payment-stub-start-date)

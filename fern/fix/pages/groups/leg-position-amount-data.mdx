@@ -1,0 +1,24 @@
+---
+title: "LegPositionAmountData"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1586</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPosAmt (1586)](/fix/fields/tags-1400-1599#tag-1586).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1587 | [LegPosAmt](/fix/fields/tags-1400-1599#tag-1587) | Amt | Optional | Conditionally required if NoLegPosAmt &gt; 0. |
+| 1588 | [LegPosAmtType](/fix/fields/tags-1400-1599#tag-1588) | PosAmtTypeCodeSet | Optional | Type of leg position amount. |
+| 1589 | [LegPosCurrency](/fix/fields/tags-1400-1599#tag-1589) | Currency | Optional | Leg position currency. |
+| 1590 | [LegPosAmtReason](/fix/fields/tags-1400-1599#tag-1590) | PosAmtReasonCodeSet | Optional | Specifies the reason for an amount type when reported on a position. Useful when multiple instances of the same amount type are reported. |
+
+</StickyTable>
+
+## Used in
+
+[TrdInstrmtLegGrp](/fix/groups/trd-instrmt-leg-grp)

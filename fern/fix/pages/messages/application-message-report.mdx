@@ -1,0 +1,32 @@
+---
+title: "ApplicationMessageReport"
+subtitle: "This message is used for three difference purposes: to reset the ApplSeqNum (1181) of a specified ApplID (1180). to indicate that the last message has been sent for a particular ApplID, or as a keep-alive mechanism for ApplIDs with…"
+---
+
+<Badge intent="info">MsgType BY</Badge> <Badge intent="note" minimal>Application</Badge> <Badge intent="tip" minimal>Infrastructure</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 1356 | [ApplReportID](/fix/fields/tags-1200-1399#tag-1356) | String | **Required** | Identifier for the Application Message Report |
+| 1346 | [ApplReqID](/fix/fields/tags-1200-1399#tag-1346) | String | Optional | If the application message report is generated in response to an ApplicationMessageRequest(MsgType=BW), then this tag contain the ApplReqID(1346) of that request. |
+| 1426 | [ApplReportType](/fix/fields/tags-1400-1599#tag-1426) | ApplReportTypeCodeSet | **Required** | Type of report |
+| 1351 | [ApplIDReportGrp](/fix/groups/appl-id-report-grp) | Repeating group | Optional |  |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text(58) field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="ApplicationMessageReport" wordWrap
+8=FIXT.1.1|9=79|35=BY|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|1356=ABC123|1426=0|10=189|
+```

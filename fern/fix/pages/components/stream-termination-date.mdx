@@ -1,0 +1,27 @@
+---
+title: "StreamTerminationDate"
+subtitle: "StreamTerminationDate is a subcomponent of the StreamGrp component used to specify the termination date of the stream."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40065 | [StreamTerminationDateUnadjusted](/fix/fields/tags-40000-40199#tag-40065) | LocalMktDate | Optional | The unadjusted termination date. |
+| 40066 | [StreamTerminationDateBusinessDayConvention](/fix/fields/tags-40000-40199#tag-40066) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this instance of the termination date of the stream. |
+| 40961 | [StreamTerminationDateBusinessCenterGrp](/fix/groups/stream-termination-date-business-center-grp) | Repeating group | Optional | StreamTerminationDateBusinessCenterGrp is a repeating subcomponent within the StreamTerminationDate component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the DateAdjustment component in the… |
+| 40068 | [StreamTerminationDateRelativeTo](/fix/fields/tags-40000-40199#tag-40068) | int | Optional | Specifies the anchor date when the termination date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 40069 | [StreamTerminationDateOffsetPeriod](/fix/fields/tags-40000-40199#tag-40069) | int | Optional | Conditionally required when StreamTerminationDateOffsetUnit(40070) is specified. |
+| 40070 | [StreamTerminationDateOffsetUnit](/fix/fields/tags-40000-40199#tag-40070) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when StreamTerminationDateOffsetPeriod(40069) is specified. |
+| 40071 | [StreamTerminationDateOffsetDayType](/fix/fields/tags-40000-40199#tag-40071) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative termination date offset. |
+| 40072 | [StreamTerminationDateAdjusted](/fix/fields/tags-40000-40199#tag-40072) | LocalMktDate | Optional | The adjusted termination date. |
+
+</StickyTable>
+
+## Used in
+
+[StreamGrp](/fix/groups/stream-grp)

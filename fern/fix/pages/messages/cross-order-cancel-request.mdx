@@ -1,0 +1,39 @@
+---
+title: "CrossOrderCancelRequest"
+subtitle: "Used to fully cancel the remaining open quantity of a cross order."
+---
+
+<Badge intent="info">MsgType u</Badge> <Badge intent="note" minimal>Cross Orders</Badge> <Badge intent="tip" minimal>Trade</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | Optional | Unique identifier of most recent order as assigned by sell-side (broker, exchange, ECN). |
+| 2422 | [OrderRequestID](/fix/fields/tags-2400-2599#tag-2422) | int | Optional | Required if provided on the order being cancelled. Echo back the value provided by the requester. |
+| 548 | [CrossID](/fix/fields/tags-400-599#tag-548) | String | **Required** | CrossID for the replacement order |
+| 551 | [OrigCrossID](/fix/fields/tags-400-599#tag-551) | String | **Required** | Must match the CrossID of previous cross order. Same order chaining mechanism as ClOrdID/OrigClOrdID with single order Cancel/Replace. |
+| 961 | [HostCrossID](/fix/fields/tags-800-999#tag-961) | String | Optional | Host assigned entity ID that can be used to reference all components of a cross; sides + strategy + legs |
+| 549 | [CrossType](/fix/fields/tags-400-599#tag-549) | CrossTypeCodeSet | **Required** | Type of cross being submitted to a market |
+| 550 | [CrossPrioritization](/fix/fields/tags-400-599#tag-550) | CrossPrioritizationCodeSet | **Required** | Indicates if one side or the other of a cross order should be prioritized. The definition of prioritization is left to the market. In some markets prioritization means which side of the cross order is applied to the market first. In other markets - prioritization may mean that the prioritized side… |
+| 1116 | [RootParties](/fix/groups/root-parties) | Repeating group | Optional | The RootParties component block is a version of the Parties component block used to provide root information regarding the owning and entering parties of a transaction. |
+| 552 | [SideCrossOrdCxlGrp](/fix/groups/side-cross-ord-cxl-grp) | Repeating group | **Required** |  |
+| | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
+| 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | **Required** | Time this order request was initiated/released by the trader, trading system, or intermediary. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="CrossOrderCancelRequest" wordWrap
+8=FIXT.1.1|9=139|35=u|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|548=ABC123|551=ABC123|549=1|550=0|552=1|54=1|11=ABC123|60=20260102-14:30:00.000|10=064|
+```

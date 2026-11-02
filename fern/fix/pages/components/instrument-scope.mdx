@@ -1,0 +1,43 @@
+---
+title: "InstrumentScope"
+subtitle: "Used to specify the instrument"
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1536 | [InstrumentScopeSymbol](/fix/fields/tags-1400-1599#tag-1536) | String | Optional | Used to limit instrument scope to specified symbol. See Symbol(55) field for description. |
+| 1537 | [InstrumentScopeSymbolSfx](/fix/fields/tags-1400-1599#tag-1537) | String | Optional | Used to limit instrument scope to specified symbol suffix. See SymbolSfx(65) field for description. |
+| 1538 | [InstrumentScopeSecurityID](/fix/fields/tags-1400-1599#tag-1538) | String | Optional | Used to limit instrument scope to specified security identifier. See SecurityID(48) field for description. |
+| 1539 | [InstrumentScopeSecurityIDSource](/fix/fields/tags-1400-1599#tag-1539) | SecurityIDSourceCodeSet | Optional | Used to limit instrument scope to specified security identifier source. See SecurityIDSource(22) field for description. |
+| 1540 | [InstrumentScopeSecurityAltIDGrp](/fix/groups/instrument-scope-security-alt-id-grp) | Repeating group | Optional | Alternative SecurityIDs for an instrument specified in the InstrumentScope. |
+| 1543 | [InstrumentScopeProduct](/fix/fields/tags-1400-1599#tag-1543) | ProductCodeSet | Optional | Used to limit instrument scope to specified instrument product category. See Product (460) field for description. |
+| 1544 | [InstrumentScopeProductComplex](/fix/fields/tags-1400-1599#tag-1544) | String | Optional | Used to limit instrument scope to specified product complex. See ProductComplex(1227) field for description. |
+| 1545 | [InstrumentScopeSecurityGroup](/fix/fields/tags-1400-1599#tag-1545) | String | Optional | Used to limit instrument scope to specified security group. See SecurityGroup(1151) field for description. |
+| 1546 | [InstrumentScopeCFICode](/fix/fields/tags-1400-1599#tag-1546) | String | Optional | Used to limit instrument scope to specified CFICode. See CFICode(461) field for description. |
+| 2895 | [InstrumentScopeUPICode](/fix/fields/tags-2800-2999#tag-2895) | String | Optional | Uniquely identifies the product of a security using ISO 4914 as filter criteria. See UPICode(2891) for further detail. |
+| 1547 | [InstrumentScopeSecurityType](/fix/fields/tags-1400-1599#tag-1547) | SecurityTypeCodeSet | Optional | Used to limit instrument scope to specified security type. See SecurityType(167) field for description). |
+| 1548 | [InstrumentScopeSecuritySubType](/fix/fields/tags-1400-1599#tag-1548) | String | Optional | Used to limit instrument scope to specified security sub-type. See SecuritySubType(762) field for description. |
+| 1549 | [InstrumentScopeMaturityMonthYear](/fix/fields/tags-1400-1599#tag-1549) | MonthYear | Optional | Used to limit instrument scope to specified maturity month and year. See MaturityMonthYear(200) field for description. |
+| 1550 | [InstrumentScopeMaturityTime](/fix/fields/tags-1400-1599#tag-1550) | TZTimeOnly | Optional | Used to limit instrument scope to specified maturity time. See MaturityTime(1079) field for description. |
+| 1551 | [InstrumentScopeRestructuringType](/fix/fields/tags-1400-1599#tag-1551) | String | Optional | Used to limit instrument scope to specified restructuring type. See RestructuringType(1449) field for description. |
+| 1552 | [InstrumentScopeSeniority](/fix/fields/tags-1400-1599#tag-1552) | String | Optional | Used to limit instrument scope to specified seniority type. See Seniority(1450) field for description. |
+| 1553 | [InstrumentScopePutOrCall](/fix/fields/tags-1400-1599#tag-1553) | PutOrCallCodeSet | Optional | Used to limit instrument scope to puts or calls. See PutOrCall(201) field for description. |
+| 1554 | [InstrumentScopeFlexibleIndicator](/fix/fields/tags-1400-1599#tag-1554) | Boolean | Optional | Used to limit instrument scope to securities that can be defined using flexible terms or not. See FlexibleIndicator(1244) field for description. |
+| 1555 | [InstrumentScopeCouponRate](/fix/fields/tags-1400-1599#tag-1555) | Percentage | Optional | Used to limit instrument scope to specified coupon rate. See CouponRate(223) field for description. |
+| 1616 | [InstrumentScopeSecurityExchange](/fix/fields/tags-1600-1799#tag-1616) | Exchange | Optional | Used to limit instrument scope to specified security exchange. See SecurityExchange(207) field for description. |
+| 1556 | [InstrumentScopeSecurityDesc](/fix/fields/tags-1400-1599#tag-1556) | String | Optional | Used to limit instrument scope to specified security description. See SecurityDesc(107) field for description. |
+| 1620 | [InstrumentScopeEncodedSecurityDescLen](/fix/fields/tags-1600-1799#tag-1620) | Length | Optional | Byte length of encoded (non-ASCII characters) InstrumentScopeEncodedSecurityDesc (1621) field |
+| 1621 | [InstrumentScopeEncodedSecurityDesc](/fix/fields/tags-1600-1799#tag-1621) | data | Optional | Encoded (non-ASCII characters) representation of the InstrumentScopeSecurityDesc (1556) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the InstrumentScopeSecurityDesc field. |
+| 1557 | [InstrumentScopeSettlType](/fix/fields/tags-1400-1599#tag-1557) | SettlTypeCodeSet | Optional | Can be used to specify FX tenors. |
+
+</StickyTable>
+
+## Used in
+
+[InstrumentScopeGrp](/fix/groups/instrument-scope-grp), [PartyActionReport](/fix/messages/party-action-report), [PartyActionRequest](/fix/messages/party-action-request), [RiskInstrumentScopeGrp](/fix/groups/risk-instrument-scope-grp), [SecurityMassStatus](/fix/messages/security-mass-status), [SecurityMassStatusRequest](/fix/messages/security-mass-status-request)

@@ -1,0 +1,23 @@
+---
+title: "UnderlyingStreamCalculationPeriodDateGrp"
+subtitle: "The UnderlyingStreamCalculationPeriodDateGrp is a repeating subcomponent of the UnderlyingStreamCalculationPeriodDates component used to detail fixed dates for the swap stream."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41954</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingStreamCalculationPeriodDates (41954)](/fix/fields/tags-41800-41999#tag-41954).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41955 | [UnderlyingStreamCalculationPeriodDate](/fix/fields/tags-41800-41999#tag-41955) | LocalMktDate | Optional | Required if NoUnderlyingStreamCalculationPeriodDates(41954) &gt; 0. |
+| 41956 | [UnderlyingStreamCalculationPeriodDateType](/fix/fields/tags-41800-41999#tag-41956) | OptionExerciseDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingStreamCalculationPeriodDates](/fix/components/underlying-stream-calculation-period-dates)

@@ -1,0 +1,22 @@
+---
+title: "SecSizesGrp"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1177</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoOfSecSizes (1177)](/fix/fields/tags-1000-1199#tag-1177).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1178 | [MDSecSizeType](/fix/fields/tags-1000-1199#tag-1178) | MDSecSizeTypeCodeSet | Optional | Defines the type of secondary size specified in MDSecSize(1179). Must be first field in this repeating group |
+| 1179 | [MDSecSize](/fix/fields/tags-1000-1199#tag-1179) | Qty | Optional | A part of the MDEntrySize(271) that represents secondary interest as specified by MDSecSizeType(1178). |
+
+</StickyTable>
+
+## Used in
+
+[MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)

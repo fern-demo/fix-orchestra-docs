@@ -1,0 +1,27 @@
+---
+title: "RegulatoryTradeIDGrp"
+subtitle: "The RegulatoryTradeIDGrp is a repeating component within the TradeCaptureReport message used to report the source, value and relationship of multiple identifiers for the same trade or position. This component can be used to meet regulatory…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1907</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRegulatoryTradeIDs (1907)](/fix/fields/tags-1800-1999#tag-1907).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1903 | [RegulatoryTradeID](/fix/fields/tags-1800-1999#tag-1903) | String | Optional | Required if NoRegulatoryTradeIDs(1907) &gt; 0. |
+| 1905 | [RegulatoryTradeIDSource](/fix/fields/tags-1800-1999#tag-1905) | String | Optional | Identifies the reporting entity that originated the value in RegulatoryTradeID(1903). The reporting entitiy identifier may be assigned by a regulator. |
+| 1904 | [RegulatoryTradeIDEvent](/fix/fields/tags-1800-1999#tag-1904) | RegulatoryTradeIDEventCodeSet | Optional | Identifies the event which caused origination of the identifier in RegulatoryTradeID(1903). When more than one event is the cause, use the higher enumeration value. For example, if the identifier is originated due to an allocated trade which was cleared and reported, use the enumeration value 2… |
+| 1906 | [RegulatoryTradeIDType](/fix/fields/tags-1800-1999#tag-1906) | RegulatoryTradeIDTypeCodeSet | Optional | Specifies the type of trade identifier provided in RegulatoryTradeID(1903). Contextual hierarchy of events for the same trade or transaction maybe captured through use of the different RegulatoryTradeIDType(1906) values using multiple instances of the repeating group as needed for regulatory… |
+| 2411 | [RegulatoryLegRefID](/fix/fields/tags-2400-2599#tag-2411) | String | Optional | This field may be is used for multi-leg trades sent as a single message to indicate that the entry applies only to a specific leg. |
+| 2397 | [RegulatoryTradeIDScope](/fix/fields/tags-2200-2399#tag-2397) | RegulatoryTradeIDScopeCodeSet | Optional | Specifies the scope to which the RegulatoryTradeID(1903) applies. Used when a trade must be assigned more than one identifier, e.g. one for the clearing member and another for the client on a cleared trade as with the principal model in Europe. |
+
+</StickyTable>
+
+## Used in
+
+[AllocationInstruction](/fix/messages/allocation-instruction), [AllocationInstructionAck](/fix/messages/allocation-instruction-ack), [AllocationReport](/fix/messages/allocation-report), [AllocationReportAck](/fix/messages/allocation-report-ack), [CollateralReport](/fix/messages/collateral-report), [ExecutionAck](/fix/messages/execution-ack), [ExecutionReport](/fix/messages/execution-report), [PositionMaintenanceReport](/fix/messages/position-maintenance-report), [PositionReport](/fix/messages/position-report), [QuotReqGrp](/fix/groups/quot-req-grp), [TradeCaptureReport](/fix/messages/trade-capture-report)

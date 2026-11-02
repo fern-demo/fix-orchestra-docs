@@ -1,0 +1,24 @@
+---
+title: "LegDeliveryStreamCycleGrp"
+subtitle: "The LegDeliveryStreamCycleGrp is a repeating subcomponent of the LegDeliveryStream component used to detail delivery cycles during which the oil product will be transported in the pipeline."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41456</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegDeliveryStreamCycles (41456)](/fix/fields/tags-41400-41599#tag-41456).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41457 | [LegDeliveryStreamCycleDesc](/fix/fields/tags-41400-41599#tag-41457) | String | Optional | Required if NoLegDeliveryStreamCycles(41456) &gt; 0. |
+| 41458 | [EncodedLegDeliveryStreamCycleDescLen](/fix/fields/tags-41400-41599#tag-41458) | Length | Optional | Must be set if EncodedLegDeliveryStreamCycleDesc(41459) field is specified and must immediately precede it. |
+| 41459 | [EncodedLegDeliveryStreamCycleDesc](/fix/fields/tags-41400-41599#tag-41459) | data | Optional | Encoded (non-ASCII characters) representation of the LegDeliveryStreamCycleDesc(41457) field in the encoded format specified via the MessageEncoding(347) field. |
+
+</StickyTable>
+
+## Used in
+
+[LegDeliveryStream](/fix/components/leg-delivery-stream)

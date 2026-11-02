@@ -1,0 +1,42 @@
+---
+title: "MarketDataRequest"
+subtitle: "Some systems allow the transmission of real-time quote, order, trade, trade volume, open interest, and/or other price information on a subscription basis. A MarketDataRequest(35=V) is a general request for market data on specific securities…"
+---
+
+<Badge intent="info">MsgType V</Badge> <Badge intent="note" minimal>Market Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 262 | [MDReqID](/fix/fields/tags-200-399#tag-262) | String | **Required** | Must be unique, or the ID of previous Market Data Request to disable if SubscriptionRequestType(263) = 2(Disable previous Snapshot + Updates Request). |
+| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263) | SubscriptionRequestTypeCodeSet | **Required** | SubscriptionRequestType(263) indicates to the other party what type of response is expected. A snapshot request only asks for current information. A subscribe request asks for updates as the status changes. Unsubscribe will cancel any future update messages from the counter party. |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 264 | [MarketDepth](/fix/fields/tags-200-399#tag-264) | int | **Required** | Depth of market for Book Snapshot / Incremental updates 0 - full book depth 1 - top of book 2 and above - book depth (number of levels) |
+| 265 | [MDUpdateType](/fix/fields/tags-200-399#tag-265) | MDUpdateTypeCodeSet | Optional | Required if SubscriptionRequestType(263) = 1(Snapshot + Updates). |
+| 266 | [AggregatedBook](/fix/fields/tags-200-399#tag-266) | AggregatedBookCodeSet | Optional | Specifies whether or not book entries should be aggregated. (Not specified) = broker option |
+| 286 | [OpenCloseSettlFlag](/fix/fields/tags-200-399#tag-286) | OpenCloseSettlFlagCodeSet | Optional | Can be used to clarify a request if MDEntryType(269) = 4 (Opening price), 5 (Closing price), or 6 (Settlement price). |
+| 546 | [Scope](/fix/fields/tags-400-599#tag-546) | ScopeCodeSet | Optional | Defines the scope(s) of the request |
+| 547 | [MDImplicitDelete](/fix/fields/tags-400-599#tag-547) | MDImplicitDeleteCodeSet | Optional | Can be used when MarketDepth(254) &gt;= 2 and MDUpdateType(265) = 1(Incremental Refresh). |
+| 267 | [MDReqGrp](/fix/groups/md-req-grp) | Repeating group | **Required** |  |
+| 1310 | [MarketSegmentScopeGrp](/fix/groups/market-segment-scope-grp) | Repeating group | Optional | Conveys a list of markets and, optionally, their market segments. Note that the component MarketSegmentGrp exists, but is not useful for this purpose, as it conveys additional information not appropriate in this context. |
+| 146 | [InstrmtMDReqGrp](/fix/groups/instrmt-md-req-grp) | Repeating group | **Required** |  |
+| 386 | [TrdgSesGrp](/fix/groups/trdg-ses-grp) | Repeating group | Optional |  |
+| 815 | [ApplQueueAction](/fix/fields/tags-800-999#tag-815) | ApplQueueActionCodeSet | Optional | Action to take if application level queuing exists |
+| 812 | [ApplQueueMax](/fix/fields/tags-800-999#tag-812) | int | Optional | Maximum application queue depth that must be exceeded before queuing action is taken. |
+| 1070 | [MDQuoteType](/fix/fields/tags-1000-1199#tag-1070) | MDQuoteTypeCodeSet | Optional | Identifies market data quote type. |
+| 2447 | [FastMarketIndicator](/fix/fields/tags-2400-2599#tag-2447) | Boolean | Optional | Indicates if the instrument is in "fast market" state. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="MarketDataRequest" wordWrap
+8=FIXT.1.1|9=100|35=V|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|262=ABC123|263=0|264=1|267=1|269=0|146=1|10=100|
+```

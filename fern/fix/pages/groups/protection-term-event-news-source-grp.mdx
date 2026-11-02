@@ -1,0 +1,22 @@
+---
+title: "ProtectionTermEventNewsSourceGrp"
+subtitle: "ProtectionTermEventNewsSourceGrp is a repeating subcomponent within the ProtectionTermGrp component. It is used to specify the particular newspapers or electronic news services and sources that may publish relevant information used in the…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40951</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoProtectionTermEventNewsSources (40951)](/fix/fields/tags-40800-40999#tag-40951).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40189 | [ProtectionTermEventNewsSource](/fix/fields/tags-40000-40199#tag-40189) | String | Optional | Required if NoProtectionTermEventNewsSources(40951) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[ProtectionTermGrp](/fix/groups/protection-term-grp)

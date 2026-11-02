@@ -1,0 +1,25 @@
+---
+title: "UnderlyingDividendPaymentGrp"
+subtitle: "UnderlyingDividendPaymentGrp is a repeating subcomponent of UnderlyingDividendPayout used to specify the anticipated dividend or coupon payment dates and amounts of an equity or bond underlier."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42855</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingDividendPayments (42855)](/fix/fields/tags-42800-42999#tag-42855).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42856 | [UnderlyingDividendPaymentDate](/fix/fields/tags-42800-42999#tag-42856) | LocalMktDate | Optional | Required if NoUnderlyingDividendPayments (42855) &gt; 0. |
+| 42857 | [UnderlyingDividendPaymentAmount](/fix/fields/tags-42800-42999#tag-42857) | Amt | Optional | Required if NoUnderlyingDividendPayments (42855) &gt; 0. |
+| 42858 | [UnderlyingDividendPaymentCurrency](/fix/fields/tags-42800-42999#tag-42858) | Currency | Optional | Specifies the currency the UnderlyingDividendPaymentAmount(42857) is denominated in. Uses ISO 4217 currency codes. |
+| 42859 | [UnderlyingDividendAccruedInterest](/fix/fields/tags-42800-42999#tag-42859) | Amt | Optional | Accrued interest on the dividend or coupon payment. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingDividendPayout](/fix/components/underlying-dividend-payout)

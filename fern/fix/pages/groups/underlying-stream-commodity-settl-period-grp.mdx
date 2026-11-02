@@ -1,0 +1,35 @@
+---
+title: "UnderlyingStreamCommoditySettlPeriodGrp"
+subtitle: "The UnderlyingStreamCommoditySettlPeriodGrp is a repeating subcomponent of the UnderlyingStreamCommodiry component used to defined the settlement period details associated with the commodity contract."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42002</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingStreamCommoditySettlPeriods (42002)](/fix/fields/tags-42000-42199#tag-42002).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42003 | [UnderlyingStreamCommoditySettlCountry](/fix/fields/tags-42000-42199#tag-42003) | Country | Optional | Required if NoUnderlyingStreamCommoditySettlPeriods(42002) &gt; 0. |
+| 42004 | [UnderlyingStreamCommoditySettlTimeZone](/fix/fields/tags-42000-42199#tag-42004) | String | Optional | Commodity delivery timezone specified as "prevailing" rather than "standard" or "daylight". See http://www.fixtradingcommunity.org/codelists#Prevailing\_Timezones for code list of applicable prevailing timezones. |
+| 42005 | [UnderlyingStreamCommoditySettlFlowType](/fix/fields/tags-42000-42199#tag-42005) | DeliveryScheduleSettlFlowTypeCodeSet | Optional | Specifies the commodity delivery flow type. |
+| 42006 | [UnderlyingStreamCommoditySettlPeriodNotional](/fix/fields/tags-42000-42199#tag-42006) | Qty | Optional | Specifies the delivery quantity associated with this settlement period. |
+| 42007 | [UnderlyingStreamCommoditySettlPeriodNotionalUnitOfMeasure](/fix/fields/tags-42000-42199#tag-42007) | UnitOfMeasureCodeSet | Optional | Specifies the unit of measure (UOM) of the delivery quantity associated with this settlement period. |
+| 42008 | [UnderlyingStreamCommoditySettlPeriodFrequencyPeriod](/fix/fields/tags-42000-42199#tag-42008) | int | Optional | Conditionally required when UnderlyingStreamCommoditySettlPeriodFrequencyUnit(42009) is specified. |
+| 42009 | [UnderlyingStreamCommoditySettlPeriodFrequencyUnit](/fix/fields/tags-42000-42199#tag-42009) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when UnderlyingStreamCommoditySettlPeriodFrequencyPeriod(42008) is specified. |
+| 42010 | [UnderlyingStreamCommoditySettlPeriodPrice](/fix/fields/tags-42000-42199#tag-42010) | Price | Optional | The settlement period price. |
+| 42011 | [UnderlyingStreamCommoditySettlPeriodPriceUnitOfMeasure](/fix/fields/tags-42000-42199#tag-42011) | UnitOfMeasureCodeSet | Optional | Specifies the settlement period price unit of measure (UOM). |
+| 42012 | [UnderlyingStreamCommoditySettlPeriodPriceCurrency](/fix/fields/tags-42000-42199#tag-42012) | Currency | Optional | The currency of the settlement period price. Uses ISO 4217 currency codes. |
+| 42013 | [UnderlyingStreamCommoditySettlHolidaysProcessingInstruction](/fix/fields/tags-42000-42199#tag-42013) | DeliveryScheduleSettlHolidaysProcessingInstructionCodeSet | Optional | Indicates whether holidays are included in the settlement periods. Required for electricity contracts. |
+| 41996 | [UnderlyingStreamCommoditySettlDayGrp](/fix/groups/underlying-stream-commodity-settl-day-grp) | Repeating group | Optional | The UnderlyingStreamCommoditySettlDayGrp is a repeating subcomponent of the UnderlyingStreamCommoditySettlPeriodGrp component used to define the settlement days associated with the commodity contract. |
+| 42014 | [UnderlyingStreamCommoditySettlPeriodXID](/fix/fields/tags-42000-42199#tag-42014) | XID | Optional | Identifier of this settlement period for cross referencing elsewhere in the message. |
+| 42015 | [UnderlyingStreamCommoditySettlPeriodXIDRef](/fix/fields/tags-42000-42199#tag-42015) | XIDREF | Optional | Cross reference to another settlement period for duplicating its properties. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)

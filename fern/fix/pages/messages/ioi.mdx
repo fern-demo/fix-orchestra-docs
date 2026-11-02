@@ -1,0 +1,58 @@
+---
+title: "IOI"
+subtitle: "Indication of interest messages are used to market merchandise which the broker is buying or selling in either a proprietary or agency capacity. The indications can be time bound with a specific expiration value. Indications are distributed…"
+---
+
+<Badge intent="info">MsgType 6</Badge> <Badge intent="note" minimal>Indication</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.2.7</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| 23 | [IOIID](/fix/fields/tags-0-199#tag-23) | String | **Required** | Unique identifier of IOI message. (Prior to FIX 4.1 this field was of type int) |
+| 28 | [IOITransType](/fix/fields/tags-0-199#tag-28) | IOITransTypeCodeSet | **Required** | Identifies IOI message transaction type |
+| 26 | [IOIRefID](/fix/fields/tags-0-199#tag-26) | String | Optional | Required for Cancel and Replace IOITransType messages |
+| | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [InstrumentExtension](/fix/components/instrument-extension) | Component | Optional | The InstrumentExtension component block identifies additional security attributes that are more commonly found for Fixed Income securities. |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This component identifies the legal agreement under which the deal was made and other unique characteristics of the transaction. For example, the… |
+| 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
+| 1647 | [RelatedInstrumentGrp](/fix/groups/related-instrument-grp) | Repeating group | Optional | The RelatedInstrumentGrp is a repeating component at the same hierarchical level as the Instrument component, describing relationships and linkages between the Instrument, UnderlyingInstrument and InstrumentLeg entries. If all instances of the UnderlyingInstrument in the message are true underliers… |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | **Required** | Side of Indication Valid subset of values: 1 = Buy 2 = Sell 7 = Undisclosed B = As Defined (for multilegs) C = Opposite (for multilegs) |
+| 854 | [QtyType](/fix/fields/tags-800-999#tag-854) | QtyTypeCodeSet | Optional | Type of quantity specified in quantity field. ContractMultiplier (tag 231) is required when QtyType = 1 (Contracts). UnitOfMeasure (tag 996) and TimeUnit (tag 997) are required when QtyType = 2 (Units of Measure per Time Unit). |
+| | [OrderQtyData](/fix/components/order-qty-data) | Component | Optional | The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is marked as "required" in a message either one of these three fields must be used to identify the amount: OrderQty, CashOrderQty or OrderPercent… |
+| 27 | [IOIQty](/fix/fields/tags-0-199#tag-27) | IOIQtyCodeSet | **Required** | The value zero is used if NoLegs repeating group is used |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency value whenever possible. See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values. |
+| 232 | [Stipulations](/fix/groups/stipulations) | Repeating group | Optional | The Stipulations component block is used in Fixed Income to provide additional information on a given security. These additional information are usually not considered static data information. |
+| 555 | [InstrmtLegIOIGrp](/fix/groups/instrmt-leg-ioi-grp) | Repeating group | Optional |  |
+| 423 | [PriceType](/fix/fields/tags-400-599#tag-423) | PriceTypeCodeSet | Optional | Code to represent the price type. |
+| 2709 | [PriceQualifierGrp](/fix/groups/price-qualifier-grp) | Repeating group | Optional | The PriceQualifierGrp component clarifies the composition of the price when standard market practice for the security calls for a price that is atypical when traded in other markets, or when a price can be expressed in more than one way. |
+| 44 | [Price](/fix/fields/tags-0-199#tag-44) | Price | Optional | Price per unit of quantity (e.g. per share) |
+| 62 | [ValidUntilTime](/fix/fields/tags-0-199#tag-62) | UTCTimestamp | Optional | Indicates expiration time of indication message (always expressed in UTC (Universal Time Coordinated, also known as "GMT") |
+| 25 | [IOIQltyInd](/fix/fields/tags-0-199#tag-25) | IOIQltyIndCodeSet | Optional | Relative quality of indication |
+| 130 | [IOINaturalFlag](/fix/fields/tags-0-199#tag-130) | IOINaturalFlagCodeSet | Optional | Indicates that IOI is the result of an existing agency order or a facilitation position resulting from an agency order, not from principal trading or order solicitation activity. |
+| 199 | [IOIQualGrp](/fix/groups/ioi-qual-grp) | Repeating group | Optional |  |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 149 | [URLLink](/fix/fields/tags-0-199#tag-149) | String | Optional | A URL (Uniform Resource Locator) link to additional information (i.e. http://www.XYZ.com/research.html) |
+| 215 | [RoutingGrp](/fix/groups/routing-grp) | Repeating group | Optional | The RoutingGrp is used to allow the application message sender to instruct the intermediary distributing the message who to further send the application message to. The original sender may also instruct who is not allowed to receive the message. When provided, the routing instructions provided in… |
+| | [SpreadOrBenchmarkCurveData](/fix/components/spread-or-benchmark-curve-data) | Component | Optional | The SpreadOrBenchmarkCurveData component block is primarily used for Fixed Income to convey spread to a benchmark security or curve. |
+| 2529 | [RelativeValueGrp](/fix/groups/relative-value-grp) | Repeating group | Optional | The RelativeValueGrp component is used to convey relative valuation metrics or analytics for a given instrument. |
+| | [YieldData](/fix/components/yield-data) | Component | Optional | The YieldData component block conveys yield information for a given Fixed Income security. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="IOI" wordWrap
+8=FIXT.1.1|9=84|35=6|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|23=ABC123|28=N|54=1|27=S|10=119|
+```

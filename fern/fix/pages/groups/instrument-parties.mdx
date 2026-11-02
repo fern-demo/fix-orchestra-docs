@@ -1,0 +1,26 @@
+---
+title: "InstrumentParties"
+subtitle: "The use of this component block is restricted to instrument definition only and is not permitted to contain transactional information. Only a specified subset of party roles will be supported within the InstrumentParty block."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1018</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoInstrumentParties (1018)](/fix/fields/tags-1000-1199#tag-1018).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1019 | [InstrumentPartyID](/fix/fields/tags-1000-1199#tag-1019) | String | Optional | Required if NoInstrumentParties(1018) &gt; 0. Identification of the party. |
+| 1050 | [InstrumentPartyIDSource](/fix/fields/tags-1000-1199#tag-1050) | PartyIDSourceCodeSet | Optional | Required if NoInstrumentParties(1018) &gt; 0. Used to identify classification source. |
+| 1051 | [InstrumentPartyRole](/fix/fields/tags-1000-1199#tag-1051) | PartyRoleCodeSet | Optional | Required if NoInstrumentParties(1018) &gt; 0. Identifies the type of InstrumentPartyID(1019). |
+| 2378 | [InstrumentPartyRoleQualifier](/fix/fields/tags-2200-2399#tag-2378) | PartyDetailRoleQualifierCodeSet | Optional | Used to further qualify the value of InstrumentPartyRole(1051). |
+| 1052 | [InstrumentPtysSubGrp](/fix/groups/instrument-ptys-sub-grp) | Repeating group | Optional |  |
+
+</StickyTable>
+
+## Used in
+
+[Instrument](/fix/components/instrument)

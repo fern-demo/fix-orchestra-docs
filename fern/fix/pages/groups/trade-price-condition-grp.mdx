@@ -1,0 +1,22 @@
+---
+title: "TradePriceConditionGrp"
+subtitle: "Price conditions associated with a trade that impact trade price."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1838</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoTradePriceConditions (1838)](/fix/fields/tags-1800-1999#tag-1838).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1839 | [TradePriceCondition](/fix/fields/tags-1800-1999#tag-1839) | TradePriceConditionCodeSet | Optional | Required if NoTradePriceConditions(1838) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[ExecAllocGrp](/fix/groups/exec-alloc-grp), [ExecutionReport](/fix/messages/execution-report), [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [TradeCaptureReport](/fix/messages/trade-capture-report)

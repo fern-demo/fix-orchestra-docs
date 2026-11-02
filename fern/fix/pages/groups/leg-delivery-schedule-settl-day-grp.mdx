@@ -1,0 +1,24 @@
+---
+title: "LegDeliveryScheduleSettlDayGrp"
+subtitle: "The LegDeliveryScheduleSettlDayGrp is a repeating subcomponent of the LegDeliveryScheduleGrp component used to detail commodity delivery days."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41422</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegDeliveryScheduleSettlDays (41422)](/fix/fields/tags-41400-41599#tag-41422).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41423 | [LegDeliveryScheduleSettlDay](/fix/fields/tags-41400-41599#tag-41423) | DeliveryScheduleSettlDayCodeSet | Optional | Required if NoLegDeliveryScheduleSettlDays(41422) &gt; 0. |
+| 41424 | [LegDeliveryScheduleSettlTotalHours](/fix/fields/tags-41400-41599#tag-41424) | int | Optional | The sum of the total hours specified in the LegDeliveryScheduleSettlTimeGrp component. |
+| 41425 | [LegDeliveryScheduleSettlTimeGrp](/fix/groups/leg-delivery-schedule-settl-time-grp) | Repeating group | Optional | The LegDeliveryScheduleSettlTimeGrp is a repeating subcomponent of the LegDeliveryScheduleSettlDayGrp component used to detail commodity delivery time periods. |
+
+</StickyTable>
+
+## Used in
+
+[LegDeliveryScheduleGrp](/fix/groups/leg-delivery-schedule-grp)

@@ -1,0 +1,38 @@
+---
+title: "SecurityStatusRequest"
+subtitle: "The Security Status Request message provides for the ability to request the status of a security. One or more Security Status messages are returned as a result of a Security Status Request message."
+---
+
+<Badge intent="info">MsgType e</Badge> <Badge intent="note" minimal>Securities Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 324 | [SecurityStatusReqID](/fix/fields/tags-200-399#tag-324) | String | **Required** | Must be unique, or the ID of previous Security Status Request to disable if SubscriptionRequestType = Disable previous Snapshot + Updates Request (2). |
+| | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [InstrumentExtension](/fix/components/instrument-extension) | Component | Optional | The InstrumentExtension component block identifies additional security attributes that are more commonly found for Fixed Income securities. |
+| | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This component identifies the legal agreement under which the deal was made and other unique characteristics of the transaction. For example, the… |
+| 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
+| 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
+| 1647 | [RelatedInstrumentGrp](/fix/groups/related-instrument-grp) | Repeating group | Optional | The RelatedInstrumentGrp is a repeating component at the same hierarchical level as the Instrument component, describing relationships and linkages between the Instrument, UnderlyingInstrument and InstrumentLeg entries. If all instances of the UnderlyingInstrument in the message are true underliers… |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency value whenever possible. See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values. |
+| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263) | SubscriptionRequestTypeCodeSet | **Required** | SubscriptionRequestType indicates to the other party what type of response is expected. A snapshot request only asks for current information. A subscribe request asks for updates as the status changes. Unsubscribe will cancel any future update messages from the counter party. |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Identifies the market |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is determined by market or counterparties. To specify good for session where session spans more than one calendar day, use TimeInForce = 0… |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures markets to identify exchange specific execution time bracket codes as required by US market regulations. Bilaterally agreed values of data… |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="SecurityStatusRequest" wordWrap
+8=FIXT.1.1|9=76|35=e|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|324=ABC123|263=0|10=028|
+```

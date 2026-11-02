@@ -1,0 +1,26 @@
+---
+title: "RequestingPartyGrp"
+subtitle: "Identifies the party making the request."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1657</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRequestingPartyIDs (1657)](/fix/fields/tags-1600-1799#tag-1657).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1658 | [RequestingPartyID](/fix/fields/tags-1600-1799#tag-1658) | String | Optional | Required when NoRequestingPartyIDs &gt; 0. |
+| 1659 | [RequestingPartyIDSource](/fix/fields/tags-1600-1799#tag-1659) | PartyIDSourceCodeSet | Optional | Required when NoRequestingPartyIDs &gt; 0. |
+| 1660 | [RequestingPartyRole](/fix/fields/tags-1600-1799#tag-1660) | PartyRoleCodeSet | Optional | Required when NoRequestingPartyIDs &gt; 0. |
+| 2338 | [RequestingPartyRoleQualifier](/fix/fields/tags-2200-2399#tag-2338) | PartyDetailRoleQualifierCodeSet | Optional | Qualifies the value of RequestingPartyRole(1660). |
+| 1661 | [RequestingPartySubGrp](/fix/groups/requesting-party-sub-grp) | Repeating group | Optional | Sub identifiers for the requesting party. |
+
+</StickyTable>
+
+## Used in
+
+[PartyActionReport](/fix/messages/party-action-report), [PartyActionRequest](/fix/messages/party-action-request), [PartyDetailsDefinitionRequest](/fix/messages/party-details-definition-request), [PartyDetailsDefinitionRequestAck](/fix/messages/party-details-definition-request-ack), [PartyDetailsListRequest](/fix/messages/party-details-list-request), [PartyDetailsListUpdateReport](/fix/messages/party-details-list-update-report), [PartyEntitlementsDefinitionRequest](/fix/messages/party-entitlements-definition-request), [PartyEntitlementsDefinitionRequestAck](/fix/messages/party-entitlements-definition-request-ack), [PartyEntitlementsRequest](/fix/messages/party-entitlements-request), [PartyEntitlementsUpdateReport](/fix/messages/party-entitlements-update-report), [PartyRiskLimitCheckRequest](/fix/messages/party-risk-limit-check-request), [PartyRiskLimitCheckRequestAck](/fix/messages/party-risk-limit-check-request-ack), [PartyRiskLimitsDefinitionRequest](/fix/messages/party-risk-limits-definition-request), [PartyRiskLimitsDefinitionRequestAck](/fix/messages/party-risk-limits-definition-request-ack), [PartyRiskLimitsRequest](/fix/messages/party-risk-limits-request), [PartyRiskLimitsUpdateReport](/fix/messages/party-risk-limits-update-report)

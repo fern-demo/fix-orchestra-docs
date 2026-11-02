@@ -1,0 +1,22 @@
+---
+title: "StreamFirstPeriodStartDateBusinessCenterGrp"
+subtitle: "StreamFirstPeriodStartDateBusinessCenterGrp is a repeating subcomponent within the StreamCalculationPeriodDates component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40959</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoStreamFirstPeriodStartDateBusinessCenters (40959)](/fix/fields/tags-40800-40999#tag-40959).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40077 | [StreamFirstPeriodStartDateBusinessCenter](/fix/fields/tags-40000-40199#tag-40077) | String | Optional | Required if NoStreamFirstPeriodStartDateBusinessCenters(40959) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[StreamCalculationPeriodDates](/fix/components/stream-calculation-period-dates)

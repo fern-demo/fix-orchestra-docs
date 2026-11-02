@@ -1,0 +1,35 @@
+---
+title: "RegistrationInstructionsResponse"
+subtitle: "The Registration Instructions Response message type may be used by broker or fund manager (for CIV) in response to a Registration Instructions message submitted by an institution or retail intermediary for an order or for an allocation."
+---
+
+<Badge intent="info">MsgType p</Badge> <Badge intent="note" minimal>Registration Instruction</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 513 | [RegistID](/fix/fields/tags-400-599#tag-513) | String | **Required** | Unique identifier of the original Registration Instructions details |
+| 514 | [RegistTransType](/fix/fields/tags-400-599#tag-514) | RegistTransTypeCodeSet | **Required** | Identifies original Registration Instructions transaction type |
+| 508 | [RegistRefID](/fix/fields/tags-400-599#tag-508) | String | **Required** | Required for Cancel and Replace RegistTransType messages |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | Unique identifier of the order as assigned by institution or intermediary. |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
+| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in their system. |
+| 506 | [RegistStatus](/fix/fields/tags-400-599#tag-506) | RegistStatusCodeSet | **Required** | Registration status as returned by the broker or (for CIV) the fund manager: |
+| 507 | [RegistRejReasonCode](/fix/fields/tags-400-599#tag-507) | RegistRejReasonCodeCodeSet | Optional | Reason(s) why Registration Instructions has been rejected. The reason may be further amplified in the RegistRejReasonCode field. Possible values of reason code include: |
+| 496 | [RegistRejReasonText](/fix/fields/tags-400-599#tag-496) | String | Optional | Text indicating reason(s) why a Registration Instruction has been rejected. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="RegistrationInstructionsResponse" wordWrap
+8=FIXT.1.1|9=93|35=p|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|513=ABC123|514=0|508=ABC123|506=A|10=118|
+```

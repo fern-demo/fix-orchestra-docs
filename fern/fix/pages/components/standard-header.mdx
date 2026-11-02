@@ -1,0 +1,49 @@
+---
+title: "StandardHeader"
+subtitle: "The standard FIX message header"
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Session</Badge> <Badge intent="success" minimal>Added FIX.4.0</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 8 | [BeginString](/fix/fields/tags-0-199#tag-8) | String | **Required** | FIXT.1.1 (Always unencrypted, must be first field in message) |
+| 9 | [BodyLength](/fix/fields/tags-0-199#tag-9) | Length | **Required** | (Always unencrypted, must be second field in message) |
+| 35 | [MsgType](/fix/fields/tags-0-199#tag-35) | MsgTypeCodeSet | **Required** | (Always unencrypted, must be third field in message) |
+| 1128 | [ApplVerID](/fix/fields/tags-1000-1199#tag-1128) | ApplVerIDCodeSet | Optional | Indicates application version using a service pack identifier. The ApplVerID applies to a specific message occurrence. |
+| 1156 | [ApplExtID](/fix/fields/tags-1000-1199#tag-1156) | int | Optional | The extension pack number associated with an application message. |
+| 1129 | [CstmApplVerID](/fix/fields/tags-1000-1199#tag-1129) | String | Optional | Used to support bilaterally agreed custom functionality |
+| 49 | [SenderCompID](/fix/fields/tags-0-199#tag-49) | String | **Required** | (Always unencrypted) |
+| 56 | [TargetCompID](/fix/fields/tags-0-199#tag-56) | String | **Required** | (Always unencrypted) |
+| 115 | [OnBehalfOfCompID](/fix/fields/tags-0-199#tag-115) | String | Optional | Trading partner company ID used when sending messages via a third party (Can be embedded within encrypted data section.) |
+| 128 | [DeliverToCompID](/fix/fields/tags-0-199#tag-128) | String | Optional | Trading partner company ID used when sending messages via a third party (Can be embedded within encrypted data section.) |
+| 90 | [SecureDataLen](/fix/fields/tags-0-199#tag-90) | Length | Optional | Required to identify length of encrypted section of message. (Always unencrypted) |
+| 91 | [SecureData](/fix/fields/tags-0-199#tag-91) | data | Optional | Required when message body is encrypted. Always immediately follows SecureDataLen field. |
+| 34 | [MsgSeqNum](/fix/fields/tags-0-199#tag-34) | SeqNum | **Required** | (Can be embedded within encrypted data section.) |
+| 50 | [SenderSubID](/fix/fields/tags-0-199#tag-50) | String | Optional | (Can be embedded within encrypted data section.) |
+| 142 | [SenderLocationID](/fix/fields/tags-0-199#tag-142) | String | Optional | Sender's LocationID (i.e. geographic location and/or desk) (Can be embedded within encrypted data section.) |
+| 57 | [TargetSubID](/fix/fields/tags-0-199#tag-57) | String | Optional | "ADMIN" reserved for administrative messages not intended for a specific user. (Can be embedded within encrypted data section.) |
+| 143 | [TargetLocationID](/fix/fields/tags-0-199#tag-143) | String | Optional | Trading partner LocationID (i.e. geographic location and/or desk) (Can be embedded within encrypted data section.) |
+| 116 | [OnBehalfOfSubID](/fix/fields/tags-0-199#tag-116) | String | Optional | Trading partner SubID used when delivering messages via a third party. (Can be embedded within encrypted data section.) |
+| 144 | [OnBehalfOfLocationID](/fix/fields/tags-0-199#tag-144) | String | Optional | Trading partner LocationID (i.e. geographic location and/or desk) used when delivering messages via a third party. (Can be embedded within encrypted data section.) |
+| 129 | [DeliverToSubID](/fix/fields/tags-0-199#tag-129) | String | Optional | Trading partner SubID used when delivering messages via a third party. (Can be embedded within encrypted data section.) |
+| 145 | [DeliverToLocationID](/fix/fields/tags-0-199#tag-145) | String | Optional | Trading partner LocationID (i.e. geographic location and/or desk) used when delivering messages via a third party. (Can be embedded within encrypted data section.) |
+| 43 | [PossDupFlag](/fix/fields/tags-0-199#tag-43) | PossDupFlagCodeSet | Optional | Always required for retransmitted messages, whether prompted by the sending system or as the result of a resend request. (Can be embedded within encrypted data section.) |
+| 97 | [PossResend](/fix/fields/tags-0-199#tag-97) | PossResendCodeSet | Optional | Required when message may be duplicate of another message sent under a different sequence number. (Can be embedded within encrypted data section.) |
+| 52 | [SendingTime](/fix/fields/tags-0-199#tag-52) | UTCTimestamp | **Required** | (Can be embedded within encrypted data section.) |
+| 122 | [OrigSendingTime](/fix/fields/tags-0-199#tag-122) | UTCTimestamp | Optional | Required for message resent as a result of a ResendRequest. If data is not available set to same value as SendingTime (Can be embedded within encrypted data section.) |
+| 212 | [XmlDataLen](/fix/fields/tags-200-399#tag-212) | Length | Optional | Required when specifying XmlData to identify the length of a XmlData message block. (Can be embedded within encrypted data section.) |
+| 213 | [XmlData](/fix/fields/tags-200-399#tag-213) | data | Optional | Can contain a XML formatted message block (e.g. FIXML). Always immediately follows XmlDataLen field. (Can be embedded within encrypted data section.) See Volume 1: FIXML Support |
+| 347 | [MessageEncoding](/fix/fields/tags-200-399#tag-347) | String | Optional | Type of message encoding (non-ASCII characters) used in a message's "Encoded" fields. Required if any "Encoding" fields are used. |
+| 369 | [LastMsgSeqNumProcessed](/fix/fields/tags-200-399#tag-369) | SeqNum | Optional | The last MsgSeqNum value received by the FIX engine and processed by downstream application, such as trading system or order routing system. Can be specified on every message sent. Useful for detecting a backlog with a counterparty. |
+| 627 | [HopGrp](/fix/groups/hop-grp) | Repeating group | Optional |  |
+
+</StickyTable>
+
+## Used in
+
+[AccountSummaryReport](/fix/messages/account-summary-report), [AdjustedPositionReport](/fix/messages/adjusted-position-report), [Advertisement](/fix/messages/advertisement), [AllocationInstruction](/fix/messages/allocation-instruction), [AllocationInstructionAck](/fix/messages/allocation-instruction-ack), [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationInstructionAlertRequest](/fix/messages/allocation-instruction-alert-request), [AllocationInstructionAlertRequestAck](/fix/messages/allocation-instruction-alert-request-ack), [AllocationReport](/fix/messages/allocation-report), [AllocationReportAck](/fix/messages/allocation-report-ack), [ApplicationMessageReport](/fix/messages/application-message-report), [ApplicationMessageRequest](/fix/messages/application-message-request), [ApplicationMessageRequestAck](/fix/messages/application-message-request-ack), [AssignmentReport](/fix/messages/assignment-report), [BidRequest](/fix/messages/bid-request), [BidResponse](/fix/messages/bid-response), [BusinessMessageReject](/fix/messages/business-message-reject), [CollateralAssignment](/fix/messages/collateral-assignment), [CollateralInquiry](/fix/messages/collateral-inquiry), [CollateralInquiryAck](/fix/messages/collateral-inquiry-ack), [CollateralReport](/fix/messages/collateral-report), [CollateralReportAck](/fix/messages/collateral-report-ack), [CollateralRequest](/fix/messages/collateral-request), [CollateralResponse](/fix/messages/collateral-response), [Confirmation](/fix/messages/confirmation), and 139 more

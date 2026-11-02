@@ -1,0 +1,123 @@
+---
+title: "TrdCapRptSideGrp"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 552</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoSides (552)](/fix/fields/tags-400-599#tag-552).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | **Required** | Required when NoSides(552) &gt; 0. |
+| 2102 | [ShortMarkingExemptIndicator](/fix/fields/tags-2000-2199#tag-2102) | Boolean | Optional | Indicates whether the originating account is exempt (Y) from marking orders as short or not (N). This designation may be used on both buy and sell orders. |
+| 1427 | [SideExecID](/fix/fields/tags-1400-1599#tag-1427) | String | Optional | When reporting trades, used to reference the identifier of the execution (ExecID) being reported if different ExecIDs were assigned to each side of the trade. |
+| 1428 | [OrderDelay](/fix/fields/tags-1400-1599#tag-1428) | int | Optional | Time lapsed from order entry until match, based on the unit of time specified in OrderDelayUnit. Default is seconds if OrderDelayUnit is not specified. Value = 0, indicates the aggressor (the initiating side of the trade). |
+| 1429 | [OrderDelayUnit](/fix/fields/tags-1400-1599#tag-1429) | OrderDelayUnitCodeSet | Optional | Time unit in which the OrderDelay(1428) is expressed |
+| 1009 | [SideLastQty](/fix/fields/tags-1000-1199#tag-1009) | Qty | Optional | Used to indicate the quantity on one side of a multi-sided trade. |
+| 1597 | [SideClearingTradePrice](/fix/fields/tags-1400-1599#tag-1597) | Price | Optional | Used to indicate a side specific alternate clearing price. |
+| 1599 | [SidePriceDifferential](/fix/fields/tags-1400-1599#tag-1599) | Price | Optional | Used to indicate the Price Differential between the first and second leg of a complex instrument. |
+| 1598 | [SideClearingTradePriceType](/fix/fields/tags-1400-1599#tag-1598) | SideClearingTradePriceTypeCodeSet | Optional | Used to indicate whether the trade is clearing using execution price (LastPx) or alternate clearing price (ClrTrdPx) |
+| 1005 | [SideTradeReportID](/fix/fields/tags-1000-1199#tag-1005) | String | Optional | Used on a multi-sided trade to designate the ReportID |
+| 1506 | [SideTradeID](/fix/fields/tags-1400-1599#tag-1506) | String | Optional | Used to represent the trade ID for each side of the trade assigned by an intermediary. |
+| 1507 | [SideOrigTradeID](/fix/fields/tags-1400-1599#tag-1507) | String | Optional | Used to capture the original trade id for each side of a trade undergoing novation to a standardized model. |
+| 1006 | [SideFillStationCd](/fix/fields/tags-1000-1199#tag-1006) | String | Optional | Used on a multi-sided trade to convey order routing information |
+| 1007 | [SideReasonCd](/fix/fields/tags-1000-1199#tag-1007) | String | Optional | Used on a multi-sided trade to convey reason for execution |
+| 83 | [RptSeq](/fix/fields/tags-0-199#tag-83) | int | Optional | Sequence number of message within report series. Used to carry reporting sequence number of the fill as represented on the Trade Report Side. |
+| 1008 | [SideTrdSubTyp](/fix/fields/tags-1000-1199#tag-1008) | TrdSubTypeCodeSet | Optional | Used on a multi-sided trade to specify the type of trade for a given side. Same values as TrdSubType (829). |
+| 430 | [NetGrossInd](/fix/fields/tags-400-599#tag-430) | NetGrossIndCodeSet | Optional | Code to represent whether value is net (inclusive of tax) or gross. |
+| 1154 | [SideCurrency](/fix/fields/tags-1000-1199#tag-1154) | Currency | Optional | Used to identify the trading currency on the Trade Capture Report Side |
+| 1155 | [SideSettlCurrency](/fix/fields/tags-1000-1199#tag-1155) | Currency | Optional | Used to identify the settlement currency on the Trade Capture Report Side |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 1671 | [PartyDetailGrp](/fix/groups/party-detail-grp) | Repeating group | Optional | Contains details for a party, including related parties and alternative party identifiers. |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Required for executions against electronically submitted orders which were assigned an account by the institution or intermediary. |
+| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in their system. |
+| 581 | [AccountType](/fix/fields/tags-400-599#tag-581) | AccountTypeCodeSet | Optional | Type of account associated with an order |
+| 522 | [OwnerType](/fix/fields/tags-400-599#tag-522) | OwnerTypeCodeSet | Optional | Identifies the type of owner. |
+| 1630 | [LimitAmts](/fix/groups/limit-amts) | Repeating group | Optional |  |
+| 81 | [ProcessCode](/fix/fields/tags-0-199#tag-81) | ProcessCodeCodeSet | Optional | Used to specify Step-out trades. |
+| 575 | [OddLot](/fix/fields/tags-400-599#tag-575) | OddLotCodeSet | Optional | This trade is to be treated as an odd lot If this field is not specified, the default will be "N" |
+| 576 | [ClrInstGrp](/fix/groups/clr-inst-grp) | Repeating group | Optional |  |
+| 1971 | [SideRegulatoryTradeIDGrp](/fix/groups/side-regulatory-trade-id-grp) | Repeating group | Optional | The SideRegulatoryTradeIDGrp is a repeating component within the TrdCapRptSideGrp component used to report the source, value and relationship of multiple trade identifiers for the same trade side. This component can be used to meet regulatory trade reporting requirements where identifiers such as… |
+| 2671 | [SideTradeReportingIndicator](/fix/fields/tags-2600-2799#tag-2671) | TradeReportingIndicatorCodeSet | Optional | May be used to bilaterally inform counterparty of trade reporting status for this side of the trade. |
+| 2418 | [FirmTradeEventID](/fix/fields/tags-2400-2599#tag-2418) | String | Optional | An identifier created by the trading party for the life cycle event associated with this report. |
+| 578 | [TradeInputSource](/fix/fields/tags-400-599#tag-578) | String | Optional | Type of input device or system from which the trade was entered. |
+| 579 | [TradeInputDevice](/fix/fields/tags-400-599#tag-579) | String | Optional | Specific device number, terminal number or station where trade was entered |
+| 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
+| 2404 | [ComplianceText](/fix/fields/tags-2400-2599#tag-2404) | String | Optional | Free text for compliance information required for regulatory reporting. |
+| 2351 | [EncodedComplianceTextLen](/fix/fields/tags-2200-2399#tag-2351) | Length | Optional | Must be set if EncodedComplianceText(2352) field is specified and must immediately precede it. |
+| 2352 | [EncodedComplianceText](/fix/fields/tags-2200-2399#tag-2352) | data | Optional | Encoded (non-ASCII characters) representation of the ComplianceText(2404) field in the encoded format specified via the MessageEncoding(347) field. |
+| 377 | [SolicitedFlag](/fix/fields/tags-200-399#tag-377) | SolicitedFlagCodeSet | Optional | Indicates whether or not the order was solicited. |
+| 582 | [CustOrderCapacity](/fix/fields/tags-400-599#tag-582) | CustOrderCapacityCodeSet | Optional | The customer capacity for this trade |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Usually the same for all sides of a trade, if reported only on the first side the same TradingSessionID(336) then applies to all sides of the trade. |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Usually the same for all sides of a trade, if reported only on the first side the same TradingSessionSubID(625) then applies to all sides of the trade. |
+| 943 | [TimeBracket](/fix/fields/tags-800-999#tag-943) | String | Optional | A code that represents a time interval in which a fill or trade occurred. Required for US futures markets. |
+| 2356 | [RemunerationIndicator](/fix/fields/tags-2200-2399#tag-2356) | RemunerationIndicatorCodeSet | Optional | Indicates whether the trade price was adjusted for compensation (i.e. includes a mark-up, mark-down or commission) in the price paid. |
+| | [CommissionData](/fix/components/commission-data) | Component | Optional | The CommissionData component block is used to carry commission information such as the type of commission and the rate. Use the CommissionDataGrp component as an alternative if multiple commissions or enhanced attributes are needed. |
+| 2639 | [CommissionDataGrp](/fix/groups/commission-data-grp) | Repeating group | Optional | The CommissionDataGrp component block is used to carry commission information such as the type of commission and the rate. It provides an alternative to the CommissionData component if multiple commissions or enhanced attributes are needed. |
+| 157 | [NumDaysInterest](/fix/fields/tags-0-199#tag-157) | int | Optional | Number of Days of Interest for convertible bonds and fixed income. Note value may be negative. |
+| 230 | [ExDate](/fix/fields/tags-200-399#tag-230) | LocalMktDate | Optional | The date when a distribution of interest is deducted from a securities assets or set aside for payment to bondholders. On the ex-date, the securities price drops by the amount of the distribution (plus or minus any market activity). (Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to… |
+| 158 | [AccruedInterestRate](/fix/fields/tags-0-199#tag-158) | Percentage | Optional | The amount the buyer compensates the seller for the portion of the next coupon interest payment the seller has earned but will not receive from the issuer because the issuer will send the next coupon payment to the buyer. Accrued Interest Rate is the annualized Accrued Interest amount divided by the… |
+| 159 | [AccruedInterestAmt](/fix/fields/tags-0-199#tag-159) | Amt | Optional | Amount of Accrued Interest for convertible bonds and fixed income |
+| 738 | [InterestAtMaturity](/fix/fields/tags-600-799#tag-738) | Amt | Optional | Amount of interest (i.e. lump-sum) at maturity. |
+| 920 | [EndAccruedInterestAmt](/fix/fields/tags-800-999#tag-920) | Amt | Optional | For repurchase agreements the accrued interest on termination. |
+| 921 | [StartCash](/fix/fields/tags-800-999#tag-921) | Amt | Optional | For repurchase agreements the start (dirty) cash consideration. |
+| 922 | [EndCash](/fix/fields/tags-800-999#tag-922) | Amt | Optional | For repurchase agreements the end (dirty) cash consideration. |
+| 238 | [Concession](/fix/fields/tags-200-399#tag-238) | Amt | Optional | Provides the reduction in price for the secondary market in Muncipals. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
+| 237 | [TotalTakedown](/fix/fields/tags-200-399#tag-237) | Amt | Optional | The price at which the securities are distributed to the different members of an underwriting group for the primary market in Municipals, total gross underwriter's spread. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
+| 118 | [NetMoney](/fix/fields/tags-0-199#tag-118) | Amt | Optional | Value expressed in the currency reflected by the Currency(15) field. |
+| 119 | [SettlCurrAmt](/fix/fields/tags-0-199#tag-119) | Amt | Optional | Total amount due expressed in settlement currency (includes the effect of the forex transaction) |
+| 155 | [SettlCurrFxRate](/fix/fields/tags-0-199#tag-155) | float | Optional | Foreign exchange rate used to compute SettlCurrAmt (9) from Currency (5) to SettlCurrency (20) |
+| 156 | [SettlCurrFxRateCalc](/fix/fields/tags-0-199#tag-156) | SettlCurrFxRateCalcCodeSet | Optional | Specifies whether or not SettlCurrFxRate (155) should be multiplied or divided. |
+| 77 | [PositionEffect](/fix/fields/tags-0-199#tag-77) | PositionEffectCodeSet | Optional | Can be used for derivatives omnibus accounting. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Can be used by the executing market to record any execution details that are particular to that market. |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text(58) field. |
+| 752 | [SideMultiLegReportingType](/fix/fields/tags-600-799#tag-752) | SideMultiLegReportingTypeCodeSet | Optional | Can be used to support the scenario where a single leg instrument trades against an individual leg of a multileg instrument. |
+| 518 | [ContAmtGrp](/fix/groups/cont-amt-grp) | Repeating group | Optional |  |
+| 232 | [Stipulations](/fix/groups/stipulations) | Repeating group | Optional | The Stipulations component block is used in Fixed Income to provide additional information on a given security. These additional information are usually not considered static data information. |
+| 136 | [MiscFeesGrp](/fix/groups/misc-fees-grp) | Repeating group | Optional | The MiscFeesGrp component is used to provide details of trade and transaction fees other than commissions, e.g. regulatory, exchange, taxes, levies, markup, trade reporting, etc. In the context of ESMA RTS 27 Best Execution Reporting, it may also be used to collect and publish the nature and level… |
+| 825 | [ExchangeRule](/fix/fields/tags-800-999#tag-825) | String | Optional | Used to report any exchange rules that apply to this trade. Primarily intended for US futures markets. Certain trading practices are permitted by the CFTC, such as large lot trading, block trading, all or none trades. If the rules are used, the exchanges are required to indicate these rules on the… |
+| 826 | [TradeAllocIndicator](/fix/fields/tags-800-999#tag-826) | TradeAllocIndicatorCodeSet | Optional | Identifies if, and how, the trade is to be allocated or split. |
+| 1848 | [TradeAllocGroupInstruction](/fix/fields/tags-1800-1999#tag-1848) | TradeAllocGroupInstructionCodeSet | Optional | Instruction on how to add a trade to an allocation group when it is being given-up. |
+| 1730 | [AllocGroupID](/fix/fields/tags-1600-1799#tag-1730) | String | Optional | Intended to be used by a central counterparty to assign an identifier to allocations of trades for the same instrument traded at the same price. |
+| 2771 | [PreviousAllocGroupID](/fix/fields/tags-2600-2799#tag-2771) | String | Optional | Identifies the previous AllocGroupID(1730) being changed by this message when AllocGroupStatus(2767)=3 (Changed). |
+| 2759 | [GroupAmount](/fix/fields/tags-2600-2799#tag-2759) | Amt | Optional | Indicates the total notional units or amount of an allocation group. Includes any allocated units or amount. |
+| 2767 | [AllocGroupStatus](/fix/fields/tags-2600-2799#tag-2767) | AllocGroupStatusCodeSet | Optional | Status of the trade give-up relative to the group identified in AllocGroupID(1730). |
+| 1853 | [SideAvgPxIndicator](/fix/fields/tags-1800-1999#tag-1853) | SideAvgPxIndicatorCodeSet | Optional | Used to indicate whether a trade or a sub-allocation should be allocated at the trade price (e.g. no average pricing), or whether it should be grouped with other trades/sub-allocations and allocated at the average price of the group. |
+| 1854 | [SideAvgPxGroupID](/fix/fields/tags-1800-1999#tag-1854) | String | Optional | The identifier for the average price group for the trade side. See also AvgPxGroupID(1731). |
+| 1852 | [SideAvgPx](/fix/fields/tags-1800-1999#tag-1852) | Price | Optional | Calculated average price for this side of the trade. |
+| 591 | [PreallocMethod](/fix/fields/tags-400-599#tag-591) | PreallocMethodCodeSet | Optional | Indicates the method of preallocation. |
+| 70 | [AllocID](/fix/fields/tags-0-199#tag-70) | String | Optional | Used to assign an ID to the block of preallocations. |
+| 78 | [TrdAllocGrp](/fix/groups/trd-alloc-grp) | Repeating group | Optional |  |
+| 1016 | [SideTrdRegTS](/fix/groups/side-trd-reg-ts) | Repeating group | Optional | The SideTrdRegTS component block is used to convey trading or regulatory timestamps associated with one side of a multi-sided trade event. |
+| 1158 | [SettlDetails](/fix/groups/settl-details) | Repeating group | Optional |  |
+| 1072 | [SideGrossTradeAmt](/fix/fields/tags-1000-1199#tag-1072) | Amt | Optional | The gross trade amount for this side of the trade. See also GrossTradeAmt (381) for additional definition. |
+| 1057 | [AggressorIndicator](/fix/fields/tags-1000-1199#tag-1057) | AggressorIndicatorCodeSet | Optional | Used to identify whether the order initiator is an aggressor or not in the trade. |
+| 1139 | [ExchangeSpecialInstructions](/fix/fields/tags-1000-1199#tag-1139) | String | Optional | Free format text string related to exchange. |
+| 1690 | [SideShortSaleExemptionReason](/fix/fields/tags-1600-1799#tag-1690) | ShortSaleExemptionReasonCodeSet | Optional | Optional when Side (54) = 6 (Sell short exempt) |
+| 1115 | [OrderCategory](/fix/fields/tags-1000-1199#tag-1115) | OrderCategoryCodeSet | Optional | Defines the type of interest behind a trade (fill or partial fill). |
+| 1444 | [SideLiquidityInd](/fix/fields/tags-1400-1599#tag-1444) | LastLiquidityIndCodeSet | Optional | Indicator to identify whether this fill was a result of a liquidity provider providing or liquidity taker taking the liquidity. Applicable only for OrdStatus of Partial or Filled. |
+| 1851 | [StrategyLinkID](/fix/fields/tags-1800-1999#tag-1851) | String | Optional | Identifies the multileg strategy (e.g. spread) to which the trade belongs. This links together trade legs executed as part of a strategy during a single match event. |
+| | [TradeReportOrderDetail](/fix/components/trade-report-order-detail) | Component | Optional |  |
+| 1031 | [CustOrderHandlingInst](/fix/fields/tags-1000-1199#tag-1031) | CustOrderHandlingInstCodeSet | Optional | Codes that apply special information that the Broker / Dealer needs to report, as specified by the customer. NOTE: This field and its values have no bearing on the ExecInst and TimeInForce fields. These values should not be used instead of ExecInst or TimeInForce. This field and its values are… |
+| 1032 | [OrderHandlingInstSource](/fix/fields/tags-1000-1199#tag-1032) | OrderHandlingInstSourceCodeSet | Optional | Identifies the class or source of the order handling instruction values.  Scope of this will apply to both CustOrderHandlingInst(1031) and DeskOrderHandlingInst(1035). Conditionally required when CustOrderHandlingInst(1031) or DeskOrderHandlingInst(1035) is specified. |
+| 702 | [TradePositionQty](/fix/groups/trade-position-qty) | Repeating group | Optional | The TradePositionQty component block specifies, for a single trade side, the various types of position quantity in the position life-cycle including start-of-day, intraday, trade, adjustments, and end-of-day position quantities. |
+| 1855 | [RelatedTradeGrp](/fix/groups/related-trade-grp) | Repeating group | Optional | This component is used to identify trades that are related to each other for a business purpose, such as netting of forwards. This component should not be used in lieu of explicit FIX fields that denote specific semantic relationships, but rather should be used when no such fields exist. |
+| 1861 | [RelatedPositionGrp](/fix/groups/related-position-grp) | Repeating group | Optional | This component is used to identify positions that are related to each other or to other trades. This should not be used in lieu of explicit FIX fields that denote specific semantic relationships, but rather should be used when no such fields exist. |
+| 1980 | [BlockTrdAllocIndicator](/fix/fields/tags-1800-1999#tag-1980) | BlockTrdAllocIndicatorCodeSet | Optional | Indication that a block trade will be allocated. |
+| 2344 | [SideRiskLimitCheckStatus](/fix/fields/tags-2200-2399#tag-2344) | RiskLimitCheckStatusCodeSet | Optional | Indicates the status of the risk limit check performed on the side of a trade. |
+| 29 | [LastCapacity](/fix/fields/tags-0-199#tag-29) | LastCapacityCodeSet | Optional | In the context of regulatory trade reporting, this specifies the trading capacity of the reporting party. |
+| 2334 | [RefRiskLimitCheckID](/fix/fields/tags-2200-2399#tag-2334) | String | Optional | The reference identifier of the PartyRiskLimitCheckRequest(35=DF) message, or a similar out of band message, that contained the approval for the risk/credit limit check request. |
+| 2335 | [RefRiskLimitCheckIDType](/fix/fields/tags-2200-2399#tag-2335) | RefRiskLimitCheckIDTypeCodeSet | Optional | Specifies which type of identifier is specified in RefRiskLimitCheckID(2334) field. |
+| 2361 | [CompressionGroupID](/fix/fields/tags-2200-2399#tag-2361) | String | Optional | Use to identify a netting or compression group where trades in the group were netted or compressed. This includes both terminating trades and any remnant trades that result from the operation. |
+| 2691 | [SideCollateralAmountGrp](/fix/groups/side-collateral-amount-grp) | Repeating group | Optional | The SideCollateralAmountGrp component block is a repeating group that provides the current value of the collateral type on deposit for a side of the trade report. The currency of the collateral value may be optionally included. |
+
+</StickyTable>
+
+## Used in
+
+[TradeCaptureReport](/fix/messages/trade-capture-report)

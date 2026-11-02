@@ -1,0 +1,25 @@
+---
+title: "YieldData"
+subtitle: "The YieldData component block conveys yield information for a given Fixed Income security."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 235 | [YieldType](/fix/fields/tags-200-399#tag-235) | YieldTypeCodeSet | Optional | Type of yield. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
+| 236 | [Yield](/fix/fields/tags-200-399#tag-236) | Percentage | Optional | Yield percentage. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
+| 701 | [YieldCalcDate](/fix/fields/tags-600-799#tag-701) | LocalMktDate | Optional | Include as needed to clarify yield irregularities associated with date, e.g. when it falls on a non-business day. |
+| 696 | [YieldRedemptionDate](/fix/fields/tags-600-799#tag-696) | LocalMktDate | Optional | Date to which the yield has been calculated (i.e. maturity, par call or current call, pre-refunded date). |
+| 697 | [YieldRedemptionPrice](/fix/fields/tags-600-799#tag-697) | Price | Optional | Price to which the yield has been calculated. |
+| 698 | [YieldRedemptionPriceType](/fix/fields/tags-600-799#tag-698) | PriceTypeCodeSet | Optional | The price type of the YieldRedemptionPrice (697) See PriceType (423) for description and valid values. |
+
+</StickyTable>
+
+## Used in
+
+[AllocationInstruction](/fix/messages/allocation-instruction), [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationReport](/fix/messages/allocation-report), [Confirmation](/fix/messages/confirmation), [CrossOrderCancelReplaceRequest](/fix/messages/cross-order-cancel-replace-request), [ExecutionReport](/fix/messages/execution-report), [IOI](/fix/messages/ioi), [ListOrdGrp](/fix/groups/list-ord-grp), [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [NewOrderCross](/fix/messages/new-order-cross), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [QuotReqGrp](/fix/groups/quot-req-grp), [QuotReqRjctGrp](/fix/groups/quot-req-rjct-grp), [Quote](/fix/messages/quote), [QuoteResponse](/fix/messages/quote-response), [QuoteStatusReport](/fix/messages/quote-status-report), [SecListGrp](/fix/groups/sec-list-grp), [SecLstUpdRelSymGrp](/fix/groups/sec-lst-upd-rel-sym-grp), [SecurityDefinition](/fix/messages/security-definition), [SecurityDefinitionRequest](/fix/messages/security-definition-request), [SecurityDefinitionUpdateReport](/fix/messages/security-definition-update-report), [TradeCaptureReport](/fix/messages/trade-capture-report)

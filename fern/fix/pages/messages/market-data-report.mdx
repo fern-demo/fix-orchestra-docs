@@ -1,0 +1,38 @@
+---
+title: "MarketDataReport"
+subtitle: "The MarketDataReport(35=DR) message is used to provide delimiting references (e.g. start and end markers in a continuous broadcast) and details about the number of market data messages sent in a given distribution cycle."
+---
+
+<Badge intent="info">MsgType DR</Badge> <Badge intent="note" minimal>Market Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The message can be used when distributing reference and market data on an ongoing basis to convey start and end points for synchronization. The report contains multiple message counters that are provided at the beginning or end of a cycle.
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| 963 | [MDReportID](/fix/fields/tags-800-999#tag-963) | int | Optional | Unique identifier for MarketDataReport(35=DR). |
+| 2535 | [MDReportEvent](/fix/fields/tags-2400-2599#tag-2535) | MDReportEventCodeSet | **Required** | Technical event within market data feed. |
+| 2536 | [MDReportCount](/fix/fields/tags-2400-2599#tag-2536) | int | **Required** | Number of reference and market data messages in-between two MarketDataReport(35=DR) messages. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 911 | [TotNumReports](/fix/fields/tags-800-999#tag-911) | int | Optional | Total number of reports returned in response to a request. |
+| 2537 | [TotNoMarketSegmentReports](/fix/fields/tags-2400-2599#tag-2537) | int | Optional | Total number of reports related to market segments. |
+| 2538 | [TotNoInstrumentReports](/fix/fields/tags-2400-2599#tag-2538) | int | Optional | Total number of reports related to instruments. |
+| 2539 | [TotNoPartyDetailReports](/fix/fields/tags-2400-2599#tag-2539) | int | Optional | Total number of reports related to party detail information. |
+| 2540 | [TotNoEntitlementReports](/fix/fields/tags-2400-2599#tag-2540) | int | Optional | Total number of reports related to party entitlement information. |
+| 2541 | [TotNoRiskLimitReports](/fix/fields/tags-2400-2599#tag-2541) | int | Optional | Total number of reports related to party risk limit information. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="MarketDataReport" wordWrap
+8=FIXT.1.1|9=74|35=DR|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|2535=1|2536=1|10=140|
+```

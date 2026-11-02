@@ -1,0 +1,37 @@
+---
+title: "ConfirmationAck"
+subtitle: "The Confirmation Ack (aka Affirmation) message is used to respond to a Confirmation message."
+---
+
+<Badge intent="info">MsgType AU</Badge> <Badge intent="note" minimal>Confirmation</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 664 | [ConfirmID](/fix/fields/tags-600-799#tag-664) | String | **Required** | Message reference for Confirmation |
+| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | **Required** | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | **Required** | Date/Time Allocation Instruction Ack generated |
+| 940 | [AffirmStatus](/fix/fields/tags-800-999#tag-940) | AffirmStatusCodeSet | **Required** | Specifies the affirmation status of the confirmation. |
+| 2390 | [TradeConfirmationReferenceID](/fix/fields/tags-2200-2399#tag-2390) | String | Optional | A reference or control identifier or number used as a trade confirmation key. |
+| 774 | [ConfirmRejReason](/fix/fields/tags-600-799#tag-774) | ConfirmRejReasonCodeSet | Optional | Required for ConfirmStatus = 1 (rejected) |
+| 573 | [MatchStatus](/fix/fields/tags-400-599#tag-573) | MatchStatusCodeSet | Optional | Denotes whether the financial details provided on the Confirmation were successfully matched. |
+| 2772 | [MatchExceptionGrp](/fix/groups/match-exception-grp) | Repeating group | Optional | The MatchExceptionGrp component details the matching exceptions and variances identified during the matching process based on the defined matching criteria and tolerances. |
+| 2781 | [MatchingDataPointGrp](/fix/groups/matching-data-point-grp) | Repeating group | Optional | The MatchingDataPointGrp component details all the trade attributes and tolerances used for trade matching. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Can include explanation for ConfirmRejReason(774) = 99 (Other) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="ConfirmationAck" wordWrap
+8=FIXT.1.1|9=114|35=AU|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|664=ABC123|75=20260102|60=20260102-14:30:00.000|940=1|10=111|
+```

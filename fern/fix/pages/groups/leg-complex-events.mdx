@@ -1,0 +1,62 @@
+---
+title: "LegComplexEvents"
+subtitle: "The LegComplexEvent Group is a repeating block which allows specifying an unlimited number and types of advanced events, such as observation and pricing over the lifetime of an option, futures, commodities or equity swap contract. Use…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2218</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegComplexEvents (2218)](/fix/fields/tags-2200-2399#tag-2218).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 2219 | [LegComplexEventType](/fix/fields/tags-2200-2399#tag-2219) | ComplexEventTypeCodeSet | Optional | Required if NoLegComplexEvents(2218)) &gt; 0. |
+| 2220 | [LegComplexOptPayoutPaySide](/fix/fields/tags-2200-2399#tag-2220) | PaymentPaySideCodeSet | Optional | Trade side of payout payer. |
+| 2221 | [LegComplexOptPayoutReceiveSide](/fix/fields/tags-2200-2399#tag-2221) | PaymentPaySideCodeSet | Optional | Trade side of payout receiver. |
+| 2222 | [LegComplexOptPayoutUnderlier](/fix/fields/tags-2200-2399#tag-2222) | String | Optional | Reference to the underlier whose payments are being passed through. |
+| 2223 | [LegComplexOptPayoutAmount](/fix/fields/tags-2200-2399#tag-2223) | Amt | Optional | Cash amount indicating the pay out associated with an event. For binary options this is a fixed amount. |
+| 2224 | [LegComplexOptPayoutPercentage](/fix/fields/tags-2200-2399#tag-2224) | Percentage | Optional | Percentage of observed price for calculating the payout associated with the event. |
+| 2225 | [LegComplexOptPayoutTime](/fix/fields/tags-2200-2399#tag-2225) | ComplexOptPayoutTimeCodeSet | Optional | Specifies when the payout is to occur. |
+| 2226 | [LegComplexOptPayoutCurrency](/fix/fields/tags-2200-2399#tag-2226) | Currency | Optional | Specifies the currency of the payout amount. Uses ISO 4217 currency codes. |
+| 2227 | [LegComplexEventPrice](/fix/fields/tags-2200-2399#tag-2227) | Price | Optional | Specifies the price at which the complex event takes effect. Impact of the event price is determined by the LegComplexEventType(2219). |
+| 2228 | [LegComplexEventPricePercentage](/fix/fields/tags-2200-2399#tag-2228) | Percentage | Optional | Specifies the price percentage at which the complex event takes effect. Impact of the event price is determined by the LegComplexEventType(2219). |
+| 2229 | [LegComplexEventPriceBoundaryMethod](/fix/fields/tags-2200-2399#tag-2229) | ComplexEventPriceBoundaryMethodCodeSet | Optional | Specifies the boundary condition to be used for the event price relative to the complex event price at the point the complex event outcome takes effect as determined by the LegComplexEventPriceTimeType(2231). |
+| 2230 | [LegComplexEventPriceBoundaryPrecision](/fix/fields/tags-2200-2399#tag-2230) | Percentage | Optional | Used in combination with LegComplexEventPriceBoundaryMethod(2229) to specify the percentage of the strike price in relation to the underlying price. The percentage is generally 100 or greater for puts and 100 or less for calls. |
+| 2231 | [LegComplexEventPriceTimeType](/fix/fields/tags-2200-2399#tag-2231) | ComplexEventPriceTimeTypeCodeSet | Optional | Specifies when the complex event outcome takes effect. The outcome of a complex event is a payout or barrier action as specified by the LegComplexEventType(2219). |
+| 2232 | [LegComplexEventCondition](/fix/fields/tags-2200-2399#tag-2232) | ComplexEventConditionCodeSet | Optional | Conditionally required when there are more than one LegComplexEvents occurrences. A chain of LegComplexEvents must be linked together through use of the LegComplexEventCondition(2232) in which the relationship between any two events is described. For any two LegComplexEvents the first occurrence… |
+| 2250 | [LegComplexEventDates](/fix/groups/leg-complex-event-dates) | Repeating group | Optional | The LegComplexEventDates and subcomponent LegComplexEventTimes components are used to constrain a complex event to a specific date range, and optional time range. If specified the event is only effective on or within the specified dates and times. |
+| 2233 | [LegComplexEventCurrencyOne](/fix/fields/tags-2200-2399#tag-2233) | Currency | Optional | Specifies the first or only reference currency of the trade. Uses ISO 4217 currency codes. |
+| 2234 | [LegComplexEventCurrencyTwo](/fix/fields/tags-2200-2399#tag-2234) | Currency | Optional | Specifies the second reference currency of the trade. Uses ISO 4217 currency codes. |
+| 2235 | [LegComplexEventQuoteBasis](/fix/fields/tags-2200-2399#tag-2235) | ComplexEventQuoteBasisCodeSet | Optional | For foreign exchange Quanto option feature. |
+| 2236 | [LegComplexEventFixedFXRate](/fix/fields/tags-2200-2399#tag-2236) | float | Optional | Specifies the fixed FX rate alternative for FX Quantro options. |
+| 2409 | [LegComplexEventSpotRate](/fix/fields/tags-2400-2599#tag-2409) | Price | Optional | FX spot rate. |
+| 2410 | [LegComplexEventForwardPoints](/fix/fields/tags-2400-2599#tag-2410) | PriceOffset | Optional | FX forward points added to spot rate. May be a negative value. |
+| 2237 | [LegComplexEventDeterminationMethod](/fix/fields/tags-2200-2399#tag-2237) | String | Optional | Specifies the method according to which an amount or a date is determined. See http://www.fpml.org/coding-scheme/determination-method for values. |
+| 2238 | [LegComplexEventCalculationAgent](/fix/fields/tags-2200-2399#tag-2238) | ProvisionCalculationAgentCodeSet | Optional | Used to identify the calculation agent. |
+| 2239 | [LegComplexEventStrikePrice](/fix/fields/tags-2200-2399#tag-2239) | Price | Optional | Upper strike price for Asian option feature. Strike percentage for a Strike Spread. |
+| 2240 | [LegComplexEventStrikeFactor](/fix/fields/tags-2200-2399#tag-2240) | float | Optional | Strike factor for Asian option feature. Upper strike percentage for a Strike Spread. |
+| 2241 | [LegComplexEventStrikeNumberOfOptions](/fix/fields/tags-2200-2399#tag-2241) | int | Optional | Upper string number of options for a Strike Spread. |
+| 41382 | [LegComplexEventRateSourceGrp](/fix/groups/leg-complex-event-rate-source-grp) | Repeating group | Optional | LegComplexEventRateSourceGrp is a subcomponent of LegComplexEvents for specifying primary and secondary rate sources. |
+| | [LegComplexEventRelativeDate](/fix/components/leg-complex-event-relative-date) | Component | Optional | LegComplexEventRelativeDate is a subcomponent of LegComplexEvents for specifying the event date and time for an FX or Calendar Spread option or the payout date for a Barrier or Knock option. |
+| 41379 | [LegComplexEventPeriodGrp](/fix/groups/leg-complex-event-period-grp) | Repeating group | Optional | LegComplexEventPeriodGrp is a subcomponent of LegComplexEvents for specifying the periods for an Asian, Barrier, Knock or Strike Schedule option feature. |
+| 2242 | [LegComplexEventCreditEventsXIDRef](/fix/fields/tags-2200-2399#tag-2242) | XIDREF | Optional | Reference to credit event table elsewhere in the message. |
+| 2243 | [LegComplexEventCreditEventNotifyingParty](/fix/fields/tags-2200-2399#tag-2243) | ComplexEventCreditEventNotifyingPartyCodeSet | Optional | The notifying party is the party that notifies the other party when a credit event has occurred by means of a credit event notice. If more than one party is referenced as being the notifying party then either party may notify the other of a credit event occurring. |
+| 2244 | [LegComplexEventCreditEventBusinessCenter](/fix/fields/tags-2200-2399#tag-2244) | String | Optional | Specifies the local business center for which the credit event is to be determined. The inclusion of this business center implies that Greenwich Mean Time in Section 3.3 of the 2003 ISDA Credit Derivatives Definitions is replaced by the local time of the specified business center. See… |
+| 2245 | [LegComplexEventCreditEventStandardSources](/fix/fields/tags-2200-2399#tag-2245) | Boolean | Optional | When this element is specified and set to 'Y', indicates that ISDA defined Standard Public Sources are applicable. |
+| 2246 | [LegComplexEventCreditEventMinimumSources](/fix/fields/tags-2200-2399#tag-2246) | int | Optional | The minimum number of the specified public information sources that must publish information that reasonably confirms that a credit event has occurred. The market convention is two. |
+| 41398 | [LegComplexEventCreditEventSourceGrp](/fix/groups/leg-complex-event-credit-event-source-grp) | Repeating group | Optional | LegComplexEventCreditEventSourceGrp is a repeating subcomponent of the LegComplexEvents component used to specify the particular newspapers or electronic news services that may publish relevant information used in the determination of whether or not a credit event has occurred. |
+| 41366 | [LegComplexEventCreditEventGrp](/fix/groups/leg-complex-event-credit-event-grp) | Repeating group | Optional | The LegComplexEventCreditEventGrp is a repeating component within the LegComplexEventGrp component used to report applicable option credit events. |
+| 2608 | [LegComplexEventFuturesPriceValuation](/fix/fields/tags-2600-2799#tag-2608) | Boolean | Optional | Indicates whether the official settlement price as announced by the related exchange is applicable, in accordance with the ISDA 2002 definitions. Applicable only to futures contracts. |
+| 2609 | [LegComplexEventOptionsPriceValuation](/fix/fields/tags-2600-2799#tag-2609) | Boolean | Optional | Indicates whether the official settlement price as announced by the related exchange is applicable, in accordance with the ISDA 2002 definitions. Applicable only to options contracts. |
+| 2610 | [LegComplexEventPVFinalPriceElectionFallback](/fix/fields/tags-2600-2799#tag-2610) | ComplexEventPVFinalPriceElectionFallbackCodeSet | Optional | Specifies the fallback provisions for the hedging party in the determination of the final settlement price |
+| 2248 | [LegComplexEventXID](/fix/fields/tags-2200-2399#tag-2248) | XID | Optional | Identifier of this complex event for cross referencing elsewhere in the message. |
+| 2249 | [LegComplexEventXIDRef](/fix/fields/tags-2200-2399#tag-2249) | XIDREF | Optional | Reference to a complex event elsewhere in the message. |
+
+</StickyTable>
+
+## Used in
+
+[InstrumentLeg](/fix/components/instrument-leg)

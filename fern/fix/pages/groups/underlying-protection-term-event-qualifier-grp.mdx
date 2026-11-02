@@ -1,0 +1,22 @@
+---
+title: "UnderlyingProtectionTermEventQualifierGrp"
+subtitle: "The UnderlyingProtectionTermEventQualifierGrp is a repeating component within the UnderlyingProtectionTermEventGrp component used to specify qualifying attributes to the event."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42085</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingProtectionTermEventQualifiers (42085)](/fix/fields/tags-42000-42199#tag-42085).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42086 | [UnderlyingProtectionTermEventQualifier](/fix/fields/tags-42000-42199#tag-42086) | ProtectionTermEventQualifierCodeSet | Optional | Required if NoUnderlyingProtectionTermEventQualifiers(42085) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingProtectionTermEventGrp](/fix/groups/underlying-protection-term-event-grp)

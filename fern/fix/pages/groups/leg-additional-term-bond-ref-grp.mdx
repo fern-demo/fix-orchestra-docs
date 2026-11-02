@@ -1,0 +1,39 @@
+---
+title: "LegAdditionalTermBondRefGrp"
+subtitle: "The LegAdditionalTermBondRefGrp is a repeating group subcomponent of the LegAdditionalTermGrp component used to identify an underlying reference bond for a swap."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41316</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegAdditionalTermBondRefs (41316)](/fix/fields/tags-41200-41399#tag-41316).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41317 | [LegAdditionalTermBondSecurityID](/fix/fields/tags-41200-41399#tag-41317) | String | Optional | Required if NoLegAdditionalTermBondRefs(41316) &gt; 0. |
+| 41318 | [LegAdditionalTermBondSecurityIDSource](/fix/fields/tags-41200-41399#tag-41318) | SecurityIDSourceCodeSet | Optional | Conditionally required when LegAdditionalTermBondSecurityID(41317) is specified. |
+| 41319 | [LegAdditionalTermBondDesc](/fix/fields/tags-41200-41399#tag-41319) | String | Optional | Description of the bond. |
+| 41320 | [EncodedLegAdditionalTermBondDescLen](/fix/fields/tags-41200-41399#tag-41320) | Length | Optional | Must be set if EncodedLegAdditionalTermBondDesc(41321) field is specified and must immediately precede it. |
+| 41321 | [EncodedLegAdditionalTermBondDesc](/fix/fields/tags-41200-41399#tag-41321) | data | Optional | Encoded (non-ASCII characters) representation of the LegAdditionalTermBondDesc(41319) field in the encoded format specified via the MessageEncoding(347) field. |
+| 41322 | [LegAdditionalTermBondCurrency](/fix/fields/tags-41200-41399#tag-41322) | Currency | Optional | Specifies the currency the bond value is denominated in. Uses ISO 4217 currency codes. |
+| 41323 | [LegAdditionalTermBondIssuer](/fix/fields/tags-41200-41399#tag-41323) | String | Optional | Issuer of the bond. |
+| 41324 | [EncodedLegAdditionalTermBondIssuerLen](/fix/fields/tags-41200-41399#tag-41324) | Length | Optional | Must be set if EncodedLegAdditionalTermBondIssuer(41325) field is specified and must immediately precede it. |
+| 41325 | [EncodedLegAdditionalTermBondIssuer](/fix/fields/tags-41200-41399#tag-41325) | data | Optional | Encoded (non-ASCII characters) representation of the LegAdditionalTermBondIssuer(41323) field in the encoded format specified via the MessageEncoding(347) field. |
+| 41326 | [LegAdditionalTermBondSeniority](/fix/fields/tags-41200-41399#tag-41326) | SeniorityCodeSet | Optional | Specifies the bond's payment priority in the event of a default. |
+| 41327 | [LegAdditionalTermBondCouponType](/fix/fields/tags-41200-41399#tag-41327) | CouponTypeCodeSet | Optional | Specifies the coupon type of the bond. |
+| 41328 | [LegAdditionalTermBondCouponRate](/fix/fields/tags-41200-41399#tag-41328) | Percentage | Optional | Coupon rate of the bond. See also CouponRate(223). |
+| 41329 | [LegAdditionalTermBondMaturityDate](/fix/fields/tags-41200-41399#tag-41329) | LocalMktDate | Optional | The maturity date of the bond. |
+| 41330 | [LegAdditionalTermBondParValue](/fix/fields/tags-41200-41399#tag-41330) | Amt | Optional | The par value of the bond. |
+| 41331 | [LegAdditionalTermBondCurrentTotalIssuedAmount](/fix/fields/tags-41200-41399#tag-41331) | Amt | Optional | Total issued amount of the bond. |
+| 41332 | [LegAdditionalTermBondCouponFrequencyPeriod](/fix/fields/tags-41200-41399#tag-41332) | int | Optional | Conditionally required when LegAdditionalTermBondCouponFrequencyUnit(41333) is specified. |
+| 41333 | [LegAdditionalTermBondCouponFrequencyUnit](/fix/fields/tags-41200-41399#tag-41333) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when LegAdditionalTermBondCouponFrequencyPeriod(41332) is specified. |
+| 41334 | [LegAdditionalTermBondDayCount](/fix/fields/tags-41200-41399#tag-41334) | CouponDayCountCodeSet | Optional | The day count convention used in interest calculations for a bond or an interest bearing security. |
+
+</StickyTable>
+
+## Used in
+
+[LegAdditionalTermGrp](/fix/groups/leg-additional-term-grp)

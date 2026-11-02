@@ -1,0 +1,23 @@
+---
+title: "LegPaymentStreamFixingDateGrp"
+subtitle: "LegPaymentStreamFixingDateGrp is a subcomponent of the LegPaymentStreamResetDates component used to specify predetermined fixing dates."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42459</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentStreamFixingDates (42459)](/fix/fields/tags-42400-42599#tag-42459).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42460 | [LegPaymentStreamFixingDate](/fix/fields/tags-42400-42599#tag-42460) | LocalMktDate | Optional | Required if NoLegPaymentStreamFixingDates(42459) &gt; 0. |
+| 42461 | [LegPaymentStreamFixingDateType](/fix/fields/tags-42400-42599#tag-42461) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date instance but to all subsequent date instances in the group until overridden when a new type is specified. |
+
+</StickyTable>
+
+## Used in
+
+[LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)

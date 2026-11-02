@@ -1,0 +1,23 @@
+---
+title: "PaymentStreamPricingDateGrp"
+subtitle: "The PaymentStreamPricingDateGrp is a repeating subcomponent of the PaymentStreamFloatingRate component used to detail fixed pricing dates."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41224</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPaymentStreamPricingDates (41224)](/fix/fields/tags-41200-41399#tag-41224).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41225 | [PaymentStreamPricingDate](/fix/fields/tags-41200-41399#tag-41225) | LocalMktDate | Optional | Required if NoPaymentStreamPricingDates(41224) &gt; 0. |
+| 41226 | [PaymentStreamPricingDateType](/fix/fields/tags-41200-41399#tag-41226) | OptionExerciseDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
+
+</StickyTable>
+
+## Used in
+
+[PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)

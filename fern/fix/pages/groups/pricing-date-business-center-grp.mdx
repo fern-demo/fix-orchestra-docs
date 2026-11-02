@@ -1,0 +1,22 @@
+---
+title: "PricingDateBusinessCenterGrp"
+subtitle: "PricingDateBusinessCenterGrp is a repeating subcomponent of the PricingDateTime component used to specify the set of business centers whose calendars drive date adjustment. Used only to override the business centers defined in the…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41230</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPricingDateBusinessCenters (41230)](/fix/fields/tags-41200-41399#tag-41230).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41231 | [PricingDateBusinessCenter](/fix/fields/tags-41200-41399#tag-41231) | String | Optional | Required if NoPricingDateBusinessCenters(41230) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[PricingDateTime](/fix/components/pricing-date-time)

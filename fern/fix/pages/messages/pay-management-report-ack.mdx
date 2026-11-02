@@ -1,0 +1,31 @@
+---
+title: "PayManagementReportAck"
+subtitle: "PayManagementReportAck(35=EB) is used as a response to the PayManagementReport(35=EA) message. It may be used to accept, reject or dispute the details of the PayManagementReport(35=EA) depending on the business rules of the receiver. This…"
+---
+
+<Badge intent="info">MsgType EB</Badge> <Badge intent="note" minimal>Pay Management</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | Optional | The standard FIX message header |
+| 2799 | [PayReportID](/fix/fields/tags-2600-2799#tag-2799) | String | **Required** | Unique ID of the PayManagementReport(35=EA) message. |
+| 2806 | [PayReportStatus](/fix/fields/tags-2800-2999#tag-2806) | PayReportStatusCodeSet | **Required** | Identifies status of the payment report. |
+| 2800 | [PayDisputeReason](/fix/fields/tags-2800-2999#tag-2800) | int | Optional | May be used to provide reason for PayReportStatus(2806)=3 (Disputed). |
+| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328) | String | Optional | May be used to elaborate the reason for rejection or dispute. |
+| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664) | Length | Optional | Must be set if EncodedRejectText(1665) field is specified and must immediately precede it. |
+| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="PayManagementReportAck" wordWrap
+8=FIXT.1.1|9=79|35=EB|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|2799=ABC123|2806=0|10=184|
+```

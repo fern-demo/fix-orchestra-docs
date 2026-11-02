@@ -1,0 +1,26 @@
+---
+title: "NestedParties"
+subtitle: "The NestedParties component block is identical to the Parties Block. It is used in other component blocks and repeating groups when nesting will take place resulting in multiple occurrences of the Parties block within a single FIX message..…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 539</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoNestedPartyIDs (539)](/fix/fields/tags-400-599#tag-539).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 524 | [NestedPartyID](/fix/fields/tags-400-599#tag-524) | String | Optional | Used to identify source of NestedPartyID. Required if NestedPartyIDSource is specified. Required if NoNestedPartyIDs &gt; 0. |
+| 525 | [NestedPartyIDSource](/fix/fields/tags-400-599#tag-525) | PartyIDSourceCodeSet | Optional | Used to identify class source of NestedPartyID value (e.g. BIC). Required if NestedPartyID is specified. Required if NoNestedPartyIDs &gt; 0. |
+| 538 | [NestedPartyRole](/fix/fields/tags-400-599#tag-538) | PartyRoleCodeSet | Optional | Identifies the type of NestedPartyID (e.g. Executing Broker). Required if NoNestedPartyIDs &gt; 0. |
+| 2384 | [NestedPartyRoleQualifier](/fix/fields/tags-2200-2399#tag-2384) | PartyDetailRoleQualifierCodeSet | Optional | Used to further qualify the value of NestedPartyRole(538). |
+| 804 | [NstdPtysSubGrp](/fix/groups/nstd-ptys-sub-grp) | Repeating group | Optional |  |
+
+</StickyTable>
+
+## Used in
+
+[AllocAckGrp](/fix/groups/alloc-ack-grp), [AllocGrp](/fix/groups/alloc-grp), [ApplIDRequestAckGrp](/fix/groups/appl-id-request-ack-grp), [ApplIDRequestGrp](/fix/groups/appl-id-request-grp), [LegOrdGrp](/fix/groups/leg-ord-grp), [LegQuotGrp](/fix/groups/leg-quot-grp), [LegQuotStatGrp](/fix/groups/leg-quot-stat-grp), [MDStatisticParameters](/fix/components/md-statistic-parameters), [PositionQty](/fix/groups/position-qty), [PreAllocGrp](/fix/groups/pre-alloc-grp), [QuotReqLegsGrp](/fix/groups/quot-req-legs-grp), [RgstDtlsGrp](/fix/groups/rgst-dtls-grp), [TrdInstrmtLegGrp](/fix/groups/trd-instrmt-leg-grp)

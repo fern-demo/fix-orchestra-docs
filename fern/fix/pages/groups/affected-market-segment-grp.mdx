@@ -1,0 +1,22 @@
+---
+title: "AffectedMarketSegmentGrp"
+subtitle: "List of market segments that have been affected by a mass action."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1791</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoAffectedMarketSegments (1791)](/fix/fields/tags-1600-1799#tag-1791).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1792 | [AffectedMarketSegmentID](/fix/fields/tags-1600-1799#tag-1792) | String | Optional | Required when NoAffectedMarketSegments(1791) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[OrderMassActionReport](/fix/messages/order-mass-action-report)

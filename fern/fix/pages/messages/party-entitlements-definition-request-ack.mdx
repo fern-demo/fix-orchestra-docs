@@ -1,0 +1,33 @@
+---
+title: "PartyEntitlementsDefinitionRequestAck"
+subtitle: "The PartyEntitlementsDefinitionRequestAck(35=DB) is used as a response to the PartyEntitlemensDefinitionRequest(35=DA) to accept (with or without changes) or reject the definition of party entitlements."
+---
+
+<Badge intent="info">MsgType DB</Badge> <Badge intent="note" minimal>Parties Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 1770 | [EntitlementRequestID](/fix/fields/tags-1600-1799#tag-1770) | String | **Required** | Unique identifier for PartyEntitlementsRequest(35=CU). |
+| 1882 | [EntitlementRequestStatus](/fix/fields/tags-1800-1999#tag-1882) | PartyDetailRequestStatusCodeSet | **Required** | Status of party entitlements definition request. |
+| 1881 | [EntitlementRequestResult](/fix/fields/tags-1800-1999#tag-1881) | EntitlementRequestResultCodeSet | Optional | Result of risk limit definition request. |
+| 1657 | [RequestingPartyGrp](/fix/groups/requesting-party-grp) | Repeating group | Optional | Identifies the party making the request. |
+| 1772 | [PartyEntitlementAckGrp](/fix/groups/party-entitlement-ack-grp) | Repeating group | Optional | The PartyEntitlementAckGrp component is used in the PartyEntitlementsDefinitionRequestAck(35=DB) message to provide the status of each action (add, modify or delete) requested by the PartyEntitlementsDefinitionRequest(35=DA) message. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text(58) field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="PartyEntitlementsDefinitionRequestAck" wordWrap
+8=FIXT.1.1|9=79|35=DB|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|1770=ABC123|1882=0|10=174|
+```

@@ -1,0 +1,24 @@
+---
+title: "RiskInstrumentScopeGrp"
+subtitle: "Repeating group of InstrumentScope Components. Used to specify the instruments to which a request applies."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1534</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRiskInstrumentScopes (1534)](/fix/fields/tags-1400-1599#tag-1534).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1535 | [InstrumentScopeOperator](/fix/fields/tags-1400-1599#tag-1535) | InstrumentScopeOperatorCodeSet | Optional | Required when NoRiskInstrumentScopes &gt; 0. |
+| | [InstrumentScope](/fix/components/instrument-scope) | Component | Optional | Used to specify the instrument |
+| 1558 | [RiskInstrumentMultiplier](/fix/fields/tags-1400-1599#tag-1558) | float | Optional | Multiplier applied to the transaction amount for comparison with risk limits. Default if not specified is 1.0. |
+
+</StickyTable>
+
+## Used in
+
+[PartyRiskLimitsRequest](/fix/messages/party-risk-limits-request), [RiskLimitsGrp](/fix/groups/risk-limits-grp)

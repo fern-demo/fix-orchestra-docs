@@ -1,0 +1,51 @@
+---
+title: "PositionTransferReport"
+subtitle: "The PositionTransferReport(35=DN) is sent by CCPs to clearing firms indicating of positions that are to be transferred to the clearing firm, or to report on status of the transfer to the clearing firms involved in the transfer process."
+---
+
+<Badge intent="info">MsgType DN</Badge> <Badge intent="note" minimal>Position Maintenance</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 2436 | [TransferInstructionID](/fix/fields/tags-2400-2599#tag-2436) | String | Optional | Conditionally required when sent in response to a PositionTransferInstruction(35=DM). |
+| 2438 | [TransferReportID](/fix/fields/tags-2400-2599#tag-2438) | String | **Required** | Unique identifier for the transfer report message. |
+| 2437 | [TransferID](/fix/fields/tags-2400-2599#tag-2437) | String | **Required** | The unique identifier assigned to the transfer entity once it is received, for example, by the CCP or the party governing the transfer process. Generally this same identifier for the transfer is used by all parties involved. |
+| 2439 | [TransferTransType](/fix/fields/tags-2400-2599#tag-2439) | TransferTransTypeCodeSet | **Required** | Indicates the type of transfer transaction. |
+| 2444 | [TransferReportType](/fix/fields/tags-2400-2599#tag-2444) | TransferReportTypeCodeSet | **Required** | Indicates the type of transfer report. |
+| 2442 | [TransferStatus](/fix/fields/tags-2400-2599#tag-2442) | TransferStatusCodeSet | **Required** | Status of the transfer. |
+| 2443 | [TransferRejectReason](/fix/fields/tags-2400-2599#tag-2443) | TransferRejectReasonCodeSet | Optional | Conditionally required when TransferStatus(2422) = 1(Rejected by intermediary). |
+| 2441 | [TransferScope](/fix/fields/tags-2400-2599#tag-2441) | TransferScopeCodeSet | Optional | Indicates the type of transfer. |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | **Required** | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 1461 | [TargetParties](/fix/groups/target-parties) | Repeating group | Optional |  |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | Optional | Business date the transfer would clear. |
+| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | Optional | Trade date associated with the position being transferred. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
+| 702 | [PositionQty](/fix/groups/position-qty) | Repeating group | Optional | The PositionQty component block specifies the various types of position quantity in the position life-cycle including start-of-day, intraday, trade, adjustments, and end-of-day position quantities. Quantities are expressed in terms of long and short quantities. |
+| 1596 | [ClearingTradePrice](/fix/fields/tags-1400-1599#tag-1596) | Price | Optional | Price at which the position is transferred. |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency value whenever possible. See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values. |
+| 423 | [PriceType](/fix/fields/tags-400-599#tag-423) | PriceTypeCodeSet | Optional | Code to represent the price type. |
+| 753 | [PositionAmountData](/fix/groups/position-amount-data) | Repeating group | Optional | The PositionAmountData component block is used to report netted amounts associated with position quantities. In the listed derivatives market the amount is generally expressing a type of futures variation or option premium. In the equities market this may be the net pay or collect on a given… |
+| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328) | String | Optional | Identifies the reason for rejection. |
+| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664) | Length | Optional | Must be set if EncodedRejectText(1665) field is specified and must immediately precede it. |
+| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | Optional | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="PositionTransferReport" wordWrap
+8=FIXT.1.1|9=122|35=DN|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|2438=ABC123|2437=ABC123|2439=0|2444=0|2442=0|453=1|448=ABC123|10=005|
+```

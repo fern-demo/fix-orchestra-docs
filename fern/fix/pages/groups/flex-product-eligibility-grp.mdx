@@ -1,0 +1,23 @@
+---
+title: "FlexProductEligibilityGrp"
+subtitle: "The FlexProductEligibilityGrp component is used to specify whether securities within a product group or complex are eligible for creating flexible securities."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2560</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoFlexProductEligibilities (2560)](/fix/fields/tags-2400-2599#tag-2560).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1242 | [FlexProductEligibilityIndicator](/fix/fields/tags-1200-1399#tag-1242) | Boolean | Optional | Required if NoFlexProductEligibilities(2560) &gt; 0. |
+| 2561 | [FlexProductEligibilityComplex](/fix/fields/tags-2400-2599#tag-2561) | String | Optional | Required if NoFlexProductEligibilities(2560) &gt; 0. Used to specify a product suite related to an eligibility indicator. |
+
+</StickyTable>
+
+## Used in
+
+[MarketDefinition](/fix/messages/market-definition), [MarketDefinitionUpdateReport](/fix/messages/market-definition-update-report)

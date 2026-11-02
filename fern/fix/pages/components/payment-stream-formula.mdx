@@ -1,0 +1,24 @@
+---
+title: "PaymentStreamFormula"
+subtitle: "PaymentStreamFormula is a subcomponent of the PaymentStreamFloatingRate component used to report the parameters for determining the floating rate of the stream e.g. for equity swaps."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42686 | [PaymentStreamFormulaCurrency](/fix/fields/tags-42600-42799#tag-42686) | Currency | Optional | The currency in which the formula amount is denominated. Uses ISO 4217 currency codes. |
+| 42687 | [PaymentStreamFormulaCurrencyDeterminationMethod](/fix/fields/tags-42600-42799#tag-42687) | String | Optional | Specifies the method according to which the formula amount currency is determined. See http://www.fpml.org/coding-scheme/determination-method for values. |
+| 42688 | [PaymentStreamFormulaReferenceAmount](/fix/fields/tags-42600-42799#tag-42688) | int | Optional | Specifies the reference amount when this term either corresponds to the standard ISDA Definition (either the 2002 Equity Definition for the Equity Amount, or the 2000 Definition for the Interest Amount), or refers to a term defined elsewhere in the swap document. See… |
+| 42683 | [PaymentStreamFormulaMathGrp](/fix/groups/payment-stream-formula-math-grp) | Repeating group | Optional | PaymentStreamFormulaMathGrp is a repeating subcomponent within the PaymentStreamFormula component. It is used to specify the set of formulas, sub-formulas and descriptions from which the rate is derived. |
+| | [PaymentStreamFormulaImage](/fix/components/payment-stream-formula-image) | Component | Optional | PaymentStreamFormulaImage is a subcomponent of the PaymentStreamFormula component used to include a base64Binary-encoded image clip of the formula. |
+
+</StickyTable>
+
+## Used in
+
+[PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)

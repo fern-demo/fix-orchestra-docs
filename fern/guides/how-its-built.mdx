@@ -1,0 +1,23 @@
+---
+title: How this reference is built
+subtitle: Generated from a FIX Orchestra file on every commit
+---
+
+The FIX reference is generated from a machine-readable [FIX Orchestra](https://www.fixtrading.org/standards/fix-orchestra/) file, the FIX Trading Community standard for rules of engagement. There is no hand-maintained copy to drift out of date.
+
+<Steps>
+  <Step title="Orchestra file">
+    The venue maintains one Orchestra XML file describing its messages, fields, code sets and conditional rules.
+  </Step>
+  <Step title="Generate MDX">
+    `orchestra2doc`'s `FernDocGenerator` (a fork of the FIX Trading Community tool) turns the file into Fern pages and a navigation file.
+  </Step>
+  <Step title="Publish">
+    CI runs `fern generate --docs`. Search, Ask AI, llms.txt and the MCP server pick up every message and tag automatically.
+  </Step>
+</Steps>
+
+```bash
+java -cp orchestra2doc-jar-with-dependencies.jar \
+  io.fixprotocol.orchestra.docgen.FernDocGenerator OrchestraFIXLatest.xml fern/fix --base-path /fix
+```

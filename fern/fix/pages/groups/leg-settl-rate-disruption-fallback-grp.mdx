@@ -1,0 +1,25 @@
+---
+title: "LegSettlRateDisruptionFallbackGrp"
+subtitle: "The LegSettlRateDisruptionsFallbackGrp is a repeating subcomponent of the LegPaymentStreamNonDeliverableSettlTerms component used to specify the method, prioritized by the order it is listed, to get a replacement rate for a disrupted…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40902</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegSettlRateFallbacks (40902)](/fix/fields/tags-40800-40999#tag-40902).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40903 | [LegSettlRatePostponementMaximumDays](/fix/fields/tags-40800-40999#tag-40903) | int | Optional | Required if NoLegSettlRateFallbacks(40902) &gt; 0. |
+| | [LegSettlRateFallbackRateSource](/fix/components/leg-settl-rate-fallback-rate-source) | Component | Optional | LegSettlRateFallbackRateSource is a subcomponent of the LegSettlRateDisruptionFallbackGrp component used to specify the rate source in the event of rate disruption fallback. |
+| 40905 | [LegSettlRatePostponementSurvey](/fix/fields/tags-40800-40999#tag-40905) | Boolean | Optional | Indicates whether to request a settlement rate quote from the market. |
+| 40906 | [LegSettlRatePostponementCalculationAgent](/fix/fields/tags-40800-40999#tag-40906) | ProvisionCalculationAgentCodeSet | Optional | Used to identify the settlement rate postponement calculation agent. |
+
+</StickyTable>
+
+## Used in
+
+[LegPaymentStreamNonDeliverableSettlTerms](/fix/components/leg-payment-stream-non-deliverable-settl-terms)

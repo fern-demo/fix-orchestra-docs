@@ -1,0 +1,43 @@
+---
+title: "LegDividendConditions"
+subtitle: "The LegDividendConditions component is a subcomponent of LegPaymentStream used to specify the conditions' valuations and dates governing the payment of dividends."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42337 | [LegDividendReinvestmentIndicator](/fix/fields/tags-42200-42399#tag-42337) | Boolean | Optional | Indicates whether the dividend will be reinvested. |
+| 42338 | [LegDividendEntitlementEvent](/fix/fields/tags-42200-42399#tag-42338) | DividendEntitlementEventCodeSet | Optional | Defines the contract event which the receiver of the derivative is entitled to the dividend. |
+| 42339 | [LegDividendAmountType](/fix/fields/tags-42200-42399#tag-42339) | DividendAmountTypeCodeSet | Optional | Indicates how the gross cash dividend amount per share is determined. |
+| 42340 | [LegDividendUnderlierRefID](/fix/fields/tags-42200-42399#tag-42340) | String | Optional | References the dividend underlier through the instrument's UnderlyingSecurityID(309) which must be fully specified in an instance of the UnderlyingInstrument component. |
+| 42366 | [LegDividendPeriodGrp](/fix/groups/leg-dividend-period-grp) | Repeating group | Optional | LegDividendPeriodGrp is a repeating subcomponent within the LegDividendConditions component. It is used to specify the valuation and payments dates of the dividend leg of a dividend swap. |
+| 42341 | [LegExtraordinaryDividendPartySide](/fix/fields/tags-42200-42399#tag-42341) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the party through its side in the trade who makes the determination whether dividends are extraordinary in relation to normal levels. |
+| 42342 | [LegExtraordinaryDividendAmountType](/fix/fields/tags-42200-42399#tag-42342) | DividendAmountTypeCodeSet | Optional | Indicates how the extraordinary gross cash dividend per share is determined. |
+| 42343 | [LegExtraordinaryDividendCurrency](/fix/fields/tags-42200-42399#tag-42343) | Currency | Optional | The currency in which the excess dividend is denominated. Uses ISO 4217 currency codes. |
+| 42344 | [LegExtraordinaryDividendDeterminationMethod](/fix/fields/tags-42200-42399#tag-42344) | String | Optional | Specifies the method in which the excess amount is determined. See http://www.fpml.org/coding-scheme/determination-method for values. |
+| | [LegDividendFXTriggerDate](/fix/components/leg-dividend-fx-trigger-date) | Component | Optional | The LegDividendFXTriggerDate component is a subcomponent of LegDividendConditions used to report the dividend date when a foreign exchange trade is triggered. |
+| | [LegDividendAccrualFloatingRate](/fix/components/leg-dividend-accrual-floating-rate) | Component | Optional | The LegDividendAccrualFloatingRate component is a subcomponent of LegDividendConditions used to define the dividend accrual floating rate attributes of dividend payment conditions. |
+| 42345 | [LegDividendAccrualFixedRate](/fix/fields/tags-42200-42399#tag-42345) | Percentage | Optional | The dividend accrual fixed rate per annum expressed as a decimal. A value of 5% would be represented as "0.05". |
+| | [LegDividendAccrualPaymentDate](/fix/components/leg-dividend-accrual-payment-date) | Component | Optional | The LegDividendAccrualPaymentDate component is a subcomponent of LegDividendConditions used to report the dividend accrual payment date. |
+| 42346 | [LegDividendCompoundingMethod](/fix/fields/tags-42200-42399#tag-42346) | PaymentStreamCompoundingMethodCodeSet | Optional | The compounding method to be used when more than one dividend period contributes to a single payment. |
+| 42347 | [LegDividendNumOfIndexUnits](/fix/fields/tags-42200-42399#tag-42347) | int | Optional | The number of index units applicable to dividends. |
+| 42348 | [LegDividendCashPercentage](/fix/fields/tags-42200-42399#tag-42348) | Percentage | Optional | Declared cash dividend percentage. A value of 5% would be represented as "0.05". |
+| 42349 | [LegDividendCashEquivalentPercentage](/fix/fields/tags-42200-42399#tag-42349) | Percentage | Optional | Declared cash-equivalent dividend percentage. A value of 5% would be represented as "0.05". |
+| 42350 | [LegNonCashDividendTreatment](/fix/fields/tags-42200-42399#tag-42350) | NonCashDividendTreatmentCodeSet | Optional | Defines the treatment of non-cash dividends. |
+| 42351 | [LegDividendComposition](/fix/fields/tags-42200-42399#tag-42351) | DividendCompositionCodeSet | Optional | Defines how the composition of dividends is to be determined. |
+| 42352 | [LegSpecialDividendsIndicator](/fix/fields/tags-42200-42399#tag-42352) | Boolean | Optional | Indicates whether special dividends are applicable. |
+| 42353 | [LegMaterialDividendsIndicator](/fix/fields/tags-42200-42399#tag-42353) | Boolean | Optional | Indicates whether material non-cash dividends are applicable. |
+| 42354 | [LegOptionsExchangeDividendsIndicator](/fix/fields/tags-42200-42399#tag-42354) | Boolean | Optional | Indicates whether option exchange dividends are applicable. |
+| 42355 | [LegAdditionalDividendsIndicator](/fix/fields/tags-42200-42399#tag-42355) | Boolean | Optional | Indicates whether additional dividends are applicable. |
+| 42356 | [LegAllDividendsIndicator](/fix/fields/tags-42200-42399#tag-42356) | Boolean | Optional | Represents the European Master Confirmation value of 'All Dividends' which, when applicable, signifies that, for a given Ex-Date, the daily observed share price for that day is adjusted (reduced) by the cash dividend and/or the cash value of any non-cash dividend per share (including extraordinary… |
+
+</StickyTable>
+
+## Used in
+
+[LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)

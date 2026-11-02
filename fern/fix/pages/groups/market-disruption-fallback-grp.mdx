@@ -1,0 +1,23 @@
+---
+title: "MarketDisruptionFallbackGrp"
+subtitle: "The MarketDisruptionFallbackGrp is a repeating subcomponent of the MarketDisruption component used to specify the market disruption fallback provisions."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41094</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoMarketDisruptionFallbacks (41094)](/fix/fields/tags-41000-41199#tag-41094).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41095 | [MarketDisruptionFallbackType](/fix/fields/tags-41000-41199#tag-41095) | String | Optional | Required if NoMarketDisruptionFallbacks(41094) &gt; 0. The sequence of entries specifies the order in which the fallback provisions should be applied. |
+| 40992 | [MarketDisruptionFallbackValue](/fix/fields/tags-40800-40999#tag-40992) | String | Optional | Applicable value for MarketDisruptionFallbackType(41095). |
+
+</StickyTable>
+
+## Used in
+
+[MarketDisruption](/fix/components/market-disruption)

@@ -1,0 +1,22 @@
+---
+title: "LegOptionExerciseBusinessCenterGrp"
+subtitle: "LegOptionExerciseBusinessCenterGrp is a repeating subcomponent of the LegOptionExerciseDates component used to specify the set of business centers whose calendars drive date adjustment. Used only to override the business centers defined in…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41491</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegOptionExerciseBusinessCenters (41491)](/fix/fields/tags-41400-41599#tag-41491).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41492 | [LegOptionExerciseBusinessCenter](/fix/fields/tags-41400-41599#tag-41492) | String | Optional | Required if NoLegOptionExerciseBusinessCenters(41491) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)

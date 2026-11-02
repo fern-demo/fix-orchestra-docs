@@ -1,0 +1,26 @@
+---
+title: "StrikeRules"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1201</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoStrikeRules (1201)](/fix/fields/tags-1200-1399#tag-1201).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1223 | [StrikeRuleID](/fix/fields/tags-1200-1399#tag-1223) | String | Optional | Allows strike rule to be referenced via an identifier so that rules do not need to be explicitly enumerated |
+| 1202 | [StartStrikePxRange](/fix/fields/tags-1200-1399#tag-1202) | Price | Optional | Starting price for the range to which the StrikeIncrement applies. Price refers to the price of the underlying |
+| 1203 | [EndStrikePxRange](/fix/fields/tags-1200-1399#tag-1203) | Price | Optional | Ending price of the range to which the StrikeIncrement applies. Price refers to the price of the underlying |
+| 1204 | [StrikeIncrement](/fix/fields/tags-1200-1399#tag-1204) | float | Optional | Value by which strike price should be incremented within the specified price |
+| 1304 | [StrikeExerciseStyle](/fix/fields/tags-1200-1399#tag-1304) | ExerciseStyleCodeSet | Optional | Enumeration that represents the exercise style for a class of options Same values as ExerciseStyle |
+| 1236 | [MaturityRules](/fix/groups/maturity-rules) | Repeating group | Optional |  |
+
+</StickyTable>
+
+## Used in
+
+[MarketSegmentGrp](/fix/groups/market-segment-grp), [SecListGrp](/fix/groups/sec-list-grp), [SecLstUpdRelSymGrp](/fix/groups/sec-lst-upd-rel-sym-grp)

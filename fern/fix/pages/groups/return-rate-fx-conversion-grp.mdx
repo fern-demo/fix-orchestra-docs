@@ -1,0 +1,24 @@
+---
+title: "ReturnRateFXConversionGrp"
+subtitle: "ReturnRateFXConversionGrp is a repeating subcomponent within the ReturnRateGrp component. It is used to specify the FX conversion rates for an equity return swap payment stream."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42731</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoReturnRateFXConversions (42731)](/fix/fields/tags-42600-42799#tag-42731).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42732 | [ReturnRateFXCurrencySymbol](/fix/fields/tags-42600-42799#tag-42732) | String | Optional | Required if NoReturnRateFXConversions(42731) &gt; 0. |
+| 42733 | [ReturnRateFXRate](/fix/fields/tags-42600-42799#tag-42733) | float | Optional | Required if NoReturnRateFXConversions(42731) &gt; 0. |
+| 42734 | [ReturnRateFXRateCalc](/fix/fields/tags-42600-42799#tag-42734) | SettlCurrFxRateCalcCodeSet | Optional | Specifies whether ReturnRateFXRate(42733) should be multiplied or divided. |
+
+</StickyTable>
+
+## Used in
+
+[ReturnRateGrp](/fix/groups/return-rate-grp)

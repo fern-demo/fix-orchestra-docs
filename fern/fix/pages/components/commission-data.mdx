@@ -1,0 +1,27 @@
+---
+title: "CommissionData"
+subtitle: "The CommissionData component block is used to carry commission information such as the type of commission and the rate. Use the CommissionDataGrp component as an alternative if multiple commissions or enhanced attributes are needed."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+
+This component may be used to provide aggregated commission data of a given CommType(13) where the CommissionDataGrp maybe used to include the detail splits provided the commission is of the same commission basis type. For example, CommissionData may contain CommType(13) of 3 (Absolute) and a Commission(12) value of "15". CommissionDataGrp may be used to show how this Commission(12) value of "15" is split up as long as the CommissionBasis(2642) is also 3 (Absolute) for each of the instances added together. This method of aggregated commission data may also be applied to this component to provide a total when the instances of the detail splits in CommissionDataGrp contain leg level information (indicated by the usage of CommissionLegRefID(2649) in CommissionDataGrp). Note that it is only possible to aggregate values for a single commission basis type.
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 12 | [Commission](/fix/fields/tags-0-199#tag-12) | Amt | Optional | Commission. Note if CommType (13) is percentage, Commission of 5% should be represented as .05. |
+| 13 | [CommType](/fix/fields/tags-0-199#tag-13) | CommTypeCodeSet | Optional | Specifies the basis or unit used to calculate the total commission based on the rate. |
+| 479 | [CommCurrency](/fix/fields/tags-400-599#tag-479) | Currency | Optional | Specifies currency to be use for Commission (12) if the Commission currency is different from the Deal Currency - see "Appendix 6-A; Valid Currency Codes". |
+| 1233 | [CommRate](/fix/fields/tags-1200-1399#tag-1233) | float | Optional | The commission rate when Commission(12) is based on a percentage of quantity, amount per unit or a factor of "unit of measure". If the rate is a percentage, use the decimalized form, e.g. "0.05" for a 5% commission or "0.005" for 50 basis points. |
+| 1238 | [CommUnitOfMeasure](/fix/fields/tags-1200-1399#tag-1238) | UnitOfMeasureCodeSet | Optional | The commission rate unit of measure. |
+| 497 | [FundRenewWaiv](/fix/fields/tags-400-599#tag-497) | FundRenewWaivCodeSet | Optional | A one character code identifying whether the Fund based renewal commission is to be waived. |
+
+</StickyTable>
+
+## Used in
+
+[AllocGrp](/fix/groups/alloc-grp), [BidCompRspGrp](/fix/groups/bid-comp-rsp-grp), [Confirmation](/fix/messages/confirmation), [ExecutionReport](/fix/messages/execution-report), [ListOrdGrp](/fix/groups/list-ord-grp), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [Quote](/fix/messages/quote), [QuoteResponse](/fix/messages/quote-response), [QuoteStatusReport](/fix/messages/quote-status-report), [SideCrossOrdModGrp](/fix/groups/side-cross-ord-mod-grp), [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp)

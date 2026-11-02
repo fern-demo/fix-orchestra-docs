@@ -1,0 +1,43 @@
+---
+title: "SecurityMassStatus"
+---
+
+<Badge intent="info">MsgType CO</Badge> <Badge intent="note" minimal>Securities Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| 324 | [SecurityStatusReqID](/fix/fields/tags-200-399#tag-324) | String | Optional | Required when mass status is in response to a SecurityMassStatusRequest(35=CN) message. |
+| 1465 | [SecurityListID](/fix/fields/tags-1400-1599#tag-1465) | String | Optional | Identifies all securities for a security list identifier. |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Identifies all securities for a market. |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies all securities for a market segment. |
+| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | Optional | Business day that the state change applies to. |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifies all securities for a trading session. |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Identifies all securities for a trading sub-session. |
+| | [InstrumentScope](/fix/components/instrument-scope) | Component | Optional | Used to specify the instrument |
+| 325 | [UnsolicitedIndicator](/fix/fields/tags-200-399#tag-325) | UnsolicitedIndicatorCodeSet | Optional | Set to "Y" if message is sent as a result of a subscription request not a snapshot request. |
+| 1679 | [SecurityMassTradingStatus](/fix/fields/tags-1600-1799#tag-1679) | SecurityTradingStatusCodeSet | Optional | Identifies the trading status applicable to a group of instruments. |
+| 2447 | [FastMarketIndicator](/fix/fields/tags-2400-2599#tag-2447) | Boolean | Optional | Indicates if the instrument is in "fast market" state. |
+| 1680 | [SecurityMassTradingEvent](/fix/fields/tags-1600-1799#tag-1680) | SecurityTradingEventCodeSet | Optional | Identifies an event related to the mass trading status. |
+| 1681 | [MassHaltReason](/fix/fields/tags-1600-1799#tag-1681) | HaltReasonCodeSet | Optional | Denotes the reason for the Opening Delay or Trading halt of a group of securities. |
+| 1021 | [MDBookType](/fix/fields/tags-1000-1199#tag-1021) | MDBookTypeCodeSet | Optional | Used to relay changes in the book type. |
+| 264 | [MarketDepth](/fix/fields/tags-200-399#tag-264) | int | Optional | Used to relay changes in Market Depth. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Time of state change for security list. |
+| 334 | [Adjustment](/fix/fields/tags-200-399#tag-334) | AdjustmentCodeSet | Optional | Identifies the type of adjustment. |
+| 146 | [SecMassStatGrp](/fix/groups/sec-mass-stat-grp) | Repeating group | Optional |  |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="SecurityMassStatus" wordWrap
+8=FIXT.1.1|9=60|35=CO|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|10=006|
+```

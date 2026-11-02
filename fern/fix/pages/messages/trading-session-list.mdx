@@ -1,0 +1,28 @@
+---
+title: "TradingSessionList"
+subtitle: "The Trading Session List message is sent as a response to a Trading Session List Request. The Trading Session List should contain the characteristics of the trading session and the current state of the trading session."
+---
+
+<Badge intent="info">MsgType BJ</Badge> <Badge intent="note" minimal>Market Structure Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| 335 | [TradSesReqID](/fix/fields/tags-200-399#tag-335) | String | Optional | Provided for a response to a specific Trading Session List Request message (snapshot). |
+| 386 | [TrdSessLstGrp](/fix/groups/trd-sess-lst-grp) | Repeating group | **Required** |  |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="TradingSessionList" wordWrap
+8=FIXT.1.1|9=78|35=BJ|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|386=1|336=1|340=0|10=041|
+```

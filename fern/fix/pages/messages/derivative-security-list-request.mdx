@@ -1,0 +1,39 @@
+---
+title: "DerivativeSecurityListRequest"
+subtitle: "The Derivative Security List Request message is used to return a list of securities from the counterparty that match criteria provided on the request"
+---
+
+<Badge intent="info">MsgType z</Badge> <Badge intent="note" minimal>Securities Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 320 | [SecurityReqID](/fix/fields/tags-200-399#tag-320) | String | **Required** | Unique ID of a Security Definition Request. |
+| 559 | [SecurityListRequestType](/fix/fields/tags-400-599#tag-559) | SecurityListRequestTypeCodeSet | **Required** | Identifies the type/criteria of Security List Request |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Identifies the market |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
+| | [UnderlyingInstrument](/fix/components/underlying-instrument) | Component | Optional | The UnderlyingInstrument component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In the case of the UnderlyingInstrument component block it describes an instrument which underlies the primary instrument Refer to the Instrument… |
+| | [DerivativeInstrument](/fix/components/derivative-instrument) | Component | Optional |  |
+| 762 | [SecuritySubType](/fix/fields/tags-600-799#tag-762) | String | Optional | Sub-type qualification/identification of the SecurityType. As an example for SecurityType(167)="REPO", the SecuritySubType="General Collateral" can be used to further specify the type of REPO. If SecuritySubType is used, then SecurityType is required. For SecurityType="MLEG" a name of the option or… |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency value whenever possible. See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Comment, instructions, or other identifying information. |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Optional Trading Session Identifier to specify a particular trading session for which you want to obtain a list of securities that are tradeable. |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures markets to identify exchange specific execution time bracket codes as required by US market regulations. Bilaterally agreed values of data… |
+| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263) | SubscriptionRequestTypeCodeSet | Optional | Subscribe or unsubscribe for security status to security specified in request. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="DerivativeSecurityListRequest" wordWrap
+8=FIXT.1.1|9=76|35=z|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|320=ABC123|559=0|10=053|
+```

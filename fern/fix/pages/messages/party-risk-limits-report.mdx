@@ -1,0 +1,41 @@
+---
+title: "PartyRiskLimitsReport"
+subtitle: "The PartyRiskLimitsReport message is used to communicate party risk limits. The message can either be sent as a response to the PartyRiskLimitsRequest message or can be published unsolicited."
+---
+
+<Badge intent="info">MsgType CM</Badge> <Badge intent="note" minimal>Parties Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| 1667 | [RiskLimitReportID](/fix/fields/tags-1600-1799#tag-1667) | String | **Required** | Identifier for the PartyRiskLimitsReport |
+| 1666 | [RiskLimitRequestID](/fix/fields/tags-1600-1799#tag-1666) | String | Optional | Conditionally required when responding to PartyRiskLimitsRequest(35=CL). |
+| 1760 | [RiskLimitRequestType](/fix/fields/tags-1600-1799#tag-1760) | RiskLimitRequestTypeCodeSet | Optional | Can be used when responding to a PartyRiskLimitsRequest(35=CL). |
+| 1511 | [RequestResult](/fix/fields/tags-1400-1599#tag-1511) | RequestResultCodeSet | Optional | Conditionally required when responding to a PartyRiskLimitsRequest(35=CL). |
+| 325 | [UnsolicitedIndicator](/fix/fields/tags-200-399#tag-325) | UnsolicitedIndicatorCodeSet | Optional | Indicates whether or not message is being sent as a result of a subscription request or not. |
+| 1512 | [TotNoParties](/fix/fields/tags-1400-1599#tag-1512) | int | Optional | Total number of PartyListGrp returned. |
+| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893) | LastFragmentCodeSet | Optional | Indicates whether this message is the last in a sequence of messages for those messages that support fragmentation, such as Allocation Instruction, Mass Quote, Security List, Derivative Security List |
+| 1677 | [PartyRiskLimitsGrp](/fix/groups/party-risk-limits-grp) | Repeating group | Optional | Repeating group of parties (specified using PartyDetails) and the risk limits for the party. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text(58) field. |
+| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328) | String | Optional | Identifies the reason for rejection. |
+| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedRejectText(1665) field. |
+| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. If used, the ASCII (English) representation should also be specified in the RejectText(1328) field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="PartyRiskLimitsReport" wordWrap
+8=FIXT.1.1|9=72|35=CM|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|1667=ABC123|10=117|
+```

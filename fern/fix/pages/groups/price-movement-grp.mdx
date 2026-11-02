@@ -1,0 +1,23 @@
+---
+title: "PriceMovementGrp"
+subtitle: "The PriceMovementGrp component is a repeatable block intended to contain theoretical profit and loss data at various price movement points account type(s) for which the price movement may apply to."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1919</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPriceMovements (1919)](/fix/fields/tags-1800-1999#tag-1919).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1920 | [PriceMovementValueGrp](/fix/groups/price-movement-value-grp) | Repeating group | Optional | This PriceMovementValueGrp component is a repeatable block that will be utilized to represent a value relative to a specific price movement point. |
+| 1918 | [ClearingAccountTypeGrp](/fix/groups/clearing-account-type-grp) | Repeating group | Optional | The ClearingAccountTypeGrp component is used specify the type of clearing account types. |
+
+</StickyTable>
+
+## Used in
+
+[SecListGrp](/fix/groups/sec-list-grp)

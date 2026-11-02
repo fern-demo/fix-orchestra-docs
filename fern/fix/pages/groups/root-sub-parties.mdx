@@ -1,0 +1,22 @@
+---
+title: "RootSubParties"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1120</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRootPartySubIDs (1120)](/fix/fields/tags-1000-1199#tag-1120).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1121 | [RootPartySubID](/fix/fields/tags-1000-1199#tag-1121) | String | Optional | Sub-identifier (e.g. Clearing Acct for PartyID=Clearing Firm) if applicable. Required if NoRootPartySubIDs &gt; 0. |
+| 1122 | [RootPartySubIDType](/fix/fields/tags-1000-1199#tag-1122) | PartySubIDTypeCodeSet | Optional | Type of Sub-identifier. Required if NoRootPartySubIDs &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[RootParties](/fix/groups/root-parties)

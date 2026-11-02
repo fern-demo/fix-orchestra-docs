@@ -1,0 +1,22 @@
+---
+title: "LegStreamTerminationDateBusinessCenterGrp"
+subtitle: "LegStreamTerminationDateBusinessCenterGrp is a repeating subcomponent within the LegStreamTerminationDate component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40943</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegStreamTerminationDateBusinessCenters (40943)](/fix/fields/tags-40800-40999#tag-40943).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40259 | [LegStreamTerminationDateBusinessCenter](/fix/fields/tags-40200-40399#tag-40259) | String | Optional | Required if NoLegStreamTerminationDateBusinessCenters(40943) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[LegStreamTerminationDate](/fix/components/leg-stream-termination-date)

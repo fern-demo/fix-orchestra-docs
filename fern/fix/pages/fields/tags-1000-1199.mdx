@@ -1,0 +1,3538 @@
+---
+title: "Tags 1000–1199"
+subtitle: "195 fields"
+---
+
+## 1000 · UnderlyingTimeUnit [#tag-1000]
+
+<Badge intent="info" minimal>Tag 1000</Badge> <Badge intent="note" minimal>TimeUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Same as TimeUnit.
+
+Code set **TimeUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `H` | Hour | Hour |
+| `Min` | Minute | Minute |
+| `S` | Second | Second |
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+| `Q` | Quarter | Quarter |
+
+Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
+
+## 1001 · LegTimeUnit [#tag-1001]
+
+<Badge intent="info" minimal>Tag 1001</Badge> <Badge intent="note" minimal>TimeUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Same as TimeUnit.
+
+Code set **TimeUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `H` | Hour | Hour |
+| `Min` | Minute | Minute |
+| `S` | Second | Second |
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+| `Q` | Quarter | Quarter |
+
+Used in: [InstrumentLeg](/fix/components/instrument-leg)
+
+## 1002 · AllocMethod [#tag-1002]
+
+<Badge intent="info" minimal>Tag 1002</Badge> <Badge intent="note" minimal>AllocMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Specifies the method under which a trade quantity was allocated.
+
+Code set **AllocMethodCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Automatic | Automatic |
+| `2` | Guarantor | Guarantor |
+| `3` | Manual | Manual |
+| `4` | BrokerAssigned | Broker assigned |
+
+Used in: [AllocGrp](/fix/groups/alloc-grp), [TrdAllocGrp](/fix/groups/trd-alloc-grp)
+
+## 1003 · TradeID [#tag-1003]
+
+<Badge intent="info" minimal>Tag 1003</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+The unique ID assigned to the trade entity once it is received or matched by the exchange or central counterparty.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ExecAllocGrp](/fix/groups/exec-alloc-grp), [ExecutionAggregationGrp](/fix/groups/execution-aggregation-grp), [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [TradeAggregationReport](/fix/messages/trade-aggregation-report), [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack), [TradeCaptureReportRequest](/fix/messages/trade-capture-report-request), [TradeCaptureReportRequestAck](/fix/messages/trade-capture-report-request-ack)
+
+## 1005 · SideTradeReportID [#tag-1005]
+
+<Badge intent="info" minimal>Tag 1005</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used on a multi-sided trade to designate the ReportID
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
+
+## 1006 · SideFillStationCd [#tag-1006]
+
+<Badge intent="info" minimal>Tag 1006</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used on a multi-sided trade to convey order routing information
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
+
+## 1007 · SideReasonCd [#tag-1007]
+
+<Badge intent="info" minimal>Tag 1007</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used on a multi-sided trade to convey reason for execution
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
+
+## 1008 · SideTrdSubTyp [#tag-1008]
+
+<Badge intent="info" minimal>Tag 1008</Badge> <Badge intent="note" minimal>TrdSubTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used on a multi-sided trade to specify the type of trade for a given side. Same values as TrdSubType (829).
+
+Code set **TrdSubTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | CMTA | CMTA |
+| `1` | InternalTransferOrAdjustment | Internal transfer or adjustment |
+| `2` | ExternalTransferOrTransferOfAccount | External transfer or transfer of account |
+| `3` | RejectForSubmittingSide | Reject for submitting side |
+| `4` | AdvisoryForContraSide | Advisory for contra side |
+| `5` | OffsetDueToAnAllocation | Offset due to an allocation |
+| `6` | OnsetDueToAnAllocation | Onset due to an allocation |
+| `7` | DifferentialSpread | Differential spread |
+| `8` | ImpliedSpreadLegExecutedAgainstAnOutright | Implied spread leg executed against an outright |
+| `9` | TransactionFromExercise | Transaction from exercise |
+| `10` | TransactionFromAssignment | Transaction from assignment |
+| `11` | ACATS | ACATS |
+| `33` | OffHoursTrade | Off Hours Trade |
+| `34` | OnHoursTrade | On Hours Trade |
+| `35` | OTCQuote | OTC Quote |
+| `36` | ConvertedSWAP | Converted SWAP |
+| `40` | WashTrade | Wash Trade |
+| `41` | TradeAtSettlement | Trade at Settlement (TAS) |
+| `42` | AuctionTrade | Auction Trade |
+| `43` | TradeAtMarker | Trade at Marker (TAM) |
+| `44` | CreditDefault | Default (Credit Event) |
+| `45` | CreditRestructuring | Restructuring (credit event) |
+| `46` | Merger | Merger (succession event) |
+| `47` | SpinOff | Spin-off (succession event) |
+| `48` | MultilateralCompression | Multilateral compression |
+| `50` | Balancing | Balancing |
+| `51` | BasisTradeIndexClose | Basis Trade index Close (BTIC) |
+| `52` | TradeAtCashOpen | Trade At Cash Open (TACO) |
+| `53` | TrdSubmitVenueClrSettl | Trade submitted to venue for clearing and Identifies |
+| `54` | BilateralCompression | Bilateral compression |
+| `14` | AI | AI (Automated input facility disabled in response to an exchange request.) |
+| `15` | B | B (Transaction between two member firms where neither member firm is registered as a market maker in the security in question and neither is a designated fund manager. Also used by broker dealers when dealing with another broker which is not a member firm. Non-order book securities only.) |
+| `16` | K | K (Transaction using block trade facility.) |
+| `17` | LC | LC (Correction submitted more than three days after publication of the original trade report.) |
+| `18` | M | M (Transaction, other than a transaction resulting from a stock swap or stock switch, between two market makers registered in that security including IDB or a public display system trades. Non-order book securities only.) |
+| `19` | N | N (Non-protected portfolio transaction or a fully disclosed portfolio transaction) |
+| `20` | NM | NM ( i) transaction where Exchange has granted permission for non-publication ii)IDB is reporting as seller iii) submitting a transaction report to the Exchange, where the transaction report is not also a trade report.) |
+| `21` | NR | NR (Non-risk transaction in a SEATS security other than an AIM security) |
+| `22` | P | P (Protected portfolio transaction or a worked principal agreement to effect a portfolio transaction which includes order book securities) |
+| `23` | PA | PA (Protected transaction notification) |
+| `24` | PC | PC (Contra trade for transaction which took place on a previous day and which was automatically executed on the Exchange trading system) |
+| `25` | PN | PN (Worked principal notification for a portfolio transaction which includes order book securities) |
+| `26` | R | R ( (i) riskless principal transaction between non-members where the buying and selling transactions are executed at different prices or on different terms (requires a trade report with trade type indicator R for each transaction) (ii) market maker is reporting all the legs of a riskless principal transaction where the buying and selling transactions are executed at different prices (requires a trade report with trade type indicator R for each transaction)or (iii) market maker is reporting the onward leg of a riskless principal transaction where the legs are executed at different prices, and another market maker has submitted a trade report using trade type indicator M for the first leg (this requires a single trade report with trade type indicator R).) |
+| `27` | RO | RO (Transaction which resulted from the exercise of a traditional option or a stock-settled covered warrant) |
+| `28` | RT | RT (Risk transaction in a SEATS security, (excluding AIM security) reported by a market maker registered in that security) |
+| `29` | SW | SW (Transactions resulting from stock swap or a stock switch (one report is required for each line of stock)) |
+| `30` | T | T (If reporting a single protected transaction) |
+| `31` | WN | WN (Worked principal notification for a single order book security) |
+| `32` | WT | WT (Worked principal transaction (other than a portfolio transaction)) |
+| `37` | CrossedTrade | Crossed Trade (X) |
+| `38` | InterimProtectedTrade | Interim Protected Trade (I) |
+| `39` | LargeInScale | Large in Scale (L) |
+
+Used in: [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
+
+## 1009 · SideLastQty [#tag-1009]
+
+<Badge intent="info" minimal>Tag 1009</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used to indicate the quantity on one side of a multi-sided trade.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
+
+## 1011 · MessageEventSource [#tag-1011]
+
+<Badge intent="info" minimal>Tag 1011</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used to identify the event or source which gave rise to a message. Valid values will be based on an exchange's implementation. Example values are: "MQM" (originated at Firm Back Office) "Clear" (originated in Clearing System) "Reg" (static data generated via Register request)
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [AllocationInstruction](/fix/messages/allocation-instruction), [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationReport](/fix/messages/allocation-report), [PositionReport](/fix/messages/position-report), [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack), [TradeCaptureReportRequest](/fix/messages/trade-capture-report-request), [TradeCaptureReportRequestAck](/fix/messages/trade-capture-report-request-ack)
+
+## 1012 · SideTrdRegTimestamp [#tag-1012]
+
+<Badge intent="info" minimal>Tag 1012</Badge> <Badge intent="note" minimal>UTCTimestamp</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Will be used in a multi-sided message. Traded Regulatory timestamp value Use to store time information required by government regulators or self regulatory organizations such as an exchange or clearing house
+
+Type: [UTCTimestamp](/fix/datatypes#utc-timestamp)
+
+Used in: [SideTrdRegTS](/fix/groups/side-trd-reg-ts)
+
+## 1013 · SideTrdRegTimestampType [#tag-1013]
+
+<Badge intent="info" minimal>Tag 1013</Badge> <Badge intent="note" minimal>TrdRegTimestampTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Same as TrdRegTimeStampType
+
+Code set **TrdRegTimestampTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | ExecutionTime | Execution time |
+| `2` | TimeIn | Time in |
+| `3` | TimeOut | Time out |
+| `4` | BrokerReceipt | Broker receipt |
+| `5` | BrokerExecution | Broker execution |
+| `6` | DeskReceipt | Desk receipt |
+| `7` | SubmissionToClearing | Submission to clearing |
+| `8` | TimePriority | Time priority |
+| `9` | OrderbookEntryTime | Orderbook entry time |
+| `10` | OrderSubmissionTime | Order submission time |
+| `11` | PubliclyReported | Publicly reported |
+| `12` | PublicReportUpdated | Public report updated |
+| `13` | NonPubliclyReported | Non-publicly reported |
+| `14` | NonPublicReportUpdated | Non-public report updated |
+| `15` | SubmittedForConfirmation | Submitted for confirmation |
+| `16` | UpdatedForConfirmation | Updated for confirmation |
+| `17` | Confirmed | Confirmed |
+| `18` | UpdatedForClearing | Updated for clearing |
+| `19` | Cleared | Cleared |
+| `20` | AllocationsSubmitted | Allocations submitted |
+| `21` | AllocationsUpdated | Allocations updated |
+| `22` | AllocationsCompleted | Allocations completed |
+| `23` | SubmittedToRepository | Submitted to repository |
+| `24` | PostTrdContntnEvnt | Post-trade continuation event |
+| `25` | PostTradeValuation | Post-trade valuation |
+| `26` | PreviousTimePriority | Previous time priority |
+| `27` | IdentifierAssigned | Identifier assigned |
+| `28` | PreviousIdentifierAssigned | Previous identifier assigned |
+| `29` | OrderCancellationTime | Order cancellation time |
+| `30` | OrderModificationTime | Order modification time |
+| `31` | OrderRoutingTime | Order routing time |
+| `32` | TradeCancellationTime | Trade cancellation time |
+| `33` | TradeModificationTime | Trade modification time |
+| `34` | ReferenceTimeForNBBO | Reference time for NBBO |
+
+Used in: [SideTrdRegTS](/fix/groups/side-trd-reg-ts)
+
+## 1014 · SideTrdRegTimestampSrc [#tag-1014]
+
+<Badge intent="info" minimal>Tag 1014</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Same as TrdRegTimestampOrigin Text which identifies the origin i.e. system which was used to generate the time stamp for the Traded Regulatory timestamp value
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [SideTrdRegTS](/fix/groups/side-trd-reg-ts)
+
+## 1015 · AsOfIndicator [#tag-1015]
+
+<Badge intent="info" minimal>Tag 1015</Badge> <Badge intent="note" minimal>AsOfIndicatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+A trade that is being submitted for a trade date prior to the current trade or clearing date, e.g. in an open outcry market an out trade being submitted for the previous trading session or trading day.
+
+Code set **AsOfIndicatorCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | False | false - trade is not an AsOf trade |
+| `1` | True | true - trade is an AsOf trade |
+
+Used in: [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack)
+
+## 1016 · NoSideTrdRegTS [#tag-1016]
+
+<Badge intent="info" minimal>Tag 1016</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Indicates number of SideTimestamps contained in group
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [SideTrdRegTS](/fix/groups/side-trd-reg-ts)
+
+## 1017 · LegOptionRatio [#tag-1017]
+
+<Badge intent="info" minimal>Tag 1017</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Expresses the risk of an option leg Value must be between -1 and 1. A Call Option will require a ratio value between 0 and 1 A Put Option will require a ratio value between -1 and 0
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [InstrumentLeg](/fix/components/instrument-leg)
+
+## 1018 · NoInstrumentParties [#tag-1018]
+
+<Badge intent="info" minimal>Tag 1018</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Identifies the number of parties identified with an instrument
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [InstrumentParties](/fix/groups/instrument-parties)
+
+## 1019 · InstrumentPartyID [#tag-1019]
+
+<Badge intent="info" minimal>Tag 1019</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+PartyID value within an instrument party repeating group. Same values as PartyID (448)
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [InstrumentParties](/fix/groups/instrument-parties)
+
+## 1020 · TradeVolume [#tag-1020]
+
+<Badge intent="info" minimal>Tag 1020</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used to report volume with a trade
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
+
+## 1021 · MDBookType [#tag-1021]
+
+<Badge intent="info" minimal>Tag 1021</Badge> <Badge intent="note" minimal>MDBookTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Describes the type of book for which the feed is intended. Used when multiple feeds are provided over the same connection
+
+Code set **MDBookTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | TopOfBook | Top of Book |
+| `2` | PriceDepth | Price Depth |
+| `3` | OrderDepth | Order Depth |
+
+Used in: [MarketDataFeedTypes](/fix/groups/market-data-feed-types), [MarketDataIncrementalRefresh](/fix/messages/market-data-incremental-refresh), [MarketDataSnapshotFullRefresh](/fix/messages/market-data-snapshot-full-refresh), [SecurityMassStatus](/fix/messages/security-mass-status), [SecurityStatus](/fix/messages/security-status)
+
+## 1022 · MDFeedType [#tag-1022]
+
+<Badge intent="info" minimal>Tag 1022</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Describes a class of service for a given data feed, ie Regular and Market Maker, Bandwidth Intensive or Bandwidth Conservative
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters), [MarketDataFeedTypes](/fix/groups/market-data-feed-types), [MarketDataIncrementalRefresh](/fix/messages/market-data-incremental-refresh), [MarketDataSnapshotFullRefresh](/fix/messages/market-data-snapshot-full-refresh)
+
+## 1023 · MDPriceLevel [#tag-1023]
+
+<Badge intent="info" minimal>Tag 1023</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Integer to convey the level of a bid or offer at a given price level. This is in contrast to MDEntryPositionNo which is used to convey the position of an order within a Price level
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
+
+## 1024 · MDOriginType [#tag-1024]
+
+<Badge intent="info" minimal>Tag 1024</Badge> <Badge intent="note" minimal>MDOriginTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used to describe the origin of the market data entry.
+
+Code set **MDOriginTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Book | Book |
+| `1` | OffBook | Off-Book |
+| `2` | Cross | Cross |
+| `3` | QuoteDrivenMarket | Quote driven market |
+| `4` | DarkOrderBook | Dark order book |
+| `5` | AuctionDrivenMarket | Auction driven market |
+| `6` | QuoteNegotiation | Quote negotiation |
+| `7` | VoiceNegotiation | Voice negotiation |
+| `8` | HybridMarket | Hybrid market |
+
+Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [MDStatisticParameters](/fix/components/md-statistic-parameters)
+
+## 1025 · FirstPx [#tag-1025]
+
+<Badge intent="info" minimal>Tag 1025</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Indicates the first trade price of the day/session
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [SecurityStatus](/fix/messages/security-status)
+
+## 1026 · MDEntrySpotRate [#tag-1026]
+
+<Badge intent="info" minimal>Tag 1026</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+The spot rate for an FX entry
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
+
+## 1027 · MDEntryForwardPoints [#tag-1027]
+
+<Badge intent="info" minimal>Tag 1027</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used for an F/X entry. The forward points to be added to or subtracted from the spot rate to get the "all-in" rate in MDEntryPx. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199
+
+Type: [PriceOffset](/fix/datatypes#price-offset)
+
+Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
+
+## 1028 · ManualOrderIndicator [#tag-1028]
+
+<Badge intent="info" minimal>Tag 1028</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Indicates if an order, quote or trade was initially received manually (as opposed to electronically) or if it was entered manually (as opposed to entered by automated trading software).
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [ListOrdGrp](/fix/groups/list-ord-grp), [MassOrder](/fix/messages/mass-order), [MassOrderAck](/fix/messages/mass-order-ack), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 1029 · CustDirectedOrder [#tag-1029]
+
+<Badge intent="info" minimal>Tag 1029</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Indicates if the customer directed this order to a specific execution venue "Y" or not "N". A default of "N" customer did not direct this order should be used in the case where the information is both missing and essential.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request)
+
+## 1030 · ReceivedDeptID [#tag-1030]
+
+<Badge intent="info" minimal>Tag 1030</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge> <Badge intent="warning">Deprecated FIX.5.0SP2</Badge>
+
+Identifies the broker-dealer department that first took the order.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request)
+
+## 1031 · CustOrderHandlingInst [#tag-1031]
+
+<Badge intent="info" minimal>Tag 1031</Badge> <Badge intent="note" minimal>CustOrderHandlingInstCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Codes that apply special information that the Broker / Dealer needs to report, as specified by the customer. NOTE: This field and its values have no bearing on the ExecInst and TimeInForce fields. These values should not be used instead of ExecInst or TimeInForce. This field and its values are intended for compliance reporting and/or billing purposes only. For OrderHandlingInstSrc(1032) = 1 (FINRA OATS), valid values are (as of OATS Phase 3 as provided by FINRA. See also http://www.finra.org/Industry/Compliance/MarketTransparency/OATS/PhaseIII/index.htm for a complete list. For OrderHandlingInstSrc(1032) = 2 (FIA Execution Source Code), only one enumeration value may be specified.
+
+Code set **CustOrderHandlingInstCodeSet** ([MultipleStringValue](/fix/datatypes#multiple-string-value))
+
+| Value | Name | Description |
+|---|---|---|
+| `A` | PhoneSimple | Phone simple |
+| `B` | PhoneComplex | Phone complex |
+| `C` | FCMProvidedScreen | FCM provided screen |
+| `D` | OtherProvidedScreen | Other provided screen |
+| `E` | ClientProvidedPlatformControlledByFCM | Client provided platform controlled by FCM |
+| `F` | ClientProvidedPlatformDirectToExchange | Client provided platform direct to exchange |
+| `H` | AlgoEngine | Algo engine |
+| `J` | PriceAtExecution | Price at execution (price added at initial order entry, trading, middle office or time of give-up) |
+| `W` | DeskElectronic | Desk - electronic |
+| `X` | DeskPit | Desk - pit |
+| `Y` | ClientElectronic | Client - electronic |
+| `Z` | ClientPit | Client - pit |
+| `ADD` | AddOnOrder | Add-on order |
+| `AON` | AllOrNone | All or none |
+| `CND` | ConditionalOrder | Conditional order |
+| `CNH` | CashNotHeld | Cash not held |
+| `CSH` | DeliveryInstructionsCash | Delivery instructions - cash |
+| `DIR` | DirectedOrder | Directed order |
+| `DLO` | DiscretionaryLimitOrder | Discretionary limit order |
+| `E.W` | ExchangeForPhysicalTransaction | Exchange for physical transaction |
+| `FOK` | FillOrKill | Fill or kill |
+| `IDX` | IntraDayCross | Intraday cross |
+| `IO` | ImbalanceOnly | Imbalance only |
+| `IOC` | ImmediateOrCancel | Immediate or cancel |
+| `ISO` | IntermarketSweepOrder | Intermarket sweep order |
+| `LOO` | LimitOnOpen | Limit on open |
+| `LOC` | LimitOnClose | Limit on Close |
+| `MAO` | MarketAtOpen | Market at Open |
+| `MAC` | MarketAtClose | Market at close |
+| `MOO` | MarketOnOpen | Market on open |
+| `MOC` | MarketOnClose | Market on close |
+| `MPT` | MergerRelatedTransferPosition | Merger related transfer position |
+| `MQT` | MinimumQuantity | Minimum quantity |
+| `MTL` | MarketToLimit | Market to limit |
+| `ND` | DeliveryInstructionsNextDay | Delivery instructions - next day |
+| `NH` | NotHeld | Not held |
+| `OPT` | OptionsRelatedTransaction | Options related transaction |
+| `OVD` | OverTheDay | Over the day |
+| `PEG` | Pegged | Pegged |
+| `RSV` | ReserveSizeOrder | Reserve size order |
+| `S.W` | StopStockTransaction | Stop stock transaction |
+| `SCL` | Scale | Scale |
+| `SLR` | DeliveryInstructionsSellersOption | Delivery instructions - sellers option |
+| `TMO` | TimeOrder | Time order |
+| `TS` | TrailingStop | Trailing stop |
+| `WRK` | Work | Work |
+| `F0` | StayOnOfferside | Stay on offerside |
+| `F3` | GoAlong | Go along |
+| `F6` | ParticipateDoNotInitiate | Participate do not initiate |
+| `F7` | StrictScale | Strict scale |
+| `F8` | TryToScale | Try to scale |
+| `F9` | StayOnBidside | Stay on bidside |
+| `FA` | NoCross | No cross |
+| `FB` | OKToCross | OK to cross |
+| `FC` | CallFirst | Call first |
+| `FD` | PercentOfVolume | Percent of volume |
+| `FH` | ReinstateOnSystemFailure | Reinstate on system failure |
+| `FI` | InstitutionOnly | Institution only |
+| `FJ` | ReinstateOnTradingHalt | Reinstate on trading halt |
+| `FK` | CancelOnTradingHalf | Cancel on trading half |
+| `FL` | LastPeg | Last peg |
+| `FM` | MidPricePeg | Mid-price peg |
+| `FN` | NonNegotiable | Non-negotiable |
+| `FO` | OpeningPeg | Opening peg |
+| `FP` | MarketPeg | Market peg |
+| `FQ` | CancelOnSystemFailure | Cancel on system failure |
+| `FR` | PrimaryPeg | Primary peg |
+| `FS` | Suspend | Suspend |
+| `FT` | FixedPegToLocalBBO | Fixed peg to local best bid or offer at time of order |
+| `FW` | PegToVWAP | Peg to VWAP |
+| `FX` | TradeAlong | Trade along |
+| `FY` | TryToStop | Try to stop |
+| `FZ` | CancelIfNotBest | Cancel if not best |
+| `Fb` | StrictLimit | Strict limit |
+| `Fc` | IgnorePriceValidityChecks | Ignore price validity checks |
+| `Fd` | PegToLimitPrice | Peg to Limit Price |
+| `Fe` | WorkToTargetStrategy | Work to target strategy |
+| `G` | GOrderAndFCMAPIorFIX | G Order(FINRA OATS), FCM API or FIX(FIA Execution Source) |
+
+Used in: [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationReport](/fix/messages/allocation-report), [AllocationReportAck](/fix/messages/allocation-report-ack), [ExecutionReport](/fix/messages/execution-report), [MassOrder](/fix/messages/mass-order), [MassOrderAck](/fix/messages/mass-order-ack), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
+
+## 1032 · OrderHandlingInstSource [#tag-1032]
+
+<Badge intent="info" minimal>Tag 1032</Badge> <Badge intent="note" minimal>OrderHandlingInstSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Identifies the class or source of the order handling instruction values.  Scope of this will apply to both CustOrderHandlingInst(1031) and DeskOrderHandlingInst(1035). Conditionally required when CustOrderHandlingInst(1031) or DeskOrderHandlingInst(1035) is specified.
+
+Code set **OrderHandlingInstSourceCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | FINRAOATS | FINRA OATS |
+| `2` | FIAExecutionSourceCode | FIA Execution Source Code |
+
+Used in: [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationReport](/fix/messages/allocation-report), [AllocationReportAck](/fix/messages/allocation-report-ack), [ExecutionReport](/fix/messages/execution-report), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
+
+## 1033 · DeskType [#tag-1033]
+
+<Badge intent="info" minimal>Tag 1033</Badge> <Badge intent="note" minimal>DeskTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Identifies the type of Trading Desk. Conditionally required when InformationBarrierID(1727) is specified for OATS.
+
+Code set **DeskTypeCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `A` | Agency | Agency |
+| `AR` | Arbitrage | Arbitrage |
+| `B` | BlockTrading | Block trading |
+| `C` | ConvertibleDesk | Convertible desk |
+| `CR` | CentralRiskBooks | Central risk books |
+| `D` | Derivatives | Derivatives |
+| `EC` | EquityCapitalMarkets | Equity capital markets |
+| `IN` | International | International |
+| `IS` | Institutional | Institutional |
+| `O` | Other | Other |
+| `PF` | PreferredTrading | Preferred trading |
+| `PR` | Proprietary | Proprietary |
+| `PT` | ProgramTrading | Program trading |
+| `S` | Sales | Sales |
+| `SW` | Swaps | Swaps |
+| `T` | TradingDeskSystem | Trading desk or system non-market maker |
+| `TR` | Treasury | Treasury |
+| `FB` | FloorBroker | Floor Broker |
+
+Used in: [TrdRegTimestamps](/fix/groups/trd-reg-timestamps)
+
+## 1034 · DeskTypeSource [#tag-1034]
+
+<Badge intent="info" minimal>Tag 1034</Badge> <Badge intent="note" minimal>DeskTypeSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Identifies the class or source of DeskType(1033) values. Conditionally required when DeskType(1033) is specified.
+
+Code set **DeskTypeSourceCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | FINRAOATS | FINRA OATS |
+
+Used in: [TrdRegTimestamps](/fix/groups/trd-reg-timestamps)
+
+## 1035 · DeskOrderHandlingInst [#tag-1035]
+
+<Badge intent="info" minimal>Tag 1035</Badge> <Badge intent="note" minimal>CustOrderHandlingInstCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Codes that apply special information that the broker-dealer needs to report.
+
+Code set **CustOrderHandlingInstCodeSet** ([MultipleStringValue](/fix/datatypes#multiple-string-value))
+
+| Value | Name | Description |
+|---|---|---|
+| `A` | PhoneSimple | Phone simple |
+| `B` | PhoneComplex | Phone complex |
+| `C` | FCMProvidedScreen | FCM provided screen |
+| `D` | OtherProvidedScreen | Other provided screen |
+| `E` | ClientProvidedPlatformControlledByFCM | Client provided platform controlled by FCM |
+| `F` | ClientProvidedPlatformDirectToExchange | Client provided platform direct to exchange |
+| `H` | AlgoEngine | Algo engine |
+| `J` | PriceAtExecution | Price at execution (price added at initial order entry, trading, middle office or time of give-up) |
+| `W` | DeskElectronic | Desk - electronic |
+| `X` | DeskPit | Desk - pit |
+| `Y` | ClientElectronic | Client - electronic |
+| `Z` | ClientPit | Client - pit |
+| `ADD` | AddOnOrder | Add-on order |
+| `AON` | AllOrNone | All or none |
+| `CND` | ConditionalOrder | Conditional order |
+| `CNH` | CashNotHeld | Cash not held |
+| `CSH` | DeliveryInstructionsCash | Delivery instructions - cash |
+| `DIR` | DirectedOrder | Directed order |
+| `DLO` | DiscretionaryLimitOrder | Discretionary limit order |
+| `E.W` | ExchangeForPhysicalTransaction | Exchange for physical transaction |
+| `FOK` | FillOrKill | Fill or kill |
+| `IDX` | IntraDayCross | Intraday cross |
+| `IO` | ImbalanceOnly | Imbalance only |
+| `IOC` | ImmediateOrCancel | Immediate or cancel |
+| `ISO` | IntermarketSweepOrder | Intermarket sweep order |
+| `LOO` | LimitOnOpen | Limit on open |
+| `LOC` | LimitOnClose | Limit on Close |
+| `MAO` | MarketAtOpen | Market at Open |
+| `MAC` | MarketAtClose | Market at close |
+| `MOO` | MarketOnOpen | Market on open |
+| `MOC` | MarketOnClose | Market on close |
+| `MPT` | MergerRelatedTransferPosition | Merger related transfer position |
+| `MQT` | MinimumQuantity | Minimum quantity |
+| `MTL` | MarketToLimit | Market to limit |
+| `ND` | DeliveryInstructionsNextDay | Delivery instructions - next day |
+| `NH` | NotHeld | Not held |
+| `OPT` | OptionsRelatedTransaction | Options related transaction |
+| `OVD` | OverTheDay | Over the day |
+| `PEG` | Pegged | Pegged |
+| `RSV` | ReserveSizeOrder | Reserve size order |
+| `S.W` | StopStockTransaction | Stop stock transaction |
+| `SCL` | Scale | Scale |
+| `SLR` | DeliveryInstructionsSellersOption | Delivery instructions - sellers option |
+| `TMO` | TimeOrder | Time order |
+| `TS` | TrailingStop | Trailing stop |
+| `WRK` | Work | Work |
+| `F0` | StayOnOfferside | Stay on offerside |
+| `F3` | GoAlong | Go along |
+| `F6` | ParticipateDoNotInitiate | Participate do not initiate |
+| `F7` | StrictScale | Strict scale |
+| `F8` | TryToScale | Try to scale |
+| `F9` | StayOnBidside | Stay on bidside |
+| `FA` | NoCross | No cross |
+| `FB` | OKToCross | OK to cross |
+| `FC` | CallFirst | Call first |
+| `FD` | PercentOfVolume | Percent of volume |
+| `FH` | ReinstateOnSystemFailure | Reinstate on system failure |
+| `FI` | InstitutionOnly | Institution only |
+| `FJ` | ReinstateOnTradingHalt | Reinstate on trading halt |
+| `FK` | CancelOnTradingHalf | Cancel on trading half |
+| `FL` | LastPeg | Last peg |
+| `FM` | MidPricePeg | Mid-price peg |
+| `FN` | NonNegotiable | Non-negotiable |
+| `FO` | OpeningPeg | Opening peg |
+| `FP` | MarketPeg | Market peg |
+| `FQ` | CancelOnSystemFailure | Cancel on system failure |
+| `FR` | PrimaryPeg | Primary peg |
+| `FS` | Suspend | Suspend |
+| `FT` | FixedPegToLocalBBO | Fixed peg to local best bid or offer at time of order |
+| `FW` | PegToVWAP | Peg to VWAP |
+| `FX` | TradeAlong | Trade along |
+| `FY` | TryToStop | Try to stop |
+| `FZ` | CancelIfNotBest | Cancel if not best |
+| `Fb` | StrictLimit | Strict limit |
+| `Fc` | IgnorePriceValidityChecks | Ignore price validity checks |
+| `Fd` | PegToLimitPrice | Peg to Limit Price |
+| `Fe` | WorkToTargetStrategy | Work to target strategy |
+| `G` | GOrderAndFCMAPIorFIX | G Order(FINRA OATS), FCM API or FIX(FIA Execution Source) |
+
+Used in: [TrdRegTimestamps](/fix/groups/trd-reg-timestamps)
+
+## 1036 · ExecAckStatus [#tag-1036]
+
+<Badge intent="info" minimal>Tag 1036</Badge> <Badge intent="note" minimal>ExecAckStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+The status of this execution acknowledgement message.
+
+Code set **ExecAckStatusCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Received | Received, not yet processed |
+| `1` | Accepted | Accepted |
+| `2` | Don | Don't know / Rejected |
+
+Used in: [ExecutionAck](/fix/messages/execution-ack)
+
+## 1037 · UnderlyingDeliveryAmount [#tag-1037]
+
+<Badge intent="info" minimal>Tag 1037</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Indicates the underlying position amount to be delivered
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [PosUndInstrmtGrp](/fix/groups/pos-und-instrmt-grp)
+
+## 1038 · UnderlyingCapValue [#tag-1038]
+
+<Badge intent="info" minimal>Tag 1038</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Maximum notional value for a capped financial instrument
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
+
+## 1039 · UnderlyingSettlMethod [#tag-1039]
+
+<Badge intent="info" minimal>Tag 1039</Badge> <Badge intent="note" minimal>SettlMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Settlement method for a contract or instrument. Additional values may be used with bilateral agreement.
+
+Code set **SettlMethodCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `C` | CashSettlementRequired | Cash settlement required |
+| `P` | PhysicalSettlementRequired | Physical settlement required |
+| `E` | Election | Election at exercise |
+
+Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
+
+## 1040 · SecondaryTradeID [#tag-1040]
+
+<Badge intent="info" minimal>Tag 1040</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used to carry an internal trade entity ID which may or may not be reported to the firm
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack), [TradeCaptureReportRequest](/fix/messages/trade-capture-report-request), [TradeCaptureReportRequestAck](/fix/messages/trade-capture-report-request-ack)
+
+## 1041 · FirmTradeID [#tag-1041]
+
+<Badge intent="info" minimal>Tag 1041</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+The ID assigned to a trade by the Firm to track a trade within the Firm system. This ID can be assigned either before or after submission to the exchange or central counterpary
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ExecAllocGrp](/fix/groups/exec-alloc-grp), [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack), [TradeCaptureReportRequest](/fix/messages/trade-capture-report-request), [TradeCaptureReportRequestAck](/fix/messages/trade-capture-report-request-ack)
+
+## 1042 · SecondaryFirmTradeID [#tag-1042]
+
+<Badge intent="info" minimal>Tag 1042</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used to carry an internal firm assigned ID which may or may not be reported to the exchange or central counterpary
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack), [TradeCaptureReportRequest](/fix/messages/trade-capture-report-request), [TradeCaptureReportRequestAck](/fix/messages/trade-capture-report-request-ack)
+
+## 1043 · CollApplType [#tag-1043]
+
+<Badge intent="info" minimal>Tag 1043</Badge> <Badge intent="note" minimal>CollApplTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+conveys how the collateral should be/has been applied
+
+Code set **CollApplTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | SpecificDeposit | Specific Deposit |
+| `1` | General | General |
+
+Used in: [CollateralReport](/fix/messages/collateral-report), [CollateralResponse](/fix/messages/collateral-response)
+
+## 1044 · UnderlyingAdjustedQuantity [#tag-1044]
+
+<Badge intent="info" minimal>Tag 1044</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Unit amount of the underlying security (shares) adjusted for pending corporate action not yet allocated.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
+
+## 1045 · UnderlyingFXRate [#tag-1045]
+
+<Badge intent="info" minimal>Tag 1045</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Foreign exchange rate used to compute UnderlyingCurrentValue(885) (or market value) from UnderlyingCurrency(318) to Currency(15).
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
+
+## 1046 · UnderlyingFXRateCalc [#tag-1046]
+
+<Badge intent="info" minimal>Tag 1046</Badge> <Badge intent="note" minimal>UnderlyingFXRateCalcCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Specifies whether the UnderlyingFxRate(1045) should be multiplied or divided.
+
+Code set **UnderlyingFXRateCalcCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Divide | Divide |
+| `M` | Multiply | Multiply |
+
+Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
+
+## 1047 · AllocPositionEffect [#tag-1047]
+
+<Badge intent="info" minimal>Tag 1047</Badge> <Badge intent="note" minimal>AllocPositionEffectCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Indicates whether the resulting position after a trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together.
+
+Code set **AllocPositionEffectCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `O` | Open | Open |
+| `C` | Close | Close |
+| `R` | Rolled | Rolled |
+| `F` | FIFO | FIFO |
+
+Used in: [AllocAckGrp](/fix/groups/alloc-ack-grp), [AllocGrp](/fix/groups/alloc-grp)
+
+## 1048 · DealingCapacity [#tag-1048]
+
+<Badge intent="info" minimal>Tag 1048</Badge> <Badge intent="note" minimal>DealingCapacityCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Identifies role of dealer; Agent, Principal, RisklessPrincipal
+
+Code set **DealingCapacityCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `A` | Agent | Agent |
+| `P` | Principal | Principal |
+| `R` | RisklessPrincipal | Riskless Principal |
+
+Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
+
+## 1049 · InstrmtAssignmentMethod [#tag-1049]
+
+<Badge intent="info" minimal>Tag 1049</Badge> <Badge intent="note" minimal>InstrmtAssignmentMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Method under which assignment was conducted
+
+Code set **InstrmtAssignmentMethodCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `P` | ProRata | Pro rata |
+| `R` | Random | Random |
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 1050 · InstrumentPartyIDSource [#tag-1050]
+
+<Badge intent="info" minimal>Tag 1050</Badge> <Badge intent="note" minimal>PartyIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+PartyIDSource value within an instrument partyrepeating group. Same values as PartyIDSource (447)
+
+Code set **PartyIDSourceCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `6` | UKNationalInsuranceOrPensionNumber | UK National Insurance or Pension Number |
+| `7` | USSocialSecurityNumber | US Social Security Number |
+| `8` | USEmployerOrTaxIDNumber | US Employer or Tax ID Number |
+| `9` | AustralianBusinessNumber | Australian Business Number |
+| `A` | AustralianTaxFileNumber | Australian Tax File Number |
+| `J` | TaxID | Tax ID |
+| `1` | KoreanInvestorID | Korean Investor ID |
+| `2` | TaiwaneseForeignInvestorID | Taiwanese Qualified Foreign Investor ID QFII/FID |
+| `3` | TaiwaneseTradingAcct | Taiwanese Trading Acct |
+| `4` | MalaysianCentralDepository | Malaysian Central Depository (MCD) number |
+| `5` | ChineseInvestorID | Chinese Investor ID |
+| `I` | ISITCAcronym | Directed broker three character acronym as defined in ISITC "ETC Best Practice" guidelines document |
+| `B` | BIC | BIC (Bank Identification Code - SWIFT managed) code (ISO9362 - See "Appendix 6-B") |
+| `C` | GeneralIdentifier | Generally accepted market participant identifier (e.g. NASD mnemonic) |
+| `D` | Proprietary | Proprietary / Custom code |
+| `E` | ISOCountryCode | ISO Country Code |
+| `F` | SettlementEntityLocation | Settlement Entity Location (note if Local Market Settlement use "E=ISO Country Code") (see "Appendix 6-G" for valid values) |
+| `G` | MIC | Market Identifier Code (ISO 10383) MIC |
+| `H` | CSDParticipant | CSD participant/member code (e.g.. Euroclear, DTC, CREST or Kassenverein number) |
+| `K` | AustralianCompanyNumber | Australian Company Number |
+| `L` | AustralianRegisteredBodyNumber | Australian Registered Body Number |
+| `M` | CFTCReportingFirmIdentifier | CFTC reporting firm identifier |
+| `N` | LegalEntityIdentifier | Legal Entity Identifier (ISO 17442) LEI |
+| `O` | InterimIdentifier | Interim identifier |
+| `P` | ShortCodeIdentifier | Short code identifier |
+| `Q` | NationalIDNaturalPerson | National ID of natural person |
+| `R` | IndiaPermanentAccountNumber | India Permanent Account Number |
+| `S` | FDID | Firm designated identifier |
+| `T` | SPSAID | Special Segregated Account ID |
+| `U` | MasterSPSAID | Master Special Segregated Account ID |
+
+Used in: [InstrumentParties](/fix/groups/instrument-parties)
+
+## 1051 · InstrumentPartyRole [#tag-1051]
+
+<Badge intent="info" minimal>Tag 1051</Badge> <Badge intent="note" minimal>PartyRoleCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+PartyRole value within an instrument partyepeating group. Same values as PartyRole (452)
+
+Code set **PartyRoleCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | ExecutingFirm | Executing Firm (formerly FIX 4.2 ExecBroker) |
+| `2` | BrokerOfCredit | Broker of Credit (formerly FIX 4.2 BrokerOfCredit) |
+| `3` | ClientID | Client ID (formerly FIX 4.2 ClientID) |
+| `4` | ClearingFirm | Clearing Firm (formerly FIX 4.2 ClearingFirm) |
+| `5` | InvestorID | Investor ID |
+| `6` | IntroducingFirm | Introducing Firm |
+| `7` | EnteringFirm | Entering Firm |
+| `8` | Locate | Locate / Lending Firm (for short-sales) |
+| `9` | FundManagerClientID | Fund Manager Client ID (for CIV) |
+| `10` | SettlementLocation | Settlement Location (formerly FIX 4.2 SettlLocation) |
+| `11` | OrderOriginationTrader | Order Origination Trader (associated with Order Origination Firm - i.e. trader who initiates/submits the order) |
+| `12` | ExecutingTrader | Executing Trader (associated with Executing Firm - actually executes) |
+| `13` | OrderOriginationFirm | Order Origination Firm (e.g. buy-side firm) |
+| `14` | GiveupClearingFirmDepr | Giveup Clearing Firm (firm to which trade is given up) |
+| `15` | CorrespondantClearingFirm | Correspondant Clearing Firm |
+| `16` | ExecutingSystem | Executing System |
+| `17` | ContraFirm | Contra Firm |
+| `18` | ContraClearingFirm | Contra Clearing Firm |
+| `19` | SponsoringFirm | Sponsoring Firm |
+| `20` | UnderlyingContraFirm | Underlying Contra Firm |
+| `21` | ClearingOrganization | Clearing Organization |
+| `22` | Exchange | Exchange |
+| `24` | CustomerAccount | Customer Account |
+| `25` | CorrespondentClearingOrganization | Correspondent Clearing Organization |
+| `26` | CorrespondentBroker | Correspondent Broker |
+| `27` | Buyer | Buyer/Seller (Receiver/Deliverer) |
+| `28` | Custodian | Custodian |
+| `29` | Intermediary | Intermediary |
+| `30` | Agent | Agent |
+| `31` | SubCustodian | Sub-custodian |
+| `32` | Beneficiary | Beneficiary |
+| `33` | InterestedParty | Interested party |
+| `34` | RegulatoryBody | Regulatory body |
+| `35` | LiquidityProvider | Liquidity provider |
+| `36` | EnteringTrader | Entering trader |
+| `37` | ContraTrader | Contra trader |
+| `38` | PositionAccount | Position account |
+| `39` | ContraInvestorID | Contra Investor ID |
+| `40` | TransferToFirm | Transfer to Firm |
+| `41` | ContraPositionAccount | Contra Position Account |
+| `42` | ContraExchange | Contra Exchange |
+| `43` | InternalCarryAccount | Internal Carry Account |
+| `44` | OrderEntryOperatorID | Order Entry Operator ID |
+| `45` | SecondaryAccountNumber | Secondary Account Number |
+| `46` | ForeignFirm | Foreign Firm |
+| `47` | ThirdPartyAllocationFirm | Third Party Allocation Firm |
+| `48` | ClaimingAccount | Claiming Account |
+| `49` | AssetManager | Asset Manager |
+| `50` | PledgorAccount | Pledgor Account |
+| `51` | PledgeeAccount | Pledgee Account |
+| `52` | LargeTraderReportableAccount | Large Trader Reportable Account |
+| `53` | TraderMnemonic | Trader mnemonic |
+| `54` | SenderLocation | Sender Location |
+| `55` | SessionID | Session ID |
+| `56` | AcceptableCounterparty | Acceptable Counterparty |
+| `57` | UnacceptableCounterparty | Unacceptable Counterparty |
+| `58` | EnteringUnit | Entering Unit |
+| `59` | ExecutingUnit | Executing Unit |
+| `60` | IntroducingBroker | Introducing Broker |
+| `61` | QuoteOriginator | Quote originator |
+| `62` | ReportOriginator | Report originator |
+| `63` | SystematicInternaliser | Systematic internaliser (SI) |
+| `64` | MultilateralTradingFacility | Multilateral Trading Facility (MTF) |
+| `65` | RegulatedMarket | Regulated Market (RM) |
+| `66` | MarketMaker | Market Maker |
+| `67` | InvestmentFirm | Investment Firm |
+| `68` | HostCompetentAuthority | Host Competent Authority (Host CA) |
+| `69` | HomeCompetentAuthority | Home Competent Authority (Home CA) |
+| `70` | CompetentAuthorityLiquidity | Competent Authority of the most relevant market in terms of liquidity (CAL) |
+| `71` | CompetentAuthorityTransactionVenue | Competent Authority of the Transaction (Execution) Venue (CATV) |
+| `72` | ReportingIntermediary | Reporting intermediary |
+| `73` | ExecutionVenue | Execution Venue |
+| `74` | MarketDataEntryOriginator | Market data entry originator |
+| `75` | LocationID | Location ID |
+| `76` | DeskID | Desk ID |
+| `77` | MarketDataMarket | Market data market |
+| `78` | AllocationEntity | Allocation Entity |
+| `79` | PrimeBroker | Prime Broker providing General Trade Services |
+| `80` | StepOutFirm | Step-Out Firm (Prime Broker) |
+| `81` | BrokerClearingID | Broker cient ID |
+| `82` | CentralRegistrationDepository | Central Registration Depository (CRD) |
+| `83` | ClearingAccount | Clearing Account |
+| `84` | AcceptableSettlingCounterparty | Acceptable Settling Counterparty |
+| `85` | UnacceptableSettlingCounterparty | Unacceptable Settling Counterparty |
+| `86` | CLSMemberBank | CLS Member Bank |
+| `87` | InConcertGroup | In Concert Group |
+| `88` | InConcertControllingEntity | In Concert Controlling Entity |
+| `89` | LargePositionsReportingAccount | Large Positions Reporting Account |
+| `90` | SettlementFirm | Settlement Firm |
+| `91` | SettlementAccount | Settlement account |
+| `92` | ReportingMarketCenter | Reporting Market Center |
+| `93` | RelatedReportingMarketCenter | Related Reporting Market Center |
+| `94` | AwayMarket | Away Market |
+| `95` | GiveupTradingFirm | Give-up (trading) firm |
+| `96` | TakeupTradingFirm | Take-up (trading) firm |
+| `97` | GiveupClearingFirm | Give-up clearing firm |
+| `98` | TakeupClearingFirm | Take-up clearing firm |
+| `99` | OriginatingMarket | Originating Market |
+| `100` | MarginAccount | Margin account |
+| `101` | CollateralAssetAccount | Collateral asset account |
+| `102` | DataRepository | Data repository |
+| `103` | CalculationAgent | Calculation agent |
+| `104` | ExerciseNoticeSender | Sender of exercise notice |
+| `105` | ExerciseNoticeReceiver | Receiver of exercise notice |
+| `106` | RateReferenceBank | Rate reference bank |
+| `107` | Correspondent | Correspondent |
+| `109` | BeneficiaryBank | Beneficiary's bank or depository institution |
+| `110` | Borrower | Borrower |
+| `111` | PrimaryObligator | Primary obligator |
+| `112` | Guarantor | Guarantor |
+| `113` | ExcludedReferenceEntity | Excluded reference entity |
+| `114` | DeterminingParty | Determining party |
+| `115` | HedgingParty | Hedging party |
+| `116` | ReportingEntity | Reporting entity |
+| `117` | SalesPerson | Sales person |
+| `118` | Operator | Operator |
+| `119` | CSD | Central Securities Depository (CSD) |
+| `120` | ICSD | International Central Securities Depository (ICSD) |
+| `121` | TradingSubAccount | Trading sub-account |
+| `122` | InvestmentDecisionMaker | Investment decision maker |
+| `123` | PublishingIntermediary | Publishing intermediary |
+| `124` | CSDParticipant | Central Securities Depository (CSD) Participant |
+| `125` | Issuer | Issuer |
+| `126` | ContraCustomerAccount | Contra Customer Account |
+| `127` | ContraInvestmentDecisionMaker | Contra Investment Decision Maker |
+
+Used in: [InstrumentParties](/fix/groups/instrument-parties)
+
+## 1052 · NoInstrumentPartySubIDs [#tag-1052]
+
+<Badge intent="info" minimal>Tag 1052</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Number of InstrumentPartySubID (1053) and InstrumentPartySubIDType (1054) entries
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [InstrumentPtysSubGrp](/fix/groups/instrument-ptys-sub-grp)
+
+## 1053 · InstrumentPartySubID [#tag-1053]
+
+<Badge intent="info" minimal>Tag 1053</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+PartySubID value within an instrument party repeating group. Same values as PartySubID (523)
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [InstrumentPtysSubGrp](/fix/groups/instrument-ptys-sub-grp)
+
+## 1054 · InstrumentPartySubIDType [#tag-1054]
+
+<Badge intent="info" minimal>Tag 1054</Badge> <Badge intent="note" minimal>PartySubIDTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Type of InstrumentPartySubID (1053) value. Same values as PartySubIDType (803)
+
+Code set **PartySubIDTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Firm | Firm |
+| `2` | Person | Person |
+| `3` | System | System |
+| `4` | Application | Application |
+| `5` | FullLegalNameOfFirm | Full legal name of firm |
+| `6` | PostalAddress | Postal address |
+| `7` | PhoneNumber | Phone number |
+| `8` | EmailAddress | Email address |
+| `9` | ContactName | Contact name |
+| `10` | SecuritiesAccountNumber | Securities account number (for settlement instructions) |
+| `11` | RegistrationNumber | Registration number (for settlement instructions and confirmations) |
+| `12` | RegisteredAddressForConfirmation | Registered address (for confirmation purposes) |
+| `13` | RegulatoryStatus | Regulatory status (for confirmation purposes) |
+| `14` | RegistrationName | Registration name (for settlement instructions) |
+| `15` | CashAccountNumber | Cash account number (for settlement instructions) |
+| `16` | BIC | BIC |
+| `17` | CSDParticipantMemberCode | CSD participant member code |
+| `18` | RegisteredAddress | Registered address |
+| `19` | FundAccountName | Fund account name |
+| `20` | TelexNumber | Telex number |
+| `21` | FaxNumber | Fax number |
+| `22` | SecuritiesAccountName | Securities account name |
+| `23` | CashAccountName | Cash account name |
+| `24` | Department | Department |
+| `25` | LocationDesk | Location desk |
+| `26` | PositionAccountType | Position account type |
+| `27` | SecurityLocateID | Security locate ID |
+| `28` | MarketMaker | Market maker |
+| `29` | EligibleCounterparty | Eligible counterparty |
+| `30` | ProfessionalClient | Professional client |
+| `31` | Location | Location |
+| `32` | ExecutionVenue | Execution venue |
+| `33` | CurrencyDeliveryIdentifier | Currency delivery identifier |
+| `34` | AddressCity | Address City |
+| `35` | AddressStateOrProvince | Address State/Province |
+| `36` | AddressPostalCode | Address Postal Code |
+| `37` | AddressStreet | Address Street |
+| `38` | AddressISOCountryCode | Address Country (ISO country code) |
+| `39` | ISOCountryCode | ISO country code |
+| `40` | MarketSegment | Market segment |
+| `41` | CustomerAccountType | Customer account type |
+| `42` | OmnibusAccount | Omnibus account |
+| `43` | FundsSegregationType | Funds segregation type |
+| `44` | GuaranteeFund | Guarantee fund |
+| `45` | SwapDealer | Swap dealer |
+| `46` | MajorParticipant | Major participant |
+| `47` | FinancialEntity | Financial entity |
+| `48` | USPerson | U.S. person |
+| `49` | ReportingEntityIndicator | Reporting entity indicator |
+| `50` | ElectedClearingRequirementException | Elected clearing requirement exception |
+| `51` | BusinessCenter | Business center |
+| `52` | ReferenceText | Reference text |
+| `53` | ShortMarkingExemptAccount | Short-marking exempt account |
+| `54` | ParentFirmIdentifier | Parent firm identifier |
+| `55` | ParentFirmName | Parent firm name |
+| `56` | DealIdentifier | Deal identifier |
+| `57` | SystemTradeID | System trade identifier |
+| `58` | SystemTradeSubID | System trade sub-identifier |
+| `59` | FCMCode | Futures Commission Merchant (FCM) code |
+| `60` | DlvryTrmlCode | Delivery terminal customer account/code |
+| `61` | VolntyRptEntity | Voluntary reporting entity |
+| `62` | RptObligJursdctn | Reporting obligation jurisdiction |
+| `63` | VolntyRptJursdctn | Voluntary reporting jurisdiction |
+| `64` | CompanyActivities | Company activities |
+| `65` | EEAreaDomiciled | European Economic Area domiciled |
+| `66` | ContractLinked | Contract linked to commercial or treasury financing for this counterparty |
+| `67` | ContractAbove | Contract above clearing threshold for this counterparty |
+| `68` | VolntyRptPty | Voluntary reporting party |
+| `69` | EndUser | End user |
+| `70` | LocationOrJurisdiction | Location or jurisdiction |
+| `71` | DerivativesDealer | Derivatives dealer |
+| `72` | Domicile | Domicile |
+| `73` | ExemptFromRecognition | Exempt from recognition |
+| `74` | Payer | Payer |
+| `75` | Receiver | Receiver |
+| `76` | SystematicInternaliser | Systematic Internaliser (SI) |
+| `77` | PublishingEntityIndicator | Publishing entity indicator |
+| `78` | FirstName | First name |
+| `79` | Surname | Surname |
+| `80` | DateOfBirth | Date of birth |
+| `81` | OrderTransmittingFirm | Order transmitting firm |
+| `82` | OrderTransmittingFirmBuyer | Order transmitting firm for buyer |
+| `83` | OrderTransmitterSeller | Order transmitter for seller |
+| `84` | LegalEntityIdentifier | Legal Entity Identifier (ISO 17442) LEI |
+| `85` | SubSectorClassification | Sub-sector classification |
+| `86` | PartySide | Party side |
+| `87` | LegalRegistrationCountry | Legal registration country |
+
+Used in: [InstrumentPtysSubGrp](/fix/groups/instrument-ptys-sub-grp)
+
+## 1055 · PositionCurrency [#tag-1055]
+
+<Badge intent="info" minimal>Tag 1055</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+The Currency in which the position Amount is denominated
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PositionAmountData](/fix/groups/position-amount-data)
+
+## 1056 · CalculatedCcyLastQty [#tag-1056]
+
+<Badge intent="info" minimal>Tag 1056</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used for the calculated quantity of the other side of the currency trade. Can be derived from LastQty and LastPx.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack)
+
+## 1057 · AggressorIndicator [#tag-1057]
+
+<Badge intent="info" minimal>Tag 1057</Badge> <Badge intent="note" minimal>AggressorIndicatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used to identify whether the order initiator is an aggressor or not in the trade.
+
+Code set **AggressorIndicatorCodeSet** ([Boolean](/fix/datatypes#boolean))
+
+| Value | Name | Description |
+|---|---|---|
+| `Y` | OrderInitiatorIsAggressor | Order initiator is aggressor |
+| `N` | OrderInitiatorIsPassive | Order initiator is passive |
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [MDStatisticParameters](/fix/components/md-statistic-parameters), [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
+
+## 1058 · NoUndlyInstrumentParties [#tag-1058]
+
+<Badge intent="info" minimal>Tag 1058</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Identifies the number of parties identified with an underlying instrument
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UndlyInstrumentParties](/fix/groups/undly-instrument-parties)
+
+## 1059 · UnderlyingInstrumentPartyID [#tag-1059]
+
+<Badge intent="info" minimal>Tag 1059</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+PartyID value within an underlying instrument party repeating group. Same values as PartyID (448)
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UndlyInstrumentParties](/fix/groups/undly-instrument-parties)
+
+## 1060 · UnderlyingInstrumentPartyIDSource [#tag-1060]
+
+<Badge intent="info" minimal>Tag 1060</Badge> <Badge intent="note" minimal>PartyIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+PartyIDSource value within an underlying instrument partyrepeating group. Same values as PartyIDSource (447)
+
+Code set **PartyIDSourceCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `6` | UKNationalInsuranceOrPensionNumber | UK National Insurance or Pension Number |
+| `7` | USSocialSecurityNumber | US Social Security Number |
+| `8` | USEmployerOrTaxIDNumber | US Employer or Tax ID Number |
+| `9` | AustralianBusinessNumber | Australian Business Number |
+| `A` | AustralianTaxFileNumber | Australian Tax File Number |
+| `J` | TaxID | Tax ID |
+| `1` | KoreanInvestorID | Korean Investor ID |
+| `2` | TaiwaneseForeignInvestorID | Taiwanese Qualified Foreign Investor ID QFII/FID |
+| `3` | TaiwaneseTradingAcct | Taiwanese Trading Acct |
+| `4` | MalaysianCentralDepository | Malaysian Central Depository (MCD) number |
+| `5` | ChineseInvestorID | Chinese Investor ID |
+| `I` | ISITCAcronym | Directed broker three character acronym as defined in ISITC "ETC Best Practice" guidelines document |
+| `B` | BIC | BIC (Bank Identification Code - SWIFT managed) code (ISO9362 - See "Appendix 6-B") |
+| `C` | GeneralIdentifier | Generally accepted market participant identifier (e.g. NASD mnemonic) |
+| `D` | Proprietary | Proprietary / Custom code |
+| `E` | ISOCountryCode | ISO Country Code |
+| `F` | SettlementEntityLocation | Settlement Entity Location (note if Local Market Settlement use "E=ISO Country Code") (see "Appendix 6-G" for valid values) |
+| `G` | MIC | Market Identifier Code (ISO 10383) MIC |
+| `H` | CSDParticipant | CSD participant/member code (e.g.. Euroclear, DTC, CREST or Kassenverein number) |
+| `K` | AustralianCompanyNumber | Australian Company Number |
+| `L` | AustralianRegisteredBodyNumber | Australian Registered Body Number |
+| `M` | CFTCReportingFirmIdentifier | CFTC reporting firm identifier |
+| `N` | LegalEntityIdentifier | Legal Entity Identifier (ISO 17442) LEI |
+| `O` | InterimIdentifier | Interim identifier |
+| `P` | ShortCodeIdentifier | Short code identifier |
+| `Q` | NationalIDNaturalPerson | National ID of natural person |
+| `R` | IndiaPermanentAccountNumber | India Permanent Account Number |
+| `S` | FDID | Firm designated identifier |
+| `T` | SPSAID | Special Segregated Account ID |
+| `U` | MasterSPSAID | Master Special Segregated Account ID |
+
+Used in: [UndlyInstrumentParties](/fix/groups/undly-instrument-parties)
+
+## 1061 · UnderlyingInstrumentPartyRole [#tag-1061]
+
+<Badge intent="info" minimal>Tag 1061</Badge> <Badge intent="note" minimal>PartyRoleCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+PartyRole value within an underlying instrument partyepeating group. Same values as PartyRole (452)
+
+Code set **PartyRoleCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | ExecutingFirm | Executing Firm (formerly FIX 4.2 ExecBroker) |
+| `2` | BrokerOfCredit | Broker of Credit (formerly FIX 4.2 BrokerOfCredit) |
+| `3` | ClientID | Client ID (formerly FIX 4.2 ClientID) |
+| `4` | ClearingFirm | Clearing Firm (formerly FIX 4.2 ClearingFirm) |
+| `5` | InvestorID | Investor ID |
+| `6` | IntroducingFirm | Introducing Firm |
+| `7` | EnteringFirm | Entering Firm |
+| `8` | Locate | Locate / Lending Firm (for short-sales) |
+| `9` | FundManagerClientID | Fund Manager Client ID (for CIV) |
+| `10` | SettlementLocation | Settlement Location (formerly FIX 4.2 SettlLocation) |
+| `11` | OrderOriginationTrader | Order Origination Trader (associated with Order Origination Firm - i.e. trader who initiates/submits the order) |
+| `12` | ExecutingTrader | Executing Trader (associated with Executing Firm - actually executes) |
+| `13` | OrderOriginationFirm | Order Origination Firm (e.g. buy-side firm) |
+| `14` | GiveupClearingFirmDepr | Giveup Clearing Firm (firm to which trade is given up) |
+| `15` | CorrespondantClearingFirm | Correspondant Clearing Firm |
+| `16` | ExecutingSystem | Executing System |
+| `17` | ContraFirm | Contra Firm |
+| `18` | ContraClearingFirm | Contra Clearing Firm |
+| `19` | SponsoringFirm | Sponsoring Firm |
+| `20` | UnderlyingContraFirm | Underlying Contra Firm |
+| `21` | ClearingOrganization | Clearing Organization |
+| `22` | Exchange | Exchange |
+| `24` | CustomerAccount | Customer Account |
+| `25` | CorrespondentClearingOrganization | Correspondent Clearing Organization |
+| `26` | CorrespondentBroker | Correspondent Broker |
+| `27` | Buyer | Buyer/Seller (Receiver/Deliverer) |
+| `28` | Custodian | Custodian |
+| `29` | Intermediary | Intermediary |
+| `30` | Agent | Agent |
+| `31` | SubCustodian | Sub-custodian |
+| `32` | Beneficiary | Beneficiary |
+| `33` | InterestedParty | Interested party |
+| `34` | RegulatoryBody | Regulatory body |
+| `35` | LiquidityProvider | Liquidity provider |
+| `36` | EnteringTrader | Entering trader |
+| `37` | ContraTrader | Contra trader |
+| `38` | PositionAccount | Position account |
+| `39` | ContraInvestorID | Contra Investor ID |
+| `40` | TransferToFirm | Transfer to Firm |
+| `41` | ContraPositionAccount | Contra Position Account |
+| `42` | ContraExchange | Contra Exchange |
+| `43` | InternalCarryAccount | Internal Carry Account |
+| `44` | OrderEntryOperatorID | Order Entry Operator ID |
+| `45` | SecondaryAccountNumber | Secondary Account Number |
+| `46` | ForeignFirm | Foreign Firm |
+| `47` | ThirdPartyAllocationFirm | Third Party Allocation Firm |
+| `48` | ClaimingAccount | Claiming Account |
+| `49` | AssetManager | Asset Manager |
+| `50` | PledgorAccount | Pledgor Account |
+| `51` | PledgeeAccount | Pledgee Account |
+| `52` | LargeTraderReportableAccount | Large Trader Reportable Account |
+| `53` | TraderMnemonic | Trader mnemonic |
+| `54` | SenderLocation | Sender Location |
+| `55` | SessionID | Session ID |
+| `56` | AcceptableCounterparty | Acceptable Counterparty |
+| `57` | UnacceptableCounterparty | Unacceptable Counterparty |
+| `58` | EnteringUnit | Entering Unit |
+| `59` | ExecutingUnit | Executing Unit |
+| `60` | IntroducingBroker | Introducing Broker |
+| `61` | QuoteOriginator | Quote originator |
+| `62` | ReportOriginator | Report originator |
+| `63` | SystematicInternaliser | Systematic internaliser (SI) |
+| `64` | MultilateralTradingFacility | Multilateral Trading Facility (MTF) |
+| `65` | RegulatedMarket | Regulated Market (RM) |
+| `66` | MarketMaker | Market Maker |
+| `67` | InvestmentFirm | Investment Firm |
+| `68` | HostCompetentAuthority | Host Competent Authority (Host CA) |
+| `69` | HomeCompetentAuthority | Home Competent Authority (Home CA) |
+| `70` | CompetentAuthorityLiquidity | Competent Authority of the most relevant market in terms of liquidity (CAL) |
+| `71` | CompetentAuthorityTransactionVenue | Competent Authority of the Transaction (Execution) Venue (CATV) |
+| `72` | ReportingIntermediary | Reporting intermediary |
+| `73` | ExecutionVenue | Execution Venue |
+| `74` | MarketDataEntryOriginator | Market data entry originator |
+| `75` | LocationID | Location ID |
+| `76` | DeskID | Desk ID |
+| `77` | MarketDataMarket | Market data market |
+| `78` | AllocationEntity | Allocation Entity |
+| `79` | PrimeBroker | Prime Broker providing General Trade Services |
+| `80` | StepOutFirm | Step-Out Firm (Prime Broker) |
+| `81` | BrokerClearingID | Broker cient ID |
+| `82` | CentralRegistrationDepository | Central Registration Depository (CRD) |
+| `83` | ClearingAccount | Clearing Account |
+| `84` | AcceptableSettlingCounterparty | Acceptable Settling Counterparty |
+| `85` | UnacceptableSettlingCounterparty | Unacceptable Settling Counterparty |
+| `86` | CLSMemberBank | CLS Member Bank |
+| `87` | InConcertGroup | In Concert Group |
+| `88` | InConcertControllingEntity | In Concert Controlling Entity |
+| `89` | LargePositionsReportingAccount | Large Positions Reporting Account |
+| `90` | SettlementFirm | Settlement Firm |
+| `91` | SettlementAccount | Settlement account |
+| `92` | ReportingMarketCenter | Reporting Market Center |
+| `93` | RelatedReportingMarketCenter | Related Reporting Market Center |
+| `94` | AwayMarket | Away Market |
+| `95` | GiveupTradingFirm | Give-up (trading) firm |
+| `96` | TakeupTradingFirm | Take-up (trading) firm |
+| `97` | GiveupClearingFirm | Give-up clearing firm |
+| `98` | TakeupClearingFirm | Take-up clearing firm |
+| `99` | OriginatingMarket | Originating Market |
+| `100` | MarginAccount | Margin account |
+| `101` | CollateralAssetAccount | Collateral asset account |
+| `102` | DataRepository | Data repository |
+| `103` | CalculationAgent | Calculation agent |
+| `104` | ExerciseNoticeSender | Sender of exercise notice |
+| `105` | ExerciseNoticeReceiver | Receiver of exercise notice |
+| `106` | RateReferenceBank | Rate reference bank |
+| `107` | Correspondent | Correspondent |
+| `109` | BeneficiaryBank | Beneficiary's bank or depository institution |
+| `110` | Borrower | Borrower |
+| `111` | PrimaryObligator | Primary obligator |
+| `112` | Guarantor | Guarantor |
+| `113` | ExcludedReferenceEntity | Excluded reference entity |
+| `114` | DeterminingParty | Determining party |
+| `115` | HedgingParty | Hedging party |
+| `116` | ReportingEntity | Reporting entity |
+| `117` | SalesPerson | Sales person |
+| `118` | Operator | Operator |
+| `119` | CSD | Central Securities Depository (CSD) |
+| `120` | ICSD | International Central Securities Depository (ICSD) |
+| `121` | TradingSubAccount | Trading sub-account |
+| `122` | InvestmentDecisionMaker | Investment decision maker |
+| `123` | PublishingIntermediary | Publishing intermediary |
+| `124` | CSDParticipant | Central Securities Depository (CSD) Participant |
+| `125` | Issuer | Issuer |
+| `126` | ContraCustomerAccount | Contra Customer Account |
+| `127` | ContraInvestmentDecisionMaker | Contra Investment Decision Maker |
+
+Used in: [UndlyInstrumentParties](/fix/groups/undly-instrument-parties)
+
+## 1062 · NoUndlyInstrumentPartySubIDs [#tag-1062]
+
+<Badge intent="info" minimal>Tag 1062</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Number of Underlying InstrumentPartySubID (1053) and InstrumentPartySubIDType (1054) entries
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UndlyInstrumentPtysSubGrp](/fix/groups/undly-instrument-ptys-sub-grp)
+
+## 1063 · UnderlyingInstrumentPartySubID [#tag-1063]
+
+<Badge intent="info" minimal>Tag 1063</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+PartySubID value within an underlying instrument party repeating group. Same values as PartySubID (523)
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UndlyInstrumentPtysSubGrp](/fix/groups/undly-instrument-ptys-sub-grp)
+
+## 1064 · UnderlyingInstrumentPartySubIDType [#tag-1064]
+
+<Badge intent="info" minimal>Tag 1064</Badge> <Badge intent="note" minimal>PartySubIDTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Type of underlying InstrumentPartySubID (1053) value. Same values as PartySubIDType (803)
+
+Code set **PartySubIDTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Firm | Firm |
+| `2` | Person | Person |
+| `3` | System | System |
+| `4` | Application | Application |
+| `5` | FullLegalNameOfFirm | Full legal name of firm |
+| `6` | PostalAddress | Postal address |
+| `7` | PhoneNumber | Phone number |
+| `8` | EmailAddress | Email address |
+| `9` | ContactName | Contact name |
+| `10` | SecuritiesAccountNumber | Securities account number (for settlement instructions) |
+| `11` | RegistrationNumber | Registration number (for settlement instructions and confirmations) |
+| `12` | RegisteredAddressForConfirmation | Registered address (for confirmation purposes) |
+| `13` | RegulatoryStatus | Regulatory status (for confirmation purposes) |
+| `14` | RegistrationName | Registration name (for settlement instructions) |
+| `15` | CashAccountNumber | Cash account number (for settlement instructions) |
+| `16` | BIC | BIC |
+| `17` | CSDParticipantMemberCode | CSD participant member code |
+| `18` | RegisteredAddress | Registered address |
+| `19` | FundAccountName | Fund account name |
+| `20` | TelexNumber | Telex number |
+| `21` | FaxNumber | Fax number |
+| `22` | SecuritiesAccountName | Securities account name |
+| `23` | CashAccountName | Cash account name |
+| `24` | Department | Department |
+| `25` | LocationDesk | Location desk |
+| `26` | PositionAccountType | Position account type |
+| `27` | SecurityLocateID | Security locate ID |
+| `28` | MarketMaker | Market maker |
+| `29` | EligibleCounterparty | Eligible counterparty |
+| `30` | ProfessionalClient | Professional client |
+| `31` | Location | Location |
+| `32` | ExecutionVenue | Execution venue |
+| `33` | CurrencyDeliveryIdentifier | Currency delivery identifier |
+| `34` | AddressCity | Address City |
+| `35` | AddressStateOrProvince | Address State/Province |
+| `36` | AddressPostalCode | Address Postal Code |
+| `37` | AddressStreet | Address Street |
+| `38` | AddressISOCountryCode | Address Country (ISO country code) |
+| `39` | ISOCountryCode | ISO country code |
+| `40` | MarketSegment | Market segment |
+| `41` | CustomerAccountType | Customer account type |
+| `42` | OmnibusAccount | Omnibus account |
+| `43` | FundsSegregationType | Funds segregation type |
+| `44` | GuaranteeFund | Guarantee fund |
+| `45` | SwapDealer | Swap dealer |
+| `46` | MajorParticipant | Major participant |
+| `47` | FinancialEntity | Financial entity |
+| `48` | USPerson | U.S. person |
+| `49` | ReportingEntityIndicator | Reporting entity indicator |
+| `50` | ElectedClearingRequirementException | Elected clearing requirement exception |
+| `51` | BusinessCenter | Business center |
+| `52` | ReferenceText | Reference text |
+| `53` | ShortMarkingExemptAccount | Short-marking exempt account |
+| `54` | ParentFirmIdentifier | Parent firm identifier |
+| `55` | ParentFirmName | Parent firm name |
+| `56` | DealIdentifier | Deal identifier |
+| `57` | SystemTradeID | System trade identifier |
+| `58` | SystemTradeSubID | System trade sub-identifier |
+| `59` | FCMCode | Futures Commission Merchant (FCM) code |
+| `60` | DlvryTrmlCode | Delivery terminal customer account/code |
+| `61` | VolntyRptEntity | Voluntary reporting entity |
+| `62` | RptObligJursdctn | Reporting obligation jurisdiction |
+| `63` | VolntyRptJursdctn | Voluntary reporting jurisdiction |
+| `64` | CompanyActivities | Company activities |
+| `65` | EEAreaDomiciled | European Economic Area domiciled |
+| `66` | ContractLinked | Contract linked to commercial or treasury financing for this counterparty |
+| `67` | ContractAbove | Contract above clearing threshold for this counterparty |
+| `68` | VolntyRptPty | Voluntary reporting party |
+| `69` | EndUser | End user |
+| `70` | LocationOrJurisdiction | Location or jurisdiction |
+| `71` | DerivativesDealer | Derivatives dealer |
+| `72` | Domicile | Domicile |
+| `73` | ExemptFromRecognition | Exempt from recognition |
+| `74` | Payer | Payer |
+| `75` | Receiver | Receiver |
+| `76` | SystematicInternaliser | Systematic Internaliser (SI) |
+| `77` | PublishingEntityIndicator | Publishing entity indicator |
+| `78` | FirstName | First name |
+| `79` | Surname | Surname |
+| `80` | DateOfBirth | Date of birth |
+| `81` | OrderTransmittingFirm | Order transmitting firm |
+| `82` | OrderTransmittingFirmBuyer | Order transmitting firm for buyer |
+| `83` | OrderTransmitterSeller | Order transmitter for seller |
+| `84` | LegalEntityIdentifier | Legal Entity Identifier (ISO 17442) LEI |
+| `85` | SubSectorClassification | Sub-sector classification |
+| `86` | PartySide | Party side |
+| `87` | LegalRegistrationCountry | Legal registration country |
+
+Used in: [UndlyInstrumentPtysSubGrp](/fix/groups/undly-instrument-ptys-sub-grp)
+
+## 1065 · BidSwapPoints [#tag-1065]
+
+<Badge intent="info" minimal>Tag 1065</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+The bid FX Swap points for an FX Swap. It is the "far bid forward points - near offer forward point". Value can be negative. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199
+
+Type: [PriceOffset](/fix/datatypes#price-offset)
+
+Used in: [Quote](/fix/messages/quote)
+
+## 1066 · OfferSwapPoints [#tag-1066]
+
+<Badge intent="info" minimal>Tag 1066</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+The offer FX Swap points for an FX Swap. It is the "far offer forward points - near bid forward points". Value can be negative. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199
+
+Type: [PriceOffset](/fix/datatypes#price-offset)
+
+Used in: [Quote](/fix/messages/quote)
+
+## 1067 · LegBidForwardPoints [#tag-1067]
+
+<Badge intent="info" minimal>Tag 1067</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+The bid FX forward points for the leg of an FX Swap. Value can be negative. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199
+
+Type: [PriceOffset](/fix/datatypes#price-offset)
+
+Used in: [LegQuotGrp](/fix/groups/leg-quot-grp)
+
+## 1068 · LegOfferForwardPoints [#tag-1068]
+
+<Badge intent="info" minimal>Tag 1068</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+The offer FX forward points for the leg of an FX Swap. Value can be negative. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199
+
+Type: [PriceOffset](/fix/datatypes#price-offset)
+
+Used in: [LegQuotGrp](/fix/groups/leg-quot-grp)
+
+## 1069 · SwapPoints [#tag-1069]
+
+<Badge intent="info" minimal>Tag 1069</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+For FX Swap, this is used to express the differential between the far leg's bid/offer and the near leg's bid/offer. Value can be negative. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199
+
+Type: [PriceOffset](/fix/datatypes#price-offset)
+
+Used in: [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderMultileg](/fix/messages/new-order-multileg)
+
+## 1070 · MDQuoteType [#tag-1070]
+
+<Badge intent="info" minimal>Tag 1070</Badge> <Badge intent="note" minimal>MDQuoteTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Identifies market data quote type.
+
+Code set **MDQuoteTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Indicative | Indicative |
+| `1` | Tradeable | Tradeable |
+| `2` | RestrictedTradeable | Restricted Tradeable |
+| `3` | Counter | Counter |
+| `4` | IndicativeAndTradeable | Indicative and Tradeable |
+
+Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [MarketDataRequest](/fix/messages/market-data-request)
+
+## 1071 · LastSwapPoints [#tag-1071]
+
+<Badge intent="info" minimal>Tag 1071</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+For FX Swap, this is used to express the last market event for the differential between the far leg's bid/offer and the near leg's bid/offer in a fill or partial fill. Value can be negative. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199
+
+Type: [PriceOffset](/fix/datatypes#price-offset)
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack)
+
+## 1072 · SideGrossTradeAmt [#tag-1072]
+
+<Badge intent="info" minimal>Tag 1072</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+The gross trade amount for this side of the trade. See also GrossTradeAmt (381) for additional definition.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
+
+## 1073 · LegLastForwardPoints [#tag-1073]
+
+<Badge intent="info" minimal>Tag 1073</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+The forward points for this leg's fill event. Value can be negative. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199
+
+Type: [PriceOffset](/fix/datatypes#price-offset)
+
+Used in: [InstrmtLegExecGrp](/fix/groups/instrmt-leg-exec-grp), [TrdInstrmtLegGrp](/fix/groups/trd-instrmt-leg-grp)
+
+## 1074 · LegCalculatedCcyLastQty [#tag-1074]
+
+<Badge intent="info" minimal>Tag 1074</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used for the calculated quantity of the other side of the currency for this leg. Can be derived from LegQty and LegLastPx.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [InstrmtLegExecGrp](/fix/groups/instrmt-leg-exec-grp), [TrdInstrmtLegGrp](/fix/groups/trd-instrmt-leg-grp)
+
+## 1075 · LegGrossTradeAmt [#tag-1075]
+
+<Badge intent="info" minimal>Tag 1075</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+The gross trade amount of the leg. For FX Futures this is used to express the notional value of a fill when LegLastQty and other quantity fields are express in terms of contract size.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [InstrmtLegExecGrp](/fix/groups/instrmt-leg-exec-grp), [TrdInstrmtLegGrp](/fix/groups/trd-instrmt-leg-grp)
+
+## 1079 · MaturityTime [#tag-1079]
+
+<Badge intent="info" minimal>Tag 1079</Badge> <Badge intent="note" minimal>TZTimeOnly</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Time of security's maturity expressed in local time with offset to UTC specified
+
+Type: [TZTimeOnly](/fix/datatypes#tz-time-only)
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 1080 · RefOrderID [#tag-1080]
+
+<Badge intent="info" minimal>Tag 1080</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+The ID reference to the order being hit or taken. For pre-trade credit/risk limit check process, this is the reference to the placed order, quote request or quote for the credit/risk limit check.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [ListOrdGrp](/fix/groups/list-ord-grp), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [PartyRiskLimitCheckRequest](/fix/messages/party-risk-limit-check-request), [PartyRiskLimitCheckRequestAck](/fix/messages/party-risk-limit-check-request-ack), [Quote](/fix/messages/quote), [TradeReportOrderDetail](/fix/components/trade-report-order-detail)
+
+## 1081 · RefOrderIDSource [#tag-1081]
+
+<Badge intent="info" minimal>Tag 1081</Badge> <Badge intent="note" minimal>RefOrderIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used to specify the source for the identifier in RefOrderID(1080). This can be an identifier provided in order depth market data when hitting (taking) a specific order or to identify what type of order or quote reference is being provided when seeking credit limit check. In the context of US CAT this can be used to identify related orders and quotes which are parent, previous, or manual orders or quotes. Previous relates to orders changing their unique system assigned order identifier.
+
+Code set **RefOrderIDSourceCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | SecondaryOrderID | Secondary order ID |
+| `1` | OrderID | Order ID |
+| `2` | MDEntryID | Market data entry ID |
+| `3` | QuoteEntryID | Quote entry ID |
+| `4` | OriginalOrderID | Original order ID |
+| `5` | QuoteID | Quote ID |
+| `6` | QuoteReqID | Quote request ID |
+| `7` | PreviousOrderIdentifier | Previous order identifier |
+| `8` | PreviousQuoteIdentifier | Previous quote identifier |
+| `9` | ParentOrderIdentifier | Parent order identifier |
+| `A` | ManualOrderIdentifier | Manual order identifier |
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [ListOrdGrp](/fix/groups/list-ord-grp), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [PartyRiskLimitCheckRequest](/fix/messages/party-risk-limit-check-request), [PartyRiskLimitCheckRequestAck](/fix/messages/party-risk-limit-check-request-ack), [Quote](/fix/messages/quote), [TradeReportOrderDetail](/fix/components/trade-report-order-detail)
+
+## 1082 · SecondaryDisplayQty [#tag-1082]
+
+<Badge intent="info" minimal>Tag 1082</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used for reserve orders when DisplayQty applies to the primary execution market (e.g.an ECN) and another quantity is to be shown at other markets (e.g. the exchange). On orders specifies the qty to be displayed, on execution reports the currently displayed quantity.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [DisplayInstruction](/fix/components/display-instruction)
+
+## 1083 · DisplayWhen [#tag-1083]
+
+<Badge intent="info" minimal>Tag 1083</Badge> <Badge intent="note" minimal>DisplayWhenCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Instructs when to refresh DisplayQty (1138).
+
+Code set **DisplayWhenCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Immediate | Immediate (after each fill) |
+| `2` | Exhaust | Exhaust (when DisplayQty = 0) |
+
+Used in: [DisplayInstruction](/fix/components/display-instruction)
+
+## 1084 · DisplayMethod [#tag-1084]
+
+<Badge intent="info" minimal>Tag 1084</Badge> <Badge intent="note" minimal>DisplayMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Defines what value to use in DisplayQty (1138). If not specified the default DisplayMethod is "1"
+
+Code set **DisplayMethodCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Initial | Initial (use original DisplayQty) |
+| `2` | New | New (use RefreshQty) |
+| `3` | Random | Random (randomize value) |
+| `4` | Undisclosed | Undisclosed (invisible order) |
+
+Used in: [DisplayInstruction](/fix/components/display-instruction)
+
+## 1085 · DisplayLowQty [#tag-1085]
+
+<Badge intent="info" minimal>Tag 1085</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Defines the lower quantity limit to a randomized refresh of DisplayQty.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [DisplayInstruction](/fix/components/display-instruction)
+
+## 1086 · DisplayHighQty [#tag-1086]
+
+<Badge intent="info" minimal>Tag 1086</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Defines the upper quantity limit to a randomized refresh of DisplayQty.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [DisplayInstruction](/fix/components/display-instruction)
+
+## 1087 · DisplayMinIncr [#tag-1087]
+
+<Badge intent="info" minimal>Tag 1087</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Defines the minimum increment to be used when calculating a random refresh of DisplayQty. A user specifies this when he wants a larger increment than the standard provided by the market (e.g. the round lot size).
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [DisplayInstruction](/fix/components/display-instruction)
+
+## 1088 · RefreshQty [#tag-1088]
+
+<Badge intent="info" minimal>Tag 1088</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Defines the quantity used to refresh DisplayQty.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [DisplayInstruction](/fix/components/display-instruction)
+
+## 1089 · MatchIncrement [#tag-1089]
+
+<Badge intent="info" minimal>Tag 1089</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Allows orders to specify a minimum quantity that applies to every execution (one execution could be for multiple counter-orders). The order may still fill against smaller orders, but the cumulative quantity of the execution must be in multiples of the MatchIncrement.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [CrossOrderCancelReplaceRequest](/fix/messages/cross-order-cancel-replace-request), [ExecutionReport](/fix/messages/execution-report), [ListOrdGrp](/fix/groups/list-ord-grp), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderCross](/fix/messages/new-order-cross), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request)
+
+## 1090 · MaxPriceLevels [#tag-1090]
+
+<Badge intent="info" minimal>Tag 1090</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Allows an order to specify a maximum number of price levels to trade through. Only valid for aggressive orders and during continuous (autoexecution) trading sessions. Property lost when order is put on book. A partially filled order is assigned last trade price as limit price. Non-filled order behaves as ordinary Market or Limit.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [CrossOrderCancelReplaceRequest](/fix/messages/cross-order-cancel-replace-request), [ExecutionReport](/fix/messages/execution-report), [ListOrdGrp](/fix/groups/list-ord-grp), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderCross](/fix/messages/new-order-cross), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request)
+
+## 1091 · PreTradeAnonymity [#tag-1091]
+
+<Badge intent="info" minimal>Tag 1091</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Allows trader to explicitly request anonymity or disclosure in pre-trade market data feeds. Anonymity is relevant in markets where counterparties are regularly disclosed in order depth feeds. Disclosure is relevant when counterparties are not normally visible.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [ListOrdGrp](/fix/groups/list-ord-grp), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [QuoteRequest](/fix/messages/quote-request), [QuoteRequestReject](/fix/messages/quote-request-reject), [QuoteResponse](/fix/messages/quote-response), [SideCrossOrdModGrp](/fix/groups/side-cross-ord-mod-grp), [TradeReportOrderDetail](/fix/components/trade-report-order-detail)
+
+## 1092 · PriceProtectionScope [#tag-1092]
+
+<Badge intent="info" minimal>Tag 1092</Badge> <Badge intent="note" minimal>PriceProtectionScopeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Defines the type of price protection the customer requires on their order.
+
+Code set **PriceProtectionScopeCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | None | None |
+| `1` | Local | Local (Exchange, ECN, ATS) |
+| `2` | National | National (Across all national markets) |
+| `3` | Global | Global (Across all markets) |
+
+Used in: [CrossOrderCancelReplaceRequest](/fix/messages/cross-order-cancel-replace-request), [ExecutionReport](/fix/messages/execution-report), [ListOrdGrp](/fix/groups/list-ord-grp), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderCross](/fix/messages/new-order-cross), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request)
+
+## 1093 · LotType [#tag-1093]
+
+<Badge intent="info" minimal>Tag 1093</Badge> <Badge intent="note" minimal>LotTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Defines the lot type assigned to the order.
+
+Code set **LotTypeCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | OddLot | Odd Lot |
+| `2` | RoundLot | Round Lot |
+| `3` | BlockLot | Block Lot |
+| `4` | RoundLotBasedUpon | Round lot based upon UnitOfMeasure(996) |
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [LotTypeRules](/fix/groups/lot-type-rules), [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [TradeReportOrderDetail](/fix/components/trade-report-order-detail)
+
+## 1094 · PegPriceType [#tag-1094]
+
+<Badge intent="info" minimal>Tag 1094</Badge> <Badge intent="note" minimal>PegPriceTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Defines the type of peg.
+
+Code set **PegPriceTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | LastPeg | Last peg (last sale) |
+| `2` | MidPricePeg | Mid-price peg (midprice of inside quote) |
+| `3` | OpeningPeg | Opening peg |
+| `4` | MarketPeg | Market peg |
+| `5` | PrimaryPeg | Primary peg (primary market - buy at bid or sell at offer) |
+| `7` | PegToVWAP | Peg to VWAP |
+| `8` | TrailingStopPeg | Trailing Stop Peg |
+| `9` | PegToLimitPrice | Peg to Limit Price |
+| `10` | ShortSaleMinPricePeg | Short sale minimum price Peg |
+
+Used in: [PegInstructions](/fix/components/peg-instructions)
+
+## 1095 · PeggedRefPrice [#tag-1095]
+
+<Badge intent="info" minimal>Tag 1095</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+The value of the reference price that the order is pegged to. PeggedRefPrice + PegOffsetValue (211) = PeggedPrice (839) unless the limit price (44, Price) is breached. The values may not be exact due to rounding.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [ExecutionReport](/fix/messages/execution-report)
+
+## 1096 · PegSecurityIDSource [#tag-1096]
+
+<Badge intent="info" minimal>Tag 1096</Badge> <Badge intent="note" minimal>SecurityIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Defines the identity of the security off whose prices the order will peg. Same values as SecurityIDSource (22)
+
+Code set **SecurityIDSourceCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | CUSIP | CUSIP |
+| `2` | SEDOL | SEDOL |
+| `3` | QUIK | QUIK |
+| `4` | ISINNumber | ISIN |
+| `5` | RICCode | RIC |
+| `6` | ISOCurrencyCode | ISO Currency Code |
+| `7` | ISOCountryCode | ISO Country Code |
+| `8` | ExchangeSymbol | Exchange symbol |
+| `9` | ConsolidatedTapeAssociation | Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format) |
+| `A` | BloombergSymbol | Bloomberg Symbol |
+| `B` | Wertpapier | Wertpapier |
+| `C` | Dutch | Dutch |
+| `D` | Valoren | Valoren |
+| `E` | Sicovam | Sicovam |
+| `F` | Belgian | Belgian |
+| `G` | Common | "Common" (Clearstream and Euroclear) |
+| `H` | ClearingHouse | Clearing house / Clearing organization |
+| `I` | ISDAFpMLSpecification | ISDA/FpML product specification (XML in SecurityXML(1185)) |
+| `J` | OptionPriceReportingAuthority | Option Price Reporting Authority |
+| `K` | ISDAFpMLURL | ISDA/FpML product URL (URL in SecurityID(48)) |
+| `L` | LetterOfCredit | Letter of credit |
+| `M` | MarketplaceAssignedIdentifier | Marketplace-assigned Identifier |
+| `N` | MarkitREDEntityCLIP | Markit RED entity CLIP |
+| `P` | MarkitREDPairCLIP | Markit RED pair CLIP |
+| `Q` | CFTCCommodityCode | CFTC commodity code |
+| `R` | ISDACommodityReferencePrice | ISDA Commodity Reference Price |
+| `S` | FinancialInstrumentGlobalIdentifier | Financial Instrument Global Identifier |
+| `T` | LegalEntityIdentifier | Legal entity identifier |
+| `U` | Synthetic | Synthetic |
+| `V` | FidessaInstrumentMnemonic | Fidessa Instrument Mnemonic (FIM) |
+| `W` | IndexName | Index name |
+| `X` | UniformSymbol | Uniform Symbol (UMTF Symbol) |
+
+Used in: [PegInstructions](/fix/components/peg-instructions)
+
+## 1097 · PegSecurityID [#tag-1097]
+
+<Badge intent="info" minimal>Tag 1097</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Defines the identity of the security off whose prices the order will peg.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PegInstructions](/fix/components/peg-instructions)
+
+## 1098 · PegSymbol [#tag-1098]
+
+<Badge intent="info" minimal>Tag 1098</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Defines the common, 'human understood' representation of the security off whose prices the order will Peg.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PegInstructions](/fix/components/peg-instructions)
+
+## 1099 · PegSecurityDesc [#tag-1099]
+
+<Badge intent="info" minimal>Tag 1099</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Security description of the security off whose prices the order will Peg.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PegInstructions](/fix/components/peg-instructions)
+
+## 1100 · TriggerType [#tag-1100]
+
+<Badge intent="info" minimal>Tag 1100</Badge> <Badge intent="note" minimal>TriggerTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Defines when the trigger will hit, i.e. the action specified by the trigger instructions will come into effect.
+
+Code set **TriggerTypeCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | PartialExecution | Partial Execution |
+| `2` | SpecifiedTradingSession | Specified Trading Session |
+| `3` | NextAuction | Next Auction |
+| `4` | PriceMovement | Price Movement |
+| `5` | OnOrderEntryOrModification | On Order Entry or order modification entry |
+
+Used in: [TriggeringInstruction](/fix/components/triggering-instruction)
+
+## 1101 · TriggerAction [#tag-1101]
+
+<Badge intent="info" minimal>Tag 1101</Badge> <Badge intent="note" minimal>TriggerActionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Defines the type of action to take when the trigger hits.
+
+Code set **TriggerActionCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Activate | Activate |
+| `2` | Modify | Modify |
+| `3` | Cancel | Cancel |
+
+Used in: [TriggeringInstruction](/fix/components/triggering-instruction)
+
+## 1102 · TriggerPrice [#tag-1102]
+
+<Badge intent="info" minimal>Tag 1102</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+The price at which the trigger should hit.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [TriggeringInstruction](/fix/components/triggering-instruction)
+
+## 1103 · TriggerSymbol [#tag-1103]
+
+<Badge intent="info" minimal>Tag 1103</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Defines the common, 'human understood' representation of the security whose prices will be tracked by the trigger logic.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TriggeringInstruction](/fix/components/triggering-instruction)
+
+## 1104 · TriggerSecurityID [#tag-1104]
+
+<Badge intent="info" minimal>Tag 1104</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Defines the identity of the security whose prices will be tracked by the trigger logic.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TriggeringInstruction](/fix/components/triggering-instruction)
+
+## 1105 · TriggerSecurityIDSource [#tag-1105]
+
+<Badge intent="info" minimal>Tag 1105</Badge> <Badge intent="note" minimal>SecurityIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Defines the identity of the security whose prices will be tracked by the trigger logic. Same values as SecurityIDSource (22).
+
+Code set **SecurityIDSourceCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | CUSIP | CUSIP |
+| `2` | SEDOL | SEDOL |
+| `3` | QUIK | QUIK |
+| `4` | ISINNumber | ISIN |
+| `5` | RICCode | RIC |
+| `6` | ISOCurrencyCode | ISO Currency Code |
+| `7` | ISOCountryCode | ISO Country Code |
+| `8` | ExchangeSymbol | Exchange symbol |
+| `9` | ConsolidatedTapeAssociation | Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format) |
+| `A` | BloombergSymbol | Bloomberg Symbol |
+| `B` | Wertpapier | Wertpapier |
+| `C` | Dutch | Dutch |
+| `D` | Valoren | Valoren |
+| `E` | Sicovam | Sicovam |
+| `F` | Belgian | Belgian |
+| `G` | Common | "Common" (Clearstream and Euroclear) |
+| `H` | ClearingHouse | Clearing house / Clearing organization |
+| `I` | ISDAFpMLSpecification | ISDA/FpML product specification (XML in SecurityXML(1185)) |
+| `J` | OptionPriceReportingAuthority | Option Price Reporting Authority |
+| `K` | ISDAFpMLURL | ISDA/FpML product URL (URL in SecurityID(48)) |
+| `L` | LetterOfCredit | Letter of credit |
+| `M` | MarketplaceAssignedIdentifier | Marketplace-assigned Identifier |
+| `N` | MarkitREDEntityCLIP | Markit RED entity CLIP |
+| `P` | MarkitREDPairCLIP | Markit RED pair CLIP |
+| `Q` | CFTCCommodityCode | CFTC commodity code |
+| `R` | ISDACommodityReferencePrice | ISDA Commodity Reference Price |
+| `S` | FinancialInstrumentGlobalIdentifier | Financial Instrument Global Identifier |
+| `T` | LegalEntityIdentifier | Legal entity identifier |
+| `U` | Synthetic | Synthetic |
+| `V` | FidessaInstrumentMnemonic | Fidessa Instrument Mnemonic (FIM) |
+| `W` | IndexName | Index name |
+| `X` | UniformSymbol | Uniform Symbol (UMTF Symbol) |
+
+Used in: [TriggeringInstruction](/fix/components/triggering-instruction)
+
+## 1106 · TriggerSecurityDesc [#tag-1106]
+
+<Badge intent="info" minimal>Tag 1106</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Defines the security description of the security whose prices will be tracked by the trigger logic.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TriggeringInstruction](/fix/components/triggering-instruction)
+
+## 1107 · TriggerPriceType [#tag-1107]
+
+<Badge intent="info" minimal>Tag 1107</Badge> <Badge intent="note" minimal>TriggerPriceTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+The type of price that the trigger is compared to.
+
+Code set **TriggerPriceTypeCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | BestOffer | Best Offer |
+| `2` | LastTrade | Last Trade |
+| `3` | BestBid | Best Bid |
+| `4` | BestBidOrLastTrade | Best Bid or Last Trade |
+| `5` | BestOfferOrLastTrade | Best Offer or Last Trade |
+| `6` | BestMid | Best Mid |
+
+Used in: [TriggeringInstruction](/fix/components/triggering-instruction)
+
+## 1108 · TriggerPriceTypeScope [#tag-1108]
+
+<Badge intent="info" minimal>Tag 1108</Badge> <Badge intent="note" minimal>TriggerPriceTypeScopeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Defines the type of price protection the customer requires on their order.
+
+Code set **TriggerPriceTypeScopeCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | None | None |
+| `1` | Local | Local (Exchange, ECN, ATS) |
+| `2` | National | National (Across all national markets) |
+| `3` | Global | Global (Across all markets) |
+
+Used in: [TriggeringInstruction](/fix/components/triggering-instruction)
+
+## 1109 · TriggerPriceDirection [#tag-1109]
+
+<Badge intent="info" minimal>Tag 1109</Badge> <Badge intent="note" minimal>TriggerPriceDirectionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+The side from which the trigger price is reached.
+
+Code set **TriggerPriceDirectionCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `U` | Up | Trigger if the price of the specified type goes UP to or through the specified Trigger Price. |
+| `D` | Down | Trigger if the price of the specified type goes DOWN to or through the specified Trigger Price. |
+
+Used in: [TriggeringInstruction](/fix/components/triggering-instruction)
+
+## 1110 · TriggerNewPrice [#tag-1110]
+
+<Badge intent="info" minimal>Tag 1110</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+The Price that the order should have after the trigger has hit. Could be applicable for any trigger type, but must be specified for Trigger Type 1.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [TriggeringInstruction](/fix/components/triggering-instruction)
+
+## 1111 · TriggerOrderType [#tag-1111]
+
+<Badge intent="info" minimal>Tag 1111</Badge> <Badge intent="note" minimal>TriggerOrderTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+The OrdType the order should have after the trigger has hit. Required to express orders that change from Limit to Market. Other values from OrdType (40) may be used if appropriate and bilaterally agreed upon.
+
+Code set **TriggerOrderTypeCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Market | Market |
+| `2` | Limit | Limit |
+
+Used in: [TriggeringInstruction](/fix/components/triggering-instruction)
+
+## 1112 · TriggerNewQty [#tag-1112]
+
+<Badge intent="info" minimal>Tag 1112</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+The Quantity the order should have after the trigger has hit.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [TriggeringInstruction](/fix/components/triggering-instruction)
+
+## 1113 · TriggerTradingSessionID [#tag-1113]
+
+<Badge intent="info" minimal>Tag 1113</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Defines the trading session at which the order will be activated.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TriggeringInstruction](/fix/components/triggering-instruction)
+
+## 1114 · TriggerTradingSessionSubID [#tag-1114]
+
+<Badge intent="info" minimal>Tag 1114</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Defines the subordinate trading session at which the order will be activated.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TriggeringInstruction](/fix/components/triggering-instruction)
+
+## 1115 · OrderCategory [#tag-1115]
+
+<Badge intent="info" minimal>Tag 1115</Badge> <Badge intent="note" minimal>OrderCategoryCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Defines the type of interest behind a trade (fill or partial fill).
+
+Code set **OrderCategoryCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Order | Order |
+| `2` | Quote | Quote |
+| `3` | PrivatelyNegotiatedTrade | Privately Negotiated Trade |
+| `4` | MultilegOrder | Multileg order |
+| `5` | LinkedOrder | Linked order |
+| `6` | QuoteRequest | Quote Request |
+| `7` | ImpliedOrder | Implied Order |
+| `8` | CrossOrder | Cross Order |
+| `9` | StreamingPrice | Streaming price (quote) |
+| `A` | InternalCrossOrder | Internal Cross Order |
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
+
+## 1116 · NoRootPartyIDs [#tag-1116]
+
+<Badge intent="info" minimal>Tag 1116</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Number of RootPartyID (1117), RootPartyIDSource (1118), and RootPartyRole (1119) entries
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [RootParties](/fix/groups/root-parties)
+
+## 1117 · RootPartyID [#tag-1117]
+
+<Badge intent="info" minimal>Tag 1117</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+PartyID value within a root parties component. Same values as PartyID (448)
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [RootParties](/fix/groups/root-parties)
+
+## 1118 · RootPartyIDSource [#tag-1118]
+
+<Badge intent="info" minimal>Tag 1118</Badge> <Badge intent="note" minimal>PartyIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+PartyIDSource value within a root parties component. Same values as PartyIDSource (447)
+
+Code set **PartyIDSourceCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `6` | UKNationalInsuranceOrPensionNumber | UK National Insurance or Pension Number |
+| `7` | USSocialSecurityNumber | US Social Security Number |
+| `8` | USEmployerOrTaxIDNumber | US Employer or Tax ID Number |
+| `9` | AustralianBusinessNumber | Australian Business Number |
+| `A` | AustralianTaxFileNumber | Australian Tax File Number |
+| `J` | TaxID | Tax ID |
+| `1` | KoreanInvestorID | Korean Investor ID |
+| `2` | TaiwaneseForeignInvestorID | Taiwanese Qualified Foreign Investor ID QFII/FID |
+| `3` | TaiwaneseTradingAcct | Taiwanese Trading Acct |
+| `4` | MalaysianCentralDepository | Malaysian Central Depository (MCD) number |
+| `5` | ChineseInvestorID | Chinese Investor ID |
+| `I` | ISITCAcronym | Directed broker three character acronym as defined in ISITC "ETC Best Practice" guidelines document |
+| `B` | BIC | BIC (Bank Identification Code - SWIFT managed) code (ISO9362 - See "Appendix 6-B") |
+| `C` | GeneralIdentifier | Generally accepted market participant identifier (e.g. NASD mnemonic) |
+| `D` | Proprietary | Proprietary / Custom code |
+| `E` | ISOCountryCode | ISO Country Code |
+| `F` | SettlementEntityLocation | Settlement Entity Location (note if Local Market Settlement use "E=ISO Country Code") (see "Appendix 6-G" for valid values) |
+| `G` | MIC | Market Identifier Code (ISO 10383) MIC |
+| `H` | CSDParticipant | CSD participant/member code (e.g.. Euroclear, DTC, CREST or Kassenverein number) |
+| `K` | AustralianCompanyNumber | Australian Company Number |
+| `L` | AustralianRegisteredBodyNumber | Australian Registered Body Number |
+| `M` | CFTCReportingFirmIdentifier | CFTC reporting firm identifier |
+| `N` | LegalEntityIdentifier | Legal Entity Identifier (ISO 17442) LEI |
+| `O` | InterimIdentifier | Interim identifier |
+| `P` | ShortCodeIdentifier | Short code identifier |
+| `Q` | NationalIDNaturalPerson | National ID of natural person |
+| `R` | IndiaPermanentAccountNumber | India Permanent Account Number |
+| `S` | FDID | Firm designated identifier |
+| `T` | SPSAID | Special Segregated Account ID |
+| `U` | MasterSPSAID | Master Special Segregated Account ID |
+
+Used in: [RootParties](/fix/groups/root-parties)
+
+## 1119 · RootPartyRole [#tag-1119]
+
+<Badge intent="info" minimal>Tag 1119</Badge> <Badge intent="note" minimal>PartyRoleCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+PartyRole value within a root parties component. Same values as PartyRole (452)
+
+Code set **PartyRoleCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | ExecutingFirm | Executing Firm (formerly FIX 4.2 ExecBroker) |
+| `2` | BrokerOfCredit | Broker of Credit (formerly FIX 4.2 BrokerOfCredit) |
+| `3` | ClientID | Client ID (formerly FIX 4.2 ClientID) |
+| `4` | ClearingFirm | Clearing Firm (formerly FIX 4.2 ClearingFirm) |
+| `5` | InvestorID | Investor ID |
+| `6` | IntroducingFirm | Introducing Firm |
+| `7` | EnteringFirm | Entering Firm |
+| `8` | Locate | Locate / Lending Firm (for short-sales) |
+| `9` | FundManagerClientID | Fund Manager Client ID (for CIV) |
+| `10` | SettlementLocation | Settlement Location (formerly FIX 4.2 SettlLocation) |
+| `11` | OrderOriginationTrader | Order Origination Trader (associated with Order Origination Firm - i.e. trader who initiates/submits the order) |
+| `12` | ExecutingTrader | Executing Trader (associated with Executing Firm - actually executes) |
+| `13` | OrderOriginationFirm | Order Origination Firm (e.g. buy-side firm) |
+| `14` | GiveupClearingFirmDepr | Giveup Clearing Firm (firm to which trade is given up) |
+| `15` | CorrespondantClearingFirm | Correspondant Clearing Firm |
+| `16` | ExecutingSystem | Executing System |
+| `17` | ContraFirm | Contra Firm |
+| `18` | ContraClearingFirm | Contra Clearing Firm |
+| `19` | SponsoringFirm | Sponsoring Firm |
+| `20` | UnderlyingContraFirm | Underlying Contra Firm |
+| `21` | ClearingOrganization | Clearing Organization |
+| `22` | Exchange | Exchange |
+| `24` | CustomerAccount | Customer Account |
+| `25` | CorrespondentClearingOrganization | Correspondent Clearing Organization |
+| `26` | CorrespondentBroker | Correspondent Broker |
+| `27` | Buyer | Buyer/Seller (Receiver/Deliverer) |
+| `28` | Custodian | Custodian |
+| `29` | Intermediary | Intermediary |
+| `30` | Agent | Agent |
+| `31` | SubCustodian | Sub-custodian |
+| `32` | Beneficiary | Beneficiary |
+| `33` | InterestedParty | Interested party |
+| `34` | RegulatoryBody | Regulatory body |
+| `35` | LiquidityProvider | Liquidity provider |
+| `36` | EnteringTrader | Entering trader |
+| `37` | ContraTrader | Contra trader |
+| `38` | PositionAccount | Position account |
+| `39` | ContraInvestorID | Contra Investor ID |
+| `40` | TransferToFirm | Transfer to Firm |
+| `41` | ContraPositionAccount | Contra Position Account |
+| `42` | ContraExchange | Contra Exchange |
+| `43` | InternalCarryAccount | Internal Carry Account |
+| `44` | OrderEntryOperatorID | Order Entry Operator ID |
+| `45` | SecondaryAccountNumber | Secondary Account Number |
+| `46` | ForeignFirm | Foreign Firm |
+| `47` | ThirdPartyAllocationFirm | Third Party Allocation Firm |
+| `48` | ClaimingAccount | Claiming Account |
+| `49` | AssetManager | Asset Manager |
+| `50` | PledgorAccount | Pledgor Account |
+| `51` | PledgeeAccount | Pledgee Account |
+| `52` | LargeTraderReportableAccount | Large Trader Reportable Account |
+| `53` | TraderMnemonic | Trader mnemonic |
+| `54` | SenderLocation | Sender Location |
+| `55` | SessionID | Session ID |
+| `56` | AcceptableCounterparty | Acceptable Counterparty |
+| `57` | UnacceptableCounterparty | Unacceptable Counterparty |
+| `58` | EnteringUnit | Entering Unit |
+| `59` | ExecutingUnit | Executing Unit |
+| `60` | IntroducingBroker | Introducing Broker |
+| `61` | QuoteOriginator | Quote originator |
+| `62` | ReportOriginator | Report originator |
+| `63` | SystematicInternaliser | Systematic internaliser (SI) |
+| `64` | MultilateralTradingFacility | Multilateral Trading Facility (MTF) |
+| `65` | RegulatedMarket | Regulated Market (RM) |
+| `66` | MarketMaker | Market Maker |
+| `67` | InvestmentFirm | Investment Firm |
+| `68` | HostCompetentAuthority | Host Competent Authority (Host CA) |
+| `69` | HomeCompetentAuthority | Home Competent Authority (Home CA) |
+| `70` | CompetentAuthorityLiquidity | Competent Authority of the most relevant market in terms of liquidity (CAL) |
+| `71` | CompetentAuthorityTransactionVenue | Competent Authority of the Transaction (Execution) Venue (CATV) |
+| `72` | ReportingIntermediary | Reporting intermediary |
+| `73` | ExecutionVenue | Execution Venue |
+| `74` | MarketDataEntryOriginator | Market data entry originator |
+| `75` | LocationID | Location ID |
+| `76` | DeskID | Desk ID |
+| `77` | MarketDataMarket | Market data market |
+| `78` | AllocationEntity | Allocation Entity |
+| `79` | PrimeBroker | Prime Broker providing General Trade Services |
+| `80` | StepOutFirm | Step-Out Firm (Prime Broker) |
+| `81` | BrokerClearingID | Broker cient ID |
+| `82` | CentralRegistrationDepository | Central Registration Depository (CRD) |
+| `83` | ClearingAccount | Clearing Account |
+| `84` | AcceptableSettlingCounterparty | Acceptable Settling Counterparty |
+| `85` | UnacceptableSettlingCounterparty | Unacceptable Settling Counterparty |
+| `86` | CLSMemberBank | CLS Member Bank |
+| `87` | InConcertGroup | In Concert Group |
+| `88` | InConcertControllingEntity | In Concert Controlling Entity |
+| `89` | LargePositionsReportingAccount | Large Positions Reporting Account |
+| `90` | SettlementFirm | Settlement Firm |
+| `91` | SettlementAccount | Settlement account |
+| `92` | ReportingMarketCenter | Reporting Market Center |
+| `93` | RelatedReportingMarketCenter | Related Reporting Market Center |
+| `94` | AwayMarket | Away Market |
+| `95` | GiveupTradingFirm | Give-up (trading) firm |
+| `96` | TakeupTradingFirm | Take-up (trading) firm |
+| `97` | GiveupClearingFirm | Give-up clearing firm |
+| `98` | TakeupClearingFirm | Take-up clearing firm |
+| `99` | OriginatingMarket | Originating Market |
+| `100` | MarginAccount | Margin account |
+| `101` | CollateralAssetAccount | Collateral asset account |
+| `102` | DataRepository | Data repository |
+| `103` | CalculationAgent | Calculation agent |
+| `104` | ExerciseNoticeSender | Sender of exercise notice |
+| `105` | ExerciseNoticeReceiver | Receiver of exercise notice |
+| `106` | RateReferenceBank | Rate reference bank |
+| `107` | Correspondent | Correspondent |
+| `109` | BeneficiaryBank | Beneficiary's bank or depository institution |
+| `110` | Borrower | Borrower |
+| `111` | PrimaryObligator | Primary obligator |
+| `112` | Guarantor | Guarantor |
+| `113` | ExcludedReferenceEntity | Excluded reference entity |
+| `114` | DeterminingParty | Determining party |
+| `115` | HedgingParty | Hedging party |
+| `116` | ReportingEntity | Reporting entity |
+| `117` | SalesPerson | Sales person |
+| `118` | Operator | Operator |
+| `119` | CSD | Central Securities Depository (CSD) |
+| `120` | ICSD | International Central Securities Depository (ICSD) |
+| `121` | TradingSubAccount | Trading sub-account |
+| `122` | InvestmentDecisionMaker | Investment decision maker |
+| `123` | PublishingIntermediary | Publishing intermediary |
+| `124` | CSDParticipant | Central Securities Depository (CSD) Participant |
+| `125` | Issuer | Issuer |
+| `126` | ContraCustomerAccount | Contra Customer Account |
+| `127` | ContraInvestmentDecisionMaker | Contra Investment Decision Maker |
+
+Used in: [RootParties](/fix/groups/root-parties)
+
+## 1120 · NoRootPartySubIDs [#tag-1120]
+
+<Badge intent="info" minimal>Tag 1120</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Number of RootPartySubID (1121) and RootPartySubIDType (1122) entries
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [RootSubParties](/fix/groups/root-sub-parties)
+
+## 1121 · RootPartySubID [#tag-1121]
+
+<Badge intent="info" minimal>Tag 1121</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+PartySubID value within a root parties component. Same values as PartySubID (523)
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [RootSubParties](/fix/groups/root-sub-parties)
+
+## 1122 · RootPartySubIDType [#tag-1122]
+
+<Badge intent="info" minimal>Tag 1122</Badge> <Badge intent="note" minimal>PartySubIDTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Type of RootPartySubID (1121) value. Same values as PartySubIDType (803)
+
+Code set **PartySubIDTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Firm | Firm |
+| `2` | Person | Person |
+| `3` | System | System |
+| `4` | Application | Application |
+| `5` | FullLegalNameOfFirm | Full legal name of firm |
+| `6` | PostalAddress | Postal address |
+| `7` | PhoneNumber | Phone number |
+| `8` | EmailAddress | Email address |
+| `9` | ContactName | Contact name |
+| `10` | SecuritiesAccountNumber | Securities account number (for settlement instructions) |
+| `11` | RegistrationNumber | Registration number (for settlement instructions and confirmations) |
+| `12` | RegisteredAddressForConfirmation | Registered address (for confirmation purposes) |
+| `13` | RegulatoryStatus | Regulatory status (for confirmation purposes) |
+| `14` | RegistrationName | Registration name (for settlement instructions) |
+| `15` | CashAccountNumber | Cash account number (for settlement instructions) |
+| `16` | BIC | BIC |
+| `17` | CSDParticipantMemberCode | CSD participant member code |
+| `18` | RegisteredAddress | Registered address |
+| `19` | FundAccountName | Fund account name |
+| `20` | TelexNumber | Telex number |
+| `21` | FaxNumber | Fax number |
+| `22` | SecuritiesAccountName | Securities account name |
+| `23` | CashAccountName | Cash account name |
+| `24` | Department | Department |
+| `25` | LocationDesk | Location desk |
+| `26` | PositionAccountType | Position account type |
+| `27` | SecurityLocateID | Security locate ID |
+| `28` | MarketMaker | Market maker |
+| `29` | EligibleCounterparty | Eligible counterparty |
+| `30` | ProfessionalClient | Professional client |
+| `31` | Location | Location |
+| `32` | ExecutionVenue | Execution venue |
+| `33` | CurrencyDeliveryIdentifier | Currency delivery identifier |
+| `34` | AddressCity | Address City |
+| `35` | AddressStateOrProvince | Address State/Province |
+| `36` | AddressPostalCode | Address Postal Code |
+| `37` | AddressStreet | Address Street |
+| `38` | AddressISOCountryCode | Address Country (ISO country code) |
+| `39` | ISOCountryCode | ISO country code |
+| `40` | MarketSegment | Market segment |
+| `41` | CustomerAccountType | Customer account type |
+| `42` | OmnibusAccount | Omnibus account |
+| `43` | FundsSegregationType | Funds segregation type |
+| `44` | GuaranteeFund | Guarantee fund |
+| `45` | SwapDealer | Swap dealer |
+| `46` | MajorParticipant | Major participant |
+| `47` | FinancialEntity | Financial entity |
+| `48` | USPerson | U.S. person |
+| `49` | ReportingEntityIndicator | Reporting entity indicator |
+| `50` | ElectedClearingRequirementException | Elected clearing requirement exception |
+| `51` | BusinessCenter | Business center |
+| `52` | ReferenceText | Reference text |
+| `53` | ShortMarkingExemptAccount | Short-marking exempt account |
+| `54` | ParentFirmIdentifier | Parent firm identifier |
+| `55` | ParentFirmName | Parent firm name |
+| `56` | DealIdentifier | Deal identifier |
+| `57` | SystemTradeID | System trade identifier |
+| `58` | SystemTradeSubID | System trade sub-identifier |
+| `59` | FCMCode | Futures Commission Merchant (FCM) code |
+| `60` | DlvryTrmlCode | Delivery terminal customer account/code |
+| `61` | VolntyRptEntity | Voluntary reporting entity |
+| `62` | RptObligJursdctn | Reporting obligation jurisdiction |
+| `63` | VolntyRptJursdctn | Voluntary reporting jurisdiction |
+| `64` | CompanyActivities | Company activities |
+| `65` | EEAreaDomiciled | European Economic Area domiciled |
+| `66` | ContractLinked | Contract linked to commercial or treasury financing for this counterparty |
+| `67` | ContractAbove | Contract above clearing threshold for this counterparty |
+| `68` | VolntyRptPty | Voluntary reporting party |
+| `69` | EndUser | End user |
+| `70` | LocationOrJurisdiction | Location or jurisdiction |
+| `71` | DerivativesDealer | Derivatives dealer |
+| `72` | Domicile | Domicile |
+| `73` | ExemptFromRecognition | Exempt from recognition |
+| `74` | Payer | Payer |
+| `75` | Receiver | Receiver |
+| `76` | SystematicInternaliser | Systematic Internaliser (SI) |
+| `77` | PublishingEntityIndicator | Publishing entity indicator |
+| `78` | FirstName | First name |
+| `79` | Surname | Surname |
+| `80` | DateOfBirth | Date of birth |
+| `81` | OrderTransmittingFirm | Order transmitting firm |
+| `82` | OrderTransmittingFirmBuyer | Order transmitting firm for buyer |
+| `83` | OrderTransmitterSeller | Order transmitter for seller |
+| `84` | LegalEntityIdentifier | Legal Entity Identifier (ISO 17442) LEI |
+| `85` | SubSectorClassification | Sub-sector classification |
+| `86` | PartySide | Party side |
+| `87` | LegalRegistrationCountry | Legal registration country |
+
+Used in: [RootSubParties](/fix/groups/root-sub-parties)
+
+## 1123 · TradeHandlingInstr [#tag-1123]
+
+<Badge intent="info" minimal>Tag 1123</Badge> <Badge intent="note" minimal>TradeHandlingInstrCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Specified how the TradeCaptureReport(35=AE) should be handled by the respondent.
+
+Code set **TradeHandlingInstrCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | TradeConfirmation | Trade confirmation |
+| `1` | TwoPartyReport | Two-party report |
+| `2` | OnePartyReportForMatching | One-party report for matching |
+| `3` | OnePartyReportForPassThrough | One-party report for pass through |
+| `4` | AutomatedFloorOrderRouting | Automated floor order routing |
+| `5` | TwoPartyReportForClaim | Two-party report for claim |
+| `6` | OnePartyReport | One-party report |
+| `7` | ThirdPtyRptForPassThrough | Third-party report for pass through |
+| `8` | OnePartyReportAutoMatch | One-party report for auto-match |
+
+Used in: [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack), [TradeCaptureReportRequest](/fix/messages/trade-capture-report-request)
+
+## 1124 · OrigTradeHandlingInstr [#tag-1124]
+
+<Badge intent="info" minimal>Tag 1124</Badge> <Badge intent="note" minimal>TradeHandlingInstrCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Optionally used with TradeHandlingInstr = 0 to relay the trade handling instruction used when reporting the trade to the marketplace. Same values as TradeHandlingInstr (1123)
+
+Code set **TradeHandlingInstrCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | TradeConfirmation | Trade confirmation |
+| `1` | TwoPartyReport | Two-party report |
+| `2` | OnePartyReportForMatching | One-party report for matching |
+| `3` | OnePartyReportForPassThrough | One-party report for pass through |
+| `4` | AutomatedFloorOrderRouting | Automated floor order routing |
+| `5` | TwoPartyReportForClaim | Two-party report for claim |
+| `6` | OnePartyReport | One-party report |
+| `7` | ThirdPtyRptForPassThrough | Third-party report for pass through |
+| `8` | OnePartyReportAutoMatch | One-party report for auto-match |
+
+Used in: [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack)
+
+## 1125 · OrigTradeDate [#tag-1125]
+
+<Badge intent="info" minimal>Tag 1125</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used to preserve original trade date when original trade is being referenced in a subsequent trade transaction such as a transfer
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack)
+
+## 1126 · OrigTradeID [#tag-1126]
+
+<Badge intent="info" minimal>Tag 1126</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used to preserve original trade id when original trade is being referenced in a subsequent trade transaction such as a transfer
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack)
+
+## 1127 · OrigSecondaryTradeID [#tag-1127]
+
+<Badge intent="info" minimal>Tag 1127</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Used to preserve original secondary trade id when original trade is being referenced in a subsequent trade transaction such as a transfer
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack)
+
+## 1128 · ApplVerID [#tag-1128]
+
+<Badge intent="info" minimal>Tag 1128</Badge> <Badge intent="note" minimal>ApplVerIDCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Specifies the service pack release being applied at message level. Enumerated field with values assigned at time of service pack release
+
+Code set **ApplVerIDCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | FIX27 | FIX27 |
+| `1` | FIX30 | FIX30 |
+| `2` | FIX40 | FIX40 |
+| `3` | FIX41 | FIX41 |
+| `4` | FIX42 | FIX42 |
+| `5` | FIX43 | FIX43 |
+| `6` | FIX44 | FIX44 |
+| `7` | FIX50 | FIX50 |
+| `8` | FIX50SP1 | FIX50SP1 |
+| `9` | FIX50SP2 | FIX50SP2 |
+| `10` | FIXLatest | FIXLatest |
+
+Used in: [StandardHeader](/fix/components/standard-header)
+
+## 1129 · CstmApplVerID [#tag-1129]
+
+<Badge intent="info" minimal>Tag 1129</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Specifies a custom extension to a message being applied at the message level. Enumerated field
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [StandardHeader](/fix/components/standard-header)
+
+## 1130 · RefApplVerID [#tag-1130]
+
+<Badge intent="info" minimal>Tag 1130</Badge> <Badge intent="note" minimal>ApplVerIDCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Specifies the service pack release being applied to a message at the session level. Enumerated field with values assigned at time of service pack release. Uses same values as ApplVerID
+
+Code set **ApplVerIDCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | FIX27 | FIX27 |
+| `1` | FIX30 | FIX30 |
+| `2` | FIX40 | FIX40 |
+| `3` | FIX41 | FIX41 |
+| `4` | FIX42 | FIX42 |
+| `5` | FIX43 | FIX43 |
+| `6` | FIX44 | FIX44 |
+| `7` | FIX50 | FIX50 |
+| `8` | FIX50SP1 | FIX50SP1 |
+| `9` | FIX50SP2 | FIX50SP2 |
+| `10` | FIXLatest | FIXLatest |
+
+Used in: [BusinessMessageReject](/fix/messages/business-message-reject), [MsgTypeGrp](/fix/groups/msg-type-grp), [Reject](/fix/messages/reject)
+
+## 1131 · RefCstmApplVerID [#tag-1131]
+
+<Badge intent="info" minimal>Tag 1131</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Specifies a custom extension to a message being applied at the session level.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [BusinessMessageReject](/fix/messages/business-message-reject), [MsgTypeGrp](/fix/groups/msg-type-grp), [Reject](/fix/messages/reject)
+
+## 1132 · TZTransactTime [#tag-1132]
+
+<Badge intent="info" minimal>Tag 1132</Badge> <Badge intent="note" minimal>TZTimestamp</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Transact time in the local date-time stamp with a TZ offset to UTC identified
+
+Type: [TZTimestamp](/fix/datatypes#tz-timestamp)
+
+Used in: [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 1133 · ExDestinationIDSource [#tag-1133]
+
+<Badge intent="info" minimal>Tag 1133</Badge> <Badge intent="note" minimal>ExDestinationIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+The ID source of ExDestination
+
+Code set **ExDestinationIDSourceCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `B` | BIC | BIC (Bank Identification Code) (ISO 9362) |
+| `C` | GeneralIdentifier | Generally accepted market participant identifier (e.g. NASD mnemonic) |
+| `D` | Proprietary | Proprietary / Custom code |
+| `E` | ISOCountryCode | ISO Country Code |
+| `G` | MIC | MIC (ISO 10383 - Market Identifier Code) |
+
+Used in: [CrossOrderCancelReplaceRequest](/fix/messages/cross-order-cancel-replace-request), [ExecutionReport](/fix/messages/execution-report), [ListOrdGrp](/fix/groups/list-ord-grp), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderCross](/fix/messages/new-order-cross), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReject](/fix/messages/order-cancel-reject), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [OrderCancelRequest](/fix/messages/order-cancel-request), [Quote](/fix/messages/quote), [QuoteResponse](/fix/messages/quote-response), [QuoteStatusReport](/fix/messages/quote-status-report)
+
+## 1134 · ReportedPxDiff [#tag-1134]
+
+<Badge intent="info" minimal>Tag 1134</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Indicates that the reported price that is different from the market price. The price difference should be stated by using field 828 TrdType and, if required, field 829 TrdSubType
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 1135 · RptSys [#tag-1135]
+
+<Badge intent="info" minimal>Tag 1135</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Indicates the system or medium on which the report has been published
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack)
+
+## 1136 · AllocClearingFeeIndicator [#tag-1136]
+
+<Badge intent="info" minimal>Tag 1136</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+ClearingFeeIndicator(635) for Allocation, see ClearingFeeIndicator(635) for permitted values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TrdAllocGrp](/fix/groups/trd-alloc-grp)
+
+## 1137 · DefaultApplVerID [#tag-1137]
+
+<Badge intent="info" minimal>Tag 1137</Badge> <Badge intent="note" minimal>ApplVerIDCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Specifies the service pack release being applied, by default, to message at the session level. Enumerated field with values assigned at time of service pack release. Uses same values as ApplVerID
+
+Code set **ApplVerIDCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | FIX27 | FIX27 |
+| `1` | FIX30 | FIX30 |
+| `2` | FIX40 | FIX40 |
+| `3` | FIX41 | FIX41 |
+| `4` | FIX42 | FIX42 |
+| `5` | FIX43 | FIX43 |
+| `6` | FIX44 | FIX44 |
+| `7` | FIX50 | FIX50 |
+| `8` | FIX50SP1 | FIX50SP1 |
+| `9` | FIX50SP2 | FIX50SP2 |
+| `10` | FIXLatest | FIXLatest |
+
+Used in: [Logon](/fix/messages/logon)
+
+## 1138 · DisplayQty [#tag-1138]
+
+<Badge intent="info" minimal>Tag 1138</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+The quantity to be displayed . Required for reserve orders. On orders specifies the qty to be displayed, on execution reports the currently displayed quantity.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [DisplayInstruction](/fix/components/display-instruction)
+
+## 1139 · ExchangeSpecialInstructions [#tag-1139]
+
+<Badge intent="info" minimal>Tag 1139</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Free format text string related to exchange.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
+
+## 1140 · MaxTradeVol [#tag-1140]
+
+<Badge intent="info" minimal>Tag 1140</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+The maximum order quantity (as expressed by TradeVolType(1786)) that can be submitted for a security.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [BaseTradingRules](/fix/components/base-trading-rules)
+
+## 1141 · NoMDFeedTypes [#tag-1141]
+
+<Badge intent="info" minimal>Tag 1141</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+The number of feed types and corresponding book depths associated with a security
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [MarketDataFeedTypes](/fix/groups/market-data-feed-types)
+
+## 1142 · MatchAlgorithm [#tag-1142]
+
+<Badge intent="info" minimal>Tag 1142</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+The types of algorithm used to match orders in a specific security. Possilbe value types are FIFO, Allocation, Pro-rata, Lead Market Maker, Currency Calender.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [MatchRules](/fix/groups/match-rules)
+
+## 1143 · MaxPriceVariation [#tag-1143]
+
+<Badge intent="info" minimal>Tag 1143</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+The maximum price variation of an execution from one event to the next for a given security. Expressed in absolute price terms.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [BaseTradingRules](/fix/components/base-trading-rules), [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
+
+## 1144 · ImpliedMarketIndicator [#tag-1144]
+
+<Badge intent="info" minimal>Tag 1144</Badge> <Badge intent="note" minimal>ImpliedMarketIndicatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Indicates that an implied market should be created for either the legs of a multi-leg instrument (Implied-in) or for the multi-leg instrument based on the existence of the legs (Implied-out). Determination as to whether implied markets should be created is generally done at the level of the multi-leg instrument. Commonly used in listed derivatives.
+
+Code set **ImpliedMarketIndicatorCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotImplied | Not implied |
+| `1` | ImpliedIn | Implied-in - The existence of a multi-leg instrument is implied by the legs of that instrument |
+| `2` | ImpliedOut | Implied-out - The existence of the underlying legs are implied by the multi-leg instrument |
+| `3` | BothImpliedInAndImpliedOut | Both Implied-in and Implied-out |
+
+Used in: [BaseTradingRules](/fix/components/base-trading-rules)
+
+## 1145 · EventTime [#tag-1145]
+
+<Badge intent="info" minimal>Tag 1145</Badge> <Badge intent="note" minimal>UTCTimestamp</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Specific time of event. To be used in combination with EventDate \[866\]
+
+Type: [UTCTimestamp](/fix/datatypes#utc-timestamp)
+
+Used in: [EvntGrp](/fix/groups/evnt-grp)
+
+## 1146 · MinPriceIncrementAmount [#tag-1146]
+
+<Badge intent="info" minimal>Tag 1146</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Minimum price increment amount associated with the MinPriceIncrement ( tag 969). For listed derivatives, the value can be calculated by multiplying MinPriceIncrement by ContractValueFactor(231).
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 1147 · UnitOfMeasureQty [#tag-1147]
+
+<Badge intent="info" minimal>Tag 1147</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Used to indicate the quantity of the underlying commodity unit of measure on which the contract is based, such as, 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc. UnitOfMeasureQty is required for UnitOfMeasure(996) Variable Quantity UOMs enumerations. Refer to the definition of UnitOfMeasure(996) for more information on the use of UnitOfMeasureQty.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 1148 · LowLimitPrice [#tag-1148]
+
+<Badge intent="info" minimal>Tag 1148</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Allowable low limit price for the trading day. A key parameter in validating order price. Used as the lower band for validating order prices. Orders submitted with prices below the lower limit will be rejected
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [PriceLimits](/fix/components/price-limits)
+
+## 1149 · HighLimitPrice [#tag-1149]
+
+<Badge intent="info" minimal>Tag 1149</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Allowable high limit price for the trading day. A key parameter in validating order price. Used as the upper band for validating order prices. Orders submitted with prices above the upper limit will be rejected
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [PriceLimits](/fix/components/price-limits)
+
+## 1150 · TradingReferencePrice [#tag-1150]
+
+<Badge intent="info" minimal>Tag 1150</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Reference price for the current trading price range usually representing the mid price between the HighLimitPrice and LowLimitPrice. The value may be the settlement price or closing price of the prior trading day.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [PriceLimits](/fix/components/price-limits)
+
+## 1151 · SecurityGroup [#tag-1151]
+
+<Badge intent="info" minimal>Tag 1151</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+An exchange specific name assigned to a group of related securities which may be concurrently affected by market events and actions.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 1152 · LegNumber [#tag-1152]
+
+<Badge intent="info" minimal>Tag 1152</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Allow sequencing of Legs for a Strategy to be captured
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [TrdInstrmtLegGrp](/fix/groups/trd-instrmt-leg-grp)
+
+## 1153 · SettlementCycleNo [#tag-1153]
+
+<Badge intent="info" minimal>Tag 1153</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Settlement cycle in which the settlement obligation was generated
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [SettlementObligationReport](/fix/messages/settlement-obligation-report)
+
+## 1154 · SideCurrency [#tag-1154]
+
+<Badge intent="info" minimal>Tag 1154</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Used to identify the trading currency on the Trade Capture Report Side
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
+
+## 1155 · SideSettlCurrency [#tag-1155]
+
+<Badge intent="info" minimal>Tag 1155</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Used to identify the settlement currency on the Trade Capture Report Side
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
+
+## 1156 · ApplExtID [#tag-1156]
+
+<Badge intent="info" minimal>Tag 1156</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+The extension pack number associated with an application message.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [StandardHeader](/fix/components/standard-header)
+
+## 1157 · CcyAmt [#tag-1157]
+
+<Badge intent="info" minimal>Tag 1157</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Net flow of Currency 1
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [SettlObligationInstructions](/fix/groups/settl-obligation-instructions)
+
+## 1158 · NoSettlDetails [#tag-1158]
+
+<Badge intent="info" minimal>Tag 1158</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Used to group Each Settlement Party
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [SettlDetails](/fix/groups/settl-details)
+
+## 1159 · SettlObligMode [#tag-1159]
+
+<Badge intent="info" minimal>Tag 1159</Badge> <Badge intent="note" minimal>SettlObligModeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Used to identify the reporting mode of the settlement obligation which is either preliminary or final
+
+Code set **SettlObligModeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Preliminary | Preliminary |
+| `2` | Final | Final |
+
+Used in: [SettlementObligationReport](/fix/messages/settlement-obligation-report)
+
+## 1160 · SettlObligMsgID [#tag-1160]
+
+<Badge intent="info" minimal>Tag 1160</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Message identifier for Settlement Obligation Report
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [SettlementObligationReport](/fix/messages/settlement-obligation-report)
+
+## 1161 · SettlObligID [#tag-1161]
+
+<Badge intent="info" minimal>Tag 1161</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Unique ID for this settlement instruction.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [SettlObligationInstructions](/fix/groups/settl-obligation-instructions)
+
+## 1162 · SettlObligTransType [#tag-1162]
+
+<Badge intent="info" minimal>Tag 1162</Badge> <Badge intent="note" minimal>SettlObligTransTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Transaction Type - required except where SettlInstMode is 5=Reject SSI request
+
+Code set **SettlObligTransTypeCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `C` | Cancel | Cancel |
+| `N` | New | New |
+| `R` | Replace | Replace |
+| `T` | Restate | Restate |
+
+Used in: [SettlObligationInstructions](/fix/groups/settl-obligation-instructions)
+
+## 1163 · SettlObligRefID [#tag-1163]
+
+<Badge intent="info" minimal>Tag 1163</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Required where SettlInstTransType is Cancel or Replace
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [SettlObligationInstructions](/fix/groups/settl-obligation-instructions)
+
+## 1164 · SettlObligSource [#tag-1164]
+
+<Badge intent="info" minimal>Tag 1164</Badge> <Badge intent="note" minimal>SettlObligSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Used to identify whether these delivery instructions are for the buyside or the sellside.
+
+Code set **SettlObligSourceCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | InstructionsOfBroker | Instructions of Broker |
+| `2` | InstructionsForInstitution | Instructions for Institution |
+| `3` | Investor | Investor |
+| `4` | BuyersSettlementInstructions | Buyer's settlement instructions |
+| `5` | SellersSettlementInstructions | Seller's settlement instructions |
+
+Used in: [SettlDetails](/fix/groups/settl-details)
+
+## 1165 · NoSettlOblig [#tag-1165]
+
+<Badge intent="info" minimal>Tag 1165</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Number of settlement obligations
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [SettlObligationInstructions](/fix/groups/settl-obligation-instructions)
+
+## 1166 · QuoteMsgID [#tag-1166]
+
+<Badge intent="info" minimal>Tag 1166</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Unique identifier for a quote message.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [Quote](/fix/messages/quote), [QuoteAck](/fix/messages/quote-ack), [QuoteCancel](/fix/messages/quote-cancel), [QuoteResponse](/fix/messages/quote-response), [QuoteStatusReport](/fix/messages/quote-status-report)
+
+## 1167 · QuoteEntryStatus [#tag-1167]
+
+<Badge intent="info" minimal>Tag 1167</Badge> <Badge intent="note" minimal>QuoteEntryStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Identifies the status of an individual quote. See also QuoteStatus(297) which is used for single Quotes.
+
+Code set **QuoteEntryStatusCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Accepted | Accepted |
+| `5` | Rejected | Rejected |
+| `6` | RemovedFromMarket | Removed from Market |
+| `7` | Expired | Expired |
+| `12` | LockedMarketWarning | Locked Market Warning |
+| `13` | CrossMarketWarning | Cross Market Warning |
+| `14` | CanceledDueToLockMarket | Canceled due to Lock Market |
+| `15` | CanceledDueToCrossMarket | Canceled due to Cross Market |
+| `16` | Active | Active |
+
+Used in: [QuotEntryAckGrp](/fix/groups/quot-entry-ack-grp)
+
+## 1168 · TotNoCxldQuotes [#tag-1168]
+
+<Badge intent="info" minimal>Tag 1168</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Specifies the number of canceled quotes
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [QuotSetAckGrp](/fix/groups/quot-set-ack-grp)
+
+## 1169 · TotNoAccQuotes [#tag-1169]
+
+<Badge intent="info" minimal>Tag 1169</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Specifies the number of accepted quotes
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [QuotSetAckGrp](/fix/groups/quot-set-ack-grp)
+
+## 1170 · TotNoRejQuotes [#tag-1170]
+
+<Badge intent="info" minimal>Tag 1170</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Specifies the number of rejected quotes
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [QuotSetAckGrp](/fix/groups/quot-set-ack-grp)
+
+## 1171 · PrivateQuote [#tag-1171]
+
+<Badge intent="info" minimal>Tag 1171</Badge> <Badge intent="note" minimal>PrivateQuoteCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Specifies whether a quote is public, i.e. available to the market, or private, i.e. available to a specified counterparty only.
+
+Code set **PrivateQuoteCodeSet** ([Boolean](/fix/datatypes#boolean))
+
+| Value | Name | Description |
+|---|---|---|
+| `Y` | PrivateQuote | Private Quote |
+| `N` | PublicQuote | Public Quote |
+
+Used in: [Quote](/fix/messages/quote), [QuoteRequest](/fix/messages/quote-request), [QuoteRequestReject](/fix/messages/quote-request-reject), [RFQRequest](/fix/messages/rfq-request)
+
+## 1172 · RespondentType [#tag-1172]
+
+<Badge intent="info" minimal>Tag 1172</Badge> <Badge intent="note" minimal>RespondentTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Specifies the type of respondents requested.
+
+Code set **RespondentTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | AllMarketParticipants | All market participants |
+| `2` | SpecifiedMarketParticipants | Specified market participants |
+| `3` | AllMarketMakers | All Market Makers |
+| `4` | PrimaryMarketMaker | Primary Market Maker(s) |
+
+Used in: [QuoteRequest](/fix/messages/quote-request), [QuoteRequestReject](/fix/messages/quote-request-reject)
+
+## 1173 · MDSubBookType [#tag-1173]
+
+<Badge intent="info" minimal>Tag 1173</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Describes a class of sub book, e.g. for the separation of various lot types. The Sub Book Type indicates that the following Market Data Entries belong to a non-integrated Sub Book. Whenever provided the Sub Book must be used together with MDPriceLevel and MDEntryPositionNo in order to sort the order properly. Values are bilaterally agreed.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [MDIncGrp](/fix/groups/md-inc-grp), [MarketDataFeedTypes](/fix/groups/market-data-feed-types), [MarketDataSnapshotFullRefresh](/fix/messages/market-data-snapshot-full-refresh)
+
+## 1174 · SecurityTradingEvent [#tag-1174]
+
+<Badge intent="info" minimal>Tag 1174</Badge> <Badge intent="note" minimal>SecurityTradingEventCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Identifies an event related to a SecurityTradingStatus(326). An event occurs and is gone, it is not a state that applies for a period of time.
+
+Code set **SecurityTradingEventCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | OrderImbalance | Order imbalance, auction is extended |
+| `2` | TradingResumes | Trading resumes (after Halt) |
+| `3` | PriceVolatilityInterruption | Price Volatility Interruption |
+| `4` | ChangeOfTradingSession | Change of Trading Session |
+| `5` | ChangeOfTradingSubsession | Change of Trading Subsession |
+| `6` | ChangeOfSecurityTradingStatus | Change of Security Trading Status |
+| `7` | ChangeOfBookType | Change of Book Type |
+| `8` | ChangeOfMarketDepth | Change of Market Depth |
+| `9` | CorporateAction | Corporate action |
+
+Used in: [SecMassStatGrp](/fix/groups/sec-mass-stat-grp), [SecurityStatus](/fix/messages/security-status)
+
+## 1175 · NoStatsIndicators [#tag-1175]
+
+<Badge intent="info" minimal>Tag 1175</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Number of statistics indicator repeating group entries
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [StatsIndGrp](/fix/groups/stats-ind-grp)
+
+## 1176 · StatsType [#tag-1176]
+
+<Badge intent="info" minimal>Tag 1176</Badge> <Badge intent="note" minimal>StatsTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Type of statistics
+
+Code set **StatsTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | ExchangeLast | Exchange Last |
+| `2` | High | High / Low Price |
+| `3` | AveragePrice | Average Price (VWAP, TWAP ... ) |
+| `4` | Turnover | Turnover (Price \* Qty) |
+
+Used in: [StatsIndGrp](/fix/groups/stats-ind-grp)
+
+## 1177 · NoOfSecSizes [#tag-1177]
+
+<Badge intent="info" minimal>Tag 1177</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+The number of secondary sizes specifies in this entry
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [SecSizesGrp](/fix/groups/sec-sizes-grp)
+
+## 1178 · MDSecSizeType [#tag-1178]
+
+<Badge intent="info" minimal>Tag 1178</Badge> <Badge intent="note" minimal>MDSecSizeTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Specifies the type of secondary size.
+
+Code set **MDSecSizeTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Customer | Customer |
+| `2` | CustomerProfessional | Customer professional |
+| `3` | DoNotTradeThrough | Do not trade through |
+
+Used in: [SecSizesGrp](/fix/groups/sec-sizes-grp)
+
+## 1179 · MDSecSize [#tag-1179]
+
+<Badge intent="info" minimal>Tag 1179</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+A part of the MDEntrySize(271) that represents secondary interest as specified by MDSecSizeType(1178).
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [SecSizesGrp](/fix/groups/sec-sizes-grp)
+
+## 1180 · ApplID [#tag-1180]
+
+<Badge intent="info" minimal>Tag 1180</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Identifies the application with which a message is associated. Used only if application sequencing is in effect.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ApplicationSequenceControl](/fix/components/application-sequence-control)
+
+## 1181 · ApplSeqNum [#tag-1181]
+
+<Badge intent="info" minimal>Tag 1181</Badge> <Badge intent="note" minimal>SeqNum</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Data sequence number to be used when FIX session is not in effect
+
+Type: [SeqNum](/fix/datatypes#seq-num)
+
+Used in: [ApplicationSequenceControl](/fix/components/application-sequence-control)
+
+## 1182 · ApplBegSeqNum [#tag-1182]
+
+<Badge intent="info" minimal>Tag 1182</Badge> <Badge intent="note" minimal>SeqNum</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Beginning range of application sequence numbers
+
+Type: [SeqNum](/fix/datatypes#seq-num)
+
+Used in: [ApplIDRequestAckGrp](/fix/groups/appl-id-request-ack-grp), [ApplIDRequestGrp](/fix/groups/appl-id-request-grp)
+
+## 1183 · ApplEndSeqNum [#tag-1183]
+
+<Badge intent="info" minimal>Tag 1183</Badge> <Badge intent="note" minimal>SeqNum</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Ending range of application sequence numbers
+
+Type: [SeqNum](/fix/datatypes#seq-num)
+
+Used in: [ApplIDRequestAckGrp](/fix/groups/appl-id-request-ack-grp), [ApplIDRequestGrp](/fix/groups/appl-id-request-grp)
+
+## 1184 · SecurityXMLLen [#tag-1184]
+
+<Badge intent="info" minimal>Tag 1184</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+The length of the SecurityXML(1185) data block.
+
+Type: [Length](/fix/datatypes#length)
+
+Used in: [SecurityXML](/fix/components/security-xml)
+
+## 1185 · SecurityXML [#tag-1185]
+
+<Badge intent="info" minimal>Tag 1185</Badge> <Badge intent="note" minimal>XMLData</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+XML definition for the security.
+
+Type: [XMLData](/fix/datatypes#xml-data)
+
+Used in: [SecurityXML](/fix/components/security-xml)
+
+## 1186 · SecurityXMLSchema [#tag-1186]
+
+<Badge intent="info" minimal>Tag 1186</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+The schema used to validate the contents of SecurityXML(1185).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [SecurityXML](/fix/components/security-xml)
+
+## 1187 · RefreshIndicator [#tag-1187]
+
+<Badge intent="info" minimal>Tag 1187</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Set by the sender to tell the receiver to perform an immediate refresh of the book due to disruptions in the accompanying real-time feed 'Y' - Mandatory refresh by all participants 'N' - Process as required
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [MarketDataSnapshotFullRefresh](/fix/messages/market-data-snapshot-full-refresh)
+
+## 1188 · Volatility [#tag-1188]
+
+<Badge intent="info" minimal>Tag 1188</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Annualized volatility for option model calculations
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [ClearingPriceParametersGrp](/fix/groups/clearing-price-parameters-grp), [ExecutionReport](/fix/messages/execution-report), [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 1189 · TimeToExpiration [#tag-1189]
+
+<Badge intent="info" minimal>Tag 1189</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Time to expiration in years calculated as the number of days remaining to expiration divided by 365 days per year.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 1190 · RiskFreeRate [#tag-1190]
+
+<Badge intent="info" minimal>Tag 1190</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Interest rate. Usually some form of short term rate.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [ClearingPriceParametersGrp](/fix/groups/clearing-price-parameters-grp), [ExecutionReport](/fix/messages/execution-report), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderMultileg](/fix/messages/new-order-multileg), [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 1191 · PriceUnitOfMeasure [#tag-1191]
+
+<Badge intent="info" minimal>Tag 1191</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Used to express the UOM of the price if different from the contract. In futures, this can be different for cross-rate products in which the price is quoted in units differently from the contract
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 1192 · PriceUnitOfMeasureQty [#tag-1192]
+
+<Badge intent="info" minimal>Tag 1192</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Used to express the UOM Quantity of the price if different from the contract. In futures, this can be different for physically delivered products in which price is quoted in a unit size different from the contract, i.e. a Cattle Future contract has a UOMQty of 40,000 and a PriceUOMQty of 100.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 1193 · SettlMethod [#tag-1193]
+
+<Badge intent="info" minimal>Tag 1193</Badge> <Badge intent="note" minimal>SettlMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Settlement method for a contract or instrument. Additional values may be used with bilateral agreement.
+
+Code set **SettlMethodCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `C` | CashSettlementRequired | Cash settlement required |
+| `P` | PhysicalSettlementRequired | Physical settlement required |
+| `E` | Election | Election at exercise |
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 1194 · ExerciseStyle [#tag-1194]
+
+<Badge intent="info" minimal>Tag 1194</Badge> <Badge intent="note" minimal>ExerciseStyleCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Type of exercise of a derivatives security
+
+Code set **ExerciseStyleCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | European | European |
+| `1` | American | American |
+| `2` | Bermuda | Bermuda |
+| `99` | Other | Other |
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 1195 · OptPayoutAmount [#tag-1195]
+
+<Badge intent="info" minimal>Tag 1195</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Cash amount indicating the pay out associated with an option. For binary options this is a fixed amount.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 1196 · PriceQuoteMethod [#tag-1196]
+
+<Badge intent="info" minimal>Tag 1196</Badge> <Badge intent="note" minimal>PriceQuoteMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Method for price quotation
+
+Code set **PriceQuoteMethodCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `STD` | Standard | Standard, money per unit of a physical |
+| `INX` | Index | Index |
+| `INT` | InterestRateIndex | Interest rate Index |
+| `PCTPAR` | PercentOfPar | Percent of Par |
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 1197 · ValuationMethod [#tag-1197]
+
+<Badge intent="info" minimal>Tag 1197</Badge> <Badge intent="note" minimal>ValuationMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Specifies the type of valuation method applied.
+
+Code set **ValuationMethodCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `EQTY` | PremiumStyle | premium style |
+| `FUT` | FuturesStyleMarkToMarket | futures style mark-to-market |
+| `FUTDA` | FuturesStyleWithAnAttachedCashAdjustment | futures style with an attached cash adjustment |
+| `CDS` | CDSStyleCollateralization | CDS style collateralization of market to market and coupon |
+| `CDSD` | CDSInDeliveryUseRecoveryRateToCalculate | CDS in delivery - use recovery rate to calculate obligation |
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 1198 · ListMethod [#tag-1198]
+
+<Badge intent="info" minimal>Tag 1198</Badge> <Badge intent="note" minimal>ListMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Indicates whether instruments are pre-listed only or can also be defined via user request
+
+Code set **ListMethodCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | PreListedOnly | pre-listed only |
+| `1` | UserRequested | user requested |
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 1199 · CapPrice [#tag-1199]
+
+<Badge intent="info" minimal>Tag 1199</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Used to express the ceiling price of a capped call
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [Instrument](/fix/components/instrument)
+

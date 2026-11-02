@@ -1,0 +1,25 @@
+---
+title: "OrderAggregationGrp"
+subtitle: "Identifies the orders being aggregated together."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 73</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoOrders (73)](/fix/fields/tags-0-199#tag-73).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | Required if NoOrders(73) &gt; 0. |
+| 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | Optional | Unique identifier for Order as assigned by sell-side (broker, exchange, ECN). Uniqueness must be guaranteed within a single trading day. Firms which accept multi-day orders should consider embedding a date within the OrderID field to assure uniqueness across days. |
+| 38 | [OrderQty](/fix/fields/tags-0-199#tag-38) | Qty | Optional | Required if NoOrders(73) &gt; 0. |
+| 799 | [OrderAvgPx](/fix/fields/tags-600-799#tag-799) | Price | Optional | Average price for a specific order |
+
+</StickyTable>
+
+## Used in
+
+[TradeAggregationRequest](/fix/messages/trade-aggregation-request)

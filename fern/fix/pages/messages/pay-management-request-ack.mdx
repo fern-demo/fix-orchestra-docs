@@ -1,0 +1,27 @@
+---
+title: "PayManagementRequestAck"
+subtitle: "PayManagementRequestAck(35=DZ) is used to acknowledge the receipt of the PayManagementRequest(35=DY) message (i.e. a technical acknowledgement of receipt). Acceptance or rejection of the request is reported in the corresponding…"
+---
+
+<Badge intent="info">MsgType DZ</Badge> <Badge intent="note" minimal>Pay Management</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 2812 | [PayRequestID](/fix/fields/tags-2800-2999#tag-2812) | String | **Required** | Unique ID of the PayManagementRequest(35=DY) message. |
+| 2813 | [PayRequestStatus](/fix/fields/tags-2800-2999#tag-2813) | PayRequestStatusCodeSet | **Required** | Only PayRequestStuats(2813)=0 (Received) is applicable in this message. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="PayManagementRequestAck" wordWrap
+8=FIXT.1.1|9=79|35=DZ|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|2812=ABC123|2813=0|10=191|
+```

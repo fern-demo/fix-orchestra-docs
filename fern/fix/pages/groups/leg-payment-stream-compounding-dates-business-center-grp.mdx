@@ -1,0 +1,22 @@
+---
+title: "LegPaymentStreamCompoundingDatesBusinessCenterGrp"
+subtitle: "LegPaymentStreamCompoundingDatesBusinessCenterGrp is a repeating subcomponent within the LegPaymentStreamCompoundingDates component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42419</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentStreamCompoundingDatesBusinessCenters (42419)](/fix/fields/tags-42400-42599#tag-42419).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42420 | [LegPaymentStreamCompoundingDatesBusinessCenter](/fix/fields/tags-42400-42599#tag-42420) | String | Optional | Required if NoLegPaymentStreamCompoundingDatesBusinessCenters(42419) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[LegPaymentStreamCompoundingDates](/fix/components/leg-payment-stream-compounding-dates)

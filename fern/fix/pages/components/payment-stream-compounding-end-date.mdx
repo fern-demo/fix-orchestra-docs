@@ -1,0 +1,25 @@
+---
+title: "PaymentStreamCompoundingEndDate"
+subtitle: "PaymentStreamCompoundingEndDate is a subcomponent of the PaymentStreamCompoundingDates component used to specify the end date for compounding."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42622 | [PaymentStreamCompoundingEndDateUnadjusted](/fix/fields/tags-42600-42799#tag-42622) | LocalMktDate | Optional | The unadjusted compounding end date. |
+| 42623 | [PaymentStreamCompoundingEndDateRelativeTo](/fix/fields/tags-42600-42799#tag-42623) | int | Optional | Specifies the anchor date when the compounding end date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 42624 | [PaymentStreamCompoundingEndDateOffsetPeriod](/fix/fields/tags-42600-42799#tag-42624) | int | Optional | Conditionally required when PaymentStreamCompoundingEndDateOffsetUnit(42625) is specified. |
+| 42625 | [PaymentStreamCompoundingEndDateOffsetUnit](/fix/fields/tags-42600-42799#tag-42625) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when PaymentStreamCompoundingEndDateOffsetPeriod(42624) is specified. |
+| 42626 | [PaymentStreamCompoundingEndDateOffsetDayType](/fix/fields/tags-42600-42799#tag-42626) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative compounding end date offset. |
+| 42627 | [PaymentStreamCompoundingEndDateAdjusted](/fix/fields/tags-42600-42799#tag-42627) | LocalMktDate | Optional | The adjusted compounding end date. |
+
+</StickyTable>
+
+## Used in
+
+[PaymentStreamCompoundingDates](/fix/components/payment-stream-compounding-dates)

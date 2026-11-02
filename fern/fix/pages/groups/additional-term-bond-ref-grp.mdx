@@ -1,0 +1,39 @@
+---
+title: "AdditionalTermBondRefGrp"
+subtitle: "The AdditionalTermBondRefGrp is a repeating group subcomponent of the AdditionalTermGrp component used to identify an underlying reference bond for a swap."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40000</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoAdditionalTermBondRefs (40000)](/fix/fields/tags-40000-40199#tag-40000).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40001 | [AdditionalTermBondSecurityID](/fix/fields/tags-40000-40199#tag-40001) | String | Optional | Required if NoAdditionalTermBondRefs(40000) &gt; 0. |
+| 40002 | [AdditionalTermBondSecurityIDSource](/fix/fields/tags-40000-40199#tag-40002) | SecurityIDSourceCodeSet | Optional | Conditionally required when AdditionalTermBondSecurityID(40001) is specified. |
+| 40003 | [AdditionalTermBondDesc](/fix/fields/tags-40000-40199#tag-40003) | String | Optional | Description of the bond. |
+| 40004 | [EncodedAdditionalTermBondDescLen](/fix/fields/tags-40000-40199#tag-40004) | Length | Optional | Must be set if EncodedAdditionalTermBondDesc(40005) field is specified and must immediately precede it. |
+| 40005 | [EncodedAdditionalTermBondDesc](/fix/fields/tags-40000-40199#tag-40005) | data | Optional | Encoded (non-ASCII characters) representation of the AdditionalTermBondDesc(40003) field in the encoded format specified via the MessageEncoding(347) field. |
+| 40006 | [AdditionalTermBondCurrency](/fix/fields/tags-40000-40199#tag-40006) | Currency | Optional | Specifies the currency the bond value is denominated in. Uses ISO 4217 currency codes. |
+| 40007 | [AdditionalTermBondIssuer](/fix/fields/tags-40000-40199#tag-40007) | String | Optional | Issuer of the bond. |
+| 40008 | [EncodedAdditionalTermBondIssuerLen](/fix/fields/tags-40000-40199#tag-40008) | Length | Optional | Must be set if EncodedAdditionalTermBondIssuer(40009) field is specified and must immediately precede it. |
+| 40009 | [EncodedAdditionalTermBondIssuer](/fix/fields/tags-40000-40199#tag-40009) | data | Optional | Encoded (non-ASCII characters) representation of the AdditionalTermBondIssuer(40007) field in the encoded format specified via the MessageEncoding(347) field. |
+| 40010 | [AdditionalTermBondSeniority](/fix/fields/tags-40000-40199#tag-40010) | SeniorityCodeSet | Optional | Specifies the bond's payment priority in the event of a default. |
+| 40011 | [AdditionalTermBondCouponType](/fix/fields/tags-40000-40199#tag-40011) | CouponTypeCodeSet | Optional | Coupon type of the bond. |
+| 40012 | [AdditionalTermBondCouponRate](/fix/fields/tags-40000-40199#tag-40012) | Percentage | Optional | Coupon rate of the bond. See also CouponRate(223). |
+| 40013 | [AdditionalTermBondMaturityDate](/fix/fields/tags-40000-40199#tag-40013) | LocalMktDate | Optional | The maturity date of the bond. |
+| 40014 | [AdditionalTermBondParValue](/fix/fields/tags-40000-40199#tag-40014) | Amt | Optional | The par value of the bond. |
+| 40015 | [AdditionalTermBondCurrentTotalIssuedAmount](/fix/fields/tags-40000-40199#tag-40015) | Amt | Optional | Total issued amount of the bond. |
+| 40016 | [AdditionalTermBondCouponFrequencyPeriod](/fix/fields/tags-40000-40199#tag-40016) | int | Optional | Conditionally required when AdditionalTermBondCouponFrequencyUnit(40017) is specified. |
+| 40017 | [AdditionalTermBondCouponFrequencyUnit](/fix/fields/tags-40000-40199#tag-40017) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when AdditionalTermBondCouponFrequencyPeriod(40016) is specified. |
+| 40018 | [AdditionalTermBondDayCount](/fix/fields/tags-40000-40199#tag-40018) | CouponDayCountCodeSet | Optional | The day count convention used in interest calculations for a bond or an interest bearing security. |
+
+</StickyTable>
+
+## Used in
+
+[AdditionalTermGrp](/fix/groups/additional-term-grp)

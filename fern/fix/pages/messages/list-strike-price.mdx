@@ -1,0 +1,29 @@
+---
+title: "ListStrikePrice"
+subtitle: "The strike price message is used to exchange strike price information for principal trades. It can also be used to exchange reference prices for agency trades."
+---
+
+<Badge intent="info">MsgType m</Badge> <Badge intent="note" minimal>Program Trading</Badge> <Badge intent="tip" minimal>Trade</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 66 | [ListID](/fix/fields/tags-0-199#tag-66) | String | **Required** | Unique identifier for list as assigned by institution, used to associate multiple individual orders. Uniqueness must be guaranteed within a single trading day. Firms which generate multi-day orders should consider embedding a date within the ListID field to assure uniqueness across days. |
+| 422 | [TotNoStrikes](/fix/fields/tags-400-599#tag-422) | int | **Required** | Used to support fragmentation. Sum of NoStrikes across all messages with the same ListID. |
+| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893) | LastFragmentCodeSet | Optional | Indicates whether this is the last fragment in a sequence of message fragments. Only required where message has been fragmented. |
+| 428 | [InstrmtStrkPxGrp](/fix/groups/instrmt-strk-px-grp) | Repeating group | **Required** |  |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="ListStrikePrice" wordWrap
+8=FIXT.1.1|9=81|35=m|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|66=ABC123|422=1|428=1|10=254|
+```

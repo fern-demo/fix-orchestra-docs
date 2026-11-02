@@ -1,0 +1,21 @@
+---
+title: "UnderlyingPaymentStreamNonDeliverableSettlRateSource"
+subtitle: "UnderlyingPaymentStreamNonDeliverableSettlRateSource is a subcomponent of the UnderlyingPaymentStreamNonDeliverableSettlTerms component used to specify the rate source in the event of payment non-delivery."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40661 | [UnderlyingPaymentStreamNonDeliverableSettlRateSource](/fix/fields/tags-40600-40799#tag-40661) | RateSourceCodeSet | Optional | Identifies the source of rate information. |
+| 40824 | [UnderlyingPaymentStreamNonDeliverableSettlReferencePage](/fix/fields/tags-40800-40999#tag-40824) | String | Optional | Conditionally required when UnderlyingPaymentStreamNonDeliverableSettlRateSource(40661) = 3 (ISDA Settlement Rate Option) or 99 (Other). |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingPaymentStreamNonDeliverableSettlTerms](/fix/components/underlying-payment-stream-non-deliverable-settl-terms)

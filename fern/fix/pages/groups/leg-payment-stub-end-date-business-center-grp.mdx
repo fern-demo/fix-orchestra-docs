@@ -1,0 +1,22 @@
+---
+title: "LegPaymentStubEndDateBusinessCenterGrp"
+subtitle: "LegPaymentStubEndDateBusinessCenterGrp is a repeating subcomponent within the LegPaymentStubEndDate component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42495</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentStubEndDateBusinessCenters (42495)](/fix/fields/tags-42400-42599#tag-42495).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42496 | [LegPaymentStubEndDateBusinessCenter](/fix/fields/tags-42400-42599#tag-42496) | String | Optional | Required if NoLegPaymentStubEndDateBusinessCenters(42495) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[LegPaymentStubEndDate](/fix/components/leg-payment-stub-end-date)

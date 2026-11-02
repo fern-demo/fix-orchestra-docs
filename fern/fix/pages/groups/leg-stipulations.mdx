@@ -1,0 +1,23 @@
+---
+title: "LegStipulations"
+subtitle: "The LegStipulations component block has the same usage as the Stipulations component block, but for a leg instrument in a multi-legged security."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 683</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegStipulations (683)](/fix/fields/tags-600-799#tag-683).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 688 | [LegStipulationType](/fix/fields/tags-600-799#tag-688) | StipulationTypeCodeSet | Optional | Required if NoLegStipulations &gt;0 |
+| 689 | [LegStipulationValue](/fix/fields/tags-600-799#tag-689) | String | Optional | For Fixed Income, value of stipulation. See StipulationValue (234) for description and valid values |
+
+</StickyTable>
+
+## Used in
+
+[InstrmtLegExecGrp](/fix/groups/instrmt-leg-exec-grp), [InstrmtLegIOIGrp](/fix/groups/instrmt-leg-ioi-grp), [InstrmtLegSecListGrp](/fix/groups/instrmt-leg-sec-list-grp), [LegOrdGrp](/fix/groups/leg-ord-grp), [LegQuotGrp](/fix/groups/leg-quot-grp), [LegQuotStatGrp](/fix/groups/leg-quot-stat-grp), [QuotReqLegsGrp](/fix/groups/quot-req-legs-grp), [SecLstUpdRelSymsLegGrp](/fix/groups/sec-lst-upd-rel-syms-leg-grp), [SideCrossLegGrp](/fix/groups/side-cross-leg-grp), [TrdInstrmtLegGrp](/fix/groups/trd-instrmt-leg-grp)

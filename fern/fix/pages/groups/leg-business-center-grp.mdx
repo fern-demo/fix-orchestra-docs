@@ -1,0 +1,22 @@
+---
+title: "LegBusinessCenterGrp"
+subtitle: "LegBusinessCenterGrp is a repeating subcomponent within the LegDateAdjustment component. It is used to specify the set of business centers whose calendars drive the date adjustment. The business centers defined here apply to all adjustable…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40923</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegBusinessCenters (40923)](/fix/fields/tags-40800-40999#tag-40923).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40924 | [LegBusinessCenter](/fix/fields/tags-40800-40999#tag-40924) | String | Optional | Required if NoLegBusinessCenters(40923) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[LegDateAdjustment](/fix/components/leg-date-adjustment)

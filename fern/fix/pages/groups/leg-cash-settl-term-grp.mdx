@@ -1,0 +1,45 @@
+---
+title: "LegCashSettlTermGrp"
+subtitle: "The LegCashSettlTermGrp is a repeating component within the InstrumentLeg component used to report cash settlement terms."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41344</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Usage of LegCashSettlTermGrp must either include a known LegCashSettlAmount(41357) or provide the cash settlement term parameters needed to derive the cash settlement amount. LegCashSettlTermXID(41362) is provided for cross-referencing from an instance of the UnderlyingInstrument component through the UnderlyingSettlTermXIDRef(41315) field.
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegCashSettlTerms (41344)](/fix/fields/tags-41200-41399#tag-41344).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41345 | [LegCashSettlCurrency](/fix/fields/tags-41200-41399#tag-41345) | Currency | Optional | Required if NoLegCashSettlTerms(41344) &gt; 0. |
+| 41346 | [LegCasSettlValuationFirstBusinessDayOffset](/fix/fields/tags-41200-41399#tag-41346) | int | Optional | The number of business days after settlement conditions have been satisfied, when the calculation agent is to obtain a price quotation on the reference obligation for purposes of cash settlement. |
+| 41347 | [LegCashSettlValuationSubsequentBusinessDaysOffset](/fix/fields/tags-41200-41399#tag-41347) | int | Optional | The number of business days between successive valuation dates when multiple valuation dates are applicable for cash settlement. |
+| 41348 | [LegCashSettlNumOfValuationDates](/fix/fields/tags-41200-41399#tag-41348) | int | Optional | Where multiple valuation dates are specified as being applicable for cash settlement, this element specifies the number of applicable valuation dates. |
+| 41349 | [LegCashSettlValuationTime](/fix/fields/tags-41200-41399#tag-41349) | LocalMktTime | Optional | Time of valuation. |
+| 41350 | [LegCashSettlBusinessCenter](/fix/fields/tags-41200-41399#tag-41350) | String | Optional | Identifies the business center calendar used at valuation time for cash settlement purposes e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values. |
+| 41351 | [LegCashSettlQuoteMethod](/fix/fields/tags-41200-41399#tag-41351) | CashSettlQuoteMethodCodeSet | Optional | The type of quote used to determine the cash settlement price. |
+| 41352 | [LegCashSettlQuoteAmount](/fix/fields/tags-41200-41399#tag-41352) | Amt | Optional | When determining the cash settlement amount, if weighted average price quotes are to be obtained for the reference obligation, this is the upper limit to the outstanding principal balance of the reference obligation for which the quote should be obtained. If not specifed, the ISDA definitions… |
+| 41353 | [LegCashSettlQuoteCurrency](/fix/fields/tags-41200-41399#tag-41353) | Currency | Optional | Specifies the currency the LegCashSettlQuoteAmount(41352) is denominated in. Uses ISO 4217 Currency Code. |
+| 41354 | [LegCashSettlMinimumQuoteAmount](/fix/fields/tags-41200-41399#tag-41354) | Amt | Optional | When determining the cash settlement amount, if weighted average price quotes are to be obtained for the reference obligation, this is the minimum intended threshold amount of outstanding principal balance of the reference obligation for which the quote should be obtained. If not specified, the ISDA… |
+| 41355 | [LegCashSettlMinimumQuoteCurrency](/fix/fields/tags-41200-41399#tag-41355) | Currency | Optional | Specifies the currency the LegCashSettlQuoteMinimumAmount(41354) is denominated in. Uses ISO 4217 Currency Code. |
+| 41342 | [LegCashSettlDealerGrp](/fix/groups/leg-cash-settl-dealer-grp) | Repeating group | Optional | LegCashSettlDealerGrp is a repeating subcomponent of the LegCashSettlTermGrp component used to specify the dealers from whom price quotations for the reference obligation are obtained for the purpose of cash settlement valuation. |
+| 42308 | [LegCashSettlPriceSource](/fix/fields/tags-42200-42399#tag-42308) | String | Optional | The source from which the settlement price is to be obtained. See http://www.fpml.org/coding-scheme/settlement-price-source for values. |
+| 42309 | [LegCashSettlPriceDefault](/fix/fields/tags-42200-42399#tag-42309) | CashSettlPriceDefaultCodeSet | Optional | The default election for determining settlement price. |
+| 41356 | [LegCashSettlBusinessDays](/fix/fields/tags-41200-41399#tag-41356) | int | Optional | The number of business days used in the determination of the cash settlement payment date. |
+| 41357 | [LegCashSettlAmount](/fix/fields/tags-41200-41399#tag-41357) | Amt | Optional | The amount paid between the trade parties, seller to the buyer, for cash settlement on the cash settlement date. |
+| | [LegCashSettlDate](/fix/components/leg-cash-settl-date) | Component | Optional | The LegCashSettlDate component is a subcomponent within the LegCashSettlTermGrp component used to report the cash settlement date defined in the settlement provision. |
+| 41358 | [LegCashSettlRecoveryFactor](/fix/fields/tags-41200-41399#tag-41358) | float | Optional | Used for fixed recovery, this specifies the recovery level as determined at contract inception, to be applied in the event of a default. The factor is used to calculate the amount paid by the seller to the buyer for cash settlement on the cash settlement date. The amount calculated is (1 -… |
+| 41359 | [LegCashSettlFixedTermIndicator](/fix/fields/tags-41200-41399#tag-41359) | Boolean | Optional | Indicates whether fixed settlement is applicable or not applicable in a recovery lock. |
+| 41360 | [LegCashSettlAccruedInterestIndicator](/fix/fields/tags-41200-41399#tag-41360) | Boolean | Optional | Indicates whether accrued interest is included or not in the value provided in LegCashSettlAmount(41357). For cash settlement this specifies whether quotations should be obtained inclusive or not of accrued interest. For physical settlement this specifies whether the buyer should deliver the… |
+| 41361 | [LegCashSettlValuationMethod](/fix/fields/tags-41200-41399#tag-41361) | CashSettlValuationMethodCodeSet | Optional | The ISDA defined methodology for determining the final price of the reference obligation for purposes of cash settlement. |
+| 41362 | [LegCashSettlTermXID](/fix/fields/tags-41200-41399#tag-41362) | XID | Optional | A named string value referenced by UnderlyingSettlTermXIDRef(41315). |
+
+</StickyTable>
+
+## Used in
+
+[InstrumentLeg](/fix/components/instrument-leg)

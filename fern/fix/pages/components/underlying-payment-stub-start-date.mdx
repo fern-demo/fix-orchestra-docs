@@ -1,0 +1,27 @@
+---
+title: "UnderlyingPaymentStubStartDate"
+subtitle: "UnderlyingPaymentStubStartDate is a subcomponent of the UnderlyingPaymentStubGrp component used to specify the start date of the payment stub."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42993 | [UnderlyingPaymentStubStartDateUnadjusted](/fix/fields/tags-42800-42999#tag-42993) | LocalMktDate | Optional | The unadjusted stub start date. |
+| 42994 | [UnderlyingPaymentStubStartDateBusinessDayConvention](/fix/fields/tags-42800-42999#tag-42994) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would be specific to this payment stub instance. |
+| 43000 | [UnderlyingPaymentStubStartDateBusinessCenterGrp](/fix/groups/underlying-payment-stub-start-date-business-center-grp) | Repeating group | Optional | UnderlyingPaymentStubStartDateBusinessCenterGrp is a repeating subcomponent within the UnderlyingPaymentStubStartDate component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the… |
+| 42995 | [UnderlyingPaymentStubStartDateRelativeTo](/fix/fields/tags-42800-42999#tag-42995) | int | Optional | Specifies the anchor date when the stub start date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 42996 | [UnderlyingPaymentStubStartDateOffsetPeriod](/fix/fields/tags-42800-42999#tag-42996) | int | Optional | Conditionally required when UnderlyingPaymentStubStartDateOffsetUnit(42997) is specified. |
+| 42997 | [UnderlyingPaymentStubStartDateOffsetUnit](/fix/fields/tags-42800-42999#tag-42997) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingPaymentStubStartDateOffsetPeriod(42996) is specified. |
+| 42998 | [UnderlyingPaymentStubStartDateOffsetDayType](/fix/fields/tags-42800-42999#tag-42998) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative stub start date offset. |
+| 42999 | [UnderlyingPaymentStubStartDateAdjusted](/fix/fields/tags-42800-42999#tag-42999) | LocalMktDate | Optional | The adjusted stub start date. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingPaymentStubGrp](/fix/groups/underlying-payment-stub-grp)

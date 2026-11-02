@@ -1,0 +1,24 @@
+---
+title: "RelatedPartyDetailAltIDGrp"
+subtitle: "Alternative identifiers for parties related to the party specified in the PartyDetailGrp."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1569</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedPartyDetailAltID (1569)](/fix/fields/tags-1400-1599#tag-1569).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1570 | [RelatedPartyDetailAltID](/fix/fields/tags-1400-1599#tag-1570) | String | Optional | Required when NoRelatedPartyDetailAltID &gt; 0. |
+| 1571 | [RelatedPartyDetailAltIDSource](/fix/fields/tags-1400-1599#tag-1571) | PartyIDSourceCodeSet | Optional | Required when NoRelatedPartyDetailAltID &gt; 0. |
+| 1572 | [RelatedPartyDetailAltSubGrp](/fix/groups/related-party-detail-alt-sub-grp) | Repeating group | Optional | Sub identifiers for related parties alternate identifiers. |
+
+</StickyTable>
+
+## Used in
+
+[RelatedPartyDetailGrp](/fix/groups/related-party-detail-grp)

@@ -1,0 +1,22 @@
+---
+title: "LegPaymentScheduleInterimExchangeDateBusinessCenterGrp"
+subtitle: "LegPaymentScheduleInterimExchangeDateBusinessCenterGrp is a repeating subcomponent within the LegPaymentScheduleGrp component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40928</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentScheduleInterimExchangeDateBusinessCenters (40928)](/fix/fields/tags-40800-40999#tag-40928).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40409 | [LegPaymentScheduleInterimExchangeDatesBusinessCenter](/fix/fields/tags-40400-40599#tag-40409) | String | Optional | Required if NoLegPaymentScheduleInterimExchangeDateBusinessCenters(40928) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)

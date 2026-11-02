@@ -1,0 +1,25 @@
+---
+title: "DerivativeInstrumentParties"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1292</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoDerivativeInstrumentParties (1292)](/fix/fields/tags-1200-1399#tag-1292).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1293 | [DerivativeInstrumentPartyID](/fix/fields/tags-1200-1399#tag-1293) | String | Optional | Used to identify party id related to instrument series |
+| 1294 | [DerivativeInstrumentPartyIDSource](/fix/fields/tags-1200-1399#tag-1294) | PartyIDSourceCodeSet | Optional | Used to identify source of instrument series party id |
+| 1295 | [DerivativeInstrumentPartyRole](/fix/fields/tags-1200-1399#tag-1295) | PartyRoleCodeSet | Optional | Used to identify the role of instrument series party id |
+| 2377 | [DerivativeInstrumentPartyRoleQualifier](/fix/fields/tags-2200-2399#tag-2377) | PartyDetailRoleQualifierCodeSet | Optional | Used to further qualify the value of DerivativeInstrumentPartyRole(1295). |
+| 1296 | [DerivativeInstrumentPartySubIDsGrp](/fix/groups/derivative-instrument-party-sub-i-ds-grp) | Repeating group | Optional |  |
+
+</StickyTable>
+
+## Used in
+
+[DerivativeInstrument](/fix/components/derivative-instrument)

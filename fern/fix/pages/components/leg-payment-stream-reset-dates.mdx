@@ -1,0 +1,43 @@
+---
+title: "LegPaymentStreamResetDates"
+subtitle: "The LegPaymentStreamResetDates component is a subcomponent of the LegPaymentStream component used to specify the floating rate reset dates of the stream."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40303 | [LegPaymentStreamResetDateRelativeTo](/fix/fields/tags-40200-40399#tag-40303) | int | Optional | Specifies the anchor date when the reset dates are relative to an anchor date. If the reset frequency is specified as daily this element must not be included. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 40304 | [LegPaymentStreamResetDateBusinessDayConvention](/fix/fields/tags-40200-40399#tag-40304) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to this instance of the leg payment stream reset dates. |
+| 40931 | [LegPaymentStreamResetDateBusinessCenterGrp](/fix/groups/leg-payment-stream-reset-date-business-center-grp) | Repeating group | Optional | LegPaymentStreamResetDateBusinessCenterGrp is a repeating subcomponent within the LegPaymentStreamResetDates component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the LegDateAdjustment component… |
+| 40306 | [LegPaymentStreamResetFrequencyPeriod](/fix/fields/tags-40200-40399#tag-40306) | int | Optional | Conditionally required when LegPaymentStreamResetFrequencyUnit(40307) is specified. |
+| 40307 | [LegPaymentStreamResetFrequencyUnit](/fix/fields/tags-40200-40399#tag-40307) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when LegPaymentStreamResetFrequencyPeriod(40306) is specified. |
+| 40308 | [LegPaymentStreamResetWeeklyRollConvention](/fix/fields/tags-40200-40399#tag-40308) | PaymentStreamResetWeeklyRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the LegDateAdjustment component in InstrumentLeg. The specified values would be specific to this instance of the stream payment dates. |
+| 40309 | [LegPaymentStreamInitialFixingDateRelativeTo](/fix/fields/tags-40200-40399#tag-40309) | int | Optional | Specifies the anchor date when the initial fixing date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 40310 | [LegPaymentStreamInitialFixingDateBusinessDayConvention](/fix/fields/tags-40200-40399#tag-40310) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to this instance of the leg payment stream reset dates. |
+| 40932 | [LegPaymentStreamInitialFixingDateBusinessCenterGrp](/fix/groups/leg-payment-stream-initial-fixing-date-business-center-grp) | Repeating group | Optional | LegPaymentStreamInitialFixingDateBusinessCenterGrp is a repeating subcomponent within the LegPaymentStreamResetDates component used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the LegDateAdjustment component… |
+| 40312 | [LegPaymentStreamInitialFixingDateOffsetPeriod](/fix/fields/tags-40200-40399#tag-40312) | int | Optional | Conditionally required when LegPaymentStreamInitialFixingDateOffsetUnit(40313) is specified. |
+| 40313 | [LegPaymentStreamInitialFixingDateOffsetUnit](/fix/fields/tags-40200-40399#tag-40313) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentStreamInitialFixingDateOffsetPeriod(40312) is specified. |
+| 40314 | [LegPaymentStreamInitialFixingDateOffsetDayType](/fix/fields/tags-40200-40399#tag-40314) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative initial fixing date offset. |
+| 40315 | [LegPaymentStreamInitialFixingDateAdjusted](/fix/fields/tags-40200-40399#tag-40315) | LocalMktDate | Optional | The adjusted initial fixing date. |
+| 40316 | [LegPaymentStreamFixingDateRelativeTo](/fix/fields/tags-40200-40399#tag-40316) | int | Optional | Specifies the anchor date when the fixing date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 40317 | [LegPaymentStreamFixingDateBusinessDayConvention](/fix/fields/tags-40200-40399#tag-40317) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to this instance of the leg payment stream reset dates. |
+| 40933 | [LegPaymentStreamFixingDateBusinessCenterGrp](/fix/groups/leg-payment-stream-fixing-date-business-center-grp) | Repeating group | Optional | LegPaymentStreamFixingDateBusinessCenterGrp is a repeating subcomponent within the LegPaymentStreamResetDates component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the LegDateAdjustment component… |
+| 40319 | [LegPaymentStreamFixingDateOffsetPeriod](/fix/fields/tags-40200-40399#tag-40319) | int | Optional | Conditionally required when LegPaymentStreamFixingDateOffsetUnit(40320) is specified. |
+| 40320 | [LegPaymentStreamFixingDateOffsetUnit](/fix/fields/tags-40200-40399#tag-40320) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentStreamFixingDateOffsetPeriod(40319) is specified. |
+| 40321 | [LegPaymentStreamFixingDateOffsetDayType](/fix/fields/tags-40200-40399#tag-40321) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative fixing date offset. |
+| 40322 | [LegPaymentStreamFixingDateAdjusted](/fix/fields/tags-40200-40399#tag-40322) | LocalMktDate | Optional | The adjusted fixing date. |
+| 40323 | [LegPaymentStreamRateCutoffDateOffsetPeriod](/fix/fields/tags-40200-40399#tag-40323) | int | Optional | Conditionally required when LegPaymentStreamRateCutoffDateOffsetUnit(40324) is specified. |
+| 40324 | [LegPaymentStreamRateCutoffDateOffsetUnit](/fix/fields/tags-40200-40399#tag-40324) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentStreamRateCutoffDateOffsetPeriod(40323) is specified. |
+| 40325 | [LegPaymentStreamRateCutoffDateOffsetDayType](/fix/fields/tags-40200-40399#tag-40325) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative rate cut-off date offset. |
+| 42459 | [LegPaymentStreamFixingDateGrp](/fix/groups/leg-payment-stream-fixing-date-grp) | Repeating group | Optional | LegPaymentStreamFixingDateGrp is a subcomponent of the LegPaymentStreamResetDates component used to specify predetermined fixing dates. |
+
+</StickyTable>
+
+## Used in
+
+[LegPaymentStream](/fix/components/leg-payment-stream)

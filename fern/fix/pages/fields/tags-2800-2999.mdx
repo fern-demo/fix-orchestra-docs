@@ -1,0 +1,1115 @@
+---
+title: "Tags 2800–2896"
+subtitle: "85 fields"
+---
+
+## 2800 · PayDisputeReason [#tag-2800]
+
+<Badge intent="info" minimal>Tag 2800</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used to provide the reason for disputing a request or report. See https://www.fixtrading.org/packages/PayDisputeReason for the list of applicable values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [PayManagementReport](/fix/messages/pay-management-report), [PayManagementReportAck](/fix/messages/pay-management-report-ack)
+
+## 2801 · EncodedReplaceText [#tag-2801]
+
+<Badge intent="info" minimal>Tag 2801</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Encoded (non-ASCII characters) representation of the ReplaceText(2805) field in the encoded format specified via the MessageEncoding(347) field. If used, the ASCII (English) representation should also be specified in the ReplaceText(2805) field.
+
+Type: [data](/fix/datatypes#data)
+
+Used in: [PayManagementReport](/fix/messages/pay-management-report)
+
+## 2802 · EncodedReplaceTextLen [#tag-2802]
+
+<Badge intent="info" minimal>Tag 2802</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Byte length of encoded (non-ASCII characters) EncodedReplaceText(2801) field.
+
+Type: [Length](/fix/datatypes#length)
+
+Used in: [PayManagementReport](/fix/messages/pay-management-report)
+
+## 2803 · PayReportRefID [#tag-2803]
+
+<Badge intent="info" minimal>Tag 2803</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Reference identifier of the PayManagementReport(35=EA). To be used with PayReportTransType(2804)=1 (Replace).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PayManagementReport](/fix/messages/pay-management-report)
+
+## 2804 · PayReportTransType [#tag-2804]
+
+<Badge intent="info" minimal>Tag 2804</Badge> <Badge intent="note" minimal>PayReportTransTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the message transaction type.
+
+Code set **PayReportTransTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | New | New |
+| `1` | Replace | Replace |
+| `2` | Status | Status |
+
+Used in: [PayManagementReport](/fix/messages/pay-management-report)
+
+## 2805 · ReplaceText [#tag-2805]
+
+<Badge intent="info" minimal>Tag 2805</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the reason for amendment.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PayManagementReport](/fix/messages/pay-management-report)
+
+## 2806 · PayReportStatus [#tag-2806]
+
+<Badge intent="info" minimal>Tag 2806</Badge> <Badge intent="note" minimal>PayReportStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies status of the payment report.
+
+Code set **PayReportStatusCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Received | Received, not yet processed |
+| `1` | Accepted | Accepted |
+| `2` | Rejected | Rejected |
+| `3` | Disputed | Disputed |
+
+Used in: [PayManagementReportAck](/fix/messages/pay-management-report-ack)
+
+## 2807 · CancelText [#tag-2807]
+
+<Badge intent="info" minimal>Tag 2807</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the reason for cancelation.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PayManagementRequest](/fix/messages/pay-management-request)
+
+## 2808 · EncodedCancelText [#tag-2808]
+
+<Badge intent="info" minimal>Tag 2808</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Encoded (non-ASCII characters) representation of the CancelText(2807) field in the encoded format specified via the MessageEncoding(347) field. If used, the ASCII (English) representation should also be specified in the CancelText(2807) field.
+
+Type: [data](/fix/datatypes#data)
+
+Used in: [PayManagementRequest](/fix/messages/pay-management-request)
+
+## 2809 · EncodedCancelTextLen [#tag-2809]
+
+<Badge intent="info" minimal>Tag 2809</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Byte length of encoded (non-ASCII characters) EncodedCancelText(2808) field.
+
+Type: [Length](/fix/datatypes#length)
+
+Used in: [PayManagementRequest](/fix/messages/pay-management-request)
+
+## 2810 · PayRequestRefID [#tag-2810]
+
+<Badge intent="info" minimal>Tag 2810</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Reference identifier of the PayManagementRequest(35=DY). To be used with PayRequestTransType(2811)=1 (Cancel).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PayManagementRequest](/fix/messages/pay-management-request)
+
+## 2811 · PayRequestTransType [#tag-2811]
+
+<Badge intent="info" minimal>Tag 2811</Badge> <Badge intent="note" minimal>PayRequestTransTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the message transaction type.
+
+Code set **PayRequestTransTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | New | New |
+| `1` | Cancel | Cancel |
+
+Used in: [PayManagementRequest](/fix/messages/pay-management-request)
+
+## 2812 · PayRequestID [#tag-2812]
+
+<Badge intent="info" minimal>Tag 2812</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Unique ID of the PayManagementRequest(35=DY) message.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PayManagementReport](/fix/messages/pay-management-report), [PayManagementRequest](/fix/messages/pay-management-request), [PayManagementRequestAck](/fix/messages/pay-management-request-ack)
+
+## 2813 · PayRequestStatus [#tag-2813]
+
+<Badge intent="info" minimal>Tag 2813</Badge> <Badge intent="note" minimal>PayRequestStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies status of the request being responded to.
+
+Code set **PayRequestStatusCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Received | Received, not yet processed |
+| `1` | Accepted | Accepted |
+| `2` | Rejected | Rejected |
+| `3` | Disputed | Disputed |
+
+Used in: [PayManagementReport](/fix/messages/pay-management-report), [PayManagementRequestAck](/fix/messages/pay-management-request-ack)
+
+## 2814 · EncodedPostTradePaymentDesc [#tag-2814]
+
+<Badge intent="info" minimal>Tag 2814</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Encoded (non-ASCII characters) representation of the PostTradePaymentDesc(2820) field in the encoded format specified via the MessageEncoding(347) field. If used, the ASCII (English) representation should also be specified in the PostTradePaymentDesc(2820) field.
+
+Type: [data](/fix/datatypes#data)
+
+Used in: [PostTradePayment](/fix/components/post-trade-payment)
+
+## 2815 · EncodedPostTradePaymentDescLen [#tag-2815]
+
+<Badge intent="info" minimal>Tag 2815</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Byte length of encoded (non-ASCII characters) EncodedPostTradePaymentDesc(2814) field.
+
+Type: [Length](/fix/datatypes#length)
+
+Used in: [PostTradePayment](/fix/components/post-trade-payment)
+
+## 2816 · PostTradePaymentAccount [#tag-2816]
+
+<Badge intent="info" minimal>Tag 2816</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The cash account on the books of the receiver of the request or the sender of the report to be debited or credited.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PostTradePayment](/fix/components/post-trade-payment)
+
+## 2817 · PostTradePaymentAmount [#tag-2817]
+
+<Badge intent="info" minimal>Tag 2817</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The payment amount for the specified PostTradePaymentType(2824).
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [PostTradePayment](/fix/components/post-trade-payment)
+
+## 2818 · PostTradePaymentCurrency [#tag-2818]
+
+<Badge intent="info" minimal>Tag 2818</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency in which PostTradePaymentAmount(2817) is denominated. Uses ISO 4271 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [PostTradePayment](/fix/components/post-trade-payment)
+
+## 2819 · PostTradePaymentDebitOrCredit [#tag-2819]
+
+<Badge intent="info" minimal>Tag 2819</Badge> <Badge intent="note" minimal>PostTradePaymentDebitOrCreditCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Payment side of this individual payment from the requesting firm's perspective.
+
+Code set **PostTradePaymentDebitOrCreditCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | DebitPay | Debit / Pay |
+| `1` | CreditReceive | Credit / Receive |
+
+Used in: [PostTradePayment](/fix/components/post-trade-payment)
+
+## 2820 · PostTradePaymentDesc [#tag-2820]
+
+<Badge intent="info" minimal>Tag 2820</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A short descriptive name given to the payment, e.g. Premium, Upfront, etc. The description may be used as reference.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PostTradePayment](/fix/components/post-trade-payment)
+
+## 2821 · PostTradePaymentID [#tag-2821]
+
+<Badge intent="info" minimal>Tag 2821</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The identifier for the individual payment.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PostTradePayment](/fix/components/post-trade-payment)
+
+## 2822 · PostTradePaymentLinkID [#tag-2822]
+
+<Badge intent="info" minimal>Tag 2822</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used to link a group of payments together, e.g. cross-currency payments associated with a swap.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PostTradePayment](/fix/components/post-trade-payment)
+
+## 2823 · PostTradePaymentStatus [#tag-2823]
+
+<Badge intent="info" minimal>Tag 2823</Badge> <Badge intent="note" minimal>PostTradePaymentStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used to indicate the status of a post-trade payment.
+
+Code set **PostTradePaymentStatusCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | New | New |
+| `1` | Initiated | Initiated |
+| `2` | Pending | Pending |
+| `3` | Confirmed | Confirmed |
+| `4` | Rejected | Rejected |
+
+Used in: [PostTradePayment](/fix/components/post-trade-payment)
+
+## 2824 · PostTradePaymentType [#tag-2824]
+
+<Badge intent="info" minimal>Tag 2824</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Type of post-trade payment. See ISITC "Payments Cash Purpose Codes" for list of payment type codes to use available at https://isitc.org/market-practices/reference-data-and-standards-market-practice and select "ISITC Classification Code List".
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PostTradePayment](/fix/components/post-trade-payment)
+
+## 2825 · PostTradePaymentCalculationDate [#tag-2825]
+
+<Badge intent="info" minimal>Tag 2825</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The (actual) date the periodic payments calculations are made.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [PostTradePayment](/fix/components/post-trade-payment)
+
+## 2826 · PostTradePaymentValueDate [#tag-2826]
+
+<Badge intent="info" minimal>Tag 2826</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted (for holidays and other non-business days) payment date on which the payment is expected to settle.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [PostTradePayment](/fix/components/post-trade-payment)
+
+## 2827 · PostTradePaymentFinalValueDate [#tag-2827]
+
+<Badge intent="info" minimal>Tag 2827</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The actual or final payment date on which the payment was made.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [PostTradePayment](/fix/components/post-trade-payment)
+
+## 2828 · CurrentDisplayPrice [#tag-2828]
+
+<Badge intent="info" minimal>Tag 2828</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Price at which the order is currently displayed to the market. Can be used on order messages, e.g. NewOrderSingle(35=D), to provide the current displayed price of a parent order when splitting it into smaller child orders.
+
+In the context of US CAT this is used when reporting new child orders.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [DisplayInstruction](/fix/components/display-instruction)
+
+## 2829 · DuplicateClOrdIDIndicator [#tag-2829]
+
+<Badge intent="info" minimal>Tag 2829</Badge> <Badge intent="note" minimal>DuplicateClOrdIDIndicatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used to indicate that a ClOrdID(11) value is an intentional duplicate of a previously sent value. Allows to avoid the rejection of an order with OrdRejReason(103) = 6 (Duplicate Order).
+
+In the context of US CAT this can be used when the recipient of a previously routed order requires the same identifier to be re-used for a new route.
+
+Code set **DuplicateClOrdIDIndicatorCodeSet** ([Boolean](/fix/datatypes#boolean))
+
+| Value | Name | Description |
+|---|---|---|
+| `N` | UniqueClOrdID | Unique ClOrdID(11) |
+| `Y` | DuplicateClOrdID | Duplicate ClOrdID(11) |
+
+Used in: [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request)
+
+## 2830 · EventInitiatorType [#tag-2830]
+
+<Badge intent="info" minimal>Tag 2830</Badge> <Badge intent="note" minimal>EventInitiatorTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates the type of entity who initiated an event, e.g. modification or cancellation of an order or quote.
+
+Code set **EventInitiatorTypeCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `C` | CustomerOrClient | Customer or client |
+| `E` | ExchangeOrExecutionVenue | Exchange or execution venue |
+| `F` | FirmOrBroker | Firm or broker |
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [QuoteStatusReport](/fix/messages/quote-status-report)
+
+## 2831 · NBBOEntryType [#tag-2831]
+
+<Badge intent="info" minimal>Tag 2831</Badge> <Badge intent="note" minimal>NBBOEntryTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Type of NBBO information.
+
+Code set **NBBOEntryTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Bid | Bid |
+| `1` | Offer | Offer |
+| `2` | MidPrice | Mid-price |
+
+Used in: [TrdRegTimestamps](/fix/groups/trd-reg-timestamps)
+
+## 2832 · NBBOPrice [#tag-2832]
+
+<Badge intent="info" minimal>Tag 2832</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Price related to NBBO. NBBOEntryType(2831) may be used to indicate entry type, e.g. bid or offer.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [TrdRegTimestamps](/fix/groups/trd-reg-timestamps)
+
+## 2833 · NBBOQty [#tag-2833]
+
+<Badge intent="info" minimal>Tag 2833</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Quantity related to NBBO. NBBOEntryType(2831) may be used to indicte entry type, e.g. bid or offer.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [TrdRegTimestamps](/fix/groups/trd-reg-timestamps)
+
+## 2834 · NBBOSource [#tag-2834]
+
+<Badge intent="info" minimal>Tag 2834</Badge> <Badge intent="note" minimal>NBBOSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Source of NBBO information.
+
+Code set **NBBOSourceCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | Direct | Direct |
+| `2` | SIP | Securities Information Processor |
+| `3` | Hybrid | Hybrid |
+
+Used in: [TrdRegTimestamps](/fix/groups/trd-reg-timestamps)
+
+## 2835 · OrderOriginationFirmID [#tag-2835]
+
+<Badge intent="info" minimal>Tag 2835</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifier for the original owner of an order as part of the RelatedOrderGrp component. Use the Parties component with PartyRole(452) = 13 (Order Origination Firm) to identify the original owner of an individual order.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [RelatedOrderGrp](/fix/groups/related-order-grp)
+
+## 2836 · RelatedOrderTime [#tag-2836]
+
+<Badge intent="info" minimal>Tag 2836</Badge> <Badge intent="note" minimal>UTCTimestamp</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Timestamp for the assignment of a (unique) identifier to an order.
+
+Type: [UTCTimestamp](/fix/datatypes#utc-timestamp)
+
+Used in: [RelatedOrderGrp](/fix/groups/related-order-grp)
+
+## 2837 · SingleQuoteIndicator [#tag-2837]
+
+<Badge intent="info" minimal>Tag 2837</Badge> <Badge intent="note" minimal>SingleQuoteIndicatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used to indicate whether the quoting system allows only one quote to be active at a time for the quote issuer or market maker.
+
+Code set **SingleQuoteIndicatorCodeSet** ([Boolean](/fix/datatypes#boolean))
+
+| Value | Name | Description |
+|---|---|---|
+| `N` | MultipleQuotesAllowed | Multiple quotes allowed |
+| `Y` | OnlyOneQuoteAllowed | Only one quote allowed |
+
+Used in: [Quote](/fix/messages/quote)
+
+## 2838 · CurrentWorkingPrice [#tag-2838]
+
+<Badge intent="info" minimal>Tag 2838</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Current working price of the order relative to the state of the order.
+
+In the context of US CAT this can be used for the current price of the parent order when reporting a split into new (child) orders.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request)
+
+## 2839 · TrdRegTimestampManualIndicator [#tag-2839]
+
+<Badge intent="info" minimal>Tag 2839</Badge> <Badge intent="note" minimal>TrdRegTimestampManualIndicatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether a given timestamp was manually captured.
+
+Code set **TrdRegTimestampManualIndicatorCodeSet** ([Boolean](/fix/datatypes#boolean))
+
+| Value | Name | Description |
+|---|---|---|
+| `N` | NotManuallyCaptured | Not manually captured |
+| `Y` | ManuallyCaptured | Manually captured |
+
+Used in: [TrdRegTimestamps](/fix/groups/trd-reg-timestamps)
+
+## 2840 · CollateralReinvestmentRate [#tag-2840]
+
+<Badge intent="info" minimal>Tag 2840</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Interest rate received for collateral reinvestment.
+
+In the context of EU SFTR this is the reinvestment interest rate received from cash collateral made by the lender. If there are multiple reinvestment types, this is an average rate.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [CollateralAmountGrp](/fix/groups/collateral-amount-grp)
+
+## 2841 · UnderlyingRefID [#tag-2841]
+
+<Badge intent="info" minimal>Tag 2841</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the underlying instrument the entity applies to by referencing the underlying instrument's UnderlyingID(2874).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [CollateralAmountGrp](/fix/groups/collateral-amount-grp)
+
+## 2842 · CollateralReinvestmentAmount [#tag-2842]
+
+<Badge intent="info" minimal>Tag 2842</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The cash amount of the specified re-investment type.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [CollateralReinvestmentGrp](/fix/groups/collateral-reinvestment-grp)
+
+## 2843 · CollateralReinvestmentCurrency [#tag-2843]
+
+<Badge intent="info" minimal>Tag 2843</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The currency denomination of the re-invested cash amount. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [CollateralReinvestmentGrp](/fix/groups/collateral-reinvestment-grp)
+
+## 2844 · CollateralReinvestmentType [#tag-2844]
+
+<Badge intent="info" minimal>Tag 2844</Badge> <Badge intent="note" minimal>CollateralReinvestmentTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates the type of investment the cash collateral is re-invested in.
+
+Code set **CollateralReinvestmentTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | MoneyMarketFund | Money market fund |
+| `1` | OtherComingledPool | Other comingled pool |
+| `2` | RepoMarket | Repo market |
+| `3` | DirectPurchaseOfSecurities | Direct purchase of securities |
+| `4` | OtherInvestments | Other investments |
+
+Used in: [CollateralReinvestmentGrp](/fix/groups/collateral-reinvestment-grp)
+
+## 2845 · NoCollateralReinvestments [#tag-2845]
+
+<Badge intent="info" minimal>Tag 2845</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of instances of CollateralReinvestmentType(2844) in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [CollateralReinvestmentGrp](/fix/groups/collateral-reinvestment-grp)
+
+## 2846 · FundingSource [#tag-2846]
+
+<Badge intent="info" minimal>Tag 2846</Badge> <Badge intent="note" minimal>FundingSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the funding source used to finance margin or collateralized loan.
+
+Code set **FundingSourceCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Repo | Repurchase agreement |
+| `1` | Cash | Cash |
+| `2` | FreeCedits | Free credits |
+| `3` | CustomerShortSales | Customer short sales |
+| `4` | BrokerShortSales | Broker short sales |
+| `5` | UnsecuredBorrowing | Unsecured borrowing |
+| `99` | Other | Other |
+
+Used in: [FundingSourceGrp](/fix/groups/funding-source-grp)
+
+## 2847 · FundingSourceCurrency [#tag-2847]
+
+<Badge intent="info" minimal>Tag 2847</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Currency denomination of the market value of the funding source. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [FundingSourceGrp](/fix/groups/funding-source-grp)
+
+## 2848 · FundingSourceMarketValue [#tag-2848]
+
+<Badge intent="info" minimal>Tag 2848</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Market value of the funding source.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [FundingSourceGrp](/fix/groups/funding-source-grp)
+
+## 2849 · NoFundingSources [#tag-2849]
+
+<Badge intent="info" minimal>Tag 2849</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of instances of FundingSource(2846) in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [FundingSourceGrp](/fix/groups/funding-source-grp)
+
+## 2851 · MarginDirection [#tag-2851]
+
+<Badge intent="info" minimal>Tag 2851</Badge> <Badge intent="note" minimal>MarginDirectionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether the margin described is posted or received.
+
+Code set **MarginDirectionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Posted | Posted |
+| `1` | Received | Received |
+
+Used in: [MarginAmount](/fix/groups/margin-amount)
+
+## 2862 · SideCollateralReinvestmentRate [#tag-2862]
+
+<Badge intent="info" minimal>Tag 2862</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Interest rate received for collateral reinvestment.
+
+In the context of EU SFTR this is the reinvestment interest rate received from cash collateral made by the lender. If there are multiple reinvestment types, this is an average rate.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [SideCollateralAmountGrp](/fix/groups/side-collateral-amount-grp)
+
+## 2863 · SideUnderlyingRefID [#tag-2863]
+
+<Badge intent="info" minimal>Tag 2863</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the underlying instrument the entity applies to by referencing the underlying instrument's UnderlyingID(2874).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [SideCollateralAmountGrp](/fix/groups/side-collateral-amount-grp)
+
+## 2864 · NoSideCollateralReinvestments [#tag-2864]
+
+<Badge intent="info" minimal>Tag 2864</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of instances of SideCollateralReinvestmentType(2867) in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [SideCollateralReinvestmentGrp](/fix/groups/side-collateral-reinvestment-grp)
+
+## 2865 · SideCollateralReinvestmentAmount [#tag-2865]
+
+<Badge intent="info" minimal>Tag 2865</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The cash amount of the specified re-investment type.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [SideCollateralReinvestmentGrp](/fix/groups/side-collateral-reinvestment-grp)
+
+## 2866 · SideCollateralReinvestmentCurrency [#tag-2866]
+
+<Badge intent="info" minimal>Tag 2866</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The currency denomination of the re-invested cash amount. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [SideCollateralReinvestmentGrp](/fix/groups/side-collateral-reinvestment-grp)
+
+## 2867 · SideCollateralReinvestmentType [#tag-2867]
+
+<Badge intent="info" minimal>Tag 2867</Badge> <Badge intent="note" minimal>CollateralReinvestmentTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates the type of investment the cash collateral is re-invested in.
+
+Code set **CollateralReinvestmentTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | MoneyMarketFund | Money market fund |
+| `1` | OtherComingledPool | Other comingled pool |
+| `2` | RepoMarket | Repo market |
+| `3` | DirectPurchaseOfSecurities | Direct purchase of securities |
+| `4` | OtherInvestments | Other investments |
+
+Used in: [SideCollateralReinvestmentGrp](/fix/groups/side-collateral-reinvestment-grp)
+
+## 2868 · CollateralizationValueDate [#tag-2868]
+
+<Badge intent="info" minimal>Tag 2868</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Date when the collateral is to be assessed or assigned.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [CollateralReport](/fix/messages/collateral-report), [PositionReport](/fix/messages/position-report), [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 2869 · RegulatoryReportTypeBusinessDate [#tag-2869]
+
+<Badge intent="info" minimal>Tag 2869</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business date on which the event identified in RegulatoryReportType(1934) took place.
+
+In the context of EU SFTR reports with a RegulatoryReportType(1934) value 7 (Post-trade valuation), 31 (Collateral update) or 32 (Margin update), the business date on which the business event took place, which results in the information contained in the report.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [CollateralReport](/fix/messages/collateral-report), [MarginRequirementReport](/fix/messages/margin-requirement-report), [PositionReport](/fix/messages/position-report), [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 2870 · ClearingPortfolioID [#tag-2870]
+
+<Badge intent="info" minimal>Tag 2870</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+When the transaction is cleared and included in a portfolio of transactions this identifies the portfolio by its unique identifier.
+
+In the context of EU SFTR reporting this applies to cleared transactions grouped in a portfolio for which margins are exchanged.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [MarginRequirementReport](/fix/messages/margin-requirement-report), [PositionReport](/fix/messages/position-report), [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 2871 · NoTransactionAttributes [#tag-2871]
+
+<Badge intent="info" minimal>Tag 2871</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of instances of TransactionAttributeType(2872) in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [TransactionAttributeGrp](/fix/groups/transaction-attribute-grp)
+
+## 2872 · TransactionAttributeType [#tag-2872]
+
+<Badge intent="info" minimal>Tag 2872</Badge> <Badge intent="note" minimal>TransactionAttributeTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Type of attribute(s) or characteristic(s) associated with the transaction.
+
+Code set **TransactionAttributeTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | ExclusiveArrangement | Exclusive arrangement |
+| `1` | CollateralReuse | Collateral reuse |
+| `2` | CollateralArrangmentType | Collateral arrangement type |
+
+Used in: [TransactionAttributeGrp](/fix/groups/transaction-attribute-grp)
+
+## 2873 · TransactionAttributeValue [#tag-2873]
+
+<Badge intent="info" minimal>Tag 2873</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Value associated with the specificed TransactionAttributeType(2872).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [TransactionAttributeGrp](/fix/groups/transaction-attribute-grp)
+
+## 2874 · UnderlyingID [#tag-2874]
+
+<Badge intent="info" minimal>Tag 2874</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Unique identifier for the underlying instrument within the context of a message.
+
+The UnderlyingID(2874) can be referenced by other fields, for example UnderlyingRefID(tbd2841) and SideUnderlyingRefID(2863), from other components . The scope of uniqueness is agreed upon between counterparties.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
+
+## 2876 · PosAmtPrice [#tag-2876]
+
+<Badge intent="info" minimal>Tag 2876</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The price used to calculate the PosAmt(708).
+
+This may be used for certain PosAmtType(707) values where the PosAmt(708) is based on the current price of the position's security. In the context of EU SFTR reporting, this is the price used to calculate the loan value for securities loan and borrowing, and buy-sell back. The price may be expressed in units or percentage of the underlying security, yield or an absolute amount that ignores netting. For Buy/Sellback it expresses the initial spot price.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [PositionAmountData](/fix/groups/position-amount-data)
+
+## 2877 · PosAmtPriceType [#tag-2877]
+
+<Badge intent="info" minimal>Tag 2877</Badge> <Badge intent="note" minimal>PriceTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of price for PosAmtPrice(2876).
+
+Code set **PriceTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Percentage | Percentage (i.e. percent of par) (often called "dollar price" for fixed income) |
+| `2` | PerUnit | Per unit (i.e. per share or contract) |
+| `3` | FixedAmount | Fixed amount (absolute value) |
+| `4` | Discount | Discount - percentage points below par |
+| `5` | Premium | Premium - percentage points over par |
+| `6` | Spread | Spread (basis points spread) |
+| `7` | TEDPrice | TED Price |
+| `8` | TEDYield | TED Yield |
+| `9` | Yield | Yield |
+| `10` | FixedCabinetTradePrice | Fixed cabinet trade price (primarily for listed futures and options) |
+| `11` | VariableCabinetTradePrice | Variable cabinet trade price (primarily for listed futures and options) |
+| `12` | PriceSpread | Price spread |
+| `13` | ProductTicksInHalves | Product ticks in halves |
+| `14` | ProductTicksInFourths | Product ticks in fourths |
+| `15` | ProductTicksInEighths | Product ticks in eighths |
+| `16` | ProductTicksInSixteenths | Product ticks in sixteenths |
+| `17` | ProductTicksInThirtySeconds | Product ticks in thirty-seconds |
+| `18` | ProductTicksInSixtyFourths | Product ticks in sixty-fourths |
+| `19` | ProductTicksInOneTwentyEighths | Product ticks in one-twenty-eighths |
+| `20` | NormalRateRepresentation | Normal rate representation (e.g. FX rate) |
+| `21` | InverseRateRepresentation | Inverse rate representation (e.g. FX rate) |
+| `22` | BasisPoints | Basis points |
+| `23` | UpfrontPoints | Up front points |
+| `24` | InterestRate | Interest rate |
+| `25` | PercentageNotional | Percentage of notional |
+
+Used in: [PositionAmountData](/fix/groups/position-amount-data)
+
+## 2878 · TerminationDate [#tag-2878]
+
+<Badge intent="info" minimal>Tag 2878</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The date of a contract's early termination or other post-trade event when the event is prior to the contract natural end or maturity not defined as part of the security's reference data or contractual terms/agreement.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [PositionReport](/fix/messages/position-report), [QuoteResponse](/fix/messages/quote-response), [QuoteStatusReport](/fix/messages/quote-status-report), [TradeCaptureReport](/fix/messages/trade-capture-report)
+
+## 2879 · CouponOtherDayCount [#tag-2879]
+
+<Badge intent="info" minimal>Tag 2879</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The industry name of the day count convention not listed in CouponDayCount(1950).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [Instrument](/fix/components/instrument)
+
+## 2880 · LegCouponOtherDayCount [#tag-2880]
+
+<Badge intent="info" minimal>Tag 2880</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The industry name of the day count convention not listed in LegCouponDayCount(2165).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [InstrumentLeg](/fix/components/instrument-leg)
+
+## 2881 · UnderlyingCouponOtherDayCount [#tag-2881]
+
+<Badge intent="info" minimal>Tag 2881</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The industry name of the day count convention not listed in UnderlyingCouponDayCount(1993).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
+
+## 2882 · ContraOrderOrigination [#tag-2882]
+
+<Badge intent="info" minimal>Tag 2882</Badge> <Badge intent="note" minimal>OrderOriginationCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the origin of the order from the counterparty of the execution or trade.
+
+Code set **OrderOriginationCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | OrderReceivedFromCustomer | Order received from a customer |
+| `2` | OrderReceivedFromWithinFirm | Order received from within the firm |
+| `3` | OrderReceivedFromAnotherBrokerDealer | Order received from another broker-dealer |
+| `4` | OrderReceivedFromCustomerOrWithFirm | Order received from a customer or originated from within the firm |
+| `5` | OrderReceivedFromDirectAccessCustomer | Order received from a direct access or sponsored access customer |
+| `6` | OrderReceivedFromForeignDealerEquivalent | Order received from a foreign dealer equivalent |
+| `7` | OrderReceivedFromExecutionOnlyService | Order received from an execution-only service |
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request)
+
+## 2883 · RoutingArrangmentIndicator [#tag-2883]
+
+<Badge intent="info" minimal>Tag 2883</Badge> <Badge intent="note" minimal>RoutingArrangmentIndicatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether a routing arrangement is in place, e.g. between two brokers. May be used together with OrderOrigination(1724) to further describe the origin of an order.
+
+An arrangement under which a participant of a marketplace permits a broker to electronically transmit orders containing the identifier of the participant. This can be either through the systems of the participant for automatic onward transmission to a marketplace or directly to a marketplace without being electronically transmitted through the systems of the participant.
+
+Code set **RoutingArrangmentIndicatorCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NoRoutingArrangmentInPlace | No routing arrangement in place |
+| `1` | RoutingArrangementInPlace | Routing arrangement in place |
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [SideCrossOrdModGrp](/fix/groups/side-cross-ord-mod-grp)
+
+## 2884 · ContraRoutingArrangmentIndicator [#tag-2884]
+
+<Badge intent="info" minimal>Tag 2884</Badge> <Badge intent="note" minimal>RoutingArrangmentIndicatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether a routing arrangement is in place, e.g. between two brokers. May be used together with ContraOrderOrigination(2882) to further describe the origin of an order.
+
+Code set **RoutingArrangmentIndicatorCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NoRoutingArrangmentInPlace | No routing arrangement in place |
+| `1` | RoutingArrangementInPlace | Routing arrangement in place |
+
+Used in: [ExecutionReport](/fix/messages/execution-report), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request)
+
+## 2885 · UnderlyingAccruedInterestAmt [#tag-2885]
+
+<Badge intent="info" minimal>Tag 2885</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Amount of accrued interest of underlying security.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
+
+## 2886 · UnderlyingNumDaysInterest [#tag-2886]
+
+<Badge intent="info" minimal>Tag 2886</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of days of interest for underlying security.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
+
+## 2887 · RelatedOrderID [#tag-2887]
+
+<Badge intent="info" minimal>Tag 2887</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifier of a related order.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [RelatedOrderGrp](/fix/groups/related-order-grp)
+
+## 2888 · RelatedOrderIDSource [#tag-2888]
+
+<Badge intent="info" minimal>Tag 2888</Badge> <Badge intent="note" minimal>RelatedOrderIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Describes the source of the identifier that RelatedOrderID(2887) represents.
+
+Code set **RelatedOrderIDSourceCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NonFIXSource | Non-FIX Source |
+| `1` | SystemOrderIdentifier | Order identifier |
+| `2` | ClientOrderIdentifier | Client order identifier |
+| `3` | SecondaryOrderIdentifier | Secondary order identifier |
+| `4` | SecondaryClientOrderIdentifier | Secondary client order identifier |
+
+Used in: [RelatedOrderGrp](/fix/groups/related-order-grp)
+
+## 2889 · RelatedOrderQty [#tag-2889]
+
+<Badge intent="info" minimal>Tag 2889</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Quantity of the related order which can be less than its total quantity. For example, when only parts of an order contribute to an aggregated order.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [RelatedOrderGrp](/fix/groups/related-order-grp)
+
+## 2890 · OrderRelationship [#tag-2890]
+
+<Badge intent="info" minimal>Tag 2890</Badge> <Badge intent="note" minimal>OrderRelationshipCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Describes the type of relationship between the order identified by RelatedOrderID(2887) and the order outside of the RelatedOrderGrp component.
+
+Code set **OrderRelationshipCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotSpecified | Not specified |
+| `1` | OrderAggregation | Order aggregation |
+| `2` | OrderSplit | Order split |
+
+Used in: [RelatedOrderGrp](/fix/groups/related-order-grp)
+
+## 2891 · UPICode [#tag-2891]
+
+<Badge intent="info" minimal>Tag 2891</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.Latest</Badge>
+
+Uniquely identifies the product of a security using ISO 4914 standard, Unique Product Identifier (UPI). The DSB (Derivative Service Bureau Ltd) is acting as designated service provider for UPI System.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [Instrument](/fix/components/instrument), [SecTypesGrp](/fix/groups/sec-types-grp), [SettlInstGrp](/fix/groups/settl-inst-grp), [SettlementInstructionRequest](/fix/messages/settlement-instruction-request)
+
+## 2892 · DerivativeUPICode [#tag-2892]
+
+<Badge intent="info" minimal>Tag 2892</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.Latest</Badge>
+
+Uniquely identifies the product of a derivative instrument using ISO 4914. See UPICode(2891) for further detail.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [DerivativeInstrument](/fix/components/derivative-instrument)
+
+## 2893 · LegUPICode [#tag-2893]
+
+<Badge intent="info" minimal>Tag 2893</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.Latest</Badge>
+
+Uniquely identifies the product of a leg instrument using ISO 4914. See UPICode(2891) for further detail.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [InstrumentLeg](/fix/components/instrument-leg)
+
+## 2894 · UnderlyingUPICode [#tag-2894]
+
+<Badge intent="info" minimal>Tag 2894</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.Latest</Badge>
+
+Uniquely identifies the product of an underlying instrument using ISO 4914. See UPICode(2891) for further detail.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
+
+## 2895 · InstrumentScopeUPICode [#tag-2895]
+
+<Badge intent="info" minimal>Tag 2895</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.Latest</Badge>
+
+Uniquely identifies the product of a security using ISO 4914 as filter criteria. See UPICode(2891) for further detail.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [InstrumentScope](/fix/components/instrument-scope)
+
+## 2896 · TertiaryTrdType [#tag-2896]
+
+<Badge intent="info" minimal>Tag 2896</Badge> <Badge intent="note" minimal>TrdTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.Latest</Badge>
+
+Type of trade assigned to a trade. Used in addition to TrdType(828) and SecondaryTrdType(855). Must not be used when only one additional trade type needs to be assigned.
+
+Code set **TrdTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | RegularTrade | Regular trade |
+| `1` | BlockTrade | Block trade |
+| `2` | EFP | Exchange for physical (EFP) |
+| `3` | Transfer | Transfer |
+| `4` | LateTrade | Late trade |
+| `5` | TTrade | T trade |
+| `6` | WeightedAveragePriceTrade | Weighted average price trade |
+| `7` | BunchedTrade | Bunched trade |
+| `8` | LateBunchedTrade | Late bunched trade |
+| `9` | PriorReferencePriceTrade | Prior reference price trade |
+| `10` | AfterHoursTrade | After hours trade |
+| `11` | ExchangeForRisk | Exchange for risk (EFR) |
+| `12` | ExchangeForSwap | Exchange for swap (EFS) |
+| `13` | ExchangeOfFuturesFor | Exchange of futures for in market futures (EFM) |
+| `14` | ExchangeOfOptionsForOptions | Exchange of options for options (EOO) |
+| `15` | TradingAtSettlement | Trading at settlement |
+| `16` | AllOrNone | All or none |
+| `17` | FuturesLargeOrderExecution | Futures large order execution |
+| `18` | ExchangeOfFuturesForFutures | Exchange of futures for external market futures (EFF) |
+| `19` | OptionInterimTrade | Option interim trade |
+| `20` | OptionCabinetTrade | Option cabinet trade |
+| `22` | PrivatelyNegotiatedTrades | Privately negotiated trade |
+| `23` | SubstitutionOfFuturesForForwards | Substitution of futures for forwards |
+| `48` | NonStandardSettlement | Non-standard settlement |
+| `49` | DerivativeRelatedTransaction | Derivative related transaction |
+| `50` | PortfolioTrade | Portfolio trade |
+| `51` | VolumeWeightedAverageTrade | Volume weighted average trade |
+| `52` | ExchangeGrantedTrade | Exchange granted trade |
+| `53` | RepurchaseAgreement | Repurchase agreement |
+| `54` | OTC | OTC |
+| `55` | ExchangeBasisFacility | Exchange basis facility (EBF) |
+| `56` | OpeningTrade | Opening trade |
+| `57` | NettedTrade | Netted trade |
+| `58` | BlockSwapTrade | Block swap trade |
+| `59` | CreditEventTrade | Credit event trade |
+| `60` | SuccessionEventTrade | Succession event trade |
+| `61` | GiveUpGiveInTrade | Give-up Give-in trade |
+| `62` | DarkTrade | Dark trade |
+| `63` | TechnicalTrade | Technical trade |
+| `64` | Benchmark | Benchmark |
+| `65` | PackageTrade | Package trade |
+| `66` | RollTrade | Roll trade |
+| `24` | ErrorTrade | Error trade |
+| `25` | SpecialCumDividend | Special cum dividend (CD) |
+| `26` | SpecialExDividend | Special ex dividend (XD) |
+| `27` | SpecialCumCoupon | Special cum coupon (CC) |
+| `28` | SpecialExCoupon | Special ex coupon (XC) |
+| `29` | CashSettlement | Cash settlement (CS) |
+| `30` | SpecialPrice | Special price (SP) |
+| `31` | GuaranteedDelivery | Guaranteed delivery (GD) |
+| `32` | SpecialCumRights | Special cum rights (CR) |
+| `33` | SpecialExRights | Special ex rights (XR) |
+| `34` | SpecialCumCapitalRepayments | Special cum capital repayments (CP) |
+| `35` | SpecialExCapitalRepayments | Special ex capital repayments (XP) |
+| `36` | SpecialCumBonus | Special cum bonus (CB) |
+| `37` | SpecialExBonus | Special ex bonus (XB) |
+| `38` | LargeTrade | Block trade |
+| `39` | WorkedPrincipalTrade | Worked principal trade |
+| `40` | BlockTrades | Block trades |
+| `41` | NameChange | Name change |
+| `42` | PortfolioTransfer | Portfolio transfer |
+| `43` | ProrogationBuy | Prorogation buy |
+| `44` | ProrogationSell | Prorogation sell |
+| `45` | OptionExercise | Option exercise |
+| `46` | DeltaNeutralTransaction | Delta neutral transaction |
+| `47` | FinancingTransaction | Financing transaction |
+
+Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [TradeCaptureReport](/fix/messages/trade-capture-report)
+

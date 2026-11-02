@@ -1,0 +1,23 @@
+---
+title: "LinesOfTextGrp"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 33</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLinesOfText (33)](/fix/fields/tags-0-199#tag-33).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | **Required** | Repeating field, number of instances defined in LinesOfText |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+
+</StickyTable>
+
+## Used in
+
+[Email](/fix/messages/email), [News](/fix/messages/news)

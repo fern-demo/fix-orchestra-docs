@@ -1,0 +1,34 @@
+---
+title: "PaymentStreamCompoundingDates"
+subtitle: "PaymentStreamCompoundingDates is a subcomponent of the PaymentStream component used to specify the compounding dates of the stream - either specific, relative or periodic dates."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42609 | [PaymentStreamCompoundingDatesBusinessDayConvention](/fix/fields/tags-42600-42799#tag-42609) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to payment stream compounding dates. |
+| 42620 | [PaymentStreamCompoundingDatesBusinessCenterGrp](/fix/groups/payment-stream-compounding-dates-business-center-grp) | Repeating group | Optional | PaymentStreamCompoundingDatesBusinessCenterGrp is a repeating subcomponent within the PaymentStreamCompoundingDates component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the DateAdjustment… |
+| 42606 | [PaymentStreamCompoundingDateGrp](/fix/groups/payment-stream-compounding-date-grp) | Repeating group | Optional | PaymentStreamCompoundingDateGrp is a subcomponent of the PaymentStreamCompoundingDates component used to specify predetermined compounding dates. |
+| 42610 | [PaymentStreamCompoundingDatesRelativeTo](/fix/fields/tags-42600-42799#tag-42610) | int | Optional | Specifies the anchor date when the compounding dates are relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 42611 | [PaymentStreamCompoundingDatesOffsetPeriod](/fix/fields/tags-42600-42799#tag-42611) | int | Optional | Conditionally required when PaymentStreamCompoundingDatesOffsetUnit(42612) is specified. |
+| 42612 | [PaymentStreamCompoundingDatesOffsetUnit](/fix/fields/tags-42600-42799#tag-42612) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when PaymentCompoundingDatesOffsetPeriod(42611) is specified. |
+| 42613 | [PaymentStreamCompoundingDatesOffsetDayType](/fix/fields/tags-42600-42799#tag-42613) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative compounding date offset. |
+| 42614 | [PaymentStreamCompoundingPeriodSkip](/fix/fields/tags-42600-42799#tag-42614) | int | Optional | The number of periods in the "RelativeTo" schedule that are between each date in the compounding schedule. A skip of 2 would mean that compounding dates are relative to every second date in the "RelativeTo" schedule. If present this should have a value greater than 1. |
+| | [PaymentStreamCompoundingStartDate](/fix/components/payment-stream-compounding-start-date) | Component | Optional | PaymentStreamCompoundingStartDate is a subcomponent of the PaymentStreamCompoundingDates component used to specify the start date for compounding. |
+| | [PaymentStreamCompoundingEndDate](/fix/components/payment-stream-compounding-end-date) | Component | Optional | PaymentStreamCompoundingEndDate is a subcomponent of the PaymentStreamCompoundingDates component used to specify the end date for compounding. |
+| 42615 | [PaymentStreamCompoundingFrequencyPeriod](/fix/fields/tags-42600-42799#tag-42615) | int | Optional | Conditionally required when PayamentStreamCompoundingFrequencyUnit(42616) is specified. |
+| 42616 | [PaymentStreamCompoundingFrequencyUnit](/fix/fields/tags-42600-42799#tag-42616) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when PayamentStreamCompoundingFrequencyPeriod(42615) is specified. |
+| 42617 | [PaymentStreamCompoundingRollConvention](/fix/fields/tags-42600-42799#tag-42617) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this instance of the payment stream compounding dates. |
+| 42618 | [PaymentStreamBoundsFirstDateUnadjusted](/fix/fields/tags-42600-42799#tag-42618) | LocalMktDate | Optional | The unadjusted first date of the compounding schedule. This can be used to restrict the range of dates when they are relative. |
+| 42619 | [PaymentStreamBoundsLastDateUnadjusted](/fix/fields/tags-42600-42799#tag-42619) | LocalMktDate | Optional | The unadjusted last date of the compounding schedule. This can be used to restrict the range of dates when they are relative. |
+
+</StickyTable>
+
+## Used in
+
+[PaymentStream](/fix/components/payment-stream)

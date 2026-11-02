@@ -1,0 +1,29 @@
+---
+title: "ComplexEventRelativeDate"
+subtitle: "The ComplexEventRelativeDate is a subcomponent of ComplexEvents for specifying the event date and time for an FX or Calendar Spread option or the payout date for a Barrier or Knock option."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41020 | [ComplexEventDateUnadjusted](/fix/fields/tags-41000-41199#tag-41020) | LocalMktDate | Optional | The unadjusted complex event date. |
+| 41021 | [ComplexEventDateRelativeTo](/fix/fields/tags-41000-41199#tag-41021) | int | Optional | Specifies the anchor date when the complex event date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 41022 | [ComplexEventDateOffsetPeriod](/fix/fields/tags-41000-41199#tag-41022) | int | Optional | Conditionally required when ComplexEventDateOffsetUnit(41023) is specified. |
+| 41023 | [ComplexEventDateOffsetUnit](/fix/fields/tags-41000-41199#tag-41023) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when ComplexEventDateOffsetPeriod(41022) is specified. |
+| 41024 | [ComplexEventDateOffsetDayType](/fix/fields/tags-41000-41199#tag-41024) | ComplexEventDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative date offset. |
+| 41025 | [ComplexEventDateBusinessDayConvention](/fix/fields/tags-41000-41199#tag-41025) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this instance of the instrument provisions. |
+| 41018 | [ComplexEventDateBusinessCenterGrp](/fix/groups/complex-event-date-business-center-grp) | Repeating group | Optional | The ComplexEventDateBusinessCenterGrp is a repeating subcomponent of the ComplexEventRelativeDate component used to specify the set of business centers whose calendars drive date adjustment. Used only to override the business centers defined in the DateAdjustment component in Instrument. |
+| 41026 | [ComplexEventDateAdjusted](/fix/fields/tags-41000-41199#tag-41026) | LocalMktDate | Optional | The adjusted complex event date. |
+| 41027 | [ComplexEventFixingTime](/fix/fields/tags-41000-41199#tag-41027) | LocalMktTime | Optional | The local market fixing time. |
+| 41028 | [ComplexEventFixingTimeBusinessCenter](/fix/fields/tags-41000-41199#tag-41028) | String | Optional | The business center calendar used to determine the actual fixing times. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values. |
+
+</StickyTable>
+
+## Used in
+
+[ComplexEvents](/fix/groups/complex-events)

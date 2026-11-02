@@ -1,0 +1,37 @@
+---
+title: "LegDeliveryScheduleGrp"
+subtitle: "The LegDeliveryScheduleGrp is a repeating subcomponent of the LegStream component used to detail step schedules associated with a delivery stream."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41408</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Note: Holiday schedule is standard for the country and time zone and need not be specified.
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegDeliverySchedules (41408)](/fix/fields/tags-41400-41599#tag-41408).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41409 | [LegDeliveryScheduleType](/fix/fields/tags-41400-41599#tag-41409) | DeliveryScheduleTypeCodeSet | Optional | Required if NoLegDeliverySchedules(41408) &gt; 0. |
+| 41410 | [LegDeliveryScheduleXID](/fix/fields/tags-41400-41599#tag-41410) | XID | Optional | Identifier for this instance of delivery schedule for cross referencing elsewhere in the message. |
+| 41411 | [LegDeliveryScheduleNotional](/fix/fields/tags-41400-41599#tag-41411) | Qty | Optional | Physical delivery quantity. |
+| 41412 | [LegDeliveryScheduleNotionalUnitOfMeasure](/fix/fields/tags-41400-41599#tag-41412) | UnitOfMeasureCodeSet | Optional | Specifies the delivery quantity unit of measure (UOM). |
+| 41413 | [LegDeliveryScheduleNotionalCommodityFrequency](/fix/fields/tags-41400-41599#tag-41413) | StreamNotionalCommodityFrequencyCodeSet | Optional | The frequency of notional delivery. |
+| 41414 | [LegDeliveryScheduleNegativeTolerance](/fix/fields/tags-41400-41599#tag-41414) | float | Optional | Specifies the negative tolerance value. The value may be an absolute quantity or a percentage, as specified in LegDeliveryScheduleToleranceType(41417). Percentage value is to be expressed relative to "1.0" representing 100% (e.g. a value of "0.0575" represents 5.75%). |
+| 41415 | [LegDeliverySchedulePositiveTolerance](/fix/fields/tags-41400-41599#tag-41415) | float | Optional | Specifies the positive tolerance value. The value may be an absolute quantity or a percentage, as specified in LegDeliveryScheduleToleranceType(41417). Value may exceed agreed upon value. Percentage value is to be expressed relative to "1.0" representing 100% (e.g. a value of "0.0575" represents… |
+| 41416 | [LegDeliveryScheduleToleranceUnitOfMeasure](/fix/fields/tags-41400-41599#tag-41416) | UnitOfMeasureCodeSet | Optional | Specifies the tolerance value's unit of measure (UOM). |
+| 41417 | [LegDeliveryScheduleToleranceType](/fix/fields/tags-41400-41599#tag-41417) | DeliveryScheduleToleranceTypeCodeSet | Optional | Conditionally required when LegDeliveryScheduleNegativeTolerance(41414) or LegDeliverySchedulePositiveTolerance(41415) is specified. |
+| 41418 | [LegDeliveryScheduleSettlCountry](/fix/fields/tags-41400-41599#tag-41418) | Country | Optional | Specifies the country where delivery takes place. Uses ISO 3166 2-character country code. |
+| 41419 | [LegDeliveryScheduleSettlTimeZone](/fix/fields/tags-41400-41599#tag-41419) | String | Optional | Delivery timezone specified as "prevailing" rather than "standard" or "daylight". See http://www.fixtradingcommunity.org/codelists#Prevailing\_Timezones for code list of applicable prevailing timezones. |
+| 41420 | [LegDeliveryScheduleSettlFlowType](/fix/fields/tags-41400-41599#tag-41420) | DeliveryScheduleSettlFlowTypeCodeSet | Optional | Specifies the delivery flow type. |
+| 41421 | [LegDeliveryScheduleSettlHolidaysProcessingInstruction](/fix/fields/tags-41400-41599#tag-41421) | DeliveryScheduleSettlHolidaysProcessingInstructionCodeSet | Optional | Indicates whether holidays are included in the settlement periods. Required for electricity contracts. |
+| 41422 | [LegDeliveryScheduleSettlDayGrp](/fix/groups/leg-delivery-schedule-settl-day-grp) | Repeating group | Optional | The LegDeliveryScheduleSettlDayGrp is a repeating subcomponent of the LegDeliveryScheduleGrp component used to detail commodity delivery days. |
+
+</StickyTable>
+
+## Used in
+
+[LegStreamGrp](/fix/groups/leg-stream-grp)

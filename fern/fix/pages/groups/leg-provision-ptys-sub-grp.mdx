@@ -1,0 +1,23 @@
+---
+title: "LegProvisionPtysSubGrp"
+subtitle: "LegProvisionSubParties is a repeating component within the LegProvisionParties component used to extend information to be reported for the party."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40537</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegProvisionPartySubIDs (40537)](/fix/fields/tags-40400-40599#tag-40537).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40538 | [LegProvisionPartySubID](/fix/fields/tags-40400-40599#tag-40538) | String | Optional | Required if NoLegProvisionPartySubIDs(40537) &gt; 0. |
+| 40539 | [LegProvisionPartySubIDType](/fix/fields/tags-40400-40599#tag-40539) | PartySubIDTypeCodeSet | Optional | Required if NoLegProvisionPartySubIDs(40537) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[LegProvisionParties](/fix/groups/leg-provision-parties)

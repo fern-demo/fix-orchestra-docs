@@ -1,0 +1,38 @@
+---
+title: "PartyEntitlementsRequest"
+subtitle: "The PartyEntitlementsRequest message is used to request for entitlement information for one or more party(-ies), specific party role(s), or specific instruments(s)."
+---
+
+<Badge intent="info">MsgType CU</Badge> <Badge intent="note" minimal>Parties Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 1770 | [EntitlementRequestID](/fix/fields/tags-1600-1799#tag-1770) | String | Optional | Unique identifier for PartyEntitlementsRequest(35=CU). |
+| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263) | SubscriptionRequestTypeCodeSet | Optional | Subscription Request Type |
+| 1657 | [RequestingPartyGrp](/fix/groups/requesting-party-grp) | Repeating group | Optional | Identifies the party making the request. |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 1508 | [RequestedPartyRoleGrp](/fix/groups/requested-party-role-grp) | Repeating group | Optional | Used to specify one or more PartyRoles as part of a request. |
+| 1883 | [EntitlementStatus](/fix/fields/tags-1800-1999#tag-1883) | EntitlementStatusCodeSet | Optional | Status of entitlement definition for one party. |
+| 2345 | [EntitlementTypeGrp](/fix/groups/entitlement-type-grp) | Repeating group | Optional | The EntitlementTypeGrp conveys a list of entitlement types. |
+| 1784 | [EntitlementPlatform](/fix/fields/tags-1600-1799#tag-1784) | String | Optional | The area to which the entitlement is applicable. This can be a trading platform or an offering. |
+| 1656 | [InstrumentScopeGrp](/fix/groups/instrument-scope-grp) | Repeating group | Optional | Repeating group of InstrumentScope Components. Used to specify the instruments to which a request applies. |
+| 1310 | [MarketSegmentScopeGrp](/fix/groups/market-segment-scope-grp) | Repeating group | Optional | Conveys a list of markets and, optionally, their market segments. Note that the component MarketSegmentGrp exists, but is not useful for this purpose, as it conveys additional information not appropriate in this context. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text(58) field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="PartyEntitlementsRequest" wordWrap
+8=FIXT.1.1|9=60|35=CU|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|10=012|
+```

@@ -1,0 +1,25 @@
+---
+title: "UnderlyingSecondaryAssetGrp"
+subtitle: "UnderlyingSecondaryAssetGrp is a repeating subcomponent of the UnderlyingInstrument component used to specify secondary assets of a multi-asset swap."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2080</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingSecondaryAssetClasses (2080)](/fix/fields/tags-2000-2199#tag-2080).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 2081 | [UnderlyingSecondaryAssetClass](/fix/fields/tags-2000-2199#tag-2081) | AssetClassCodeSet | Optional | Required if NoUnderlyingSecondaryAssetClasses(2080) &gt; 0. |
+| 2082 | [UnderlyingSecondaryAssetSubClass](/fix/fields/tags-2000-2199#tag-2082) | AssetSubClassCodeSet | Optional | Required if UnderlyingSecondaryAssetType(2083) is specified. |
+| 2083 | [UnderlyingSecondaryAssetType](/fix/fields/tags-2000-2199#tag-2083) | String | Optional | Required if UnderlyingSecondaryAssetSubType(2745) is specified. |
+| 2745 | [UnderlyingSecondaryAssetSubType](/fix/fields/tags-2600-2799#tag-2745) | String | Optional | May be used to provide a more specific description of the asset specified in UnderlyingSecondaryAssetType(2083). See https://www.fixtrading.org/codelists/AssetSubType for code list of applicable values. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingInstrument](/fix/components/underlying-instrument)

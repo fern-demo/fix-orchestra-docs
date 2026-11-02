@@ -1,0 +1,23 @@
+---
+title: "Stipulations"
+subtitle: "The Stipulations component block is used in Fixed Income to provide additional information on a given security. These additional information are usually not considered static data information."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 232</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoStipulations (232)](/fix/fields/tags-200-399#tag-232).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 233 | [StipulationType](/fix/fields/tags-200-399#tag-233) | StipulationTypeCodeSet | Optional | Required if NoStipulations &gt;0 |
+| 234 | [StipulationValue](/fix/fields/tags-200-399#tag-234) | String | Optional | For Fixed Income. Value of stipulation. The expression can be an absolute single value or a combination of values and logical operators: &lt; value &gt; value &lt;= value &gt;= value value value - value2 value OR value2 value AND value2 YES NO Bargain conditions recognized by the London Stock Exchange - to be… |
+
+</StickyTable>
+
+## Used in
+
+[AllocationInstruction](/fix/messages/allocation-instruction), [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationReport](/fix/messages/allocation-report), [CollateralAssignment](/fix/messages/collateral-assignment), [CollateralInquiry](/fix/messages/collateral-inquiry), [CollateralReport](/fix/messages/collateral-report), [CollateralRequest](/fix/messages/collateral-request), [CollateralResponse](/fix/messages/collateral-response), [Confirmation](/fix/messages/confirmation), [CrossOrderCancelReplaceRequest](/fix/messages/cross-order-cancel-replace-request), [ExecutionReport](/fix/messages/execution-report), [IOI](/fix/messages/ioi), [ListOrdGrp](/fix/groups/list-ord-grp), [NewOrderCross](/fix/messages/new-order-cross), [NewOrderSingle](/fix/messages/new-order-single), [QuotReqGrp](/fix/groups/quot-req-grp), [QuotReqRjctGrp](/fix/groups/quot-req-rjct-grp), [Quote](/fix/messages/quote), [QuoteResponse](/fix/messages/quote-response), [QuoteStatusReport](/fix/messages/quote-status-report), [SecListGrp](/fix/groups/sec-list-grp), [SecLstUpdRelSymGrp](/fix/groups/sec-lst-upd-rel-sym-grp), [SecurityDefinition](/fix/messages/security-definition), [SecurityDefinitionRequest](/fix/messages/security-definition-request), [SecurityDefinitionUpdateReport](/fix/messages/security-definition-update-report), and 2 more

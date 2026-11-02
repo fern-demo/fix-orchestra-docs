@@ -1,0 +1,36 @@
+---
+title: "LegQuotGrp"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 555</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegs (555)](/fix/fields/tags-400-599#tag-555).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [InstrumentLeg](/fix/components/instrument-leg) | Component | Optional | The InstrumentLeg component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In the case of the InstrumentLeg component block it describes a security used in multileg-oriented messages. |
+| 685 | [LegOrderQty](/fix/fields/tags-600-799#tag-685) | Qty | Optional | Quantity ordered of this leg. See OrderQty (38) for description and valid values |
+| 687 | [LegQty](/fix/fields/tags-600-799#tag-687) | Qty | Optional | The LegQty(687) field is deprecated. The use of LegOrderQty(685) is recommended instead. |
+| 2346 | [LegMidPx](/fix/fields/tags-2200-2399#tag-2346) | Price | Optional | Leg Mid price/rate. For OTC swaps, this is the mid-market mark (for example, as defined by CFTC). For uncleared OTC swaps, LegMidPx(2346) and the MidPx(631) fields are mutually exclusive. |
+| 690 | [LegSwapType](/fix/fields/tags-600-799#tag-690) | LegSwapTypeCodeSet | Optional | For Fixed Income, used instead of LegOrderQty(685) to requests the respondent to calculate the quantity based on the quantity on the opposite side of the swap. |
+| 587 | [LegSettlType](/fix/fields/tags-400-599#tag-587) | SettlTypeCodeSet | Optional | Indicates order settlement period. If present, LegSettlDate (588) overrides this field. If both LegSettlType (587) and LegSettDate (588) are omitted, the default for LegSettlType (587) is 0 (Regular) Regular is defined as the default settlement period for the particular security on the exchange of… |
+| 588 | [LegSettlDate](/fix/fields/tags-400-599#tag-588) | LocalMktDate | Optional | Refer to description for SettlDate\[64\] |
+| 683 | [LegStipulations](/fix/groups/leg-stipulations) | Repeating group | Optional | The LegStipulations component block has the same usage as the Stipulations component block, but for a leg instrument in a multi-legged security. |
+| 539 | [NestedParties](/fix/groups/nested-parties) | Repeating group | Optional | The NestedParties component block is identical to the Parties Block. It is used in other component blocks and repeating groups when nesting will take place resulting in multiple occurrences of the Parties block within a single FIX message.. Use of NestedParties under these conditions avoids multiple… |
+| 686 | [LegPriceType](/fix/fields/tags-600-799#tag-686) | PriceTypeCodeSet | Optional | Code to represent type of price presented in LegBidPx(681) and LegOfferPx(684). Conditionally required when LegBidPx(681) or PegOfferPx(684) is present. |
+| 681 | [LegBidPx](/fix/fields/tags-600-799#tag-681) | Price | Optional | Bid price of this leg. See BidPx (32) for description and valid values. |
+| 684 | [LegOfferPx](/fix/fields/tags-600-799#tag-684) | Price | Optional | Offer price of this leg. See OfferPx (133) for description and valid values |
+| | [LegBenchmarkCurveData](/fix/components/leg-benchmark-curve-data) | Component | Optional | The LegBenchmarkCurveData is used to convey the benchmark information used for pricing in a multi-legged Fixed Income security. |
+| 654 | [LegRefID](/fix/fields/tags-600-799#tag-654) | String | Optional | Use of LegRefID(654) in this component is deprecated. Recommend the use of LegID(1788) in the InstrumentLeg component. |
+| 1067 | [LegBidForwardPoints](/fix/fields/tags-1000-1199#tag-1067) | PriceOffset | Optional | The bid FX forward points for the leg of an FX Swap. Value can be negative. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199 |
+| 1068 | [LegOfferForwardPoints](/fix/fields/tags-1000-1199#tag-1068) | PriceOffset | Optional | The offer FX forward points for the leg of an FX Swap. Value can be negative. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199 |
+
+</StickyTable>
+
+## Used in
+
+[Quote](/fix/messages/quote), [QuoteResponse](/fix/messages/quote-response)

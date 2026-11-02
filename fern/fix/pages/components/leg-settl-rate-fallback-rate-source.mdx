@@ -1,0 +1,21 @@
+---
+title: "LegSettlRateFallbackRateSource"
+subtitle: "LegSettlRateFallbackRateSource is a subcomponent of the LegSettlRateDisruptionFallbackGrp component used to specify the rate source in the event of rate disruption fallback."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40366 | [LegSettlRateFallbackRateSource](/fix/fields/tags-40200-40399#tag-40366) | RateSourceCodeSet | Optional | Identifies the source of rate information. |
+| 40370 | [LegSettlRateFallbackReferencePage](/fix/fields/tags-40200-40399#tag-40370) | String | Optional | Conditionally required when LegSettlRateFallbackRateSource(40366) = 3 (ISDA Settlement Rate Option) or 99 (Other). |
+
+</StickyTable>
+
+## Used in
+
+[LegSettlRateDisruptionFallbackGrp](/fix/groups/leg-settl-rate-disruption-fallback-grp)

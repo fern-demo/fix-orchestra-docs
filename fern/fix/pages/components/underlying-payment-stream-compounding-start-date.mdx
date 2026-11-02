@@ -1,0 +1,25 @@
+---
+title: "UnderlyingPaymentStreamCompoundingStartDate"
+subtitle: "UnderlyingPaymentStreamCompoundingStartDate is a subcomponent of the UnderlyingPaymentStreamCompoundingDates component used to specify the start date for compounding."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42941 | [UnderlyingPaymentStreamCompoundingStartDateUnadjusted](/fix/fields/tags-42800-42999#tag-42941) | LocalMktDate | Optional | The unadjusted compounding start date. |
+| 42942 | [UnderlyingPaymentStreamCompoundingStartDateRelativeTo](/fix/fields/tags-42800-42999#tag-42942) | int | Optional | Specifies the anchor date when the compounding start date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 42943 | [UnderlyingPaymentStreamCompoundingStartDateOffsetPeriod](/fix/fields/tags-42800-42999#tag-42943) | int | Optional | Conditionally required when UnderlyingPaymentStreamCompoundingStartDateOffsetUnit(42944) is specified. |
+| 42944 | [UnderlyingPaymentStreamCompoundingStartDateOffsetUnit](/fix/fields/tags-42800-42999#tag-42944) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingPaymentStreamCompoundingStartDateOffsetPeriod(42943) is specified. |
+| 42945 | [UnderlyingPaymentStreamCompoundingStartDateOffsetDayType](/fix/fields/tags-42800-42999#tag-42945) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative compounding start date offset. |
+| 42946 | [UnderlyingPaymentStreamCompoundingStartDateAdjusted](/fix/fields/tags-42800-42999#tag-42946) | LocalMktDate | Optional | The adjusted compounding start date. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingPaymentStreamCompoundingDates](/fix/components/underlying-payment-stream-compounding-dates)

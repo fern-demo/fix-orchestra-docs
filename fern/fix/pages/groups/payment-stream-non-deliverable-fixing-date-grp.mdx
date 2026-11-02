@@ -1,0 +1,25 @@
+---
+title: "PaymentStreamNonDeliverableFixingDateGrp"
+subtitle: "PaymentStreamNonDeliverableFixingDate is a subcomponent of the PaymentStreamNonDeliverableSettlTerms component used to specify predetermined fixing dates."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40825</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+For the purpose of optimization, the NonDeliverableFixingDateType(40827) field may optionally be omitted after the first instance provided the instance(s) which immediately follow is of the same date type. When the next instance requires a different date type from the prior instance, the NonDeliverableFixingDateType(40827) is required to specify the date type.
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoNonDeliverableFixingDates (40825)](/fix/fields/tags-40800-40999#tag-40825).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40826 | [NonDeliverableFixingDate](/fix/fields/tags-40800-40999#tag-40826) | LocalMktDate | Optional | Required if NoNonDeliverableFixingDates(40825) &gt; 0. |
+| 40827 | [NonDeliverableFixingDateType](/fix/fields/tags-40800-40999#tag-40827) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
+
+</StickyTable>
+
+## Used in
+
+[PaymentStreamNonDeliverableSettlTerms](/fix/components/payment-stream-non-deliverable-settl-terms)

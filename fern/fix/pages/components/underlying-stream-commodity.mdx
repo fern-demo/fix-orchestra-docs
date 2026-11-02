@@ -1,0 +1,51 @@
+---
+title: "UnderlyingStreamCommodity"
+subtitle: "UnderlyingStreamCommodity is a subcomponent of the UnderlyingStream component used to identify and describe the underlying commodity."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41964 | [UnderlyingStreamCommodityBase](/fix/fields/tags-41800-41999#tag-41964) | String | Optional | Specifies the general base type of the commodity traded. Where possible, this should follow the naming convention used in the 2005 ISDA Commodity Definitions. |
+| 41965 | [UnderlyingStreamCommodityType](/fix/fields/tags-41800-41999#tag-41965) | String | Optional | Specifies the type of commodity product. For coal see http://www.fpml.org/coding-scheme/commodity-coal-product-type for values. For metals see http://www.fpml.org/coding-scheme/commodity-metal-product-type for values. For bullion see http://www.fixtradingcommunity.org/codelists#Bullion\_Types for the… |
+| 41966 | [UnderlyingStreamCommoditySecurityID](/fix/fields/tags-41800-41999#tag-41966) | String | Optional | Conditionally required when UnderlyingStreamCommoditySecurityIDSource(41967) is specified. |
+| 41967 | [UnderlyingStreamCommoditySecurityIDSource](/fix/fields/tags-41800-41999#tag-41967) | SecurityIDSourceCodeSet | Optional | Conditionally required when UnderlyingStreamCommoditySecurityID(41966) is specified. |
+| 41990 | [UnderlyingStreamCommodityAltIDGrp](/fix/groups/underlying-stream-commodity-alt-id-grp) | Repeating group | Optional | UnderlyingStreamCommodityAltIDGrp is a subcomponent of the UnderlyingStreamCommodity component used to specify alternate identifiers. |
+| 41968 | [UnderlyingStreamCommodityDesc](/fix/fields/tags-41800-41999#tag-41968) | String | Optional | Description of the commodity asset. |
+| 41969 | [EncodedUnderlyingStreamCommodityDescLen](/fix/fields/tags-41800-41999#tag-41969) | Length | Optional | Must be set if EncodedUnderlyingStreamCommodityDesc(41970) field is specified and must immediately precede it. |
+| 41970 | [EncodedUnderlyingStreamCommodityDesc](/fix/fields/tags-41800-41999#tag-41970) | data | Optional | Encoded (non-ASCII characters) representation of the UnderlyingStreamCommodityDesc(41968) field in the encoded format specified via the MessageEncoding(347) field. |
+| 42589 | [UnderlyingStreamCommodityDeliveryPricingRegion](/fix/fields/tags-42400-42599#tag-42589) | String | Optional | May be used to specify the delivery or pricing region of a non-standard commodity swap contract (e.g. when InstrAttribType(871)=38 (US standard contract indicator) and InstrAttribValue(872)=N). |
+| 41800 | [UnderlyingStreamAssetAttributeGrp](/fix/groups/underlying-stream-asset-attribute-grp) | Repeating group | Optional | The UnderlyingStreamAssetAttributeGrp is a repeating subcomponent of the UnderlyingStreamCommodity component used to detail commodity attributes, quality standards and reject limits. |
+| 41971 | [UnderlyingStreamCommodityUnitOfMeasure](/fix/fields/tags-41800-41999#tag-41971) | UnitOfMeasureCodeSet | Optional | The unit of measure (UOM) of the commodity asset. |
+| 41972 | [UnderlyingStreamCommodityCurrency](/fix/fields/tags-41800-41999#tag-41972) | Currency | Optional | Identifies the currency of the commodity asset. Uses ISO 4217 currency codes. |
+| 41973 | [UnderlyingStreamCommodityExchange](/fix/fields/tags-41800-41999#tag-41973) | Exchange | Optional | Identifies the exchange where the commodity is traded. |
+| 41974 | [UnderlyingStreamCommodityRateSource](/fix/fields/tags-41800-41999#tag-41974) | int | Optional | Identifies the source of rate information used for commodities. See http://www.fixtradingcommunity.org/codelists#Commodity\_Rate\_Source for code list of applicable sources. |
+| 41975 | [UnderlyingStreamCommodityRateReferencePage](/fix/fields/tags-41800-41999#tag-41975) | String | Optional | Identifies the reference "page" from the rate source. |
+| 41976 | [UnderlyingStreamCommodityRateReferencePageHeading](/fix/fields/tags-41800-41999#tag-41976) | String | Optional | Identifies the page heading from the rate source. |
+| 41977 | [UnderlyingStreamDataProvider](/fix/fields/tags-41800-41999#tag-41977) | String | Optional | Specifies the commodity data or information provider. See http://www.fpml.org/coding-scheme/commodity-information-provider for values. |
+| 41993 | [UnderlyingStreamCommodityDataSourceGrp](/fix/groups/underlying-stream-commodity-data-source-grp) | Repeating group | Optional | UnderlyingStreamCommodityDataSourceGrp is a subcomponent of the UnderlyingStreamCommodity component used to specify sources of data, e.g. weather stations. The order of entry determines priority – first is the main source, second is fallback, third is second fallback. |
+| 41978 | [UnderlyingStreamCommodityPricingType](/fix/fields/tags-41800-41999#tag-41978) | String | Optional | Specifies how the pricing or rate setting of the trade is to be determined or based upon. See http://www.fixtradingcommunity.org/codelists#Commodity\_Rate\_Pricing\_Type for code list of applicable commodity pricing types. |
+| 41979 | [UnderlyingStreamCommodityNearbySettlDayPeriod](/fix/fields/tags-41800-41999#tag-41979) | int | Optional | Conditionally required when UnderlyingStreamCommodityNearbySettlDayUnit(41980) is specified. |
+| 41980 | [UnderlyingStreamCommodityNearbySettlDayUnit](/fix/fields/tags-41800-41999#tag-41980) | StreamCommodityNearbySettlDayUnitCodeSet | Optional | Conditionally required when UnderlyingStreamCommodityNearbySettlDayPeriod(41979) is specified. |
+| 41981 | [UnderlyingStreamCommoditySettlDateUnadjusted](/fix/fields/tags-41800-41999#tag-41981) | LocalMktDate | Optional | The unadjusted commodity delivery date. |
+| 41982 | [UnderlyingStreamCommoditySettlDateBusinessDayConvention](/fix/fields/tags-41800-41999#tag-41982) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would be specific to the underlying settlement dates. |
+| 41962 | [UnderlyingStreamCommoditySettlBusinessCenterGrp](/fix/groups/underlying-stream-commodity-settl-business-center-grp) | Repeating group | Optional | UnderlyingStreamCommoditySettlBusinessCenterGrp is a repeating subcomponent of the UnderlyingStreamCommodity component used to specify the set of business centers whose calendars drive date adjustment. Used only to override the business centers defined in the UnderlyingDateAdjustment component in… |
+| 41983 | [UnderlyingStreamCommoditySettlDateAdjusted](/fix/fields/tags-41800-41999#tag-41983) | LocalMktDate | Optional | The adjusted commodity delivery date. |
+| 41984 | [UnderlyingStreamCommoditySettlMonth](/fix/fields/tags-41800-41999#tag-41984) | int | Optional | Specifies a fixed single month for commodity delivery. |
+| 41985 | [UnderlyingStreamCommoditySettlDateRollPeriod](/fix/fields/tags-41800-41999#tag-41985) | int | Optional | Conditionally required when UnderlyingStreamCommoditySettlDateRollUnit(41986) is specified. |
+| 41986 | [UnderlyingStreamCommoditySettlDateRollUnit](/fix/fields/tags-41800-41999#tag-41986) | StreamCommoditySettlDateRollUnitCodeSet | Optional | Conditionally required when UnderlyingStreamCommoditySettlDateRollPeriod(41985) is specified. |
+| 41987 | [UnderlyingStreamCommoditySettlDayType](/fix/fields/tags-41800-41999#tag-41987) | ComplexEventDateOffsetDayTypeCodeSet | Optional | Specifies the commodity delivery roll day type. |
+| 42002 | [UnderlyingStreamCommoditySettlPeriodGrp](/fix/groups/underlying-stream-commodity-settl-period-grp) | Repeating group | Optional | The UnderlyingStreamCommoditySettlPeriodGrp is a repeating subcomponent of the UnderlyingStreamCommodiry component used to defined the settlement period details associated with the commodity contract. |
+| 41988 | [UnderlyingStreamCommodityXID](/fix/fields/tags-41800-41999#tag-41988) | XID | Optional | Identifier of this stream commodity for cross referencing elsewhere in the message. |
+| 41989 | [UnderlyingStreamCommodityXIDRef](/fix/fields/tags-41800-41999#tag-41989) | XIDREF | Optional | Reference to a stream commodity elsewhere in the message. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingStreamGrp](/fix/groups/underlying-stream-grp)

@@ -1,0 +1,50 @@
+---
+title: "UnderlyingReturnRateGrp"
+subtitle: "UnderlyingReturnRateGrp is a repeating subcomponent within the UnderlyingPaymentStreamFloatingRate component. It is used to specify the multiple return rates for an equity return swap payment stream."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 43034</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingReturnRates (43034)](/fix/fields/tags-43000-43199#tag-43034).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 43035 | [UnderlyingReturnRatePriceSequence](/fix/fields/tags-43000-43199#tag-43035) | ReturnRatePriceSequenceCodeSet | Optional | Required if NoUnderlyingReturnRates(43034) &gt; 0. |
+| 43036 | [UnderlyingReturnRateCommissionBasis](/fix/fields/tags-43000-43199#tag-43036) | CommTypeCodeSet | Optional | Specifies the basis or unit used to calculate the commission. |
+| 43037 | [UnderlyingReturnRateCommissionAmount](/fix/fields/tags-43000-43199#tag-43037) | Amt | Optional | The commission amount. |
+| 43038 | [UnderlyingReturnRateCommissionCurrency](/fix/fields/tags-43000-43199#tag-43038) | Currency | Optional | If not specified, this is defaulted to the reporting currency. |
+| 43039 | [UnderlyingReturnRateTotalCommissionPerTrade](/fix/fields/tags-43000-43199#tag-43039) | Amt | Optional | The total commission per trade. |
+| 43040 | [UnderlyingReturnRateDeterminationMethod](/fix/fields/tags-43000-43199#tag-43040) | String | Optional | Specifies the method by which the underlier prices are determined. See http://www.fpml.org/coding-scheme/determination-method for values. |
+| 43064 | [UnderlyingReturnRatePriceGrp](/fix/groups/underlying-return-rate-price-grp) | Repeating group | Optional | UnderlyingReturnRatePriceGrp is a repeating subcomponent within the UnderlyingReturnRateGrp component. It is used to specify the return rate prices for an equity return swap payment stream. |
+| 43030 | [UnderlyingReturnRateFXConversionGrp](/fix/groups/underlying-return-rate-fx-conversion-grp) | Repeating group | Optional | UnderlyingReturnRateFXConversionGrp is a repeating subcomponent within the UnderlyingReturnRateGrp component. It is used to specify the FX conversion rates for an equity return swap payment stream. |
+| 43041 | [UnderlyingReturnRateAmountRelativeTo](/fix/fields/tags-43000-43199#tag-43041) | int | Optional | Specifies the reference amount when the return rate amount is relative to another amount in the trade. See http://www.fixtradingcommunity.org/codelists#Payment\_Amount\_Relative\_To for code list of relative amounts. |
+| 43042 | [UnderlyingReturnRateQuoteMeasureType](/fix/fields/tags-43000-43199#tag-43042) | String | Optional | Specifies the type of the measure applied to the return rate's asset, e.g. valuation, sensitivity risk. This could be an NPV, a cash flow, a clean price, etc. See http://www.fpml.org/coding-scheme/asset-measure for values. |
+| 43043 | [UnderlyingReturnRateQuoteUnits](/fix/fields/tags-43000-43199#tag-43043) | String | Optional | Specifies the units that the measure is expressed in. If not specified, the default is a price/value in currency units. See http://www.fpml.org/coding-scheme/price-quote-units for values. |
+| 43044 | [UnderlyingReturnRateQuoteMethod](/fix/fields/tags-43000-43199#tag-43044) | CashSettlQuoteMethodCodeSet | Optional | Specifies the type of quote used to determine the return rate of the swap. |
+| 43045 | [UnderlyingReturnRateQuoteCurrency](/fix/fields/tags-43000-43199#tag-43045) | Currency | Optional | Specifies the currency the return rate quote is denominated in. Uses ISO 4217 Currency Code. |
+| 43046 | [UnderlyingReturnRateQuoteCurrencyType](/fix/fields/tags-43000-43199#tag-43046) | String | Optional | Specifies the type of currency, e.g. settlement currency, base currency, etc., that the quote is reported in. See http://www.fpml.org/coding-scheme/reporting-currency-type for values. |
+| 43047 | [UnderlyingReturnRateQuoteTimeType](/fix/fields/tags-43000-43199#tag-43047) | ReturnRateQuoteTimeTypeCodeSet | Optional | Mutually exclusive with UnderlyingReturnRateQuoteTime(43048). |
+| 43048 | [UnderlyingReturnRateQuoteTime](/fix/fields/tags-43000-43199#tag-43048) | LocalMktDate | Optional | Mutually exclusive with UnderlyingReturnRateQuoteTimeType(43047). |
+| 43049 | [UnderlyingReturnRateQuoteDate](/fix/fields/tags-43000-43199#tag-43049) | LocalMktDate | Optional | The date when the quote is to be generated. |
+| 43050 | [UnderlyingReturnRateQuoteExpirationTime](/fix/fields/tags-43000-43199#tag-43050) | LocalMktTime | Optional | The time when the quote ceases to be valid. |
+| 43051 | [UnderlyingReturnRateQuoteBusinessCenter](/fix/fields/tags-43000-43199#tag-43051) | String | Optional | The business center calendar used for adjustments associated with UnderlyingReturnRateQuoteTimeType(43047) or UnderlyingReturnRateQuoteTime(43048) and UnderlyingReturnRateQuoteDate(43049), e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values. |
+| 43052 | [UnderlyingReturnRateQuoteExchange](/fix/fields/tags-43000-43199#tag-43052) | Exchange | Optional | Specifies the exchange (e.g. stock or listed futures/options exchange) from which the quote is obtained. |
+| 43060 | [UnderlyingReturnRateInformationSourceGrp](/fix/groups/underlying-return-rate-information-source-grp) | Repeating group | Optional | UnderlyingReturnRateInformationSourceGrp is a repeating subcomponent within the UnderlyingReturnRateGrp component. It is used to specify the information sources for equity prices and FX rates for an equity return swap payment stream. |
+| 43053 | [UnderlyingReturnRateQuotePricingModel](/fix/fields/tags-43000-43199#tag-43053) | String | Optional | Specifies the pricing model used to evaluate the underlying asset price. See http://www.fpml.org/coding-scheme/pricing-model for values. |
+| 43054 | [UnderlyingReturnRateCashFlowType](/fix/fields/tags-43000-43199#tag-43054) | String | Optional | Specifies the type of cash flows, e.g. coupon payment, premium fee, settlement fee, etc. See http://www.fpml.org/coding-scheme/cashflow-type for values. |
+| 43008 | [UnderlyingReturnRateDateGrp](/fix/groups/underlying-return-rate-date-grp) | Repeating group | Optional | UnderlyingReturnRateDateGrp is a repeating subcomponent within the UnderlyingReturnRateGrp component. It is used to specify the equity and dividend valuation dates for an equity return swap payment stream. |
+| 43055 | [UnderlyingReturnRateValuationTimeType](/fix/fields/tags-43000-43199#tag-43055) | ReturnRateQuoteTimeTypeCodeSet | Optional | Mutually exclusive with UnderlyingReturnRateValuationTime(43056) |
+| 43056 | [UnderlyingReturnRateValuationTime](/fix/fields/tags-43000-43199#tag-43056) | LocalMktTime | Optional | Mutually exclusive with UnderlyingReturnRateValuationTimeType(43055). |
+| 43057 | [UnderlyingReturnRateValuationTimeBusinessCenter](/fix/fields/tags-43000-43199#tag-43057) | String | Optional | The business center calendar used for adjustments associated with UnderlyingReturnRateValuationTimeType(43055) or UnderlyingReturnRateValuationTime(43056) , e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values. |
+| 43058 | [UnderlyingReturnRateValuationPriceOption](/fix/fields/tags-43000-43199#tag-43058) | ReturnRateValuationPriceOptionCodeSet | Optional | Indicates whether an ISDA price option applies, and if applicable which type of price. |
+| 43059 | [UnderlyingReturnRateFinalPriceFallback](/fix/fields/tags-43000-43199#tag-43059) | ComplexEventPVFinalPriceElectionFallbackCodeSet | Optional | Specifies the fallback provision for the hedging party in the determination of the final price. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)

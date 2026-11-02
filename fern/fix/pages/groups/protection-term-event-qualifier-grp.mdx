@@ -1,0 +1,22 @@
+---
+title: "ProtectionTermEventQualifierGrp"
+subtitle: "The ProtectionTermEventQualifierGrp is a repeating component within the ProtectionTermEventGrp component used to specify qualifying attributes to the event."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40199</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoProtectionTermEventQualifiers (40199)](/fix/fields/tags-40000-40199#tag-40199).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40200 | [ProtectionTermEventQualifier](/fix/fields/tags-40200-40399#tag-40200) | ProtectionTermEventQualifierCodeSet | Optional | Required if NoProtectionTermEventQualifiers(40199) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[ProtectionTermEventGrp](/fix/groups/protection-term-event-grp)

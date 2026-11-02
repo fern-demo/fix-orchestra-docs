@@ -1,0 +1,43 @@
+---
+title: "SettlInstGrp"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 778</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoSettlInst (778)](/fix/fields/tags-600-799#tag-778).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 162 | [SettlInstID](/fix/fields/tags-0-199#tag-162) | String | Optional | Unique ID for this settlement instruction. Required except where SettlInstMode is 5=Reject SSI request |
+| 163 | [SettlInstTransType](/fix/fields/tags-0-199#tag-163) | SettlInstTransTypeCodeSet | Optional | New, Replace, Cancel or Restate Required except where SettlInstMode is 5=Reject SSI request |
+| 214 | [SettlInstRefID](/fix/fields/tags-200-399#tag-214) | String | Optional | Required where SettlInstTransType is Cancel or Replace |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | Optional | Can be used for SettleInstMode 1 if SSIs are being provided for a particular side. |
+| 460 | [Product](/fix/fields/tags-400-599#tag-460) | ProductCodeSet | Optional | Can be used for SettleInstMode 1 if SSIs are being provided for a particular product. |
+| 167 | [SecurityType](/fix/fields/tags-0-199#tag-167) | SecurityTypeCodeSet | Optional | Can be used for SettleInstMode 1 if SSIs are being provided for a particular security type (as alternative to CFICode). |
+| 461 | [CFICode](/fix/fields/tags-400-599#tag-461) | String | Optional | Can be used for SettleInstMode 1 if SSIs are being provided for a particular CFI (as identified by CFI code). |
+| 2891 | [UPICode](/fix/fields/tags-2800-2999#tag-2891) | String | Optional | Can be used for SettleInstMode 1 if SSIs are being provided for a particular UPI (as identified by UPI code). |
+| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120) | Currency | Optional | Can be used for SettleInstMode 1 if SSIs are being provided for a particular settlement currency |
+| 168 | [EffectiveTime](/fix/fields/tags-0-199#tag-168) | UTCTimestamp | Optional | Effective (start) date/time for this settlement instruction. Required except where SettlInstMode is 5=Reject SSI request |
+| 126 | [ExpireTime](/fix/fields/tags-0-199#tag-126) | UTCTimestamp | Optional | Termination date/time for this settlement instruction. |
+| 779 | [LastUpdateTime](/fix/fields/tags-600-799#tag-779) | UTCTimestamp | Optional | Date/time this settlement instruction was last updated (or created if not updated since creation). Required except where SettlInstMode is 5=Reject SSI request |
+| | [SettlInstructionsData](/fix/components/settl-instructions-data) | Component | Optional | The SettlInstructionsData component block is used to convey key information regarding standing settlement and delivery instructions. It also provides a reference to standing settlement details regarding the source, delivery instructions, and settlement parties |
+| 492 | [PaymentMethod](/fix/fields/tags-400-599#tag-492) | PaymentMethodCodeSet | Optional | For use with CIV settlement instructions |
+| 476 | [PaymentRef](/fix/fields/tags-400-599#tag-476) | String | Optional | For use with CIV settlement instructions |
+| 488 | [CardHolderName](/fix/fields/tags-400-599#tag-488) | String | Optional | For use with CIV settlement instructions |
+| 489 | [CardNumber](/fix/fields/tags-400-599#tag-489) | String | Optional | For use with CIV settlement instructions |
+| 503 | [CardStartDate](/fix/fields/tags-400-599#tag-503) | LocalMktDate | Optional | For use with CIV settlement instructions |
+| 490 | [CardExpDate](/fix/fields/tags-400-599#tag-490) | LocalMktDate | Optional | For use with CIV settlement instructions |
+| 491 | [CardIssNum](/fix/fields/tags-400-599#tag-491) | String | Optional | For use with CIV settlement instructions |
+| 504 | [PaymentDate](/fix/fields/tags-400-599#tag-504) | LocalMktDate | Optional | For use with CIV settlement instructions |
+| 505 | [PaymentRemitterID](/fix/fields/tags-400-599#tag-505) | String | Optional | For use with CIV settlement instructions |
+
+</StickyTable>
+
+## Used in
+
+[SettlementInstructions](/fix/messages/settlement-instructions)

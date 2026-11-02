@@ -1,0 +1,23 @@
+---
+title: "UnderlyingExtraordinaryEventGrp"
+subtitle: "The UnderlyingExtraordinaryEventGrp is a repeating component within the UnderlyingInstrument component. It is used to report extraordinary and disruptive events applicable to the reference entity that affects the contract."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42884</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingExtraordinaryEvents (42884)](/fix/fields/tags-42800-42999#tag-42884).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42885 | [UnderlyingExtraordinaryEventType](/fix/fields/tags-42800-42999#tag-42885) | String | Optional | Required if NoUnderlyingExtraordinaryEvents(42884) &gt; 0. |
+| 42886 | [UnderlyingExtraordinaryEventValue](/fix/fields/tags-42800-42999#tag-42886) | String | Optional | Required if NoUnderlyingExtraordinaryEvents(42884) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingInstrument](/fix/components/underlying-instrument)

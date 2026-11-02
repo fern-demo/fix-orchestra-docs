@@ -1,0 +1,22 @@
+---
+title: "CashSettlDealerGrp"
+subtitle: "CashSettlDealerGrp is a repeating subcomponent within the CashSettlTermGrp component. It is used to specify the dealers from whom price quotations for the reference obligation are obtained for the purpose of cash settlement valuation."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40277</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoCashSettlDealers (40277)](/fix/fields/tags-40200-40399#tag-40277).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40032 | [CashSettlDealer](/fix/fields/tags-40000-40199#tag-40032) | String | Optional | Required if NoCashSettlDealers(40277) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[CashSettlTermGrp](/fix/groups/cash-settl-term-grp)

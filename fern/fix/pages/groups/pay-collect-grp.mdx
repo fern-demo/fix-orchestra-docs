@@ -1,0 +1,31 @@
+---
+title: "PayCollectGrp"
+subtitle: "The Pay Collect Group component block is a repeatable block intended to report individual pay/collect items to be considered when calculating net settlement."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1707</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A Pay/Collect is a payment or collection of funds by the clearing house to/from a clearing firm for a specific reason. Pay/Collects are typically netted to a single amount and factored into the firm’s daily net settlement. Values are to be maintained by an external code list. The currency of the pay/collect amount may be optionally included.
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPayCollects (1707)](/fix/fields/tags-1600-1799#tag-1707).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1708 | [PayCollectType](/fix/fields/tags-1600-1799#tag-1708) | String | Optional | Required if NoPayCollects &gt; 0. |
+| 1709 | [PayCollectCurrency](/fix/fields/tags-1600-1799#tag-1709) | Currency | Optional | Can be used to specify the base settlement currency if Currency(15) is not specified. |
+| 2094 | [PayCollectFXRate](/fix/fields/tags-2000-2199#tag-2094) | float | Optional | Foreign exchange rate used to compute the PayAmount(1710) or CollectAmount(1711) from the PayCollectCurrency(1709) and the Currency(15). |
+| 2095 | [PayCollectFXRateCalc](/fix/fields/tags-2000-2199#tag-2095) | UnderlyingFXRateCalcCodeSet | Optional | Specifies whether or not PayCollectFXRate(2094) should be multipled or divided. |
+| 1710 | [PayAmount](/fix/fields/tags-1600-1799#tag-1710) | Amt | Optional | Amount to be paid by the clearinghouse to the clearing firm. |
+| 1711 | [CollectAmount](/fix/fields/tags-1600-1799#tag-1711) | Amt | Optional | Amount to be collected by the clearinghouse from the clearing firm. |
+| 1712 | [PayCollectMarketSegmentID](/fix/fields/tags-1600-1799#tag-1712) | String | Optional | Market segment associated with the pay collect amount. |
+| 1713 | [PayCollectMarketID](/fix/fields/tags-1600-1799#tag-1713) | String | Optional | Market associated with the pay collect amount. |
+
+</StickyTable>
+
+## Used in
+
+[AccountSummaryReport](/fix/messages/account-summary-report)

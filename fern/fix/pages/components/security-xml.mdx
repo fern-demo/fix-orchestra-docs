@@ -1,0 +1,24 @@
+---
+title: "SecurityXML"
+subtitle: "The SecurityXML component is used to provide a definition in an XML format for the instrument."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+See "Specifying an FpML product specification from within the FIX Instrument Block" in Volume 1 of the FIX Specification for more information on using this component block with FpML as a guideline.
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1184 | [SecurityXMLLen](/fix/fields/tags-1000-1199#tag-1184) | Length | Optional | Must be provided if SecurityXML(1185) field is specified and must immediately precede it. |
+| 1185 | [SecurityXML](/fix/fields/tags-1000-1199#tag-1185) | XMLData | Optional | XML definition for the security. |
+| 1186 | [SecurityXMLSchema](/fix/fields/tags-1000-1199#tag-1186) | String | Optional | The schema used to validate the contents of SecurityXML(1185). |
+
+</StickyTable>
+
+## Used in
+
+[Instrument](/fix/components/instrument)

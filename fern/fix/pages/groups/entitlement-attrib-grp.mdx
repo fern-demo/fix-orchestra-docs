@@ -1,0 +1,25 @@
+---
+title: "EntitlementAttribGrp"
+subtitle: "conveys a list of one or more attributes related to an entitlement. An entitlement may contain an EntitlementType, which states what can be done at a gross level, e.g. that a party can make markets. It may be limited further within…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1777</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoEntitlementAttrib (1777)](/fix/fields/tags-1600-1799#tag-1777).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1778 | [EntitlementAttribType](/fix/fields/tags-1600-1799#tag-1778) | int | Optional | Required if NoEntitlementAttrib(1777) &gt; 0. |
+| 1779 | [EntitlementAttribDatatype](/fix/fields/tags-1600-1799#tag-1779) | EntitlementAttribDatatypeCodeSet | Optional | If specified, and this is an attribute published by FPL in the external code list, this must agree with the published datatype. |
+| 1780 | [EntitlementAttribValue](/fix/fields/tags-1600-1799#tag-1780) | String | Optional | Required if NoEntitlementAttrib(1777) &gt; 0. |
+| 1781 | [EntitlementAttribCurrency](/fix/fields/tags-1600-1799#tag-1781) | Currency | Optional | Currency for EntitlementAttribValue(1780). Can be used if these fields represent a price, price offset, or amount. |
+
+</StickyTable>
+
+## Used in
+
+[EntitlementGrp](/fix/groups/entitlement-grp)

@@ -1,0 +1,22 @@
+---
+title: "RequestedRiskLimitTypesGrp"
+subtitle: "List of risk limit types being requested."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1668</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRequestedRiskLimitType (1668)](/fix/fields/tags-1600-1799#tag-1668).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1530 | [RiskLimitType](/fix/fields/tags-1400-1599#tag-1530) | RiskLimitTypeCodeSet | Optional | Required if NoRequestedRiskLimitType &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[PartyRiskLimitsRequest](/fix/messages/party-risk-limits-request)

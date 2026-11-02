@@ -1,0 +1,24 @@
+---
+title: "MarketSegmentGrp"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1310</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoMarketSegments (1310)](/fix/fields/tags-1200-1399#tag-1310).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Identifies the market which lists and trades the instrument. |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the segment of the market to which the specify trading rules and listing rules apply. |
+| | [SecurityTradingRules](/fix/components/security-trading-rules) | Component | Optional | Ths SecurityTradingRules component block is used as part of security definition to specify the specific security's standard trading parameters such as trading session eligibility and other attributes of the security. |
+| 1201 | [StrikeRules](/fix/groups/strike-rules) | Repeating group | Optional |  |
+
+</StickyTable>
+
+## Used in
+
+[DerivativeSecurityDefinition](/fix/components/derivative-security-definition), [SecurityDefinition](/fix/messages/security-definition), [SecurityDefinitionUpdateReport](/fix/messages/security-definition-update-report)

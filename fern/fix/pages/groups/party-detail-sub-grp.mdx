@@ -1,0 +1,23 @@
+---
+title: "PartyDetailSubGrp"
+subtitle: "Additional party sub-identifiers"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1694</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPartyDetailSubIDs (1694)](/fix/fields/tags-1600-1799#tag-1694).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1695 | [PartyDetailSubID](/fix/fields/tags-1600-1799#tag-1695) | String | Optional | Required when NoPartyDetailSubIDs &gt; 0. |
+| 1696 | [PartyDetailSubIDType](/fix/fields/tags-1600-1799#tag-1696) | PartySubIDTypeCodeSet | Optional | Required when NoPartyDetailSubIDs &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[PartyDetailGrp](/fix/groups/party-detail-grp)

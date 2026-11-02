@@ -1,0 +1,24 @@
+---
+title: "MatchingInstructions"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1624</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoMatchInst (1624)](/fix/fields/tags-1600-1799#tag-1624).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1625 | [MatchInst](/fix/fields/tags-1600-1799#tag-1625) | MatchInstCodeSet | Optional | Required if NoMatchInst &gt; 0. |
+| 1673 | [MatchInstMarketID](/fix/fields/tags-1600-1799#tag-1673) | Exchange | Optional | Identifies the market to which the matching instruction applies. |
+| 1626 | [MatchAttribTagID](/fix/fields/tags-1600-1799#tag-1626) | TagNum | Optional | Required if NoMatchInst &gt; 0. |
+| 1627 | [MatchAttribValue](/fix/fields/tags-1600-1799#tag-1627) | String | Optional | Required if NoMatchInst &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[ExecutionReport](/fix/messages/execution-report), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [TradeReportOrderDetail](/fix/components/trade-report-order-detail)

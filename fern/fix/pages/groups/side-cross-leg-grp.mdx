@@ -1,0 +1,39 @@
+---
+title: "SideCrossLegGrp"
+subtitle: "Repeating group that is similar to LegOrdGrp component in order to support leg level information per side of cross orders and is part of SideCrossOrdModGrp component. LegOrdGrp component cannot be re-used for this purpose as it contains the…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1829</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoCrossLegs (1829)](/fix/fields/tags-1800-1999#tag-1829).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 654 | [LegRefID](/fix/fields/tags-600-799#tag-654) | String | Optional | Required if NoCrossLegs(1829) &gt; 0. |
+| 685 | [LegOrderQty](/fix/fields/tags-600-799#tag-685) | Qty | Optional | Quantity ordered for this leg as provided during order entry. |
+| 690 | [LegSwapType](/fix/fields/tags-600-799#tag-690) | LegSwapTypeCodeSet | Optional | For Fixed Income, used instead of LegOrderQty(685) to requests the respondent to calculate the quantity based on the quantity on the opposite side of the swap. |
+| 683 | [LegStipulations](/fix/groups/leg-stipulations) | Repeating group | Optional | The LegStipulations component block has the same usage as the Stipulations component block, but for a leg instrument in a multi-legged security. |
+| 1366 | [LegAllocID](/fix/fields/tags-1200-1399#tag-1366) | String | Optional | The AllocID(70) of an individual leg of a multileg order. |
+| 670 | [LegPreAllocGrp](/fix/groups/leg-pre-alloc-grp) | Repeating group | Optional |  |
+| 1817 | [LegClearingAccountType](/fix/fields/tags-1800-1999#tag-1817) | ClearingAccountTypeCodeSet | Optional | Provide if different from the value specified for the overall multileg security in ClearingAccountType(1816) in the Instrument component. |
+| 564 | [LegPositionEffect](/fix/fields/tags-400-599#tag-564) | PositionEffectCodeSet | Optional | Provide if different from the value specified for the overall multileg security in PositionEffect(77) in the Instrument component. |
+| 565 | [LegCoveredOrUncovered](/fix/fields/tags-400-599#tag-565) | CoveredOrUncoveredCodeSet | Optional | Provide if different from the value specified for the overall multileg security in CoveredOrUncovered(203) in the Instrument component. |
+| 948 | [NestedParties3](/fix/groups/nested-parties3) | Repeating group | Optional | The NestedParties3 component block is identical to the Parties Block. It is used in other component blocks and repeating groups when nesting will take place resulting in multiple occurrences of the Parties block within a single FIX message.. Use of NestedParties3 under these conditions avoids… |
+| 587 | [LegSettlType](/fix/fields/tags-400-599#tag-587) | SettlTypeCodeSet | Optional | Indicates order settlement period. If present, LegSettlDate (588) overrides this field. If both LegSettlType (587) and LegSettDate (588) are omitted, the default for LegSettlType (587) is 0 (Regular) Regular is defined as the default settlement period for the particular security on the exchange of… |
+| 588 | [LegSettlDate](/fix/fields/tags-400-599#tag-588) | LocalMktDate | Optional | Refer to description for SettlDate\[64\] |
+| 675 | [LegSettlCurrency](/fix/fields/tags-600-799#tag-675) | Currency | Optional | Identifies settlement currency for the Leg. See SettlCurrency (20) for description and valid values |
+| 1379 | [LegVolatility](/fix/fields/tags-1200-1399#tag-1379) | float | Optional | Specifies the volatility of an instrument leg. |
+| 1381 | [LegDividendYield](/fix/fields/tags-1200-1399#tag-1381) | Percentage | Optional | Refer to definition for DividendYield(1380). |
+| 1383 | [LegCurrencyRatio](/fix/fields/tags-1200-1399#tag-1383) | float | Optional | Specifies the currency ratio between the currency used for a multileg price and the currency used by the outright book defined by the leg. Example: Multileg quoted in EUR, outright leg in USD and 1 EUR = 0,7 USD then LegCurrencyRatio = 0.7 |
+| 1384 | [LegExecInst](/fix/fields/tags-1200-1399#tag-1384) | ExecInstCodeSet | Optional | Refer to ExecInst(18) Same values as ExecInst(18) |
+| 1689 | [LegShortSaleExemptionReason](/fix/fields/tags-1600-1799#tag-1689) | ShortSaleExemptionReasonCodeSet | Optional | Available for optional use when LegSide(624) = 6(Sell short exempt) in InstrumentLeg component. |
+
+</StickyTable>
+
+## Used in
+
+[SideCrossOrdModGrp](/fix/groups/side-cross-ord-mod-grp)

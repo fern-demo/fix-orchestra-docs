@@ -1,0 +1,24 @@
+---
+title: "OrderQtyData"
+subtitle: "The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is marked as \"required\" in a message either one of these three fields must be used to…"
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 38 | [OrderQty](/fix/fields/tags-0-199#tag-38) | Qty | Optional | One of CashOrderQty, OrderQty, or (for CIV only) OrderPercent is required. Note that unless otherwise specified, only one of CashOrderQty, OrderQty, or OrderPercent should be specified. |
+| 152 | [CashOrderQty](/fix/fields/tags-0-199#tag-152) | Qty | Optional | One of CashOrderQty, OrderQty, or (for CIV only) OrderPercent is required. Note that unless otherwise specified, only one of CashOrderQty, OrderQty, or OrderPercent should be specified. Specifies the approximate "monetary quantity" for the order. Broker is responsible for converting and calculating… |
+| 516 | [OrderPercent](/fix/fields/tags-400-599#tag-516) | Percentage | Optional | For CIV - Optional. One of CashOrderQty, OrderQty or (for CIV only) OrderPercent is required. Note that unless otherwise specified, only one of CashOrderQty, OrderQty, or OrderPercent should be specified. |
+| 468 | [RoundingDirection](/fix/fields/tags-400-599#tag-468) | RoundingDirectionCodeSet | Optional | For CIV - Optional |
+| 469 | [RoundingModulus](/fix/fields/tags-400-599#tag-469) | float | Optional | For CIV - Optional |
+
+</StickyTable>
+
+## Used in
+
+[DontKnowTrade](/fix/messages/dont-know-trade), [ExecutionAck](/fix/messages/execution-ack), [ExecutionReport](/fix/messages/execution-report), [IOI](/fix/messages/ioi), [ListOrdGrp](/fix/groups/list-ord-grp), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [OrderCancelRequest](/fix/messages/order-cancel-request), [OrderEntryAckGrp](/fix/groups/order-entry-ack-grp), [OrderEntryGrp](/fix/groups/order-entry-grp), [QuotReqGrp](/fix/groups/quot-req-grp), [QuotReqRjctGrp](/fix/groups/quot-req-rjct-grp), [Quote](/fix/messages/quote), [QuoteResponse](/fix/messages/quote-response), [QuoteStatusReport](/fix/messages/quote-status-report), [SideCrossOrdCxlGrp](/fix/groups/side-cross-ord-cxl-grp), [SideCrossOrdModGrp](/fix/groups/side-cross-ord-mod-grp), [TradeReportOrderDetail](/fix/components/trade-report-order-detail)

@@ -1,0 +1,39 @@
+---
+title: "UnderlyingProvisionOptionExerciseDates"
+subtitle: "The UnderlyingProvisionOptionExerciseDates is a subcomponent within the UnderlyingProvisionGrp component used to report the option exercise dates and times defined in the provision."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42115 | [UnderlyingProvisionOptionExerciseBusinessDayConvention](/fix/fields/tags-42000-42199#tag-42115) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the busienss day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would be specific to this instance of the provisional option exercise date. |
+| 42184 | [UnderlyingProvisionOptionExerciseBusinessCenterGrp](/fix/groups/underlying-provision-option-exercise-business-center-grp) | Repeating group | Optional | UnderlyingProvisionOptionExerciseBusinessCenterGrp is a repeating subcomponent within the UnderlyingProvisionOptionExerciseDates component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the… |
+| 42112 | [UnderlyingProvisionOptionExerciseFixedDateGrp](/fix/groups/underlying-provision-option-exercise-fixed-date-grp) | Repeating group | Optional | The UnderlyingProvisionOptionExerciseFixedDateGrp is a repeating component within the UnderlyingProvisionOptionExerciseDates component used to report an array of unadjusted or adjusted fixed exercise dates. |
+| 42116 | [UnderlyingProvisionOptionExerciseEarliestDateOffsetPeriod](/fix/fields/tags-42000-42199#tag-42116) | int | Optional | Conditionally required when UnderlyingProvisionOptionExerciseEarliestDateUnit(42117) is specified. |
+| 42117 | [UnderlyingProvisionOptionExerciseEarliestDateOffsetUnit](/fix/fields/tags-42000-42199#tag-42117) | ProvisionOptionExerciseEarliestDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingProvisionOptionExerciseEasrliestDatePeriod(42116) is specified. |
+| 42118 | [UnderlyingProvisionOptionExerciseFrequencyPeriod](/fix/fields/tags-42000-42199#tag-42118) | int | Optional | Conditionally required when UnderlyingProvisionOptionExerciseFrequencyUnit(42119) is specified. |
+| 42119 | [UnderlyingProvisionOptionExerciseFrequencyUnit](/fix/fields/tags-42000-42199#tag-42119) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when UnderlyingProvisionOptionExerciseFrequencyPeriod(42118) is specified. |
+| 42120 | [UnderlyingProvisionOptionExerciseStartDateUnadjusted](/fix/fields/tags-42000-42199#tag-42120) | LocalMktDate | Optional | The unadjusted first day of the exercise period for an American style option. |
+| 42121 | [UnderlyingProvisionOptionExerciseStartDateRelativeTo](/fix/fields/tags-42000-42199#tag-42121) | int | Optional | Specifies the anchor date when the option exercise start date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 42122 | [UnderlyingProvisionOptionExerciseStartDateOffsetPeriod](/fix/fields/tags-42000-42199#tag-42122) | int | Optional | Conditionally required when UnderlyingProvisionOptionExerciseStartDateOffsetUnit(42123) is specified. |
+| 42123 | [UnderlyingProvisionOptionExerciseStartDateOffsetUnit](/fix/fields/tags-42000-42199#tag-42123) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingProvisionOptionExerciseStartDateOffsetPeriod(42122) is specified. |
+| 42124 | [UnderlyingProvisionOptionExerciseStartDateOffsetDayType](/fix/fields/tags-42000-42199#tag-42124) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the provision's relative option exercise start date offset. |
+| 42125 | [UnderlyingProvisionOptionExerciseStartDateAdjusted](/fix/fields/tags-42000-42199#tag-42125) | LocalMktDate | Optional | The adjusted first day of the exercise period for an American style option. |
+| 42126 | [UnderlyingProvisionOptionExercisePeriodSkip](/fix/fields/tags-42000-42199#tag-42126) | int | Optional | The number of periods in the referenced date schedule that are between each date in the relative date schedule. Thus a skip of 2 would mean that dates are relative to every second date in the referenced schedule. If present this should have a value greater than 1. |
+| 42127 | [UnderlyingProvisionOptionExerciseBoundsFirstDateUnadjusted](/fix/fields/tags-42000-42199#tag-42127) | LocalMktDate | Optional | The unadjusted first date of a schedule. This can be used to restrict the range of exercise dates when they are relative. |
+| 42128 | [UnderlyingProvisionOptionExerciseBoundsLastDateUnadjusted](/fix/fields/tags-42000-42199#tag-42128) | LocalMktDate | Optional | The unadjusted last date of a schedule. This can be used to restrict the range of exercise dates when they are relative. |
+| 42129 | [UnderlyingProvisionOptionExerciseEarliestTime](/fix/fields/tags-42000-42199#tag-42129) | LocalMktTime | Optional | The earliest time at which notice of exercise can be given by the buyer to the seller (or seller's agent) i) on the expriation date, in the case of a European style option, (ii) on each bermuda option exercise date and the expiration date, in the case of a Bermuda style option the commencement date… |
+| 42130 | [UnderlyingProvisionOptionExerciseEarliestTimeBusinessCenter](/fix/fields/tags-42000-42199#tag-42130) | String | Optional | Identifies the business center calendar used with the provision's earliest time for notice of exercise. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values. |
+| 42131 | [UnderlyingProvisionOptionExerciseLatestTime](/fix/fields/tags-42000-42199#tag-42131) | LocalMktTime | Optional | For a Bermuda or American style option, the latest time on an exercise business day (excluding the expiration date) within the exercise period that notice can be given by the buyer to the seller or seller's agent. Notice of exercise given after this time will be deemed to have been given on the next… |
+| 42132 | [UnderlyingProvisionOptionExerciseLatestTimeBusinessCenter](/fix/fields/tags-42000-42199#tag-42132) | String | Optional | Identifies the business center calendar used with the provision's latest time for notice of exercise. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingProvisionGrp](/fix/groups/underlying-provision-grp)

@@ -1,0 +1,25 @@
+---
+title: "PaymentStreamFinalPricePaymentDate"
+subtitle: "PaymentStreamFinalPricePaymentDate is a subcomponent of the PaymentStreamPaymentDates component used to specify the final price payment date, e.g. for an equity return swap."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42654 | [PaymentStreamFinalPricePaymentDateUnadjusted](/fix/fields/tags-42600-42799#tag-42654) | LocalMktDate | Optional | The unadjusted final price payment date. |
+| 42655 | [PaymentStreamFinalPricePaymentDateRelativeTo](/fix/fields/tags-42600-42799#tag-42655) | int | Optional | Specifies the anchor date when the final price payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 42656 | [PaymentStreamFinalPricePaymentDateOffsetfPeriod](/fix/fields/tags-42600-42799#tag-42656) | int | Optional | Conditionally required when PaymentStreamFinalPricePaymentDateOffsetUnit(42657) is specified. |
+| 42657 | [PaymentStreamFinalPricePaymentDateOffsetUnit](/fix/fields/tags-42600-42799#tag-42657) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when PaymentStreamFinalPricePaymentDateOffsetPeriod(42656) is specified. |
+| 42658 | [PaymentStreamFinalPricePaymentDateOffsetDayType](/fix/fields/tags-42600-42799#tag-42658) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative final price payment date offset. |
+| 42659 | [PaymentStreamFinalPricePaymentDateAdjusted](/fix/fields/tags-42600-42799#tag-42659) | LocalMktDate | Optional | The adjusted final price payment date. |
+
+</StickyTable>
+
+## Used in
+
+[PaymentStreamPaymentDates](/fix/components/payment-stream-payment-dates)

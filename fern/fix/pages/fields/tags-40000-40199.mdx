@@ -1,0 +1,2808 @@
+---
+title: "Tags 40000–40199"
+subtitle: "200 fields"
+---
+
+## 40000 · NoAdditionalTermBondRefs [#tag-40000]
+
+<Badge intent="info" minimal>Tag 40000</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of bonds in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40001 · AdditionalTermBondSecurityID [#tag-40001]
+
+<Badge intent="info" minimal>Tag 40001</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Security identifier of the bond.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40002 · AdditionalTermBondSecurityIDSource [#tag-40002]
+
+<Badge intent="info" minimal>Tag 40002</Badge> <Badge intent="note" minimal>SecurityIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the source scheme of the AdditionalTermBondSecurityID(40001) value.
+
+Code set **SecurityIDSourceCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | CUSIP | CUSIP |
+| `2` | SEDOL | SEDOL |
+| `3` | QUIK | QUIK |
+| `4` | ISINNumber | ISIN |
+| `5` | RICCode | RIC |
+| `6` | ISOCurrencyCode | ISO Currency Code |
+| `7` | ISOCountryCode | ISO Country Code |
+| `8` | ExchangeSymbol | Exchange symbol |
+| `9` | ConsolidatedTapeAssociation | Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format) |
+| `A` | BloombergSymbol | Bloomberg Symbol |
+| `B` | Wertpapier | Wertpapier |
+| `C` | Dutch | Dutch |
+| `D` | Valoren | Valoren |
+| `E` | Sicovam | Sicovam |
+| `F` | Belgian | Belgian |
+| `G` | Common | "Common" (Clearstream and Euroclear) |
+| `H` | ClearingHouse | Clearing house / Clearing organization |
+| `I` | ISDAFpMLSpecification | ISDA/FpML product specification (XML in SecurityXML(1185)) |
+| `J` | OptionPriceReportingAuthority | Option Price Reporting Authority |
+| `K` | ISDAFpMLURL | ISDA/FpML product URL (URL in SecurityID(48)) |
+| `L` | LetterOfCredit | Letter of credit |
+| `M` | MarketplaceAssignedIdentifier | Marketplace-assigned Identifier |
+| `N` | MarkitREDEntityCLIP | Markit RED entity CLIP |
+| `P` | MarkitREDPairCLIP | Markit RED pair CLIP |
+| `Q` | CFTCCommodityCode | CFTC commodity code |
+| `R` | ISDACommodityReferencePrice | ISDA Commodity Reference Price |
+| `S` | FinancialInstrumentGlobalIdentifier | Financial Instrument Global Identifier |
+| `T` | LegalEntityIdentifier | Legal entity identifier |
+| `U` | Synthetic | Synthetic |
+| `V` | FidessaInstrumentMnemonic | Fidessa Instrument Mnemonic (FIM) |
+| `W` | IndexName | Index name |
+| `X` | UniformSymbol | Uniform Symbol (UMTF Symbol) |
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40003 · AdditionalTermBondDesc [#tag-40003]
+
+<Badge intent="info" minimal>Tag 40003</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Description of the bond.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40004 · EncodedAdditionalTermBondDescLen [#tag-40004]
+
+<Badge intent="info" minimal>Tag 40004</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Byte length of encoded (non-ASCII characters) EncodedAdditionalTermBondDesc(40005) field.
+
+Type: [Length](/fix/datatypes#length)
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40005 · EncodedAdditionalTermBondDesc [#tag-40005]
+
+<Badge intent="info" minimal>Tag 40005</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Encoded (non-ASCII characters) representation of the AdditionalTermBondDesc(40003) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the AdditionalTermBondDesc(40003) field.
+
+Type: [data](/fix/datatypes#data)
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40006 · AdditionalTermBondCurrency [#tag-40006]
+
+<Badge intent="info" minimal>Tag 40006</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency the bond value is denominated in. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40007 · AdditionalTermBondIssuer [#tag-40007]
+
+<Badge intent="info" minimal>Tag 40007</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Issuer of the bond.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40008 · EncodedAdditionalTermBondIssuerLen [#tag-40008]
+
+<Badge intent="info" minimal>Tag 40008</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Byte length of encoded (non-ASCII characters) EncodedAdditionalTermBondIssuer(40009) field.
+
+Type: [Length](/fix/datatypes#length)
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40009 · EncodedAdditionalTermBondIssuer [#tag-40009]
+
+<Badge intent="info" minimal>Tag 40009</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Encoded (non-ASCII characters) representation of the AdditionalTermBondIssuer(40007) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the AdditionalTermBondIssuer(40007) field.
+
+Type: [data](/fix/datatypes#data)
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40010 · AdditionalTermBondSeniority [#tag-40010]
+
+<Badge intent="info" minimal>Tag 40010</Badge> <Badge intent="note" minimal>SeniorityCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the bond's payment priority in the event of a default.
+
+Code set **SeniorityCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `SD` | SeniorSecured | Senior Secured |
+| `SR` | Senior | Senior |
+| `SB` | Subordinated | Subordinated |
+| `JR` | Junior | Junior |
+| `MZ` | Mezzanine | Mezzanine |
+| `SN` | SeniorNonPreferred | Senior Non-Preferred |
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40011 · AdditionalTermBondCouponType [#tag-40011]
+
+<Badge intent="info" minimal>Tag 40011</Badge> <Badge intent="note" minimal>CouponTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Coupon type of the bond.
+
+Code set **CouponTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Zero | Zero |
+| `1` | FixedRate | Fixed rate |
+| `2` | FloatingRate | Floating rate |
+| `3` | Structured | Structured |
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40012 · AdditionalTermBondCouponRate [#tag-40012]
+
+<Badge intent="info" minimal>Tag 40012</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Coupon rate of the bond. See also CouponRate(223).
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40013 · AdditionalTermBondMaturityDate [#tag-40013]
+
+<Badge intent="info" minimal>Tag 40013</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The maturity date of the bond.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40014 · AdditionalTermBondParValue [#tag-40014]
+
+<Badge intent="info" minimal>Tag 40014</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The par value of the bond.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40015 · AdditionalTermBondCurrentTotalIssuedAmount [#tag-40015]
+
+<Badge intent="info" minimal>Tag 40015</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Total issued amount of the bond.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40016 · AdditionalTermBondCouponFrequencyPeriod [#tag-40016]
+
+<Badge intent="info" minimal>Tag 40016</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the frequency of the bond's coupon payment.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40017 · AdditionalTermBondCouponFrequencyUnit [#tag-40017]
+
+<Badge intent="info" minimal>Tag 40017</Badge> <Badge intent="note" minimal>CouponFrequencyUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the frequency of the bond's coupon payment.
+
+Code set **CouponFrequencyUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+| `H` | Hour | Hour |
+| `Min` | Minute | Minute |
+| `S` | Second | Second |
+| `T` | Term | Term |
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40018 · AdditionalTermBondDayCount [#tag-40018]
+
+<Badge intent="info" minimal>Tag 40018</Badge> <Badge intent="note" minimal>CouponDayCountCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The day count convention used in interest calculations for a bond or an interest bearing security.
+
+Code set **CouponDayCountCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | OneOne | 1/1 |
+| `1` | ThirtyThreeSixtyUS | 30/360 (30U/360 or Bond Basis) |
+| `2` | ThirtyThreeSixtySIA | 30/360 (SIA) |
+| `3` | ThirtyThreeSixtyM | 30/360M |
+| `4` | ThirtyEThreeSixty | 30E/360 (Eurobond Basis) |
+| `5` | ThirtyEThreeSixtyISDA | 30E/360 (ISDA) |
+| `6` | ActThreeSixty | Act/360 |
+| `7` | ActThreeSixtyFiveFixed | Act/365 (FIXED) |
+| `8` | ActActAFB | Act/Act (AFB) |
+| `9` | ActActICMA | Act/Act (ICMA) |
+| `10` | ActActISMAUltimo | Act/Act (ICMA Ultimo) |
+| `11` | ActActISDA | Act/Act (ISDA) |
+| `12` | BusTwoFiftyTwo | BUS/252 |
+| `13` | ThirtyEPlusThreeSixty | 30E+/360 |
+| `14` | ActThreeSixtyFiveL | Act/365L |
+| `15` | NLThreeSixtyFive | NL365 |
+| `16` | NLThreeSixty | NL360 |
+| `17` | Act364 | Act/364 |
+| `18` | ThirtyThreeSixtyFive | 30/365 |
+| `19` | ThirtyActual | 30/Actual |
+| `20` | ThirtyThreeSixtyICMA | 30/360 (ICMA or basis rule) |
+| `21` | ThirtyETwoThreeSixty | 30E2/360 (Eurobond basis model two) |
+| `22` | ThirtyEThreeThreeSixty | 30E3/360 (Eurobond basis model three) |
+| `99` | Other | Other |
+
+Used in: [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp)
+
+## 40019 · NoAdditionalTerms [#tag-40019]
+
+<Badge intent="info" minimal>Tag 40019</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of additional terms in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [AdditionalTermGrp](/fix/groups/additional-term-grp)
+
+## 40020 · AdditionalTermConditionPrecedentBondIndicator [#tag-40020]
+
+<Badge intent="info" minimal>Tag 40020</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether the condition precedent bond is applicable. The swap contract is only valid if the bond is issued and if there is any dispute over the terms of fixed stream then the bond terms would be used.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [AdditionalTermGrp](/fix/groups/additional-term-grp)
+
+## 40021 · AdditionalTermDiscrepancyClauseIndicator [#tag-40021]
+
+<Badge intent="info" minimal>Tag 40021</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether the discrepancy clause is applicable.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [AdditionalTermGrp](/fix/groups/additional-term-grp)
+
+## 40022 · NoCashSettlTerms [#tag-40022]
+
+<Badge intent="info" minimal>Tag 40022</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of elements in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
+
+## 40023 · CashSettlCurrency [#tag-40023]
+
+<Badge intent="info" minimal>Tag 40023</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency the CashSettlAmount(40034) is denominated in. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
+
+## 40024 · CashSettlValuationFirstBusinessDayOffset [#tag-40024]
+
+<Badge intent="info" minimal>Tag 40024</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The number of business days after settlement conditions have been satisfied, when the calculation agent is to obtain a price quotation on the reference obligation for the purpose of cash settlement.
+
+Associated with ISDA 2003 Term: Valuation Date.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
+
+## 40025 · CashSettlValuationTime [#tag-40025]
+
+<Badge intent="info" minimal>Tag 40025</Badge> <Badge intent="note" minimal>LocalMktTime</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The time of valuation.
+
+Type: [LocalMktTime](/fix/datatypes#local-mkt-time)
+
+Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
+
+## 40026 · CashSettlBusinessCenter [#tag-40026]
+
+<Badge intent="info" minimal>Tag 40026</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the business center calendar used at valuation time for cash settlement purposes e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
+
+## 40027 · CashSettlQuoteMethod [#tag-40027]
+
+<Badge intent="info" minimal>Tag 40027</Badge> <Badge intent="note" minimal>CashSettlQuoteMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The type of quote used to determine the cash settlement price.
+
+Code set **CashSettlQuoteMethodCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Bid | Bid |
+| `1` | Mid | Mid |
+| `2` | Offer | Offer |
+
+Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
+
+## 40028 · CashSettlQuoteAmount [#tag-40028]
+
+<Badge intent="info" minimal>Tag 40028</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+When determining the cash settlement amount, if weighted average price quotes are to be obtained for the reference obligation, this is the upper limit to the outstanding principal balance of the reference obligation for which the quote should be obtained. If not specifed, the ISDA definitions provide for a fallback amount equal to floating rate payer calculation amount.
+
+ISDA 2003 Term: Quotation Amount.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
+
+## 40029 · CashSettlQuoteCurrency [#tag-40029]
+
+<Badge intent="info" minimal>Tag 40029</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency the CashSettlQuoteAmount(40028) is denominated in. Uses ISO 4217 Currency Code.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
+
+## 40030 · CashSettlMinimumQuoteAmount [#tag-40030]
+
+<Badge intent="info" minimal>Tag 40030</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+When determining the cash settlement amount, if weighted average price quotes are to be obtained for the reference obligation, this is the minimum intended threshold amount of outstanding principal balance of the reference obligation for which the quote should be obtained. If not specified, the ISDA definitions provide for a fallback amount of the lower of either USD1,000,000 (or its equivalent in the relevent obligation currency) or the (minimum) quoted amount.
+
+ISDA 2003 Term: Minimum Quotation Amount.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
+
+## 40031 · CashSettlMinimumQuoteCurrency [#tag-40031]
+
+<Badge intent="info" minimal>Tag 40031</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency the CashSettlMinimumQuoteAmount(40030) is denominated in. Uses ISO 4217 Currency Code.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
+
+## 40032 · CashSettlDealer [#tag-40032]
+
+<Badge intent="info" minimal>Tag 40032</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the dealer from whom price quotations for the reference obligation are obtained for the purpose of cash settlement valuation calculation.
+
+ISDA 2003 Term: Dealer.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [CashSettlDealerGrp](/fix/groups/cash-settl-dealer-grp)
+
+## 40033 · CashSettlBusinessDays [#tag-40033]
+
+<Badge intent="info" minimal>Tag 40033</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The number of business days used in the determination of the cash settlement payment date.
+
+If a cash settlement amount is specified, the cash settlement payment date will be this number of business days following the calculation of the final price. If a cash settlement amount is not specified, the cash settlement payment date will be this number of business days after all conditions to settlement are satisfied. ISDA 2003 Term: Cash Settlement Date.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
+
+## 40034 · CashSettlAmount [#tag-40034]
+
+<Badge intent="info" minimal>Tag 40034</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The amount paid between the trade parties, seller to the buyer, for cash settlement on the cash settlement date.
+
+If not specified this is not to be included in the message and the parties to the trade are expected to calculate the value. The value is the greater of (a) floating rate payer calculation amount x (reference price - final price) or (b) zero. Price values are all expressed as a percentage. ISDA 2003 Term: Cash Settlement Amount
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
+
+## 40035 · CashSettlRecoveryFactor [#tag-40035]
+
+<Badge intent="info" minimal>Tag 40035</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used for fixed recovery, this specifies the recovery level as determined at contract inception, to be applied in the event of a default. The factor is used to calculate the amount paid by the seller to the buyer for cash settlement on the cash settlement date. The amount calculated is (1 - CashSettlRecoveryFactor(40035)) x floating rate payer calculation amount. The currency is derived from the floating rate payer calculation amount.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
+
+## 40036 · CashSettlFixedTermIndicator [#tag-40036]
+
+<Badge intent="info" minimal>Tag 40036</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether fixed settlement is applicable or not applicable in a recovery lock.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
+
+## 40037 · CashSettlAccruedInterestIndicator [#tag-40037]
+
+<Badge intent="info" minimal>Tag 40037</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether accrued interest is included or not in the value provided in CashSettlAmount(40034). For cash settlement this specifies whether quotations should be obtained inclusive or not of accrued interest. For physical settlement this specifies whether the buyer should deliver the obligation with an outstanding principal balance that includes or excludes accrued interest.
+
+ISDA 2003 Term: Include/Exclude Accrued Interest.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
+
+## 40038 · CashSettlValuationMethod [#tag-40038]
+
+<Badge intent="info" minimal>Tag 40038</Badge> <Badge intent="note" minimal>CashSettlValuationMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The ISDA defined methodology for determining the final price of the reference obligation for purposes of cash settlement.
+
+ISDA 2003 Term: Valuation Method
+
+Code set **CashSettlValuationMethodCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Market | Market |
+| `1` | Highest | Highest |
+| `2` | AverageMarket | Average market |
+| `3` | AverageHighest | Average highest |
+| `4` | BlendedMarket | Blended market |
+| `5` | BlendedHighest | Blended highest |
+| `6` | AverageBlendedMarket | Average blended market |
+| `7` | AverageBlendedHighest | Average blended highest |
+
+Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
+
+## 40039 · CashSettlTermXID [#tag-40039]
+
+<Badge intent="info" minimal>Tag 40039</Badge> <Badge intent="note" minimal>XID</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A named string value referenced by UnderlyingSettlTermXIDRef(41315).
+
+Type: [XID](/fix/datatypes#xid)
+
+Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
+
+## 40040 · NoContractualDefinitions [#tag-40040]
+
+<Badge intent="info" minimal>Tag 40040</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of financing definitions in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [FinancingContractualDefinitionGrp](/fix/groups/financing-contractual-definition-grp)
+
+## 40041 · ContractualDefinition [#tag-40041]
+
+<Badge intent="info" minimal>Tag 40041</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies which contract definition, such as those published by ISDA, will apply for the terms of the trade. See http://www.fpml.org/coding-scheme/contractual-definitions for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [FinancingContractualDefinitionGrp](/fix/groups/financing-contractual-definition-grp)
+
+## 40042 · NoContractualMatrices [#tag-40042]
+
+<Badge intent="info" minimal>Tag 40042</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of contractual matrices in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [FinancingContractualMatrixGrp](/fix/groups/financing-contractual-matrix-grp)
+
+## 40043 · ContractualMatrixSource [#tag-40043]
+
+<Badge intent="info" minimal>Tag 40043</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the applicable contract matrix. See http://www.fpml.org/coding-scheme/matrix-type-1-0.xml for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [FinancingContractualMatrixGrp](/fix/groups/financing-contractual-matrix-grp)
+
+## 40044 · ContractualMatrixDate [#tag-40044]
+
+<Badge intent="info" minimal>Tag 40044</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The publication date of the applicable version of the contract matrix. If not specified, the ISDA Standard Terms Supplement defines rules for which version of the matrix is applicable.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [FinancingContractualMatrixGrp](/fix/groups/financing-contractual-matrix-grp)
+
+## 40045 · ContractualMatrixTerm [#tag-40045]
+
+<Badge intent="info" minimal>Tag 40045</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the applicable key into the relevent contract matrix. In the case of 2000 ISDA Definitions Settlement Matrix for Early Termination and Swaptions, the ContractualMatrixTerm(40045) is not applicable and is to be omitted. See http://www.fpml.org/coding-scheme/credit-matrix-transaction-type for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [FinancingContractualMatrixGrp](/fix/groups/financing-contractual-matrix-grp)
+
+## 40046 · NoFinancingTermSupplements [#tag-40046]
+
+<Badge intent="info" minimal>Tag 40046</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of financing terms supplements in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [FinancingTermSupplementGrp](/fix/groups/financing-term-supplement-grp)
+
+## 40047 · FinancingTermSupplementDesc [#tag-40047]
+
+<Badge intent="info" minimal>Tag 40047</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the applicable contractual supplement. See http://www.fpml.org/coding-scheme/contractual-supplement for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [FinancingTermSupplementGrp](/fix/groups/financing-term-supplement-grp)
+
+## 40048 · FinancingTermSupplementDate [#tag-40048]
+
+<Badge intent="info" minimal>Tag 40048</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The publication date of the applicable version of the contractual supplement.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [FinancingTermSupplementGrp](/fix/groups/financing-term-supplement-grp)
+
+## 40049 · NoStreams [#tag-40049]
+
+<Badge intent="info" minimal>Tag 40049</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of swap streams in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [StreamGrp](/fix/groups/stream-grp)
+
+## 40050 · StreamType [#tag-40050]
+
+<Badge intent="info" minimal>Tag 40050</Badge> <Badge intent="note" minimal>StreamTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Type of swap stream.
+
+Code set **StreamTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | PaymentCashSettlement | Payment / cash settlement |
+| `1` | PhysicalDelivery | Physical delivery |
+
+Used in: [StreamGrp](/fix/groups/stream-grp)
+
+## 40051 · StreamDesc [#tag-40051]
+
+<Badge intent="info" minimal>Tag 40051</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A short descriptive name given to the payment stream. Eg. CDS, Fixed, Float, Float2, GBP. The description has no intrinsic meaning but should be arbitrarily chosen by the remitter as reference.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [StreamGrp](/fix/groups/stream-grp)
+
+## 40052 · StreamPaySide [#tag-40052]
+
+<Badge intent="info" minimal>Tag 40052</Badge> <Badge intent="note" minimal>PaymentPaySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The side of the party paying the stream.
+
+Code set **PaymentPaySideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Buy | Buy |
+| `2` | Sell | Sell |
+
+Used in: [StreamGrp](/fix/groups/stream-grp)
+
+## 40053 · StreamReceiveSide [#tag-40053]
+
+<Badge intent="info" minimal>Tag 40053</Badge> <Badge intent="note" minimal>PaymentPaySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The side of the party receiving the stream.
+
+Code set **PaymentPaySideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Buy | Buy |
+| `2` | Sell | Sell |
+
+Used in: [StreamGrp](/fix/groups/stream-grp)
+
+## 40054 · StreamNotional [#tag-40054]
+
+<Badge intent="info" minimal>Tag 40054</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Notional, or initial notional value for the payment stream. Use the PaymentScheduleGrp component to specify the rate steps.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [StreamGrp](/fix/groups/stream-grp)
+
+## 40055 · StreamCurrency [#tag-40055]
+
+<Badge intent="info" minimal>Tag 40055</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency the StreamNotional(40054) is denominated in. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [StreamGrp](/fix/groups/stream-grp)
+
+## 40056 · StreamText [#tag-40056]
+
+<Badge intent="info" minimal>Tag 40056</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Free form text to specify additional information or enumeration description when a standard value does not apply.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [StreamGrp](/fix/groups/stream-grp)
+
+## 40057 · UnderlyingStreamEffectiveDateUnadjusted [#tag-40057]
+
+<Badge intent="info" minimal>Tag 40057</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted effective date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [UnderlyingStreamEffectiveDate](/fix/components/underlying-stream-effective-date)
+
+## 40058 · UnderlyingStreamEffectiveDateBusinessDayConvention [#tag-40058]
+
+<Badge intent="info" minimal>Tag 40058</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the underlying instrument's stream's effective, or relative effective, date. Used only to override the business day convention specified in the UnderlyingDateAdjustment component within the UnderlyingInstrument component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [UnderlyingStreamEffectiveDate](/fix/components/underlying-stream-effective-date)
+
+## 40059 · UnderlyingStreamEffectiveDateBusinessCenter [#tag-40059]
+
+<Badge intent="info" minimal>Tag 40059</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the underlying instrument's stream's effective, or relative effective, date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingStreamEffectiveDateBusinessCenterGrp](/fix/groups/underlying-stream-effective-date-business-center-grp)
+
+## 40060 · UnderlyingStreamEffectiveDateRelativeTo [#tag-40060]
+
+<Badge intent="info" minimal>Tag 40060</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the effective date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingStreamEffectiveDate](/fix/components/underlying-stream-effective-date)
+
+## 40061 · UnderlyingStreamEffectiveDateOffsetPeriod [#tag-40061]
+
+<Badge intent="info" minimal>Tag 40061</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative effective date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingStreamEffectiveDate](/fix/components/underlying-stream-effective-date)
+
+## 40062 · UnderlyingStreamEffectiveDateOffsetUnit [#tag-40062]
+
+<Badge intent="info" minimal>Tag 40062</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative effective date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [UnderlyingStreamEffectiveDate](/fix/components/underlying-stream-effective-date)
+
+## 40063 · UnderlyingStreamEffectiveDateOffsetDayType [#tag-40063]
+
+<Badge intent="info" minimal>Tag 40063</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the relative effective date offset.
+
+Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [UnderlyingStreamEffectiveDate](/fix/components/underlying-stream-effective-date)
+
+## 40064 · UnderlyingStreamEffectiveDateAdjusted [#tag-40064]
+
+<Badge intent="info" minimal>Tag 40064</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted effective date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [UnderlyingStreamEffectiveDate](/fix/components/underlying-stream-effective-date)
+
+## 40065 · StreamTerminationDateUnadjusted [#tag-40065]
+
+<Badge intent="info" minimal>Tag 40065</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted termination date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [StreamTerminationDate](/fix/components/stream-termination-date)
+
+## 40066 · StreamTerminationDateBusinessDayConvention [#tag-40066]
+
+<Badge intent="info" minimal>Tag 40066</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the instrument's stream's termination, or relative termination, date. Used only to override the business day convention specified in the DateAdjustment component within the Instrument component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [StreamTerminationDate](/fix/components/stream-termination-date)
+
+## 40067 · StreamTerminationDateBusinessCenter [#tag-40067]
+
+<Badge intent="info" minimal>Tag 40067</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the instrument's stream's termination, or relative termination, date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [StreamTerminationDateBusinessCenterGrp](/fix/groups/stream-termination-date-business-center-grp)
+
+## 40068 · StreamTerminationDateRelativeTo [#tag-40068]
+
+<Badge intent="info" minimal>Tag 40068</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the termination date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [StreamTerminationDate](/fix/components/stream-termination-date)
+
+## 40069 · StreamTerminationDateOffsetPeriod [#tag-40069]
+
+<Badge intent="info" minimal>Tag 40069</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative termination date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [StreamTerminationDate](/fix/components/stream-termination-date)
+
+## 40070 · StreamTerminationDateOffsetUnit [#tag-40070]
+
+<Badge intent="info" minimal>Tag 40070</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative termination date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [StreamTerminationDate](/fix/components/stream-termination-date)
+
+## 40071 · StreamTerminationDateOffsetDayType [#tag-40071]
+
+<Badge intent="info" minimal>Tag 40071</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the relative termination date offset.
+
+Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [StreamTerminationDate](/fix/components/stream-termination-date)
+
+## 40072 · StreamTerminationDateAdjusted [#tag-40072]
+
+<Badge intent="info" minimal>Tag 40072</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted termination date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [StreamTerminationDate](/fix/components/stream-termination-date)
+
+## 40073 · StreamCalculationPeriodBusinessDayConvention [#tag-40073]
+
+<Badge intent="info" minimal>Tag 40073</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust calculation periods. Used only to override the business day convention specified in the DateAdjustment component within the Instrument component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [StreamCalculationPeriodDates](/fix/components/stream-calculation-period-dates)
+
+## 40074 · StreamCalculationPeriodBusinessCenter [#tag-40074]
+
+<Badge intent="info" minimal>Tag 40074</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust calculation periods, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [StreamCalculationPeriodBusinessCenterGrp](/fix/groups/stream-calculation-period-business-center-grp)
+
+## 40075 · StreamFirstPeriodStartDateUnadjusted [#tag-40075]
+
+<Badge intent="info" minimal>Tag 40075</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted first calculation period start date if before the effective date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [StreamCalculationPeriodDates](/fix/components/stream-calculation-period-dates)
+
+## 40076 · StreamFirstPeriodStartDateBusinessDayConvention [#tag-40076]
+
+<Badge intent="info" minimal>Tag 40076</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the instrument's stream's first calculation period start date. Used only to override the business day convention specified in the DateAdjustment component within the Instrument component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [StreamCalculationPeriodDates](/fix/components/stream-calculation-period-dates)
+
+## 40077 · StreamFirstPeriodStartDateBusinessCenter [#tag-40077]
+
+<Badge intent="info" minimal>Tag 40077</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the instrument's stream's first calculation period start date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [StreamFirstPeriodStartDateBusinessCenterGrp](/fix/groups/stream-first-period-start-date-business-center-grp)
+
+## 40078 · StreamFirstPeriodStartDateAdjusted [#tag-40078]
+
+<Badge intent="info" minimal>Tag 40078</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted first calculation period start date, if it is before the effective date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [StreamCalculationPeriodDates](/fix/components/stream-calculation-period-dates)
+
+## 40079 · StreamFirstRegularPeriodStartDateUnadjusted [#tag-40079]
+
+<Badge intent="info" minimal>Tag 40079</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted first start date of the regular calculation period, if there is an initial stub period.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [StreamCalculationPeriodDates](/fix/components/stream-calculation-period-dates)
+
+## 40080 · StreamFirstCompoundingPeriodEndDateUnadjusted [#tag-40080]
+
+<Badge intent="info" minimal>Tag 40080</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted end date of the initial compounding period.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [StreamCalculationPeriodDates](/fix/components/stream-calculation-period-dates)
+
+## 40081 · StreamLastRegularPeriodEndDateUnadjusted [#tag-40081]
+
+<Badge intent="info" minimal>Tag 40081</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted last regular period end date if there is a final stub period.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [StreamCalculationPeriodDates](/fix/components/stream-calculation-period-dates)
+
+## 40082 · StreamCalculationFrequencyPeriod [#tag-40082]
+
+<Badge intent="info" minimal>Tag 40082</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the frequency at which calculation period end dates occur.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [StreamCalculationPeriodDates](/fix/components/stream-calculation-period-dates)
+
+## 40083 · StreamCalculationFrequencyUnit [#tag-40083]
+
+<Badge intent="info" minimal>Tag 40083</Badge> <Badge intent="note" minimal>CouponFrequencyUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the frequency at which calculation period end dates occur.
+
+Code set **CouponFrequencyUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+| `H` | Hour | Hour |
+| `Min` | Minute | Minute |
+| `S` | Second | Second |
+| `T` | Term | Term |
+
+Used in: [StreamCalculationPeriodDates](/fix/components/stream-calculation-period-dates)
+
+## 40084 · StreamCalculationRollConvention [#tag-40084]
+
+<Badge intent="info" minimal>Tag 40084</Badge> <Badge intent="note" minimal>DateRollConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The convention for determining the sequence of end dates. It is used in conjunction with a specified frequency. Used only to override the roll convention specified in the DateAdjustment component within the Instrument component.
+
+Code set **DateRollConventionCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | FirstDay | 1st day of the month |
+| `2` | SecondDay | 2nd day of the month |
+| `3` | ThirdDay | 3rd day of the month |
+| `4` | FourthDay | 4th day of the month |
+| `5` | FifthDay | 5th day of the month |
+| `6` | SixthDay | 6thd day of the month |
+| `7` | SeventhDay | 7th day of the month |
+| `8` | EighthDay | 8th day of the month |
+| `9` | NinthDay | 9th day of the month |
+| `10` | TenthDay | 10th day of the month |
+| `11` | EleventhDay | 11th day of the month |
+| `12` | TwelvthDay | 12th day of the month |
+| `13` | ThirteenthDay | 13th day of the month |
+| `14` | ForteenthDay | 14th day of the month |
+| `15` | FifteenthDay | 15th day of the month |
+| `16` | SixteenthDay | 16th day of the month |
+| `17` | SeventeenthDay | 17th day of the month |
+| `18` | EighteenthDay | 18th day of the month |
+| `19` | NineteenthDay | 19th day of the month |
+| `20` | TwentiethDay | 20th day of the month |
+| `21` | TwentyFirstDay | 21st day of the month |
+| `22` | TwentySecondDay | 22nd day of the month |
+| `23` | TwentyThirdDay | 23rd day of the month |
+| `24` | TwentyFourthDay | 24th day of the month |
+| `25` | TwentyFifthDay | 25th day of the month |
+| `26` | TwentySixthDay | 26th day of the month |
+| `27` | TwentySeventhDay | 27th day of the month |
+| `28` | TwentyEigthDa28y | 28th day of the month |
+| `29` | TwentyNinthDay | 29th day of the month |
+| `30` | ThirtiethDay | 30th day of the month |
+| `EOM` | EOM | The end of the month. |
+| `FRN` | FRN | The floating rate note convention or Eurodollar convention. |
+| `IMM` | IMM | The International Money Market settlement date, i.e. the 3rd Wednesday of the month. |
+| `IMMCAD` | IMMCAD | The last trading day/expiration day of the Canadian Derivatives Exchange. |
+| `IMMAUD` | IMMAUD | The last trading day of the Sydney Futures Exchange Australian 90-day bank accepted bill futures contract. |
+| `IMMNZD` | IMMNZD | The last trading day of the Sydney Futures Exchange New Zealand 90-day bank bill futures contract. |
+| `SFE` | SFE | The Sydney Futures Exchange 90-day bank accepted bill futures settlement dates. |
+| `NONE` | NONE | No adjustment |
+| `TBILL` | TBILL | The 13-week and 26-week U.S. Treasury Bill auction dates. |
+| `MON` | MON | Monday |
+| `TUE` | TUE | Tuesday |
+| `WED` | WED | Wednesday |
+| `THU` | THU | Thursday |
+| `FRI` | FRI | Friday |
+| `SAT` | SAT | Saturday |
+| `SUN` | SUN | Sunday |
+
+Used in: [StreamCalculationPeriodDates](/fix/components/stream-calculation-period-dates)
+
+## 40085 · NoSettlRateFallbacks [#tag-40085]
+
+<Badge intent="info" minimal>Tag 40085</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of settlement rate fallbacks in the repeating group
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [SettlRateDisruptionFallbackGrp](/fix/groups/settl-rate-disruption-fallback-grp)
+
+## 40086 · SettlRatePostponementMaximumDays [#tag-40086]
+
+<Badge intent="info" minimal>Tag 40086</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The maximum number of days to wait for a quote from the disrupted settlement rate option before proceding to this method.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [SettlRateDisruptionFallbackGrp](/fix/groups/settl-rate-disruption-fallback-grp)
+
+## 40087 · LegPaymentStreamNonDeliverableSettlRateSource [#tag-40087]
+
+<Badge intent="info" minimal>Tag 40087</Badge> <Badge intent="note" minimal>RateSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the source of the rate information.
+
+Code set **RateSourceCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Bloomberg | Bloomberg |
+| `1` | Reuters | Reuters |
+| `2` | Telerate | Telerate |
+| `3` | ISDARateOption | ISDA Settlement Rate Option |
+| `99` | Other | Other |
+
+Used in: [LegPaymentStreamNonDeliverableSettlRateSource](/fix/components/leg-payment-stream-non-deliverable-settl-rate-source)
+
+## 40088 · SettlRatePostponementSurvey [#tag-40088]
+
+<Badge intent="info" minimal>Tag 40088</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether to request a settlement rate quote from the market.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [SettlRateDisruptionFallbackGrp](/fix/groups/settl-rate-disruption-fallback-grp)
+
+## 40089 · SettlRatePostponementCalculationAgent [#tag-40089]
+
+<Badge intent="info" minimal>Tag 40089</Badge> <Badge intent="note" minimal>ProvisionCalculationAgentCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used to identify the settlement rate postponement calculation agent.
+
+Code set **ProvisionCalculationAgentCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | ExercisingParty | Exercising party |
+| `1` | NonExercisingParty | Non-exercising party |
+| `2` | MasterAgreeent | As specified in the master agreement |
+| `3` | Supplement | As specified in the standard terms supplement |
+
+Used in: [SettlRateDisruptionFallbackGrp](/fix/groups/settl-rate-disruption-fallback-grp)
+
+## 40090 · NoProvisions [#tag-40090]
+
+<Badge intent="info" minimal>Tag 40090</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of provisions in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40091 · ProvisionType [#tag-40091]
+
+<Badge intent="info" minimal>Tag 40091</Badge> <Badge intent="note" minimal>ProvisionTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Type of provisions.
+
+Code set **ProvisionTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | MandatoryEarlyTermination | Mandatory early termination |
+| `1` | OptionalEarlyTermination | Optional early termination |
+| `2` | Cancelable | Cancelable |
+| `3` | Extendable | Extendable |
+| `4` | MutualEarlyTermination | Mutual early termination |
+| `5` | Evergreen | Evergreen |
+| `6` | Callable | Callable |
+| `7` | Puttable | Puttable |
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40092 · ProvisionDateUnadjusted [#tag-40092]
+
+<Badge intent="info" minimal>Tag 40092</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted date of the provision.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40093 · ProvisionDateBusinessDayConvention [#tag-40093]
+
+<Badge intent="info" minimal>Tag 40093</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the instrument's provision's dates. Used only to override the business day convention specified in the DateAdjustment component within the Instrument component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40094 · ProvisionDateBusinessCenter [#tag-40094]
+
+<Badge intent="info" minimal>Tag 40094</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the instrument's provision's dates, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProvisionDateBusinessCenterGrp](/fix/groups/provision-date-business-center-grp)
+
+## 40095 · ProvisionDateAdjusted [#tag-40095]
+
+<Badge intent="info" minimal>Tag 40095</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted date of the provision.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40096 · ProvisionDateTenorPeriod [#tag-40096]
+
+<Badge intent="info" minimal>Tag 40096</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the provision's tenor period.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40097 · ProvisionDateTenorUnit [#tag-40097]
+
+<Badge intent="info" minimal>Tag 40097</Badge> <Badge intent="note" minimal>ProvisionDateTenorUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the provision's tenor period.
+
+Code set **ProvisionDateTenorUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40098 · ProvisionCalculationAgent [#tag-40098]
+
+<Badge intent="info" minimal>Tag 40098</Badge> <Badge intent="note" minimal>ProvisionCalculationAgentCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used to identify the calculation agent. The calculation agent may be identified in ProvisionCalculationAgent(40098) or in the ProvisionParties component.
+
+Code set **ProvisionCalculationAgentCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | ExercisingParty | Exercising party |
+| `1` | NonExercisingParty | Non-exercising party |
+| `2` | MasterAgreeent | As specified in the master agreement |
+| `3` | Supplement | As specified in the standard terms supplement |
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40099 · ProvisionOptionSinglePartyBuyerSide [#tag-40099]
+
+<Badge intent="info" minimal>Tag 40099</Badge> <Badge intent="note" minimal>ProvisionOptionSinglePartyBuyerSideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+If optional early termination is not available to both parties then this component identifies the buyer of the option through its side of the trade.
+
+Code set **ProvisionOptionSinglePartyBuyerSideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Buy | Buy |
+| `2` | Sell | Sell |
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40100 · ProvisionOptionSinglePartySellerSide [#tag-40100]
+
+<Badge intent="info" minimal>Tag 40100</Badge> <Badge intent="note" minimal>ProvisionOptionSinglePartyBuyerSideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+If optional early termination is not available to both parties then this component identifies the seller of the option through its side of the trade.
+
+Code set **ProvisionOptionSinglePartyBuyerSideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Buy | Buy |
+| `2` | Sell | Sell |
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40101 · ProvisionOptionExerciseStyle [#tag-40101]
+
+<Badge intent="info" minimal>Tag 40101</Badge> <Badge intent="note" minimal>ExerciseStyleCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The instrument provision option’s exercise style.
+
+Code set **ExerciseStyleCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | European | European |
+| `1` | American | American |
+| `2` | Bermuda | Bermuda |
+| `99` | Other | Other |
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40102 · ProvisionOptionExerciseMultipleNotional [#tag-40102]
+
+<Badge intent="info" minimal>Tag 40102</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A notional amount which restricts the amount of notional that can be exercised when partial exercise or multiple exercise is applicable. The integral multiple amount defines a lower limit of notional that can be exercised and also defines a unit multiple of notional that can be exercised, i.e. only integer multiples of this amount can be exercised.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40103 · ProvisionOptionExerciseMinimumNotional [#tag-40103]
+
+<Badge intent="info" minimal>Tag 40103</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The minimum notional amount that can be exercised on a given exercise date.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40104 · ProvisionOptionExerciseMaximumNotional [#tag-40104]
+
+<Badge intent="info" minimal>Tag 40104</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The maximum notional amount that can be exercised on a given exercise date.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40105 · ProvisionOptionMinimumNumber [#tag-40105]
+
+<Badge intent="info" minimal>Tag 40105</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The minimum number of options that can be exercised on a given exercise date.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40106 · ProvisionOptionMaximumNumber [#tag-40106]
+
+<Badge intent="info" minimal>Tag 40106</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The maximum number of options that can be exercised on a given exercise date. If the number is not specified, it means that the maximum number of options corresponds to the remaining unexercised options.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40107 · ProvisionOptionExerciseConfirmation [#tag-40107]
+
+<Badge intent="info" minimal>Tag 40107</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used to indicate whether follow-up confirmation of exercise (written or electronic) is required following telephonic notice by the buyer to the seller or seller's agent.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40108 · ProvisionCashSettlMethod [#tag-40108]
+
+<Badge intent="info" minimal>Tag 40108</Badge> <Badge intent="note" minimal>ProvisionCashSettlMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in the 2006 ISDA Definitions, Section 18.3. Cash Settlement Methods, paragraph (e).
+
+Code set **ProvisionCashSettlMethodCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | CashPrice | Cash price |
+| `1` | CashPriceAlternate | Cash price alternate |
+| `2` | ParYieldCurveAdjusted | Par yield curve adjusted |
+| `3` | ZeroCouponYieldCurveAdjusted | Zero coupon yield curve adjusted |
+| `4` | ParYieldCurveUnadjusted | Par yield curve unadjusted |
+| `5` | CrossCurrency | Cross currency |
+| `6` | CollateralizedPrice | Collateralized price |
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40109 · ProvisionCashSettlCurrency [#tag-40109]
+
+<Badge intent="info" minimal>Tag 40109</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency of settlement. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40110 · ProvisionCashSettlCurrency2 [#tag-40110]
+
+<Badge intent="info" minimal>Tag 40110</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency of settlement for a cross-currency provision. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40111 · ProvisionCashSettlQuoteType [#tag-40111]
+
+<Badge intent="info" minimal>Tag 40111</Badge> <Badge intent="note" minimal>ProvisionCashSettlQuoteTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the type of quote to be used.
+
+Code set **ProvisionCashSettlQuoteTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Bid | Bid |
+| `1` | Mid | Mid |
+| `2` | Offer | Offer |
+| `3` | ExercisingPartyPays | Exercising party pays |
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40112 · ProvisionCashSettlQuoteSource [#tag-40112]
+
+<Badge intent="info" minimal>Tag 40112</Badge> <Badge intent="note" minimal>PaymentStreamRateIndexSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the source of quote information.
+
+Code set **PaymentStreamRateIndexSourceCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Bloomberg | Bloomberg |
+| `1` | Reuters | Reuters |
+| `2` | Telerate | Telerate |
+| `99` | Other | Other |
+
+Used in: [ProvisionCashSettlQuoteSource](/fix/components/provision-cash-settl-quote-source)
+
+## 40113 · ProvisionText [#tag-40113]
+
+<Badge intent="info" minimal>Tag 40113</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Free form text to specify additional information or enumeration description when a standard value does not apply.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProvisionGrp](/fix/groups/provision-grp)
+
+## 40114 · ProvisionCashSettlValueTime [#tag-40114]
+
+<Badge intent="info" minimal>Tag 40114</Badge> <Badge intent="note" minimal>LocalMktTime</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A time specified in 24-hour format, e.g. 11am would be represented as 11:00:00. The time of the cash settlement valuation date when the cash settlement amount will be determined according to the cash settlement method if the parties have not otherwise been able to agree to the cash settlement amount.
+
+Type: [LocalMktTime](/fix/datatypes#local-mkt-time)
+
+Used in: [ProvisionCashSettlValueDates](/fix/components/provision-cash-settl-value-dates)
+
+## 40115 · ProvisionCashSettlValueTimeBusinessCenter [#tag-40115]
+
+<Badge intent="info" minimal>Tag 40115</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the business center calendar used with the provision's cash settlement valuation time. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProvisionCashSettlValueDates](/fix/components/provision-cash-settl-value-dates)
+
+## 40116 · ProvisionCashSettlValueDateBusinessDayConvention [#tag-40116]
+
+<Badge intent="info" minimal>Tag 40116</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The cash settlement valuation date adjustment business day convention. Used only to override the business day convention specified in the DateAdjustment component within the Instrument component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [ProvisionCashSettlValueDates](/fix/components/provision-cash-settl-value-dates)
+
+## 40117 · ProvisionCashSettlValueDateBusinessCenter [#tag-40117]
+
+<Badge intent="info" minimal>Tag 40117</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the provision's cash settlement valuation date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProvisionCashSettlValueDateBusinessCenterGrp](/fix/groups/provision-cash-settl-value-date-business-center-grp)
+
+## 40118 · ProvisionCashSettlValueDateRelativeTo [#tag-40118]
+
+<Badge intent="info" minimal>Tag 40118</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the cash settlement value date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProvisionCashSettlValueDates](/fix/components/provision-cash-settl-value-dates)
+
+## 40119 · ProvisionCashSettlValueDateOffsetPeriod [#tag-40119]
+
+<Badge intent="info" minimal>Tag 40119</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative cash settlement value date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProvisionCashSettlValueDates](/fix/components/provision-cash-settl-value-dates)
+
+## 40120 · ProvisionCashSettlValueDateOffsetUnit [#tag-40120]
+
+<Badge intent="info" minimal>Tag 40120</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative cash settlement value date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [ProvisionCashSettlValueDates](/fix/components/provision-cash-settl-value-dates)
+
+## 40121 · ProvisionCashSettlValueDateOffsetDayType [#tag-40121]
+
+<Badge intent="info" minimal>Tag 40121</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the provision's relative cash settlement value date offset.
+
+Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [ProvisionCashSettlValueDates](/fix/components/provision-cash-settl-value-dates)
+
+## 40122 · ProvisionCashSettlValueDateAdjusted [#tag-40122]
+
+<Badge intent="info" minimal>Tag 40122</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted cash settlement value date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [ProvisionCashSettlValueDates](/fix/components/provision-cash-settl-value-dates)
+
+## 40123 · ProvisionOptionExerciseBusinessDayConvention [#tag-40123]
+
+<Badge intent="info" minimal>Tag 40123</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the instrument's provision's option exercise date. Used only to override the business day convention specified in the DateAdjustment component within the Instrument component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40124 · ProvisionOptionExerciseBusinessCenter [#tag-40124]
+
+<Badge intent="info" minimal>Tag 40124</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the instrument's provision's option exercise date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProvisionOptionExerciseBusinessCenterGrp](/fix/groups/provision-option-exercise-business-center-grp)
+
+## 40125 · ProvisionOptionExerciseEarliestDateOffsetPeriod [#tag-40125]
+
+<Badge intent="info" minimal>Tag 40125</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the interval to the first (and possibly only) exercise date in the exercise period.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40126 · ProvisionOptionExerciseEarliestDateOffsetUnit [#tag-40126]
+
+<Badge intent="info" minimal>Tag 40126</Badge> <Badge intent="note" minimal>ProvisionOptionExerciseEarliestDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the interval to the first (and possibly only) exercise date in the exercise period.
+
+Code set **ProvisionOptionExerciseEarliestDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40127 · ProvisionOptionExerciseFrequencyPeriod [#tag-40127]
+
+<Badge intent="info" minimal>Tag 40127</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the frequency of subsequent exercise dates in the exercise period following the earliest exercise date. An interval of 1 day should be used to indicate an American style exercise period.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40128 · ProvisionOptionExerciseFrequencyUnit [#tag-40128]
+
+<Badge intent="info" minimal>Tag 40128</Badge> <Badge intent="note" minimal>CouponFrequencyUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the frequency of subsequent exercise dates in the exercise period following the earliest exercise date.
+
+Code set **CouponFrequencyUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+| `H` | Hour | Hour |
+| `Min` | Minute | Minute |
+| `S` | Second | Second |
+| `T` | Term | Term |
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40129 · ProvisionOptionExerciseStartDateUnadjusted [#tag-40129]
+
+<Badge intent="info" minimal>Tag 40129</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted first day of the exercise period for an American style option.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40130 · ProvisionOptionExerciseStartDateRelativeTo [#tag-40130]
+
+<Badge intent="info" minimal>Tag 40130</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the option exercise start date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40131 · ProvisionOptionExerciseStartDateOffsetPeriod [#tag-40131]
+
+<Badge intent="info" minimal>Tag 40131</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative option exercise start date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40132 · ProvisionOptionExerciseStartDateOffsetUnit [#tag-40132]
+
+<Badge intent="info" minimal>Tag 40132</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative option exercise start date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40133 · ProvisionOptionExerciseStartDateOffsetDayType [#tag-40133]
+
+<Badge intent="info" minimal>Tag 40133</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the provision's relative option exercise start date offset.
+
+Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40134 · ProvisionOptionExerciseStartDateAdjusted [#tag-40134]
+
+<Badge intent="info" minimal>Tag 40134</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted first day of the exercise period for an American style option.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40135 · ProvisionOptionExercisePeriodSkip [#tag-40135]
+
+<Badge intent="info" minimal>Tag 40135</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The number of periods in the referenced date schedule that are between each date in the relative date schedule. Thus a skip of 2 would mean that dates are relative to every second date in the referenced schedule. If present this should have a value greater than 1.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40136 · ProvisionOptionExerciseBoundsFirstDateUnadjusted [#tag-40136]
+
+<Badge intent="info" minimal>Tag 40136</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted first date of a schedule. This can be used to restrict the range of exercise dates when they are relative.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40137 · ProvisionOptionExerciseBoundsLastDateUnadjusted [#tag-40137]
+
+<Badge intent="info" minimal>Tag 40137</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted last date of a schedule. This can be used to restrict the range of exercise dates when they are relative.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40138 · ProvisionOptionExerciseEarliestTime [#tag-40138]
+
+<Badge intent="info" minimal>Tag 40138</Badge> <Badge intent="note" minimal>LocalMktTime</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The earliest time at which notice of exercise can be given by the buyer to the seller (or seller's agent) i) on the expriation date, in the case of a European style option, (ii) on each bermuda option exercise date and the expiration date, in the case of a Bermuda style option the commencement date to, and including, the expiration date, in the case of an American option.
+
+Type: [LocalMktTime](/fix/datatypes#local-mkt-time)
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40139 · ProvisionOptionExerciseEarliestTimeBusinessCenter [#tag-40139]
+
+<Badge intent="info" minimal>Tag 40139</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the business center calendar used with the provision's earliest time for notice of exercise. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40140 · ProvisionOptionExerciseLatestTime [#tag-40140]
+
+<Badge intent="info" minimal>Tag 40140</Badge> <Badge intent="note" minimal>LocalMktTime</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+For a Bermuda or American style option, the latest time on an exercise business day (excluding the expiration date) within the exercise period that notice can be given by the buyer to the seller or seller's agent. Notice of exercise given after this time will be deemed to have been given on the next exercise business day.
+
+Type: [LocalMktTime](/fix/datatypes#local-mkt-time)
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40141 · ProvisionOptionExerciseLatestTimeBusinessCenter [#tag-40141]
+
+<Badge intent="info" minimal>Tag 40141</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the business center calendar used with the provision's latest time for notice of exercise. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates)
+
+## 40142 · NoProvisionOptionExerciseFixedDates [#tag-40142]
+
+<Badge intent="info" minimal>Tag 40142</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of provision option exercise fixed dates in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [ProvisionOptionExerciseFixedDateGrp](/fix/groups/provision-option-exercise-fixed-date-grp)
+
+## 40143 · ProvisionOptionExerciseFixedDate [#tag-40143]
+
+<Badge intent="info" minimal>Tag 40143</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A predetermined option exercise date, unadjusted or adjusted depending on ProvisionOptionExerciseFixedDateType(40144).
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [ProvisionOptionExerciseFixedDateGrp](/fix/groups/provision-option-exercise-fixed-date-grp)
+
+## 40144 · ProvisionOptionExerciseFixedDateType [#tag-40144]
+
+<Badge intent="info" minimal>Tag 40144</Badge> <Badge intent="note" minimal>ProvisionOptionExerciseFixedDateTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of date (e.g. adjusted for holidays).
+
+Code set **ProvisionOptionExerciseFixedDateTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Unadjusted | Unadjusted |
+| `1` | Adjusted | Adjusted |
+
+Used in: [ProvisionOptionExerciseFixedDateGrp](/fix/groups/provision-option-exercise-fixed-date-grp)
+
+## 40145 · ProvisionOptionExpirationDateUnadjusted [#tag-40145]
+
+<Badge intent="info" minimal>Tag 40145</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted last day within an exercise period for an American style option. For a European style option it is the only day within the exercise period.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [ProvisionOptionExpirationDate](/fix/components/provision-option-expiration-date)
+
+## 40146 · ProvisionOptionExpirationDateBusinessDayConvention [#tag-40146]
+
+<Badge intent="info" minimal>Tag 40146</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the instrument's provision's option expiration date. Used only to override the business day convention specified in the DateAdjustment component within the Instrument component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [ProvisionOptionExpirationDate](/fix/components/provision-option-expiration-date)
+
+## 40147 · ProvisionOptionExpirationDateBusinessCenter [#tag-40147]
+
+<Badge intent="info" minimal>Tag 40147</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the instrument's provision's option expiration date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProvisionOptionExpirationDateBusinessCenterGrp](/fix/groups/provision-option-expiration-date-business-center-grp)
+
+## 40148 · ProvisionOptionExpirationDateRelativeTo [#tag-40148]
+
+<Badge intent="info" minimal>Tag 40148</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the option expiration date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProvisionOptionExpirationDate](/fix/components/provision-option-expiration-date)
+
+## 40149 · ProvisionOptionExpirationDateOffsetPeriod [#tag-40149]
+
+<Badge intent="info" minimal>Tag 40149</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative option expiration date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProvisionOptionExpirationDate](/fix/components/provision-option-expiration-date)
+
+## 40150 · ProvisionOptionExpirationDateOffsetUnit [#tag-40150]
+
+<Badge intent="info" minimal>Tag 40150</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative option expiration date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [ProvisionOptionExpirationDate](/fix/components/provision-option-expiration-date)
+
+## 40151 · ProvisionOptionExpirationDateOffsetDayType [#tag-40151]
+
+<Badge intent="info" minimal>Tag 40151</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the provision's relative option expiration date offset.
+
+Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [ProvisionOptionExpirationDate](/fix/components/provision-option-expiration-date)
+
+## 40152 · ProvisionOptionExpirationDateAdjusted [#tag-40152]
+
+<Badge intent="info" minimal>Tag 40152</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted last date within an exercise period for an American style option. For a European style option it is the only date within the exercise period.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [ProvisionOptionExpirationDate](/fix/components/provision-option-expiration-date)
+
+## 40153 · ProvisionOptionExpirationTime [#tag-40153]
+
+<Badge intent="info" minimal>Tag 40153</Badge> <Badge intent="note" minimal>LocalMktTime</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The latest time for exercise on the expiration date.
+
+Type: [LocalMktTime](/fix/datatypes#local-mkt-time)
+
+Used in: [ProvisionOptionExpirationDate](/fix/components/provision-option-expiration-date)
+
+## 40154 · ProvisionOptionExpirationTimeBusinessCenter [#tag-40154]
+
+<Badge intent="info" minimal>Tag 40154</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the business center calendar used with the provision's latest exercise time on expiration date. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProvisionOptionExpirationDate](/fix/components/provision-option-expiration-date)
+
+## 40155 · ProvisionOptionRelevantUnderlyingDateUnadjusted [#tag-40155]
+
+<Badge intent="info" minimal>Tag 40155</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted date on the underlying set by the exercise of an option. What this date is depends on the option (e.g. in a swaption it is the swap effective date, in an extendible/cancelable provision it is the swap termination date).
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [ProvisionOptionRelevantUnderlyingDate](/fix/components/provision-option-relevant-underlying-date)
+
+## 40156 · ProvisionOptionRelevantUnderlyingDateBusinessDayConvention [#tag-40156]
+
+<Badge intent="info" minimal>Tag 40156</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the instrument's provision's option underlying date. Used only to override the business day convention specified in the DateAdjustment component within the Instrument component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [ProvisionOptionRelevantUnderlyingDate](/fix/components/provision-option-relevant-underlying-date)
+
+## 40157 · ProvisionOptionRelevantUnderlyingDateBusinessCenter [#tag-40157]
+
+<Badge intent="info" minimal>Tag 40157</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the instrument's provision's option underlying date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProvisionOptionRelevantUnderlyingDateBusinessCenterGrp](/fix/groups/provision-option-relevant-underlying-date-business-center-grp)
+
+## 40158 · ProvisionOptionRelevantUnderlyingDateRelativeTo [#tag-40158]
+
+<Badge intent="info" minimal>Tag 40158</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the date relevant to the underlying trade on exercise is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProvisionOptionRelevantUnderlyingDate](/fix/components/provision-option-relevant-underlying-date)
+
+## 40159 · ProvisionOptionRelevantUnderlyingDateOffsetPeriod [#tag-40159]
+
+<Badge intent="info" minimal>Tag 40159</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative option relevant underlying date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProvisionOptionRelevantUnderlyingDate](/fix/components/provision-option-relevant-underlying-date)
+
+## 40160 · ProvisionOptionRelevantUnderlyingDateOffsetUnit [#tag-40160]
+
+<Badge intent="info" minimal>Tag 40160</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative option relevant underlying date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [ProvisionOptionRelevantUnderlyingDate](/fix/components/provision-option-relevant-underlying-date)
+
+## 40161 · ProvisionOptionRelevantUnderlyingDateOffsetDayType [#tag-40161]
+
+<Badge intent="info" minimal>Tag 40161</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the provision's relative option relevant underlying date offset.
+
+Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [ProvisionOptionRelevantUnderlyingDate](/fix/components/provision-option-relevant-underlying-date)
+
+## 40162 · ProvisionOptionRelevantUnderlyingDateAdjusted [#tag-40162]
+
+<Badge intent="info" minimal>Tag 40162</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted date on the underlying set by the exercise of an option. What this date is depends on the option (e.g. in a swaption it is the swap effective date, in an extendible/cancelable provision it is the swap termination date).
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [ProvisionOptionRelevantUnderlyingDate](/fix/components/provision-option-relevant-underlying-date)
+
+## 40163 · ProvisionCashSettlPaymentDateBusinessDayConvention [#tag-40163]
+
+<Badge intent="info" minimal>Tag 40163</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the provisional cash settlement payment's termination or relative termination date. Used only to override the business day convention specified in the DateAdjustment component within the Instrument component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [ProvisionCashSettlPaymentDates](/fix/components/provision-cash-settl-payment-dates)
+
+## 40164 · ProvisionCashSettlPaymentDateBusinessCenter [#tag-40164]
+
+<Badge intent="info" minimal>Tag 40164</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the provisional cash settlement payment's termination or relative termination date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProvisionCashSettlPaymentDateBusinessCenterGrp](/fix/groups/provision-cash-settl-payment-date-business-center-grp)
+
+## 40165 · ProvisionCashSettlPaymentDateRelativeTo [#tag-40165]
+
+<Badge intent="info" minimal>Tag 40165</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the cash settlement payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProvisionCashSettlPaymentDates](/fix/components/provision-cash-settl-payment-dates)
+
+## 40166 · ProvisionCashSettlPaymentDateOffsetPeriod [#tag-40166]
+
+<Badge intent="info" minimal>Tag 40166</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative cash settlement payment date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProvisionCashSettlPaymentDates](/fix/components/provision-cash-settl-payment-dates)
+
+## 40167 · ProvisionCashSettlPaymentDateOffsetUnit [#tag-40167]
+
+<Badge intent="info" minimal>Tag 40167</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative cash settlement payment date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [ProvisionCashSettlPaymentDates](/fix/components/provision-cash-settl-payment-dates)
+
+## 40168 · ProvisionCashSettlPaymentDateOffsetDayType [#tag-40168]
+
+<Badge intent="info" minimal>Tag 40168</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the provision's relative cash settlement payment date offset.
+
+Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [ProvisionCashSettlPaymentDates](/fix/components/provision-cash-settl-payment-dates)
+
+## 40169 · ProvisionCashSettlPaymentDateRangeFirst [#tag-40169]
+
+<Badge intent="info" minimal>Tag 40169</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+First date in range when a settlement date range is provided.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [ProvisionCashSettlPaymentDates](/fix/components/provision-cash-settl-payment-dates)
+
+## 40170 · ProvisionCashSettlPaymentDateRangeLast [#tag-40170]
+
+<Badge intent="info" minimal>Tag 40170</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The last date in range when a settlement date range is provided.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [ProvisionCashSettlPaymentDates](/fix/components/provision-cash-settl-payment-dates)
+
+## 40171 · NoProvisionCashSettlPaymentDates [#tag-40171]
+
+<Badge intent="info" minimal>Tag 40171</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of provision cash settlement payment dates in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [ProvisionCashSettlPaymentFixedDateGrp](/fix/groups/provision-cash-settl-payment-fixed-date-grp)
+
+## 40172 · ProvisionCashSettlPaymentDate [#tag-40172]
+
+<Badge intent="info" minimal>Tag 40172</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The cash settlement payment date, unadjusted or adjusted depending on ProvisionCashSettlPaymentDateType(40173).
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [ProvisionCashSettlPaymentFixedDateGrp](/fix/groups/provision-cash-settl-payment-fixed-date-grp)
+
+## 40173 · ProvisionCashSettlPaymentDateType [#tag-40173]
+
+<Badge intent="info" minimal>Tag 40173</Badge> <Badge intent="note" minimal>ProvisionCashSettlPaymentDateTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of date (e.g. adjusted for holidays).
+
+Code set **ProvisionCashSettlPaymentDateTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Unadjusted | Unadjusted |
+| `1` | Adjusted | Adjusted |
+
+Used in: [ProvisionCashSettlPaymentFixedDateGrp](/fix/groups/provision-cash-settl-payment-fixed-date-grp)
+
+## 40174 · NoProvisionPartyIDs [#tag-40174]
+
+<Badge intent="info" minimal>Tag 40174</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of parties identified in the contract provision.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [ProvisionParties](/fix/groups/provision-parties)
+
+## 40175 · ProvisionPartyID [#tag-40175]
+
+<Badge intent="info" minimal>Tag 40175</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The party identifier/code for the payment settlement party.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProvisionParties](/fix/groups/provision-parties)
+
+## 40176 · ProvisionPartyIDSource [#tag-40176]
+
+<Badge intent="info" minimal>Tag 40176</Badge> <Badge intent="note" minimal>PartyIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies class or source of the ProvisionPartyID(40175) value.
+
+Code set **PartyIDSourceCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `6` | UKNationalInsuranceOrPensionNumber | UK National Insurance or Pension Number |
+| `7` | USSocialSecurityNumber | US Social Security Number |
+| `8` | USEmployerOrTaxIDNumber | US Employer or Tax ID Number |
+| `9` | AustralianBusinessNumber | Australian Business Number |
+| `A` | AustralianTaxFileNumber | Australian Tax File Number |
+| `J` | TaxID | Tax ID |
+| `1` | KoreanInvestorID | Korean Investor ID |
+| `2` | TaiwaneseForeignInvestorID | Taiwanese Qualified Foreign Investor ID QFII/FID |
+| `3` | TaiwaneseTradingAcct | Taiwanese Trading Acct |
+| `4` | MalaysianCentralDepository | Malaysian Central Depository (MCD) number |
+| `5` | ChineseInvestorID | Chinese Investor ID |
+| `I` | ISITCAcronym | Directed broker three character acronym as defined in ISITC "ETC Best Practice" guidelines document |
+| `B` | BIC | BIC (Bank Identification Code - SWIFT managed) code (ISO9362 - See "Appendix 6-B") |
+| `C` | GeneralIdentifier | Generally accepted market participant identifier (e.g. NASD mnemonic) |
+| `D` | Proprietary | Proprietary / Custom code |
+| `E` | ISOCountryCode | ISO Country Code |
+| `F` | SettlementEntityLocation | Settlement Entity Location (note if Local Market Settlement use "E=ISO Country Code") (see "Appendix 6-G" for valid values) |
+| `G` | MIC | Market Identifier Code (ISO 10383) MIC |
+| `H` | CSDParticipant | CSD participant/member code (e.g.. Euroclear, DTC, CREST or Kassenverein number) |
+| `K` | AustralianCompanyNumber | Australian Company Number |
+| `L` | AustralianRegisteredBodyNumber | Australian Registered Body Number |
+| `M` | CFTCReportingFirmIdentifier | CFTC reporting firm identifier |
+| `N` | LegalEntityIdentifier | Legal Entity Identifier (ISO 17442) LEI |
+| `O` | InterimIdentifier | Interim identifier |
+| `P` | ShortCodeIdentifier | Short code identifier |
+| `Q` | NationalIDNaturalPerson | National ID of natural person |
+| `R` | IndiaPermanentAccountNumber | India Permanent Account Number |
+| `S` | FDID | Firm designated identifier |
+| `T` | SPSAID | Special Segregated Account ID |
+| `U` | MasterSPSAID | Master Special Segregated Account ID |
+
+Used in: [ProvisionParties](/fix/groups/provision-parties)
+
+## 40177 · ProvisionPartyRole [#tag-40177]
+
+<Badge intent="info" minimal>Tag 40177</Badge> <Badge intent="note" minimal>PartyRoleCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the type or role of ProvisionPartyID(40175) specified.
+
+Code set **PartyRoleCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | ExecutingFirm | Executing Firm (formerly FIX 4.2 ExecBroker) |
+| `2` | BrokerOfCredit | Broker of Credit (formerly FIX 4.2 BrokerOfCredit) |
+| `3` | ClientID | Client ID (formerly FIX 4.2 ClientID) |
+| `4` | ClearingFirm | Clearing Firm (formerly FIX 4.2 ClearingFirm) |
+| `5` | InvestorID | Investor ID |
+| `6` | IntroducingFirm | Introducing Firm |
+| `7` | EnteringFirm | Entering Firm |
+| `8` | Locate | Locate / Lending Firm (for short-sales) |
+| `9` | FundManagerClientID | Fund Manager Client ID (for CIV) |
+| `10` | SettlementLocation | Settlement Location (formerly FIX 4.2 SettlLocation) |
+| `11` | OrderOriginationTrader | Order Origination Trader (associated with Order Origination Firm - i.e. trader who initiates/submits the order) |
+| `12` | ExecutingTrader | Executing Trader (associated with Executing Firm - actually executes) |
+| `13` | OrderOriginationFirm | Order Origination Firm (e.g. buy-side firm) |
+| `14` | GiveupClearingFirmDepr | Giveup Clearing Firm (firm to which trade is given up) |
+| `15` | CorrespondantClearingFirm | Correspondant Clearing Firm |
+| `16` | ExecutingSystem | Executing System |
+| `17` | ContraFirm | Contra Firm |
+| `18` | ContraClearingFirm | Contra Clearing Firm |
+| `19` | SponsoringFirm | Sponsoring Firm |
+| `20` | UnderlyingContraFirm | Underlying Contra Firm |
+| `21` | ClearingOrganization | Clearing Organization |
+| `22` | Exchange | Exchange |
+| `24` | CustomerAccount | Customer Account |
+| `25` | CorrespondentClearingOrganization | Correspondent Clearing Organization |
+| `26` | CorrespondentBroker | Correspondent Broker |
+| `27` | Buyer | Buyer/Seller (Receiver/Deliverer) |
+| `28` | Custodian | Custodian |
+| `29` | Intermediary | Intermediary |
+| `30` | Agent | Agent |
+| `31` | SubCustodian | Sub-custodian |
+| `32` | Beneficiary | Beneficiary |
+| `33` | InterestedParty | Interested party |
+| `34` | RegulatoryBody | Regulatory body |
+| `35` | LiquidityProvider | Liquidity provider |
+| `36` | EnteringTrader | Entering trader |
+| `37` | ContraTrader | Contra trader |
+| `38` | PositionAccount | Position account |
+| `39` | ContraInvestorID | Contra Investor ID |
+| `40` | TransferToFirm | Transfer to Firm |
+| `41` | ContraPositionAccount | Contra Position Account |
+| `42` | ContraExchange | Contra Exchange |
+| `43` | InternalCarryAccount | Internal Carry Account |
+| `44` | OrderEntryOperatorID | Order Entry Operator ID |
+| `45` | SecondaryAccountNumber | Secondary Account Number |
+| `46` | ForeignFirm | Foreign Firm |
+| `47` | ThirdPartyAllocationFirm | Third Party Allocation Firm |
+| `48` | ClaimingAccount | Claiming Account |
+| `49` | AssetManager | Asset Manager |
+| `50` | PledgorAccount | Pledgor Account |
+| `51` | PledgeeAccount | Pledgee Account |
+| `52` | LargeTraderReportableAccount | Large Trader Reportable Account |
+| `53` | TraderMnemonic | Trader mnemonic |
+| `54` | SenderLocation | Sender Location |
+| `55` | SessionID | Session ID |
+| `56` | AcceptableCounterparty | Acceptable Counterparty |
+| `57` | UnacceptableCounterparty | Unacceptable Counterparty |
+| `58` | EnteringUnit | Entering Unit |
+| `59` | ExecutingUnit | Executing Unit |
+| `60` | IntroducingBroker | Introducing Broker |
+| `61` | QuoteOriginator | Quote originator |
+| `62` | ReportOriginator | Report originator |
+| `63` | SystematicInternaliser | Systematic internaliser (SI) |
+| `64` | MultilateralTradingFacility | Multilateral Trading Facility (MTF) |
+| `65` | RegulatedMarket | Regulated Market (RM) |
+| `66` | MarketMaker | Market Maker |
+| `67` | InvestmentFirm | Investment Firm |
+| `68` | HostCompetentAuthority | Host Competent Authority (Host CA) |
+| `69` | HomeCompetentAuthority | Home Competent Authority (Home CA) |
+| `70` | CompetentAuthorityLiquidity | Competent Authority of the most relevant market in terms of liquidity (CAL) |
+| `71` | CompetentAuthorityTransactionVenue | Competent Authority of the Transaction (Execution) Venue (CATV) |
+| `72` | ReportingIntermediary | Reporting intermediary |
+| `73` | ExecutionVenue | Execution Venue |
+| `74` | MarketDataEntryOriginator | Market data entry originator |
+| `75` | LocationID | Location ID |
+| `76` | DeskID | Desk ID |
+| `77` | MarketDataMarket | Market data market |
+| `78` | AllocationEntity | Allocation Entity |
+| `79` | PrimeBroker | Prime Broker providing General Trade Services |
+| `80` | StepOutFirm | Step-Out Firm (Prime Broker) |
+| `81` | BrokerClearingID | Broker cient ID |
+| `82` | CentralRegistrationDepository | Central Registration Depository (CRD) |
+| `83` | ClearingAccount | Clearing Account |
+| `84` | AcceptableSettlingCounterparty | Acceptable Settling Counterparty |
+| `85` | UnacceptableSettlingCounterparty | Unacceptable Settling Counterparty |
+| `86` | CLSMemberBank | CLS Member Bank |
+| `87` | InConcertGroup | In Concert Group |
+| `88` | InConcertControllingEntity | In Concert Controlling Entity |
+| `89` | LargePositionsReportingAccount | Large Positions Reporting Account |
+| `90` | SettlementFirm | Settlement Firm |
+| `91` | SettlementAccount | Settlement account |
+| `92` | ReportingMarketCenter | Reporting Market Center |
+| `93` | RelatedReportingMarketCenter | Related Reporting Market Center |
+| `94` | AwayMarket | Away Market |
+| `95` | GiveupTradingFirm | Give-up (trading) firm |
+| `96` | TakeupTradingFirm | Take-up (trading) firm |
+| `97` | GiveupClearingFirm | Give-up clearing firm |
+| `98` | TakeupClearingFirm | Take-up clearing firm |
+| `99` | OriginatingMarket | Originating Market |
+| `100` | MarginAccount | Margin account |
+| `101` | CollateralAssetAccount | Collateral asset account |
+| `102` | DataRepository | Data repository |
+| `103` | CalculationAgent | Calculation agent |
+| `104` | ExerciseNoticeSender | Sender of exercise notice |
+| `105` | ExerciseNoticeReceiver | Receiver of exercise notice |
+| `106` | RateReferenceBank | Rate reference bank |
+| `107` | Correspondent | Correspondent |
+| `109` | BeneficiaryBank | Beneficiary's bank or depository institution |
+| `110` | Borrower | Borrower |
+| `111` | PrimaryObligator | Primary obligator |
+| `112` | Guarantor | Guarantor |
+| `113` | ExcludedReferenceEntity | Excluded reference entity |
+| `114` | DeterminingParty | Determining party |
+| `115` | HedgingParty | Hedging party |
+| `116` | ReportingEntity | Reporting entity |
+| `117` | SalesPerson | Sales person |
+| `118` | Operator | Operator |
+| `119` | CSD | Central Securities Depository (CSD) |
+| `120` | ICSD | International Central Securities Depository (ICSD) |
+| `121` | TradingSubAccount | Trading sub-account |
+| `122` | InvestmentDecisionMaker | Investment decision maker |
+| `123` | PublishingIntermediary | Publishing intermediary |
+| `124` | CSDParticipant | Central Securities Depository (CSD) Participant |
+| `125` | Issuer | Issuer |
+| `126` | ContraCustomerAccount | Contra Customer Account |
+| `127` | ContraInvestmentDecisionMaker | Contra Investment Decision Maker |
+
+Used in: [ProvisionParties](/fix/groups/provision-parties)
+
+## 40178 · NoProvisionPartySubIDs [#tag-40178]
+
+<Badge intent="info" minimal>Tag 40178</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of sub-party IDs to be reported for the party.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [ProvisionPtysSubGrp](/fix/groups/provision-ptys-sub-grp)
+
+## 40179 · ProvisionPartySubID [#tag-40179]
+
+<Badge intent="info" minimal>Tag 40179</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Party sub-identifier, if applicable, for ProvisionPartyID(40175).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProvisionPtysSubGrp](/fix/groups/provision-ptys-sub-grp)
+
+## 40180 · ProvisionPartySubIDType [#tag-40180]
+
+<Badge intent="info" minimal>Tag 40180</Badge> <Badge intent="note" minimal>PartySubIDTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The type of ProvisionPartySubID(40179).
+
+Code set **PartySubIDTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Firm | Firm |
+| `2` | Person | Person |
+| `3` | System | System |
+| `4` | Application | Application |
+| `5` | FullLegalNameOfFirm | Full legal name of firm |
+| `6` | PostalAddress | Postal address |
+| `7` | PhoneNumber | Phone number |
+| `8` | EmailAddress | Email address |
+| `9` | ContactName | Contact name |
+| `10` | SecuritiesAccountNumber | Securities account number (for settlement instructions) |
+| `11` | RegistrationNumber | Registration number (for settlement instructions and confirmations) |
+| `12` | RegisteredAddressForConfirmation | Registered address (for confirmation purposes) |
+| `13` | RegulatoryStatus | Regulatory status (for confirmation purposes) |
+| `14` | RegistrationName | Registration name (for settlement instructions) |
+| `15` | CashAccountNumber | Cash account number (for settlement instructions) |
+| `16` | BIC | BIC |
+| `17` | CSDParticipantMemberCode | CSD participant member code |
+| `18` | RegisteredAddress | Registered address |
+| `19` | FundAccountName | Fund account name |
+| `20` | TelexNumber | Telex number |
+| `21` | FaxNumber | Fax number |
+| `22` | SecuritiesAccountName | Securities account name |
+| `23` | CashAccountName | Cash account name |
+| `24` | Department | Department |
+| `25` | LocationDesk | Location desk |
+| `26` | PositionAccountType | Position account type |
+| `27` | SecurityLocateID | Security locate ID |
+| `28` | MarketMaker | Market maker |
+| `29` | EligibleCounterparty | Eligible counterparty |
+| `30` | ProfessionalClient | Professional client |
+| `31` | Location | Location |
+| `32` | ExecutionVenue | Execution venue |
+| `33` | CurrencyDeliveryIdentifier | Currency delivery identifier |
+| `34` | AddressCity | Address City |
+| `35` | AddressStateOrProvince | Address State/Province |
+| `36` | AddressPostalCode | Address Postal Code |
+| `37` | AddressStreet | Address Street |
+| `38` | AddressISOCountryCode | Address Country (ISO country code) |
+| `39` | ISOCountryCode | ISO country code |
+| `40` | MarketSegment | Market segment |
+| `41` | CustomerAccountType | Customer account type |
+| `42` | OmnibusAccount | Omnibus account |
+| `43` | FundsSegregationType | Funds segregation type |
+| `44` | GuaranteeFund | Guarantee fund |
+| `45` | SwapDealer | Swap dealer |
+| `46` | MajorParticipant | Major participant |
+| `47` | FinancialEntity | Financial entity |
+| `48` | USPerson | U.S. person |
+| `49` | ReportingEntityIndicator | Reporting entity indicator |
+| `50` | ElectedClearingRequirementException | Elected clearing requirement exception |
+| `51` | BusinessCenter | Business center |
+| `52` | ReferenceText | Reference text |
+| `53` | ShortMarkingExemptAccount | Short-marking exempt account |
+| `54` | ParentFirmIdentifier | Parent firm identifier |
+| `55` | ParentFirmName | Parent firm name |
+| `56` | DealIdentifier | Deal identifier |
+| `57` | SystemTradeID | System trade identifier |
+| `58` | SystemTradeSubID | System trade sub-identifier |
+| `59` | FCMCode | Futures Commission Merchant (FCM) code |
+| `60` | DlvryTrmlCode | Delivery terminal customer account/code |
+| `61` | VolntyRptEntity | Voluntary reporting entity |
+| `62` | RptObligJursdctn | Reporting obligation jurisdiction |
+| `63` | VolntyRptJursdctn | Voluntary reporting jurisdiction |
+| `64` | CompanyActivities | Company activities |
+| `65` | EEAreaDomiciled | European Economic Area domiciled |
+| `66` | ContractLinked | Contract linked to commercial or treasury financing for this counterparty |
+| `67` | ContractAbove | Contract above clearing threshold for this counterparty |
+| `68` | VolntyRptPty | Voluntary reporting party |
+| `69` | EndUser | End user |
+| `70` | LocationOrJurisdiction | Location or jurisdiction |
+| `71` | DerivativesDealer | Derivatives dealer |
+| `72` | Domicile | Domicile |
+| `73` | ExemptFromRecognition | Exempt from recognition |
+| `74` | Payer | Payer |
+| `75` | Receiver | Receiver |
+| `76` | SystematicInternaliser | Systematic Internaliser (SI) |
+| `77` | PublishingEntityIndicator | Publishing entity indicator |
+| `78` | FirstName | First name |
+| `79` | Surname | Surname |
+| `80` | DateOfBirth | Date of birth |
+| `81` | OrderTransmittingFirm | Order transmitting firm |
+| `82` | OrderTransmittingFirmBuyer | Order transmitting firm for buyer |
+| `83` | OrderTransmitterSeller | Order transmitter for seller |
+| `84` | LegalEntityIdentifier | Legal Entity Identifier (ISO 17442) LEI |
+| `85` | SubSectorClassification | Sub-sector classification |
+| `86` | PartySide | Party side |
+| `87` | LegalRegistrationCountry | Legal registration country |
+
+Used in: [ProvisionPtysSubGrp](/fix/groups/provision-ptys-sub-grp)
+
+## 40181 · NoProtectionTerms [#tag-40181]
+
+<Badge intent="info" minimal>Tag 40181</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of protection terms in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [ProtectionTermGrp](/fix/groups/protection-term-grp)
+
+## 40182 · ProtectionTermNotional [#tag-40182]
+
+<Badge intent="info" minimal>Tag 40182</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The notional amount of protection coverage.
+
+ISDA 2003 Term: Floating Rate Payer Calculation Amount.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [ProtectionTermGrp](/fix/groups/protection-term-grp)
+
+## 40183 · ProtectionTermCurrency [#tag-40183]
+
+<Badge intent="info" minimal>Tag 40183</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The currency of ProtectionTermNotional(40182). Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [ProtectionTermGrp](/fix/groups/protection-term-grp)
+
+## 40184 · ProtectionTermSellerNotifies [#tag-40184]
+
+<Badge intent="info" minimal>Tag 40184</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The notifying party is the party that notifies the other party when a credit event has occurred by means of a credit event notice. If more than one party is referenced as being the notifying party then either party may notify the other of a credit event occurring. ProtectionTermSellerNotifies(40184)=Y indicates that the seller notifies.
+
+ISDA 2003 Term: Notifying Party.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [ProtectionTermGrp](/fix/groups/protection-term-grp)
+
+## 40185 · ProtectionTermBuyerNotifies [#tag-40185]
+
+<Badge intent="info" minimal>Tag 40185</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The notifying party is the party that notifies the other party when a credit event has occurred by means of a credit event notice. If more than one party is referenced as being the notifying party then either party may notify the other of a credit event occurring. ProtectionTermBuyerNotifies(40185)=Y indicates that the buyer notifies.
+
+ISDA 2003 Term: Notifying Party.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [ProtectionTermGrp](/fix/groups/protection-term-grp)
+
+## 40186 · ProtectionTermEventBusinessCenter [#tag-40186]
+
+<Badge intent="info" minimal>Tag 40186</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+When used, the business center indicates the local time of the business center that replaces the Greenwich Mean Time in Section 3.3 of the 2003 ISDA Credit Derivatives Definitions. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProtectionTermGrp](/fix/groups/protection-term-grp)
+
+## 40187 · ProtectionTermStandardSources [#tag-40187]
+
+<Badge intent="info" minimal>Tag 40187</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether ISDA defined Standard Public Sources are applicable (ProtectionTermStandardSources(40187)=Y) or not.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [ProtectionTermGrp](/fix/groups/protection-term-grp)
+
+## 40188 · ProtectionTermEventMinimumSources [#tag-40188]
+
+<Badge intent="info" minimal>Tag 40188</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The minimum number of the specified public information sources that must publish information that reasonably confirms that a credit event has occurred. The market convention is two.
+
+ISDA 2003 Term: Specified Number.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProtectionTermGrp](/fix/groups/protection-term-grp)
+
+## 40189 · ProtectionTermEventNewsSource [#tag-40189]
+
+<Badge intent="info" minimal>Tag 40189</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Newspaper or electronic news service or source that may publish relevant information used in the determination of whether or not a credit event has occurred.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProtectionTermEventNewsSourceGrp](/fix/groups/protection-term-event-news-source-grp)
+
+## 40190 · ProtectionTermXID [#tag-40190]
+
+<Badge intent="info" minimal>Tag 40190</Badge> <Badge intent="note" minimal>XID</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A named string value referenced by UnderlyingProtectionTermXIDRef(41314).
+
+Type: [XID](/fix/datatypes#xid)
+
+Used in: [ProtectionTermGrp](/fix/groups/protection-term-grp)
+
+## 40191 · NoProtectionTermEvents [#tag-40191]
+
+<Badge intent="info" minimal>Tag 40191</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of protection term events in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [ProtectionTermEventGrp](/fix/groups/protection-term-event-grp)
+
+## 40192 · ProtectionTermEventType [#tag-40192]
+
+<Badge intent="info" minimal>Tag 40192</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of credit event applicable to the protection terms. See http://www.fixtradingcommunity.org/codelists#Protection\_Term\_Event\_Types for code list of applicable event types.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProtectionTermEventGrp](/fix/groups/protection-term-event-grp)
+
+## 40193 · ProtectionTermEventValue [#tag-40193]
+
+<Badge intent="info" minimal>Tag 40193</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Protection term event value appropriate to ProtectionTermEvenType(40192). See http://www.fixtradingcommunity.org/codelists#Protection\_Term\_Event\_Types for applicable event type values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProtectionTermEventGrp](/fix/groups/protection-term-event-grp)
+
+## 40194 · ProtectionTermEventCurrency [#tag-40194]
+
+<Badge intent="info" minimal>Tag 40194</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Applicable currency if ProtectionTermEventValue(40193) is an amount. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [ProtectionTermEventGrp](/fix/groups/protection-term-event-grp)
+
+## 40195 · ProtectionTermEventPeriod [#tag-40195]
+
+<Badge intent="info" minimal>Tag 40195</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for protection term events.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [ProtectionTermEventGrp](/fix/groups/protection-term-event-grp)
+
+## 40196 · ProtectionTermEventUnit [#tag-40196]
+
+<Badge intent="info" minimal>Tag 40196</Badge> <Badge intent="note" minimal>ProtectionTermEventUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with protection term events.
+
+Code set **ProtectionTermEventUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [ProtectionTermEventGrp](/fix/groups/protection-term-event-grp)
+
+## 40197 · ProtectionTermEventDayType [#tag-40197]
+
+<Badge intent="info" minimal>Tag 40197</Badge> <Badge intent="note" minimal>ProtectionTermEventDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Day type for events that specify a period and unit.
+
+Code set **ProtectionTermEventDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [ProtectionTermEventGrp](/fix/groups/protection-term-event-grp)
+
+## 40198 · ProtectionTermEventRateSource [#tag-40198]
+
+<Badge intent="info" minimal>Tag 40198</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Rate source for events that specify a rate source, e.g. Floating rate interest shortfall.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProtectionTermEventGrp](/fix/groups/protection-term-event-grp)
+
+## 40199 · NoProtectionTermEventQualifiers [#tag-40199]
+
+<Badge intent="info" minimal>Tag 40199</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of qualifiers in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [ProtectionTermEventQualifierGrp](/fix/groups/protection-term-event-qualifier-grp)
+

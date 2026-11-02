@@ -1,0 +1,31 @@
+---
+title: "PartyRiskLimitsDefinitionRequest"
+subtitle: "PartyRiskLimitDefinitionRequest is used for defining new risk limits."
+---
+
+<Badge intent="info">MsgType CS</Badge> <Badge intent="note" minimal>Parties Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 1666 | [RiskLimitRequestID](/fix/fields/tags-1600-1799#tag-1666) | String | **Required** | Unique identifier for the PartyRiskLimitsRequest |
+| 1657 | [RequestingPartyGrp](/fix/groups/requesting-party-grp) | Repeating group | Optional | Identifies the party making the request. |
+| 1677 | [PartyRiskLimitsUpdateGrp](/fix/groups/party-risk-limits-update-grp) | Repeating group | Optional | This new block is a repeating group based on the existing block &lt;PartyRiskLimitsGrp&gt; with an additional field ListUpdateAction(1324) to support incremental changes of risk limit definitions. The group is part of the definition request as well as part of the update report for risk limits. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text(58) field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="PartyRiskLimitsDefinitionRequest" wordWrap
+8=FIXT.1.1|9=72|35=CS|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|1666=ABC123|10=122|
+```

@@ -1,0 +1,53 @@
+---
+title: "LegStreamGrp"
+subtitle: "The LegStreamGrp is a repeating subcomponent of the InstrumentLeg component used to detail the swap streams associated with the instrument."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40241</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A swap will ordinarily have one or two streams. Each one may contain a LegStreamDesc(40243) with a descriptive string such as "Float" or "Fixed". However the choice of description should have no effect on the stream's purpose. LegStreamPaySide(40244) and LegStreamReceiveSide(40245) link the appropriate swap parties to their role in the stream. In pre-trade messages the side value (e.g. Side(54) field) of the request or order should be "1" (Buy) or "2" (Sell), and LegStreamPaySide(40244) and LegStreamReceiveSide(40245) should be set to the same side value indicating the aggressor's desired role. On fills and post-trade messages, the executing firm takes the opposite side and indicates its role by setting LegStreamPaySide(40244) and LegStreamReceiveSide(40245) to the opposite side of the aggressor's role.
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegStreams (40241)](/fix/fields/tags-40200-40399#tag-40241).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40242 | [LegStreamType](/fix/fields/tags-40200-40399#tag-40242) | StreamTypeCodeSet | Optional | Required if NoLegStreams(40241) &gt; 0. |
+| 41700 | [LegStreamXID](/fix/fields/tags-41600-41799#tag-41700) | XID | Optional | Identifier of this LegStream for cross referencing elsewhere in the message. |
+| 40243 | [LegStreamDesc](/fix/fields/tags-40200-40399#tag-40243) | String | Optional | A short descriptive name given to the payment stream, e.g. CDS, Fixed, Float, Float2, GBP. The description has no intrinsic meaning but should be arbitrarily chosen by the remitter as a reference. |
+| 42583 | [LegStreamVersion](/fix/fields/tags-42400-42599#tag-42583) | String | Optional | The stream version identifier when there have been modifications to the contract over time. Helps signal when there are embedded changes. |
+| 42584 | [LegStreamVersionEffectiveDate](/fix/fields/tags-42400-42599#tag-42584) | LocalMktDate | Optional | The effective date of the LegStreamVersion(42583). |
+| 40244 | [LegStreamPaySide](/fix/fields/tags-40200-40399#tag-40244) | PaymentPaySideCodeSet | Optional | The side of the party paying the stream. |
+| 40245 | [LegStreamReceiveSide](/fix/fields/tags-40200-40399#tag-40245) | PaymentPaySideCodeSet | Optional | The side of the party receiving the stream. |
+| 41702 | [LegStreamNotionalXIDRef](/fix/fields/tags-41600-41799#tag-41702) | XIDREF | Optional | Cross reference to another LegStream notional for duplicating its properties. |
+| 40246 | [LegStreamNotional](/fix/fields/tags-40200-40399#tag-40246) | Amt | Optional | Notional, or initial notional value for the payment stream. The LegPaymentSchedule component should be used for specifying the steps. |
+| 40247 | [LegStreamCurrency](/fix/fields/tags-40200-40399#tag-40247) | Currency | Optional | Specifies the currency the LegStreamNotional(40246) is denominated in. Uses ISO 4217 currency codes. |
+| 42585 | [LegStreamNotionalDeterminationMethod](/fix/fields/tags-42400-42599#tag-42585) | String | Optional | Specifies the method for determining the floating notional value for equity swaps. See http://www.fpml.org/coding-scheme/determination-method for values. |
+| 42586 | [LegStreamNotionalAdjustments](/fix/fields/tags-42400-42599#tag-42586) | StreamNotionalAdjustmentsCodeSet | Optional | For equity swaps this specifies the conditions that govern the adjustment to the number of units of the swap. |
+| 41703 | [LegStreamNotionalFrequencyPeriod](/fix/fields/tags-41600-41799#tag-41703) | int | Optional | Conditionally required when LegStreamNotionalFrequencyUnit(41704) is specified. |
+| 41704 | [LegStreamNotionalFrequencyUnit](/fix/fields/tags-41600-41799#tag-41704) | TimeUnitCodeSet | Optional | Conditionally required when LegStreamNotionalFrequencyPeriod(41703) is specified. |
+| 41705 | [LegStreamNotionalCommodityFrequency](/fix/fields/tags-41600-41799#tag-41705) | StreamNotionalCommodityFrequencyCodeSet | Optional | The commodity's notional or quantity delivery frequency. |
+| 41706 | [LegStreamNotionalUnitOfMeasure](/fix/fields/tags-41600-41799#tag-41706) | UnitOfMeasureCodeSet | Optional | Specifies the delivery quantity unit of measure (UOM). |
+| 41707 | [LegStreamTotalNotional](/fix/fields/tags-41600-41799#tag-41707) | Qty | Optional | Specifies the total notional or delivery quantity over the term of the contract. |
+| 41708 | [LegStreamTotalNotionalUnitOfMeasure](/fix/fields/tags-41600-41799#tag-41708) | UnitOfMeasureCodeSet | Optional | Specifies the unit of measure (UOM) for the total notional or delivery quantity over the term of the contract. |
+| | [LegStreamCommodity](/fix/components/leg-stream-commodity) | Component | Optional | LegStreamCommodity is a subcomponent of the LegStream component used to identify and describe the underlying commodity. |
+| | [LegStreamEffectiveDate](/fix/components/leg-stream-effective-date) | Component | Optional | LegStreamEffectivedDate is a subcomponent of the LegStreamGrp component used to specify the effective date of the stream. |
+| | [LegStreamTerminationDate](/fix/components/leg-stream-termination-date) | Component | Optional | LegStreamTerminationDate is a subcomponent of the LegStreamGrp component used to specify the termination date of the stream. |
+| | [LegStreamCalculationPeriodDates](/fix/components/leg-stream-calculation-period-dates) | Component | Optional | LegStreamCalculationPeriodDates is a subcomponent of the LegStreamGrp component used to specify the calculation period dates of the stream. |
+| | [LegPaymentStream](/fix/components/leg-payment-stream) | Component | Optional | The LegPaymentStream component is a subcomponent of the LegStreamGrp used to detail the attributes of a payment stream in a swap. |
+| 40374 | [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp) | Repeating group | Optional | The LegPaymentScheduleGrp is a repeating subcomponent of the LegPaymentStream component used to specify notional and rate steps in the payment stream. |
+| 40418 | [LegPaymentStubGrp](/fix/groups/leg-payment-stub-grp) | Repeating group | Optional | The LegPaymentStubGrp is a repeating subcomponent of the LegPaymentStream component used to specify front and back stubs in the payment stream. |
+| | [LegDeliveryStream](/fix/components/leg-delivery-stream) | Component | Optional | The LegDeliveryStream component is a subcomponent of the LegStream used to detail the attributes of a physical delivery stream in a swap. |
+| 41408 | [LegDeliveryScheduleGrp](/fix/groups/leg-delivery-schedule-grp) | Repeating group | Optional | The LegDeliveryScheduleGrp is a repeating subcomponent of the LegStream component used to detail step schedules associated with a delivery stream. |
+| 40248 | [LegStreamText](/fix/fields/tags-40200-40399#tag-40248) | String | Optional | Free form text to specify additional information or enumeration description when a standard value does not apply. |
+| 40978 | [EncodedLegStreamTextLen](/fix/fields/tags-40800-40999#tag-40978) | Length | Optional | Must be set if EncodedLegStreamText(40979) field is specified and must immediately precede it. |
+| 40979 | [EncodedLegStreamText](/fix/fields/tags-40800-40999#tag-40979) | data | Optional | Encoded (non-ASCII characters) representation of the LegStreamText(40248) field in the encoded format specified via the MessageEncoding(347) field. |
+
+</StickyTable>
+
+## Used in
+
+[InstrumentLeg](/fix/components/instrument-leg)

@@ -1,0 +1,23 @@
+---
+title: "LegExtraordinaryEventGrp"
+subtitle: "The LegExtraordinaryEventGrp is a repeating component within the InstrumentLeg component. It is used to report extraordinary and disruptive events applicable to the reference entity that affects the contract."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42388</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegExtraordinaryEvents (42388)](/fix/fields/tags-42200-42399#tag-42388).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42389 | [LegExtraordinaryEventType](/fix/fields/tags-42200-42399#tag-42389) | String | Optional | Required if NoLegExtraordinaryEvents(42388) &gt; 0. |
+| 42390 | [LegExtraordinaryEventValue](/fix/fields/tags-42200-42399#tag-42390) | String | Optional | Required if NoLegExtraordinaryEvents(42388) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[InstrumentLeg](/fix/components/instrument-leg)

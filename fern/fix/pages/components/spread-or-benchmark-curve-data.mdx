@@ -1,0 +1,27 @@
+---
+title: "SpreadOrBenchmarkCurveData"
+subtitle: "The SpreadOrBenchmarkCurveData component block is primarily used for Fixed Income to convey spread to a benchmark security or curve."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 218 | [Spread](/fix/fields/tags-200-399#tag-218) | PriceOffset | Optional | For Fixed Income |
+| 220 | [BenchmarkCurveCurrency](/fix/fields/tags-200-399#tag-220) | Currency | Optional | Identifies currency used for benchmark curve. See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
+| 221 | [BenchmarkCurveName](/fix/fields/tags-200-399#tag-221) | BenchmarkCurveNameCodeSet | Optional | Name of benchmark curve. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
+| 222 | [BenchmarkCurvePoint](/fix/fields/tags-200-399#tag-222) | String | Optional | Point on benchmark curve. Free form values: e.g. "Y", "7Y", "INTERPOLATED". Sample values: M = combination of a number between 1-12 and a "M" for month Y = combination of number between 1-100 and a "Y" for year\} 10Y-OLD = see above, then add "-OLD" when appropriate INTERPOLATED = the point is… |
+| 662 | [BenchmarkPrice](/fix/fields/tags-600-799#tag-662) | Price | Optional | Specifies the price of the benchmark. |
+| 663 | [BenchmarkPriceType](/fix/fields/tags-600-799#tag-663) | PriceTypeCodeSet | Optional | Must be present if BenchmarkPrice is used. |
+| 699 | [BenchmarkSecurityID](/fix/fields/tags-600-799#tag-699) | String | Optional | The identifier of the benchmark security, e.g. Treasury against Corporate bond. |
+| 761 | [BenchmarkSecurityIDSource](/fix/fields/tags-600-799#tag-761) | SecurityIDSourceCodeSet | Optional | Source of BenchmarkSecurityID. If not specified, then ID Source is understood to be the same as that in the Instrument block. |
+
+</StickyTable>
+
+## Used in
+
+[AllocationInstruction](/fix/messages/allocation-instruction), [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationReport](/fix/messages/allocation-report), [CollateralAssignment](/fix/messages/collateral-assignment), [CollateralInquiry](/fix/messages/collateral-inquiry), [CollateralReport](/fix/messages/collateral-report), [CollateralRequest](/fix/messages/collateral-request), [CollateralResponse](/fix/messages/collateral-response), [Confirmation](/fix/messages/confirmation), [CrossOrderCancelReplaceRequest](/fix/messages/cross-order-cancel-replace-request), [ExecutionReport](/fix/messages/execution-report), [IOI](/fix/messages/ioi), [InstrmtMDReqGrp](/fix/groups/instrmt-md-req-grp), [ListOrdGrp](/fix/groups/list-ord-grp), [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [NewOrderCross](/fix/messages/new-order-cross), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [QuotReqGrp](/fix/groups/quot-req-grp), [QuotReqRjctGrp](/fix/groups/quot-req-rjct-grp), [Quote](/fix/messages/quote), [QuoteResponse](/fix/messages/quote-response), [QuoteStatusReport](/fix/messages/quote-status-report), [SecListGrp](/fix/groups/sec-list-grp), and 5 more

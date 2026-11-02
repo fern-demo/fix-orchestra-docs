@@ -1,0 +1,55 @@
+---
+title: "SecurityDefinitionUpdateReport"
+subtitle: "This message is used for reporting updates to a product security master file. Updates could be the result of corporate actions or other business events. Updates may include additions, modifications or deletions."
+---
+
+<Badge intent="info">MsgType BP</Badge> <Badge intent="note" minimal>Securities Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| 964 | [SecurityReportID](/fix/fields/tags-800-999#tag-964) | int | Optional | Used to identify the SecurityDefinitionUpdateReport(35=BP) message in a bulk message transfer. Not used in request/response messaging. |
+| 320 | [SecurityReqID](/fix/fields/tags-200-399#tag-320) | String | Optional | Conditionally required when responding to the SecurityDefinitionRequest(35=c) message. |
+| 322 | [SecurityResponseID](/fix/fields/tags-200-399#tag-322) | String | Optional | Used to identify the SecurityDefinitionUpdateReport(35=BP) message. |
+| 323 | [SecurityResponseType](/fix/fields/tags-200-399#tag-323) | SecurityResponseTypeCodeSet | Optional | Type of Security Definition message response. |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | Optional | The business date for which the trade is expected to be cleared. |
+| 980 | [SecurityUpdateAction](/fix/fields/tags-800-999#tag-980) | SecurityUpdateActionCodeSet | Optional |  |
+| 292 | [CorporateAction](/fix/fields/tags-200-399#tag-292) | CorporateActionCodeSet | Optional | Identifies the type of Corporate Action. |
+| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [InstrumentExtension](/fix/components/instrument-extension) | Component | Optional | The InstrumentExtension component block identifies additional security attributes that are more commonly found for Fixed Income securities. |
+| | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This component identifies the legal agreement under which the deal was made and other unique characteristics of the transaction. For example, the… |
+| 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
+| 1647 | [RelatedInstrumentGrp](/fix/groups/related-instrument-grp) | Repeating group | Optional | The RelatedInstrumentGrp is a repeating component at the same hierarchical level as the Instrument component, describing relationships and linkages between the Instrument, UnderlyingInstrument and InstrumentLeg entries. If all instances of the UnderlyingInstrument in the message are true underliers… |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency value whenever possible. See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values. |
+| 2572 | [PreviousAdjustedOpenInterest](/fix/fields/tags-2400-2599#tag-2572) | Amt | Optional | Previous day's adjusted open interest. |
+| 2573 | [PreviousUnadjustedOpenInterest](/fix/fields/tags-2400-2599#tag-2573) | Amt | Optional | Previous day's unadjusted open interest. |
+| 734 | [PriorSettlPrice](/fix/fields/tags-600-799#tag-734) | Price | Optional | Previous settlement price |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
+| 232 | [Stipulations](/fix/groups/stipulations) | Repeating group | Optional | The Stipulations component block is used in Fixed Income to provide additional information on a given security. These additional information are usually not considered static data information. |
+| 1606 | [NumOfSimpleInstruments](/fix/fields/tags-1600-1799#tag-1606) | int | Optional | Represents the total number of simple instruments that make up a multi-legged security. Complex spread instruments may be constructed of legs which themselves are multi-leg instruments. |
+| 2562 | [NumOfComplexInstruments](/fix/fields/tags-2400-2599#tag-2562) | int | Optional | Represents the total number of multileg securities or user defined securities that make up the security. |
+| 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
+| | [SpreadOrBenchmarkCurveData](/fix/components/spread-or-benchmark-curve-data) | Component | Optional | The SpreadOrBenchmarkCurveData component block is primarily used for Fixed Income to convey spread to a benchmark security or curve. |
+| | [YieldData](/fix/components/yield-data) | Component | Optional | The YieldData component block conveys yield information for a given Fixed Income security. |
+| 1310 | [MarketSegmentGrp](/fix/groups/market-segment-grp) | Repeating group | Optional |  |
+| 779 | [LastUpdateTime](/fix/fields/tags-600-799#tag-779) | UTCTimestamp | Optional | Represents the time at which a security was last updated |
+| 2400 | [EffectiveBusinessDate](/fix/fields/tags-2400-2599#tag-2400) | LocalMktDate | Optional | Specifies an explicit business date for associated reference data or transaction. Used when an implicit date is not sufficiently specific. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="SecurityDefinitionUpdateReport" wordWrap
+8=FIXT.1.1|9=60|35=BP|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|10=006|
+```

@@ -1,0 +1,24 @@
+---
+title: "QuoteSizeRuleGrp"
+subtitle: "Rules for minimum bid and offer sizes of quotes."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2558</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoQuoteSizeRules (2558)](/fix/fields/tags-2400-2599#tag-2558).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 647 | [MinBidSize](/fix/fields/tags-600-799#tag-647) | Qty | Optional | Required if NoQuoteSizeRules(2558) &gt; 0. |
+| 648 | [MinOfferSize](/fix/fields/tags-600-799#tag-648) | Qty | Optional | Required if NoQuoteSizeRules(2558) &gt; 0. |
+| 2447 | [FastMarketIndicator](/fix/fields/tags-2400-2599#tag-2447) | Boolean | Optional | Used to define the sizes applicable for fast market conditions. |
+
+</StickyTable>
+
+## Used in
+
+[BaseTradingRules](/fix/components/base-trading-rules)

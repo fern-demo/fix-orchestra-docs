@@ -1,0 +1,27 @@
+---
+title: "DividendFXTriggerDate"
+subtitle: "The DividendFXTriggerDate component is a subcomponent of DividendConditions used to report the dividend date when a foreign exchange trade is triggered."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42265 | [DividendFXTriggerDateRelativeTo](/fix/fields/tags-42200-42399#tag-42265) | int | Optional | Specifies the anchor date when the FX trigger date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 42266 | [DividendFXTriggerDateOffsetPeriod](/fix/fields/tags-42200-42399#tag-42266) | int | Optional | Conditionally required when DividendFXTriggerDateOffsetUnit(42267) is specified. |
+| 42267 | [DividendFXTriggerDateOffsetUnit](/fix/fields/tags-42200-42399#tag-42267) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when DividendFXTriggerDateOffsetPeriod(42266) is specified. |
+| 42268 | [DividendFXTriggerDateOffsetDayType](/fix/fields/tags-42200-42399#tag-42268) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative FX trigger date offset. |
+| 42269 | [DividendFXTriggerDateUnadjusted](/fix/fields/tags-42200-42399#tag-42269) | LocalMktDate | Optional | The unadjusted FX trigger date. |
+| 42270 | [DividendFXTriggerDateBusinessDayConvention](/fix/fields/tags-42200-42399#tag-42270) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The value would be specific to this instance of DividendFXTriggerDate. |
+| 42272 | [DividendFXTriggerDateBusinessCenterGrp](/fix/groups/dividend-fx-trigger-date-business-center-grp) | Repeating group | Optional | DividendFXTriggerDateBusinessCenterGrp is a repeating subcomponent within the DividendFXTriggerDate component. It is used to specify the set of business centers whose calendars drive the date adjustment. |
+| 42271 | [DividendFXTriggerDateAdjusted](/fix/fields/tags-42200-42399#tag-42271) | LocalMktDate | Optional | The adjusted FX trigger date. |
+
+</StickyTable>
+
+## Used in
+
+[DividendConditions](/fix/components/dividend-conditions)

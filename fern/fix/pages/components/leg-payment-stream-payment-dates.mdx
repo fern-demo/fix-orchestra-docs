@@ -1,0 +1,35 @@
+---
+title: "LegPaymentStreamPaymentDates"
+subtitle: "The LegPaymentStreamPaymentDates component is a subcomponent of the LegPaymentStream component used to specify the payment dates of the stream."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+For equity return swaps this component is used to specify the interim price payment dates and the LegPaymentStreamFinalPricePaymentDate component is used to specify the final price payment date.
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40292 | [LegPaymentStreamPaymentDateBusinessDayConvention](/fix/fields/tags-40200-40399#tag-40292) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to this instance of the leg payment stream. |
+| 40930 | [LegPaymentStreamPaymentDateBusinessCenterGrp](/fix/groups/leg-payment-stream-payment-date-business-center-grp) | Repeating group | Optional | LegPaymentStreamPaymentDateBusinessCenterGrp is a repeating subcomponent of the LegPaymentStreamPaymentDates component used to specify the set of business centers whose calendars drive date adjustment. Used only to override the business centers defined in the LegDateAdjustment component in… |
+| 41589 | [LegPaymentStreamPaymentDateGrp](/fix/groups/leg-payment-stream-payment-date-grp) | Repeating group | Optional | The LegPaymentStreamPaymentDateGrp is a repeating subcomponent of the LegPaymentStreamPaymentDates component used to detail fixed dates for swap stream payments. |
+| 40294 | [LegPaymentStreamPaymentFrequencyPeriod](/fix/fields/tags-40200-40399#tag-40294) | int | Optional | Conditionally required when LegPaymentStreamPaymentFrequencyUnit(40295) is specified. |
+| 40295 | [LegPaymentStreamPaymentFrequencyUnit](/fix/fields/tags-40200-40399#tag-40295) | PaymentStreamPaymentFrequencyUnitCodeSet | Optional | Conditionally required when LegPaymentStreamFrequencyPeriod(40294) is specified. |
+| 40296 | [LegPaymentStreamPaymentRollConvention](/fix/fields/tags-40200-40399#tag-40296) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the LegDateAdjustment component in InstrumentLeg. The specified values would be specific to this instance of the stream payment dates. |
+| 40297 | [LegPaymentStreamFirstPaymentDateUnadjusted](/fix/fields/tags-40200-40399#tag-40297) | LocalMktDate | Optional | The unadjusted first payment date. |
+| 40298 | [LegPaymentStreamLastRegularPaymentDateUnadjusted](/fix/fields/tags-40200-40399#tag-40298) | LocalMktDate | Optional | The unadjusted last regular payment date. |
+| 40299 | [LegPaymentStreamPaymentDateRelativeTo](/fix/fields/tags-40200-40399#tag-40299) | int | Optional | Specifies the anchor date when payment dates are relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 40300 | [LegPaymentStreamPaymentDateOffsetPeriod](/fix/fields/tags-40200-40399#tag-40300) | int | Optional | Conditionally required when LegPaymentStreamPaymentDateOffsetUnit(40301) is specified. |
+| 40301 | [LegPaymentStreamPaymentDateOffsetUnit](/fix/fields/tags-40200-40399#tag-40301) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentStreamPaymentDateOffsetPeriod(40300) is specified. |
+| 40302 | [LegPaymentStreamPaymentDateOffsetDayType](/fix/fields/tags-40200-40399#tag-40302) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative payment date offset. |
+| 41592 | [LegPaymentStreamMasterAgreementPaymentDatesIndicator](/fix/fields/tags-41400-41599#tag-41592) | Boolean | Optional | When set to 'Y', it indicates that payment dates are specified in the relevant master agreement. |
+| | [LegPaymentStreamFinalPricePaymentDate](/fix/components/leg-payment-stream-final-price-payment-date) | Component | Optional | LegPaymentStreamFinalPricePaymentDate is a subcomponent of the LegPaymentStreamPaymentDates component used to specify the final price payment date, e.g. for an equity return swap. |
+
+</StickyTable>
+
+## Used in
+
+[LegPaymentStream](/fix/components/leg-payment-stream)

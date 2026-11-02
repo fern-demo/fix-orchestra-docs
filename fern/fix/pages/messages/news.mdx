@@ -1,0 +1,45 @@
+---
+title: "News"
+subtitle: "The news message is a general free format message between the broker and institution. The message contains flags to identify the news item's urgency and to allow sorting by subject company (symbol). The News message can be originated at…"
+---
+
+<Badge intent="info">MsgType B</Badge> <Badge intent="note" minimal>Event Communication</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.2.7</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| 1472 | [NewsID](/fix/fields/tags-1400-1599#tag-1472) | String | Optional | Unique identifer for News message |
+| 1475 | [NewsRefGrp](/fix/groups/news-ref-grp) | Repeating group | Optional |  |
+| 1473 | [NewsCategory](/fix/fields/tags-1400-1599#tag-1473) | NewsCategoryCodeSet | Optional | Category of news mesage. |
+| 1474 | [LanguageCode](/fix/fields/tags-1400-1599#tag-1474) | Language | Optional | Used to optionally specify the national language used for the News item. |
+| 42 | [OrigTime](/fix/fields/tags-0-199#tag-42) | UTCTimestamp | Optional | Time of message origination (always expressed in UTC (Universal Time Coordinated, also known as "GMT")) |
+| 61 | [Urgency](/fix/fields/tags-0-199#tag-61) | UrgencyCodeSet | Optional | Urgency flag |
+| 148 | [Headline](/fix/fields/tags-0-199#tag-148) | String | **Required** | Specifies the headline text |
+| 358 | [EncodedHeadlineLen](/fix/fields/tags-200-399#tag-358) | Length | Optional | Must be set if EncodedHeadline field is specified and must immediately precede it. |
+| 359 | [EncodedHeadline](/fix/fields/tags-200-399#tag-359) | data | Optional | Encoded (non-ASCII characters) representation of the Headline field in the encoded format specified via the MessageEncoding field. |
+| 215 | [RoutingGrp](/fix/groups/routing-grp) | Repeating group | Optional | The RoutingGrp is used to allow the application message sender to instruct the intermediary distributing the message who to further send the application message to. The original sender may also instruct who is not allowed to receive the message. When provided, the routing instructions provided in… |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Used to optionally specify the market to which this News applies. |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Used to optionally specify the market segment to which this News applies. |
+| 146 | [InstrmtGrp](/fix/groups/instrmt-grp) | Repeating group | Optional |  |
+| 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
+| 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
+| 33 | [LinesOfTextGrp](/fix/groups/lines-of-text-grp) | Repeating group | **Required** |  |
+| 149 | [URLLink](/fix/fields/tags-0-199#tag-149) | String | Optional | A URL (Uniform Resource Locator) link to additional information (i.e. http://www.XYZ.com/research.html) |
+| 95 | [RawDataLength](/fix/fields/tags-0-199#tag-95) | Length | Optional | Number of bytes in raw data field. |
+| 96 | [RawData](/fix/fields/tags-0-199#tag-96) | data | Optional | Unformatted raw data, can include bitmaps, word processor documents, etc. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="News" wordWrap
+8=FIXT.1.1|9=85|35=B|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|148=ABC123|33=1|58=ABC123|10=208|
+```

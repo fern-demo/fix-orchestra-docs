@@ -1,0 +1,23 @@
+---
+title: "LegPaymentStreamCompoundingDateGrp"
+subtitle: "LegPaymentStreamCompoundingDateGrp is a subcomponent of the LegPaymentStreamCompoundingDates component used to specify predetermined compounding dates."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42405</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentStreamCompoundingDates (42405)](/fix/fields/tags-42400-42599#tag-42405).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42406 | [LegPaymentStreamCompoundingDate](/fix/fields/tags-42400-42599#tag-42406) | LocalMktDate | Optional | Required if NoLegPaymentStreamCompoundingDates(42405) &gt; 0. |
+| 42407 | [LegPaymentStreamCompoundingDateType](/fix/fields/tags-42400-42599#tag-42407) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date instance but to all subsequent date instances in the group until overridden when a new type is specified. |
+
+</StickyTable>
+
+## Used in
+
+[LegPaymentStreamCompoundingDates](/fix/components/leg-payment-stream-compounding-dates)

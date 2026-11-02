@@ -1,0 +1,23 @@
+---
+title: "UnderlyingOptionExerciseDateGrp"
+subtitle: "The UnderlyingOptionExerciseDateGrp is a repeating subcomponent of the UnderlyingOptionExerciseDates component used to specify fixed dates for exercise."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41841</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingOptionExerciseDates (41841)](/fix/fields/tags-41800-41999#tag-41841).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41842 | [UnderlyingOptionExerciseDate](/fix/fields/tags-41800-41999#tag-41842) | LocalMktDate | Optional | Required if NoUnderlyingOptionExerciseDates(41841) &gt; 0. |
+| 41843 | [UnderlyingOptionExerciseDateType](/fix/fields/tags-41800-41999#tag-41843) | OptionExerciseDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)

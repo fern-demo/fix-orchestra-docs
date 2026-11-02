@@ -1,0 +1,49 @@
+---
+title: "PayManagementReport"
+subtitle: "PayManagementReport(35=EA) may be used to respond to the PayManagementRequest(35=DY) message. It provides the status of the request (e.g. accepted, disputed) and may provide additional information related to the request.…"
+---
+
+<Badge intent="info">MsgType EA</Badge> <Badge intent="note" minimal>Pay Management</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+It should be noted that this message, in the context of operational communication between investment managers and their brokers, is intended to agree and confirm on payment(s) to be made or received during the life of a contract.
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 2799 | [PayReportID](/fix/fields/tags-2600-2799#tag-2799) | String | **Required** | Unique ID of the PayManagementReport(35=EA) message. |
+| 2812 | [PayRequestID](/fix/fields/tags-2800-2999#tag-2812) | String | Optional | Conditionally required when responding to PayManagementRequest(35=DY). |
+| 2804 | [PayReportTransType](/fix/fields/tags-2800-2999#tag-2804) | PayReportTransTypeCodeSet | **Required** | Identifies the message transaction type. |
+| 2803 | [PayReportRefID](/fix/fields/tags-2800-2999#tag-2803) | String | Optional | Required for PayReportTransType(2804)=1 (Replace). |
+| 2805 | [ReplaceText](/fix/fields/tags-2800-2999#tag-2805) | String | Optional | May be used to provide reason for PayReportTransType(2804)=1 (Replace). |
+| 2802 | [EncodedReplaceTextLen](/fix/fields/tags-2800-2999#tag-2802) | Length | Optional | Must be set if EncodedReplaceText(2801) field is specified and must immediately precede it. |
+| 2801 | [EncodedReplaceText](/fix/fields/tags-2800-2999#tag-2801) | data | Optional | Encoded (non-ASCII characters) representation of the ReplaceText(2805) field in the encoded format specified via the MessageEncoding(347) field. |
+| 2813 | [PayRequestStatus](/fix/fields/tags-2800-2999#tag-2813) | PayRequestStatusCodeSet | Optional | PayRequestStatus(2813)=0 (Received) is not applicable in this message. |
+| 2800 | [PayDisputeReason](/fix/fields/tags-2800-2999#tag-2800) | int | Optional | May be used to provide reason for PayRequestStatus(2813)=3 (Disputed). |
+| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328) | String | Optional | May be used to elaborate the reason for rejection or dispute. |
+| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664) | Length | Optional | Must be set if EncodedRejectText(1665) field is specified and must immediately precede it. |
+| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | Optional | Echos back the business date of the PayManagementRequest(35=DY) message if this report is responding to a request. When the report is sent unsolicited, this is the business date of the report. This may carry the same date as the payment calculation date in PostTradePaymentCalculationDate(2825). |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | **Required** | Timestamp when the business transaction represented by the message occurred. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
+| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| 1855 | [RelatedTradeGrp](/fix/groups/related-trade-grp) | Repeating group | Optional | This component is used to identify trades that are related to each other for a business purpose, such as netting of forwards. This component should not be used in lieu of explicit FIX fields that denote specific semantic relationships, but rather should be used when no such fields exist. |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| | [PostTradePayment](/fix/components/post-trade-payment) | Component | **Required** | This component specifies the details of a payment between the parties involved. |
+| 1158 | [SettlDetails](/fix/groups/settl-details) | Repeating group | Optional |  |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="PayManagementReport" wordWrap
+8=FIXT.1.1|9=174|35=EA|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|2799=ABC123|2804=0|60=20260102-14:30:00.000|2824=ABC123|2817=10.25|2825=20260102|2826=20260102|2819=0|2816=ABC123|10=239|
+```

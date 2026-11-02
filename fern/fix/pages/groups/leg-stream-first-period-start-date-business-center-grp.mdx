@@ -1,0 +1,22 @@
+---
+title: "LegStreamFirstPeriodStartDateBusinessCenterGrp"
+subtitle: "LegStreamFirstPeriodStartDateBusinessCenterGrp is a repeating subcomponent within the LegStreamCalculationPeriodDates component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40941</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegStreamFirstPeriodStartDateBusinessCenters (40941)](/fix/fields/tags-40800-40999#tag-40941).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40269 | [LegStreamFirstPeriodStartDateBusinessCenter](/fix/fields/tags-40200-40399#tag-40269) | String | Optional | Required if NoLegStreamFirstPeriodStartDateBusinessCenters(40941) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[LegStreamCalculationPeriodDates](/fix/components/leg-stream-calculation-period-dates)

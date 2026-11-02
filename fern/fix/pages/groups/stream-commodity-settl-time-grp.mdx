@@ -1,0 +1,24 @@
+---
+title: "StreamCommoditySettlTimeGrp"
+subtitle: "The StreamCommoditySettlTimeGrp is a repeating subcomponent of the StreamCommoditySettlDayGrp component used to define the settlement time periods associated with the commodity contract."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41286</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoStreamCommoditySettlTimes (41286)](/fix/fields/tags-41200-41399#tag-41286).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41287 | [StreamCommoditySettlStart](/fix/fields/tags-41200-41399#tag-41287) | String | Optional | Required if NoStreamCommoditySettlTimes(41286) &gt; 0. |
+| 41288 | [StreamCommoditySettlEnd](/fix/fields/tags-41200-41399#tag-41288) | String | Optional | Required if NoStreamCommoditySettlTimes(41286) &gt; 0. |
+| 41588 | [StreamCommoditySettlTimeType](/fix/fields/tags-41400-41599#tag-41588) | DeliveryScheduleSettlTimeTypeCodeSet | Optional | May be defaulted to market convention or bilaterally agreed if not specified. |
+
+</StickyTable>
+
+## Used in
+
+[StreamCommoditySettlDayGrp](/fix/groups/stream-commodity-settl-day-grp)

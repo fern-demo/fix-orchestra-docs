@@ -1,0 +1,23 @@
+---
+title: "OptionExerciseExpirationDateGrp"
+subtitle: "The OptionExerciseExpirationDateGrp is a repeating subcomponent of the OptionExerciseExpiration component used to specify fixed dates for expiration."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41152</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoOptionExerciseExpirationDates (41152)](/fix/fields/tags-41000-41199#tag-41152).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41153 | [OptionExerciseExpirationDate](/fix/fields/tags-41000-41199#tag-41153) | LocalMktDate | Optional | Required if NoOptionExpirationDates(41152) &gt; 0. |
+| 41154 | [OptionExerciseExpirationDateType](/fix/fields/tags-41000-41199#tag-41154) | OptionExerciseDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
+
+</StickyTable>
+
+## Used in
+
+[OptionExerciseExpiration](/fix/components/option-exercise-expiration)

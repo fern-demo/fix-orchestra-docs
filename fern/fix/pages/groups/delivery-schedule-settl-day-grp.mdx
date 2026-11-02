@@ -1,0 +1,24 @@
+---
+title: "DeliveryScheduleSettlDayGrp"
+subtitle: "The DeliveryScheduleSettlDayGrp is a repeating subcomponent of the DeliveryScheduleGrp component used to detail commodity delivery days."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41051</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoDeliveryScheduleSettlDays (41051)](/fix/fields/tags-41000-41199#tag-41051).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41052 | [DeliveryScheduleSettlDay](/fix/fields/tags-41000-41199#tag-41052) | DeliveryScheduleSettlDayCodeSet | Optional | Required if NoDeliveryScheduleSettlDays(41051) &gt; 0. |
+| 41053 | [DeliveryScheduleSettlTotalHours](/fix/fields/tags-41000-41199#tag-41053) | int | Optional | The sum of the total hours specified in the DeliveryScheduleSettlTimeGrp component. |
+| 41054 | [DeliveryScheduleSettlTimeGrp](/fix/groups/delivery-schedule-settl-time-grp) | Repeating group | Optional | The DeliveryScheduleSettlTimeGrp is a repeating subcomponent of the DeliveryScheduleSettlDayGrp component used to detail commodity delivery time period. |
+
+</StickyTable>
+
+## Used in
+
+[DeliveryScheduleGrp](/fix/groups/delivery-schedule-grp)

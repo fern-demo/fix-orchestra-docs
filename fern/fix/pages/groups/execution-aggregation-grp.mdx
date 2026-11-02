@@ -1,0 +1,25 @@
+---
+title: "ExecutionAggregationGrp"
+subtitle: "Identifies the fills being aggregated together."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 124</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoExecs (124)](/fix/fields/tags-0-199#tag-124).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 32 | [LastQty](/fix/fields/tags-0-199#tag-32) | Qty | Optional | Required if NoExecs(124) &gt; 0 |
+| 17 | [ExecID](/fix/fields/tags-0-199#tag-17) | String | Optional | Either ExecID(17) or TradeID(1003) must be specified. |
+| 1003 | [TradeID](/fix/fields/tags-1000-1199#tag-1003) | String | Optional | Either ExecID(17) or TradeID(1003) must be specified. |
+| 31 | [LastPx](/fix/fields/tags-0-199#tag-31) | Price | Optional | Price of this (last) fill. |
+
+</StickyTable>
+
+## Used in
+
+[TradeAggregationRequest](/fix/messages/trade-aggregation-request)

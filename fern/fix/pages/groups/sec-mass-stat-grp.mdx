@@ -1,0 +1,34 @@
+---
+title: "SecMassStatGrp"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 146</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedSym (146)](/fix/fields/tags-0-199#tag-146).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [InstrumentExtension](/fix/components/instrument-extension) | Component | Optional | The InstrumentExtension component block identifies additional security attributes that are more commonly found for Fixed Income securities. |
+| | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This component identifies the legal agreement under which the deal was made and other unique characteristics of the transaction. For example, the… |
+| 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
+| 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
+| 1647 | [RelatedInstrumentGrp](/fix/groups/related-instrument-grp) | Repeating group | Optional | The RelatedInstrumentGrp is a repeating component at the same hierarchical level as the Instrument component, describing relationships and linkages between the Instrument, UnderlyingInstrument and InstrumentLeg entries. If all instances of the UnderlyingInstrument in the message are true underliers… |
+| 326 | [SecurityTradingStatus](/fix/fields/tags-200-399#tag-326) | SecurityTradingStatusCodeSet | Optional | Conditionally required if NoRelatedSym &gt; 0. |
+| 1174 | [SecurityTradingEvent](/fix/fields/tags-1000-1199#tag-1174) | SecurityTradingEventCodeSet | Optional | Identifies an event related to a SecurityTradingStatus(326). An event occurs and is gone, it is not a state that applies for a period of time. |
+| 327 | [HaltReason](/fix/fields/tags-200-399#tag-327) | HaltReasonCodeSet | Optional | Denotes the reason for the Opening Delay or Trading Halt. |
+| 291 | [FinancialStatus](/fix/fields/tags-200-399#tag-291) | FinancialStatusCodeSet | Optional | Identifies a firm's or a security's financial status |
+| 292 | [CorporateAction](/fix/fields/tags-200-399#tag-292) | CorporateActionCodeSet | Optional | Identifies the type of Corporate Action. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Comment, instructions, or other identifying information. |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+
+</StickyTable>
+
+## Used in
+
+[SecurityMassStatus](/fix/messages/security-mass-status)

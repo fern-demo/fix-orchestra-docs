@@ -1,0 +1,34 @@
+---
+title: "LegPaymentStreamCompoundingDates"
+subtitle: "LegPaymentStreamCompoundingDates is a subcomponent of the LegPaymentStream component used to specify the compounding dates of the stream - either specific, relative or periodic dates."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42408 | [LegPaymentStreamCompoundingDatesBusinessDayConvention](/fix/fields/tags-42400-42599#tag-42408) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to payment stream compounding dates. |
+| 42419 | [LegPaymentStreamCompoundingDatesBusinessCenterGrp](/fix/groups/leg-payment-stream-compounding-dates-business-center-grp) | Repeating group | Optional | LegPaymentStreamCompoundingDatesBusinessCenterGrp is a repeating subcomponent within the LegPaymentStreamCompoundingDates component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the… |
+| 42405 | [LegPaymentStreamCompoundingDateGrp](/fix/groups/leg-payment-stream-compounding-date-grp) | Repeating group | Optional | LegPaymentStreamCompoundingDateGrp is a subcomponent of the LegPaymentStreamCompoundingDates component used to specify predetermined compounding dates. |
+| 42409 | [LegPaymentStreamCompoundingDatesRelativeTo](/fix/fields/tags-42400-42599#tag-42409) | int | Optional | Specifies the anchor date when the compounding dates are relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 42410 | [LegPaymentStreamCompoundingDatesOffsetPeriod](/fix/fields/tags-42400-42599#tag-42410) | int | Optional | Conditionally required when LegPaymentStreamCompoundingDatesOffsetUnit(42411) is specified. |
+| 42411 | [LegPaymentStreamCompoundingDatesOffsetUnit](/fix/fields/tags-42400-42599#tag-42411) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentStreamCompoundingDatesOffsetPeriod(42410) is specified. |
+| 42412 | [LegPaymentStreamCompoundingDatesOffsetDayType](/fix/fields/tags-42400-42599#tag-42412) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative compounding date offset. |
+| 42413 | [LegPaymentStreamCompoundingPeriodSkip](/fix/fields/tags-42400-42599#tag-42413) | int | Optional | The number of periods in the "RelativeTo" schedule that are between each date in the compounding schedule. A skip of 2 would mean that compounding dates are relative to every second date in the "RelativeTo" schedule. If present this should have a value greater than 1. |
+| | [LegPaymentStreamCompoundingStartDate](/fix/components/leg-payment-stream-compounding-start-date) | Component | Optional | LegPaymentStreamCompoundingStartDate is a subcomponent of the LegPaymentStreamCompoundingDates component used to specify the start date for compounding. |
+| | [LegPaymentStreamCompoundingEndDate](/fix/components/leg-payment-stream-compounding-end-date) | Component | Optional | LegPaymentStreamCompoundingEndDate is a subcomponent of the LegPaymentStreamCompoundingDates component used to specify the end date for compounding. |
+| 42414 | [LegPaymentStreamCompoundingFrequencyPeriod](/fix/fields/tags-42400-42599#tag-42414) | int | Optional | Conditionally required when LegPayamentStreamCompoundingFrequencyUnit(42415) is specified. |
+| 42415 | [LegPaymentStreamCompoundingFrequencyUnit](/fix/fields/tags-42400-42599#tag-42415) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when LegPayamentStreamCompoundingFrequencyPeriod(42414) is specified. |
+| 42416 | [LegPaymentStreamCompoundingRollConvention](/fix/fields/tags-42400-42599#tag-42416) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to this instance of payment stream compounding dates. |
+| 42417 | [LegPaymentStreamBoundsFirstDateUnadjusted](/fix/fields/tags-42400-42599#tag-42417) | LocalMktDate | Optional | The unadjusted first date of the compounding schedule. This can be used to restrict the range of dates when they are relative. |
+| 42418 | [LegPaymentStreamBoundsLastDateUnadjusted](/fix/fields/tags-42400-42599#tag-42418) | LocalMktDate | Optional | The unadjusted last date of the compounding schedule. This can be used to restrict the range of dates when they are relative. |
+
+</StickyTable>
+
+## Used in
+
+[LegPaymentStream](/fix/components/leg-payment-stream)

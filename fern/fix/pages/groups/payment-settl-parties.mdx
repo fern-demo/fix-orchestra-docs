@@ -1,0 +1,28 @@
+---
+title: "PaymentSettlParties"
+subtitle: "PaymentSettlParties is a repeating subcomponent of the PaymentSettlGrp component used to report payment settlement routing."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40233</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The fields PaymentSettlPartyID(40233), PaymentSettlPartyIDSource(40234) and PaymentSettlPartyIDRole(40235) are conditionally required when any one these fields is specified.
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPaymentSettlPartyIDs (40233)](/fix/fields/tags-40200-40399#tag-40233).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40234 | [PaymentSettlPartyID](/fix/fields/tags-40200-40399#tag-40234) | String | Optional | Required if NoPaymentSettlPartyIDs(40233) &gt; 0. |
+| 40235 | [PaymentSettlPartyIDSource](/fix/fields/tags-40200-40399#tag-40235) | PartyIDSourceCodeSet | Optional | Required if NoPaymentSettlPartyIDs(40233) &gt; 0. |
+| 40236 | [PaymentSettlPartyRole](/fix/fields/tags-40200-40399#tag-40236) | PartyRoleCodeSet | Optional | Required if NoPaymentSettlPartyIDs(40233) &gt; 0. |
+| 40237 | [PaymentSettlPartyRoleQualifier](/fix/fields/tags-40200-40399#tag-40237) | PartyDetailRoleQualifierCodeSet | Optional | Qualifies the value of PaymentSettlPartyRole(40236). |
+| 40238 | [PaymentSettlPtysSubGrp](/fix/groups/payment-settl-ptys-sub-grp) | Repeating group | Optional | PaymentSettlSubParties is a repeating component within the PaymentSettlParties component used to extend information to be reported for the party. |
+
+</StickyTable>
+
+## Used in
+
+[PaymentSettlGrp](/fix/groups/payment-settl-grp)

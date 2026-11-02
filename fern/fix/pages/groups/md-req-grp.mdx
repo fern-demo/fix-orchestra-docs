@@ -1,0 +1,21 @@
+---
+title: "MDReqGrp"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 267</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoMDEntryTypes (267)](/fix/fields/tags-200-399#tag-267).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 269 | [MDEntryType](/fix/fields/tags-200-399#tag-269) | MDEntryTypeCodeSet | **Required** | Must be the first field in this repeating group. This is a list of all the types of Market Data Entries that the firm requesting the Market Data is interested in receiving. |
+
+</StickyTable>
+
+## Used in
+
+[MarketDataRequest](/fix/messages/market-data-request)

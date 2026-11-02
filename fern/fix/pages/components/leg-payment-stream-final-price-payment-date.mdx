@@ -1,0 +1,25 @@
+---
+title: "LegPaymentStreamFinalPricePaymentDate"
+subtitle: "LegPaymentStreamFinalPricePaymentDate is a subcomponent of the LegPaymentStreamPaymentDates component used to specify the final price payment date, e.g. for an equity return swap."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42453 | [LegPaymentStreamFinalPricePaymentDateUnadjusted](/fix/fields/tags-42400-42599#tag-42453) | LocalMktDate | Optional | The unadjusted final price payment date. |
+| 42454 | [LegPaymentStreamFinalPricePaymentDateRelativeTo](/fix/fields/tags-42400-42599#tag-42454) | int | Optional | Specifies the anchor date when the final price payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 42455 | [LegPaymentStreamFinalPricePaymentDateOffsetPeriod](/fix/fields/tags-42400-42599#tag-42455) | int | Optional | Conditionally required when LegPaymentStreamFinalPricePaymentDateOffsetUnit(42456) is specified. |
+| 42456 | [LegPaymentStreamFinalPricePaymentDateOffsetUnit](/fix/fields/tags-42400-42599#tag-42456) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentStreamFinalPricePaymentDateOffsetPeriod(42455) is specified. |
+| 42457 | [LegPaymentStreamFinalPricePaymentDateOffsetDayType](/fix/fields/tags-42400-42599#tag-42457) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative final price payment date offset. |
+| 42458 | [LegPaymentStreamFinalPricePaymentDateAdjusted](/fix/fields/tags-42400-42599#tag-42458) | LocalMktDate | Optional | The adjusted final price payment date. |
+
+</StickyTable>
+
+## Used in
+
+[LegPaymentStreamPaymentDates](/fix/components/leg-payment-stream-payment-dates)

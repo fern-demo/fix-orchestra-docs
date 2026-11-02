@@ -1,0 +1,23 @@
+---
+title: "DlvyInstGrp"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 85</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoDlvyInst (85)](/fix/fields/tags-0-199#tag-85).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 165 | [SettlInstSource](/fix/fields/tags-0-199#tag-165) | SettlInstSourceCodeSet | Optional | Indicates source of Settlement Instructions |
+| 787 | [DlvyInstType](/fix/fields/tags-600-799#tag-787) | DlvyInstTypeCodeSet | Optional | Used to indicate whether a delivery instruction is used for securities or cash settlement. |
+| 781 | [SettlParties](/fix/groups/settl-parties) | Repeating group | Optional | The SettlParties component block is used in a similar manner as Parties Block within the context of settlement instruction messages to distinguish between parties involved in the settlement and parties who are expected to execute the settlement process. |
+
+</StickyTable>
+
+## Used in
+
+[SettlInstructionsData](/fix/components/settl-instructions-data)

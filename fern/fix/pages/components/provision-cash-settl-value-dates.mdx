@@ -1,0 +1,28 @@
+---
+title: "ProvisionCashSettlValueDates"
+subtitle: "The ProvisionCashSettlValueDates component is a subcomponent within the ProvisionGrp component used to report the cash settlement value date and time defined in the provision."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40114 | [ProvisionCashSettlValueTime](/fix/fields/tags-40000-40199#tag-40114) | LocalMktTime | Optional | A time specified in 24-hour format, e.g. 11am would be represented as 11:00:00. The time of the cash settlement valuation date when the cash settlement amount will be determined according to the cash settlement method if the parties have not otherwise been able to agree to the cash settlement… |
+| 40115 | [ProvisionCashSettlValueTimeBusinessCenter](/fix/fields/tags-40000-40199#tag-40115) | String | Optional | Identifies the business center calendar used with the provision's cash settlement valuation time. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values. |
+| 40116 | [ProvisionCashSettlValueDateBusinessDayConvention](/fix/fields/tags-40000-40199#tag-40116) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this instance of the provisional cash settlement value date. |
+| 40953 | [ProvisionCashSettlValueDateBusinessCenterGrp](/fix/groups/provision-cash-settl-value-date-business-center-grp) | Repeating group | Optional | ProvisionCashSettlValueDateBusinessCenterGrp is a repeating subcomponent within the ProvisionCashSettlValueDate component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the DateAdjustment component… |
+| 40118 | [ProvisionCashSettlValueDateRelativeTo](/fix/fields/tags-40000-40199#tag-40118) | int | Optional | Specifies the anchor date when the cash settlement value date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values |
+| 40119 | [ProvisionCashSettlValueDateOffsetPeriod](/fix/fields/tags-40000-40199#tag-40119) | int | Optional | Conditionally required when ProvisionCashSettlValueDateOffsetUnit(40120) is specified. |
+| 40120 | [ProvisionCashSettlValueDateOffsetUnit](/fix/fields/tags-40000-40199#tag-40120) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when ProvisionCashSettlValueDateOffsetPeriod(40119) is specified. |
+| 40121 | [ProvisionCashSettlValueDateOffsetDayType](/fix/fields/tags-40000-40199#tag-40121) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the provision's relative cash settlement value date offset. |
+| 40122 | [ProvisionCashSettlValueDateAdjusted](/fix/fields/tags-40000-40199#tag-40122) | LocalMktDate | Optional | The adjusted cash settlement value date. |
+
+</StickyTable>
+
+## Used in
+
+[ProvisionGrp](/fix/groups/provision-grp)

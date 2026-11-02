@@ -1,0 +1,27 @@
+---
+title: "LimitAmts"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1630</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLimitAmts (1630)](/fix/fields/tags-1600-1799#tag-1630).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1631 | [LimitAmtType](/fix/fields/tags-1600-1799#tag-1631) | LimitAmtTypeCodeSet | Optional | Required when NoLimitAmts &gt; 0 |
+| 1632 | [LastLimitAmt](/fix/fields/tags-1600-1799#tag-1632) | Amt | Optional | Either LastLimitAmt(1632) or LimitAmtRemaining(1633) or LimitUtilizationAmt(2394) must be specified when NoLimitAmts &gt; 0. |
+| 1633 | [LimitAmtRemaining](/fix/fields/tags-1600-1799#tag-1633) | Amt | Optional | Either LastLimitAmt(1632) or LimitAmtRemaining(1633) or LimitUtilizationAmt(2394) must be specified when NoLimitAmts &gt; 0. |
+| 2394 | [LimitUtilizationAmt](/fix/fields/tags-2200-2399#tag-2394) | Amt | Optional | Either LastLimitAmt(1632) or LimitAmtRemaining(1633) or LimitUtilizationAmt(2394) must be specified when NoLimitAmts &gt; 0. |
+| 2395 | [LimitAmt](/fix/fields/tags-2200-2399#tag-2395) | Amt | Optional | The limit for the counterparty. This represents the total limit amount, independent of any amount already utilized. |
+| 1634 | [LimitAmtCurrency](/fix/fields/tags-1600-1799#tag-1634) | Currency | Optional | Indicates the currency that the limit amount is specified in. See Currency(15) for additional description and valid values. |
+| 2396 | [LimitRole](/fix/fields/tags-2200-2399#tag-2396) | PartyRoleCodeSet | Optional | Indicates the scope of the limit by role. |
+
+</StickyTable>
+
+## Used in
+
+[ExecutionReport](/fix/messages/execution-report), [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp)

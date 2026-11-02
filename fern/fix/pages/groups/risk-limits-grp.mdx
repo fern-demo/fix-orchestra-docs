@@ -1,0 +1,23 @@
+---
+title: "RiskLimitsGrp"
+subtitle: "Repeating group of risk limits."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1669</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRiskLimits (1669)](/fix/fields/tags-1600-1799#tag-1669).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1529 | [RiskLimitTypesGrp](/fix/groups/risk-limit-types-grp) | Repeating group | Optional | Repeating group of risk limit types and values. |
+| 1534 | [RiskInstrumentScopeGrp](/fix/groups/risk-instrument-scope-grp) | Repeating group | Optional | Repeating group of InstrumentScope Components. Used to specify the instruments to which a request applies. |
+
+</StickyTable>
+
+## Used in
+
+[PartyRiskLimitsAckGrp](/fix/groups/party-risk-limits-ack-grp), [PartyRiskLimitsGrp](/fix/groups/party-risk-limits-grp), [PartyRiskLimitsUpdateGrp](/fix/groups/party-risk-limits-update-grp)

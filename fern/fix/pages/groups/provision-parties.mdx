@@ -1,0 +1,28 @@
+---
+title: "ProvisionParties"
+subtitle: "ProvisionParties is a repeating component within the Provision component used to report the parties identified in the contract provision."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40174</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The fields ProvisionPartyID(40175), ProvisionPartyIDSource(40176) and ProvisionPartyIDRole(40177) are conditionally required when any one these fields is specified.
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoProvisionPartyIDs (40174)](/fix/fields/tags-40000-40199#tag-40174).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40175 | [ProvisionPartyID](/fix/fields/tags-40000-40199#tag-40175) | String | Optional | Required if NoProvisionPartyIDs(40174) &gt; 0. |
+| 40176 | [ProvisionPartyIDSource](/fix/fields/tags-40000-40199#tag-40176) | PartyIDSourceCodeSet | Optional | Required if NoProvisionPartyIDs(40174) &gt; 0. |
+| 40177 | [ProvisionPartyRole](/fix/fields/tags-40000-40199#tag-40177) | PartyRoleCodeSet | Optional | Required if NoProvisionPartyIDs(40174) &gt; 0. |
+| 2385 | [ProvisionPartyRoleQualifier](/fix/fields/tags-2200-2399#tag-2385) | PartyDetailRoleQualifierCodeSet | Optional | Used to further qualify the value of ProvisionPartyRole(40177). |
+| 40178 | [ProvisionPtysSubGrp](/fix/groups/provision-ptys-sub-grp) | Repeating group | Optional | ProvisionPtysSubGrp is a repeating component within the ProvisionParties component used to extend information to be reported for the party. |
+
+</StickyTable>
+
+## Used in
+
+[ProvisionGrp](/fix/groups/provision-grp)

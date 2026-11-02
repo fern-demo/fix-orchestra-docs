@@ -1,0 +1,28 @@
+---
+title: "RgstDistInstGrp"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 510</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoDistribInsts (510)](/fix/fields/tags-400-599#tag-510).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 477 | [DistribPaymentMethod](/fix/fields/tags-400-599#tag-477) | DistribPaymentMethodCodeSet | Optional | Must be first field in the repeating group if NoDistribInsts &gt; 0. |
+| 512 | [DistribPercentage](/fix/fields/tags-400-599#tag-512) | Percentage | Optional | The amount of each distribution to go to this beneficiary, expressed as a percentage |
+| 478 | [CashDistribCurr](/fix/fields/tags-400-599#tag-478) | Currency | Optional | Specifies currency to be used for Cash Distributions see "Appendix 6-A Valid Currency Codes". |
+| 498 | [CashDistribAgentName](/fix/fields/tags-400-599#tag-498) | String | Optional | Name of local agent bank if for cash distributions |
+| 499 | [CashDistribAgentCode](/fix/fields/tags-400-599#tag-499) | String | Optional | BIC (Bank Identification Code--Swift managed) code of agent bank for cash distributions |
+| 500 | [CashDistribAgentAcctNumber](/fix/fields/tags-400-599#tag-500) | String | Optional | Account number at agent bank for distributions. |
+| 501 | [CashDistribPayRef](/fix/fields/tags-400-599#tag-501) | String | Optional | Free format Payment reference to assist with reconciliation of distributions. |
+| 502 | [CashDistribAgentAcctName](/fix/fields/tags-400-599#tag-502) | String | Optional | Name of account at agent bank for distributions. |
+
+</StickyTable>
+
+## Used in
+
+[RegistrationInstructions](/fix/messages/registration-instructions)

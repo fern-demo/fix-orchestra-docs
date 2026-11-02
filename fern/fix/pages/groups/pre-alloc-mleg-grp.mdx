@@ -1,0 +1,31 @@
+---
+title: "PreAllocMlegGrp"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 78</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoAllocs (78)](/fix/fields/tags-0-199#tag-78).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 79 | [AllocAccount](/fix/fields/tags-0-199#tag-79) | String | Optional | Required if NoAllocs &gt; 0. Must be first field in repeating group. |
+| 661 | [AllocAcctIDSource](/fix/fields/tags-600-799#tag-661) | AcctIDSourceCodeSet | Optional | Used to identify the source of the AllocAccount (79) code. See AcctIDSource (660) for valid values. |
+| 736 | [AllocSettlCurrency](/fix/fields/tags-600-799#tag-736) | Currency | Optional | Currency code of settlement denomination for a specific AllocAccount (79). |
+| 467 | [IndividualAllocID](/fix/fields/tags-400-599#tag-467) | String | Optional | Unique identifier for a specific NoAllocs (78) repeating group instance (e.g. for an AllocAccount). |
+| 2727 | [AllocLegRefID](/fix/fields/tags-2600-2799#tag-2727) | String | Optional | Unique identifier for a specific leg (uniqueness not defined as part of the FIX specification). AllocLegRefID(2727) references the value from LegID(1788) in the current multileg order or trade message specifying to which leg the allocation instance applies. |
+| 948 | [NestedParties3](/fix/groups/nested-parties3) | Repeating group | Optional | The NestedParties3 component block is identical to the Parties Block. It is used in other component blocks and repeating groups when nesting will take place resulting in multiple occurrences of the Parties block within a single FIX message.. Use of NestedParties3 under these conditions avoids… |
+| 80 | [AllocQty](/fix/fields/tags-0-199#tag-80) | Qty | Optional | Quantity to be allocated to specific sub-account (Prior to FIX 4.2 this field was of type int) |
+| 1752 | [CustodialLotID](/fix/fields/tags-1600-1799#tag-1752) | String | Optional | Only used for specific lot trades. |
+| 1753 | [VersusPurchaseDate](/fix/fields/tags-1600-1799#tag-1753) | LocalMktDate | Optional | Only used for specific lot trades. If this field is used, either VersusPurchasePrice(1754) or CurrentCostBasis(1755) should be specified. |
+| 1754 | [VersusPurchasePrice](/fix/fields/tags-1600-1799#tag-1754) | Price | Optional | Only used for specific lot trades. If this field is used, VersusPurchaseDate(1753) should be specified. |
+| 1755 | [CurrentCostBasis](/fix/fields/tags-1600-1799#tag-1755) | Amt | Optional | Only used for specific lot trades. If this field is used, VersusPurchaseDate(1753) should be specified |
+
+</StickyTable>
+
+## Used in
+
+[MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderMultileg](/fix/messages/new-order-multileg)

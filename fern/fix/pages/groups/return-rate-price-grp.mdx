@@ -1,0 +1,25 @@
+---
+title: "ReturnRatePriceGrp"
+subtitle: "ReturnRatePriceGrp is a repeating subcomponent within the ReturnRateGrp component. It is used to specify the return rate prices for an equity return swap payment stream."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42765</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoReturnRatePrices (42765)](/fix/fields/tags-42600-42799#tag-42765).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42766 | [ReturnRatePriceBasis](/fix/fields/tags-42600-42799#tag-42766) | ReturnRatePriceBasisCodeSet | Optional | Required if NoReturnRatePrices(42765) &gt; 0. |
+| 42767 | [ReturnRatePrice](/fix/fields/tags-42600-42799#tag-42767) | Price | Optional | Specifies the price of the underlying swap asset. |
+| 42768 | [ReturnRatePriceCurrency](/fix/fields/tags-42600-42799#tag-42768) | Currency | Optional | Specifies the currency of the price of the underlying swap asset. Uses ISO 4217 currency codes. |
+| 42769 | [ReturnRatePriceType](/fix/fields/tags-42600-42799#tag-42769) | ReturnRatePriceTypeCodeSet | Optional | Specifies whether the ReturnRatePrice(42767) is expressed in absolute or relative terms. |
+
+</StickyTable>
+
+## Used in
+
+[ReturnRateGrp](/fix/groups/return-rate-grp)

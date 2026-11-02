@@ -1,0 +1,23 @@
+---
+title: "ComplexEventPeriodDateGrp"
+subtitle: "The ComplexEventPeriodDateGrp is a subcomponent of ComplexEventPeriodGrp for specifying fixed period dates and times for an Asian or Strike Schedule option or trigger dates for a Barrier or Knock option."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41007</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoComplexEventPeriodDateTimes (41007)](/fix/fields/tags-41000-41199#tag-41007).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41008 | [ComplexEventPeriodDate](/fix/fields/tags-41000-41199#tag-41008) | LocalMktDate | Optional | Required if NoComplexEventPeriodDateTimes(41007) &gt; 0. |
+| 41009 | [ComplexEventPeriodTime](/fix/fields/tags-41000-41199#tag-41009) | LocalMktTime | Optional | The averaging time for an Asian option. |
+
+</StickyTable>
+
+## Used in
+
+[ComplexEventPeriodGrp](/fix/groups/complex-event-period-grp)

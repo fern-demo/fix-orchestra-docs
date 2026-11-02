@@ -1,0 +1,32 @@
+---
+title: "PositionAmountData"
+subtitle: "The PositionAmountData component block is used to report netted amounts associated with position quantities. In the listed derivatives market the amount is generally expressing a type of futures variation or option premium. In the equities…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 753</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPosAmt (753)](/fix/fields/tags-600-799#tag-753).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 707 | [PosAmtType](/fix/fields/tags-600-799#tag-707) | PosAmtTypeCodeSet | Optional | Type of Position amount |
+| 708 | [PosAmt](/fix/fields/tags-600-799#tag-708) | Amt | Optional | Position amount |
+| 2096 | [PosAmtStreamDesc](/fix/fields/tags-2000-2199#tag-2096) | String | Optional | Used when the PosAmt(708) value corresponds to a specific stream in of a swap. |
+| 1055 | [PositionCurrency](/fix/fields/tags-1000-1199#tag-1055) | String | Optional | The Currency in which the position Amount is denominated |
+| 2097 | [PositionFXRate](/fix/fields/tags-2000-2199#tag-2097) | float | Optional | Foreign exchange rate used to compute the PosAmt(708) from the PositionCurrency(1055) and the Currency (15). |
+| 2098 | [PositionFXRateCalc](/fix/fields/tags-2000-2199#tag-2098) | UnderlyingFXRateCalcCodeSet | Optional | Specifies whether or not PositionFXRate(2097) should be multipled or divided. |
+| 1585 | [PosAmtReason](/fix/fields/tags-1400-1599#tag-1585) | PosAmtReasonCodeSet | Optional | Specifies the reason for an amount type when reported on a position. Useful when multiple instances of the same amount type are reported. |
+| 2099 | [PosAmtMarketSegmentID](/fix/fields/tags-2000-2199#tag-2099) | String | Optional | Market segment associated with the position amount. |
+| 2100 | [PosAmtMarketID](/fix/fields/tags-2000-2199#tag-2100) | String | Optional | Market associated with the position amount. |
+| 2876 | [PosAmtPrice](/fix/fields/tags-2800-2999#tag-2876) | Price | Optional | The price used to calculate the PosAmt(708). |
+| 2877 | [PosAmtPriceType](/fix/fields/tags-2800-2999#tag-2877) | PriceTypeCodeSet | Optional | Specifies the type of price for PosAmtPrice(2876). |
+
+</StickyTable>
+
+## Used in
+
+[AccountSummaryReport](/fix/messages/account-summary-report), [AllocationInstruction](/fix/messages/allocation-instruction), [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationReport](/fix/messages/allocation-report), [AssignmentReport](/fix/messages/assignment-report), [PositionMaintenanceReport](/fix/messages/position-maintenance-report), [PositionMaintenanceRequest](/fix/messages/position-maintenance-request), [PositionReport](/fix/messages/position-report), [PositionTransferInstruction](/fix/messages/position-transfer-instruction), [PositionTransferReport](/fix/messages/position-transfer-report), [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack)

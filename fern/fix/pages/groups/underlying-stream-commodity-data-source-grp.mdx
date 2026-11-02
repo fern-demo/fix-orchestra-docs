@@ -1,0 +1,23 @@
+---
+title: "UnderlyingStreamCommodityDataSourceGrp"
+subtitle: "UnderlyingStreamCommodityDataSourceGrp is a subcomponent of the UnderlyingStreamCommodity component used to specify sources of data, e.g. weather stations. The order of entry determines priority – first is the main source, second is…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41993</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingStreamCommodityDataSources (41993)](/fix/fields/tags-41800-41999#tag-41993).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41994 | [UnderlyingStreamCommodityDataSourceID](/fix/fields/tags-41800-41999#tag-41994) | String | Optional | Required if NoUnderlyingStreamCommodityDataSources(41993) &gt; 0. |
+| 41995 | [UnderlyingStreamCommodityDataSourceIDType](/fix/fields/tags-41800-41999#tag-41995) | StreamCommodityDataSourceIDTypeCodeSet | Optional | Required if NoUnderlyingStreamCommodityDataSources(41993) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)

@@ -1,0 +1,48 @@
+---
+title: "MarketDataStatisticsRequest"
+subtitle: "The MarketDataStatisticsRequest(35=DO) is used to request for statistical data. The simple form is to use an identifier (MDStatisticID(2475)) assigned by the market place which would denote a pre-defined statistical report. Alternatively,…"
+---
+
+<Badge intent="info">MsgType DO</Badge> <Badge intent="note" minimal>Market Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The resulting data set can be restricted to a specific market, market segment or pre-defined security list for which a single set of statistics will be returned. It is also possible to specify individual instruments or group of instruments by means of the component blocks Instrument, UndInstrmtGrp and InstrmtLegGrp. Fields specified in the request are used as filter criteria to restrict the resulting data returned.
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 2452 | [MDStatisticReqID](/fix/fields/tags-2400-2599#tag-2452) | String | **Required** | Unique message identifier for the request or the identifier of a previous request when unsubscribing. |
+| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263) | SubscriptionRequestTypeCodeSet | **Required** | Used to subscribe / unsubscribe for market data statistics reports or to request a one-time snapshot of the current information. |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | Optional | Used to specify the business date. |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Used to specify a single market. |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Used to specify a single market segment. |
+| 1396 | [MarketSegmentDesc](/fix/fields/tags-1200-1399#tag-1396) | String | Optional | Description or name of Market Segment |
+| 1397 | [EncodedMktSegmDescLen](/fix/fields/tags-1200-1399#tag-1397) | Length | Optional | Must be set if EncodedMktSegmDesc(1398) field is specified and must immediately precede it. |
+| 1398 | [EncodedMktSegmDesc](/fix/fields/tags-1200-1399#tag-1398) | data | Optional | Encoded (non-ASCII characters) representation of the MarketSegmentDesc(1396) field in the encoded format specified via the MessageEncoding(347) field. |
+| 1465 | [SecurityListID](/fix/fields/tags-1400-1599#tag-1465) | String | Optional | Used to reference an entire group of instruments for which a single set of statistics is to be calculated. |
+| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [InstrumentExtension](/fix/components/instrument-extension) | Component | Optional | The InstrumentExtension component block identifies additional security attributes that are more commonly found for Fixed Income securities. |
+| | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This component identifies the legal agreement under which the deal was made and other unique characteristics of the transaction. For example, the… |
+| 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
+| 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
+| 1647 | [RelatedInstrumentGrp](/fix/groups/related-instrument-grp) | Repeating group | Optional | The RelatedInstrumentGrp is a repeating component at the same hierarchical level as the Instrument component, describing relationships and linkages between the Instrument, UnderlyingInstrument and InstrumentLeg entries. If all instances of the UnderlyingInstrument in the message are true underliers… |
+| 2474 | [MDStatisticReqGrp](/fix/groups/md-statistic-req-grp) | Repeating group | Optional | This component block is used within the MarketDataStatisticsRequest(35=DO) message to define a set of parameters describing the desired statistics. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Time that the request was submitted. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | Optional | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="MarketDataStatisticsRequest" wordWrap
+8=FIXT.1.1|9=78|35=DO|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|2452=ABC123|263=0|10=128|
+```

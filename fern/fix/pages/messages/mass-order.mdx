@@ -1,0 +1,50 @@
+---
+title: "MassOrder"
+subtitle: "The MassOrder(35=DJ) message can be used to add, modify or delete multiple unrelated orders with a single message. Apart from clearing related attributes, only the key order attributes for high performance trading are available."
+---
+
+<Badge intent="info">MsgType DJ</Badge> <Badge intent="note" minimal>Order Mass Handling</Badge> <Badge intent="tip" minimal>Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The behavior of individual orders within a MassOrder(35=DJ) may vary depending upon its attributes, e.g. OrdType(40) and TimeInForce(59). Individual orders may be modified or deleted/cancelled with single order messages such as OrderCancelReplaceRequest (35=G) and OrderCancelRequest(35=F). Each of the orders in the MassOrder(35=DJ) are to be treated as stand-alone individual orders.
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 2423 | [MassOrderRequestID](/fix/fields/tags-2400-2599#tag-2423) | String | **Required** | Unique identifier of MassOrder(35=DJ) message as assigned by the submitter of the request. |
+| 2427 | [OrderResponseLevel](/fix/fields/tags-2400-2599#tag-2427) | OrderResponseLevelCodeSet | Optional | The level of response requested from receiver of mass order messages. A default value should be bilaterally agreed. |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Identifies the market |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 1815 | [TradingCapacity](/fix/fields/tags-1800-1999#tag-1815) | TradingCapacityCodeSet | Optional | Designates the capacity in which the order is submitted for trading by the market participant. |
+| 1816 | [ClearingAccountType](/fix/fields/tags-1800-1999#tag-1816) | ClearingAccountTypeCodeSet | Optional | Designates the account type to be used for the order when submitted to clearing. |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
+| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in their system. |
+| 581 | [AccountType](/fix/fields/tags-400-599#tag-581) | AccountTypeCodeSet | Optional | Type of account associated with an order |
+| 528 | [OrderCapacity](/fix/fields/tags-400-599#tag-528) | OrderCapacityCodeSet | Optional | Designates the capacity of the firm placing the order. (as of FIX 4.3, this field replaced Rule80A (tag 47) --used in conjunction with OrderRestrictions (529) field) (see Volume : "Glossary" for value definitions) |
+| 529 | [OrderRestrictions](/fix/fields/tags-400-599#tag-529) | OrderRestrictionsCodeSet | Optional | Restrictions associated with an order. If more than one restriction is applicable to an order, this field can contain multiple instructions separated by space. |
+| 582 | [CustOrderCapacity](/fix/fields/tags-400-599#tag-582) | CustOrderCapacityCodeSet | Optional | Capacity of customer placing the order. |
+| 1028 | [ManualOrderIndicator](/fix/fields/tags-1000-1199#tag-1028) | Boolean | Optional | Indicates if an order, quote or trade was initially received manually (as opposed to electronically) or if it was entered manually (as opposed to entered by automated trading software). |
+| 1031 | [CustOrderHandlingInst](/fix/fields/tags-1000-1199#tag-1031) | CustOrderHandlingInstCodeSet | Optional | Codes that apply special information that the Broker / Dealer needs to report, as specified by the customer. NOTE: This field and its values have no bearing on the ExecInst and TimeInForce fields. These values should not be used instead of ExecInst or TimeInForce. This field and its values are… |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
+| 1685 | [ThrottleInst](/fix/fields/tags-1600-1799#tag-1685) | ThrottleInstCodeSet | Optional | Describes action recipient should take if a throttle limit were exceeded. |
+| 2432 | [TotNoOrderEntries](/fix/fields/tags-2400-2599#tag-2432) | int | Optional | Used to support fragmentation. Sum of NoOrderEntries(2428) within the OrderEntryGrp across all messages with the same MassOrderRequestID(2423). |
+| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893) | LastFragmentCodeSet | Optional | Indicates whether this is the last fragment in a sequence of message fragments. Only required where message has been fragmented. |
+| 2428 | [OrderEntryGrp](/fix/groups/order-entry-grp) | Repeating group | **Required** | Group of order transactions across one or more instruments. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="MassOrder" wordWrap
+8=FIXT.1.1|9=86|35=DJ|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|2423=ABC123|2428=1|2429=1|10=238|
+```

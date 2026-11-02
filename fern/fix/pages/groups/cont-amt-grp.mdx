@@ -1,0 +1,23 @@
+---
+title: "ContAmtGrp"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 518</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoContAmts (518)](/fix/fields/tags-400-599#tag-518).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 519 | [ContAmtType](/fix/fields/tags-400-599#tag-519) | ContAmtTypeCodeSet | Optional | Must be first field in the repeating group. |
+| 520 | [ContAmtValue](/fix/fields/tags-400-599#tag-520) | float | Optional | Value of Contract Amount, e.g. a financial amount or percentage as indicated by ContAmtType (519). |
+| 521 | [ContAmtCurr](/fix/fields/tags-400-599#tag-521) | Currency | Optional | Specifies currency for the Contract amount if different from the Deal Currency - see "Appendix 6-A; Valid Currency Codes". |
+
+</StickyTable>
+
+## Used in
+
+[ExecutionReport](/fix/messages/execution-report), [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp)

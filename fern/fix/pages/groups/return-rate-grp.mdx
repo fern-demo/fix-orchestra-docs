@@ -1,0 +1,50 @@
+---
+title: "ReturnRateGrp"
+subtitle: "ReturnRateGrp is a repeating subcomponent within the PaymentStreamFloatingRate component. It is used to specify the multiple return rates for an equity return swap payment stream."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42735</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoReturnRates (42735)](/fix/fields/tags-42600-42799#tag-42735).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42736 | [ReturnRatePriceSequence](/fix/fields/tags-42600-42799#tag-42736) | ReturnRatePriceSequenceCodeSet | Optional | Required if NoReturnRates(42735) &gt; 0. |
+| 42737 | [ReturnRateCommissionBasis](/fix/fields/tags-42600-42799#tag-42737) | CommTypeCodeSet | Optional | Specifies the basis or unit used to calculate the commission. |
+| 42738 | [ReturnRateCommissionAmount](/fix/fields/tags-42600-42799#tag-42738) | Amt | Optional | The commission amount. |
+| 42739 | [ReturnRateCommissionCurrency](/fix/fields/tags-42600-42799#tag-42739) | Currency | Optional | If not specified, this is defaulted to the reporting currency. |
+| 42740 | [ReturnRateTotalCommissionPerTrade](/fix/fields/tags-42600-42799#tag-42740) | Amt | Optional | The total commission per trade. |
+| 42741 | [ReturnRateDeterminationMethod](/fix/fields/tags-42600-42799#tag-42741) | String | Optional | Specifies the method by which the underlier prices are determined. See http://www.fpml.org/coding-scheme/determination-method for values. |
+| 42765 | [ReturnRatePriceGrp](/fix/groups/return-rate-price-grp) | Repeating group | Optional | ReturnRatePriceGrp is a repeating subcomponent within the ReturnRateGrp component. It is used to specify the return rate prices for an equity return swap payment stream. |
+| 42731 | [ReturnRateFXConversionGrp](/fix/groups/return-rate-fx-conversion-grp) | Repeating group | Optional | ReturnRateFXConversionGrp is a repeating subcomponent within the ReturnRateGrp component. It is used to specify the FX conversion rates for an equity return swap payment stream. |
+| 42742 | [ReturnRateAmountRelativeTo](/fix/fields/tags-42600-42799#tag-42742) | int | Optional | Specifies the reference amount when the return rate amount is relative to another amount in the trade. See http://www.fixtradingcommunity.org/codelists#Payment\_Amount\_Relative\_To for code list of relative amounts. |
+| 42743 | [ReturnRateQuoteMeasureType](/fix/fields/tags-42600-42799#tag-42743) | String | Optional | Specifies the type of the measure applied to the return rate's asset, e.g. valuation, sensitivity risk. This could be an NPV, a cash flow, a clean price, etc. See http://www.fpml.org/coding-scheme/asset-measure for values. |
+| 42744 | [ReturnRateQuoteUnits](/fix/fields/tags-42600-42799#tag-42744) | String | Optional | Specifies the units that the measure is expressed in. If not specified, the default is a price/value in currency units. See http://www.fpml.org/coding-scheme/price-quote-units for values. |
+| 42745 | [ReturnRateQuoteMethod](/fix/fields/tags-42600-42799#tag-42745) | CashSettlQuoteMethodCodeSet | Optional | Specifies the type of quote used to determine the return rate of the swap. |
+| 42746 | [ReturnRateQuoteCurrency](/fix/fields/tags-42600-42799#tag-42746) | Currency | Optional | Specifies the currency the return rate quote is denominated in. Uses ISO 4217 Currency Code. |
+| 42747 | [ReturnRateQuoteCurrencyType](/fix/fields/tags-42600-42799#tag-42747) | String | Optional | Specifies the type of currency, e.g. settlement currency, base currency, etc., that the quote is reported in. See http://www.fpml.org/coding-scheme/reporting-currency-type for values. |
+| 42748 | [ReturnRateQuoteTimeType](/fix/fields/tags-42600-42799#tag-42748) | ReturnRateQuoteTimeTypeCodeSet | Optional | Mutually exclusive with ReturnRateQuoteTime(42749). |
+| 42749 | [ReturnRateQuoteTime](/fix/fields/tags-42600-42799#tag-42749) | LocalMktTime | Optional | Mutually exclusive with ReturnRateQuoteTimeType(42748). |
+| 42750 | [ReturnRateQuoteDate](/fix/fields/tags-42600-42799#tag-42750) | LocalMktDate | Optional | The date when the quote is to be generated. |
+| 42751 | [ReturnRateQuoteExpirationTime](/fix/fields/tags-42600-42799#tag-42751) | LocalMktTime | Optional | The time when the quote ceases to be valid. |
+| 42752 | [ReturnRateQuoteBusinessCenter](/fix/fields/tags-42600-42799#tag-42752) | String | Optional | The business center calendar used for adjustments associated with ReturnRateQuoteTimeType(42748) or ReturnRateQuoteTime(42749) and ReturnRateQuoteDate(42750), e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values. |
+| 42753 | [ReturnRateQuoteExchange](/fix/fields/tags-42600-42799#tag-42753) | Exchange | Optional | Specifies the exchange (e.g. stock or listed futures/options exchange) from which the quote is obtained. |
+| 42761 | [ReturnRateInformationSourceGrp](/fix/groups/return-rate-information-source-grp) | Repeating group | Optional | ReturnRateInformationSourceGrp is a repeating subcomponent within the ReturnRateGrp component. It is used to specify the information sources for equity prices and FX rates for an equity return swap payment stream. |
+| 42754 | [ReturnRateQuotePricingModel](/fix/fields/tags-42600-42799#tag-42754) | String | Optional | Specifies the pricing model used to evaluate the underlying asset price. See http://www.fpml.org/coding-scheme/pricing-model for values. |
+| 42755 | [ReturnRateCashFlowType](/fix/fields/tags-42600-42799#tag-42755) | String | Optional | Specifies the type of cash flows, e.g. coupon payment, premium fee, settlement fee, etc. See http://www.fpml.org/coding-scheme/cashflow-type for values. |
+| 42709 | [ReturnRateDateGrp](/fix/groups/return-rate-date-grp) | Repeating group | Optional | ReturnRateDateGrp is a repeating subcomponent within the ReturnRateGrp component. It is used to specify the equity and dividend valuation dates for an equity return swap payment stream. |
+| 42756 | [ReturnRateValuationTimeType](/fix/fields/tags-42600-42799#tag-42756) | ReturnRateQuoteTimeTypeCodeSet | Optional | Mutually exclusive with ReturnRateValuationTime(42757). |
+| 42757 | [ReturnRateValuationTime](/fix/fields/tags-42600-42799#tag-42757) | LocalMktTime | Optional | Mutually exclusive with ReturnRateValuationTimeType(42756). |
+| 42758 | [ReturnRateValuationTimeBusinessCenter](/fix/fields/tags-42600-42799#tag-42758) | String | Optional | The business center calendar used for adjustments associated with ReturnRateValuationTimeType(42756) or ReturnRateValuationTime(42757), e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values. |
+| 42759 | [ReturnRateValuationPriceOption](/fix/fields/tags-42600-42799#tag-42759) | ReturnRateValuationPriceOptionCodeSet | Optional | Indicates whether an ISDA price option applies, and if applicable which type of price. |
+| 42760 | [ReturnRateFinalPriceFallback](/fix/fields/tags-42600-42799#tag-42760) | ComplexEventPVFinalPriceElectionFallbackCodeSet | Optional | Specifies the fallback provision for the hedging party in the determination of the final price. |
+
+</StickyTable>
+
+## Used in
+
+[PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)

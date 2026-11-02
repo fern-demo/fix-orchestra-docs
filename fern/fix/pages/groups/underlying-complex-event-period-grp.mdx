@@ -1,0 +1,26 @@
+---
+title: "UnderlyingComplexEventPeriodGrp"
+subtitle: "UnderlyingComplexEventPeriodGrp is a subcomponent of UnderlyingComplexEvents for specifying the periods for an Asian, Barrier, Knock or Strike Schedule option feature."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41729</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingComplexEventPeriods (41729)](/fix/fields/tags-41600-41799#tag-41729).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41730 | [UnderlyingComplexEventPeriodType](/fix/fields/tags-41600-41799#tag-41730) | ComplexEventPeriodTypeCodeSet | Optional | Required if NoUnderlyingComplexEventPeriods(41729) &gt; 0. |
+| 41731 | [UnderlyingComplexEventBusinessCenter](/fix/fields/tags-41600-41799#tag-41731) | String | Optional | The business center for adjusting dates and times in the schedule or date-time group. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values. |
+| 41750 | [UnderlyingComplexEventScheduleGrp](/fix/groups/underlying-complex-event-schedule-grp) | Repeating group | Optional | UnderlyingComplexEventScheduleGrp is a subcomponent of UnderlyingComplexEventPeriodGrp for specifying a periodic schedule for an Asian, Barrier or Strike Schedule option feature. |
+| 41726 | [UnderlyingComplexEventPeriodDateGrp](/fix/groups/underlying-complex-event-period-date-grp) | Repeating group | Optional | UnderlyingComplexEventPeriodDateGrp is a subcomponent of UnderlyingComplexEventPeriodGrp for specifying fixed period dates and times for an Asian or Strike Schedule option or trigger dates for a Barrier or Knock option. |
+| 41713 | [UnderlyingComplexEventAveragingObservationGrp](/fix/groups/underlying-complex-event-averaging-observation-grp) | Repeating group | Optional | UnderlyingComplexEventAveragingObservationGrp is an optional subcomponent of UnderlyingComplexEventPeriodGrp for specifying the weight of each of the dated observations. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingComplexEvents](/fix/groups/underlying-complex-events)

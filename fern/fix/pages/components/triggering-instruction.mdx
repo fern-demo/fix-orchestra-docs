@@ -1,0 +1,35 @@
+---
+title: "TriggeringInstruction"
+subtitle: "The TriggeringInstruction component block specifies the conditions under which an order will be triggered by related market events as well as the behavior of the order in the market once it is triggered."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1100 | [TriggerType](/fix/fields/tags-1000-1199#tag-1100) | TriggerTypeCodeSet | Optional | Required if any other Triggering tags are specified. |
+| 1101 | [TriggerAction](/fix/fields/tags-1000-1199#tag-1101) | TriggerActionCodeSet | Optional | Defines the type of action to take when the trigger hits. |
+| 1628 | [TriggerScope](/fix/fields/tags-1600-1799#tag-1628) | TriggerScopeCodeSet | Optional | Conditionally required when TriggerAction(1101)=3 (Cancel). |
+| 1102 | [TriggerPrice](/fix/fields/tags-1000-1199#tag-1102) | Price | Optional | Only relevant and required for TriggerAction = 1 |
+| 1103 | [TriggerSymbol](/fix/fields/tags-1000-1199#tag-1103) | String | Optional | Only relevant and required for TriggerAction = 1 |
+| 1104 | [TriggerSecurityID](/fix/fields/tags-1000-1199#tag-1104) | String | Optional | Requires TriggerSecurityIDSource if specified. Only relevant and required for TriggerAction = 1 |
+| 1105 | [TriggerSecurityIDSource](/fix/fields/tags-1000-1199#tag-1105) | SecurityIDSourceCodeSet | Optional | Requires TriggerSecurityIDSource if specified. Only relevant and required for TriggerAction = 1 |
+| 1106 | [TriggerSecurityDesc](/fix/fields/tags-1000-1199#tag-1106) | String | Optional | Defines the security description of the security whose prices will be tracked by the trigger logic. |
+| 1107 | [TriggerPriceType](/fix/fields/tags-1000-1199#tag-1107) | TriggerPriceTypeCodeSet | Optional | Only relevant for TriggerAction = 1 |
+| 1108 | [TriggerPriceTypeScope](/fix/fields/tags-1000-1199#tag-1108) | TriggerPriceTypeScopeCodeSet | Optional | Only relevant for TriggerAction = 1 |
+| 1109 | [TriggerPriceDirection](/fix/fields/tags-1000-1199#tag-1109) | TriggerPriceDirectionCodeSet | Optional | Only relevant for TriggerAction = 1 |
+| 1110 | [TriggerNewPrice](/fix/fields/tags-1000-1199#tag-1110) | Price | Optional | Should be specified if the order changes Price. |
+| 1111 | [TriggerOrderType](/fix/fields/tags-1000-1199#tag-1111) | TriggerOrderTypeCodeSet | Optional | Should be specified if the order changes type. |
+| 1112 | [TriggerNewQty](/fix/fields/tags-1000-1199#tag-1112) | Qty | Optional | Required if the order should change quantity |
+| 1113 | [TriggerTradingSessionID](/fix/fields/tags-1000-1199#tag-1113) | String | Optional | Only relevant and required for TriggerType = 2. |
+| 1114 | [TriggerTradingSessionSubID](/fix/fields/tags-1000-1199#tag-1114) | String | Optional | Requires TriggerTradingSessionID if specified. Relevant for TriggerType = 2 only. |
+
+</StickyTable>
+
+## Used in
+
+[CrossOrderCancelReplaceRequest](/fix/messages/cross-order-cancel-replace-request), [ExecutionReport](/fix/messages/execution-report), [ListOrdGrp](/fix/groups/list-ord-grp), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderCross](/fix/messages/new-order-cross), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request)

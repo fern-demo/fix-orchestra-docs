@@ -1,0 +1,23 @@
+---
+title: "UnderlyingProvisionOptionExerciseFixedDateGrp"
+subtitle: "The UnderlyingProvisionOptionExerciseFixedDateGrp is a repeating component within the UnderlyingProvisionOptionExerciseDates component used to report an array of unadjusted or adjusted fixed exercise dates."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42112</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingProvisionOptionExerciseFixedDates (42112)](/fix/fields/tags-42000-42199#tag-42112).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42113 | [UnderlyingProvisionOptionExerciseFixedDate](/fix/fields/tags-42000-42199#tag-42113) | LocalMktDate | Optional | Required if NoUnderlyingProvisionOptionExerciseFixedDates(42112) &gt; 0. |
+| 42114 | [UnderlyingProvisionOptionExerciseFixedDateType](/fix/fields/tags-42000-42199#tag-42114) | ProvisionOptionExerciseFixedDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingProvisionOptionExerciseDates](/fix/components/underlying-provision-option-exercise-dates)

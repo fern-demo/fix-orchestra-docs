@@ -1,0 +1,24 @@
+---
+title: "PaymentSettlGrp"
+subtitle: "The PaymentSettlGrp is a repeating subcomponent of the PaymentGrp component used to report payment settlement as a single or split payment."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40230</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPaymentSettls (40230)](/fix/fields/tags-40200-40399#tag-40230).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40231 | [PaymentSettlAmount](/fix/fields/tags-40200-40399#tag-40231) | Amt | Optional | Required if NoPaymentSettls(40230) &gt; 0. |
+| 40232 | [PaymentSettlCurrency](/fix/fields/tags-40200-40399#tag-40232) | Currency | Optional | Specifies the currency the PaymentSettlAmount(40231) is denominated in. Uses ISO 4217 currency codes. |
+| 40233 | [PaymentSettlParties](/fix/groups/payment-settl-parties) | Repeating group | Optional | PaymentSettlParties is a repeating subcomponent of the PaymentSettlGrp component used to report payment settlement routing. |
+
+</StickyTable>
+
+## Used in
+
+[PaymentGrp](/fix/groups/payment-grp)

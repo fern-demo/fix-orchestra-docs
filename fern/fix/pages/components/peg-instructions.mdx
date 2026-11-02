@@ -1,0 +1,30 @@
+---
+title: "PegInstructions"
+subtitle: "The Peg Instructions component block is used to tie the price of a security to a market event such as opening price, mid-price, best price. The Peg Instructions block may also be used to tie the price to the behavior of a related security."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 211 | [PegOffsetValue](/fix/fields/tags-200-399#tag-211) | float | Optional | Amount (signed) added to the peg for a pegged order in the context of the PegOffsetType |
+| 1094 | [PegPriceType](/fix/fields/tags-1000-1199#tag-1094) | PegPriceTypeCodeSet | Optional | Defines the type of peg. |
+| 835 | [PegMoveType](/fix/fields/tags-800-999#tag-835) | PegMoveTypeCodeSet | Optional | Describes whether peg is static/fixed or floats |
+| 836 | [PegOffsetType](/fix/fields/tags-800-999#tag-836) | PegOffsetTypeCodeSet | Optional | Type of Peg Offset (e.g. price offset, tick offset etc) |
+| 837 | [PegLimitType](/fix/fields/tags-800-999#tag-837) | PegLimitTypeCodeSet | Optional | Specifies nature of resulting pegged price (e.g. or better limit, strict limit etc) |
+| 838 | [PegRoundDirection](/fix/fields/tags-800-999#tag-838) | PegRoundDirectionCodeSet | Optional | If the calculated peg price is not a valid tick price, specifies how to round the price (e.g. be more or less aggressive) |
+| 840 | [PegScope](/fix/fields/tags-800-999#tag-840) | PegScopeCodeSet | Optional | The scope of the "related to" price of the peg (e.g. local, global etc) |
+| 1096 | [PegSecurityIDSource](/fix/fields/tags-1000-1199#tag-1096) | SecurityIDSourceCodeSet | Optional | Required if PegSecurityID is specified. |
+| 1097 | [PegSecurityID](/fix/fields/tags-1000-1199#tag-1097) | String | Optional | Requires PegSecurityIDSource if specified. |
+| 1098 | [PegSymbol](/fix/fields/tags-1000-1199#tag-1098) | String | Optional | Defines the common, 'human understood' representation of the security off whose prices the order will Peg. |
+| 1099 | [PegSecurityDesc](/fix/fields/tags-1000-1199#tag-1099) | String | Optional | Security description of the security off whose prices the order will Peg. |
+
+</StickyTable>
+
+## Used in
+
+[CrossOrderCancelReplaceRequest](/fix/messages/cross-order-cancel-replace-request), [ExecutionReport](/fix/messages/execution-report), [ListOrdGrp](/fix/groups/list-ord-grp), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderCross](/fix/messages/new-order-cross), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request)

@@ -1,0 +1,34 @@
+---
+title: "Tags 50000–50002"
+subtitle: "3 fields"
+---
+
+## 50000 · BatchID [#tag-50000]
+
+<Badge intent="info" minimal>Tag 50000</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Unique Identifier for a batch of messages.
+
+Type: [String](/fix/datatypes#string)
+
+## 50001 · BatchTotalMessages [#tag-50001]
+
+<Badge intent="info" minimal>Tag 50001</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Total # of messages contained within batch.
+
+Type: [int](/fix/datatypes#int)
+
+## 50002 · BatchProcessMode [#tag-50002]
+
+<Badge intent="info" minimal>Tag 50002</Badge> <Badge intent="note" minimal>BatchProcessModeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates the processing mode for a batch of messages.
+
+Code set **BatchProcessModeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Update | Update/incremental (default if not specified) |
+| `1` | Snapshot | Snapshot |
+

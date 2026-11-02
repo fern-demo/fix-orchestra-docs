@@ -1,0 +1,26 @@
+---
+title: "RelativeValueGrp"
+subtitle: "The RelativeValueGrp component is used to convey relative valuation metrics or analytics for a given instrument."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2529</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Relative valuation metrics or analytics are commonly provided by the trading party providing pricing as part of fixed income cash bonds or OTC derivatives indication or quoting activities.
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelativeValues (2529)](/fix/fields/tags-2400-2599#tag-2529).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 2530 | [RelativeValueType](/fix/fields/tags-2400-2599#tag-2530) | RelativeValueTypeCodeSet | Optional | Required if NoRelativeValues(2529) &gt; 0. |
+| 2531 | [RelativeValue](/fix/fields/tags-2400-2599#tag-2531) | float | Optional | Required if NoRelativeValues(2529) &gt; 0. |
+| 2532 | [RelativeValueSide](/fix/fields/tags-2400-2599#tag-2532) | RelativeValueSideCodeSet | Optional | Specifies the side of the relative value. |
+
+</StickyTable>
+
+## Used in
+
+[ExecutionReport](/fix/messages/execution-report), [IOI](/fix/messages/ioi), [Quote](/fix/messages/quote)

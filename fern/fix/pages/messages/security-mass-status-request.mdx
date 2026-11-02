@@ -1,0 +1,32 @@
+---
+title: "SecurityMassStatusRequest"
+---
+
+<Badge intent="info">MsgType CN</Badge> <Badge intent="note" minimal>Securities Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 324 | [SecurityStatusReqID](/fix/fields/tags-200-399#tag-324) | String | **Required** | Must be unique, or the ID of previous Security Mass Status Request to disable if SubscriptionRequestType = Disable previous Snapshot + Updates Request (2). |
+| | [InstrumentScope](/fix/components/instrument-scope) | Component | Optional | Used to specify the instrument |
+| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263) | SubscriptionRequestTypeCodeSet | **Required** | SubcriptionRequestType indicates to the other party what type of response is expected. A snapshot request only asks for current information. A subscribe request asks for updates as the status changes. Unsubscribe will cancel any future update messages from the counter party. |
+| 1465 | [SecurityListID](/fix/fields/tags-1400-1599#tag-1465) | String | Optional | Specifies an identifier for a Security List |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Identifies the market |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is determined by market or counterparties. To specify good for session where session spans more than one calendar day, use TimeInForce = 0… |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures markets to identify exchange specific execution time bracket codes as required by US market regulations. Bilaterally agreed values of data… |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="SecurityMassStatusRequest" wordWrap
+8=FIXT.1.1|9=77|35=CN|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|324=ABC123|263=0|10=073|
+```

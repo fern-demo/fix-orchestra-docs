@@ -1,0 +1,22 @@
+---
+title: "LotTypeRules"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1234</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLotTypeRules (1234)](/fix/fields/tags-1200-1399#tag-1234).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1093 | [LotType](/fix/fields/tags-1000-1199#tag-1093) | LotTypeCodeSet | Optional | Defines the lot type assigned to the order. Use as an alternate to RoundLot(561). To be used with MinLotSize(1231). LotType + MinLotSize ( max is next level minus 1) |
+| 1231 | [MinLotSize](/fix/fields/tags-1200-1399#tag-1231) | Qty | Optional | Minimum lot size allowed based on lot type specified in LotType(1093) |
+
+</StickyTable>
+
+## Used in
+
+[BaseTradingRules](/fix/components/base-trading-rules)

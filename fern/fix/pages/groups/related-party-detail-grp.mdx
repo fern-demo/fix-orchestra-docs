@@ -1,0 +1,28 @@
+---
+title: "RelatedPartyDetailGrp"
+subtitle: "Party details for parties related to the Party specified in the PartyDetailGrp."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1562</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedPartyDetailID (1562)](/fix/fields/tags-1400-1599#tag-1562).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1563 | [RelatedPartyDetailID](/fix/fields/tags-1400-1599#tag-1563) | String | Optional | Required if NoRelatedPartyDetails &gt; 0. |
+| 1564 | [RelatedPartyDetailIDSource](/fix/fields/tags-1400-1599#tag-1564) | PartyIDSourceCodeSet | Optional | Required if NoRelatedPartyDetails &gt; 0. |
+| 1565 | [RelatedPartyDetailRole](/fix/fields/tags-1400-1599#tag-1565) | PartyRoleCodeSet | Optional | Required if NoRelatedPartyDetails &gt; 0. |
+| 1675 | [RelatedPartyDetailRoleQualifier](/fix/fields/tags-1600-1799#tag-1675) | PartyDetailRoleQualifierCodeSet | Optional | Qualifies the value of RelatedPartyRole(1565) |
+| 1566 | [RelatedPartyDetailSubGrp](/fix/groups/related-party-detail-sub-grp) | Repeating group | Optional | PartySubGrp for related parties. |
+| 1569 | [RelatedPartyDetailAltIDGrp](/fix/groups/related-party-detail-alt-id-grp) | Repeating group | Optional | Alternative identifiers for parties related to the party specified in the PartyDetailGrp. |
+| 1514 | [PartyRelationshipGrp](/fix/groups/party-relationship-grp) | Repeating group | Optional | Repeating group of party relationships. |
+
+</StickyTable>
+
+## Used in
+
+[PartyActionReport](/fix/messages/party-action-report), [PartyActionRequest](/fix/messages/party-action-request), [PartyDetailGrp](/fix/groups/party-detail-grp), [PartyRiskLimitCheckRequest](/fix/messages/party-risk-limit-check-request), [PartyRiskLimitCheckRequestAck](/fix/messages/party-risk-limit-check-request-ack)

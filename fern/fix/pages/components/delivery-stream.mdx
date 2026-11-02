@@ -1,0 +1,48 @@
+---
+title: "DeliveryStream"
+subtitle: "The DeliveryStream component is used to optionally specify the attributes of a physical delivery stream in a swap."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41058 | [DeliveryStreamType](/fix/fields/tags-41000-41199#tag-41058) | DeliveryStreamTypeCodeSet | Optional | Specifies the type of delivery stream. |
+| 41085 | [DeliveryStreamCommoditySourceGrp](/fix/groups/delivery-stream-commodity-source-grp) | Repeating group | Optional | The DeliveryStreamCommoditySourceGrp is a repeating subcomponent of the DeliveryStream component used to detail the origins or sources of the commodity. |
+| 41059 | [DeliveryStreamPipeline](/fix/fields/tags-41000-41199#tag-41059) | String | Optional | The name of the oil delivery pipeline. |
+| 41060 | [DeliveryStreamEntryPoint](/fix/fields/tags-41000-41199#tag-41060) | String | Optional | The point at which the commodity will enter the delivery mechanism or pipeline. |
+| 41061 | [DeliveryStreamWithdrawalPoint](/fix/fields/tags-41000-41199#tag-41061) | String | Optional | The point at which the commodity product will be withdrawn prior to delivery. |
+| 41062 | [DeliveryStreamDeliveryPoint](/fix/fields/tags-41000-41199#tag-41062) | String | Optional | The point at which the commodity product will be delivered and received. Value specified should follow market convention appropriate for the commodity product. For bullion, see http://www.fpml.org/coding-scheme/bullion-delivery-location for values. |
+| 42192 | [DeliveryStreamDeliveryPointSource](/fix/fields/tags-42000-42199#tag-42192) | DeliveryStreamDeliveryPointSourceCodeSet | Optional | Identifies the class or source of DeliveryStreamDeliveryPoint(41062). |
+| 42193 | [DeliveryStreamDeliveryPointDesc](/fix/fields/tags-42000-42199#tag-42193) | String | Optional | Description of the delivery point identified in DeliveryStreamDeliveryPoint(41062). |
+| 41063 | [DeliveryStreamDeliveryRestriction](/fix/fields/tags-41000-41199#tag-41063) | DeliveryStreamDeliveryRestrictionCodeSet | Optional | Specifies under what conditions the buyer and seller should be excused of their delivery obligations. |
+| 41064 | [DeliveryStreamDeliveryContingency](/fix/fields/tags-41000-41199#tag-41064) | String | Optional | Specifies the electricity delivery contingency. See http://www.fpml.org/coding-scheme/electricity-transmission-contingency for values. |
+| 41065 | [DeliveryStreamDeliveryContingentPartySide](/fix/fields/tags-41000-41199#tag-41065) | DeliveryStreamElectingPartySideCodeSet | Optional | The trade side value of the party responsible for electricity delivery contingency. |
+| 41066 | [DeliveryStreamDeliverAtSourceIndicator](/fix/fields/tags-41000-41199#tag-41066) | Boolean | Optional | When this element is specified and set to 'Y', delivery of the coal product is to be at its source. |
+| 41067 | [DeliveryStreamRiskApportionment](/fix/fields/tags-41000-41199#tag-41067) | String | Optional | Specifies how the parties to the trade apportion responsibility for the delivery of the commodity product. See http://www.fixtradingcommunity.org/codelists#Risk\_Apportionment for the details of the external code list. |
+| 41218 | [DeliveryStreamRiskApportionmentSource](/fix/fields/tags-41200-41399#tag-41218) | String | Optional | Specifies the source or legal framework for the risk apportionment. See http://www.fixtradingcommunity.org/codelists#Risk\_Apportionment\_Source for the details of the external code list. |
+| 41081 | [DeliveryStreamCycleGrp](/fix/groups/delivery-stream-cycle-grp) | Repeating group | Optional | The DeliveryStreamCycleGrp is a repeating subcomponent of the DeliveryStream component used to detail delivery cycles during which the oil product will be transported in the pipeline. |
+| 41068 | [DeliveryStreamTitleTransferLocation](/fix/fields/tags-41000-41199#tag-41068) | String | Optional | Specifies the title transfer location. |
+| 41069 | [DeliveryStreamTitleTransferCondition](/fix/fields/tags-41000-41199#tag-41069) | DeliveryStreamTitleTransferConditionCodeSet | Optional | Specifies the condition of title transfer. |
+| 41070 | [DeliveryStreamImporterOfRecord](/fix/fields/tags-41000-41199#tag-41070) | String | Optional | A party, not necessarily of the trade, who is the Importer of Record for the purposes of paying customs duties and applicable taxes or costs related to importation. |
+| 41071 | [DeliveryStreamNegativeTolerance](/fix/fields/tags-41000-41199#tag-41071) | float | Optional | Specifies the negative tolerance value. The value may be an absolute quantity or a percentage, as specified in DeliveryStreamToleranceType(41074). Percentage value is to be expressed relative to "1.0" representing 100% (e.g. a value of "0.0575" represents 5.75%). |
+| 41072 | [DeliveryStreamPositiveTolerance](/fix/fields/tags-41000-41199#tag-41072) | float | Optional | Specifies the positive tolerance value. The value may be an absolute quantity or a percentage, as specified in DeliveryStreamToleranceType(41074). Value may exceed agreed upon value. Percentage value is to be expressed relative to "1.0" representing 100% (e.g. a value of "0.0575" represents 5.75%). |
+| 41073 | [DeliveryStreamToleranceUnitOfMeasure](/fix/fields/tags-41000-41199#tag-41073) | UnitOfMeasureCodeSet | Optional | Specifies the tolerance value's unit of measure (UOM). |
+| 41074 | [DeliveryStreamToleranceType](/fix/fields/tags-41000-41199#tag-41074) | DeliveryScheduleToleranceTypeCodeSet | Optional | Specifies the tolerance value type. |
+| 41075 | [DeliveryStreamToleranceOptionSide](/fix/fields/tags-41000-41199#tag-41075) | DeliveryStreamToleranceOptionSideCodeSet | Optional | Indicates whether the tolerance is at the seller's or buyer's option. |
+| 41076 | [DeliveryStreamTotalPositiveTolerance](/fix/fields/tags-41000-41199#tag-41076) | Percentage | Optional | The positive percent tolerance which applies to the total quantity delivered over all shipment periods. Percentage value is to be expressed relative to "1.0" representing 100% (e.g. a value of "0.0575" represents 5.75%.). |
+| 41077 | [DeliveryStreamTotalNegativeTolerance](/fix/fields/tags-41000-41199#tag-41077) | Percentage | Optional | The negative percent tolerance which applies to the total quantity delivered over all shipment periods. Percentage value is to be expressed relative to "1.0" representing 100% (e.g. a value of "0.0575" represents 5.75%.). |
+| 41078 | [DeliveryStreamNotionalConversionFactor](/fix/fields/tags-41000-41199#tag-41078) | float | Optional | If the notional quantity is specified in a unit that does not match the unit in which the commodity reference price is quoted, the scaling or conversion factor used to convert the commodity reference price unit into the notional quantity unit should be stated here. If there is no conversion, this… |
+| 41079 | [DeliveryStreamTransportEquipment](/fix/fields/tags-41000-41199#tag-41079) | String | Optional | The transportation equipment with which the commodity product will be delivered and received. |
+| 41080 | [DeliveryStreamElectingPartySide](/fix/fields/tags-41000-41199#tag-41080) | DeliveryStreamElectingPartySideCodeSet | Optional | A reference to the party able to choose whether the gas is delivered for a particular period as found in a swing or interruptible contract. |
+| 43094 | [DeliveryStreamRouteOrCharter](/fix/fields/tags-43000-43199#tag-43094) | String | Optional | Specific delivery route or time charter average. Applicable to commodity freight swaps. |
+
+</StickyTable>
+
+## Used in
+
+[StreamGrp](/fix/groups/stream-grp)

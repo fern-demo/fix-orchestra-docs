@@ -1,0 +1,41 @@
+---
+title: "Email"
+subtitle: "The email message is similar to the format and purpose of the News message, however, it is intended for private use between two parties."
+---
+
+<Badge intent="info">MsgType C</Badge> <Badge intent="note" minimal>Event Communication</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.2.7</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 164 | [EmailThreadID](/fix/fields/tags-0-199#tag-164) | String | **Required** | Unique identifier for the email message thread |
+| 94 | [EmailType](/fix/fields/tags-0-199#tag-94) | EmailTypeCodeSet | **Required** | Email message type. |
+| 42 | [OrigTime](/fix/fields/tags-0-199#tag-42) | UTCTimestamp | Optional | Time of message origination (always expressed in UTC (Universal Time Coordinated, also known as "GMT")) |
+| 147 | [Subject](/fix/fields/tags-0-199#tag-147) | String | **Required** | Specifies the Subject text |
+| 356 | [EncodedSubjectLen](/fix/fields/tags-200-399#tag-356) | Length | Optional | Must be set if EncodedSubject field is specified and must immediately precede it. |
+| 357 | [EncodedSubject](/fix/fields/tags-200-399#tag-357) | data | Optional | Encoded (non-ASCII characters) representation of the Subject field in the encoded format specified via the MessageEncoding field. |
+| 215 | [RoutingGrp](/fix/groups/routing-grp) | Repeating group | Optional | The RoutingGrp is used to allow the application message sender to instruct the intermediary distributing the message who to further send the application message to. The original sender may also instruct who is not allowed to receive the message. When provided, the routing instructions provided in… |
+| 146 | [InstrmtGrp](/fix/groups/instrmt-grp) | Repeating group | Optional |  |
+| 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
+| 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
+| 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | Optional | Unique identifier for Order as assigned by sell-side (broker, exchange, ECN). Uniqueness must be guaranteed within a single trading day. Firms which accept multi-day orders should consider embedding a date within the OrderID field to assure uniqueness across days. |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | Unique identifier for Order as assigned by the buy-side (institution, broker, intermediary etc.) (identified by SenderCompID (49) or OnBehalfOfCompID (5) as appropriate). Uniqueness must be guaranteed within a single trading day. Firms, particularly those which electronically submit multi-day… |
+| 33 | [LinesOfTextGrp](/fix/groups/lines-of-text-grp) | Repeating group | **Required** |  |
+| 95 | [RawDataLength](/fix/fields/tags-0-199#tag-95) | Length | Optional | Number of bytes in raw data field. |
+| 96 | [RawData](/fix/fields/tags-0-199#tag-96) | data | Optional | Unformatted raw data, can include bitmaps, word processor documents, etc. |
+| 2104 | [AttachmentGrp](/fix/groups/attachment-grp) | Repeating group | Optional | The AttachmentGrp component provides the ability to attach other media type documents to a FIX message for transmission. The media type can be any of the media types (previously referred to as MIME types) that are listed by IANA (www.iana.org) \[RFC2046\]. The AttachmentGrp is intended to be used to… |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="Email" wordWrap
+8=FIXT.1.1|9=101|35=C|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|164=ABC123|94=0|147=ABC123|33=1|58=ABC123|10=005|
+```

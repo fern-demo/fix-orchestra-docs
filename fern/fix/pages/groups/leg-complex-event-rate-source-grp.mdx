@@ -1,0 +1,25 @@
+---
+title: "LegComplexEventRateSourceGrp"
+subtitle: "LegComplexEventRateSourceGrp is a subcomponent of LegComplexEvents for specifying primary and secondary rate sources."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41382</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegComplexEventRateSources (41382)](/fix/fields/tags-41200-41399#tag-41382).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41383 | [LegComplexEventRateSource](/fix/fields/tags-41200-41399#tag-41383) | RateSourceCodeSet | Optional | Required if NoLegComplexEventRateSources(41382) &gt; 0. |
+| 41384 | [LegComplexEventRateSourceType](/fix/fields/tags-41200-41399#tag-41384) | RateSourceTypeCodeSet | Optional | Required if NoLegComplexEventRateSources(41382) &gt; 0. |
+| 41385 | [LegComplexEventReferencePage](/fix/fields/tags-41200-41399#tag-41385) | String | Optional | Conditionally required when LegComplexEventRateSource(41383) = 99 (Other). |
+| 41386 | [LegComplexEvenReferencePageHeading](/fix/fields/tags-41200-41399#tag-41386) | String | Optional | Identifies the reference page heading from the rate source. |
+
+</StickyTable>
+
+## Used in
+
+[LegComplexEvents](/fix/groups/leg-complex-events)

@@ -1,0 +1,3140 @@
+---
+title: "Tags 41800–41999"
+subtitle: "200 fields"
+---
+
+## 41800 · NoUnderlyingStreamAssetAttributes [#tag-41800]
+
+<Badge intent="info" minimal>Tag 41800</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of asset attribute entries in the group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingStreamAssetAttributeGrp](/fix/groups/underlying-stream-asset-attribute-grp)
+
+## 41801 · UnderlyingStreamAssetAttributeType [#tag-41801]
+
+<Badge intent="info" minimal>Tag 41801</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the name of the attribute. See http://www.fixtradingcommunity.org/codelists#Asset\_Attribute\_Types for code list of applicable asset attribute types.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingStreamAssetAttributeGrp](/fix/groups/underlying-stream-asset-attribute-grp)
+
+## 41802 · UnderlyingStreamAssetAttributeValue [#tag-41802]
+
+<Badge intent="info" minimal>Tag 41802</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the value of the attribute.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingStreamAssetAttributeGrp](/fix/groups/underlying-stream-asset-attribute-grp)
+
+## 41803 · UnderlyingStreamAssetAttributeLimit [#tag-41803]
+
+<Badge intent="info" minimal>Tag 41803</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The limit or lower acceptable value of the attribute.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingStreamAssetAttributeGrp](/fix/groups/underlying-stream-asset-attribute-grp)
+
+## 41804 · NoUnderlyingDeliveryStreamCycles [#tag-41804]
+
+<Badge intent="info" minimal>Tag 41804</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of delivery cycles in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingDeliveryStreamCycleGrp](/fix/groups/underlying-delivery-stream-cycle-grp)
+
+## 41805 · UnderlyingDeliveryStreamCycleDesc [#tag-41805]
+
+<Badge intent="info" minimal>Tag 41805</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The delivery cycles during which the oil product will be transported in the pipeline.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingDeliveryStreamCycleGrp](/fix/groups/underlying-delivery-stream-cycle-grp)
+
+## 41806 · EncodedUnderlyingDeliveryStreamCycleDescLen [#tag-41806]
+
+<Badge intent="info" minimal>Tag 41806</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Byte length of encoded (non-ASCII characters) EncodedUnderlyingDeliveryStreamCycleDesc(41807) field.
+
+Type: [Length](/fix/datatypes#length)
+
+Used in: [UnderlyingDeliveryStreamCycleGrp](/fix/groups/underlying-delivery-stream-cycle-grp)
+
+## 41807 · EncodedUnderlyingDeliveryStreamCycleDesc [#tag-41807]
+
+<Badge intent="info" minimal>Tag 41807</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Encoded (non-ASCII characters) representation of the UnderlyingDeliveryStreamCycleDesc(41805) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the UnderlyingDeliveryStreamCycleDesc(41805) field.
+
+Type: [data](/fix/datatypes#data)
+
+Used in: [UnderlyingDeliveryStreamCycleGrp](/fix/groups/underlying-delivery-stream-cycle-grp)
+
+## 41808 · NoUnderlyingDeliveryStreamCommoditySources [#tag-41808]
+
+<Badge intent="info" minimal>Tag 41808</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of commodity sources in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingDeliveryStreamCommoditySourceGrp](/fix/groups/underlying-delivery-stream-commodity-source-grp)
+
+## 41809 · UnderlyingDeliveryStreamCommoditySource [#tag-41809]
+
+<Badge intent="info" minimal>Tag 41809</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The SCoTA coal cargo origin, mining region, mine(s), mining complex(es), loadout(s) or river dock(s) or other point(s) of origin that seller and buyer agree are acceptable origins for the coal product. For international coal transactions, this is the origin of the coal product. See http://www.fpml.org/coding-scheme/commodity-coal-product-source for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingDeliveryStreamCommoditySourceGrp](/fix/groups/underlying-delivery-stream-commodity-source-grp)
+
+## 41810 · UnderlyingExerciseDesc [#tag-41810]
+
+<Badge intent="info" minimal>Tag 41810</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A description of the option exercise.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingOptionExercise](/fix/components/underlying-option-exercise)
+
+## 41811 · EncodedUnderlyingExerciseDescLen [#tag-41811]
+
+<Badge intent="info" minimal>Tag 41811</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Byte length of encoded (non-ASCII characters) EncodedUnderlyingExerciseDesc(41812) field.
+
+Type: [Length](/fix/datatypes#length)
+
+Used in: [UnderlyingOptionExercise](/fix/components/underlying-option-exercise)
+
+## 41812 · EncodedUnderlyingExerciseDesc [#tag-41812]
+
+<Badge intent="info" minimal>Tag 41812</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Encoded (non-ASCII characters) representation of the UnderlyingExerciseDesc(41810) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the UnderlyingExerciseDesc(41810) field.
+
+Type: [data](/fix/datatypes#data)
+
+Used in: [UnderlyingOptionExercise](/fix/components/underlying-option-exercise)
+
+## 41813 · UnderlyingAutomaticExerciseIndicator [#tag-41813]
+
+<Badge intent="info" minimal>Tag 41813</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates (when 'Y') that exercise is automatic when the strike price is crossed or the underlying trade is in the money.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [UnderlyingOptionExercise](/fix/components/underlying-option-exercise)
+
+## 41814 · UnderlyingAutomaticExerciseThresholdRate [#tag-41814]
+
+<Badge intent="info" minimal>Tag 41814</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The threshold rate for triggering automatic exercise.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [UnderlyingOptionExercise](/fix/components/underlying-option-exercise)
+
+## 41815 · UnderlyingExerciseConfirmationMethod [#tag-41815]
+
+<Badge intent="info" minimal>Tag 41815</Badge> <Badge intent="note" minimal>ExerciseConfirmationMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether follow-up confirmation of exercise (written or electronic) is required following telephonic notice by the buyer to the seller or seller's agent.
+
+Code set **ExerciseConfirmationMethodCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotRequired | Not required |
+| `1` | NonElectronic | Non-electronic |
+| `2` | Electronic | Electronic |
+| `3` | Unknown | Unknown at time of report |
+
+Used in: [UnderlyingOptionExercise](/fix/components/underlying-option-exercise)
+
+## 41816 · UnderlyingManualNoticeBusinessCenter [#tag-41816]
+
+<Badge intent="info" minimal>Tag 41816</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the business center used for adjusting the time for manual exercise notice. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingOptionExercise](/fix/components/underlying-option-exercise)
+
+## 41817 · UnderlyingFallbackExerciseIndicator [#tag-41817]
+
+<Badge intent="info" minimal>Tag 41817</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether the notional amount of the underlying swap, not previously exercised under the option, will be automatically exercised at the expiration time on the expiration date if at such time the buyer is in-the-money, provided that the difference between the settlement rate and the fixed rate under the relevant underlying swap is not less than one tenth of a percentage point (0.10% or 0.001).
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [UnderlyingOptionExercise](/fix/components/underlying-option-exercise)
+
+## 41818 · UnderlyingLimitedRightToConfirmIndicator [#tag-41818]
+
+<Badge intent="info" minimal>Tag 41818</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether the Seller may request the Buyer to confirm its intent to exercise if not done on or before the expiration time on the Expiration date. If true ("Y") specific rules will apply in relation to the settlement mode.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [UnderlyingOptionExercise](/fix/components/underlying-option-exercise)
+
+## 41819 · UnderlyingExerciseSplitTicketIndicator [#tag-41819]
+
+<Badge intent="info" minimal>Tag 41819</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates in physical settlement of bond and convertible bond options whether the party required to deliver the bonds will divide those to be delivered as notifying party desires to facilitate delivery obligations.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [UnderlyingOptionExercise](/fix/components/underlying-option-exercise)
+
+## 41820 · NoUnderlyingOptionExerciseBusinessCenters [#tag-41820]
+
+<Badge intent="info" minimal>Tag 41820</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of business centers in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingOptionExerciseBusinessCenterGrp](/fix/groups/underlying-option-exercise-business-center-grp)
+
+## 41821 · UnderlyingOptionExerciseBusinessCenter [#tag-41821]
+
+<Badge intent="info" minimal>Tag 41821</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the option exercise dates, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingOptionExerciseBusinessCenterGrp](/fix/groups/underlying-option-exercise-business-center-grp)
+
+## 41822 · UnderlyingOptionExerciseBusinessDayConvention [#tag-41822]
+
+<Badge intent="info" minimal>Tag 41822</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the option exercise dates. Used only to override the business day convention specified in the UnderlyingDateAdjustment component within the UnderlyingInstrument component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41823 · UnderlyingOptionExerciseEarliestDateOffsetDayType [#tag-41823]
+
+<Badge intent="info" minimal>Tag 41823</Badge> <Badge intent="note" minimal>ComplexEventDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the relative earliest exercise date offset.
+
+Code set **ComplexEventDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41824 · UnderlyingOptionExerciseEarliestDateOffsetPeriod [#tag-41824]
+
+<Badge intent="info" minimal>Tag 41824</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative earliest exercise date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41825 · UnderlyingOptionExerciseEarliestDateOffsetUnit [#tag-41825]
+
+<Badge intent="info" minimal>Tag 41825</Badge> <Badge intent="note" minimal>ProvisionOptionExerciseEarliestDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative earliest exercise date offset.
+
+Code set **ProvisionOptionExerciseEarliestDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41826 · UnderlyingOptionExerciseFrequencyPeriod [#tag-41826]
+
+<Badge intent="info" minimal>Tag 41826</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the frequency of exercise dates.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41827 · UnderlyingOptionExerciseFrequencyUnit [#tag-41827]
+
+<Badge intent="info" minimal>Tag 41827</Badge> <Badge intent="note" minimal>ProtectionTermEventUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the frequency of exercise dates.
+
+Code set **ProtectionTermEventUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41828 · UnderlyingOptionExerciseStartDateUnadjusted [#tag-41828]
+
+<Badge intent="info" minimal>Tag 41828</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted start date for calculating periodic exercise dates.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41829 · UnderlyingOptionExerciseStartDateRelativeTo [#tag-41829]
+
+<Badge intent="info" minimal>Tag 41829</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the option exercise start date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41830 · UnderlyingOptionExerciseStartDateOffsetPeriod [#tag-41830]
+
+<Badge intent="info" minimal>Tag 41830</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative exercise start date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41831 · UnderlyingOptionExerciseStartDateOffsetUnit [#tag-41831]
+
+<Badge intent="info" minimal>Tag 41831</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative exercise start date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41832 · UnderlyingOptionExerciseStartDateOffsetDayType [#tag-41832]
+
+<Badge intent="info" minimal>Tag 41832</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the relative option exercise start date offset.
+
+Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41833 · UnderlyingOptionExerciseStartDateAdjusted [#tag-41833]
+
+<Badge intent="info" minimal>Tag 41833</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted start date for calculating periodic exercise dates.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41834 · UnderlyingOptionExerciseSkip [#tag-41834]
+
+<Badge intent="info" minimal>Tag 41834</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The number of periods in the referenced date schedule that are between each date in the relative date schedule. Thus a skip of 2 would mean that dates are relative to every second date in the referenced schedule. If present this should have a value greater than 1.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41835 · UnderlyingOptionExerciseNominationDeadline [#tag-41835]
+
+<Badge intent="info" minimal>Tag 41835</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The last date (adjusted) for establishing the option exercise terms.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41836 · UnderlyingOptionExerciseFirstDateUnadjusted [#tag-41836]
+
+<Badge intent="info" minimal>Tag 41836</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted first exercise date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41837 · UnderlyingOptionExerciseLastDateUnadjusted [#tag-41837]
+
+<Badge intent="info" minimal>Tag 41837</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted last exercise date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41838 · UnderlyingOptionExerciseEarliestTime [#tag-41838]
+
+<Badge intent="info" minimal>Tag 41838</Badge> <Badge intent="note" minimal>LocalMktTime</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The earliest time at which notice of exercise can be given by the buyer to the seller (or seller's agent) (i) on the expriation date, in the case of a European style option, (ii) on each Bermuda option exercise date and the expiration date, in the case of a Bermuda style option, (iii) the commencement date to, and including, the expiration date, in the case of an American option.
+
+Type: [LocalMktTime](/fix/datatypes#local-mkt-time)
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41839 · UnderlyingOptionExerciseLatestTime [#tag-41839]
+
+<Badge intent="info" minimal>Tag 41839</Badge> <Badge intent="note" minimal>LocalMktTime</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Latest exercise time. See also UnderlyingOptionExerciseEarliestTime(41838).
+
+Type: [LocalMktTime](/fix/datatypes#local-mkt-time)
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41840 · UnderlyingOptionExerciseTimeBusinessCenter [#tag-41840]
+
+<Badge intent="info" minimal>Tag 41840</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center used to determine the locale for option exercise time, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates)
+
+## 41841 · NoUnderlyingOptionExerciseDates [#tag-41841]
+
+<Badge intent="info" minimal>Tag 41841</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of dates in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingOptionExerciseDateGrp](/fix/groups/underlying-option-exercise-date-grp)
+
+## 41842 · UnderlyingOptionExerciseDate [#tag-41842]
+
+<Badge intent="info" minimal>Tag 41842</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted or unadjusted option exercise fixed date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [UnderlyingOptionExerciseDateGrp](/fix/groups/underlying-option-exercise-date-grp)
+
+## 41843 · UnderlyingOptionExerciseDateType [#tag-41843]
+
+<Badge intent="info" minimal>Tag 41843</Badge> <Badge intent="note" minimal>OptionExerciseDateTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of option exercise date. When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type.
+
+Code set **OptionExerciseDateTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Unadjusted | Unadjusted |
+| `1` | Adjusted | Adjusted |
+
+Used in: [UnderlyingOptionExerciseDateGrp](/fix/groups/underlying-option-exercise-date-grp)
+
+## 41844 · NoUnderlyingOptionExerciseExpirationDateBusinessCenters [#tag-41844]
+
+<Badge intent="info" minimal>Tag 41844</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of business centers in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingOptionExerciseExpirationDateBusinessCenterGrp](/fix/groups/underlying-option-exercise-expiration-date-business-center-grp)
+
+## 41845 · UnderlyingOptionExerciseExpirationDateBusinessCenter [#tag-41845]
+
+<Badge intent="info" minimal>Tag 41845</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the option exercise expiration dates, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingOptionExerciseExpirationDateBusinessCenterGrp](/fix/groups/underlying-option-exercise-expiration-date-business-center-grp)
+
+## 41846 · UnderlyingOptionExerciseExpirationDateBusinessDayConvention [#tag-41846]
+
+<Badge intent="info" minimal>Tag 41846</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the option exercise expiration dates. Used only to override the business day convention specified in the UnderlyingDateAdjustment component within the UnderlyingInstrument component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [UnderlyingOptionExerciseExpiration](/fix/components/underlying-option-exercise-expiration)
+
+## 41847 · UnderlyingOptionExerciseExpirationDateRelativeTo [#tag-41847]
+
+<Badge intent="info" minimal>Tag 41847</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the option exercise expiration date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingOptionExerciseExpiration](/fix/components/underlying-option-exercise-expiration)
+
+## 41848 · UnderlyingOptionExerciseExpirationDateOffsetPeriod [#tag-41848]
+
+<Badge intent="info" minimal>Tag 41848</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative exercise expiration date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingOptionExerciseExpiration](/fix/components/underlying-option-exercise-expiration)
+
+## 41849 · UnderlyingOptionExerciseExpirationDateOffsetUnit [#tag-41849]
+
+<Badge intent="info" minimal>Tag 41849</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative exercise expiration date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [UnderlyingOptionExerciseExpiration](/fix/components/underlying-option-exercise-expiration)
+
+## 41850 · UnderlyingOptionExerciseExpirationFrequencyPeriod [#tag-41850]
+
+<Badge intent="info" minimal>Tag 41850</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the frequency of exercise expiration dates.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingOptionExerciseExpiration](/fix/components/underlying-option-exercise-expiration)
+
+## 41851 · UnderlyingOptionExerciseExpirationFrequencyUnit [#tag-41851]
+
+<Badge intent="info" minimal>Tag 41851</Badge> <Badge intent="note" minimal>ProtectionTermEventUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the frequency of exercise expiration dates.
+
+Code set **ProtectionTermEventUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [UnderlyingOptionExerciseExpiration](/fix/components/underlying-option-exercise-expiration)
+
+## 41852 · UnderlyingOptionExerciseExpirationRollConvention [#tag-41852]
+
+<Badge intent="info" minimal>Tag 41852</Badge> <Badge intent="note" minimal>DateRollConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The convention for determining the sequence of exercise expiration dates. It is used in conjunction with a specified frequency. Used only to override the roll convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument.
+
+Code set **DateRollConventionCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | FirstDay | 1st day of the month |
+| `2` | SecondDay | 2nd day of the month |
+| `3` | ThirdDay | 3rd day of the month |
+| `4` | FourthDay | 4th day of the month |
+| `5` | FifthDay | 5th day of the month |
+| `6` | SixthDay | 6thd day of the month |
+| `7` | SeventhDay | 7th day of the month |
+| `8` | EighthDay | 8th day of the month |
+| `9` | NinthDay | 9th day of the month |
+| `10` | TenthDay | 10th day of the month |
+| `11` | EleventhDay | 11th day of the month |
+| `12` | TwelvthDay | 12th day of the month |
+| `13` | ThirteenthDay | 13th day of the month |
+| `14` | ForteenthDay | 14th day of the month |
+| `15` | FifteenthDay | 15th day of the month |
+| `16` | SixteenthDay | 16th day of the month |
+| `17` | SeventeenthDay | 17th day of the month |
+| `18` | EighteenthDay | 18th day of the month |
+| `19` | NineteenthDay | 19th day of the month |
+| `20` | TwentiethDay | 20th day of the month |
+| `21` | TwentyFirstDay | 21st day of the month |
+| `22` | TwentySecondDay | 22nd day of the month |
+| `23` | TwentyThirdDay | 23rd day of the month |
+| `24` | TwentyFourthDay | 24th day of the month |
+| `25` | TwentyFifthDay | 25th day of the month |
+| `26` | TwentySixthDay | 26th day of the month |
+| `27` | TwentySeventhDay | 27th day of the month |
+| `28` | TwentyEigthDa28y | 28th day of the month |
+| `29` | TwentyNinthDay | 29th day of the month |
+| `30` | ThirtiethDay | 30th day of the month |
+| `EOM` | EOM | The end of the month. |
+| `FRN` | FRN | The floating rate note convention or Eurodollar convention. |
+| `IMM` | IMM | The International Money Market settlement date, i.e. the 3rd Wednesday of the month. |
+| `IMMCAD` | IMMCAD | The last trading day/expiration day of the Canadian Derivatives Exchange. |
+| `IMMAUD` | IMMAUD | The last trading day of the Sydney Futures Exchange Australian 90-day bank accepted bill futures contract. |
+| `IMMNZD` | IMMNZD | The last trading day of the Sydney Futures Exchange New Zealand 90-day bank bill futures contract. |
+| `SFE` | SFE | The Sydney Futures Exchange 90-day bank accepted bill futures settlement dates. |
+| `NONE` | NONE | No adjustment |
+| `TBILL` | TBILL | The 13-week and 26-week U.S. Treasury Bill auction dates. |
+| `MON` | MON | Monday |
+| `TUE` | TUE | Tuesday |
+| `WED` | WED | Wednesday |
+| `THU` | THU | Thursday |
+| `FRI` | FRI | Friday |
+| `SAT` | SAT | Saturday |
+| `SUN` | SUN | Sunday |
+
+Used in: [UnderlyingOptionExerciseExpiration](/fix/components/underlying-option-exercise-expiration)
+
+## 41853 · UnderlyingOptionExerciseExpirationDateOffsetDayType [#tag-41853]
+
+<Badge intent="info" minimal>Tag 41853</Badge> <Badge intent="note" minimal>ComplexEventDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the relative option exercise expiration date offset.
+
+Code set **ComplexEventDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [UnderlyingOptionExerciseExpiration](/fix/components/underlying-option-exercise-expiration)
+
+## 41854 · UnderlyingOptionExerciseExpirationTime [#tag-41854]
+
+<Badge intent="info" minimal>Tag 41854</Badge> <Badge intent="note" minimal>LocalMktTime</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The option exercise expiration time.
+
+Type: [LocalMktTime](/fix/datatypes#local-mkt-time)
+
+Used in: [UnderlyingOptionExerciseExpiration](/fix/components/underlying-option-exercise-expiration)
+
+## 41855 · UnderlyingOptionExerciseExpirationTimeBusinessCenter [#tag-41855]
+
+<Badge intent="info" minimal>Tag 41855</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center used to determine the locale for option exercise expiration time, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingOptionExerciseExpiration](/fix/components/underlying-option-exercise-expiration)
+
+## 41856 · NoUnderlyingOptionExerciseExpirationDates [#tag-41856]
+
+<Badge intent="info" minimal>Tag 41856</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of fixed exercise expiration dates in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingOptionExerciseExpirationDateGrp](/fix/groups/underlying-option-exercise-expiration-date-grp)
+
+## 41857 · UnderlyingOptionExerciseExpirationDate [#tag-41857]
+
+<Badge intent="info" minimal>Tag 41857</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted or unadjusted option exercise expiration fixed date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [UnderlyingOptionExerciseExpirationDateGrp](/fix/groups/underlying-option-exercise-expiration-date-grp)
+
+## 41858 · UnderlyingOptionExerciseExpirationDateType [#tag-41858]
+
+<Badge intent="info" minimal>Tag 41858</Badge> <Badge intent="note" minimal>OptionExerciseDateTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of option exercise expiration date. When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type.
+
+Code set **OptionExerciseDateTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Unadjusted | Unadjusted |
+| `1` | Adjusted | Adjusted |
+
+Used in: [UnderlyingOptionExerciseExpirationDateGrp](/fix/groups/underlying-option-exercise-expiration-date-grp)
+
+## 41859 · UnderlyingMarketDisruptionProvision [#tag-41859]
+
+<Badge intent="info" minimal>Tag 41859</Badge> <Badge intent="note" minimal>MarketDisruptionProvisionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The consequences of market disruption events.
+
+Code set **MarketDisruptionProvisionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | Applicable | Applicable |
+| `2` | AsInMasterAgreement | As specified in master agreement |
+| `3` | AsInConfirmation | As specified in confirmation |
+
+Used in: [UnderlyingMarketDisruption](/fix/components/underlying-market-disruption)
+
+## 41860 · UnderlyingMarketDisruptionFallbackProvision [#tag-41860]
+
+<Badge intent="info" minimal>Tag 41860</Badge> <Badge intent="note" minimal>MarketDisruptionFallbackProvisionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the location of the fallback provision documentation.
+
+Code set **MarketDisruptionFallbackProvisionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | MasterAgreement | As specified in master agreement |
+| `1` | Confirmation | As specified in confirmation |
+
+Used in: [UnderlyingMarketDisruption](/fix/components/underlying-market-disruption)
+
+## 41861 · UnderlyingMarketDisruptionMaximumDays [#tag-41861]
+
+<Badge intent="info" minimal>Tag 41861</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the maximum number of market disruption days (commodity or bullion business days) in a contract or confirmation. If none are specified, the maximum number of market disruption days is five (5).
+
+ISDA 2005 Commodity Definition.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingMarketDisruption](/fix/components/underlying-market-disruption)
+
+## 41862 · UnderlyingMarketDisruptionMaterialityPercentage [#tag-41862]
+
+<Badge intent="info" minimal>Tag 41862</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used when a price materiality percentage applies to the price source disruption event and this event has been specified.
+
+Applicable to 2005 Commodity Definitions only.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [UnderlyingMarketDisruption](/fix/components/underlying-market-disruption)
+
+## 41863 · UnderlyingMarketDisruptionMinimumFuturesContracts [#tag-41863]
+
+<Badge intent="info" minimal>Tag 41863</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the minimum futures contracts level that dictates whether or not a 'De Minimis Trading' event has occurred.
+
+Applicable to 1993 Commodity Definitions only.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingMarketDisruption](/fix/components/underlying-market-disruption)
+
+## 41864 · NoUnderlyingMarketDisruptionEvents [#tag-41864]
+
+<Badge intent="info" minimal>Tag 41864</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of disruption events in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingMarketDisruptionEventGrp](/fix/groups/underlying-market-disruption-event-grp)
+
+## 41865 · UnderlyingMarketDisruptionEvent [#tag-41865]
+
+<Badge intent="info" minimal>Tag 41865</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the market disruption event. For commodities see http://www.fpml.org/coding-scheme/commodity-market-disruption for values. For foreign exchange, see http://www.fixtradingcommunity.org/codelists#Market\_Disruption\_Event for code list of applicable event types.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingMarketDisruptionEventGrp](/fix/groups/underlying-market-disruption-event-grp)
+
+## 41866 · NoUnderlyingMarketDisruptionFallbacks [#tag-41866]
+
+<Badge intent="info" minimal>Tag 41866</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of fallbacks in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingMarketDisruptionFallbackGrp](/fix/groups/underlying-market-disruption-fallback-grp)
+
+## 41867 · UnderlyingMarketDisruptionFallbackType [#tag-41867]
+
+<Badge intent="info" minimal>Tag 41867</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of disruption fallback. See http://www.fpml.org/coding-scheme/commodity-market-disruption-fallback for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingMarketDisruptionFallbackGrp](/fix/groups/underlying-market-disruption-fallback-grp)
+
+## 41868 · NoUnderlyingMarketDisruptionFallbackReferencePrices [#tag-41868]
+
+<Badge intent="info" minimal>Tag 41868</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of fallback reference securities in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingMarketDisruptionFallbackReferencePriceGrp](/fix/groups/underlying-market-disruption-fallback-reference-price-grp)
+
+## 41869 · UnderlyingMarketDisruptionFallbackUnderlierType [#tag-41869]
+
+<Badge intent="info" minimal>Tag 41869</Badge> <Badge intent="note" minimal>MarketDisruptionFallbackUnderlierTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The type of reference price underlier.
+
+Code set **MarketDisruptionFallbackUnderlierTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Basket | Basket |
+| `1` | Bond | Bond |
+| `2` | Cash | Cash |
+| `3` | Commodity | Commodity |
+| `4` | ConvertibleBond | Convertible bond |
+| `5` | Equity | Equity |
+| `6` | ExchangeTradedFund | Exchange traded fund |
+| `7` | Future | Future |
+| `8` | Index | Index |
+| `9` | Loan | Loan |
+| `10` | Mortgage | Mortgage |
+| `11` | MutualFund | Mutual fund |
+
+Used in: [UnderlyingMarketDisruptionFallbackReferencePriceGrp](/fix/groups/underlying-market-disruption-fallback-reference-price-grp)
+
+## 41870 · UnderlyingMarketDisruptionFallbackUnderlierSecurityID [#tag-41870]
+
+<Badge intent="info" minimal>Tag 41870</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the identifier value of the security.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingMarketDisruptionFallbackReferencePriceGrp](/fix/groups/underlying-market-disruption-fallback-reference-price-grp)
+
+## 41871 · UnderlyingMarketDisruptionFallbackUnderlierSecurityIDSource [#tag-41871]
+
+<Badge intent="info" minimal>Tag 41871</Badge> <Badge intent="note" minimal>SecurityIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the class or source scheme of the security identifier.
+
+Code set **SecurityIDSourceCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | CUSIP | CUSIP |
+| `2` | SEDOL | SEDOL |
+| `3` | QUIK | QUIK |
+| `4` | ISINNumber | ISIN |
+| `5` | RICCode | RIC |
+| `6` | ISOCurrencyCode | ISO Currency Code |
+| `7` | ISOCountryCode | ISO Country Code |
+| `8` | ExchangeSymbol | Exchange symbol |
+| `9` | ConsolidatedTapeAssociation | Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format) |
+| `A` | BloombergSymbol | Bloomberg Symbol |
+| `B` | Wertpapier | Wertpapier |
+| `C` | Dutch | Dutch |
+| `D` | Valoren | Valoren |
+| `E` | Sicovam | Sicovam |
+| `F` | Belgian | Belgian |
+| `G` | Common | "Common" (Clearstream and Euroclear) |
+| `H` | ClearingHouse | Clearing house / Clearing organization |
+| `I` | ISDAFpMLSpecification | ISDA/FpML product specification (XML in SecurityXML(1185)) |
+| `J` | OptionPriceReportingAuthority | Option Price Reporting Authority |
+| `K` | ISDAFpMLURL | ISDA/FpML product URL (URL in SecurityID(48)) |
+| `L` | LetterOfCredit | Letter of credit |
+| `M` | MarketplaceAssignedIdentifier | Marketplace-assigned Identifier |
+| `N` | MarkitREDEntityCLIP | Markit RED entity CLIP |
+| `P` | MarkitREDPairCLIP | Markit RED pair CLIP |
+| `Q` | CFTCCommodityCode | CFTC commodity code |
+| `R` | ISDACommodityReferencePrice | ISDA Commodity Reference Price |
+| `S` | FinancialInstrumentGlobalIdentifier | Financial Instrument Global Identifier |
+| `T` | LegalEntityIdentifier | Legal entity identifier |
+| `U` | Synthetic | Synthetic |
+| `V` | FidessaInstrumentMnemonic | Fidessa Instrument Mnemonic (FIM) |
+| `W` | IndexName | Index name |
+| `X` | UniformSymbol | Uniform Symbol (UMTF Symbol) |
+
+Used in: [UnderlyingMarketDisruptionFallbackReferencePriceGrp](/fix/groups/underlying-market-disruption-fallback-reference-price-grp)
+
+## 41872 · UnderlyingMarketDisruptionFallbackUnderlierSecurityDesc [#tag-41872]
+
+<Badge intent="info" minimal>Tag 41872</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the description of underlying security.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingMarketDisruptionFallbackReferencePriceGrp](/fix/groups/underlying-market-disruption-fallback-reference-price-grp)
+
+## 41873 · EncodedUnderlyingMarketDisruptionFallbackUnderlierSecurityDescLen [#tag-41873]
+
+<Badge intent="info" minimal>Tag 41873</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Byte length of encoded (non-ASCII characters) EncodedUnderlyingMarketDisruptionFallbackUnderlierSecurityDesc(41874) field.
+
+Type: [Length](/fix/datatypes#length)
+
+Used in: [UnderlyingMarketDisruptionFallbackReferencePriceGrp](/fix/groups/underlying-market-disruption-fallback-reference-price-grp)
+
+## 41874 · EncodedUnderlyingMarketDisruptionFallbackUnderlierSecurityDesc [#tag-41874]
+
+<Badge intent="info" minimal>Tag 41874</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Encoded (non-ASCII characters) representation of the UnderlyingMarketDisruptionFallbackUnderlierSecurityDesc(41872) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the UnderlyingMarketDisruptionFallbackUnderlierSecurityDesc(41872).
+
+Type: [data](/fix/datatypes#data)
+
+Used in: [UnderlyingMarketDisruptionFallbackReferencePriceGrp](/fix/groups/underlying-market-disruption-fallback-reference-price-grp)
+
+## 41875 · UnderlyingMarketDisruptionFallbackOpenUnits [#tag-41875]
+
+<Badge intent="info" minimal>Tag 41875</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+If there are multiple underlying assets, this specifies the number of units (index or securities) that constitute the underlier of the swap. In the case of a basket swap, this is used to reference both the number of basket units, and the number of each asset components of the basket when these are expressed in absolute terms.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [UnderlyingMarketDisruptionFallbackReferencePriceGrp](/fix/groups/underlying-market-disruption-fallback-reference-price-grp)
+
+## 41876 · UnderlyingMarketDisruptionFallbackBasketCurrency [#tag-41876]
+
+<Badge intent="info" minimal>Tag 41876</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency if the underlier is a basket. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [UnderlyingMarketDisruptionFallbackReferencePriceGrp](/fix/groups/underlying-market-disruption-fallback-reference-price-grp)
+
+## 41877 · UnderlyingMarketDisruptionFallbackBasketDivisor [#tag-41877]
+
+<Badge intent="info" minimal>Tag 41877</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the basket divisor amount. This value is normally used to adjust the constituent weight for pricing or to adjust for dividends, or other corporate actions.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [UnderlyingMarketDisruptionFallbackReferencePriceGrp](/fix/groups/underlying-market-disruption-fallback-reference-price-grp)
+
+## 41878 · NoUnderlyingPaymentScheduleFixingDays [#tag-41878]
+
+<Badge intent="info" minimal>Tag 41878</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of fixing days in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingPaymentScheduleFixingDayGrp](/fix/groups/underlying-payment-schedule-fixing-day-grp)
+
+## 41879 · UnderlyingPaymentScheduleFixingDayOfWeek [#tag-41879]
+
+<Badge intent="info" minimal>Tag 41879</Badge> <Badge intent="note" minimal>PaymentStreamPricingDayOfWeekCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The day of the week on which fixing takes place.
+
+Code set **PaymentStreamPricingDayOfWeekCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | EveryDay | Every day (the default if not specified) |
+| `1` | Monday | Monday |
+| `2` | Tuesday | Tuesday |
+| `3` | Wednesday | Wednesday |
+| `4` | Thursday | Thursday |
+| `5` | Friday | Friday |
+| `6` | Saturday | Saturday |
+| `7` | Sunday | Sunday |
+
+Used in: [UnderlyingPaymentScheduleFixingDayGrp](/fix/groups/underlying-payment-schedule-fixing-day-grp)
+
+## 41880 · UnderlyingPaymentScheduleFixingDayNumber [#tag-41880]
+
+<Badge intent="info" minimal>Tag 41880</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The occurrence of the day of week on which fixing takes place.
+
+For example, a fixing of the 3rd Friday would be DayOfWk=5 DayNum=3. If omitted every day of the week is a fixing day.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingPaymentScheduleFixingDayGrp](/fix/groups/underlying-payment-schedule-fixing-day-grp)
+
+## 41881 · UnderlyingPaymentScheduleXID [#tag-41881]
+
+<Badge intent="info" minimal>Tag 41881</Badge> <Badge intent="note" minimal>XID</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifier of this UnderlyingPaymentSchedule for cross referencing elsewhere in the message.
+
+Type: [XID](/fix/datatypes#xid)
+
+Used in: [UnderlyingPaymentScheduleGrp](/fix/groups/underlying-payment-schedule-grp)
+
+## 41882 · UnderlyingPaymentScheduleXIDRef [#tag-41882]
+
+<Badge intent="info" minimal>Tag 41882</Badge> <Badge intent="note" minimal>XIDREF</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Reference to payment schedule elsewhere in the message.
+
+Type: [XIDREF](/fix/datatypes#xidref)
+
+Used in: [UnderlyingPaymentScheduleGrp](/fix/groups/underlying-payment-schedule-grp)
+
+## 41883 · UnderlyingPaymentScheduleRateCurrency [#tag-41883]
+
+<Badge intent="info" minimal>Tag 41883</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency of the schedule rate. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [UnderlyingPaymentScheduleGrp](/fix/groups/underlying-payment-schedule-grp)
+
+## 41884 · UnderlyingPaymentScheduleRateUnitOfMeasure [#tag-41884]
+
+<Badge intent="info" minimal>Tag 41884</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The schedule rate unit of measure (UOM).
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [UnderlyingPaymentScheduleGrp](/fix/groups/underlying-payment-schedule-grp)
+
+## 41885 · UnderlyingPaymentScheduleRateConversionFactor [#tag-41885]
+
+<Badge intent="info" minimal>Tag 41885</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The number to be multiplied by the derived floating rate of the underlying's payment schedule in order to arrive at the payment rate. If ommitted, the schedule rate conversion factor is 1.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [UnderlyingPaymentScheduleGrp](/fix/groups/underlying-payment-schedule-grp)
+
+## 41886 · UnderlyingPaymentScheduleRateSpreadType [#tag-41886]
+
+<Badge intent="info" minimal>Tag 41886</Badge> <Badge intent="note" minimal>PaymentStreamRateSpreadTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies whether the rate spread is an absolute value to be added to the index rate or a percentage of the index rate.
+
+Code set **PaymentStreamRateSpreadTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Absolute | Absolute |
+| `1` | Percentage | Percentage |
+
+Used in: [UnderlyingPaymentScheduleGrp](/fix/groups/underlying-payment-schedule-grp)
+
+## 41887 · UnderlyingPaymentScheduleSettlPeriodPrice [#tag-41887]
+
+<Badge intent="info" minimal>Tag 41887</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The schedule settlement period price.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [UnderlyingPaymentScheduleGrp](/fix/groups/underlying-payment-schedule-grp)
+
+## 41888 · UnderlyingPaymentScheduleSettlPeriodPriceCurrency [#tag-41888]
+
+<Badge intent="info" minimal>Tag 41888</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The currency of the schedule settlement period price. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [UnderlyingPaymentScheduleGrp](/fix/groups/underlying-payment-schedule-grp)
+
+## 41889 · UnderlyingPaymentScheduleSettlPeriodPriceUnitOfMeasure [#tag-41889]
+
+<Badge intent="info" minimal>Tag 41889</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The settlement period price unit of measure (UOM).
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [UnderlyingPaymentScheduleGrp](/fix/groups/underlying-payment-schedule-grp)
+
+## 41890 · UnderlyingPaymentScheduleStepUnitOfMeasure [#tag-41890]
+
+<Badge intent="info" minimal>Tag 41890</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The schedule step unit of measure (UOM).
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [UnderlyingPaymentScheduleGrp](/fix/groups/underlying-payment-schedule-grp)
+
+## 41891 · UnderlyingPaymentScheduleFixingDayDistribution [#tag-41891]
+
+<Badge intent="info" minimal>Tag 41891</Badge> <Badge intent="note" minimal>PaymentStreamPricingDayDistributionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The distribution of fixing days.
+
+Code set **PaymentStreamPricingDayDistributionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | All | All |
+| `1` | First | First |
+| `2` | Last | Last |
+| `3` | Penultimate | Penultimate |
+
+Used in: [UnderlyingPaymentScheduleGrp](/fix/groups/underlying-payment-schedule-grp)
+
+## 41892 · UnderlyingPaymentScheduleFixingDayCount [#tag-41892]
+
+<Badge intent="info" minimal>Tag 41892</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The number of days over which fixing should take place.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingPaymentScheduleGrp](/fix/groups/underlying-payment-schedule-grp)
+
+## 41893 · UnderlyingPaymentScheduleFixingLagPeriod [#tag-41893]
+
+<Badge intent="info" minimal>Tag 41893</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the fixing lag duration.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingPaymentScheduleGrp](/fix/groups/underlying-payment-schedule-grp)
+
+## 41894 · UnderlyingPaymentScheduleFixingLagUnit [#tag-41894]
+
+<Badge intent="info" minimal>Tag 41894</Badge> <Badge intent="note" minimal>PaymentStreamInflationLagUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the fixing lag duration.
+
+Code set **PaymentStreamInflationLagUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [UnderlyingPaymentScheduleGrp](/fix/groups/underlying-payment-schedule-grp)
+
+## 41895 · UnderlyingPaymentScheduleFixingFirstObservationDateOffsetPeriod [#tag-41895]
+
+<Badge intent="info" minimal>Tag 41895</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative first observation date offset.
+
+If the first observation offset is specified, the observation period will start the specified interval prior to each calculation period - i.e. if the first observation offset is 4 months and the lag duration is 3 months, observations will be taken in months 4, 3 and 2 (but not 1) prior to each calculation period. If no first observation offset is specified, the observation period will end immediately preceding each calculation period.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingPaymentScheduleGrp](/fix/groups/underlying-payment-schedule-grp)
+
+## 41896 · UnderlyingPaymentScheduleFixingFirstObservationDateOffsetUnit [#tag-41896]
+
+<Badge intent="info" minimal>Tag 41896</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative first observation date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [UnderlyingPaymentScheduleGrp](/fix/groups/underlying-payment-schedule-grp)
+
+## 41897 · UnderlyingPaymentStreamFlatRateIndicator [#tag-41897]
+
+<Badge intent="info" minimal>Tag 41897</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+When this element is specified and set to 'Y', the Flat Rate is the New Worldwide Tanker Nominal Freight Scale for the Freight Index Route taken at the Trade Date of the transaction "Fixed". If 'N' it is taken on each Pricing Date "Floating".
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [UnderlyingPaymentStream](/fix/components/underlying-payment-stream)
+
+## 41898 · UnderlyingPaymentStreamFlatRateAmount [#tag-41898]
+
+<Badge intent="info" minimal>Tag 41898</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the actual monetary value of the flat rate when UnderlyingPaymentStreamFlatRateIndicator(41897) = 'Y'.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [UnderlyingPaymentStream](/fix/components/underlying-payment-stream)
+
+## 41899 · UnderlyingPaymentStreamFlatRateCurrency [#tag-41899]
+
+<Badge intent="info" minimal>Tag 41899</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency of the actual flat rate. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [UnderlyingPaymentStream](/fix/components/underlying-payment-stream)
+
+## 41900 · UnderlyingPaymentStreamMaximumPaymentAmount [#tag-41900]
+
+<Badge intent="info" minimal>Tag 41900</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the limit on the total payment amount.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [UnderlyingPaymentStream](/fix/components/underlying-payment-stream)
+
+## 41901 · UnderlyingPaymentStreamMaximumPaymentCurrency [#tag-41901]
+
+<Badge intent="info" minimal>Tag 41901</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency of total payment amount limit. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [UnderlyingPaymentStream](/fix/components/underlying-payment-stream)
+
+## 41902 · UnderlyingPaymentStreamMaximumTransactionAmount [#tag-41902]
+
+<Badge intent="info" minimal>Tag 41902</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the limit on the payment amount that goes out in any particular calculation period.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [UnderlyingPaymentStream](/fix/components/underlying-payment-stream)
+
+## 41903 · UnderlyingPaymentStreamMaximumTransactionCurrency [#tag-41903]
+
+<Badge intent="info" minimal>Tag 41903</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency of the period payment amount limit. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [UnderlyingPaymentStream](/fix/components/underlying-payment-stream)
+
+## 41904 · UnderlyingPaymentStreamFixedAmountUnitOfMeasure [#tag-41904]
+
+<Badge intent="info" minimal>Tag 41904</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Fixed payment amount unit of measure (UOM).
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [UnderlyingPaymentStreamFixedRate](/fix/components/underlying-payment-stream-fixed-rate)
+
+## 41905 · UnderlyingPaymentStreamTotalFixedAmount [#tag-41905]
+
+<Badge intent="info" minimal>Tag 41905</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the total fixed payment amount.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [UnderlyingPaymentStreamFixedRate](/fix/components/underlying-payment-stream-fixed-rate)
+
+## 41906 · UnderlyingPaymentStreamWorldScaleRate [#tag-41906]
+
+<Badge intent="info" minimal>Tag 41906</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The number of Worldscale points for purposes of the calculation of a fixed amount for a wet voyage charter commodity swap.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [UnderlyingPaymentStreamFixedRate](/fix/components/underlying-payment-stream-fixed-rate)
+
+## 41907 · UnderlyingPaymentStreamContractPrice [#tag-41907]
+
+<Badge intent="info" minimal>Tag 41907</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The price per relevant unit for purposes of the calculation of a fixed amount for a dry voyage charter or time charter commodity swap.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [UnderlyingPaymentStreamFixedRate](/fix/components/underlying-payment-stream-fixed-rate)
+
+## 41908 · UnderlyingPaymentStreamContractPriceCurrency [#tag-41908]
+
+<Badge intent="info" minimal>Tag 41908</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency of UnderlyingPaymentStreamContractPrice(41907). Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [UnderlyingPaymentStreamFixedRate](/fix/components/underlying-payment-stream-fixed-rate)
+
+## 41909 · NoUnderlyingPaymentStreamPricingBusinessCenters [#tag-41909]
+
+<Badge intent="info" minimal>Tag 41909</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of business centers in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingPaymentStreamPricingBusinessCenterGrp](/fix/groups/underlying-payment-stream-pricing-business-center-grp)
+
+## 41910 · UnderlyingPaymentStreamPricingBusinessCenter [#tag-41910]
+
+<Badge intent="info" minimal>Tag 41910</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the payment stream's pricing dates, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingPaymentStreamPricingBusinessCenterGrp](/fix/groups/underlying-payment-stream-pricing-business-center-grp)
+
+## 41911 · UnderlyingPaymentStreamRateIndex2CurveUnit [#tag-41911]
+
+<Badge intent="info" minimal>Tag 41911</Badge> <Badge intent="note" minimal>PaymentStreamRateIndexCurveUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Secondary time unit associated with the payment stream’s floating rate index curve.
+
+Code set **PaymentStreamRateIndexCurveUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41912 · UnderlyingPaymentStreamRateIndex2CurvePeriod [#tag-41912]
+
+<Badge intent="info" minimal>Tag 41912</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Secondary time unit multiplier for the payment stream’s floating rate index curve.
+
+May be used for a Forward Rate Agreement (FRA) with an average rate between two curve points.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41913 · UnderlyingPaymentStreamRateIndexLocation [#tag-41913]
+
+<Badge intent="info" minimal>Tag 41913</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the location of the floating rate index.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41914 · UnderlyingPaymentStreamRateIndexLevel [#tag-41914]
+
+<Badge intent="info" minimal>Tag 41914</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+This is the weather Cooling Degree Days (CDD), Heating Degree Days (HDD) or HDD index level specified as the number of (amount of) weather index units specified by the parties in the related confirmation.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41915 · UnderlyingPaymentStreamRateIndexUnitOfMeasure [#tag-41915]
+
+<Badge intent="info" minimal>Tag 41915</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unit of measure (UOM) of the rate index level.
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41916 · UnderlyingPaymentStreamSettlLevel [#tag-41916]
+
+<Badge intent="info" minimal>Tag 41916</Badge> <Badge intent="note" minimal>PaymentStreamSettlLevelCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies how weather index units are to be calculated.
+
+Code set **PaymentStreamSettlLevelCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Average | Average |
+| `1` | Maximum | Maximum |
+| `2` | Minimum | Minimum |
+| `3` | Cumulative | Cumulative |
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41917 · UnderlyingPaymentStreamReferenceLevel [#tag-41917]
+
+<Badge intent="info" minimal>Tag 41917</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+This is the weather Cooling Degree Days (CDD), Heating Degree Days (HDD) or HDD reference level specified as the number of (amount of) weather index units specified by the parties in the related confirmation.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41918 · UnderlyingPaymentStreamReferenceLevelUnitOfMeasure [#tag-41918]
+
+<Badge intent="info" minimal>Tag 41918</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unit of measure (UOM) of the rate reference level.
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41919 · UnderlyingPaymentStreamReferenceLevelEqualsZeroIndicator [#tag-41919]
+
+<Badge intent="info" minimal>Tag 41919</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+When set to 'Y', it indicates that the weather reference level equals zero.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41920 · UnderlyingPaymentStreamRateSpreadCurrency [#tag-41920]
+
+<Badge intent="info" minimal>Tag 41920</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency of the floating rate spread. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41921 · UnderlyingPaymentStreamRateSpreadUnitOfMeasure [#tag-41921]
+
+<Badge intent="info" minimal>Tag 41921</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the unit of measure (UOM) of the floating rate spread.
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41922 · UnderlyingPaymentStreamRateConversionFactor [#tag-41922]
+
+<Badge intent="info" minimal>Tag 41922</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The number to be multiplied by the derived floating rate of the underlying's payment stream in order to arrive at the payment rate. If omitted, the floating rate conversion factor is 1.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41923 · UnderlyingPaymentStreamRateSpreadType [#tag-41923]
+
+<Badge intent="info" minimal>Tag 41923</Badge> <Badge intent="note" minimal>PaymentStreamRateSpreadTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies whether the rate spread is an absolute value to be added to the index rate or a percentage of the index rate.
+
+Code set **PaymentStreamRateSpreadTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Absolute | Absolute |
+| `1` | Percentage | Percentage |
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41924 · UnderlyingPaymentStreamLastResetRate [#tag-41924]
+
+<Badge intent="info" minimal>Tag 41924</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The floating rate determined at the most recent reset. The rate is expressed in decimal form, e.g. 5% is represented as 0.05.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41925 · UnderlyingPaymentStreamFinalRate [#tag-41925]
+
+<Badge intent="info" minimal>Tag 41925</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The floating rate determined at the final reset. The rate is expressed in decimal form, e.g. 5% is represented as 0.05.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41926 · UnderlyingPaymentStreamCalculationLagPeriod [#tag-41926]
+
+<Badge intent="info" minimal>Tag 41926</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the calculation lag duration.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41927 · UnderlyingPaymentStreamCalculationLagUnit [#tag-41927]
+
+<Badge intent="info" minimal>Tag 41927</Badge> <Badge intent="note" minimal>PaymentStreamInflationLagUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the calculation lag duration.
+
+Code set **PaymentStreamInflationLagUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41928 · UnderlyingPaymentStreamFirstObservationDateOffsetPeriod [#tag-41928]
+
+<Badge intent="info" minimal>Tag 41928</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative first observation date offset.
+
+If the first observation offset is specified, the observation period will start the specified interval prior to each calculation period - i.e. if the first observation offset is 4 months and the lag duration is 3 months, observations will be taken in months 4, 3 and 2 (but not 1) prior to each calculation period. If no first observation offset is specified, the observation period will end immediately preceding each calculation period.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41929 · UnderlyingPaymentStreamFirstObservationDateOffsetUnit [#tag-41929]
+
+<Badge intent="info" minimal>Tag 41929</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative first observation date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41930 · UnderlyingPaymentStreamPricingDayType [#tag-41930]
+
+<Badge intent="info" minimal>Tag 41930</Badge> <Badge intent="note" minimal>ComplexEventDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the commodity pricing day type.
+
+Code set **ComplexEventDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41931 · UnderlyingPaymentStreamPricingDayDistribution [#tag-41931]
+
+<Badge intent="info" minimal>Tag 41931</Badge> <Badge intent="note" minimal>PaymentStreamPricingDayDistributionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The distribution of pricing days.
+
+Code set **PaymentStreamPricingDayDistributionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | All | All |
+| `1` | First | First |
+| `2` | Last | Last |
+| `3` | Penultimate | Penultimate |
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41932 · UnderlyingPaymentStreamPricingDayCount [#tag-41932]
+
+<Badge intent="info" minimal>Tag 41932</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The number of days over which pricing should take place.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41933 · UnderlyingPaymentStreamPricingBusinessCalendar [#tag-41933]
+
+<Badge intent="info" minimal>Tag 41933</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the business calendar to use for pricing. See http://www.fpml.org/coding-scheme/commodity-business-calendar for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41934 · UnderlyingPaymentStreamPricingBusinessDayConvention [#tag-41934]
+
+<Badge intent="info" minimal>Tag 41934</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the payment stream's pricing dates. Used only to override the business day convention specified in the UnderlyingDateAdjustment component within the UnderlyingInstrument component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)
+
+## 41935 · LegStreamCommoditySettlTimeType [#tag-41935]
+
+<Badge intent="info" minimal>Tag 41935</Badge> <Badge intent="note" minimal>DeliveryScheduleSettlTimeTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the format of the commodity settlement start and end times.
+
+Code set **DeliveryScheduleSettlTimeTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Hour | Hour of the day |
+| `1` | Timestamp | HH:MM time format |
+
+Used in: [LegStreamCommoditySettlTimeGrp](/fix/groups/leg-stream-commodity-settl-time-grp)
+
+## 41936 · UnderlyingStreamCommoditySettlTimeType [#tag-41936]
+
+<Badge intent="info" minimal>Tag 41936</Badge> <Badge intent="note" minimal>DeliveryScheduleSettlTimeTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the format of the commodity settlement start and end times.
+
+Code set **DeliveryScheduleSettlTimeTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Hour | Hour of the day |
+| `1` | Timestamp | HH:MM time format |
+
+Used in: [UnderlyingStreamCommoditySettlTimeGrp](/fix/groups/underlying-stream-commodity-settl-time-grp)
+
+## 41937 · NoUnderlyingPaymentStreamPaymentDates [#tag-41937]
+
+<Badge intent="info" minimal>Tag 41937</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of payment dates in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingPaymentStreamPaymentDateGrp](/fix/groups/underlying-payment-stream-payment-date-grp)
+
+## 41938 · UnderlyingPaymentStreamPaymentDate [#tag-41938]
+
+<Badge intent="info" minimal>Tag 41938</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted or unadjusted fixed stream payment date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [UnderlyingPaymentStreamPaymentDateGrp](/fix/groups/underlying-payment-stream-payment-date-grp)
+
+## 41939 · UnderlyingPaymentStreamPaymentDateType [#tag-41939]
+
+<Badge intent="info" minimal>Tag 41939</Badge> <Badge intent="note" minimal>OptionExerciseDateTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of payment date. When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type.
+
+Code set **OptionExerciseDateTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Unadjusted | Unadjusted |
+| `1` | Adjusted | Adjusted |
+
+Used in: [UnderlyingPaymentStreamPaymentDateGrp](/fix/groups/underlying-payment-stream-payment-date-grp)
+
+## 41940 · UnderlyingPaymentStreamMasterAgreementPaymentDatesIndicator [#tag-41940]
+
+<Badge intent="info" minimal>Tag 41940</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+When set to 'Y', it indicates that payment dates are specified in the relevant master agreement.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [UnderlyingPaymentStreamPaymentDates](/fix/components/underlying-payment-stream-payment-dates)
+
+## 41941 · NoUnderlyingPaymentStreamPricingDates [#tag-41941]
+
+<Badge intent="info" minimal>Tag 41941</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of pricing dates in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingPaymentStreamPricingDateGrp](/fix/groups/underlying-payment-stream-pricing-date-grp)
+
+## 41942 · UnderlyingPaymentStreamPricingDate [#tag-41942]
+
+<Badge intent="info" minimal>Tag 41942</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+An adjusted or unadjusted fixed pricing date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [UnderlyingPaymentStreamPricingDateGrp](/fix/groups/underlying-payment-stream-pricing-date-grp)
+
+## 41943 · UnderlyingPaymentStreamPricingDateType [#tag-41943]
+
+<Badge intent="info" minimal>Tag 41943</Badge> <Badge intent="note" minimal>OptionExerciseDateTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of pricing date. When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type.
+
+Code set **OptionExerciseDateTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Unadjusted | Unadjusted |
+| `1` | Adjusted | Adjusted |
+
+Used in: [UnderlyingPaymentStreamPricingDateGrp](/fix/groups/underlying-payment-stream-pricing-date-grp)
+
+## 41944 · NoUnderlyingPaymentStreamPricingDays [#tag-41944]
+
+<Badge intent="info" minimal>Tag 41944</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of pricing days in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingPaymentStreamPricingDayGrp](/fix/groups/underlying-payment-stream-pricing-day-grp)
+
+## 41945 · UnderlyingPaymentStreamPricingDayOfWeek [#tag-41945]
+
+<Badge intent="info" minimal>Tag 41945</Badge> <Badge intent="note" minimal>PaymentStreamPricingDayOfWeekCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The day of the week on which pricing takes place.
+
+Code set **PaymentStreamPricingDayOfWeekCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | EveryDay | Every day (the default if not specified) |
+| `1` | Monday | Monday |
+| `2` | Tuesday | Tuesday |
+| `3` | Wednesday | Wednesday |
+| `4` | Thursday | Thursday |
+| `5` | Friday | Friday |
+| `6` | Saturday | Saturday |
+| `7` | Sunday | Sunday |
+
+Used in: [UnderlyingPaymentStreamPricingDayGrp](/fix/groups/underlying-payment-stream-pricing-day-grp)
+
+## 41946 · UnderlyingPaymentStreamPricingDayNumber [#tag-41946]
+
+<Badge intent="info" minimal>Tag 41946</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The occurrence of the day of week on which pricing takes place.
+
+For example a pricing day of the 3rd Friday would be DayOfWk=5 DayNum=3.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingPaymentStreamPricingDayGrp](/fix/groups/underlying-payment-stream-pricing-day-grp)
+
+## 41947 · NoUnderlyingPricingDateBusinessCenters [#tag-41947]
+
+<Badge intent="info" minimal>Tag 41947</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of business centers in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingPricingDateBusinessCenterGrp](/fix/groups/underlying-pricing-date-business-center-grp)
+
+## 41948 · UnderlyingPricingDateBusinessCenter [#tag-41948]
+
+<Badge intent="info" minimal>Tag 41948</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the pricing or fixing date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingPricingDateBusinessCenterGrp](/fix/groups/underlying-pricing-date-business-center-grp)
+
+## 41949 · UnderlyingPricingDateUnadjusted [#tag-41949]
+
+<Badge intent="info" minimal>Tag 41949</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted pricing or fixing date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [UnderlyingPricingDateTime](/fix/components/underlying-pricing-date-time)
+
+## 41950 · UnderlyingPricingDateBusinessDayConvention [#tag-41950]
+
+<Badge intent="info" minimal>Tag 41950</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the pricing or fixing date. Used only to override the business day convention specified in the UnderlyingDateAdjustment component within the UnderlyingInstrument component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [UnderlyingPricingDateTime](/fix/components/underlying-pricing-date-time)
+
+## 41951 · UnderlyingPricingDateAdjusted [#tag-41951]
+
+<Badge intent="info" minimal>Tag 41951</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted pricing or fixing date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [UnderlyingPricingDateTime](/fix/components/underlying-pricing-date-time)
+
+## 41952 · UnderlyingPricingTime [#tag-41952]
+
+<Badge intent="info" minimal>Tag 41952</Badge> <Badge intent="note" minimal>LocalMktTime</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The local market pricing or fixing time.
+
+Type: [LocalMktTime](/fix/datatypes#local-mkt-time)
+
+Used in: [UnderlyingPricingDateTime](/fix/components/underlying-pricing-date-time)
+
+## 41953 · UnderlyingPricingTimeBusinessCenter [#tag-41953]
+
+<Badge intent="info" minimal>Tag 41953</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the business center for determining the pricing or fixing time. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingPricingDateTime](/fix/components/underlying-pricing-date-time)
+
+## 41954 · NoUnderlyingStreamCalculationPeriodDates [#tag-41954]
+
+<Badge intent="info" minimal>Tag 41954</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of calculation period dates in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingStreamCalculationPeriodDateGrp](/fix/groups/underlying-stream-calculation-period-date-grp)
+
+## 41955 · UnderlyingStreamCalculationPeriodDate [#tag-41955]
+
+<Badge intent="info" minimal>Tag 41955</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted or unadjusted fixed calculation period date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [UnderlyingStreamCalculationPeriodDateGrp](/fix/groups/underlying-stream-calculation-period-date-grp)
+
+## 41956 · UnderlyingStreamCalculationPeriodDateType [#tag-41956]
+
+<Badge intent="info" minimal>Tag 41956</Badge> <Badge intent="note" minimal>OptionExerciseDateTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of fixed calculation period date. When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type.
+
+Code set **OptionExerciseDateTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Unadjusted | Unadjusted |
+| `1` | Adjusted | Adjusted |
+
+Used in: [UnderlyingStreamCalculationPeriodDateGrp](/fix/groups/underlying-stream-calculation-period-date-grp)
+
+## 41957 · UnderlyingStreamCalculationPeriodDatesXID [#tag-41957]
+
+<Badge intent="info" minimal>Tag 41957</Badge> <Badge intent="note" minimal>XID</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifier of this calculation period for cross referencing elsewhere in the message.
+
+Type: [XID](/fix/datatypes#xid)
+
+Used in: [UnderlyingStreamCalculationPeriodDates](/fix/components/underlying-stream-calculation-period-dates)
+
+## 41958 · UnderlyingStreamCalculationPeriodDatesXIDRef [#tag-41958]
+
+<Badge intent="info" minimal>Tag 41958</Badge> <Badge intent="note" minimal>XIDREF</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Cross reference to another calculation period for duplicating its properties.
+
+Type: [XIDREF](/fix/datatypes#xidref)
+
+Used in: [UnderlyingStreamCalculationPeriodDates](/fix/components/underlying-stream-calculation-period-dates)
+
+## 41959 · UnderlyingStreamCalculationBalanceOfFirstPeriod [#tag-41959]
+
+<Badge intent="info" minimal>Tag 41959</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+When specified and set to 'Y', it indicates that the first calculation period should run from the effective date to the end of the calendar period in which the effective date falls (e.g. Jan 15 - Jan 31 if the calculation periods are one month long and effective date is Jan 15.). If 'N' or not specified, it indicates that the first calculation period should run from the effective date for one whole period (e.g. Jan 15 to Feb 14 if the calculation periods are one month long and the effective date is Jan 15.).
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [UnderlyingStreamCalculationPeriodDates](/fix/components/underlying-stream-calculation-period-dates)
+
+## 41960 · UnderlyingStreamCalculationCorrectionPeriod [#tag-41960]
+
+<Badge intent="info" minimal>Tag 41960</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the length of time after the publication of the data when corrections can be made.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingStreamCalculationPeriodDates](/fix/components/underlying-stream-calculation-period-dates)
+
+## 41961 · UnderlyingStreamCalculationCorrectionUnit [#tag-41961]
+
+<Badge intent="info" minimal>Tag 41961</Badge> <Badge intent="note" minimal>ProtectionTermEventUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the length of time after the publication of the data when corrections can be made.
+
+Code set **ProtectionTermEventUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [UnderlyingStreamCalculationPeriodDates](/fix/components/underlying-stream-calculation-period-dates)
+
+## 41962 · NoUnderlyingStreamCommoditySettlBusinessCenters [#tag-41962]
+
+<Badge intent="info" minimal>Tag 41962</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of business centers in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingStreamCommoditySettlBusinessCenterGrp](/fix/groups/underlying-stream-commodity-settl-business-center-grp)
+
+## 41963 · UnderlyingStreamCommoditySettlBusinessCenter [#tag-41963]
+
+<Badge intent="info" minimal>Tag 41963</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the commodity delivery date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingStreamCommoditySettlBusinessCenterGrp](/fix/groups/underlying-stream-commodity-settl-business-center-grp)
+
+## 41964 · UnderlyingStreamCommodityBase [#tag-41964]
+
+<Badge intent="info" minimal>Tag 41964</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the general base type of the commodity traded. Where possible, this should follow the naming convention used in the 2005 ISDA Commodity Definitions.
+
+Examples of general commodity base types include:Metal, Bullion, Oil, Natural Gas, Coal, Electricity, Inter-Energy, Grains, Oils Seeds, Dairy, Livestock, Forestry, Softs, Weather, Emissions.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41965 · UnderlyingStreamCommodityType [#tag-41965]
+
+<Badge intent="info" minimal>Tag 41965</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of commodity product. For coal see http://www.fpml.org/coding-scheme/commodity-coal-product-type for values. For metals see http://www.fpml.org/coding-scheme/commodity-metal-product-type for values. For bullion see http://www.fixtradingcommunity.org/codelists#Bullion\_Types for the external code list of bullion types.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41966 · UnderlyingStreamCommoditySecurityID [#tag-41966]
+
+<Badge intent="info" minimal>Tag 41966</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the market identifier for the commodity.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41967 · UnderlyingStreamCommoditySecurityIDSource [#tag-41967]
+
+<Badge intent="info" minimal>Tag 41967</Badge> <Badge intent="note" minimal>SecurityIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the class or source of the UnderlyingStreamCommoditySecurityIDSource(41966) value.
+
+Code set **SecurityIDSourceCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | CUSIP | CUSIP |
+| `2` | SEDOL | SEDOL |
+| `3` | QUIK | QUIK |
+| `4` | ISINNumber | ISIN |
+| `5` | RICCode | RIC |
+| `6` | ISOCurrencyCode | ISO Currency Code |
+| `7` | ISOCountryCode | ISO Country Code |
+| `8` | ExchangeSymbol | Exchange symbol |
+| `9` | ConsolidatedTapeAssociation | Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format) |
+| `A` | BloombergSymbol | Bloomberg Symbol |
+| `B` | Wertpapier | Wertpapier |
+| `C` | Dutch | Dutch |
+| `D` | Valoren | Valoren |
+| `E` | Sicovam | Sicovam |
+| `F` | Belgian | Belgian |
+| `G` | Common | "Common" (Clearstream and Euroclear) |
+| `H` | ClearingHouse | Clearing house / Clearing organization |
+| `I` | ISDAFpMLSpecification | ISDA/FpML product specification (XML in SecurityXML(1185)) |
+| `J` | OptionPriceReportingAuthority | Option Price Reporting Authority |
+| `K` | ISDAFpMLURL | ISDA/FpML product URL (URL in SecurityID(48)) |
+| `L` | LetterOfCredit | Letter of credit |
+| `M` | MarketplaceAssignedIdentifier | Marketplace-assigned Identifier |
+| `N` | MarkitREDEntityCLIP | Markit RED entity CLIP |
+| `P` | MarkitREDPairCLIP | Markit RED pair CLIP |
+| `Q` | CFTCCommodityCode | CFTC commodity code |
+| `R` | ISDACommodityReferencePrice | ISDA Commodity Reference Price |
+| `S` | FinancialInstrumentGlobalIdentifier | Financial Instrument Global Identifier |
+| `T` | LegalEntityIdentifier | Legal entity identifier |
+| `U` | Synthetic | Synthetic |
+| `V` | FidessaInstrumentMnemonic | Fidessa Instrument Mnemonic (FIM) |
+| `W` | IndexName | Index name |
+| `X` | UniformSymbol | Uniform Symbol (UMTF Symbol) |
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41968 · UnderlyingStreamCommodityDesc [#tag-41968]
+
+<Badge intent="info" minimal>Tag 41968</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Description of the commodity asset.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41969 · EncodedUnderlyingStreamCommodityDescLen [#tag-41969]
+
+<Badge intent="info" minimal>Tag 41969</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Byte length of encoded (non-ASCII characters) EncodedUnderlyingStreamCommodityDesc(41970) field.
+
+Type: [Length](/fix/datatypes#length)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41970 · EncodedUnderlyingStreamCommodityDesc [#tag-41970]
+
+<Badge intent="info" minimal>Tag 41970</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Encoded (non-ASCII characters) representation of the UnderlyingStreamCommodityDesc(41968) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the UnderlyingStreamCommodityDesc(41968) field.
+
+Type: [data](/fix/datatypes#data)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41971 · UnderlyingStreamCommodityUnitOfMeasure [#tag-41971]
+
+<Badge intent="info" minimal>Tag 41971</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unit of measure (UOM) of the commodity asset.
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41972 · UnderlyingStreamCommodityCurrency [#tag-41972]
+
+<Badge intent="info" minimal>Tag 41972</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the currency of the commodity asset. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41973 · UnderlyingStreamCommodityExchange [#tag-41973]
+
+<Badge intent="info" minimal>Tag 41973</Badge> <Badge intent="note" minimal>Exchange</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the exchange where the commodity is traded.
+
+Type: [Exchange](/fix/datatypes#exchange)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41974 · UnderlyingStreamCommodityRateSource [#tag-41974]
+
+<Badge intent="info" minimal>Tag 41974</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the source of rate information used for commodities. See http://www.fixtradingcommunity.org/codelists#Commodity\_Rate\_Source for code list of applicable sources.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41975 · UnderlyingStreamCommodityRateReferencePage [#tag-41975]
+
+<Badge intent="info" minimal>Tag 41975</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the reference "page" from the rate source.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41976 · UnderlyingStreamCommodityRateReferencePageHeading [#tag-41976]
+
+<Badge intent="info" minimal>Tag 41976</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the page heading from the rate source.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41977 · UnderlyingStreamDataProvider [#tag-41977]
+
+<Badge intent="info" minimal>Tag 41977</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the commodity data or information provider. See http://www.fpml.org/coding-scheme/commodity-information-provider for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41978 · UnderlyingStreamCommodityPricingType [#tag-41978]
+
+<Badge intent="info" minimal>Tag 41978</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies how the pricing or rate setting of the trade is to be determined or based upon. See http://www.fixtradingcommunity.org/codelists#Commodity\_Rate\_Pricing\_Type for code list of applicable commodity pricing types.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41979 · UnderlyingStreamCommodityNearbySettlDayPeriod [#tag-41979]
+
+<Badge intent="info" minimal>Tag 41979</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the nearby settlement day.
+
+When the commodity transaction references a futures contract, the delivery or settlement dates are a nearby month or week. For example, for eighth nearby month use Period=8 and Unit=Mo.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41980 · UnderlyingStreamCommodityNearbySettlDayUnit [#tag-41980]
+
+<Badge intent="info" minimal>Tag 41980</Badge> <Badge intent="note" minimal>StreamCommodityNearbySettlDayUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the nearby settlement day.
+
+Code set **StreamCommodityNearbySettlDayUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41981 · UnderlyingStreamCommoditySettlDateUnadjusted [#tag-41981]
+
+<Badge intent="info" minimal>Tag 41981</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted commodity delivery date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41982 · UnderlyingStreamCommoditySettlDateBusinessDayConvention [#tag-41982]
+
+<Badge intent="info" minimal>Tag 41982</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the commodity delivery date. Used only to override the business day convention specified in the UnderlyingDateAdjustment component within the UnderlyingInstrument component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41983 · UnderlyingStreamCommoditySettlDateAdjusted [#tag-41983]
+
+<Badge intent="info" minimal>Tag 41983</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted commodity delivery date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41984 · UnderlyingStreamCommoditySettlMonth [#tag-41984]
+
+<Badge intent="info" minimal>Tag 41984</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies a fixed single month for commodity delivery.
+
+Use "1" for January, "2" for February, etc.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41985 · UnderlyingStreamCommoditySettlDateRollPeriod [#tag-41985]
+
+<Badge intent="info" minimal>Tag 41985</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the commodity delivery date roll.
+
+For a commodity transaction that references a listed future via the delivery dates, this is the day offset on which the specified future will roll to the next nearby month when the referenced future expires.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41986 · UnderlyingStreamCommoditySettlDateRollUnit [#tag-41986]
+
+<Badge intent="info" minimal>Tag 41986</Badge> <Badge intent="note" minimal>StreamCommoditySettlDateRollUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the commodity delivery date roll.
+
+Code set **StreamCommoditySettlDateRollUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41987 · UnderlyingStreamCommoditySettlDayType [#tag-41987]
+
+<Badge intent="info" minimal>Tag 41987</Badge> <Badge intent="note" minimal>ComplexEventDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the commodity delivery roll day type.
+
+Code set **ComplexEventDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41988 · UnderlyingStreamCommodityXID [#tag-41988]
+
+<Badge intent="info" minimal>Tag 41988</Badge> <Badge intent="note" minimal>XID</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifier of this stream commodity for cross referencing elsewhere in the message.
+
+Type: [XID](/fix/datatypes#xid)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41989 · UnderlyingStreamCommodityXIDRef [#tag-41989]
+
+<Badge intent="info" minimal>Tag 41989</Badge> <Badge intent="note" minimal>XIDREF</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Reference to a stream commodity elsewhere in the message.
+
+Type: [XIDREF](/fix/datatypes#xidref)
+
+Used in: [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity)
+
+## 41990 · NoUnderlyingStreamCommodityAltIDs [#tag-41990]
+
+<Badge intent="info" minimal>Tag 41990</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of alternate security identifers.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingStreamCommodityAltIDGrp](/fix/groups/underlying-stream-commodity-alt-id-grp)
+
+## 41991 · UnderlyingStreamCommodityAltID [#tag-41991]
+
+<Badge intent="info" minimal>Tag 41991</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Alternate security identifier value for the commodity.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingStreamCommodityAltIDGrp](/fix/groups/underlying-stream-commodity-alt-id-grp)
+
+## 41992 · UnderlyingStreamCommodityAltIDSource [#tag-41992]
+
+<Badge intent="info" minimal>Tag 41992</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the class or source of the alternate commodity security identifier.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingStreamCommodityAltIDGrp](/fix/groups/underlying-stream-commodity-alt-id-grp)
+
+## 41993 · NoUnderlyingStreamCommodityDataSources [#tag-41993]
+
+<Badge intent="info" minimal>Tag 41993</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of commodity data sources in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingStreamCommodityDataSourceGrp](/fix/groups/underlying-stream-commodity-data-source-grp)
+
+## 41994 · UnderlyingStreamCommodityDataSourceID [#tag-41994]
+
+<Badge intent="info" minimal>Tag 41994</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Data source identifier.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingStreamCommodityDataSourceGrp](/fix/groups/underlying-stream-commodity-data-source-grp)
+
+## 41995 · UnderlyingStreamCommodityDataSourceIDType [#tag-41995]
+
+<Badge intent="info" minimal>Tag 41995</Badge> <Badge intent="note" minimal>StreamCommodityDataSourceIDTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of data source identifier.
+
+Code set **StreamCommodityDataSourceIDTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | City | City (4 character business center code) |
+| `1` | Airport | Airport (IATA standard) |
+| `2` | WeatherStation | Weather station WBAN (Weather Bureau Army Navy) |
+| `3` | WeatherIndex | Weather index WMO (World Meteorological Organization) |
+
+Used in: [UnderlyingStreamCommodityDataSourceGrp](/fix/groups/underlying-stream-commodity-data-source-grp)
+
+## 41996 · NoUnderlyingStreamCommoditySettlDays [#tag-41996]
+
+<Badge intent="info" minimal>Tag 41996</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of days in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingStreamCommoditySettlDayGrp](/fix/groups/underlying-stream-commodity-settl-day-grp)
+
+## 41997 · UnderlyingStreamCommoditySettlDay [#tag-41997]
+
+<Badge intent="info" minimal>Tag 41997</Badge> <Badge intent="note" minimal>DeliveryScheduleSettlDayCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day or group of days for delivery.
+
+Code set **DeliveryScheduleSettlDayCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Monday | Monday |
+| `2` | Tuesday | Tuesday |
+| `3` | Wednesday | Wednesday |
+| `4` | Thursday | Thursday |
+| `5` | Friday | Friday |
+| `6` | Saturday | Saturday |
+| `7` | Sunday | Sunday |
+| `8` | AllWeekdays | All weekdays |
+| `9` | AllDays | All days |
+| `10` | AllWeekends | All weekends |
+
+Used in: [UnderlyingStreamCommoditySettlDayGrp](/fix/groups/underlying-stream-commodity-settl-day-grp)
+
+## 41998 · UnderlyingStreamCommoditySettlTotalHours [#tag-41998]
+
+<Badge intent="info" minimal>Tag 41998</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Sum of the hours specified in UnderlyingStreamCommoditySettlTimeGrp.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [UnderlyingStreamCommoditySettlDayGrp](/fix/groups/underlying-stream-commodity-settl-day-grp)
+
+## 41999 · NoUnderlyingStreamCommoditySettlTimes [#tag-41999]
+
+<Badge intent="info" minimal>Tag 41999</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of hour ranges in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [UnderlyingStreamCommoditySettlTimeGrp](/fix/groups/underlying-stream-commodity-settl-time-grp)
+

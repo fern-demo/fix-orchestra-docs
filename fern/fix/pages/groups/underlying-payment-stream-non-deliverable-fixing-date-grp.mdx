@@ -1,0 +1,25 @@
+---
+title: "UnderlyingPaymentStreamNonDeliverableFixingDateGrp"
+subtitle: "UnderlyingPaymentStreamNonDeliverableFixingDate is a subcomponent of the UnderlyingPaymentStreamNonDeliverableSettlTerms component used to specify predetermined fixing dates."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40656</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+For the purpose of optimization, the UnderlyingNonDeliverableFixingDateType(40658) field may optionally be omitted after the first instance provided the instance(s) which immediately follow is of the same date type. When the next instance requires a different date type from the prior instance, the UnderlyingNonDeliverableFixingDateType(40658) is required to specify the date type.
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingNonDeliverableFixingDates (40656)](/fix/fields/tags-40600-40799#tag-40656).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40657 | [UnderlyingNonDeliverableFixingDate](/fix/fields/tags-40600-40799#tag-40657) | LocalMktDate | Optional | Required if NoUnderlyingNonDeliverableFixingDates(40656) &gt; 0. |
+| 40658 | [UnderlyingNonDeliverableFixingDateType](/fix/fields/tags-40600-40799#tag-40658) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingPaymentStreamNonDeliverableSettlTerms](/fix/components/underlying-payment-stream-non-deliverable-settl-terms)

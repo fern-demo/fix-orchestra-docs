@@ -1,0 +1,28 @@
+---
+title: "ProvisionCashSettlPaymentDates"
+subtitle: "The ProvisionCashSettlPaymentDates component is a sub-component within the ProvisionGrp component used to report the cash settlement payment dates defined in the provision."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40163 | [ProvisionCashSettlPaymentDateBusinessDayConvention](/fix/fields/tags-40000-40199#tag-40163) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this instance of the provisional cash settlement payment dates. |
+| 40952 | [ProvisionCashSettlPaymentDateBusinessCenterGrp](/fix/groups/provision-cash-settl-payment-date-business-center-grp) | Repeating group | Optional | ProvisionCashSettlPaymentDateBusinessCenterGrp is a repeating subcomponent within the ProvisionCashSettlPaymentDates component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the DateAdjustment… |
+| 40165 | [ProvisionCashSettlPaymentDateRelativeTo](/fix/fields/tags-40000-40199#tag-40165) | int | Optional | Specifies the anchor date when the cash settlement payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 40166 | [ProvisionCashSettlPaymentDateOffsetPeriod](/fix/fields/tags-40000-40199#tag-40166) | int | Optional | Conditionally required when ProvisionCashSettlPaymentDateOffsetUnit(40167) is specified. |
+| 40167 | [ProvisionCashSettlPaymentDateOffsetUnit](/fix/fields/tags-40000-40199#tag-40167) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when ProvisionCashSettlPaymentDateOffsetPeriod(40166) is specified. |
+| 40168 | [ProvisionCashSettlPaymentDateOffsetDayType](/fix/fields/tags-40000-40199#tag-40168) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the provision's relative cash settlement payment date offset. |
+| 40169 | [ProvisionCashSettlPaymentDateRangeFirst](/fix/fields/tags-40000-40199#tag-40169) | LocalMktDate | Optional | First date in range when a settlement date range is provided. |
+| 40170 | [ProvisionCashSettlPaymentDateRangeLast](/fix/fields/tags-40000-40199#tag-40170) | LocalMktDate | Optional | The last date in range when a settlement date range is provided. |
+| 40171 | [ProvisionCashSettlPaymentFixedDateGrp](/fix/groups/provision-cash-settl-payment-fixed-date-grp) | Repeating group | Optional | The ProvisionCashSettlPaymentFixedDateGrp is a repeating component within the ProvisionCashSettlPaymentDates component used to report fixed cash settlement payment dates defined in the provision. |
+
+</StickyTable>
+
+## Used in
+
+[ProvisionGrp](/fix/groups/provision-grp)

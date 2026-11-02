@@ -1,0 +1,25 @@
+---
+title: "LegReturnRatePriceGrp"
+subtitle: "LegReturnRatePriceGrp is a repeating subcomponent within the LegReturnRateGrp component. It is used to specify the return rate prices for an equity return swap payment stream."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42564</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegReturnRatePrices (42564)](/fix/fields/tags-42400-42599#tag-42564).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42565 | [LegReturnRatePriceBasis](/fix/fields/tags-42400-42599#tag-42565) | ReturnRatePriceBasisCodeSet | Optional | Required if NoLegReturnRatePrices(42564) &gt; 0. |
+| 42566 | [LegReturnRatePrice](/fix/fields/tags-42400-42599#tag-42566) | Price | Optional | Specifies the price of the underlying swap asset. |
+| 42567 | [LegReturnRatePriceCurrency](/fix/fields/tags-42400-42599#tag-42567) | Currency | Optional | Specifies the currency of the price of the leg swap asset. Uses ISO 4217 currency codes. |
+| 42568 | [LegReturnRatePriceType](/fix/fields/tags-42400-42599#tag-42568) | ReturnRatePriceTypeCodeSet | Optional | Specifies whether the LegReturnRatePrice(42566) is expressed in absolute or relative terms. |
+
+</StickyTable>
+
+## Used in
+
+[LegReturnRateGrp](/fix/groups/leg-return-rate-grp)

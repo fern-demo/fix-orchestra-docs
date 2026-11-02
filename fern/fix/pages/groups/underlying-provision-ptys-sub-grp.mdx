@@ -1,0 +1,23 @@
+---
+title: "UnderlyingProvisionPtysSubGrp"
+subtitle: "UnderlyingProvisionPtysSubGrp is a repeating component within the UnderlyingProvisionParties component used to extend information to be reported for the party."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42177</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingProvisionPartySubIDs (42177)](/fix/fields/tags-42000-42199#tag-42177).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42178 | [UnderlyingProvisionPartySubID](/fix/fields/tags-42000-42199#tag-42178) | String | Optional | Required if NoUnderlyingProvisionPartySubIDs(42177) &gt; 0. |
+| 42179 | [UnderlyingProvisionPartySubIDType](/fix/fields/tags-42000-42199#tag-42179) | PartySubIDTypeCodeSet | Optional | Required if NoUnderlyingProvisionPartySubIDs(42177) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingProvisionParties](/fix/groups/underlying-provision-parties)

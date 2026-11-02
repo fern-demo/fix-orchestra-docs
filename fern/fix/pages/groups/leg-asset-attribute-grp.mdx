@@ -1,0 +1,24 @@
+---
+title: "LegAssetAttributeGrp"
+subtitle: "The LegAssetAttributeGrp is a repeating subcomponent of the InstrumentLeg component used to detail attributes of the instrument asset."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2308</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegAssetAttributes (2308)](/fix/fields/tags-2200-2399#tag-2308).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 2309 | [LegAssetAttributeType](/fix/fields/tags-2200-2399#tag-2309) | String | Optional | Required if NoLegAssetAttributes(2308) &gt; 0. |
+| 2310 | [LegAssetAttributeValue](/fix/fields/tags-2200-2399#tag-2310) | String | Optional | Specifies the value of the attribute. |
+| 2311 | [LegAssetAttributeLimit](/fix/fields/tags-2200-2399#tag-2311) | String | Optional | Limit or lower acceptable value of the attribute. |
+
+</StickyTable>
+
+## Used in
+
+[InstrumentLeg](/fix/components/instrument-leg)

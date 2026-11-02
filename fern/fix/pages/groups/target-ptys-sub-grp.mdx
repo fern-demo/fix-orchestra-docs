@@ -1,0 +1,23 @@
+---
+title: "TargetPtysSubGrp"
+subtitle: "Repeating group of target party sub-identifiers."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2433</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoTargetPartySubIDs (2433)](/fix/fields/tags-2400-2599#tag-2433).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 2434 | [TargetPartySubID](/fix/fields/tags-2400-2599#tag-2434) | String | Optional | Required when NoTargetPartySubIDs(2433) &gt; 0. |
+| 2435 | [TargetPartySubIDType](/fix/fields/tags-2400-2599#tag-2435) | PartySubIDTypeCodeSet | Optional | Required when NoTargetPartySubIDs(2433) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[TargetParties](/fix/groups/target-parties)

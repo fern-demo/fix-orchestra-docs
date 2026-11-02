@@ -1,0 +1,27 @@
+---
+title: "ResendRequest"
+subtitle: "The resend request is sent by the receiving application to initiate the retransmission of messages. This function is utilized if a sequence number gap is detected, if the receiving application lost a message, or as a function of the…"
+---
+
+<Badge intent="info">MsgType 2</Badge> <Badge intent="note" minimal>Session</Badge> <Badge intent="tip" minimal>Session</Badge> <Badge intent="success" minimal>Added FIX.2.7</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 7 | [BeginSeqNo](/fix/fields/tags-0-199#tag-7) | SeqNum | **Required** | Message sequence number of first message in range to be resent |
+| 16 | [EndSeqNo](/fix/fields/tags-0-199#tag-16) | SeqNum | **Required** | Message sequence number of last message in range to be resent. If request is for a single message BeginSeqNo (7) = EndSeqNo. If request is for all messages subsequent to a particular message, EndSeqNo = "0" (representing infinity). |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="ResendRequest" wordWrap
+8=FIXT.1.1|9=68|35=2|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|7=1|16=1|10=042|
+```

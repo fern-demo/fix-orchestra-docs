@@ -1,0 +1,36 @@
+---
+title: "SecurityTypeRequest"
+subtitle: "The Security Type Request message is used to return a list of security types available from a counterparty or market."
+---
+
+<Badge intent="info">MsgType v</Badge> <Badge intent="note" minimal>Securities Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 320 | [SecurityReqID](/fix/fields/tags-200-399#tag-320) | String | **Required** | Unique ID of a Security Definition Request. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Comment, instructions, or other identifying information. |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Optional MarketID to specify a particular trading session for which you want to obtain a list of securities that are tradeable. |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Optional Market Segment Identifier to specify a particular trading session for which you want to obtain a list of securities that are tradeable. |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Optional Trading Session Identifier to specify a particular trading session for which you want to obtain a list of securities that are tradeable. |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures markets to identify exchange specific execution time bracket codes as required by US market regulations. Bilaterally agreed values of data… |
+| 460 | [Product](/fix/fields/tags-400-599#tag-460) | ProductCodeSet | Optional | Used to qualify which security types are returned |
+| 167 | [SecurityType](/fix/fields/tags-0-199#tag-167) | SecurityTypeCodeSet | Optional | Used to qualify which security type is returned |
+| 762 | [SecuritySubType](/fix/fields/tags-600-799#tag-762) | String | Optional | Used to qualify which security types are returned |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="SecurityTypeRequest" wordWrap
+8=FIXT.1.1|9=70|35=v|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|320=ABC123|10=026|
+```

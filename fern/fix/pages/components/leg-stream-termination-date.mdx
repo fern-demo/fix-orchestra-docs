@@ -1,0 +1,27 @@
+---
+title: "LegStreamTerminationDate"
+subtitle: "LegStreamTerminationDate is a subcomponent of the LegStreamGrp component used to specify the termination date of the stream."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40257 | [LegStreamTerminationDateUnadjusted](/fix/fields/tags-40200-40399#tag-40257) | LocalMktDate | Optional | The unadjusted termination date. |
+| 40258 | [LegStreamTerminationDateBusinessDayConvention](/fix/fields/tags-40200-40399#tag-40258) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to this instance of the leg stream termination date. |
+| 40943 | [LegStreamTerminationDateBusinessCenterGrp](/fix/groups/leg-stream-termination-date-business-center-grp) | Repeating group | Optional | LegStreamTerminationDateBusinessCenterGrp is a repeating subcomponent within the LegStreamTerminationDate component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the LegDateAdjustment component in… |
+| 40260 | [LegStreamTerminationDateRelativeTo](/fix/fields/tags-40200-40399#tag-40260) | int | Optional | Specifies the anchor date when the termination date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 40261 | [LegStreamTerminationDateOffsetPeriod](/fix/fields/tags-40200-40399#tag-40261) | int | Optional | Conditionally required when LegStreamTerminationDateOffsetUnit(40262) is specified. |
+| 40262 | [LegStreamTerminationDateOffsetUnit](/fix/fields/tags-40200-40399#tag-40262) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegStreamTerminationDateOffsetPeriod(40261) is specified. |
+| 40263 | [LegStreamTerminationDateOffsetDayType](/fix/fields/tags-40200-40399#tag-40263) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative termination date offset. |
+| 40264 | [LegStreamTerminationDateAdjusted](/fix/fields/tags-40200-40399#tag-40264) | LocalMktDate | Optional | The adjusted termination date. |
+
+</StickyTable>
+
+## Used in
+
+[LegStreamGrp](/fix/groups/leg-stream-grp)

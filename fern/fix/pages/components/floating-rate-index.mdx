@@ -1,0 +1,26 @@
+---
+title: "FloatingRateIndex"
+subtitle: "Used to identify the rate index for a floating rate coupon."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+In the context of MiFID II RTS 23 Annex I Table 3 reference data - statement of the attributes of the index/benchmark of a floating rate security.
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 2731 | [FloatingRateIndexID](/fix/fields/tags-2600-2799#tag-2731) | String | Optional | Conditionally required when FloatingRateIndexIDSource(2732) is specified. |
+| 2732 | [FloatingRateIndexIDSource](/fix/fields/tags-2600-2799#tag-2732) | SecurityIDSourceCodeSet | Optional | Conditionally required when FloatingRateIndexID(2731) is specified. |
+| 2730 | [FloatingRateIndexCurveUnit](/fix/fields/tags-2600-2799#tag-2730) | PaymentStreamRateIndexCurveUnitCodeSet | Optional | Conditionally required when FloatingRateIndexCurvePeriod(2728) is specified. |
+| 2728 | [FloatingRateIndexCurvePeriod](/fix/fields/tags-2600-2799#tag-2728) | int | Optional | Conditionally required when FloatingRateIndexCurveUnit(2730) is specified. |
+| 2729 | [FloatingRateIndexCurveSpread](/fix/fields/tags-2600-2799#tag-2729) | PriceOffset | Optional | Spread from the floating rate index. |
+
+</StickyTable>
+
+## Used in
+
+[InstrumentExtension](/fix/components/instrument-extension)

@@ -1,0 +1,37 @@
+---
+title: "DividendAccrualFloatingRate"
+subtitle: "The DividendAccrualFloatingRate component is a subcomponent of DividendConditions used to define the dividend accrual floating rate attributes of dividend payment conditions."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42218 | [DividendFloatingRateIndex](/fix/fields/tags-42200-42399#tag-42218) | String | Optional | The dividend accrual floating rate index. |
+| 42219 | [DividendFloatingRateIndexCurvePeriod](/fix/fields/tags-42200-42399#tag-42219) | int | Optional | Conditionally required when DividendFloatingRateIndexCurveUnit(42220) is specified. |
+| 42220 | [DividendFloatingRateIndexCurveUnit](/fix/fields/tags-42200-42399#tag-42220) | PaymentStreamRateIndexCurveUnitCodeSet | Optional | Conditionally required when DividendFloatingRateIndexCurvePeriod(42219) is specified. |
+| 42221 | [DividendFloatingRateMultiplier](/fix/fields/tags-42200-42399#tag-42221) | float | Optional | A rate multiplier to apply to the floating rate. The multiplier can be less than or greater than 1 (one). This should only be included if the multiplier is not equal to 1 (one) for the term of the contract. |
+| 42222 | [DividendFloatingRateSpread](/fix/fields/tags-42200-42399#tag-42222) | PriceOffset | Optional | The basis points spread from the index specified in DividendFloatingRateIndex(42218). |
+| 42223 | [DividendFloatingRateSpreadPositionType](/fix/fields/tags-42200-42399#tag-42223) | PaymentStreamRateSpreadPositionTypeCodeSet | Optional | Identifies whether the rate spread is applied to a long or short position. |
+| 42224 | [DividendFloatingRateTreatment](/fix/fields/tags-42200-42399#tag-42224) | PaymentStreamRateTreatmentCodeSet | Optional | Specifies the yield calculation treatment for the index. |
+| 42225 | [DividendCapRate](/fix/fields/tags-42200-42399#tag-42225) | Percentage | Optional | The cap rate, if any, which applies to the floating rate. It is only required where the floating rate is capped at a certain level. The cap rate is assumed to be exclusive of any spread and is a per annum rate, expressed as a decimal. A cap rate of 5% would be represented as "0.05". |
+| 42226 | [DividendCapRateBuySide](/fix/fields/tags-42200-42399#tag-42226) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the buyer of the cap rate option through its trade side. |
+| 42227 | [DividendCapRateSellSide](/fix/fields/tags-42200-42399#tag-42227) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the seller of the cap rate option through its trade side. |
+| 42228 | [DividendFloorRate](/fix/fields/tags-42200-42399#tag-42228) | Percentage | Optional | The floor rate, if any, which applies to the floating rate. The floor rate (strike) is only required where the floating rate is floored at a certain strike level. The floor rate is assumed to be exclusive of any spread and is a per annum rate. The rate is expressed as a decimal, e.g. 5% is… |
+| 42229 | [DividendFloorRateBuySide](/fix/fields/tags-42200-42399#tag-42229) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the buyer of the floor rate option through its trade side. |
+| 42230 | [DividendFloorRateSellSide](/fix/fields/tags-42200-42399#tag-42230) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the seller of the floor rate option through its trade side. |
+| 42231 | [DividendInitialRate](/fix/fields/tags-42200-42399#tag-42231) | Percentage | Optional | The initial floating rate reset agreed between the principal parties involved in the trade. This is assumed to be the first required reset rate for the first regular calculation period. It should only be included when the rate is not equal to the rate published on the source implied by the floating… |
+| 42232 | [DividendFinalRateRoundingDirection](/fix/fields/tags-42200-42399#tag-42232) | RoundingDirectionCodeSet | Optional | Specifies the rounding direction of the final rate. |
+| 42233 | [DividendFinalRatePrecision](/fix/fields/tags-42200-42399#tag-42233) | int | Optional | Specifies the rounding precision of the final rate in terms of a number of decimal places. Note how a percentage rate rounding of 5 decimal places is expressed as a rounding precision of 7. |
+| 42234 | [DividendAveragingMethod](/fix/fields/tags-42200-42399#tag-42234) | PaymentStreamAveragingMethodCodeSet | Optional | When averaging is applicable, used to specify whether a weighted or unweighted average method of calculation is to be used. |
+| 42235 | [DividendNegativeRateTreatment](/fix/fields/tags-42200-42399#tag-42235) | PaymentStreamNegativeRateTreatmentCodeSet | Optional | The specification of any provisions for calculating payment obligations when a floating rate is negative (either due to a quoted negative floating rate or by operation of a spread that is subtracted from the floating rate). |
+
+</StickyTable>
+
+## Used in
+
+[DividendConditions](/fix/components/dividend-conditions)

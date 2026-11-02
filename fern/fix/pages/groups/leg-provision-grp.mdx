@@ -1,0 +1,56 @@
+---
+title: "LegProvisionGrp"
+subtitle: "The LegProvisionGrp is a repeating subcomponent of the InstrumentLeg component used to detail the provisions associated with the instrument."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40448</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A swap may have one or more provisions.
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegProvisions (40448)](/fix/fields/tags-40400-40599#tag-40448).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40449 | [LegProvisionType](/fix/fields/tags-40400-40599#tag-40449) | ProvisionTypeCodeSet | Optional | Required if NoLegProvisions(40448) &gt; 0. |
+| 40450 | [LegProvisionDateUnadjusted](/fix/fields/tags-40400-40599#tag-40450) | LocalMktDate | Optional | The unadjusted date of the provision. |
+| 40451 | [LegProvisionDateBusinessDayConvention](/fix/fields/tags-40400-40599#tag-40451) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to this instance of the instrument's leg provision. |
+| 40939 | [LegProvisionDateBusinessCenterGrp](/fix/groups/leg-provision-date-business-center-grp) | Repeating group | Optional | LegProvisionDateBusinessCenterGrp is a repeating subcomponent within the LegProvisionGrp component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the LegDateAdjustment component in InstrumentLeg. |
+| 40453 | [LegProvisionDateAdjusted](/fix/fields/tags-40400-40599#tag-40453) | LocalMktDate | Optional | The adjusted date of the provision. |
+| 40454 | [LegProvisionDateTenorPeriod](/fix/fields/tags-40400-40599#tag-40454) | int | Optional | Conditionally required when LegProvisionDateTenorUnit(40455) is specified. |
+| 40455 | [LegProvisionDateTenorUnit](/fix/fields/tags-40400-40599#tag-40455) | ProvisionDateTenorUnitCodeSet | Optional | Conditionally required when LegProvisionDateTenorPeriod(40454) is specified. |
+| 42506 | [LegProvisionBreakFeeElection](/fix/fields/tags-42400-42599#tag-42506) | ProvisionBreakFeeElectionCodeSet | Optional | Type of fee elected for the break provision. |
+| 42507 | [LegProvisionBreakFeeRate](/fix/fields/tags-42400-42599#tag-42507) | Percentage | Optional | Break fee election rate when the break fee is proportional to the notional. A fee rate of 5% would be represented as "0.05". |
+| 40456 | [LegProvisionCalculationAgent](/fix/fields/tags-40400-40599#tag-40456) | ProvisionCalculationAgentCodeSet | Optional | Used to identify the calculation agent. The calculation agent may be identified in LegProvisionCalculationAgent(40456) or in the ProvisionParties component. |
+| 40457 | [LegProvisionOptionSinglePartyBuyerSide](/fix/fields/tags-40400-40599#tag-40457) | ProvisionOptionSinglePartyBuyerSideCodeSet | Optional | If optional early termination is not available to both parties then this component identifies the buyer of the option through its side of the trade. |
+| 40458 | [LegProvisionOptionSinglePartySellerSide](/fix/fields/tags-40400-40599#tag-40458) | ProvisionOptionSinglePartyBuyerSideCodeSet | Optional | If optional early termination is not available to both parties then this component identifies the seller of the option through its side of the trade. |
+| | [LegProvisionCashSettlValueDates](/fix/components/leg-provision-cash-settl-value-dates) | Component | Optional | The LegProvisionCashSettlValueDates component is a subcomponent within the LegProvisionGrp component used to report the cash settlement value date and time defined in the provision. |
+| | [LegProvisionOptionExerciseDates](/fix/components/leg-provision-option-exercise-dates) | Component | Optional | The LegProvisionOptionExerciseDates is a subcomponent within the LegProvisionGrp component used to report the option exercise dates and times defined in the provision. |
+| | [LegProvisionOptionExpirationDate](/fix/components/leg-provision-option-expiration-date) | Component | Optional | The LegProvisionOptionExerciseDate is a subcomponent within the LegProvisionGrp component used to report the option expiration date and times defined in the provision. |
+| | [LegProvisionOptionRelevantUnderlyingDate](/fix/components/leg-provision-option-relevant-underlying-date) | Component | Optional | The LegProvisionOptionRelevantUnderlyingDate is a subcomponent within the LegProvisionGrp component used to report the option relevant underlyingdate defined in the provision. |
+| 40459 | [LegProvisionOptionExerciseStyle](/fix/fields/tags-40400-40599#tag-40459) | ExerciseStyleCodeSet | Optional | The instrument provision option exercise style. |
+| 40460 | [LegProvisionOptionExerciseMultipleNotional](/fix/fields/tags-40400-40599#tag-40460) | Amt | Optional | A notional amount which restricts the amount of notional that can be exercised when partial exercise or multiple exercise is applicable. The integral multiple amount defines a lower limit of notional that can be exercised and also defines a unit multiple of notional that can be exercised, i.e. only… |
+| 40461 | [LegProvisionOptionExerciseMinimumNotional](/fix/fields/tags-40400-40599#tag-40461) | Amt | Optional | The minimum notional amount that can be exercised on a given exercise date. |
+| 40462 | [LegProvisionOptionExerciseMaximumNotional](/fix/fields/tags-40400-40599#tag-40462) | Amt | Optional | The maximum notional amount that can be exercised on a given exercise date. |
+| 40463 | [LegProvisionOptionMinimumNumber](/fix/fields/tags-40400-40599#tag-40463) | int | Optional | The minimum number of options that can be exercised on a given exercise date. |
+| 40464 | [LegProvisionOptionMaximumNumber](/fix/fields/tags-40400-40599#tag-40464) | int | Optional | The maximum number of options that can be exercised on a given exercise date. If the number is not specified, it means that the maximum number of options corresponds to the remaining unexercised options. |
+| 40465 | [LegProvisionOptionExerciseConfirmation](/fix/fields/tags-40400-40599#tag-40465) | Boolean | Optional | Used to indicate whether follow-up confirmation of exercise (written or electronic) is required following telephonic notice by the buyer to the seller or seller's agent. |
+| | [LegProvisionCashSettlPaymentDates](/fix/components/leg-provision-cash-settl-payment-dates) | Component | Optional | The LegProvisionCashSettlPaymentDates component is a sub-component within the LegProvisionGrp component used to report the cash settlement payment dates defined in the provision. |
+| 40466 | [LegProvisionCashSettlMethod](/fix/fields/tags-40400-40599#tag-40466) | ProvisionCashSettlMethodCodeSet | Optional | An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in the 2006 ISDA Definitions, Section 18.3. Cash Settlement Methods, paragraph (e). |
+| 40467 | [LegProvisionCashSettlCurrency](/fix/fields/tags-40400-40599#tag-40467) | Currency | Optional | Specifies the currency of settlement. Uses ISO 4217 currency codes. |
+| 40468 | [LegProvisionCashSettlCurrency2](/fix/fields/tags-40400-40599#tag-40468) | Currency | Optional | Specifies the currency of settlement for a cross-currency provision. Uses ISO 4217 currency codes. |
+| 40469 | [LegProvisionCashSettlQuoteType](/fix/fields/tags-40400-40599#tag-40469) | ProvisionCashSettlQuoteTypeCodeSet | Optional | Identifies the type of quote to be used. |
+| | [LegProvisionCashSettlQuoteSource](/fix/components/leg-provision-cash-settl-quote-source) | Component | Optional | The LegProvisionCashSettlQuoteSource is a subcomponent of the LEgProvisionGrp component used to specify the reference source for currency or rate quote for cash settlement purposes. |
+| 40472 | [LegProvisionText](/fix/fields/tags-40400-40599#tag-40472) | String | Optional | Free form text to specify additional information or enumeration description when a standard value does not apply. |
+| 40980 | [EncodedLegProvisionTextLen](/fix/fields/tags-40800-40999#tag-40980) | Length | Optional | Must be set if EncodedLegProvisionText(40981) field is specified and must immediately precede it. |
+| 40981 | [EncodedLegProvisionText](/fix/fields/tags-40800-40999#tag-40981) | data | Optional | Encoded (non-ASCII characters) representation of the LegProvisionText(40472) field in the encoded format specified via the MessageEncoding(347) field. |
+| 40533 | [LegProvisionParties](/fix/groups/leg-provision-parties) | Repeating group | Optional | LegProvisionParties is a repeating component within the LegProvision component used to report the parties identified in the contract provision. |
+
+</StickyTable>
+
+## Used in
+
+[InstrumentLeg](/fix/components/instrument-leg)

@@ -1,0 +1,24 @@
+---
+title: "SideTrdRegTS"
+subtitle: "The SideTrdRegTS component block is used to convey trading or regulatory timestamps associated with one side of a multi-sided trade event."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1016</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoSideTrdRegTS (1016)](/fix/fields/tags-1000-1199#tag-1016).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1012 | [SideTrdRegTimestamp](/fix/fields/tags-1000-1199#tag-1012) | UTCTimestamp | Optional | Will be used in a multi-sided message. Traded Regulatory timestamp value Use to store time information required by government regulators or self regulatory organizations such as an exchange or clearing house |
+| 1013 | [SideTrdRegTimestampType](/fix/fields/tags-1000-1199#tag-1013) | TrdRegTimestampTypeCodeSet | Optional | Same as TrdRegTimeStampType |
+| 1014 | [SideTrdRegTimestampSrc](/fix/fields/tags-1000-1199#tag-1014) | String | Optional | Same as TrdRegTimestampOrigin Text which identifies the origin i.e. system which was used to generate the time stamp for the Traded Regulatory timestamp value |
+
+</StickyTable>
+
+## Used in
+
+[TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp)

@@ -1,0 +1,25 @@
+---
+title: "EntitlementTypeGrp"
+subtitle: "The EntitlementTypeGrp conveys a list of entitlement types."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2345</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+When used in the PartyEntitlementRequest(35=CU) message it serves to provide filtering criteria for the results set.
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoEntitlementTypes (2345)](/fix/fields/tags-2200-2399#tag-2345).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1775 | [EntitlementType](/fix/fields/tags-1600-1799#tag-1775) | EntitlementTypeCodeSet | Optional | Required if NoEntitlementTypes(2345) &gt; 0. |
+| 2402 | [EntitlementSubType](/fix/fields/tags-2400-2599#tag-2402) | EntitlementSubTypeCodeSet | Optional | Subtype of an entitlement specified in EntitlementType(1775). |
+
+</StickyTable>
+
+## Used in
+
+[PartyEntitlementsRequest](/fix/messages/party-entitlements-request)

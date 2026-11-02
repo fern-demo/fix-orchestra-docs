@@ -1,0 +1,31 @@
+---
+title: "MatchExceptionGrp"
+subtitle: "The MatchExceptionGrp component details the matching exceptions and variances identified during the matching process based on the defined matching criteria and tolerances."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2772</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoMatchExceptions (2772)](/fix/fields/tags-2600-2799#tag-2772).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 2773 | [MatchExceptionType](/fix/fields/tags-2600-2799#tag-2773) | MatchExceptionTypeCodeSet | Optional | Required if NoMatchExceptions(2772) &gt; 0. |
+| 2774 | [MatchExceptionElementType](/fix/fields/tags-2600-2799#tag-2774) | MatchExceptionElementTypeCodeSet | Optional | Required if NoMatchExceptions(2772) &gt; 0. |
+| 2775 | [MatchExceptionElementName](/fix/fields/tags-2600-2799#tag-2775) | String | Optional | The matching exception data point name, for example: "Trade currency". This may be used for display purposes, providing a corresponding description for the value in MatchExceptionElementType(2774). |
+| 2776 | [MatchExceptionAllocValue](/fix/fields/tags-2600-2799#tag-2776) | String | Optional | The allocating party's data value used in the match operation. |
+| 2777 | [MatchExceptionConfirmValue](/fix/fields/tags-2600-2799#tag-2777) | String | Optional | The confirming party's data value used in the match operation. |
+| 2778 | [MatchExceptionToleranceValue](/fix/fields/tags-2600-2799#tag-2778) | float | Optional | The data element's tolerance value. Omitted if no tolerance is allowed or not applicable. |
+| 2779 | [MatchExceptionToleranceValueType](/fix/fields/tags-2600-2799#tag-2779) | MatchExceptionToleranceValueTypeCodeSet | Optional | The type of value in MatchExceptionToleranceValue(2778). Omitted if no tolerance is allowed or not applicable. |
+| 2780 | [MatchExceptionText](/fix/fields/tags-2600-2799#tag-2780) | String | Optional | Description of the exception. |
+| 2797 | [EncodedMatchExceptionTextLen](/fix/fields/tags-2600-2799#tag-2797) | Length | Optional | Must be set if EncodedMatchExceptionText(2780) field is specified and must immediately precede it. |
+| 2798 | [EncodedMatchExecptionText](/fix/fields/tags-2600-2799#tag-2798) | data | Optional | Encoded (non-ASCII characters) representation of the MatchExceptionText(2780) field in the encoded format specified via the MessageEncoding(347) field. |
+
+</StickyTable>
+
+## Used in
+
+[Confirmation](/fix/messages/confirmation), [ConfirmationAck](/fix/messages/confirmation-ack)

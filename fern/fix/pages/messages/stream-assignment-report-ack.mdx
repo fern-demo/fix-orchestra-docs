@@ -1,0 +1,31 @@
+---
+title: "StreamAssignmentReportACK"
+subtitle: "This message is used to respond to the Stream Assignment Report, to either accept or reject an unsolicited assingment."
+---
+
+<Badge intent="info">MsgType CE</Badge> <Badge intent="note" minimal>Market Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 1503 | [StreamAsgnAckType](/fix/fields/tags-1400-1599#tag-1503) | StreamAsgnAckTypeCodeSet | **Required** | Type of acknowledgement. |
+| 1501 | [StreamAsgnRptID](/fix/fields/tags-1400-1599#tag-1501) | String | **Required** | Unique identifier of the stream assignment report provided by the respondent. |
+| 1502 | [StreamAsgnRejReason](/fix/fields/tags-1400-1599#tag-1502) | StreamAsgnRejReasonCodeSet | Optional | Reason code for stream assignment request reject. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Can be used to provide additional information regarding the assignment report, such as reject description. |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text(58) field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="StreamAssignmentReportACK" wordWrap
+8=FIXT.1.1|9=79|35=CE|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|1503=0|1501=ABC123|10=158|
+```

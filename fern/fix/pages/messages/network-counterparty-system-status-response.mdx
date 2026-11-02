@@ -1,0 +1,30 @@
+---
+title: "NetworkCounterpartySystemStatusResponse"
+subtitle: "This message is sent in response to a Network (Counterparty System) Status Request Message."
+---
+
+<Badge intent="info">MsgType BD</Badge> <Badge intent="note" minimal>Network</Badge> <Badge intent="tip" minimal>Infrastructure</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 937 | [NetworkStatusResponseType](/fix/fields/tags-800-999#tag-937) | NetworkStatusResponseTypeCodeSet | **Required** | Indicates the type of Network Response Message. |
+| 933 | [NetworkRequestID](/fix/fields/tags-800-999#tag-933) | String | Optional | Unique identifier for a network resquest. |
+| 932 | [NetworkResponseID](/fix/fields/tags-800-999#tag-932) | String | **Required** | Unique identifier for a network response. |
+| 934 | [LastNetworkResponseID](/fix/fields/tags-800-999#tag-934) | String | Optional | Required when NetworkStatusResponseType=2 |
+| 936 | [CompIDStatGrp](/fix/groups/comp-id-stat-grp) | Repeating group | **Required** |  |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="NetworkCounterpartySystemStatusResponse" wordWrap
+8=FIXT.1.1|9=100|35=BD|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|937=1|932=ABC123|936=1|930=ABC123|928=1|10=200|
+```

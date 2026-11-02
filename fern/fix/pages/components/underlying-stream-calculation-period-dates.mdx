@@ -1,0 +1,37 @@
+---
+title: "UnderlyingStreamCalculationPeriodDates"
+subtitle: "UnderlyingStreamCalculationPeriodDates is a subcomponent of the UnderlyingStreamGrp component used to specify the calculation period dates of the stream."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41957 | [UnderlyingStreamCalculationPeriodDatesXID](/fix/fields/tags-41800-41999#tag-41957) | XID | Optional | Identifier of this calculation period for cross referencing elsewhere in the message. |
+| 41958 | [UnderlyingStreamCalculationPeriodDatesXIDRef](/fix/fields/tags-41800-41999#tag-41958) | XIDREF | Optional | Cross reference to another calculation period for duplicating its properties. |
+| 40556 | [UnderlyingStreamCalculationPeriodBusinessDayConvention](/fix/fields/tags-40400-40599#tag-40556) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would be specific to this instance of the underlying instrument's calculation period dates. |
+| 40973 | [UnderlyingStreamCalculationPeriodBusinessCenterGrp](/fix/groups/underlying-stream-calculation-period-business-center-grp) | Repeating group | Optional | UnderlyingStreamCalculationPeriodBusinessCenterGrp is a repeating subcomponent within the UnderlyingStreamCalculationPeriodDates component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the… |
+| 41954 | [UnderlyingStreamCalculationPeriodDateGrp](/fix/groups/underlying-stream-calculation-period-date-grp) | Repeating group | Optional | The UnderlyingStreamCalculationPeriodDateGrp is a repeating subcomponent of the UnderlyingStreamCalculationPeriodDates component used to detail fixed dates for the swap stream. |
+| 40558 | [UnderlyingStreamFirstPeriodStartDateUnadjusted](/fix/fields/tags-40400-40599#tag-40558) | LocalMktDate | Optional | The unadjusted first calculation period start date if before the effective date. |
+| 40559 | [UnderlyingStreamFirstPeriodStartDateBusinessDayConvention](/fix/fields/tags-40400-40599#tag-40559) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would be specific to this instance of the underlying instrument's calculation period dates. |
+| 40974 | [UnderlyingStreamFirstPeriodStartDateBusinessCenterGrp](/fix/groups/underlying-stream-first-period-start-date-business-center-grp) | Repeating group | Optional | UnderlyingStreamFirstPeriodStartDateBusinessCenterGrp is a repeating subcomponent within the UnderlyingStreamCalculationPeriodDates component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the… |
+| 40561 | [UnderlyingStreamFirstPeriodStartDateAdjusted](/fix/fields/tags-40400-40599#tag-40561) | LocalMktDate | Optional | The adjusted first calculation period start date, if it is before the effective date. |
+| 40562 | [UnderlyingStreamFirstRegularPeriodStartDateUnadjusted](/fix/fields/tags-40400-40599#tag-40562) | LocalMktDate | Optional | The unadjusted first start date of the regular calculation period, if there is an initial stub period. |
+| 40563 | [UnderlyingStreamFirstCompoundingPeriodEndDateUnadjusted](/fix/fields/tags-40400-40599#tag-40563) | LocalMktDate | Optional | The unadjusted end date of the initial compounding period. |
+| 40564 | [UnderlyingStreamLastRegularPeriodEndDateUnadjusted](/fix/fields/tags-40400-40599#tag-40564) | LocalMktDate | Optional | The unadjusted last regular period end date if there is a final stub period. |
+| 40565 | [UnderlyingStreamCalculationFrequencyPeriod](/fix/fields/tags-40400-40599#tag-40565) | int | Optional | Conditionally required when UnderyingStreamCalculationFrequencyUnit(40566) is specified. |
+| 40566 | [UnderlyingStreamCalculationFrequencyUnit](/fix/fields/tags-40400-40599#tag-40566) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when UnderlyingStreamCalculationFrequencyPeriod(40565) is specified. |
+| 40567 | [UnderlyingStreamCalculationRollConvention](/fix/fields/tags-40400-40599#tag-40567) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified values would be specific to this instance of the stream payment dates. |
+| 41959 | [UnderlyingStreamCalculationBalanceOfFirstPeriod](/fix/fields/tags-41800-41999#tag-41959) | Boolean | Optional | When specified and set to 'Y', it indicates that the first calculation period should run from the effective date to the end of the calendar period in which the effective date falls (e.g. Jan 15 - Jan 31 if the calculation periods are one month long and effective date is Jan 15.). If 'N' or not… |
+| 41960 | [UnderlyingStreamCalculationCorrectionPeriod](/fix/fields/tags-41800-41999#tag-41960) | int | Optional | Conditionally required when UnderlyingStreamCalculationCorrectionUnit(41961) is specified. |
+| 41961 | [UnderlyingStreamCalculationCorrectionUnit](/fix/fields/tags-41800-41999#tag-41961) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when UnderlyingStreamCalculationCorrectionPeriod(41960) is specified. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingStreamGrp](/fix/groups/underlying-stream-grp)

@@ -1,0 +1,23 @@
+---
+title: "AffectedOrdGrp"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 534</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoAffectedOrders (534)](/fix/fields/tags-400-599#tag-534).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1824 | [AffectedOrigClOrdID](/fix/fields/tags-1800-1999#tag-1824) | String | Optional | Required if NoAffectedOrders(534) &gt; 0. Indicates the client order id of an order affected by this request. If order(s) were manually delivered (or otherwise not delivered over FIX and not assigned a ClOrdID(11)) this field should contain string "MANUAL". |
+| 535 | [AffectedOrderID](/fix/fields/tags-400-599#tag-535) | String | Optional | Contains the OrderID(37) assigned by the counterparty of an affected order. Conditionally required when AffectedOrigClOrdID(1824) = "MANUAL". |
+| 536 | [AffectedSecondaryOrderID](/fix/fields/tags-400-599#tag-536) | String | Optional | Contains the SecondaryOrderID(198) assigned by the counterparty of an affected order. |
+
+</StickyTable>
+
+## Used in
+
+[OrderMassActionReport](/fix/messages/order-mass-action-report), [OrderMassCancelReport](/fix/messages/order-mass-cancel-report)

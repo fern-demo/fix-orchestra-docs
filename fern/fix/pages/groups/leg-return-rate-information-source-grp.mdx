@@ -1,0 +1,24 @@
+---
+title: "LegReturnRateInformationSourceGrp"
+subtitle: "LegReturnRateInformationSourceGrp is a repeating subcomponent within the LegReturnRateGrp component. It is used to specify the information sources for equity prices and FX rates for an equity return swap payment stream."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42560</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegReturnRateInformationSources (42560)](/fix/fields/tags-42400-42599#tag-42560).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42561 | [LegReturnRateInformationSource](/fix/fields/tags-42400-42599#tag-42561) | RateSourceCodeSet | Optional | Required if NoLegReturnRateInformationSources(42560) &gt; 0. |
+| 42562 | [LegReturnRateReferencePage](/fix/fields/tags-42400-42599#tag-42562) | String | Optional | Identifies the reference "page" from the rate source. For FX, the reference page to the spot rate to be used for the reference FX spot rate. When LegReturnRateInformationSource(42561) = 3 (ISDA Settlement Rate Option) this contains the value from the scheme that reflects the terms of the Annex A to… |
+| 42563 | [LegReturnRateReferencePageHeading](/fix/fields/tags-42400-42599#tag-42563) | String | Optional | Identifies the page heading from the rate source. |
+
+</StickyTable>
+
+## Used in
+
+[LegReturnRateGrp](/fix/groups/leg-return-rate-grp)

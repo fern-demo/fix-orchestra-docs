@@ -1,0 +1,46 @@
+---
+title: "MassQuoteAck"
+subtitle: "Mass Quote Acknowledgement is used as the application level response to a Mass Quote message."
+---
+
+<Badge intent="info">MsgType b</Badge> <Badge intent="note" minimal>Quotation Negotiation</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 131 | [QuoteReqID](/fix/fields/tags-0-199#tag-131) | String | Optional | Required when acknowledgment is in response to a Quote Request message |
+| 117 | [QuoteID](/fix/fields/tags-0-199#tag-117) | String | Optional | Required when acknowledgment is in response to a Mass Quote, mass Quote Cancel or mass Quote Status Request message. Maps to: - QuoteID(117) of a Mass Quote - QuoteMsgID(1166) of Quote Cancel - QuoteStatusReqID(649) of Quote Status Request |
+| 297 | [QuoteStatus](/fix/fields/tags-200-399#tag-297) | QuoteStatusCodeSet | **Required** | Status of the mass quote acknowledgement. |
+| 300 | [QuoteRejectReason](/fix/fields/tags-200-399#tag-300) | QuoteRejectReasonCodeSet | Optional | Reason Quote was rejected. |
+| 301 | [QuoteResponseLevel](/fix/fields/tags-200-399#tag-301) | QuoteResponseLevelCodeSet | Optional | Level of Response requested from receiver of quote messages. Is echoed back to the counterparty. |
+| 537 | [QuoteType](/fix/fields/tags-400-599#tag-537) | QuoteTypeCodeSet | Optional | Type of Quote |
+| 298 | [QuoteCancelType](/fix/fields/tags-200-399#tag-298) | QuoteCancelTypeCodeSet | Optional | Identifies the type of quote cancel. |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 1461 | [TargetParties](/fix/groups/target-parties) | Repeating group | Optional |  |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
+| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in their system. |
+| 581 | [AccountType](/fix/fields/tags-400-599#tag-581) | AccountTypeCodeSet | Optional | Type of account associated with the order (Origin) |
+| 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
+| 2404 | [ComplianceText](/fix/fields/tags-2400-2599#tag-2404) | String | Optional | Free text for compliance information required for regulatory reporting. |
+| 2351 | [EncodedComplianceTextLen](/fix/fields/tags-2200-2399#tag-2351) | Length | Optional | Must be set if EncodedComplianceText(2352) field is specified and must immediately precede it. |
+| 2352 | [EncodedComplianceText](/fix/fields/tags-2200-2399#tag-2352) | data | Optional | Encoded (non-ASCII characters) representation of the ComplianceText(2404) field in the encoded format specified via the MessageEncoding(347) field. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text(58) field. |
+| 296 | [QuotSetAckGrp](/fix/groups/quot-set-ack-grp) | Repeating group | Optional |  |
+| | [ThrottleResponse](/fix/components/throttle-response) | Component | Optional |  |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="MassQuoteAck" wordWrap
+8=FIXT.1.1|9=65|35=b|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|297=0|10=235|
+```

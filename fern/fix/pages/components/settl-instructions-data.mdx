@@ -1,0 +1,24 @@
+---
+title: "SettlInstructionsData"
+subtitle: "The SettlInstructionsData component block is used to convey key information regarding standing settlement and delivery instructions. It also provides a reference to standing settlement details regarding the source, delivery instructions,…"
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 172 | [SettlDeliveryType](/fix/fields/tags-0-199#tag-172) | SettlDeliveryTypeCodeSet | Optional | Required if AllocSettlInstType = 1 or 2 |
+| 169 | [StandInstDbType](/fix/fields/tags-0-199#tag-169) | StandInstDbTypeCodeSet | Optional | Required if AllocSettlInstType = 3 (should not be populated otherwise) |
+| 170 | [StandInstDbName](/fix/fields/tags-0-199#tag-170) | String | Optional | Required if AllocSettlInstType = 3 (should not be populated otherwise) |
+| 171 | [StandInstDbID](/fix/fields/tags-0-199#tag-171) | String | Optional | Identifier used within the StandInstDbType Required if AllocSettlInstType = 3 (should not be populated otherwise) |
+| 85 | [DlvyInstGrp](/fix/groups/dlvy-inst-grp) | Repeating group | Optional |  |
+
+</StickyTable>
+
+## Used in
+
+[AllocGrp](/fix/groups/alloc-grp), [CollateralAssignment](/fix/messages/collateral-assignment), [CollateralInquiry](/fix/messages/collateral-inquiry), [CollateralReport](/fix/messages/collateral-report), [Confirmation](/fix/messages/confirmation), [SettlInstGrp](/fix/groups/settl-inst-grp)

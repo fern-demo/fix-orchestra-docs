@@ -1,0 +1,23 @@
+---
+title: "UnderlyingRateSpreadStepGrp"
+subtitle: "UnderlyingRateSpreadStepGrp is a repeating subcomponent of UnderlyingRateSpreadSchedule used to specify the step dates and amounts of a basket spread schedule."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 43005</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingRateSpreadSteps (43005)](/fix/fields/tags-43000-43199#tag-43005).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 43006 | [UnderlyingRateSpreadStepDate](/fix/fields/tags-43000-43199#tag-43006) | LocalMktDate | Optional | Required if NoUnderlyingRateSpreadSteps(43005) &gt; 0. |
+| 43007 | [UnderlyingRateSpreadStepValue](/fix/fields/tags-43000-43199#tag-43007) | float | Optional | Required if NoUnderlyingRateSpreadSteps(43005) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingRateSpreadSchedule](/fix/components/underlying-rate-spread-schedule)

@@ -1,0 +1,23 @@
+---
+title: "ComplexEventTimes"
+subtitle: "The ComplexEventTime component is nested within the ComplexEventDate in order to further qualify any dates placed on the event and is used to specify time ranges for which a complex event is effective. It is always provided within the…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1494</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoComplexEventTimes (1494)](/fix/fields/tags-1400-1599#tag-1494).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1495 | [ComplexEventStartTime](/fix/fields/tags-1400-1599#tag-1495) | UTCTimeOnly | Optional | Required if NoComplexEventTimes(1494) &gt; 0. |
+| 1496 | [ComplexEventEndTime](/fix/fields/tags-1400-1599#tag-1496) | UTCTimeOnly | Optional | Required if NoComplexEventTimes(1494) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[ComplexEventDates](/fix/groups/complex-event-dates)

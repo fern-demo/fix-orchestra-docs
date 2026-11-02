@@ -1,0 +1,23 @@
+---
+title: "LegPaymentStreamPaymentDateGrp"
+subtitle: "The LegPaymentStreamPaymentDateGrp is a repeating subcomponent of the LegPaymentStreamPaymentDates component used to detail fixed dates for swap stream payments."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41589</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentStreamPaymentDates (41589)](/fix/fields/tags-41400-41599#tag-41589).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41590 | [LegPaymentStreamPaymentDate](/fix/fields/tags-41400-41599#tag-41590) | LocalMktDate | Optional | Required if NoLegPaymentStreamPaymentDates(41589) &gt; 0. |
+| 41591 | [LegPaymentStreamPaymentDateType](/fix/fields/tags-41400-41599#tag-41591) | OptionExerciseDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
+
+</StickyTable>
+
+## Used in
+
+[LegPaymentStreamPaymentDates](/fix/components/leg-payment-stream-payment-dates)

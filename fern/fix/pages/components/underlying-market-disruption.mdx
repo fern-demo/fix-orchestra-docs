@@ -1,0 +1,27 @@
+---
+title: "UnderlyingMarketDisruption"
+subtitle: "The UnderlyingMarketDisruption component is a subcomponent of the UnderlyingInstrument used to specify the market disruption provisions of the swap."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41859 | [UnderlyingMarketDisruptionProvision](/fix/fields/tags-41800-41999#tag-41859) | MarketDisruptionProvisionCodeSet | Optional | The consequences of market disruption events. |
+| 41864 | [UnderlyingMarketDisruptionEventGrp](/fix/groups/underlying-market-disruption-event-grp) | Repeating group | Optional | The UnderlyingMarketDisruptionEventGrp is a repeating subcomponent of the UnderlyingMarketDisruption component used to specify the market disruption events. |
+| 41860 | [UnderlyingMarketDisruptionFallbackProvision](/fix/fields/tags-41800-41999#tag-41860) | MarketDisruptionFallbackProvisionCodeSet | Optional | Specifies the location of the fallback provision documentation. |
+| 41866 | [UnderlyingMarketDisruptionFallbackGrp](/fix/groups/underlying-market-disruption-fallback-grp) | Repeating group | Optional | The UnderlyingMarketDisruptionFallbackGrp is a repeating subcomponent of the UnderlyingMarketDisruption component used to specify the market disruption fallback provisions. |
+| 41868 | [UnderlyingMarketDisruptionFallbackReferencePriceGrp](/fix/groups/underlying-market-disruption-fallback-reference-price-grp) | Repeating group | Optional | The UnderlyingMarketDisruptionFallbackReferencePriceGrp is a repeating subcomponent of the UnderlyingMarketDisruption component used to specify the fallback reference price and underlying security provisions |
+| 41861 | [UnderlyingMarketDisruptionMaximumDays](/fix/fields/tags-41800-41999#tag-41861) | int | Optional | Specifies the maximum number of market disruption days (commodity or bullion business days) in a contract or confirmation. If none are specified, the maximum number of market disruption days is five (5). |
+| 41862 | [UnderlyingMarketDisruptionMaterialityPercentage](/fix/fields/tags-41800-41999#tag-41862) | Percentage | Optional | If specified, the disruption event should be specified in UnderlyingMarketDisruptionEventGrp. |
+| 41863 | [UnderlyingMarketDisruptionMinimumFuturesContracts](/fix/fields/tags-41800-41999#tag-41863) | int | Optional | Applicable only when UnderlyingMarketDisruptionEvent(41865)='DeMinimisTrading'. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingInstrument](/fix/components/underlying-instrument)

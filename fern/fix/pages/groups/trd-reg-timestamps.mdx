@@ -1,0 +1,33 @@
+---
+title: "TrdRegTimestamps"
+subtitle: "The TrdRegTimestamps component block is used to express timestamps for an order or trade that are required by regulatory agencies These timesteamps are used to identify the timeframes for when an order or trade is received on the floor,…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 768</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoTrdRegTimestamps (768)](/fix/fields/tags-600-799#tag-768).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 769 | [TrdRegTimestamp](/fix/fields/tags-600-799#tag-769) | UTCTimestamp | Optional | Required if NoTrdRegTimestamps(768) &gt; 0. |
+| 770 | [TrdRegTimestampType](/fix/fields/tags-600-799#tag-770) | TrdRegTimestampTypeCodeSet | Optional | Required if NoTrdRegTimestamps(768) &gt; 0. |
+| 771 | [TrdRegTimestampOrigin](/fix/fields/tags-600-799#tag-771) | String | Optional | Text which identifies the "origin" (i.e. system which was used to generate the time stamp) for the Traded / Regulatory timestamp value. |
+| 2839 | [TrdRegTimestampManualIndicator](/fix/fields/tags-2800-2999#tag-2839) | TrdRegTimestampManualIndicatorCodeSet | Optional | Indicates whether a given timestamp was manually captured. |
+| 1033 | [DeskType](/fix/fields/tags-1000-1199#tag-1033) | DeskTypeCodeSet | Optional | Identifies the type of Trading Desk. Conditionally required when InformationBarrierID(1727) is specified for OATS. |
+| 1034 | [DeskTypeSource](/fix/fields/tags-1000-1199#tag-1034) | DeskTypeSourceCodeSet | Optional | Identifies the class or source of DeskType(1033) values. Conditionally required when DeskType(1033) is specified. |
+| 1035 | [DeskOrderHandlingInst](/fix/fields/tags-1000-1199#tag-1035) | CustOrderHandlingInstCodeSet | Optional | Codes that apply special information that the broker-dealer needs to report. |
+| 1727 | [InformationBarrierID](/fix/fields/tags-1600-1799#tag-1727) | String | Optional | The identifier of the information barrier in place for a trading unit that will meet the criteria of the "no-knowledge" exception in FINRA Rule 5320.02. |
+| 2831 | [NBBOEntryType](/fix/fields/tags-2800-2999#tag-2831) | NBBOEntryTypeCodeSet | Optional | May be used with TrdRegTimestampType(770)=34 (Reference time for NBBO). |
+| 2832 | [NBBOPrice](/fix/fields/tags-2800-2999#tag-2832) | Price | Optional | May be used with TrdRegTimestampType(770)=34 (Reference time for NBBO). |
+| 2833 | [NBBOQty](/fix/fields/tags-2800-2999#tag-2833) | Qty | Optional | May be used with TrdRegTimestampType(770)=34 (Reference time for NBBO). |
+| 2834 | [NBBOSource](/fix/fields/tags-2800-2999#tag-2834) | NBBOSourceCodeSet | Optional | May be used with TrdRegTimestampType(770)=34 (Reference time for NBBO). |
+
+</StickyTable>
+
+## Used in
+
+[CollateralAssignment](/fix/messages/collateral-assignment), [CollateralInquiry](/fix/messages/collateral-inquiry), [CollateralReport](/fix/messages/collateral-report), [CollateralRequest](/fix/messages/collateral-request), [CollateralResponse](/fix/messages/collateral-response), [Confirmation](/fix/messages/confirmation), [ExecutionReport](/fix/messages/execution-report), [MarginRequirementReport](/fix/messages/margin-requirement-report), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [PositionReport](/fix/messages/position-report), [Quote](/fix/messages/quote), [QuoteStatusReport](/fix/messages/quote-status-report), [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack)

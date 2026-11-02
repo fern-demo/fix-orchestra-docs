@@ -1,0 +1,35 @@
+---
+title: "LegStreamCommoditySettlPeriodGrp"
+subtitle: "The LegStreamCommoditySettlPeriodGrp is a repeating subcomponent of the LegStreamCommodiry component used to to define the settlement period details associated with the commodity contract."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41686</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegStreamCommoditySettlPeriods (41686)](/fix/fields/tags-41600-41799#tag-41686).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41687 | [LegStreamCommoditySettlCountry](/fix/fields/tags-41600-41799#tag-41687) | Country | Optional | Required if NoLegStreamCommoditySettlPeriods(41686) &gt; 0. |
+| 41688 | [LegStreamCommoditySettlTimeZone](/fix/fields/tags-41600-41799#tag-41688) | String | Optional | Commodity delivery timezone specified as "prevailing" rather than "standard" or "daylight". See http://www.fixtradingcommunity.org/codelists#Prevailing\_Timezones for code list of applicable prevailing timezones. |
+| 41689 | [LegStreamCommoditySettlFlowType](/fix/fields/tags-41600-41799#tag-41689) | DeliveryScheduleSettlFlowTypeCodeSet | Optional | Specifies the commodity delivery flow type. |
+| 41690 | [LegStreamCommoditySettlPeriodNotional](/fix/fields/tags-41600-41799#tag-41690) | Qty | Optional | Delivery quantity associated with this settlement period. |
+| 41691 | [LegStreamCommoditySettlPeriodNotionalUnitOfMeasure](/fix/fields/tags-41600-41799#tag-41691) | UnitOfMeasureCodeSet | Optional | Specifies the unit of measure (UOM) of the delivery quantity associated with this settlement period. |
+| 41692 | [LegStreamCommoditySettlPeriodFrequencyPeriod](/fix/fields/tags-41600-41799#tag-41692) | int | Optional | Conditionally required when LegStreamCommoditySettlPeriodFrequencyUnit(41693) is specified. |
+| 41693 | [LegStreamCommoditySettlPeriodFrequencyUnit](/fix/fields/tags-41600-41799#tag-41693) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when LegStreamCommoditySettlPeriodFrequencyPeriod(41692) is specified. |
+| 41694 | [LegStreamCommoditySettlPeriodPrice](/fix/fields/tags-41600-41799#tag-41694) | Price | Optional | The settlement period price. |
+| 41695 | [LegStreamCommoditySettlPeriodPriceUnitOfMeasure](/fix/fields/tags-41600-41799#tag-41695) | UnitOfMeasureCodeSet | Optional | The settlement period price unit of measure (UOM). |
+| 41696 | [LegStreamCommoditySettlPeriodPriceCurrency](/fix/fields/tags-41600-41799#tag-41696) | Currency | Optional | The currency of the settlement period price. Uses ISO 4217 currency codes. |
+| 41697 | [LegStreamCommoditySettlHolidaysProcessingInstruction](/fix/fields/tags-41600-41799#tag-41697) | DeliveryScheduleSettlHolidaysProcessingInstructionCodeSet | Optional | Indicates whether holidays are included in the settlement periods. Required for electricity contracts. |
+| 41680 | [LegStreamCommoditySettlDayGrp](/fix/groups/leg-stream-commodity-settl-day-grp) | Repeating group | Optional | The LegStreamCommoditySettlDayGrp is a repeating subcomponent of the LegStreamCommoditySettlPeriodGrp component used to define the settlement days associated with the commodity contract. |
+| 41698 | [LegStreamCommoditySettlPeriodXID](/fix/fields/tags-41600-41799#tag-41698) | XID | Optional | Identifier of this settlement period for cross referencing elsewhere in the message. |
+| 41699 | [LegStreamCommoditySettlPeriodXIDRef](/fix/fields/tags-41600-41799#tag-41699) | XIDREF | Optional | Cross reference to another settlement period for duplicating its properties. |
+
+</StickyTable>
+
+## Used in
+
+[LegStreamCommodity](/fix/components/leg-stream-commodity)

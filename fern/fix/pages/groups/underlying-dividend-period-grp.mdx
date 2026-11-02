@@ -1,0 +1,41 @@
+---
+title: "UnderlyingDividendPeriodGrp"
+subtitle: "UnderlyingDividendPeriodGrp is a repeating subcomponent within the UnderlyingDividendConditions component. It is used to specify the valuation and payments dates of the dividend leg of a dividend swap."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42862</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingDividendPeriods (42862)](/fix/fields/tags-42800-42999#tag-42862).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42863 | [UnderlyingDividendPeriodSequence](/fix/fields/tags-42800-42999#tag-42863) | int | Optional | Required if NoUnderlyingDividendPeriods(42862) &gt; 0. |
+| 42864 | [UnderlyingDividendPeriodStartDateUnadjusted](/fix/fields/tags-42800-42999#tag-42864) | LocalMktDate | Optional | The unadjusted date on which the dividend period will begin. |
+| 42865 | [UnderlyingDividendPeriodEndDateUnadjusted](/fix/fields/tags-42800-42999#tag-42865) | LocalMktDate | Optional | The unadjusted date on which the dividend period will end. |
+| 42866 | [UnderlyingDividendPeriodUnderlierRefID](/fix/fields/tags-42800-42999#tag-42866) | String | Optional | When specified, this overrides UnderlyingDividendUnderlierRefID(42829). The specified value would be specific to this dividend period instance. |
+| 42867 | [UnderlyingDividendPeriodStrikePrice](/fix/fields/tags-42800-42999#tag-42867) | Price | Optional | Specifies the fixed strike price of the dividend period. |
+| 42868 | [UnderlyingDividendPeriodBusinessDayConvention](/fix/fields/tags-42800-42999#tag-42868) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would be specific to this dividend period instance. |
+| 42882 | [UnderlyingDividendPeriodBusinessCenterGrp](/fix/groups/underlying-dividend-period-business-center-grp) | Repeating group | Optional | UnderlyingDividendPeriodBusinessCenterGrp is a repeating subcomponent within the UnderlyingDividendPeriodGrp component. It is used to specify the set of business centers whose calendars drive the date adjustment. |
+| 42869 | [UnderlyingDividendPeriodValuationDateUnadjusted](/fix/fields/tags-42800-42999#tag-42869) | LocalMktDate | Optional | The unadjusted dividend period valuation date. |
+| 42870 | [UnderlyingDividendPeriodValuationDateRelativeTo](/fix/fields/tags-42800-42999#tag-42870) | int | Optional | Specifies the anchor date when the dividend period valuation date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 42871 | [UnderlyingDividendPeriodValuationDateOffsetPeriod](/fix/fields/tags-42800-42999#tag-42871) | int | Optional | Conditionally required when UnderlyingDividendPeriodValuationDateOffsetUnit(42872) is specified. |
+| 42872 | [UnderlyingDividendPeriodValuationDateOffsetUnit](/fix/fields/tags-42800-42999#tag-42872) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingDividendPeriodValuationDateOffsetPeriod(42871) is specified. |
+| 42873 | [UnderlyingDividendPeriodValuationDateOffsetDayType](/fix/fields/tags-42800-42999#tag-42873) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative dividend period valuation date offset. |
+| 42874 | [UnderlyingDividendPeriodValuationDateAdjusted](/fix/fields/tags-42800-42999#tag-42874) | LocalMktDate | Optional | The adjusted dividend period valuation date. |
+| 42875 | [UnderlyingDividendPeriodPaymentDateUnadjusted](/fix/fields/tags-42800-42999#tag-42875) | LocalMktDate | Optional | The unadjusted dividend period payment date. |
+| 42876 | [UnderlyingDividendPeriodPaymentDateRelativeTo](/fix/fields/tags-42800-42999#tag-42876) | int | Optional | Specifies the anchor date when the dividend period payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 42877 | [UnderlyingDividendPeriodPaymentDateOffsetPeriod](/fix/fields/tags-42800-42999#tag-42877) | int | Optional | Conditionally required when UnderlyingDividendPeriodPaymentDateOffsetUnit(42878) is specified. |
+| 42878 | [UnderlyingDividendPeriodPaymentDateOffsetUnit](/fix/fields/tags-42800-42999#tag-42878) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingDividendPeriodPaymentDateOffsetPeriod(42877) is specified. |
+| 42879 | [UnderlyingDividendPeriodPaymentDateOffsetDayType](/fix/fields/tags-42800-42999#tag-42879) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative dividend period payment date offset. |
+| 42880 | [UnderlyingDividendPeriodPaymentDateAdjusted](/fix/fields/tags-42800-42999#tag-42880) | LocalMktDate | Optional | The adjusted dividend period payment date. |
+| 42881 | [UnderlyingDividendPeriodXID](/fix/fields/tags-42800-42999#tag-42881) | XID | Optional | Identifier for linking this stream dividend period to an underlier through an instance of RelatedInstrumentGrp. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingDividendConditions](/fix/components/underlying-dividend-conditions)

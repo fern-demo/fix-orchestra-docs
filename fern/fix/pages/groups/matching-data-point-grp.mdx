@@ -1,0 +1,25 @@
+---
+title: "MatchingDataPointGrp"
+subtitle: "The MatchingDataPointGrp component details all the trade attributes and tolerances used for trade matching."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2781</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoMatchingDataPoints (2781)](/fix/fields/tags-2600-2799#tag-2781).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 2782 | [MatchingDataPointIndicator](/fix/fields/tags-2600-2799#tag-2782) | MatchingDataPointIndicatorCodeSet | Optional | Required if NoMatchingDataPoints(2781) &gt; 0. |
+| 2783 | [MatchingDataPointValue](/fix/fields/tags-2600-2799#tag-2783) | String | Optional | Required if NoMatchingDataPoints(2781) &gt; 0. |
+| 2784 | [MatchingDataPointType](/fix/fields/tags-2600-2799#tag-2784) | MatchExceptionElementTypeCodeSet | Optional | Required if NoMatchingDataPoints(2781) &gt; 0. |
+| 2785 | [MatchingDataPointName](/fix/fields/tags-2600-2799#tag-2785) | String | Optional | The matching data point name, for example: "Trade currency". This may be used for display purposes, providing a corresponding description for the value in MatchingDataPointType(2784). |
+
+</StickyTable>
+
+## Used in
+
+[Confirmation](/fix/messages/confirmation), [ConfirmationAck](/fix/messages/confirmation-ack)

@@ -1,0 +1,23 @@
+---
+title: "LegComplexEventAveragingObservationGrp"
+subtitle: "LegComplexEventAveragingObservationGrp is an optional subcomponent of LegComplexEventPeriodGrp for specifying the weight of each of the dated observations."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41363</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegComplexEventAveragingObservations (41363)](/fix/fields/tags-41200-41399#tag-41363).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41364 | [LegComplexEventAveragingObservationNumber](/fix/fields/tags-41200-41399#tag-41364) | int | Optional | Required if NoLegComplexEventAveragingObservations(41363) &gt; 0. |
+| 41365 | [LegComplexEventAveragingWeight](/fix/fields/tags-41200-41399#tag-41365) | float | Optional | The weight factor to be applied to the observation. |
+
+</StickyTable>
+
+## Used in
+
+[LegComplexEventPeriodGrp](/fix/groups/leg-complex-event-period-grp)

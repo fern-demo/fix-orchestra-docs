@@ -1,0 +1,34 @@
+---
+title: "TradingSessionListRequest"
+subtitle: "The Trading Session List Request is used to request a list of trading sessions available in a market place and the state of those trading sessions. A successful request will result in a response from the counterparty of a Trading Session…"
+---
+
+<Badge intent="info">MsgType BI</Badge> <Badge intent="note" minimal>Market Structure Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 335 | [TradSesReqID](/fix/fields/tags-200-399#tag-335) | String | **Required** | Must be unique, or the ID of previous Trading Session Status Request to disable if SubscriptionRequestType = Disable previous Snapshot + Update Request (2). |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Market for which Trading Session applies |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Market Segment for which Trading Session applies |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Trading Session for which status is being requested |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures markets to identify exchange specific execution time bracket codes as required by US market regulations. Bilaterally agreed values of data… |
+| 207 | [SecurityExchange](/fix/fields/tags-200-399#tag-207) | Exchange | Optional | Market used to help identify a security. Valid values: See "Appendix 6-C" |
+| 338 | [TradSesMethod](/fix/fields/tags-200-399#tag-338) | TradSesMethodCodeSet | Optional | Method of Trading |
+| 339 | [TradSesMode](/fix/fields/tags-200-399#tag-339) | TradSesModeCodeSet | Optional | Trading Session Mode |
+| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263) | SubscriptionRequestTypeCodeSet | **Required** | Subscription Request Type |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="TradingSessionListRequest" wordWrap
+8=FIXT.1.1|9=77|35=BI|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|335=ABC123|263=0|10=069|
+```

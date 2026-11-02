@@ -1,0 +1,24 @@
+---
+title: "LegComplexEventDates"
+subtitle: "The LegComplexEventDates and subcomponent LegComplexEventTimes components are used to constrain a complex event to a specific date range, and optional time range. If specified the event is only effective on or within the specified dates and…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2250</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegComplexEventDates (2250)](/fix/fields/tags-2200-2399#tag-2250).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 2251 | [LegComplexEventStartDate](/fix/fields/tags-2200-2399#tag-2251) | UTCDateOnly | Optional | Required if NoLegComplexEventDates(2250) &gt; 0. |
+| 2252 | [LegComplexEventEndDate](/fix/fields/tags-2200-2399#tag-2252) | UTCDateOnly | Optional | Required if NoLegComplexEventDates(2250) &gt; 0. |
+| 2253 | [LegComplexEventTimes](/fix/groups/leg-complex-event-times) | Repeating group | Optional | The LegComplexEventTimes is a repeating subcomponent of the LegComplexEventDates component. It is used to further qualify any dates placed on the event and is used to specify time ranges for which a complex event is effective. It is always provided within the context of start and end dates. The time… |
+
+</StickyTable>
+
+## Used in
+
+[LegComplexEvents](/fix/groups/leg-complex-events)

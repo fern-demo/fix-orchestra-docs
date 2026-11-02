@@ -1,0 +1,25 @@
+---
+title: "ReferenceDataDateGrp"
+subtitle: "Used to carry the different date-time stamps related to the reference data entry."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2746</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+In the context of MiFID II, ESMA RTS 23 Annex I Table 3 reference data this component is used to convey the UTC date-times tracking the admission and expiration of a security for trading.
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoReferenceDataDates (2746)](/fix/fields/tags-2600-2799#tag-2746).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 2747 | [ReferenceDataDate](/fix/fields/tags-2600-2799#tag-2747) | UTCTimestamp | Optional | Required if NoReferenceDataDates(2746) &gt; 0. |
+| 2748 | [ReferenceDataDateType](/fix/fields/tags-2600-2799#tag-2748) | ReferenceDataDateTypeCodeSet | Optional | Reference data entry's date-time type. |
+
+</StickyTable>
+
+## Used in
+
+[InstrumentExtension](/fix/components/instrument-extension)

@@ -1,0 +1,23 @@
+---
+title: "AuctionTypeRuleGrp"
+subtitle: "The AuctionTypeRuleGrp component is used to specify the auction rule applicable for a given product group or complex, for example."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2548</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoAuctionTypeRules (2548)](/fix/fields/tags-2400-2599#tag-2548).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1803 | [AuctionType](/fix/fields/tags-1800-1999#tag-1803) | AuctionTypeCodeSet | Optional | Required if NoAuctionTypeRules(2548) &gt; 0. AuctionType(1803) = 0 (None) can be used to invalidate all auction types on the instrument level that are defined on a market segment level. |
+| 2549 | [AuctionTypeProductComplex](/fix/fields/tags-2400-2599#tag-2549) | String | Optional | Can be used to limit auction order type to specific product suite. Use multiple entries with the same AuctionType(1803) if multiple but not all product suites are supported. |
+
+</StickyTable>
+
+## Used in
+
+[MarketDefinition](/fix/messages/market-definition), [MarketDefinitionUpdateReport](/fix/messages/market-definition-update-report), [TradingSessionRules](/fix/components/trading-session-rules)

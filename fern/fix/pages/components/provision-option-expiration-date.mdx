@@ -1,0 +1,29 @@
+---
+title: "ProvisionOptionExpirationDate"
+subtitle: "The ProvisionOptionExerciseDate is a subcomponent within the ProvisionGrp component used to report the option expiration date and times defined in the provision."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40145 | [ProvisionOptionExpirationDateUnadjusted](/fix/fields/tags-40000-40199#tag-40145) | LocalMktDate | Optional | The unadjusted last day within an exercise period for an American style option. For a European style option it is the only day within the exercise period. |
+| 40146 | [ProvisionOptionExpirationDateBusinessDayConvention](/fix/fields/tags-40000-40199#tag-40146) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this instance of the provisional option expiration date. |
+| 40955 | [ProvisionOptionExpirationDateBusinessCenterGrp](/fix/groups/provision-option-expiration-date-business-center-grp) | Repeating group | Optional | ProvisionOptionExpirationDateBusinessCenterGrp is a repeating subcomponent within the ProvisionOptionExpirationDate component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the DateAdjustment… |
+| 40148 | [ProvisionOptionExpirationDateRelativeTo](/fix/fields/tags-40000-40199#tag-40148) | int | Optional | Specifies the anchor date when the option expiration date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 40149 | [ProvisionOptionExpirationDateOffsetPeriod](/fix/fields/tags-40000-40199#tag-40149) | int | Optional | Conditionally required when ProvisionOptionExpirationDateOffsetUnit(40150) is specified. |
+| 40150 | [ProvisionOptionExpirationDateOffsetUnit](/fix/fields/tags-40000-40199#tag-40150) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when ProvisionOptionExpirationDateOffsetPeriod(40149) is specified. |
+| 40151 | [ProvisionOptionExpirationDateOffsetDayType](/fix/fields/tags-40000-40199#tag-40151) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the provision's relative option expiration date offset. |
+| 40152 | [ProvisionOptionExpirationDateAdjusted](/fix/fields/tags-40000-40199#tag-40152) | LocalMktDate | Optional | The adjusted last date within an exercise period for an American style option. For a European style option it is the only date within the exercise period. |
+| 40153 | [ProvisionOptionExpirationTime](/fix/fields/tags-40000-40199#tag-40153) | LocalMktTime | Optional | The latest time for exercise on the expiration date. |
+| 40154 | [ProvisionOptionExpirationTimeBusinessCenter](/fix/fields/tags-40000-40199#tag-40154) | String | Optional | Identifies the business center calendar used with the provision's latest exercise time on expiration date. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values. |
+
+</StickyTable>
+
+## Used in
+
+[ProvisionGrp](/fix/groups/provision-grp)

@@ -1,0 +1,29 @@
+---
+title: "Logout"
+subtitle: "The logout message initiates or confirms the termination of a FIX session. Disconnection without the exchange of logout messages should be interpreted as an abnormal condition."
+---
+
+<Badge intent="info">MsgType 5</Badge> <Badge intent="note" minimal>Session</Badge> <Badge intent="tip" minimal>Session</Badge> <Badge intent="success" minimal>Added FIX.2.7</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 1409 | [SessionStatus](/fix/fields/tags-1400-1599#tag-1409) | SessionStatusCodeSet | Optional | Session status at time of logout. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="Logout" wordWrap
+8=FIXT.1.1|9=59|35=5|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|10=177|
+```

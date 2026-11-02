@@ -1,0 +1,119 @@
+---
+title: "QuoteStatusReport"
+subtitle: "The quote status report message is used: • as the response to a Quote Status Request message • as a response to a Quote Cancel message • as a response to a Quote Response message in a negotiation dialog (see Volume 7 – PRODUCT: FIXED INCOME…"
+---
+
+<Badge intent="info">MsgType AI</Badge> <Badge intent="note" minimal>Quotation Negotiation</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 649 | [QuoteStatusReqID](/fix/fields/tags-600-799#tag-649) | String | Optional | Unique identifier for Quote Status Request. |
+| 131 | [QuoteReqID](/fix/fields/tags-0-199#tag-131) | String | Optional | Required when quote is in response to a Quote Request message |
+| 117 | [QuoteID](/fix/fields/tags-0-199#tag-117) | String | Optional | Contains the QuoteID(117) of a single Quote(MsgType=S) or QuoteEntryID(299) of a MassQuote(MsgType=i). |
+| 390 | [BidID](/fix/fields/tags-200-399#tag-390) | String | Optional | Contains the BidID(390) of a single Quote(35=S). |
+| 1867 | [OfferID](/fix/fields/tags-1800-1999#tag-1867) | String | Optional | Contains the QuoteID(1867) of a single Quote(35=S). |
+| 1751 | [SecondaryQuoteID](/fix/fields/tags-1600-1799#tag-1751) | String | Optional | Assigned by the party which accepts the quote. Can be used to provide the quote identifier assigned by an exchange, marketplace or executing system. |
+| 1166 | [QuoteMsgID](/fix/fields/tags-1000-1199#tag-1166) | String | Optional | Contains the QuoteMsgID(1166) of a single Quote(MsgType=S) or QuoteID(117) of a MassQuote(MsgType=i). |
+| 693 | [QuoteRespID](/fix/fields/tags-600-799#tag-693) | String | Optional | Required when responding to a QuoteResponse(35=AJ) message. |
+| 537 | [QuoteType](/fix/fields/tags-400-599#tag-537) | QuoteTypeCodeSet | Optional | If not specified, the default is an indicative quote. |
+| 298 | [QuoteCancelType](/fix/fields/tags-200-399#tag-298) | QuoteCancelTypeCodeSet | Optional | Identifies the type of quote cancel. |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 1461 | [TargetParties](/fix/groups/target-parties) | Repeating group | Optional |  |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is determined by market or counterparties. To specify good for session where session spans more than one calendar day, use TimeInForce = 0… |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures markets to identify exchange specific execution time bracket codes as required by US market regulations. Bilaterally agreed values of data… |
+| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This component identifies the legal agreement under which the deal was made and other unique characteristics of the transaction. For example, the… |
+| 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | Optional | Side of order (see Volume : "Glossary" for value definitions) |
+| | [OrderQtyData](/fix/components/order-qty-data) | Component | Optional | The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is marked as "required" in a message either one of these three fields must be used to identify the amount: OrderQty, CashOrderQty or OrderPercent… |
+| 63 | [SettlType](/fix/fields/tags-0-199#tag-63) | SettlTypeCodeSet | Optional | Indicates order settlement period. If present, SettlDate (64) overrides this field. If both SettlType (63) and SettDate (64) are omitted, the default for SettlType (63) is 0 (Regular) Regular is defined as the default settlement period for the particular security on the exchange of execution. In… |
+| 64 | [SettlDate](/fix/fields/tags-0-199#tag-64) | LocalMktDate | Optional | Can be used with forex quotes to specify a specific "value date" |
+| 193 | [SettlDate2](/fix/fields/tags-0-199#tag-193) | LocalMktDate | Optional | Can be used with OrdType = "Forex - Swap" to specify the "value date" for the future portion of a F/X swap. |
+| 2878 | [TerminationDate](/fix/fields/tags-2800-2999#tag-2878) | LocalMktDate | Optional | The date of a contract's early termination or other post-trade event when the event is prior to the contract natural end or maturity not defined as part of the security's reference data or contractual terms/agreement. |
+| 192 | [OrderQty2](/fix/fields/tags-0-199#tag-192) | Qty | Optional | Can be used with OrdType = "Forex - Swap" to specify the order quantity for the future portion of a F/X swap. |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Can be used to specify the currency of the quoted prices. May differ from the 'normal' trading currency of the instrument being quoted |
+| 232 | [Stipulations](/fix/groups/stipulations) | Repeating group | Optional | The Stipulations component block is used in Fixed Income to provide additional information on a given security. These additional information are usually not considered static data information. |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
+| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in their system. |
+| 581 | [AccountType](/fix/fields/tags-400-599#tag-581) | AccountTypeCodeSet | Optional | Type of account associated with an order |
+| 555 | [LegQuotStatGrp](/fix/groups/leg-quot-stat-grp) | Repeating group | Optional |  |
+| 735 | [QuotQualGrp](/fix/groups/quot-qual-grp) | Repeating group | Optional |  |
+| 2706 | [QuoteAttributeGrp](/fix/groups/quote-attribute-grp) | Repeating group | Optional | The QuoteAttributeGrp component provides additional attributes about the quote. Attributes included in this component are primarily "indicators" that may be associated with regulatory requirements and are typically not part of normal trading activities. |
+| 2830 | [EventInitiatorType](/fix/fields/tags-2800-2999#tag-2830) | EventInitiatorTypeCodeSet | Optional | Indicates the type of entity who initiated an event, e.g. modification or cancellation of an order or quote. |
+| 2115 | [NegotiationMethod](/fix/fields/tags-2000-2199#tag-2115) | NegotiationMethodCodeSet | Optional | Specifies the negotiation method to be used. |
+| 126 | [ExpireTime](/fix/fields/tags-0-199#tag-126) | UTCTimestamp | Optional | Time/Date of order expiration (always expressed in UTC (Universal Time Coordinated, also known as "GMT") The meaning of expiration is specific to the context where the field is used. For orders, this is the expiration time of a Good Til Date TimeInForce. For Quotes - this is the expiration of the… |
+| 44 | [Price](/fix/fields/tags-0-199#tag-44) | Price | Optional | Price per unit of quantity (e.g. per share) |
+| 423 | [PriceType](/fix/fields/tags-400-599#tag-423) | PriceTypeCodeSet | Optional | Code to represent the price type. |
+| 2709 | [PriceQualifierGrp](/fix/groups/price-qualifier-grp) | Repeating group | Optional | The PriceQualifierGrp component clarifies the composition of the price when standard market practice for the security calls for a price that is atypical when traded in other markets, or when a price can be expressed in more than one way. |
+| | [SpreadOrBenchmarkCurveData](/fix/components/spread-or-benchmark-curve-data) | Component | Optional | The SpreadOrBenchmarkCurveData component block is primarily used for Fixed Income to convey spread to a benchmark security or curve. |
+| | [YieldData](/fix/components/yield-data) | Component | Optional | The YieldData component block conveys yield information for a given Fixed Income security. |
+| 1747 | [BidQuoteID](/fix/fields/tags-1600-1799#tag-1747) | String | Optional | Marketplace assigned quote identifier for the bid side. Can be used to indicate priority. |
+| 1748 | [OfferQuoteID](/fix/fields/tags-1600-1799#tag-1748) | String | Optional | Marketplace assigned quote identifier for the offer side. Can be used to indicate priority. |
+| 1745 | [BidMDEntryID](/fix/fields/tags-1600-1799#tag-1745) | String | Optional | The market data entry identifier of the bid side of a quote |
+| 1746 | [OfferMDEntryID](/fix/fields/tags-1600-1799#tag-1746) | String | Optional | The market data entry identifier of the offer side of a quote. |
+| 132 | [BidPx](/fix/fields/tags-0-199#tag-132) | Price | Optional | If F/X quote, should be the "all-in" rate (spot rate adjusted for forward points). Note that either BidPx, OfferPx or both must be specified. |
+| 133 | [OfferPx](/fix/fields/tags-0-199#tag-133) | Price | Optional | If F/X quote, should be the "all-in" rate (spot rate adjusted for forward points). Note that either BidPx, OfferPx or both must be specified. |
+| 645 | [MktBidPx](/fix/fields/tags-600-799#tag-645) | Price | Optional | Can be used by markets that require showing the current best bid and offer |
+| 646 | [MktOfferPx](/fix/fields/tags-600-799#tag-646) | Price | Optional | Can be used by markets that require showing the current best bid and offer |
+| 647 | [MinBidSize](/fix/fields/tags-600-799#tag-647) | Qty | Optional | Used for markets that use a minimum and maximum bid size. |
+| 134 | [BidSize](/fix/fields/tags-0-199#tag-134) | Qty | Optional | If MinBidSize(647) is specified, BidSize(134) is interpreted to contain the maximum bid size. |
+| 1749 | [TotalBidSize](/fix/fields/tags-1600-1799#tag-1749) | Qty | Optional | Specifies the total bid size. |
+| 648 | [MinOfferSize](/fix/fields/tags-600-799#tag-648) | Qty | Optional | Used for markets that use a minimum and maximum offer size. |
+| 135 | [OfferSize](/fix/fields/tags-0-199#tag-135) | Qty | Optional | If MinOfferSize(648) is specified, OfferSize(135) is interpreted to contain the maximum offer size. |
+| 1750 | [TotalOfferSize](/fix/fields/tags-1600-1799#tag-1750) | Qty | Optional | Specifies the total offer size. |
+| 110 | [MinQty](/fix/fields/tags-0-199#tag-110) | Qty | Optional | Minimum quantity of an order to be executed. (Prior to FIX 4.2 this field was of type int) |
+| 62 | [ValidUntilTime](/fix/fields/tags-0-199#tag-62) | UTCTimestamp | Optional | Indicates expiration time of indication message (always expressed in UTC (Universal Time Coordinated, also known as "GMT") |
+| 188 | [BidSpotRate](/fix/fields/tags-0-199#tag-188) | Price | Optional | Bid F/X spot rate. |
+| 190 | [OfferSpotRate](/fix/fields/tags-0-199#tag-190) | Price | Optional | Offer F/X spot rate. |
+| 189 | [BidForwardPoints](/fix/fields/tags-0-199#tag-189) | PriceOffset | Optional | Bid F/X forward points added to spot rate. May be a negative value. |
+| 191 | [OfferForwardPoints](/fix/fields/tags-0-199#tag-191) | PriceOffset | Optional | Offer F/X forward points added to spot rate. May be a negative value. |
+| 631 | [MidPx](/fix/fields/tags-600-799#tag-631) | Price | Optional | Mid price/rate. For OTC swaps this is the mid-market mark (for example, as defined by CFTC). For uncleared OTC swaps, LegMidPx(2346) and the MidPx(631) fields are mutually exclusive. |
+| 632 | [BidYield](/fix/fields/tags-600-799#tag-632) | Percentage | Optional | Bid yield |
+| 633 | [MidYield](/fix/fields/tags-600-799#tag-633) | Percentage | Optional | Mid yield |
+| 634 | [OfferYield](/fix/fields/tags-600-799#tag-634) | Percentage | Optional | Offer yield |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 768 | [TrdRegTimestamps](/fix/groups/trd-reg-timestamps) | Repeating group | Optional | The TrdRegTimestamps component block is used to express timestamps for an order or trade that are required by regulatory agencies These timesteamps are used to identify the timeframes for when an order or trade is received on the floor, received and executed by the broker, etc. |
+| 40 | [OrdType](/fix/fields/tags-0-199#tag-40) | OrdTypeCodeSet | Optional | Can be used to specify the type of order the quote is for |
+| 642 | [BidForwardPoints2](/fix/fields/tags-600-799#tag-642) | PriceOffset | Optional | Bid F/X forward points of the future portion of a F/X swap quote added to spot rate. May be a negative value |
+| 643 | [OfferForwardPoints2](/fix/fields/tags-600-799#tag-643) | PriceOffset | Optional | Offer F/X forward points of the future portion of a F/X swap quote added to spot rate. May be a negative value |
+| 656 | [SettlCurrBidFxRate](/fix/fields/tags-600-799#tag-656) | float | Optional | Can be used when the quote is provided in a currency other than the instrument's 'normal' trading currency. Applies to all bid prices contained in this message |
+| 657 | [SettlCurrOfferFxRate](/fix/fields/tags-600-799#tag-657) | float | Optional | Can be used when the quote is provided in a currency other than the instrument's 'normal' trading currency. Applies to all offer prices contained in this message |
+| 156 | [SettlCurrFxRateCalc](/fix/fields/tags-0-199#tag-156) | SettlCurrFxRateCalcCodeSet | Optional | Can be used when the quote is provided in a currency other than the instruments trading currency. |
+| | [CommissionData](/fix/components/commission-data) | Component | Optional | The CommissionData component block is used to carry commission information such as the type of commission and the rate. Use the CommissionDataGrp component as an alternative if multiple commissions or enhanced attributes are needed. |
+| 582 | [CustOrderCapacity](/fix/fields/tags-400-599#tag-582) | CustOrderCapacityCodeSet | Optional | Capacity of customer placing the order. |
+| 100 | [ExDestination](/fix/fields/tags-0-199#tag-100) | Exchange | Optional | Used when routing quotes to multiple markets |
+| 1133 | [ExDestinationIDSource](/fix/fields/tags-1000-1199#tag-1133) | ExDestinationIDSourceCodeSet | Optional | The ID source of ExDestination |
+| 775 | [BookingType](/fix/fields/tags-600-799#tag-775) | BookingTypeCodeSet | Optional | Method for booking out this order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an OTC derivative (e.g. CFD or similar). |
+| 528 | [OrderCapacity](/fix/fields/tags-400-599#tag-528) | OrderCapacityCodeSet | Optional | Designates the capacity of the firm placing the order. (as of FIX 4.3, this field replaced Rule80A (tag 47) --used in conjunction with OrderRestrictions (529) field) (see Volume : "Glossary" for value definitions) |
+| 529 | [OrderRestrictions](/fix/fields/tags-400-599#tag-529) | OrderRestrictionsCodeSet | Optional | Restrictions associated with an order. If more than one restriction is applicable to an order, this field can contain multiple instructions separated by space. |
+| 1934 | [RegulatoryReportType](/fix/fields/tags-1800-1999#tag-1934) | RegulatoryReportTypeCodeSet | Optional | Type of regulatory report. |
+| 297 | [QuoteStatus](/fix/fields/tags-200-399#tag-297) | QuoteStatusCodeSet | Optional | Identifies the status of the quote acknowledgement. |
+| 300 | [QuoteRejectReason](/fix/fields/tags-200-399#tag-300) | QuoteRejectReasonCodeSet | Optional | Reason Quote was rejected: |
+| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328) | String | Optional | Reason description for rejecting the quote. |
+| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664) | Length | Optional | Must be set if EncodedRejectText(1665) field is specified and must immediately precede it. |
+| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. |
+| 1937 | [TradeContinuation](/fix/fields/tags-1800-1999#tag-1937) | TradeContinuationCodeSet | Optional | If specified, this should echo the value in the message this status message is in response to. |
+| 2374 | [TradeContinuationText](/fix/fields/tags-2200-2399#tag-2374) | String | Optional | Free form text to specify additional trade continuation information or data. |
+| 2372 | [EncodedTradeContinuationTextLen](/fix/fields/tags-2200-2399#tag-2372) | Length | Optional | Must be set if EncodedTradeContinuationText(2371) field is specified and must immediately precede it. |
+| 2371 | [EncodedTradeContinuationText](/fix/fields/tags-2200-2399#tag-2371) | data | Optional | Encoded (non-ASCII characters) representation of the TradeContinuationText(2374) field in the encoded format specified via the MessageEncoding(347) field. |
+| | [ThrottleResponse](/fix/components/throttle-response) | Component | Optional |  |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text(58) field. |
+| 443 | [StrikeTime](/fix/fields/tags-400-599#tag-443) | UTCTimestamp | Optional | Conditionally required when QuoteQual(695) = d (Deferred spot) is specified. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="QuoteStatusReport" wordWrap
+8=FIXT.1.1|9=60|35=AI|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|10=254|
+```

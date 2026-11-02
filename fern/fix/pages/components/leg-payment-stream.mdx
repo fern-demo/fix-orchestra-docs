@@ -1,0 +1,53 @@
+---
+title: "LegPaymentStream"
+subtitle: "The LegPaymentStream component is a subcomponent of the LegStreamGrp used to detail the attributes of a payment stream in a swap."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40279 | [LegPaymentStreamType](/fix/fields/tags-40200-40399#tag-40279) | PaymentStreamTypeCodeSet | Optional | Identifies the type of payment stream applicable to the swap stream associated with the instrument leg. |
+| 40280 | [LegPaymentStreamMarketRate](/fix/fields/tags-40200-40399#tag-40280) | int | Optional | Used only for credit index trade. This contains the credit spread ("fair value") at which the trade was executed. The market rate varies over the life of the index depending on market conditions. This is the price of the index as quoted by trading desks. |
+| 40281 | [LegPaymentStreamDelayIndicator](/fix/fields/tags-40200-40399#tag-40281) | Boolean | Optional | Applicable to credit default swaps on mortgage backed securities to specify whether payment delays are applicable to the fixed amount. Residential mortgage backed securities typically have a payment delay of 5 days between the coupon date of the reference obligation and the payment date of the… |
+| 42399 | [LegPaymentStreamCashSettlIndicator](/fix/fields/tags-42200-42399#tag-42399) | Boolean | Optional | Indicates whether cash settlement is applicable. |
+| 40282 | [LegPaymentStreamSettlCurrency](/fix/fields/tags-40200-40399#tag-40282) | Currency | Optional | Specifies the currency that the stream settles in (to support swaps that settle in a currency different from the notional currency). Uses ISO 4217 currency codes. |
+| 40283 | [LegPaymentStreamDayCount](/fix/fields/tags-40200-40399#tag-40283) | CouponDayCountCodeSet | Optional | The day count convention used in the payment stream calculations. |
+| 43108 | [LegPaymentStreamOtherDayCount](/fix/fields/tags-43000-43199#tag-43108) | String | Optional | May be used to specify a count method not listed in LegPaymentStreamDayCount(40283). |
+| 40284 | [LegPaymentStreamAccrualDays](/fix/fields/tags-40200-40399#tag-40284) | int | Optional | The number of days from the adjusted calculation period start date to the adjusted value date, calculated in accordance with the applicable day count fraction. |
+| 40285 | [LegPaymentStreamDiscountType](/fix/fields/tags-40200-40399#tag-40285) | PaymentStreamDiscountTypeCodeSet | Optional | The method of calculating discounted payment amounts. |
+| 40286 | [LegPaymentStreamDiscountRate](/fix/fields/tags-40200-40399#tag-40286) | Percentage | Optional | Discount rate. The rate is expressed in decimal, e.g. 5% is expressed as 0.05. |
+| 40287 | [LegPaymentStreamDiscountRateDayCount](/fix/fields/tags-40200-40399#tag-40287) | CouponDayCountCodeSet | Optional | The day count convention applied to the LegPaymentStreamDiscountRate(40286). |
+| 40288 | [LegPaymentStreamCompoundingMethod](/fix/fields/tags-40200-40399#tag-40288) | PaymentStreamCompoundingMethodCodeSet | Optional | Compounding method. |
+| 42400 | [LegPaymentStreamCompoundingXIDRef](/fix/fields/tags-42400-42599#tag-42400) | XIDREF | Optional | Mutually exclusive with LegPaymentStreamCompoundingFixedRate(42404) or the LegPaymentStreamCompoundingFloatingRate component. |
+| 42401 | [LegPaymentStreamCompoundingSpread](/fix/fields/tags-42400-42599#tag-42401) | PriceOffset | Optional | The spread to be used for compounding. Used in scenarios where the interest payment is based on a compounding formula that uses a compounding spread in addition to the regular spread. |
+| 42402 | [LegPaymentStreamInterpolationMethod](/fix/fields/tags-42400-42599#tag-42402) | PaymentStreamInflationInterpolationMethodCodeSet | Optional | The method used when calculating the index rate from multiple points on the curve. The most common is linear method. |
+| 42403 | [LegPaymentStreamInterpolationPeriod](/fix/fields/tags-42400-42599#tag-42403) | PaymentStreamInterpolationPeriodCodeSet | Optional | Defines applicable periods for interpolation. |
+| 40289 | [LegPaymentStreamInitialPrincipalExchangeIndicator](/fix/fields/tags-40200-40399#tag-40289) | Boolean | Optional | Indicates whether there is an initial exchange of principal on the effective date. |
+| 40290 | [LegPaymentStreamInterimPrincipalExchangeIndicator](/fix/fields/tags-40200-40399#tag-40290) | Boolean | Optional | Indicates whether there are intermediate or interim exchanges of principal during the term of the swap. |
+| 40291 | [LegPaymentStreamFinalPrincipalExchangeIndicator](/fix/fields/tags-40200-40399#tag-40291) | Boolean | Optional | Indicates whether there is a final exchange of principal on the termination date. |
+| 41549 | [LegPaymentStreamFlatRateIndicator](/fix/fields/tags-41400-41599#tag-41549) | Boolean | Optional | When this element is specified and set to 'Y', the Flat Rate is the New Worldwide Tanker Nominal Freight Scale for the Freight Index Route taken at the trade date of the transaction "Fixed". If 'N' it is taken on each pricing date "Floating". |
+| 41550 | [LegPaymentStreamFlatRateAmount](/fix/fields/tags-41400-41599#tag-41550) | Amt | Optional | Specifies the actual monetary value of the flat rate when LegPaymentStreamFlatRateIndicator(41549) = 'Y'. |
+| 41551 | [LegPaymentStreamFlatRateCurrency](/fix/fields/tags-41400-41599#tag-41551) | Currency | Optional | Specifies the currency of the actual flat rate. Uses ISO 4217 currency codes. |
+| 41552 | [LegStreamMaximumPaymentAmount](/fix/fields/tags-41400-41599#tag-41552) | Amt | Optional | Specifies the limit on the total payment amount. |
+| 41553 | [LegStreamMaximumPaymentCurrency](/fix/fields/tags-41400-41599#tag-41553) | Currency | Optional | Specifies the currency of total payment amount limit. Uses ISO 4217 currency codes. |
+| 41554 | [LegStreamMaximumTransactionAmount](/fix/fields/tags-41400-41599#tag-41554) | Amt | Optional | Specifies the limit on the payment amount that goes out in any particular calculation period. |
+| 41555 | [LegStreamMaximumTransactionCurrency](/fix/fields/tags-41400-41599#tag-41555) | Currency | Optional | Specifies the currency of the period payment amount limit. Uses ISO 4217 currency codes. |
+| | [LegPaymentStreamPaymentDates](/fix/components/leg-payment-stream-payment-dates) | Component | Optional | The LegPaymentStreamPaymentDates component is a subcomponent of the LegPaymentStream component used to specify the payment dates of the stream. |
+| | [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates) | Component | Optional | The LegPaymentStreamResetDates component is a subcomponent of the LegPaymentStream component used to specify the floating rate reset dates of the stream. |
+| | [LegPaymentStreamFixedRate](/fix/components/leg-payment-stream-fixed-rate) | Component | Optional | LegPaymentStreamFixedRate is a subcomponent of the LegPaymentStream component used to report the fixed rate or fixed payment amount of the payment stream. |
+| | [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate) | Component | Optional | LegPaymentStreamFloatingRate is a subcomponent of the LegPaymentStream component used to report the floating rate attributes of the payment stream. |
+| 42404 | [LegPaymentStreamCompoundingFixedRate](/fix/fields/tags-42400-42599#tag-42404) | float | Optional | Mutually exclusive with LegPaymentStreamCompoundingXIDRef(42400) or the LegPaymentStreamCompoundingFloatingRate component. |
+| | [LegPaymentStreamCompoundingFloatingRate](/fix/components/leg-payment-stream-compounding-floating-rate) | Component | Optional | LegPaymentStreamCompoundingFloatingRate is a subcomponent of the LegPaymentStream component used to report the parameters for determining the compounding floating rate of the stream. |
+| | [LegPaymentStreamCompoundingDates](/fix/components/leg-payment-stream-compounding-dates) | Component | Optional | LegPaymentStreamCompoundingDates is a subcomponent of the LegPaymentStream component used to specify the compounding dates of the stream - either specific, relative or periodic dates. |
+| | [LegPaymentStreamNonDeliverableSettlTerms](/fix/components/leg-payment-stream-non-deliverable-settl-terms) | Component | Optional | LegPaymentStreamNonDeliverableSettl is a subcomponent of the LegPaymentStream component used to specify the non-deliverable settlement terms of the payment stream. |
+
+</StickyTable>
+
+## Used in
+
+[LegStreamGrp](/fix/groups/leg-stream-grp)

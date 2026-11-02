@@ -1,0 +1,35 @@
+---
+title: "BusinessMessageReject"
+subtitle: "The Business Message Reject message can reject an application-level message which fulfills session-level rules and cannot be rejected via any other means. Note if the message fails a session-level rule (e.g. body length is incorrect), a…"
+---
+
+<Badge intent="info">MsgType j</Badge> <Badge intent="note" minimal>Business Reject</Badge> <Badge intent="tip" minimal>Infrastructure</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 45 | [RefSeqNum](/fix/fields/tags-0-199#tag-45) | SeqNum | Optional | MsgSeqNum of rejected message |
+| 372 | [RefMsgType](/fix/fields/tags-200-399#tag-372) | MsgTypeCodeSet | **Required** | The MsgType of the FIX message being referenced. |
+| 1130 | [RefApplVerID](/fix/fields/tags-1000-1199#tag-1130) | ApplVerIDCodeSet | Optional | Recommended when rejecting an application message that does not explicitly provide ApplVerID ( 1128) on the message being rejected. In this case the value from the DefaultApplVerID(1137) or the default value specified in the NoMsgTypes repeating group on the logon message should be provided. |
+| 1406 | [RefApplExtID](/fix/fields/tags-1400-1599#tag-1406) | int | Optional | Recommended when rejecting an application message that does not explicitly provide ApplExtID(1156) on the rejected message. In this case the value from the DefaultApplExtID(1407) or the default value specified in the NoMsgTypes repeating group on the logon message should be provided. |
+| 1131 | [RefCstmApplVerID](/fix/fields/tags-1000-1199#tag-1131) | String | Optional | Recommended when rejecting an application message that does not explicitly provide CstmApplVerID(1129) on the message being rejected. In this case the value from the DefaultCstmApplVerID(1408) or the default value specified in the NoMsgTypes repeating group on the logon message should be provided. |
+| 379 | [BusinessRejectRefID](/fix/fields/tags-200-399#tag-379) | String | Optional | The value of the business-level "ID" field on the message being referenced. Required unless the corresponding ID field (see list above) was not specified. |
+| 380 | [BusinessRejectReason](/fix/fields/tags-200-399#tag-380) | BusinessRejectReasonCodeSet | **Required** | Code to identify reason for a Business Message Reject message. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Where possible, message to explain reason for rejection |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="BusinessMessageReject" wordWrap
+8=FIXT.1.1|9=71|35=j|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|372=0|380=0|10=243|
+```

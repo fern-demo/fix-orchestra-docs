@@ -1,0 +1,26 @@
+---
+title: "TestRequest"
+subtitle: "The test request message forces a heartbeat from the opposing application. The test request message checks sequence numbers or verifies communication line status. The opposite application responds to the Test Request with a Heartbeat…"
+---
+
+<Badge intent="info">MsgType 1</Badge> <Badge intent="note" minimal>Session</Badge> <Badge intent="tip" minimal>Session</Badge> <Badge intent="success" minimal>Added FIX.2.7</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 112 | [TestReqID](/fix/fields/tags-0-199#tag-112) | String | **Required** | Identifier included in Test Request message to be returned in resulting Heartbeat |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="TestRequest" wordWrap
+8=FIXT.1.1|9=70|35=1|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|112=ABC123|10=212|
+```

@@ -1,0 +1,25 @@
+---
+title: "LegProvisionCashSettlPaymentFixedDateGrp"
+subtitle: "The ProvisionCashSettlPaymentFixedDateGrp is a repeating component within the ProvisionCashSettlPaymentDates component used to report fixed cash settlement payment dates defined in the provision."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40473</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+For the purpose of optimization, the LegProvisionCashSettlPaymentDateType(40475) field may optionally be omitted after the first instance provided the instance(s) which immediately follow is of the same date type. When the next instance requires a different date type from the prior instance, the LegProvisionCashSettlPaymentDateType(40475) is required to specify the date type.
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegProvisionCashSettlPaymentDates (40473)](/fix/fields/tags-40400-40599#tag-40473).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40474 | [LegProvisionCashSettlPaymentDate](/fix/fields/tags-40400-40599#tag-40474) | LocalMktDate | Optional | Required if NoLegProvisionCashSettlPaymentDates (40473) &gt; 0. |
+| 40475 | [LegProvisionCashSettlPaymentDateType](/fix/fields/tags-40400-40599#tag-40475) | ProvisionCashSettlPaymentDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
+
+</StickyTable>
+
+## Used in
+
+[LegProvisionCashSettlPaymentDates](/fix/components/leg-provision-cash-settl-payment-dates)

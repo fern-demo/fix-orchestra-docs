@@ -1,0 +1,24 @@
+---
+title: "TradingSessionRules"
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1237 | [OrdTypeRules](/fix/groups/ord-type-rules) | Repeating group | Optional |  |
+| 1239 | [TimeInForceRules](/fix/groups/time-in-force-rules) | Repeating group | Optional |  |
+| 1232 | [ExecInstRules](/fix/groups/exec-inst-rules) | Repeating group | Optional |  |
+| 2548 | [AuctionTypeRuleGrp](/fix/groups/auction-type-rule-grp) | Repeating group | Optional | The AuctionTypeRuleGrp component is used to specify the auction rule applicable for a given product group or complex, for example. |
+| 1235 | [MatchRules](/fix/groups/match-rules) | Repeating group | Optional | The MatchRules component is used to specify the details of order matching rules for specified product group or complex. |
+| 1141 | [MarketDataFeedTypes](/fix/groups/market-data-feed-types) | Repeating group | Optional | The MarketDataFeedTypes component is used to specify the different available feed types and sub-types, and additional market data feed related attributes, such as the market depth of the specified feed type. |
+
+</StickyTable>
+
+## Used in
+
+[TradingSessionRulesGrp](/fix/groups/trading-session-rules-grp), [TrdSessLstGrp](/fix/groups/trd-sess-lst-grp)

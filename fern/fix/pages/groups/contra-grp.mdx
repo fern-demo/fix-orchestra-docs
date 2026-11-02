@@ -1,0 +1,25 @@
+---
+title: "ContraGrp"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 382</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoContraBrokers (382)](/fix/fields/tags-200-399#tag-382).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 375 | [ContraBroker](/fix/fields/tags-200-399#tag-375) | String | Optional | First field in repeating group. Required if NoContraBrokers &gt; 0. |
+| 337 | [ContraTrader](/fix/fields/tags-200-399#tag-337) | String | Optional | Identifies the trader (e.g. "badge number") of the ContraBroker. |
+| 437 | [ContraTradeQty](/fix/fields/tags-400-599#tag-437) | Qty | Optional | Quantity traded with the ContraBroker (375). |
+| 438 | [ContraTradeTime](/fix/fields/tags-400-599#tag-438) | UTCTimestamp | Optional | Identifes the time of the trade with the ContraBroker (375). (always expressed in UTC (Universal Time Coordinated, also known as "GMT") |
+| 655 | [ContraLegRefID](/fix/fields/tags-600-799#tag-655) | String | Optional | Unique indicator for a specific leg for the ContraBroker (375). |
+
+</StickyTable>
+
+## Used in
+
+[ExecutionReport](/fix/messages/execution-report)

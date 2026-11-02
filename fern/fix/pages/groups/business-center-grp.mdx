@@ -1,0 +1,22 @@
+---
+title: "BusinessCenterGrp"
+subtitle: "BusinessCenterGrp is a repeating subcomponent within the DateAdjustment component. It is used to specify the set of business centers whose calendars drive the date adjustment. The business centers defined here apply to all adjustable dates…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40278</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoBusinessCenters (40278)](/fix/fields/tags-40200-40399#tag-40278).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40471 | [BusinessCenter](/fix/fields/tags-40400-40599#tag-40471) | String | Optional | Required if NoBusinessCenters(40278) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[DateAdjustment](/fix/components/date-adjustment)

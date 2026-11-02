@@ -1,0 +1,24 @@
+---
+title: "LegStreamCommoditySettlDayGrp"
+subtitle: "The LegStreamCommoditySettlDayGrp is a repeating subcomponent of the LegStreamCommoditySettlPeriodGrp component used to define the settlement days associated with the commodity contract."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41680</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegStreamCommoditySettlDays (41680)](/fix/fields/tags-41600-41799#tag-41680).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41681 | [LegStreamCommoditySettlDay](/fix/fields/tags-41600-41799#tag-41681) | DeliveryScheduleSettlDayCodeSet | Optional | Required if NoLegStreamCommoditySettlementDays(41680) &gt; 0. |
+| 41682 | [LegStreamCommoditySettlTotalHours](/fix/fields/tags-41600-41799#tag-41682) | int | Optional | Sum of the hours specified in LegStreamCommoditySettlTimeGrp. |
+| 41683 | [LegStreamCommoditySettlTimeGrp](/fix/groups/leg-stream-commodity-settl-time-grp) | Repeating group | Optional | The LegStreamCommoditySettlTimeGrp is a repeating subcomponent of the LegStreamCommoditySettlDayGrp component used to define the settlement time periods associated with the commodity contract. |
+
+</StickyTable>
+
+## Used in
+
+[LegStreamCommoditySettlPeriodGrp](/fix/groups/leg-stream-commodity-settl-period-grp)

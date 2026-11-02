@@ -1,0 +1,38 @@
+---
+title: "ContraryIntentionReport"
+subtitle: "The Contrary Intention Report is used for reporting of contrary expiration quantities for Saturday expiring options. This information is required by options exchanges for regulatory purposes."
+---
+
+<Badge intent="info">MsgType BO</Badge> <Badge intent="note" minimal>Position Maintenance</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| 977 | [ContIntRptID](/fix/fields/tags-800-999#tag-977) | String | **Required** | Unique identifier for the Contrary Intention report |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Time the contrary intention was received by clearing organization. |
+| 978 | [LateIndicator](/fix/fields/tags-800-999#tag-978) | Boolean | Optional | Indicates if the contrary intention was received after the exchange imposed cutoff time |
+| 979 | [InputSource](/fix/fields/tags-800-999#tag-979) | String | Optional | Source of the contrary intention |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | **Required** | Business date of contrary intention |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | **Required** | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 981 | [ExpirationQty](/fix/groups/expiration-qty) | Repeating group | **Required** | The ExpirationQty component block identified the expiration quantities and type of expiration. |
+| | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="ContraryIntentionReport" wordWrap
+8=FIXT.1.1|9=113|35=BO|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|977=ABC123|715=20260102|453=1|448=ABC123|981=1|982=1|10=069|
+```

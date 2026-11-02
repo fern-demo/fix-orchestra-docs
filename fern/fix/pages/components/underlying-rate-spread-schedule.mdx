@@ -1,0 +1,21 @@
+---
+title: "UnderlyingRateSpreadSchedule"
+subtitle: "UnderlyingRateSpreadSchedule is a subcomponent of UnderlyingInstrument used to specify the rate spread schedule for a basket underlier."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 43004 | [UnderlyingRateSpreadInitialValue](/fix/fields/tags-43000-43199#tag-43004) | float | Optional | Specifies the initial rate spread for a basket underlier. |
+| 43005 | [UnderlyingRateSpreadStepGrp](/fix/groups/underlying-rate-spread-step-grp) | Repeating group | Optional | UnderlyingRateSpreadStepGrp is a repeating subcomponent of UnderlyingRateSpreadSchedule used to specify the step dates and amounts of a basket spread schedule. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingInstrument](/fix/components/underlying-instrument)

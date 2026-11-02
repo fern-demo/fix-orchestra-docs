@@ -1,0 +1,28 @@
+---
+title: "BidResponse"
+subtitle: "The Bid Response message can be used in one of two ways depending on which market conventions are being followed. In the \"Non disclosed\" convention the Bid Response message can be used to supply a bid based on the sector, country, index and…"
+---
+
+<Badge intent="info">MsgType l</Badge> <Badge intent="note" minimal>Program Trading</Badge> <Badge intent="tip" minimal>Trade</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 390 | [BidID](/fix/fields/tags-200-399#tag-390) | String | Optional | For bid lists, unique identifier for BidResponse(35=I) as assigned by sell-side (broker, exchange, ECN). Uniqueness must be guaranteed within a single trading day. For quotes, unique identifier for the bid side of the quote assigned by the quote issuer. |
+| 391 | [ClientBidID](/fix/fields/tags-200-399#tag-391) | String | Optional | Unique identifier for a Bid Request as assigned by institution. Uniqueness must be guaranteed within a single trading day. |
+| 420 | [BidCompRspGrp](/fix/groups/bid-comp-rsp-grp) | Repeating group | **Required** |  |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="BidResponse" wordWrap
+8=FIXT.1.1|9=65|35=l|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|420=1|10=234|
+```

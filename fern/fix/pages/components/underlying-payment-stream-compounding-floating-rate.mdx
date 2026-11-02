@@ -1,0 +1,37 @@
+---
+title: "UnderlyingPaymentStreamCompoundingFloatingRate"
+subtitle: "UnderlyingPaymentStreamCompoundingFloatingRate is a subcomponent of the UnderlyingPaymentStream component used to report the parameters for determining the compounding floating rate of the stream."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42923 | [UnderlyingPaymentStreamCompoundingRateIndex](/fix/fields/tags-42800-42999#tag-42923) | String | Optional | The payment stream's compounding floating rate index. |
+| 42924 | [UnderlyingPaymentStreamCompoundingRateIndexCurvePeriod](/fix/fields/tags-42800-42999#tag-42924) | int | Optional | Conditionally required if UnderlyingPaymentStreamCompoundingRateIndexCurveUnit(42925) is specified. |
+| 42925 | [UnderlyingPaymentStreamCompoundingRateIndexCurveUnit](/fix/fields/tags-42800-42999#tag-42925) | PaymentStreamRateIndexCurveUnitCodeSet | Optional | Conditionally required if UnderlyingPaymentStreamCompoundingRateIndexCurvePeriod(42924) is specified. |
+| 42926 | [UnderlyingPaymentStreamCompoundingRateMultiplier](/fix/fields/tags-42800-42999#tag-42926) | float | Optional | A rate multiplier to apply to the compounding floating rate. The multiplier can be less than or greater than 1 (one). This should only be included if the multiplier is not equal to 1 (one) for the term of the stream. |
+| 42927 | [UnderlyingPaymentStreamCompoundingRateSpread](/fix/fields/tags-42800-42999#tag-42927) | PriceOffset | Optional | The basis points spread from the index specified in UnderlyingPaymentStreamCompoundingRateIndex(42923). |
+| 42928 | [UnderlyingPaymentStreamCompoundingRateSpreadPositionType](/fix/fields/tags-42800-42999#tag-42928) | PaymentStreamRateSpreadPositionTypeCodeSet | Optional | Identifies whether the rate spread is applied to a long or short position. |
+| 42929 | [UnderlyingPaymentStreamCompoundingRateTreatment](/fix/fields/tags-42800-42999#tag-42929) | PaymentStreamRateTreatmentCodeSet | Optional | Specifies the yield calculation treatment for the index. |
+| 42930 | [UnderlyingPaymentStreamCompoundingCapRate](/fix/fields/tags-42800-42999#tag-42930) | Percentage | Optional | The cap rate, if any, which applies to the compounding floating rate. It is only required where the compounding floating rate on a swap stream is capped at a certain level. The cap rate is assumed to be exclusive of any spread and is a per annum rate, expressed as a decimal. A cap rate of 5% would… |
+| 42931 | [UnderlyingPaymentStreamCompoundingCapRateBuySide](/fix/fields/tags-42800-42999#tag-42931) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the buyer of the compounding cap rate option through its trade side. |
+| 42932 | [UnderlyingPaymentStreamCompoundingCapRateSellSide](/fix/fields/tags-42800-42999#tag-42932) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the seller of the compounding cap rate option through its trade side. |
+| 42933 | [UnderlyingPaymentStreamCompoundingFloorRate](/fix/fields/tags-42800-42999#tag-42933) | Percentage | Optional | The floor rate, if any, which applies to the compounding floating rate. The floor rate (strike) is only required where the compounding floating rate on a swap stream is floored at a certain strike level. The floor rate is assumed to be exclusive of any spread and is a per annum rate. The rate is… |
+| 42934 | [UnderlyingPaymentStreamCompoundingFloorRateBuySide](/fix/fields/tags-42800-42999#tag-42934) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the buyer of the compounding floor rate option through its trade side. |
+| 42935 | [UnderlyingPaymentStreamCompoundingFloorRateSellSide](/fix/fields/tags-42800-42999#tag-42935) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the seller of the floor rate option through its trade side. |
+| 42936 | [UnderlyingPaymentStreamCompoundingInitialRate](/fix/fields/tags-42800-42999#tag-42936) | Percentage | Optional | The initial compounding floating rate reset agreed between the principal parties involved in the trade. It should only be included when the rate is not equal to the rate published on the source implied by the floating rate index. The initial rate is expressed in decimal form, e.g. 5% is represented… |
+| 42937 | [UnderlyingPaymentStreamCompoundingFinalRateRoundingDirection](/fix/fields/tags-42800-42999#tag-42937) | RoundingDirectionCodeSet | Optional | Specifies the rounding direction for the compounding floating rate. |
+| 42938 | [UnderlyingPaymentStreamCompoundingFinalRatePrecision](/fix/fields/tags-42800-42999#tag-42938) | int | Optional | Specifies the compounding floating rate rounding precision in terms of a number of decimal places. Note how a percentage rate rounding of 5 decimal places is expressed as a rounding precision of 7. |
+| 42939 | [UnderlyingPaymentStreamCompoundingAveragingMethod](/fix/fields/tags-42800-42999#tag-42939) | PaymentStreamAveragingMethodCodeSet | Optional | Specifies the averaging method when compounding floating rate averaging is applicable (e.g. weighted or unweighted). |
+| 42940 | [UnderlyingPaymentStreamCompoundingNegativeRateTreatment](/fix/fields/tags-42800-42999#tag-42940) | PaymentStreamNegativeRateTreatmentCodeSet | Optional | Specifies the method for calculating payment obligations when a compounding floating rate is negative (either due to a quoted negative floating rate or by operation of a spread that is subtracted from the floating rate). |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingPaymentStream](/fix/components/underlying-payment-stream)

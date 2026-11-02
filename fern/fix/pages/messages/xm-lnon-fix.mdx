@@ -1,0 +1,25 @@
+---
+title: "XMLnonFIX"
+---
+
+<Badge intent="info">MsgType n</Badge> <Badge intent="note" minimal>Session</Badge> <Badge intent="tip" minimal>Session</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 2104 | [AttachmentGrp](/fix/groups/attachment-grp) | Repeating group | Optional | The AttachmentGrp component provides the ability to attach other media type documents to a FIX message for transmission. The media type can be any of the media types (previously referred to as MIME types) that are listed by IANA (www.iana.org) \[RFC2046\]. The AttachmentGrp is intended to be used to… |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="XMLnonFIX" wordWrap
+8=FIXT.1.1|9=59|35=n|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|10=234|
+```

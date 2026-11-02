@@ -1,0 +1,31 @@
+---
+title: "UserNotification"
+subtitle: "The User Notification message is used to notify one or more users of an event or information from the sender of the message. This message is usually sent unsolicited from a marketplace (e.g. Exchange, ECN) to a market participant."
+---
+
+<Badge intent="info">MsgType CB</Badge> <Badge intent="note" minimal>User Management</Badge> <Badge intent="tip" minimal>Infrastructure</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 809 | [UsernameGrp](/fix/groups/username-grp) | Repeating group | Optional |  |
+| 926 | [UserStatus](/fix/fields/tags-800-999#tag-926) | UserStatusCodeSet | **Required** | Reason for notification - when possible provide an explanation. |
+| 1610 | [ThrottleParamsGrp](/fix/groups/throttle-params-grp) | Repeating group | Optional |  |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Explanation for user notification. |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="UserNotification" wordWrap
+8=FIXT.1.1|9=66|35=CB|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|926=1|10=015|
+```

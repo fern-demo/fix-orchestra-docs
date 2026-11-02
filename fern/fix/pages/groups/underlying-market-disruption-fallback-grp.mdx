@@ -1,0 +1,23 @@
+---
+title: "UnderlyingMarketDisruptionFallbackGrp"
+subtitle: "The UnderlyingMarketDisruptionFallbackGrp is a repeating subcomponent of the UnderlyingMarketDisruption component used to specify the market disruption fallback provisions."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41866</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingMarketDisruptionFallbacks (41866)](/fix/fields/tags-41800-41999#tag-41866).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41867 | [UnderlyingMarketDisruptionFallbackType](/fix/fields/tags-41800-41999#tag-41867) | String | Optional | Required if NoUnderlyingMarketDisruptionFallbacks(41866) &gt; 0. The sequence of entries specifies the order in which the fallback provisions should be applied. |
+| 41339 | [UnderlyingMarketDisruptionFallbackValue](/fix/fields/tags-41200-41399#tag-41339) | String | Optional | Applicable value for UnderlyingMarketDisruptionFallbackType(41867). |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingMarketDisruption](/fix/components/underlying-market-disruption)

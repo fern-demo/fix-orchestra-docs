@@ -1,0 +1,46 @@
+---
+title: "PartyActionReport"
+subtitle: "Used to respond to the PartyActionRequest(35=DH) message, indicating whether the request has been received, accepted or rejected. Can also be used in an unsolicited manner to report party actions, e.g. reinstatements after a manual…"
+---
+
+<Badge intent="info">MsgType DI</Badge> <Badge intent="note" minimal>Parties Action</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 2400 | [EffectiveBusinessDate](/fix/fields/tags-2400-2599#tag-2400) | LocalMktDate | Optional | Specifies an explicit business date for associated reference data or transaction. Used when an implicit date is not sufficiently specific. |
+| 2328 | [PartyActionRequestID](/fix/fields/tags-2200-2399#tag-2328) | String | Optional | Conditionally required when responding to a PartyActionRequest(35=DH) message. |
+| 2331 | [PartyActionReportID](/fix/fields/tags-2200-2399#tag-2331) | String | **Required** | The unique identifier of the PartyActionReport(35=DI) message as assigned by the message sender. |
+| 2329 | [PartyActionType](/fix/fields/tags-2200-2399#tag-2329) | PartyActionTypeCodeSet | **Required** | Specifies the type of action to take or was taken for a given party. |
+| 2332 | [PartyActionResponse](/fix/fields/tags-2200-2399#tag-2332) | PartyActionResponseCodeSet | **Required** | Specifies the action taken as a result of the PartyActionType(2239) of the PartyActionRequest(35=DH) message. |
+| 2333 | [PartyActionRejectReason](/fix/fields/tags-2200-2399#tag-2333) | PartyActionRejectReasonCodeSet | Optional | Conditionally required when PartyActionResponse(2332) = 2 (Rejected). |
+| 2330 | [ApplTestMessageIndicator](/fix/fields/tags-2200-2399#tag-2330) | Boolean | Optional | Conditionally required if present in the PartyActionRequest(35=DH) message. |
+| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328) | String | Optional | Identifies the reason for rejection. |
+| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664) | Length | Optional | Must be set if EncodedRejectText(1665) field is specified and must immediately precede it. |
+| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Identifies the market |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
+| | [InstrumentScope](/fix/components/instrument-scope) | Component | Optional | Used to specify the instrument |
+| 1657 | [RequestingPartyGrp](/fix/groups/requesting-party-grp) | Repeating group | Optional | Identifies the party making the request. |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | **Required** | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 1562 | [RelatedPartyDetailGrp](/fix/groups/related-party-detail-grp) | Repeating group | Optional | Party details for parties related to the Party specified in the PartyDetailGrp. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
+| 797 | [CopyMsgIndicator](/fix/fields/tags-600-799#tag-797) | Boolean | Optional | Indicates whether or not this message is a drop copy of another message. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="PartyActionReport" wordWrap
+8=FIXT.1.1|9=103|35=DI|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|2331=ABC123|2329=0|2332=0|453=1|448=ABC123|10=077|
+```

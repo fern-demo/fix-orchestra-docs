@@ -1,0 +1,37 @@
+---
+title: "DerivativeSecurityListUpdateReport"
+subtitle: "The Derivative Security List Update Report message is used to send updates to an option family or the strikes that comprise an option family."
+---
+
+<Badge intent="info">MsgType BR</Badge> <Badge intent="note" minimal>Securities Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| 320 | [SecurityReqID](/fix/fields/tags-200-399#tag-320) | String | Optional | Unique ID of a Security Definition Request. |
+| 322 | [SecurityResponseID](/fix/fields/tags-200-399#tag-322) | String | Optional | Identifier for the Derivative Security List message |
+| 560 | [SecurityRequestResult](/fix/fields/tags-400-599#tag-560) | SecurityRequestResultCodeSet | Optional | Result of the Security Request identified by SecurityReqID |
+| 980 | [SecurityUpdateAction](/fix/fields/tags-800-999#tag-980) | SecurityUpdateActionCodeSet | Optional | Updates can be applied to Underlying or option class. If Series information provided, then Series has explicitly changed |
+| | [UnderlyingInstrument](/fix/components/underlying-instrument) | Component | Optional | The UnderlyingInstrument component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In the case of the UnderlyingInstrument component block it describes an instrument which underlies the primary instrument Refer to the Instrument… |
+| | [DerivativeSecurityDefinition](/fix/components/derivative-security-definition) | Component | Optional |  |
+| 779 | [LastUpdateTime](/fix/fields/tags-600-799#tag-779) | UTCTimestamp | Optional | Represents the time at which a security was last updated |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 393 | [TotNoRelatedSym](/fix/fields/tags-200-399#tag-393) | int | Optional | Used to indicate the total number of securities being returned for this request. Used in the event that message fragmentation is required. |
+| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893) | LastFragmentCodeSet | Optional | Indicates whether this is the last fragment in a sequence of message fragments. Only required where message has been fragmented. |
+| 146 | [RelSymDerivSecUpdGrp](/fix/groups/rel-sym-deriv-sec-upd-grp) | Repeating group | Optional |  |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="DerivativeSecurityListUpdateReport" wordWrap
+8=FIXT.1.1|9=60|35=BR|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|10=008|
+```

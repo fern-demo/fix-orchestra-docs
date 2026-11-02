@@ -1,0 +1,85 @@
+---
+title: "CollateralReport"
+subtitle: "Used to report collateral status when responding to a Collateral Inquiry message."
+---
+
+<Badge intent="info">MsgType BA</Badge> <Badge intent="note" minimal>Collateral Management</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 908 | [CollRptID](/fix/fields/tags-800-999#tag-908) | String | **Required** | Unique Identifer for collateral report |
+| 909 | [CollInquiryID](/fix/fields/tags-800-999#tag-909) | String | Optional | Identifier for the collateral inquiry to which this message is a reply |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 1043 | [CollApplType](/fix/fields/tags-1000-1199#tag-1043) | CollApplTypeCodeSet | Optional | Differentiates collateral pledged specifically against a position from collateral pledged against an entire portfolio on a valued basis. |
+| 291 | [FinancialStatus](/fix/fields/tags-200-399#tag-291) | FinancialStatusCodeSet | Optional | Tells whether security has been restricted. |
+| 910 | [CollStatus](/fix/fields/tags-800-999#tag-910) | CollStatusCodeSet | **Required** | Collateral status |
+| 911 | [TotNumReports](/fix/fields/tags-800-999#tag-911) | int | Optional | Total number of reports returned in response to a request. |
+| 912 | [LastRptRequested](/fix/fields/tags-800-999#tag-912) | LastRptRequestedCodeSet | Optional | Indicates whether this message is the last report message in response to a request message, e.g. OrderMassStatusRequest(35=AF), TradeCaptureReportRequest(35=AD). |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Customer Account |
+| 581 | [AccountType](/fix/fields/tags-400-599#tag-581) | AccountTypeCodeSet | Optional | Type of account associated with the order (Origin) |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | Identifier of order for which collateral is required |
+| 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | Optional | Identifier of order for which collateral is required |
+| 198 | [SecondaryOrderID](/fix/fields/tags-0-199#tag-198) | String | Optional | Identifier of order for which collateral is required |
+| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526) | String | Optional | Identifier of order for which collateral is required |
+| 124 | [ExecCollGrp](/fix/groups/exec-coll-grp) | Repeating group | Optional |  |
+| 897 | [TrdCollGrp](/fix/groups/trd-coll-grp) | Repeating group | Optional |  |
+| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This component identifies the legal agreement under which the deal was made and other unique characteristics of the transaction. For example, the… |
+| 64 | [SettlDate](/fix/fields/tags-0-199#tag-64) | LocalMktDate | Optional | Specific date of trade settlement (SettlementDate) in YYYYMMDD format. If present, this field overrides SettlType (63). This field is required if the value of SettlType (63) is 6 (Future) or 8 (Sellers Option). This field must be omitted if the value of SettlType (63) is 7 (When and If Issued)… |
+| 53 | [Quantity](/fix/fields/tags-0-199#tag-53) | Qty | Optional | Overall/total quantity (e.g. number of shares) (Prior to FIX 4.2 this field was of type int) |
+| 854 | [QtyType](/fix/fields/tags-800-999#tag-854) | QtyTypeCodeSet | Optional | Type of quantity specified in quantity field. ContractMultiplier (tag 231) is required when QtyType = 1 (Contracts). UnitOfMeasure (tag 996) and TimeUnit (tag 997) are required when QtyType = 2 (Units of Measure per Time Unit). |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency value whenever possible. See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values. |
+| 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
+| 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
+| 899 | [MarginExcess](/fix/fields/tags-800-999#tag-899) | Amt | Optional | Excess margin amount (deficit if value is negative) |
+| 900 | [TotalNetValue](/fix/fields/tags-800-999#tag-900) | Amt | Optional | TotalNetValue is determined as follows: At the initial collateral assignment TotalNetValue is the sum of (UnderlyingStartValue \* (1-haircut)). In a collateral substitution TotalNetValue is the sum of (UnderlyingCurrentValue \* (1-haircut)). For listed derivatives clearing margin management, this is… |
+| 901 | [CashOutstanding](/fix/fields/tags-800-999#tag-901) | Amt | Optional | Starting consideration less repayments |
+| 1703 | [CollateralAmountGrp](/fix/groups/collateral-amount-grp) | Repeating group | Optional | The Collateral Amount Group component block is a repeating group that provides the current value of the collateral type on deposit. The currency of the collateral value may be optionally included. |
+| 2868 | [CollateralizationValueDate](/fix/fields/tags-2800-2999#tag-2868) | LocalMktDate | Optional | Date when the collateral is to be assessed or assigned. |
+| 1936 | [TradeCollateralization](/fix/fields/tags-1800-1999#tag-1936) | TradeCollateralizationCodeSet | Optional | Specifies how the trade is collateralized. |
+| 1907 | [RegulatoryTradeIDGrp](/fix/groups/regulatory-trade-id-grp) | Repeating group | Optional | The RegulatoryTradeIDGrp is a repeating component within the TradeCaptureReport message used to report the source, value and relationship of multiple identifiers for the same trade or position. This component can be used to meet regulatory trade reporting requirements where identifiers such as the… |
+| 768 | [TrdRegTimestamps](/fix/groups/trd-reg-timestamps) | Repeating group | Optional | The TrdRegTimestamps component block is used to express timestamps for an order or trade that are required by regulatory agencies These timesteamps are used to identify the timeframes for when an order or trade is received on the floor, received and executed by the broker, etc. |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | Optional | Side of order (see Volume : "Glossary" for value definitions) |
+| 136 | [MiscFeesGrp](/fix/groups/misc-fees-grp) | Repeating group | Optional | The MiscFeesGrp component is used to provide details of trade and transaction fees other than commissions, e.g. regulatory, exchange, taxes, levies, markup, trade reporting, etc. In the context of ESMA RTS 27 Best Execution Reporting, it may also be used to collect and publish the nature and level… |
+| 44 | [Price](/fix/fields/tags-0-199#tag-44) | Price | Optional | Price per unit of quantity (e.g. per share) |
+| 423 | [PriceType](/fix/fields/tags-400-599#tag-423) | PriceTypeCodeSet | Optional | Code to represent the price type. |
+| 159 | [AccruedInterestAmt](/fix/fields/tags-0-199#tag-159) | Amt | Optional | Amount of Accrued Interest for convertible bonds and fixed income |
+| 920 | [EndAccruedInterestAmt](/fix/fields/tags-800-999#tag-920) | Amt | Optional | Accrued Interest Amount applicable to a financing transaction on the End Date. |
+| 921 | [StartCash](/fix/fields/tags-800-999#tag-921) | Amt | Optional | Starting dirty cash consideration of a financing deal, i.e. paid to the seller on the Start Date. |
+| 922 | [EndCash](/fix/fields/tags-800-999#tag-922) | Amt | Optional | Ending dirty cash consideration of a financing deal. i.e. reimbursed to the buyer on the End Date. |
+| | [SpreadOrBenchmarkCurveData](/fix/components/spread-or-benchmark-curve-data) | Component | Optional | The SpreadOrBenchmarkCurveData component block is primarily used for Fixed Income to convey spread to a benchmark security or curve. |
+| 232 | [Stipulations](/fix/groups/stipulations) | Repeating group | Optional | The Stipulations component block is used in Fixed Income to provide additional information on a given security. These additional information are usually not considered static data information. |
+| | [SettlInstructionsData](/fix/components/settl-instructions-data) | Component | Optional | The SettlInstructionsData component block is used to convey key information regarding standing settlement and delivery instructions. It also provides a reference to standing settlement details regarding the source, delivery instructions, and settlement parties |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Trading Session in which trade occurred |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Trading Session Subid in which trade occurred |
+| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716) | SettlSessIDCodeSet | Optional | Identifies a specific settlement session |
+| 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717) | String | Optional | SubID value associated with SettlSessID(716) |
+| 1934 | [RegulatoryReportType](/fix/fields/tags-1800-1999#tag-1934) | RegulatoryReportTypeCodeSet | Optional | Type of regulatory report. |
+| 2869 | [RegulatoryReportTypeBusinessDate](/fix/fields/tags-2800-2999#tag-2869) | LocalMktDate | Optional | May be used when the business event date differs from when the regulatory report is actually being submitted (typically specified in TrdRegTimestamps component). |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | Optional | The clearing business date of the report. |
+| 2486 | [WireReference](/fix/fields/tags-2400-2599#tag-2486) | String | Optional | The reference to a wire transfer associated with the transaction. Wire references done via wire services such as Fedwire Output Message Accountabilitty Data "OMAD" or SWIFT Output Sequence Number "OSN". |
+| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | Optional | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
+| 2485 | [TransactionID](/fix/fields/tags-2400-2599#tag-2485) | String | Optional | The unique transaction entity identifier assigned by the firm sending the CollateralReport(35=BA). |
+| 2484 | [FirmTransactionID](/fix/fields/tags-2400-2599#tag-2484) | String | Optional | The unique transaction entity identifier assigned by the counterparty to the transaction receiving this message, if known. |
+| 2849 | [FundingSourceGrp](/fix/groups/funding-source-grp) | Repeating group | Optional | This component is used to specify the funding source(s) used to finance a margin loan or collateralized loan. |
+| 2871 | [TransactionAttributeGrp](/fix/groups/transaction-attribute-grp) | Repeating group | Optional | The TransactionAttributeGrp component block is a repeating group that may be used to provide additional transaction attributes for the trade and other post-trade events. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="CollateralReport" wordWrap
+8=FIXT.1.1|9=77|35=BA|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|908=ABC123|910=0|10=066|
+```

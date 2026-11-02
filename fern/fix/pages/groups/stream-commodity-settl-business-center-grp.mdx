@@ -1,0 +1,22 @@
+---
+title: "StreamCommoditySettlBusinessCenterGrp"
+subtitle: "StreamCommoditySettlBusinessCenterGrp is a repeating subcomponent of the StreamCommodity component used to specify the set of business centers whose calendars drive date adjustment. Used only to override the business centers defined in the…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41249</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoStreamCommoditySettlBusinessCenters (41249)](/fix/fields/tags-41200-41399#tag-41249).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41250 | [StreamCommoditySettlBusinessCenter](/fix/fields/tags-41200-41399#tag-41250) | String | Optional | Required if NoStreamCommoditySettlBusinessCenters(41249) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[StreamCommodity](/fix/components/stream-commodity)

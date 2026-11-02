@@ -1,0 +1,23 @@
+---
+title: "LegFinancingTermSupplementGrp"
+subtitle: "The LegFinancingTermSupplementGrp is a repeating component within the LegFinancingDetails component used to report contractual terms supplements of derivative trades."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42200</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegFinancingTermSupplements (42200)](/fix/fields/tags-42200-42399#tag-42200).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42201 | [LegFinancingTermSupplementDesc](/fix/fields/tags-42200-42399#tag-42201) | String | Optional | Required if NoLegFinancingTermSupplements(42200) &gt; 0. |
+| 42202 | [LegFinancingTermSupplementDate](/fix/fields/tags-42200-42399#tag-42202) | LocalMktDate | Optional | Specifies the publication date of the applicable version of the contractual supplement. |
+
+</StickyTable>
+
+## Used in
+
+[LegFinancingDetails](/fix/components/leg-financing-details)

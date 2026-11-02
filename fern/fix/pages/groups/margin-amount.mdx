@@ -1,0 +1,28 @@
+---
+title: "MarginAmount"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1643</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoMarginAmt (1643)](/fix/fields/tags-1600-1799#tag-1643).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1645 | [MarginAmt](/fix/fields/tags-1600-1799#tag-1645) | Amt | Optional | Amount of margin requirement. |
+| 1644 | [MarginAmtType](/fix/fields/tags-1600-1799#tag-1644) | MarginAmtTypeCodeSet | Optional | Total margin requirement if not provided |
+| 1646 | [MarginAmtCcy](/fix/fields/tags-1600-1799#tag-1646) | Currency | Optional | Can be used to specify the base settlement currency if Currency(15) is not specified. |
+| 2088 | [MarginAmtFXRate](/fix/fields/tags-2000-2199#tag-2088) | float | Optional | Foreign exchange rate used to compute the MarginAmt(1645) from the MarginAmtCcy(1646) and the Currency(15). |
+| 2089 | [MarginAmtFXRateCalc](/fix/fields/tags-2000-2199#tag-2089) | UnderlyingFXRateCalcCodeSet | Optional | Specifies whether or not MarginAmtFXRate(2088) should be multipled or divided. |
+| 1714 | [MarginAmountMarketSegmentID](/fix/fields/tags-1600-1799#tag-1714) | String | Optional | Market segment associated with the margin amount. |
+| 1715 | [MarginAmountMarketID](/fix/fields/tags-1600-1799#tag-1715) | String | Optional | Market associated with the margin amount |
+| 2851 | [MarginDirection](/fix/fields/tags-2800-2999#tag-2851) | MarginDirectionCodeSet | Optional | Indicates whether the margin described is posted or received. |
+
+</StickyTable>
+
+## Used in
+
+[AccountSummaryReport](/fix/messages/account-summary-report), [MarginRequirementReport](/fix/messages/margin-requirement-report)

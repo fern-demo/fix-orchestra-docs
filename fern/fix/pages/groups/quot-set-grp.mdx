@@ -1,0 +1,26 @@
+---
+title: "QuotSetGrp"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 296</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoQuoteSets (296)](/fix/fields/tags-200-399#tag-296).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 302 | [QuoteSetID](/fix/fields/tags-200-399#tag-302) | String | **Required** | Sequential number for the Quote Set. For a given QuoteID - assumed to start at 1. Must be the first field in the repeating group. |
+| | [UnderlyingInstrument](/fix/components/underlying-instrument) | Component | Optional | The UnderlyingInstrument component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In the case of the UnderlyingInstrument component block it describes an instrument which underlies the primary instrument Refer to the Instrument… |
+| 367 | [QuoteSetValidUntilTime](/fix/fields/tags-200-399#tag-367) | UTCTimestamp | Optional | Indicates expiration time of this particular QuoteSet (always expressed in UTC (Universal Time Coordinated, also known as "GMT") |
+| 304 | [TotNoQuoteEntries](/fix/fields/tags-200-399#tag-304) | int | **Required** | Total number of quotes for the quote set across all messages. Should be the sum of all NoQuoteEntries in each message that has repeating quotes that are part of the same quote set. |
+| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893) | LastFragmentCodeSet | Optional | Indicates whether this is the last fragment in a sequence of message fragments. Only required where message has been fragmented. |
+| 295 | [QuotEntryGrp](/fix/groups/quot-entry-grp) | Repeating group | **Required** |  |
+
+</StickyTable>
+
+## Used in
+
+[MassQuote](/fix/messages/mass-quote)

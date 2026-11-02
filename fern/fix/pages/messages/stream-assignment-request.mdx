@@ -1,0 +1,28 @@
+---
+title: "StreamAssignmentRequest"
+subtitle: "In certain markets where market data aggregators fan out to end clients the pricing streams provided by the price makers, the price maker may assign the clients to certain pricing streams that the price maker publishes via the aggregator.…"
+---
+
+<Badge intent="info">MsgType CC</Badge> <Badge intent="note" minimal>Market Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 1497 | [StreamAsgnReqID](/fix/fields/tags-1400-1599#tag-1497) | String | **Required** | Unique identifier of the request. |
+| 1498 | [StreamAsgnReqType](/fix/fields/tags-1400-1599#tag-1498) | StreamAsgnReqTypeCodeSet | **Required** | Type of assignment being requested. |
+| 1499 | [StrmAsgnReqGrp](/fix/groups/strm-asgn-req-grp) | Repeating group | **Required** |  |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="StreamAssignmentRequest" wordWrap
+8=FIXT.1.1|9=86|35=CC|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|1497=ABC123|1498=1|1499=1|10=252|
+```

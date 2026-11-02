@@ -1,0 +1,24 @@
+---
+title: "PriceMovementValueGrp"
+subtitle: "This PriceMovementValueGrp component is a repeatable block that will be utilized to represent a value relative to a specific price movement point."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1920</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPriceMovementValues (1920)](/fix/fields/tags-1800-1999#tag-1920).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1921 | [PriceMovementValue](/fix/fields/tags-1800-1999#tag-1921) | float | Optional | Required if NoPriceMovementValues(1919) &gt; 0. |
+| 1922 | [PriceMovementPoint](/fix/fields/tags-1800-1999#tag-1922) | int | Optional | Price movement point up (positive integer) or down (negative integer) relative to the underlying price of the instrument. |
+| 1923 | [PriceMovementType](/fix/fields/tags-1800-1999#tag-1923) | PriceMovementTypeCodeSet | Optional | Describes the format of the PriceMovementValue(1921). |
+
+</StickyTable>
+
+## Used in
+
+[PriceMovementGrp](/fix/groups/price-movement-grp)

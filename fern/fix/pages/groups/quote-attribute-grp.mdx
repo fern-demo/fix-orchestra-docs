@@ -1,0 +1,23 @@
+---
+title: "QuoteAttributeGrp"
+subtitle: "The QuoteAttributeGrp component provides additional attributes about the quote. Attributes included in this component are primarily \"indicators\" that may be associated with regulatory requirements and are typically not part of normal…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2706</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoQuoteAttributes (2706)](/fix/fields/tags-2600-2799#tag-2706).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 2707 | [QuoteAttributeType](/fix/fields/tags-2600-2799#tag-2707) | QuoteAttributeTypeCodeSet | Optional | Required if NoQuoteAttributes(2706) &gt; 0. |
+| 2708 | [QuoteAttributeValue](/fix/fields/tags-2600-2799#tag-2708) | String | Optional | Required if NoQuoteAttributes(2706) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[Quote](/fix/messages/quote), [QuoteAck](/fix/messages/quote-ack), [QuoteStatusReport](/fix/messages/quote-status-report)

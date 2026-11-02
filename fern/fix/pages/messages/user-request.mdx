@@ -1,0 +1,37 @@
+---
+title: "UserRequest"
+subtitle: "This message is used to initiate a user action, logon, logout or password change. It can also be used to request a report on a user's status."
+---
+
+<Badge intent="info">MsgType BE</Badge> <Badge intent="note" minimal>User Management</Badge> <Badge intent="tip" minimal>Infrastructure</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 923 | [UserRequestID](/fix/fields/tags-800-999#tag-923) | String | **Required** | Unique identifier for a User Request. |
+| 924 | [UserRequestType](/fix/fields/tags-800-999#tag-924) | UserRequestTypeCodeSet | **Required** | Indicates the action required by a User Request Message |
+| 553 | [Username](/fix/fields/tags-400-599#tag-553) | String | **Required** | Userid or username. |
+| 554 | [Password](/fix/fields/tags-400-599#tag-554) | String | Optional | Password or passphrase. |
+| 925 | [NewPassword](/fix/fields/tags-800-999#tag-925) | String | Optional | New Password or passphrase |
+| 1400 | [EncryptedPasswordMethod](/fix/fields/tags-1400-1599#tag-1400) | int | Optional | Enumeration defining the encryption method used to encrypt password fields. At this time there are no encryption methods defined by FPL. |
+| 1401 | [EncryptedPasswordLen](/fix/fields/tags-1400-1599#tag-1401) | Length | Optional | Length of the EncryptedPassword(1402) field |
+| 1402 | [EncryptedPassword](/fix/fields/tags-1400-1599#tag-1402) | data | Optional | Encrypted password - encrypted via the method specified in the field EncryptedPasswordMethod(1400) |
+| 1403 | [EncryptedNewPasswordLen](/fix/fields/tags-1400-1599#tag-1403) | Length | Optional | Length of the EncryptedNewPassword(1404) field |
+| 1404 | [EncryptedNewPassword](/fix/fields/tags-1400-1599#tag-1404) | data | Optional | Encrypted new password - encrypted via the method specified in the field EncryptedPasswordMethod(1400) |
+| 95 | [RawDataLength](/fix/fields/tags-0-199#tag-95) | Length | Optional | Number of bytes in raw data field. |
+| 96 | [RawData](/fix/fields/tags-0-199#tag-96) | data | Optional | Can be used to hand structures etc to other API's etc |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="UserRequest" wordWrap
+8=FIXT.1.1|9=88|35=BE|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|923=ABC123|924=1|553=ABC123|10=130|
+```

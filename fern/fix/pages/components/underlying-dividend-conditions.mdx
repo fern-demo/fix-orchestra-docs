@@ -1,0 +1,43 @@
+---
+title: "UnderlyingDividendConditions"
+subtitle: "The UnderlyingDividendConditions component is a subcomponent of UnderlyingPaymentStream used to specify the conditions' valuations and dates governing the payment of dividends."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42826 | [UnderlyingDividendReinvestmentIndicator](/fix/fields/tags-42800-42999#tag-42826) | Boolean | Optional | Indicates whether the dividend will be reinvested. |
+| 42827 | [UnderlyingDividendEntitlementEvent](/fix/fields/tags-42800-42999#tag-42827) | DividendEntitlementEventCodeSet | Optional | Defines the contract event which the receiver of the derivative is entitled to the dividend. |
+| 42828 | [UnderlyingDividendAmountType](/fix/fields/tags-42800-42999#tag-42828) | DividendAmountTypeCodeSet | Optional | Indicates how the gross cash dividend amount per share is determined. |
+| 42829 | [UnderlyingDividendUnderlierRefID](/fix/fields/tags-42800-42999#tag-42829) | String | Optional | References the dividend underlier through the instrument's UnderlyingSecurityID(309) which must be fully specified in a separate instance of the UnderlyingInstrument component. |
+| 42862 | [UnderlyingDividendPeriodGrp](/fix/groups/underlying-dividend-period-grp) | Repeating group | Optional | UnderlyingDividendPeriodGrp is a repeating subcomponent within the UnderlyingDividendConditions component. It is used to specify the valuation and payments dates of the dividend leg of a dividend swap. |
+| 42830 | [UnderlyingExtraordinaryDividendPartySide](/fix/fields/tags-42800-42999#tag-42830) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the party through its side in the trade who makes the determination whether dividends are extraordinary in relation to normal levels. |
+| 42831 | [UnderlyingExtraordinaryDividendAmountType](/fix/fields/tags-42800-42999#tag-42831) | DividendAmountTypeCodeSet | Optional | Indicates how the extraordinary gross cash dividend per share is determined. |
+| 42832 | [UnderlyingExtraordinaryDividendCurrency](/fix/fields/tags-42800-42999#tag-42832) | Currency | Optional | The currency in which the excess dividend is denominated. Uses ISO 4217 currency codes. |
+| 42833 | [UnderlyingExtraordinaryDividendDeterminationMethod](/fix/fields/tags-42800-42999#tag-42833) | String | Optional | Specifies the method in which the excess amount is determined. See http://www.fpml.org/coding-scheme/determination-method for values. |
+| | [UnderlyingDividendFXTriggerDate](/fix/components/underlying-dividend-fx-trigger-date) | Component | Optional | The UnderlyingDividendFXTriggerDate component is a subcomponent of UnderlyingDividendConditions used to report the dividend date when a foreign exchange trade is triggered. |
+| | [UnderlyingDividendAccrualFloatingRate](/fix/components/underlying-dividend-accrual-floating-rate) | Component | Optional | The UnderlyingDividendAccrualFloatingRate component is a subcomponent of UnderlyingDividendConditions used to define the dividend accrual floating rate attributes of dividend payment conditions. |
+| 42834 | [UnderlyingDividendAccrualFixedRate](/fix/fields/tags-42800-42999#tag-42834) | Percentage | Optional | The dividend accrual fixed rate per annum expressed as a decimal. A value of 5% would be represented as "0.05". |
+| | [UnderlyingDividendAccrualPaymentDate](/fix/components/underlying-dividend-accrual-payment-date) | Component | Optional | The UnderlyingDividendAccrualPaymentDate component is a subcomponent of UnderlyingDividendConditions used to report the dividend accrual payment date. |
+| 42835 | [UnderlyingDividendCompoundingMethod](/fix/fields/tags-42800-42999#tag-42835) | PaymentStreamCompoundingMethodCodeSet | Optional | The compounding method to be used when more than one dividend period contributes to a single payment. |
+| 42836 | [UnderlyingDividendNumOfIndexUnits](/fix/fields/tags-42800-42999#tag-42836) | int | Optional | The number of index units applicable to dividends. |
+| 42837 | [UnderlyingDividendCashPercentage](/fix/fields/tags-42800-42999#tag-42837) | Percentage | Optional | Declared cash dividend percentage. A value of 5% would be represented as "0.05". |
+| 42838 | [UnderlyingDividendCashEquivalentPercentage](/fix/fields/tags-42800-42999#tag-42838) | Percentage | Optional | Declared cash-equivalent dividend percentage. A value of 5% would be represented as "0.05". |
+| 42839 | [UnderlyingNonCashDividendTreatment](/fix/fields/tags-42800-42999#tag-42839) | NonCashDividendTreatmentCodeSet | Optional | Defines the treatment of non-cash dividends. |
+| 42840 | [UnderlyingDividendComposition](/fix/fields/tags-42800-42999#tag-42840) | DividendCompositionCodeSet | Optional | Defines how the composition of dividends is to be determined. |
+| 42841 | [UnderlyingSpecialDividendsIndicator](/fix/fields/tags-42800-42999#tag-42841) | Boolean | Optional | Indicates whether special dividends are applicable. |
+| 42842 | [UnderlyingMaterialDividendsIndicator](/fix/fields/tags-42800-42999#tag-42842) | Boolean | Optional | Indicates whether material non-cash dividends are applicable. |
+| 42843 | [UnderlyingOptionsExchangeDividendsIndicator](/fix/fields/tags-42800-42999#tag-42843) | Boolean | Optional | Indicates whether option exchange dividends are applicable. |
+| 42844 | [UnderlyingAdditionalDividendsIndicator](/fix/fields/tags-42800-42999#tag-42844) | Boolean | Optional | Indicates whether additional dividends are applicable. |
+| 42845 | [UnderlyingAllDividendsIndicator](/fix/fields/tags-42800-42999#tag-42845) | Boolean | Optional | Represents the European Master Confirmation value of 'All Dividends' which, when applicable, signifies that, for a given Ex-Date, the daily observed share price for that day is adjusted (reduced) by the cash dividend and/or the cash value of any non-cash dividend per share (including extraordinary… |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingPaymentStreamFloatingRate](/fix/components/underlying-payment-stream-floating-rate)

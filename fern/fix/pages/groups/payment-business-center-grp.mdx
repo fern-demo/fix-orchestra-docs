@@ -1,0 +1,22 @@
+---
+title: "PaymentBusinessCenterGrp"
+subtitle: "PaymentBusinessCenterGrp is a repeating subcomponent within the PaymentGrp component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40944</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPaymentBusinessCenters (40944)](/fix/fields/tags-40800-40999#tag-40944).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40221 | [PaymentBusinessCenter](/fix/fields/tags-40200-40399#tag-40221) | String | Optional | Required if NoPaymentBusinessCenters(40944) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[PaymentGrp](/fix/groups/payment-grp)

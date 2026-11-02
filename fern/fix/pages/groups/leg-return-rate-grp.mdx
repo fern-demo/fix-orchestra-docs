@@ -1,0 +1,50 @@
+---
+title: "LegReturnRateGrp"
+subtitle: "LegReturnRateGrp is a repeating subcomponent within the LegPaymentStreamFloatingRate component. It is used to specify the multiple return rates for an equity return swap payment stream."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42534</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegReturnRates (42534)](/fix/fields/tags-42400-42599#tag-42534).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42535 | [LegReturnRatePriceSequence](/fix/fields/tags-42400-42599#tag-42535) | ReturnRatePriceSequenceCodeSet | Optional | Required if NoLegReturnRates(42534) &gt; 0. |
+| 42536 | [LegReturnRateCommissionBasis](/fix/fields/tags-42400-42599#tag-42536) | CommTypeCodeSet | Optional | Specifies the basis or unit used to calculate the commission. |
+| 42537 | [LegReturnRateCommissionAmount](/fix/fields/tags-42400-42599#tag-42537) | Amt | Optional | The commission amount. |
+| 42538 | [LegReturnRateCommissionCurrency](/fix/fields/tags-42400-42599#tag-42538) | Currency | Optional | If not specified, this is defaulted to the reporting currency. |
+| 42539 | [LegReturnRateTotalCommissionPerTrade](/fix/fields/tags-42400-42599#tag-42539) | Amt | Optional | The total commission per trade. |
+| 42540 | [LegReturnRateDeterminationMethod](/fix/fields/tags-42400-42599#tag-42540) | String | Optional | Specifies the method by which the underlier prices are determined. See http://www.fpml.org/coding-scheme/determination-method for values. |
+| 42564 | [LegReturnRatePriceGrp](/fix/groups/leg-return-rate-price-grp) | Repeating group | Optional | LegReturnRatePriceGrp is a repeating subcomponent within the LegReturnRateGrp component. It is used to specify the return rate prices for an equity return swap payment stream. |
+| 42530 | [LegReturnRateFXConversionGrp](/fix/groups/leg-return-rate-fx-conversion-grp) | Repeating group | Optional | LegReturnRateFXConversionGrp is a repeating subcomponent within the LegReturnRateGrp component. It is used to specify the FX conversion rates for an equity return swap payment stream. |
+| 42541 | [LegReturnRateAmountRelativeTo](/fix/fields/tags-42400-42599#tag-42541) | int | Optional | Specifies the reference amount when the return rate amount is relative to another amount in the trade. See http://www.fixtradingcommunity.org/codelists#Amount\_Relative\_To for code list of relative amounts. |
+| 42542 | [LegReturnRateQuoteMeasureType](/fix/fields/tags-42400-42599#tag-42542) | String | Optional | Specifies the type of the measure applied to the return rate's asset, e.g. valuation, sensitivity risk. This could be an NPV, a cash flow, a clean price, etc. See http://www.fpml.org/coding-scheme/asset-measure for values. |
+| 42543 | [LegReturnRateQuoteUnits](/fix/fields/tags-42400-42599#tag-42543) | String | Optional | Specifies the units that the measure is expressed in. If not specified, the default is a price/value in currency units. See http://www.fpml.org/coding-scheme/price-quote-units for values. |
+| 42544 | [LegReturnRateQuoteMethod](/fix/fields/tags-42400-42599#tag-42544) | CashSettlQuoteMethodCodeSet | Optional | Specifies the type of quote used to determine the return rate of the swap. |
+| 42545 | [LegReturnRateQuoteCurrency](/fix/fields/tags-42400-42599#tag-42545) | Currency | Optional | Specifies the currency the return rate quote is denominated in. Uses ISO 4217 Currency Code. |
+| 42546 | [LegReturnRateQuoteCurrencyType](/fix/fields/tags-42400-42599#tag-42546) | String | Optional | Specifies the type of currency, e.g. settlement currency, base currency, etc., that the quote is reported in. See http://www.fpml.org/coding-scheme/reporting-currency-type for values. |
+| 42547 | [LegReturnRateQuoteTimeType](/fix/fields/tags-42400-42599#tag-42547) | ReturnRateQuoteTimeTypeCodeSet | Optional | Mutually exclusive with LegReturnRateQuoteTime(42548). |
+| 42548 | [LegReturnRateQuoteTime](/fix/fields/tags-42400-42599#tag-42548) | LocalMktTime | Optional | Mutually exclusive with LegReturnRateQuoteTimeType(42547). |
+| 42549 | [LegReturnRateQuoteDate](/fix/fields/tags-42400-42599#tag-42549) | LocalMktDate | Optional | The date when the quote is to be generated. |
+| 42550 | [LegReturnRateQuoteExpirationTime](/fix/fields/tags-42400-42599#tag-42550) | LocalMktTime | Optional | The time when the quote ceases to be valid. |
+| 42551 | [LegReturnRateQuoteBusinessCenter](/fix/fields/tags-42400-42599#tag-42551) | String | Optional | The business center calendar used for adjustments associated with LegReturnRateQuoteTimeType(42547) or LegReturnRateQuoteTime(42548) and LegReturnRateQuoteDate(42549), e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values. |
+| 42552 | [LegReturnRateQuoteExchange](/fix/fields/tags-42400-42599#tag-42552) | Exchange | Optional | Specifies the exchange (e.g. stock or listed futures/options exchange) from which the quote is obtained. |
+| 42560 | [LegReturnRateInformationSourceGrp](/fix/groups/leg-return-rate-information-source-grp) | Repeating group | Optional | LegReturnRateInformationSourceGrp is a repeating subcomponent within the LegReturnRateGrp component. It is used to specify the information sources for equity prices and FX rates for an equity return swap payment stream. |
+| 42553 | [LegReturnRateQuotePricingModel](/fix/fields/tags-42400-42599#tag-42553) | String | Optional | Specifies the pricing model used to evaluate the underlying asset price. See http://www.fpml.org/coding-scheme/pricing-model for values. |
+| 42554 | [LegReturnRateCashFlowType](/fix/fields/tags-42400-42599#tag-42554) | String | Optional | Specifies the type of cash flows, e.g. coupon payment, premium fee, settlement fee, etc. See http://www.fpml.org/coding-scheme/cashflow-type for values. |
+| 42508 | [LegReturnRateDateGrp](/fix/groups/leg-return-rate-date-grp) | Repeating group | Optional | LegReturnRateDateGrp is a repeating subcomponent within the LegReturnRateGrp component. It is used to specify the equity and dividend valuation dates for an equity return swap payment stream. |
+| 42555 | [LegReturnRateValuationTimeType](/fix/fields/tags-42400-42599#tag-42555) | ReturnRateQuoteTimeTypeCodeSet | Optional | Mutually exclusive with LegReturnRateValuationTime(42556). |
+| 42556 | [LegReturnRateValuationTime](/fix/fields/tags-42400-42599#tag-42556) | LocalMktTime | Optional | Mutually exclusive with LegReturnRateValuationTimeType(42555). |
+| 42557 | [LegReturnRateValuationTimeBusinessCenter](/fix/fields/tags-42400-42599#tag-42557) | String | Optional | The business center calendar used for adjustments associated with LegReturnRateValuationTimeType(42555) or LegReturnRateValuationTime(42556), e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values. |
+| 42558 | [LegReturnRateValuationPriceOption](/fix/fields/tags-42400-42599#tag-42558) | ReturnRateValuationPriceOptionCodeSet | Optional | Indicates whether an ISDA price option applies, and if applicable which type of price. |
+| 42559 | [LegReturnRateFinalPriceFallback](/fix/fields/tags-42400-42599#tag-42559) | ComplexEventPVFinalPriceElectionFallbackCodeSet | Optional | Specifies the fallback provision for the hedging party in the determination of the final price. |
+
+</StickyTable>
+
+## Used in
+
+[LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)

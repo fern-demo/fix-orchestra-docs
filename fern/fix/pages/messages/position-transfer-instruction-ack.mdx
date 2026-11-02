@@ -1,0 +1,43 @@
+---
+title: "PositionTransferInstructionAck"
+subtitle: "The PositionTransferInstructionAck(35=DM) is sent by CCPs to clearing firms to acknowledge position transfer instructions, and to report errors processing position transfer instructions."
+---
+
+<Badge intent="info">MsgType DM</Badge> <Badge intent="note" minimal>Position Maintenance</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The PositionTransferInstructionAck(35=DM) is intended to be a technical acknowledgment, not a business level acknowledgment which would instead be provided by the PositionTransferReport(35=DN) message. As such, TransferID(2437), a business level ID assigned by the CCP, need not be assigned when providing a technical acknowledgment to a new or rejected position transfer request.
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 2436 | [TransferInstructionID](/fix/fields/tags-2400-2599#tag-2436) | String | **Required** | The identifier of the PositionTransferInstruction(35=DL) this message is responding to. |
+| 2437 | [TransferID](/fix/fields/tags-2400-2599#tag-2437) | String | Optional | Optional when responding to a "new" transfer. When responding to a PositionTransferInstruction(35=DM) accepting, declining, or cancelling a transfer already initiated, this field can echo the TransferID(2437) sent. |
+| 2439 | [TransferTransType](/fix/fields/tags-2400-2599#tag-2439) | TransferTransTypeCodeSet | Optional | Indicates the type of transfer transaction. |
+| 2440 | [TransferType](/fix/fields/tags-2400-2599#tag-2440) | TransferTypeCodeSet | Optional | Indicates the type of transfer request. |
+| 2442 | [TransferStatus](/fix/fields/tags-2400-2599#tag-2442) | TransferStatusCodeSet | Optional | Status of the transfer. |
+| 2443 | [TransferRejectReason](/fix/fields/tags-2400-2599#tag-2443) | TransferRejectReasonCodeSet | Optional | Conditionally required when TransferStatus(2442) = 1(Rejected by intermediary). |
+| 2441 | [TransferScope](/fix/fields/tags-2400-2599#tag-2441) | TransferScopeCodeSet | Optional | Indicates the type of transfer. |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 1461 | [TargetParties](/fix/groups/target-parties) | Repeating group | Optional |  |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328) | String | Optional | Identifies the reason for rejection. |
+| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664) | Length | Optional | Must be set if EncodedRejectText(1665) field is specified and must immediately precede it. |
+| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="PositionTransferInstructionAck" wordWrap
+8=FIXT.1.1|9=72|35=DM|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|2436=ABC123|10=113|
+```

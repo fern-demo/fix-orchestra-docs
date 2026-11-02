@@ -1,0 +1,22 @@
+---
+title: "TargetMarketSegmentGrp"
+subtitle: "Convey a list of market segments upon which an action is to be taken."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1789</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoTargetMarketSegments (1789)](/fix/fields/tags-1600-1799#tag-1789).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1790 | [TargetMarketSegmentID](/fix/fields/tags-1600-1799#tag-1790) | String | Optional | Required when NoTargetMarketSegments(1789) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[OrderMassActionReport](/fix/messages/order-mass-action-report), [OrderMassActionRequest](/fix/messages/order-mass-action-request)

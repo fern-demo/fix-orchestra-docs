@@ -1,0 +1,28 @@
+---
+title: "NetworkCounterpartySystemStatusRequest"
+subtitle: "This message is send either immediately after logging on to inform a network (counterparty system) of the type of updates required or to at any other time in the FIX conversation to change the nature of the types of status updates required.…"
+---
+
+<Badge intent="info">MsgType BC</Badge> <Badge intent="note" minimal>Network</Badge> <Badge intent="tip" minimal>Infrastructure</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 935 | [NetworkRequestType](/fix/fields/tags-800-999#tag-935) | NetworkRequestTypeCodeSet | **Required** | Indicates the type and level of details required for a Network Status Request Message Boolean logic applies EG If you want to subscribe for changes to certain id's then UserRequestType =0 (8+2), Snapshot for certain ID's = 9 (8+1) |
+| 933 | [NetworkRequestID](/fix/fields/tags-800-999#tag-933) | String | **Required** | Unique identifier for a network resquest. |
+| 936 | [CompIDReqGrp](/fix/groups/comp-id-req-grp) | Repeating group | Optional |  |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="NetworkCounterpartySystemStatusRequest" wordWrap
+8=FIXT.1.1|9=77|35=BC|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|935=1|933=ABC123|10=074|
+```

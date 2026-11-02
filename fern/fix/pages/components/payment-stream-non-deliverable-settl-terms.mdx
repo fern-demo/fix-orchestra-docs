@@ -1,0 +1,29 @@
+---
+title: "PaymentStreamNonDeliverableSettlTerms"
+subtitle: "PaymentStreamNonDeliverableSettlTerms is a subcomponent of the PaymentStream component used to specify the non-deliverable settlement terms of the payment stream."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40817 | [PaymentStreamNonDeliverableRefCurrency](/fix/fields/tags-40800-40999#tag-40817) | Currency | Optional | The non-deliverable settlement reference currency. Uses ISO 4217 currency codes. |
+| 40818 | [PaymentStreamNonDeliverableFixingDatesBusinessDayConvention](/fix/fields/tags-40800-40999#tag-40818) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this instance of the payment stream's non-deliverable fixing dates. |
+| 40946 | [PaymentStreamNonDeliverableFixingDatesBusinessCenterGrp](/fix/groups/payment-stream-non-deliverable-fixing-dates-business-center-grp) | Repeating group | Optional | PaymentStreamNonDeliverableFixingDatesBusinessCenterGrp is a repeating subcomponent within the PaymentStreamNonDeliverableSettlTerms component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the… |
+| 40820 | [PaymentStreamNonDeliverableFixingDatesRelativeTo](/fix/fields/tags-40800-40999#tag-40820) | int | Optional | Specifies the anchor date when the non-deliverable fixing dates are relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 40821 | [PaymentStreamNonDeliverableFixingDatesOffsetPeriod](/fix/fields/tags-40800-40999#tag-40821) | int | Optional | Conditionally required when PaymentStreamNonDeliverableFixingDatesOffsetUnit(40822) is specified. |
+| 40822 | [PaymentStreamNonDeliverableFixingDatesOffsetUnit](/fix/fields/tags-40800-40999#tag-40822) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when PaymentStreamNonDeliverableFixingDatesOffsetPeriod(40821) is specified. |
+| 40823 | [PaymentStreamNonDeliverableFixingDatesOffsetDayType](/fix/fields/tags-40800-40999#tag-40823) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative non-deliverable fixing date offset. |
+| | [PaymentStreamNonDeliverableSettlRateSource](/fix/components/payment-stream-non-deliverable-settl-rate-source) | Component | Optional | PaymentStreamNonDeliverableSettlRateSource is a subcomponent of the PaymentStreamNonDeliverableSettlTerms component used to specify the rate source in the event of payment non-delivery. |
+| 40825 | [PaymentStreamNonDeliverableFixingDateGrp](/fix/groups/payment-stream-non-deliverable-fixing-date-grp) | Repeating group | Optional | PaymentStreamNonDeliverableFixingDate is a subcomponent of the PaymentStreamNonDeliverableSettlTerms component used to specify predetermined fixing dates. |
+| 40085 | [SettlRateDisruptionFallbackGrp](/fix/groups/settl-rate-disruption-fallback-grp) | Repeating group | Optional | The SettlRateDisruptionsFallbackGrp is a repeating subcomponent of the PaymentStreamNonDeliverableSettlTermGrp component used to specify the method, prioritized by the order it is listed, to get a replacement rate for a disrupted settlement rate option for a non-deliverable settlement currency. |
+
+</StickyTable>
+
+## Used in
+
+[PaymentStream](/fix/components/payment-stream)

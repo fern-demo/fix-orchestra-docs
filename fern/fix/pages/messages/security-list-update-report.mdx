@@ -1,0 +1,46 @@
+---
+title: "SecurityListUpdateReport"
+subtitle: "The Security List Update Report is used for reporting updates to a Contract Security Masterfile. Updates could be due to Corporate Actions or other business events. Update may include additions, modifications and deletions."
+---
+
+<Badge intent="info">MsgType BK</Badge> <Badge intent="note" minimal>Securities Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| 964 | [SecurityReportID](/fix/fields/tags-800-999#tag-964) | int | Optional | Identifier for the Security List Update message in a bulk transfer environment (No Request/Response) |
+| 1465 | [SecurityListID](/fix/fields/tags-1400-1599#tag-1465) | String | Optional | Identifies a specific Security List entity |
+| 1466 | [SecurityListRefID](/fix/fields/tags-1400-1599#tag-1466) | String | Optional | Provides a reference to another Security List |
+| 1467 | [SecurityListDesc](/fix/fields/tags-1400-1599#tag-1467) | String | Optional | Specifies a description or name of a Security List. |
+| 1468 | [EncodedSecurityListDescLen](/fix/fields/tags-1400-1599#tag-1468) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedSecurityListDesc (tbd) field. |
+| 1469 | [EncodedSecurityListDesc](/fix/fields/tags-1400-1599#tag-1469) | data | Optional | Encoded (non-ASCII characters) representation of the SecurityListDesc (1467) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the SecurityListDesc field. |
+| 1470 | [SecurityListType](/fix/fields/tags-1400-1599#tag-1470) | SecurityListTypeCodeSet | Optional | Identifies a list type |
+| 1471 | [SecurityListTypeSource](/fix/fields/tags-1400-1599#tag-1471) | SecurityListTypeSourceCodeSet | Optional | Identifies the sourec as a listype |
+| 320 | [SecurityReqID](/fix/fields/tags-200-399#tag-320) | String | Optional | Unique ID of a Security Definition Request. |
+| 322 | [SecurityResponseID](/fix/fields/tags-200-399#tag-322) | String | Optional | Identifier for the Security List message. |
+| 560 | [SecurityRequestResult](/fix/fields/tags-400-599#tag-560) | SecurityRequestResultCodeSet | Optional | Result of the Security Request identified by the SecurityReqID. |
+| 393 | [TotNoRelatedSym](/fix/fields/tags-200-399#tag-393) | int | Optional | Used to indicate the total number of securities being returned for this request. Used in the event that message fragmentation is required. |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | Optional | The business date for which the trade is expected to be cleared. |
+| 980 | [SecurityUpdateAction](/fix/fields/tags-800-999#tag-980) | SecurityUpdateActionCodeSet | Optional |  |
+| 292 | [CorporateAction](/fix/fields/tags-200-399#tag-292) | CorporateActionCodeSet | Optional | Identifies the type of Corporate Action that triggered the update |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Identifies the market which lists and trades the instrument. |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the segment of the market specified in MarketID(96) |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893) | LastFragmentCodeSet | Optional | Indicates whether this is the last fragment in a sequence of message fragments. Only required where message has been fragmented. |
+| 146 | [SecLstUpdRelSymGrp](/fix/groups/sec-lst-upd-rel-sym-grp) | Repeating group | Optional |  |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="SecurityListUpdateReport" wordWrap
+8=FIXT.1.1|9=60|35=BK|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|10=001|
+```

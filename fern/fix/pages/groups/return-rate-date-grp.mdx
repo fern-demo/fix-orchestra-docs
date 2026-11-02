@@ -1,0 +1,44 @@
+---
+title: "ReturnRateDateGrp"
+subtitle: "ReturnRateDateGrp is a repeating subcomponent within the ReturnRateGrp component. It is used to specify the equity and dividend valuation dates for an equity return swap payment stream."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42709</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoReturnRateDates (42709)](/fix/fields/tags-42600-42799#tag-42709).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42710 | [ReturnRateDateMode](/fix/fields/tags-42600-42799#tag-42710) | ReturnRateDateModeCodeSet | Optional | Required if NoReturnRateDates(42709) &gt; 0. |
+| 42772 | [ReturnRateValuationDateGrp](/fix/groups/return-rate-valuation-date-grp) | Repeating group | Optional | ReturnRateValuationDateGrp is a repeating subcomponent within the ReturnRateDateGrp component. It is used to specify the fixed valuation dates for an equity return swap payment stream. |
+| 42711 | [ReturnRateValuationDateRelativeTo](/fix/fields/tags-42600-42799#tag-42711) | int | Optional | Specifies the anchor date when the return rate valuation dates are relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 42712 | [ReturnRateValuationDateOffsetPeriod](/fix/fields/tags-42600-42799#tag-42712) | int | Optional | Conditionally required when ReturnRateValuationDateOffsetUnit(42713) is specified. |
+| 42713 | [ReturnRateValuationDateOffsetUnit](/fix/fields/tags-42600-42799#tag-42713) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when ReturnRateValuationDateOffsetPeriod(42712) is specified. |
+| 42714 | [ReturnRateValuationDateOffsetDayType](/fix/fields/tags-42600-42799#tag-42714) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative return rate valuation date offset. |
+| 42715 | [ReturnRateValuationStartDateUnadjusted](/fix/fields/tags-42600-42799#tag-42715) | LocalMktDate | Optional | The unadjusted start date for return rate valuation. This can be used to restrict the range of dates when they are relative. |
+| 42716 | [ReturnRateValuationStartDateRelativeTo](/fix/fields/tags-42600-42799#tag-42716) | int | Optional | Specifies the anchor date when the return rate valuation start date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 42717 | [ReturnRateValuationStartDateOffsetPeriod](/fix/fields/tags-42600-42799#tag-42717) | int | Optional | Conditionally required when ReturnRateValuationStartDateOffsetUnit(42718) is specified. |
+| 42718 | [ReturnRateValuationStartDateOffsetUnit](/fix/fields/tags-42600-42799#tag-42718) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when ReturnRateValuationStartDateOffsetPeriod(42717) is specified. |
+| 42719 | [ReturnRateValuationStartDateOffsetDayType](/fix/fields/tags-42600-42799#tag-42719) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative return rate valuation start date offset. |
+| 42720 | [ReturnRateValuationStartDateAdjusted](/fix/fields/tags-42600-42799#tag-42720) | LocalMktDate | Optional | The adjusted start date for return rate valuation. This can be used to restrict the range of dates when they are relative. |
+| 42721 | [ReturnRateValuationEndDateUnadjusted](/fix/fields/tags-42600-42799#tag-42721) | LocalMktDate | Optional | The unadjusted end date for return rate valuation. This can be used to restrict the range of dates when they are relative. |
+| 42722 | [ReturnRateValuationEndDateRelativeTo](/fix/fields/tags-42600-42799#tag-42722) | int | Optional | Specifies the anchor date when the return rate valuation end date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 42723 | [ReturnRateValuationEndDateOffsetPeriod](/fix/fields/tags-42600-42799#tag-42723) | int | Optional | Conditionally required when ReturnRateValuationEndDateOffsetUnit(42724) is specified. |
+| 42724 | [ReturnRateValuationEndDateOffsetUnit](/fix/fields/tags-42600-42799#tag-42724) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when ReturnRateValuationEndDateOffsetPeriod(42723) is specified. |
+| 42725 | [ReturnRateValuationEndDateOffsetDayType](/fix/fields/tags-42600-42799#tag-42725) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative return rate valuation end date offset. |
+| 42726 | [ReturnRateValuationEndDateAdjusted](/fix/fields/tags-42600-42799#tag-42726) | LocalMktDate | Optional | The adjusted end date for return rate valuation. This can be used to restrict the range of dates when they are relative. |
+| 42727 | [ReturnRateValuationFrequencyPeriod](/fix/fields/tags-42600-42799#tag-42727) | int | Optional | Conditionally required when ReturnRateValuationFrequencyUnit(42728) is specified. |
+| 42728 | [ReturnRateValuationFrequencyUnit](/fix/fields/tags-42600-42799#tag-42728) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when ReturnRateValuationFrequencyPeriod(42727) is specified. |
+| 42729 | [ReturnRateValuationFrequencyRollConvention](/fix/fields/tags-42600-42799#tag-42729) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the DateAdjustment component in Instrument. The specified values would be specific to this instance of the payment stream return rate valuation dates. |
+| 42730 | [ReturnRateValuationDateBusinessDayConvention](/fix/fields/tags-42600-42799#tag-42730) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to payment stream return rate valuation dates. |
+| 42770 | [ReturnRateValuationDateBusinessCenterGrp](/fix/groups/return-rate-valuation-date-business-center-grp) | Repeating group | Optional | ReturnRateValuationDateBusinessCenterGrp is a repeating subcomponent within the ReturnRateValuationDateGrp component. It is used to specify the valuation date business center adjustments for an equity return swap payment stream. |
+
+</StickyTable>
+
+## Used in
+
+[ReturnRateGrp](/fix/groups/return-rate-grp)

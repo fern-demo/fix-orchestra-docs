@@ -1,0 +1,23 @@
+---
+title: "LegOptionExerciseExpirationDateGrp"
+subtitle: "The LegOptionExerciseExpirationDateGrp is a repeating subcomponent of the LegOptionExerciseExpiration component used to specify fixed dates for expiration."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41527</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegOptionExerciseExpirationDates (41527)](/fix/fields/tags-41400-41599#tag-41527).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41528 | [LegOptionExerciseExpirationDate](/fix/fields/tags-41400-41599#tag-41528) | LocalMktDate | Optional | Required if NoLegOptionExerciseExpirationDates(41527) &gt; 0. |
+| 41529 | [LegOptionExerciseExpirationDateType](/fix/fields/tags-41400-41599#tag-41529) | OptionExerciseDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
+
+</StickyTable>
+
+## Used in
+
+[LegOptionExerciseExpiration](/fix/components/leg-option-exercise-expiration)

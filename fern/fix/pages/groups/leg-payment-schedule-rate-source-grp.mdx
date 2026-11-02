@@ -1,0 +1,24 @@
+---
+title: "LegPaymentScheduleRateSourceGrp"
+subtitle: "LegPaymentScheduleRateSourceGrp is a repeating component within the LegPaymentScheduleGrp component used to identify primary and secondary rate sources."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40414</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentScheduleRateSources (40414)](/fix/fields/tags-40400-40599#tag-40414).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40415 | [LegPaymentScheduleRateSource](/fix/fields/tags-40400-40599#tag-40415) | RateSourceCodeSet | Optional | Required if NoLegPaymentScheduleRateSources(40414) &gt; 0. |
+| 40416 | [LegPaymentScheduleRateSourceType](/fix/fields/tags-40400-40599#tag-40416) | RateSourceTypeCodeSet | Optional | Required if NoLegPaymentScheduleRateSources(40414) &gt; 0. |
+| 40417 | [LegPaymentScheduleReferencePage](/fix/fields/tags-40400-40599#tag-40417) | String | Optional | Conditionally required when LegPaymentScheduleRateSource(40415) = 99 (Other). |
+
+</StickyTable>
+
+## Used in
+
+[LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)

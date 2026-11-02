@@ -1,0 +1,24 @@
+---
+title: "UnderlyingDeliveryScheduleSettlDayGrp"
+subtitle: "The UnderlyingDeliveryScheduleSettlDayGrp is a repeating subcomponent of the UnderlyingDeliveryScheduleGrp component used to detail commodity delivery days."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41770</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingDeliveryScheduleSettlDays (41770)](/fix/fields/tags-41600-41799#tag-41770).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41771 | [UnderlyingDeliveryScheduleSettlDay](/fix/fields/tags-41600-41799#tag-41771) | DeliveryScheduleSettlDayCodeSet | Optional | Required if NoUnderlyingDeliveryScheduleSettlDays(41770) &gt; 0. |
+| 41772 | [UnderlyingDeliveryScheduleSettlTotalHours](/fix/fields/tags-41600-41799#tag-41772) | int | Optional | The sum of the total hours specified in the UnderlyingDeliveryScheduleSettlTimeGrp component. |
+| 41773 | [UnderlyingDeliveryScheduleSettlTimeGrp](/fix/groups/underlying-delivery-schedule-settl-time-grp) | Repeating group | Optional | The UnderlyingDeliveryScheduleSettlTimeGrp is a repeating subcomponent of the UnderlyingDeliveryScheduleSettlDayGrp component used to detail commodity delivery time periods. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingDeliveryScheduleGrp](/fix/groups/underlying-delivery-schedule-grp)

@@ -1,0 +1,52 @@
+---
+title: "LegPaymentStubGrp"
+subtitle: "The LegPaymentStubGrp is a repeating subcomponent of the LegPaymentStream component used to specify front and back stubs in the payment stream."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40418</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentStubs (40418)](/fix/fields/tags-40400-40599#tag-40418).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40419 | [LegPaymentStubType](/fix/fields/tags-40400-40599#tag-40419) | PaymentStubTypeCodeSet | Optional | Required if NoLegPaymentStubs(40418) &gt; 0. |
+| 40420 | [LegPaymentStubLength](/fix/fields/tags-40400-40599#tag-40420) | PaymentStubLengthCodeSet | Optional | Optional indication whether stub is shorter or longer than the regular swap period. |
+| | [LegPaymentStubStartDate](/fix/components/leg-payment-stub-start-date) | Component | Optional | LegPaymentStubStartDate is a subcomponent of the LegPaymentStubGrp component used to specify the start date of the payment stub. |
+| | [LegPaymentStubEndDate](/fix/components/leg-payment-stub-end-date) | Component | Optional | LegPaymentStubEndDate is a subcomponent of the LegPaymentStubGrp component used to specify the end date of the payment stub. |
+| 40421 | [LegPaymentStubRate](/fix/fields/tags-40400-40599#tag-40421) | Percentage | Optional | The agreed upon fixed rate for this stub. |
+| 40422 | [LegPaymentStubFixedAmount](/fix/fields/tags-40400-40599#tag-40422) | Amt | Optional | A fixed payment amount for the stub. |
+| 40423 | [LegPaymentStubFixedCurrency](/fix/fields/tags-40400-40599#tag-40423) | Currency | Optional | The currency of the fixed payment amount. Uses ISO 4217 currency codes. |
+| 40424 | [LegPaymentStubIndex](/fix/fields/tags-40400-40599#tag-40424) | String | Optional | The stub floating rate index. |
+| 40425 | [LegPaymentStubIndexSource](/fix/fields/tags-40400-40599#tag-40425) | PaymentStreamRateIndexSourceCodeSet | Optional | The source for the stub floating rate index. |
+| 40426 | [LegPaymentStubIndexCurvePeriod](/fix/fields/tags-40400-40599#tag-40426) | int | Optional | Conditionally required when LegPaymentStubIndexCurveUnit(40427) is specified. |
+| 40427 | [LegPaymentStubIndexCurveUnit](/fix/fields/tags-40400-40599#tag-40427) | PaymentStreamRateIndexCurveUnitCodeSet | Optional | Copnditionally required when LegPaymentStubIndexCurvePeriod(40426) is specified. |
+| 40428 | [LegPaymentStubIndexRateMultiplier](/fix/fields/tags-40400-40599#tag-40428) | float | Optional | A rate multiplier to apply to the floating rate. The multiplier can be less than or greater than 1 (one). This element should only be included if the multiplier is not equal to 1 (one) for the term of the stream. |
+| 40429 | [LegPaymentStubIndexRateSpread](/fix/fields/tags-40400-40599#tag-40429) | PriceOffset | Optional | Spread from floating rate index. |
+| 40430 | [LegPaymentStubIndexRateSpreadPositionType](/fix/fields/tags-40400-40599#tag-40430) | PaymentStreamRateSpreadPositionTypeCodeSet | Optional | Identifies whether the rate spread is applied to a long or a short position. |
+| 40431 | [LegPaymentStubIndexRateTreatment](/fix/fields/tags-40400-40599#tag-40431) | PaymentStreamRateTreatmentCodeSet | Optional | Specifies the yield calculation treatment for the stub index. |
+| 40432 | [LegPaymentStubIndexCapRate](/fix/fields/tags-40400-40599#tag-40432) | Percentage | Optional | The cap rate, if any, which applies to the floating rate. The cap rate (strike) is only required where the floating rate on a swap stream is capped at a certain level. The cap rate is assumed to be exclusive of any spread and is a per annum rate, expressed as a decimal. A cap rate of 5% would be… |
+| 40433 | [LegPaymentStubIndexCapRateBuySide](/fix/fields/tags-40400-40599#tag-40433) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the buyer of the cap rate option through its trade side. |
+| 40434 | [LegPaymentStubIndexCapRateSellSide](/fix/fields/tags-40400-40599#tag-40434) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the seller of the cap rate option through its trade side. |
+| 40435 | [LegPaymentStubIndexFloorRate](/fix/fields/tags-40400-40599#tag-40435) | Percentage | Optional | The floor rate, if any, which applies to the floating rate. The floor rate (strike) is only required where the floating rate on a swap stream is floored at a certain strike level. The floor rate is assumed to be exclusive of any spread and is a per annum rate, expressed as a decimal. A floor rate of… |
+| 40436 | [LegPaymentStubIndexFloorRateBuySide](/fix/fields/tags-40400-40599#tag-40436) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the buyer of the floor rate option through its trade side. |
+| 40437 | [LegPaymentStubIndexFloorRateSellSide](/fix/fields/tags-40400-40599#tag-40437) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the seller of the floor rate option through its trade side. |
+| 40438 | [LegPaymentStubIndex2](/fix/fields/tags-40400-40599#tag-40438) | String | Optional | The second stub floating rate index. |
+| 40439 | [LegPaymentStubIndex2Source](/fix/fields/tags-40400-40599#tag-40439) | PaymentStreamRateIndexSourceCodeSet | Optional | The source for the second stub floating rate index. |
+| 40440 | [LegPaymentStubIndex2CurvePeriod](/fix/fields/tags-40400-40599#tag-40440) | int | Optional | Conditionally required when LegPaymentStubIndex2CurveUnit(40441) is specified. |
+| 40441 | [LegPaymentStubIndex2CurveUnit](/fix/fields/tags-40400-40599#tag-40441) | PaymentStreamRateIndexCurveUnitCodeSet | Optional | Conditionally required when LegPaymentStubIndex2CurvePeriod(40440) is specified. |
+| 40442 | [LegPaymentStubIndex2RateMultiplier](/fix/fields/tags-40400-40599#tag-40442) | float | Optional | A rate multiplier to apply to the second floating rate. The multiplier can be less than or greater than 1 (one). This element should only be included if the multiplier is not equal to 1 (one) for the term of the stream. |
+| 40443 | [LegPaymentStubIndex2RateSpread](/fix/fields/tags-40400-40599#tag-40443) | PriceOffset | Optional | Spread from the second floating rate index. |
+| 40444 | [LegPaymentStubIndex2RateSpreadPositionType](/fix/fields/tags-40400-40599#tag-40444) | PaymentStreamRateSpreadPositionTypeCodeSet | Optional | Identifies whether the rate spread is applied to a long or a short position. |
+| 40445 | [LegPaymentStubIndex2RateTreatment](/fix/fields/tags-40400-40599#tag-40445) | PaymentStreamRateTreatmentCodeSet | Optional | Specifies the yield calculation treatment for the second stub index. |
+| 40446 | [LegPaymentStubIndex2CapRate](/fix/fields/tags-40400-40599#tag-40446) | Percentage | Optional | The cap rate, if any, which applies to the second floating rate. The cap rate (strike) is only required where the floating rate on a swap stream is capped at a certain level. The cap rate is assumed to be exclusive of any spread and is a per annum rate, expressed as a decimal. A cap rate of 5% would… |
+| 40447 | [LegPaymentStubIndex2FloorRate](/fix/fields/tags-40400-40599#tag-40447) | Percentage | Optional | The floor rate, if any, which applies to the second floating rate. The floor rate (strike) is only required where the floating rate on a swap stream is floored at a certain strike level. The floor rate is assumed to be exclusive of any spread and is a per annum rate, expressed as a decimal. A floor… |
+
+</StickyTable>
+
+## Used in
+
+[LegStreamGrp](/fix/groups/leg-stream-grp)

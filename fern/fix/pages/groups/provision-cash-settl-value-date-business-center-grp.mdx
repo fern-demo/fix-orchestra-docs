@@ -1,0 +1,22 @@
+---
+title: "ProvisionCashSettlValueDateBusinessCenterGrp"
+subtitle: "ProvisionCashSettlValueDateBusinessCenterGrp is a repeating subcomponent within the ProvisionCashSettlValueDate component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40953</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoProvisionCashSettlValueDateBusinessCenters (40953)](/fix/fields/tags-40800-40999#tag-40953).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40117 | [ProvisionCashSettlValueDateBusinessCenter](/fix/fields/tags-40000-40199#tag-40117) | String | Optional | Required if NoProvisionCashSettlValueDatBusinessCenters(40953) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[ProvisionCashSettlValueDates](/fix/components/provision-cash-settl-value-dates)

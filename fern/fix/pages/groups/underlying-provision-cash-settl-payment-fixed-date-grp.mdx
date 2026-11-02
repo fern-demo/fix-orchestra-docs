@@ -1,0 +1,23 @@
+---
+title: "UnderlyingProvisionCashSettlPaymentFixedDateGrp"
+subtitle: "The UnderlyingProvisionCashSettlPaymentFixedDateGrp is a repeating component within the UnderlyingProvisionCashSettlPaymentDates component used to report fixed cash settlement payment dates defined in the provision."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42099</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingProvisionCashSettlPaymentDates (42099)](/fix/fields/tags-42000-42199#tag-42099).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 42100 | [UnderlyingProvisionCashSettlPaymentDate](/fix/fields/tags-42000-42199#tag-42100) | LocalMktDate | Optional | Required if NoUnderlyingProvisionCashSettlPaymentDates (42099) &gt; 0. |
+| 42101 | [UnderlyingProvisionCashSettlPaymentDateType](/fix/fields/tags-42000-42199#tag-42101) | ProvisionCashSettlPaymentDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingProvisionCashSettlPaymentDates](/fix/components/underlying-provision-cash-settl-payment-dates)

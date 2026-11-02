@@ -1,0 +1,3336 @@
+---
+title: "Tags 41400–41599"
+subtitle: "200 fields"
+---
+
+## 41400 · NoLegComplexEventSchedules [#tag-41400]
+
+<Badge intent="info" minimal>Tag 41400</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of schedules in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegComplexEventScheduleGrp](/fix/groups/leg-complex-event-schedule-grp)
+
+## 41401 · LegComplexEventScheduleStartDate [#tag-41401]
+
+<Badge intent="info" minimal>Tag 41401</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The start date of the schedule.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegComplexEventScheduleGrp](/fix/groups/leg-complex-event-schedule-grp)
+
+## 41402 · LegComplexEventScheduleEndDate [#tag-41402]
+
+<Badge intent="info" minimal>Tag 41402</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The end date of the schedule.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegComplexEventScheduleGrp](/fix/groups/leg-complex-event-schedule-grp)
+
+## 41403 · LegComplexEventScheduleFrequencyPeriod [#tag-41403]
+
+<Badge intent="info" minimal>Tag 41403</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the schedule date frequency.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegComplexEventScheduleGrp](/fix/groups/leg-complex-event-schedule-grp)
+
+## 41404 · LegComplexEventScheduleFrequencyUnit [#tag-41404]
+
+<Badge intent="info" minimal>Tag 41404</Badge> <Badge intent="note" minimal>ProtectionTermEventUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the schedule date frequency.
+
+Code set **ProtectionTermEventUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegComplexEventScheduleGrp](/fix/groups/leg-complex-event-schedule-grp)
+
+## 41405 · LegComplexEventScheduleRollConvention [#tag-41405]
+
+<Badge intent="info" minimal>Tag 41405</Badge> <Badge intent="note" minimal>DateRollConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The convention for determining the sequence of dates. It is used in conjunction with a specified frequency. Used only to override the roll convention defined in the LegDateAdjustment component in InstrumentLeg.
+
+Code set **DateRollConventionCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | FirstDay | 1st day of the month |
+| `2` | SecondDay | 2nd day of the month |
+| `3` | ThirdDay | 3rd day of the month |
+| `4` | FourthDay | 4th day of the month |
+| `5` | FifthDay | 5th day of the month |
+| `6` | SixthDay | 6thd day of the month |
+| `7` | SeventhDay | 7th day of the month |
+| `8` | EighthDay | 8th day of the month |
+| `9` | NinthDay | 9th day of the month |
+| `10` | TenthDay | 10th day of the month |
+| `11` | EleventhDay | 11th day of the month |
+| `12` | TwelvthDay | 12th day of the month |
+| `13` | ThirteenthDay | 13th day of the month |
+| `14` | ForteenthDay | 14th day of the month |
+| `15` | FifteenthDay | 15th day of the month |
+| `16` | SixteenthDay | 16th day of the month |
+| `17` | SeventeenthDay | 17th day of the month |
+| `18` | EighteenthDay | 18th day of the month |
+| `19` | NineteenthDay | 19th day of the month |
+| `20` | TwentiethDay | 20th day of the month |
+| `21` | TwentyFirstDay | 21st day of the month |
+| `22` | TwentySecondDay | 22nd day of the month |
+| `23` | TwentyThirdDay | 23rd day of the month |
+| `24` | TwentyFourthDay | 24th day of the month |
+| `25` | TwentyFifthDay | 25th day of the month |
+| `26` | TwentySixthDay | 26th day of the month |
+| `27` | TwentySeventhDay | 27th day of the month |
+| `28` | TwentyEigthDa28y | 28th day of the month |
+| `29` | TwentyNinthDay | 29th day of the month |
+| `30` | ThirtiethDay | 30th day of the month |
+| `EOM` | EOM | The end of the month. |
+| `FRN` | FRN | The floating rate note convention or Eurodollar convention. |
+| `IMM` | IMM | The International Money Market settlement date, i.e. the 3rd Wednesday of the month. |
+| `IMMCAD` | IMMCAD | The last trading day/expiration day of the Canadian Derivatives Exchange. |
+| `IMMAUD` | IMMAUD | The last trading day of the Sydney Futures Exchange Australian 90-day bank accepted bill futures contract. |
+| `IMMNZD` | IMMNZD | The last trading day of the Sydney Futures Exchange New Zealand 90-day bank bill futures contract. |
+| `SFE` | SFE | The Sydney Futures Exchange 90-day bank accepted bill futures settlement dates. |
+| `NONE` | NONE | No adjustment |
+| `TBILL` | TBILL | The 13-week and 26-week U.S. Treasury Bill auction dates. |
+| `MON` | MON | Monday |
+| `TUE` | TUE | Tuesday |
+| `WED` | WED | Wednesday |
+| `THU` | THU | Thursday |
+| `FRI` | FRI | Friday |
+| `SAT` | SAT | Saturday |
+| `SUN` | SUN | Sunday |
+
+Used in: [LegComplexEventScheduleGrp](/fix/groups/leg-complex-event-schedule-grp)
+
+## 41406 · ProvisionCashSettlQuoteReferencePage [#tag-41406]
+
+<Badge intent="info" minimal>Tag 41406</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the reference "page" from the quote source.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProvisionCashSettlQuoteSource](/fix/components/provision-cash-settl-quote-source)
+
+## 41407 · LegProvisionCashSettlQuoteReferencePage [#tag-41407]
+
+<Badge intent="info" minimal>Tag 41407</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the reference "page" from the quote source.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegProvisionCashSettlQuoteSource](/fix/components/leg-provision-cash-settl-quote-source)
+
+## 41408 · NoLegDeliverySchedules [#tag-41408]
+
+<Badge intent="info" minimal>Tag 41408</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of delivery schedules in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegDeliveryScheduleGrp](/fix/groups/leg-delivery-schedule-grp)
+
+## 41409 · LegDeliveryScheduleType [#tag-41409]
+
+<Badge intent="info" minimal>Tag 41409</Badge> <Badge intent="note" minimal>DeliveryScheduleTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of delivery schedule.
+
+Code set **DeliveryScheduleTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Notional | Notional |
+| `1` | Delivery | Delivery |
+| `2` | PhysicalSettlPeriods | Physical settlement period |
+
+Used in: [LegDeliveryScheduleGrp](/fix/groups/leg-delivery-schedule-grp)
+
+## 41410 · LegDeliveryScheduleXID [#tag-41410]
+
+<Badge intent="info" minimal>Tag 41410</Badge> <Badge intent="note" minimal>XID</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifier for this instance of delivery schedule for cross referencing elsewhere in the message.
+
+Type: [XID](/fix/datatypes#xid)
+
+Used in: [LegDeliveryScheduleGrp](/fix/groups/leg-delivery-schedule-grp)
+
+## 41411 · LegDeliveryScheduleNotional [#tag-41411]
+
+<Badge intent="info" minimal>Tag 41411</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Physical delivery quantity.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [LegDeliveryScheduleGrp](/fix/groups/leg-delivery-schedule-grp)
+
+## 41412 · LegDeliveryScheduleNotionalUnitOfMeasure [#tag-41412]
+
+<Badge intent="info" minimal>Tag 41412</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the delivery quantity unit of measure (UOM).
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [LegDeliveryScheduleGrp](/fix/groups/leg-delivery-schedule-grp)
+
+## 41413 · LegDeliveryScheduleNotionalCommodityFrequency [#tag-41413]
+
+<Badge intent="info" minimal>Tag 41413</Badge> <Badge intent="note" minimal>StreamNotionalCommodityFrequencyCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The frequency of notional delivery.
+
+Code set **StreamNotionalCommodityFrequencyCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Term | Term |
+| `1` | PerBusinessDay | Per business day |
+| `2` | PerCalculationPeriod | Per calculation period |
+| `3` | PerSettlPeriod | Per settlement period |
+| `4` | PerCalendarDay | Per calendar day |
+| `5` | PerHour | Per hour |
+| `6` | PerMonth | Per month |
+
+Used in: [LegDeliveryScheduleGrp](/fix/groups/leg-delivery-schedule-grp)
+
+## 41414 · LegDeliveryScheduleNegativeTolerance [#tag-41414]
+
+<Badge intent="info" minimal>Tag 41414</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the negative tolerance value. The value may be an absolute quantity or a percentage, as specified in LegDeliveryScheduleToleranceType(41417). Percentage value is to be expressed relative to "1.0" representing 100% (e.g. a value of "0.0575" represents 5.75%).
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [LegDeliveryScheduleGrp](/fix/groups/leg-delivery-schedule-grp)
+
+## 41415 · LegDeliverySchedulePositiveTolerance [#tag-41415]
+
+<Badge intent="info" minimal>Tag 41415</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the positive tolerance value. The value may be an absolute quantity or a percentage, as specified in LegDeliveryScheduleToleranceType(41417). Value may exceed agreed upon value. Percentage value is to be expressed relative to "1.0" representing 100% (e.g. a value of "0.0575" represents 5.75%).
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [LegDeliveryScheduleGrp](/fix/groups/leg-delivery-schedule-grp)
+
+## 41416 · LegDeliveryScheduleToleranceUnitOfMeasure [#tag-41416]
+
+<Badge intent="info" minimal>Tag 41416</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the tolerance value's unit of measure (UOM).
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [LegDeliveryScheduleGrp](/fix/groups/leg-delivery-schedule-grp)
+
+## 41417 · LegDeliveryScheduleToleranceType [#tag-41417]
+
+<Badge intent="info" minimal>Tag 41417</Badge> <Badge intent="note" minimal>DeliveryScheduleToleranceTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the tolerance value type.
+
+Code set **DeliveryScheduleToleranceTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Absolute | Absolute |
+| `1` | Percentage | Percentage |
+
+Used in: [LegDeliveryScheduleGrp](/fix/groups/leg-delivery-schedule-grp)
+
+## 41418 · LegDeliveryScheduleSettlCountry [#tag-41418]
+
+<Badge intent="info" minimal>Tag 41418</Badge> <Badge intent="note" minimal>Country</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the country where delivery takes place. Uses ISO 3166 2-character country code.
+
+Type: [Country](/fix/datatypes#country)
+
+Used in: [LegDeliveryScheduleGrp](/fix/groups/leg-delivery-schedule-grp)
+
+## 41419 · LegDeliveryScheduleSettlTimeZone [#tag-41419]
+
+<Badge intent="info" minimal>Tag 41419</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Delivery timezone specified as "prevailing" rather than "standard" or "daylight". See http://www.fixtradingcommunity.org/codelists#Prevailing\_Timezones for code list of applicable prevailing timezones.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegDeliveryScheduleGrp](/fix/groups/leg-delivery-schedule-grp)
+
+## 41420 · LegDeliveryScheduleSettlFlowType [#tag-41420]
+
+<Badge intent="info" minimal>Tag 41420</Badge> <Badge intent="note" minimal>DeliveryScheduleSettlFlowTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the delivery flow type.
+
+Code set **DeliveryScheduleSettlFlowTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | AllTimes | All times |
+| `1` | OnPeak | On peak |
+| `2` | OffPeak | Off peak |
+| `3` | Base | Base |
+| `4` | BlockHours | Block hours |
+| `5` | Other | Other |
+
+Used in: [LegDeliveryScheduleGrp](/fix/groups/leg-delivery-schedule-grp)
+
+## 41421 · LegDeliveryScheduleSettlHolidaysProcessingInstruction [#tag-41421]
+
+<Badge intent="info" minimal>Tag 41421</Badge> <Badge intent="note" minimal>DeliveryScheduleSettlHolidaysProcessingInstructionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether holidays are included in the settlement periods. Required for electricity contracts.
+
+Code set **DeliveryScheduleSettlHolidaysProcessingInstructionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | DoNotIncludeHolidays | Do not include holidays |
+| `1` | IncludeHolidays | Include holidays |
+
+Used in: [LegDeliveryScheduleGrp](/fix/groups/leg-delivery-schedule-grp)
+
+## 41422 · NoLegDeliveryScheduleSettlDays [#tag-41422]
+
+<Badge intent="info" minimal>Tag 41422</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of delivery schedules in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegDeliveryScheduleSettlDayGrp](/fix/groups/leg-delivery-schedule-settl-day-grp)
+
+## 41423 · LegDeliveryScheduleSettlDay [#tag-41423]
+
+<Badge intent="info" minimal>Tag 41423</Badge> <Badge intent="note" minimal>DeliveryScheduleSettlDayCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day or group of days for delivery.
+
+Code set **DeliveryScheduleSettlDayCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Monday | Monday |
+| `2` | Tuesday | Tuesday |
+| `3` | Wednesday | Wednesday |
+| `4` | Thursday | Thursday |
+| `5` | Friday | Friday |
+| `6` | Saturday | Saturday |
+| `7` | Sunday | Sunday |
+| `8` | AllWeekdays | All weekdays |
+| `9` | AllDays | All days |
+| `10` | AllWeekends | All weekends |
+
+Used in: [LegDeliveryScheduleSettlDayGrp](/fix/groups/leg-delivery-schedule-settl-day-grp)
+
+## 41424 · LegDeliveryScheduleSettlTotalHours [#tag-41424]
+
+<Badge intent="info" minimal>Tag 41424</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The sum of the total hours specified in the LegDeliveryScheduleSettlTimeGrp component.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegDeliveryScheduleSettlDayGrp](/fix/groups/leg-delivery-schedule-settl-day-grp)
+
+## 41425 · NoLegDeliveryScheduleSettlTimes [#tag-41425]
+
+<Badge intent="info" minimal>Tag 41425</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of hour ranges in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegDeliveryScheduleSettlTimeGrp](/fix/groups/leg-delivery-schedule-settl-time-grp)
+
+## 41426 · LegDeliveryScheduleSettlStart [#tag-41426]
+
+<Badge intent="info" minimal>Tag 41426</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The scheduled start time for the delivery of the commodity where delivery occurs over specified times. The format of the time value is specified in LegDeliveryScheduleSettlTimeType(41428).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegDeliveryScheduleSettlTimeGrp](/fix/groups/leg-delivery-schedule-settl-time-grp)
+
+## 41427 · LegDeliveryScheduleSettlEnd [#tag-41427]
+
+<Badge intent="info" minimal>Tag 41427</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The scheduled end time for the delivery of the commodity where delivery occurs over specified times. The format of the time value is specified in LegDeliveryScheduleSettlTimeType(41428).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegDeliveryScheduleSettlTimeGrp](/fix/groups/leg-delivery-schedule-settl-time-grp)
+
+## 41428 · LegDeliveryScheduleSettlTimeType [#tag-41428]
+
+<Badge intent="info" minimal>Tag 41428</Badge> <Badge intent="note" minimal>DeliveryScheduleSettlTimeTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the format of the delivery start and end time values.
+
+Code set **DeliveryScheduleSettlTimeTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Hour | Hour of the day |
+| `1` | Timestamp | HH:MM time format |
+
+Used in: [LegDeliveryScheduleSettlTimeGrp](/fix/groups/leg-delivery-schedule-settl-time-grp)
+
+## 41429 · LegDeliveryStreamType [#tag-41429]
+
+<Badge intent="info" minimal>Tag 41429</Badge> <Badge intent="note" minimal>DeliveryStreamTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of delivery stream.
+
+Code set **DeliveryStreamTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Periodic | Periodic (default if not specified) |
+| `1` | Initial | Initial |
+| `2` | Single | Single |
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41430 · LegDeliveryStreamPipeline [#tag-41430]
+
+<Badge intent="info" minimal>Tag 41430</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The name of the oil delivery pipeline.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41431 · LegDeliveryStreamEntryPoint [#tag-41431]
+
+<Badge intent="info" minimal>Tag 41431</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The point at which the commodity will enter the delivery mechanism or pipeline.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41432 · LegDeliveryStreamWithdrawalPoint [#tag-41432]
+
+<Badge intent="info" minimal>Tag 41432</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The point at which the commodity product will be withdrawn prior to delivery.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41433 · LegDeliveryStreamDeliveryPoint [#tag-41433]
+
+<Badge intent="info" minimal>Tag 41433</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The point at which the commodity product will be delivered and received. Value specified should follow market convention appropriate for the commodity product. For bullion, see http://www.fpml.org/coding-scheme/bullion-delivery-location for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41434 · LegDeliveryStreamDeliveryRestriction [#tag-41434]
+
+<Badge intent="info" minimal>Tag 41434</Badge> <Badge intent="note" minimal>DeliveryStreamDeliveryRestrictionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies under what conditions the buyer and seller should be excused of their delivery obligations.
+
+Code set **DeliveryStreamDeliveryRestrictionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Firm | Firm |
+| `2` | NonFirm | Interruptable or non-firm |
+| `3` | ForceMajeure | Force majeure |
+| `4` | SystemFirm | System firm |
+| `5` | UnitFirm | Unit firm |
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41435 · LegDeliveryStreamDeliveryContingency [#tag-41435]
+
+<Badge intent="info" minimal>Tag 41435</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the electricity delivery contingency. See http://www.fpml.org/coding-scheme/electricity-transmission-contingency for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41436 · LegDeliveryStreamDeliveryContingentPartySide [#tag-41436]
+
+<Badge intent="info" minimal>Tag 41436</Badge> <Badge intent="note" minimal>DeliveryStreamElectingPartySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The trade side value of the party responsible for electricity delivery contingency.
+
+Code set **DeliveryStreamElectingPartySideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Buyer | Buyer |
+| `1` | Seller | Seller |
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41437 · LegDeliveryStreamDeliverAtSourceIndicator [#tag-41437]
+
+<Badge intent="info" minimal>Tag 41437</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+When this element is specified and set to 'Y', delivery of the coal product is to be at its source.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41438 · LegDeliveryStreamRiskApportionment [#tag-41438]
+
+<Badge intent="info" minimal>Tag 41438</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies how the parties to the trade apportion responsibility for the delivery of the commodity product. See http://www.fixtradingcommunity.org/codelists#Risk\_Apportionment for the details of the external code list.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41439 · LegDeliveryStreamTitleTransferLocation [#tag-41439]
+
+<Badge intent="info" minimal>Tag 41439</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the title transfer location.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41440 · LegDeliveryStreamTitleTransferCondition [#tag-41440]
+
+<Badge intent="info" minimal>Tag 41440</Badge> <Badge intent="note" minimal>DeliveryStreamTitleTransferConditionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the condition of title transfer.
+
+Code set **DeliveryStreamTitleTransferConditionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Transfers | Transfers with risk of loss |
+| `1` | DoesNotTransfer | Does not transfer with risk of loss |
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41441 · LegDeliveryStreamImporterOfRecord [#tag-41441]
+
+<Badge intent="info" minimal>Tag 41441</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A party, not necessarily of the trade, who is the Importer of Record for the purposes of paying customs duties and applicable taxes or costs related to importation.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41442 · LegDeliveryStreamNegativeTolerance [#tag-41442]
+
+<Badge intent="info" minimal>Tag 41442</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the negative tolerance value. The value may be an absolute quantity or a percentage, as specified in LegDeliveryStreamToleranceType(41445). Percentage value is to be expressed relative to "1.0" representing 100% (e.g. a value of "0.0575" represents 5.75%).
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41443 · LegDeliveryStreamPositiveTolerance [#tag-41443]
+
+<Badge intent="info" minimal>Tag 41443</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the positive tolerance value. The value may be an absolute quantity or a percentage, as specified in LegDeliveryStreamToleranceType(41445). Value may exceed agreed upon value. Percentage value is to be expressed relative to "1.0" representing 100% (e.g. a value of "0.0575" represents 5.75%).
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41444 · LegDeliveryStreamToleranceUnitOfMeasure [#tag-41444]
+
+<Badge intent="info" minimal>Tag 41444</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the tolerance value's unit of measure (UOM).
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41445 · LegDeliveryStreamToleranceType [#tag-41445]
+
+<Badge intent="info" minimal>Tag 41445</Badge> <Badge intent="note" minimal>DeliveryScheduleToleranceTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the tolerance value type.
+
+Code set **DeliveryScheduleToleranceTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Absolute | Absolute |
+| `1` | Percentage | Percentage |
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41446 · LegDeliveryStreamToleranceOptionSide [#tag-41446]
+
+<Badge intent="info" minimal>Tag 41446</Badge> <Badge intent="note" minimal>DeliveryStreamToleranceOptionSideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether the tolerance is at the seller's or buyer's option.
+
+Code set **DeliveryStreamToleranceOptionSideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Buyer | Buyer |
+| `2` | Seller | Seller |
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41447 · LegDeliveryStreamTotalPositiveTolerance [#tag-41447]
+
+<Badge intent="info" minimal>Tag 41447</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The positive percent tolerance which applies to the total quantity delivered over all shipment periods. Percentage value is to be expressed relative to "1.0" representing 100% (e.g. a value of "0.0575" represents 5.75%.).
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41448 · LegDeliveryStreamTotalNegativeTolerance [#tag-41448]
+
+<Badge intent="info" minimal>Tag 41448</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The negative percent tolerance which applies to the total quantity delivered over all shipment periods. Percentage value is to be expressed relative to "1.0" representing 100% (e.g. a value of "0.0575" represents 5.75%.).
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41449 · LegDeliveryStreamNotionalConversionFactor [#tag-41449]
+
+<Badge intent="info" minimal>Tag 41449</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+If the notional quantity is specified in a unit that does not match the unit in which the commodity reference price is quoted, the scaling or conversion factor used to convert the commodity reference price unit into the notional quantity unit should be stated here. If there is no conversion, this field is not intended to be used.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41450 · LegDeliveryStreamTransportEquipment [#tag-41450]
+
+<Badge intent="info" minimal>Tag 41450</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The transportation equipment with which the commodity product will be delivered and received.
+
+Examples of transportation equipment or mode are barge, truck, railcar, etc.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41451 · LegDeliveryStreamElectingPartySide [#tag-41451]
+
+<Badge intent="info" minimal>Tag 41451</Badge> <Badge intent="note" minimal>DeliveryStreamElectingPartySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A reference to the party able to choose whether the gas is delivered for a particular period e.g. a swing or interruptible contract.
+
+Code set **DeliveryStreamElectingPartySideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Buyer | Buyer |
+| `1` | Seller | Seller |
+
+Used in: [LegDeliveryStream](/fix/components/leg-delivery-stream)
+
+## 41452 · NoLegStreamAssetAttributes [#tag-41452]
+
+<Badge intent="info" minimal>Tag 41452</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of asset attribute entries in the group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegStreamAssetAttributeGrp](/fix/groups/leg-stream-asset-attribute-grp)
+
+## 41453 · LegStreamAssetAttributeType [#tag-41453]
+
+<Badge intent="info" minimal>Tag 41453</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the name of the attribute. See http://www.fixtradingcommunity.org/codelists#Asset\_Attribute\_Types for code list of applicable asset attribute types.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegStreamAssetAttributeGrp](/fix/groups/leg-stream-asset-attribute-grp)
+
+## 41454 · LegStreamAssetAttributeValue [#tag-41454]
+
+<Badge intent="info" minimal>Tag 41454</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the value of the attribute.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegStreamAssetAttributeGrp](/fix/groups/leg-stream-asset-attribute-grp)
+
+## 41455 · LegStreamAssetAttributeLimit [#tag-41455]
+
+<Badge intent="info" minimal>Tag 41455</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Limit or lower acceptable value of the attribute.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegStreamAssetAttributeGrp](/fix/groups/leg-stream-asset-attribute-grp)
+
+## 41456 · NoLegDeliveryStreamCycles [#tag-41456]
+
+<Badge intent="info" minimal>Tag 41456</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of commodity sources in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegDeliveryStreamCycleGrp](/fix/groups/leg-delivery-stream-cycle-grp)
+
+## 41457 · LegDeliveryStreamCycleDesc [#tag-41457]
+
+<Badge intent="info" minimal>Tag 41457</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The delivery cycles during which the oil product will be transported in the pipeline.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegDeliveryStreamCycleGrp](/fix/groups/leg-delivery-stream-cycle-grp)
+
+## 41458 · EncodedLegDeliveryStreamCycleDescLen [#tag-41458]
+
+<Badge intent="info" minimal>Tag 41458</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Byte length of encoded (non-ASCII characters) EncodedLegDeliveryStreamCycleDesc(41459) field.
+
+Type: [Length](/fix/datatypes#length)
+
+Used in: [LegDeliveryStreamCycleGrp](/fix/groups/leg-delivery-stream-cycle-grp)
+
+## 41459 · EncodedLegDeliveryStreamCycleDesc [#tag-41459]
+
+<Badge intent="info" minimal>Tag 41459</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Encoded (non-ASCII characters) representation of the LegDeliveryStreamCycleDesc(41457) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the LegLeg DeliveryStream(41457) field.
+
+Type: [data](/fix/datatypes#data)
+
+Used in: [LegDeliveryStreamCycleGrp](/fix/groups/leg-delivery-stream-cycle-grp)
+
+## 41460 · NoLegDeliveryStreamCommoditySources [#tag-41460]
+
+<Badge intent="info" minimal>Tag 41460</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of commodity sources in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegDeliveryStreamCommoditySourceGrp](/fix/groups/leg-delivery-stream-commodity-source-grp)
+
+## 41461 · LegDeliveryStreamCommoditySource [#tag-41461]
+
+<Badge intent="info" minimal>Tag 41461</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The SCoTA coal cargo origin, mining region, mine(s), mining complex(es), loadout(s) or river dock(s) or other point(s) of origin that seller and buyer agree are acceptable origins for the coal product. For international coal transactions, this is the origin of the coal product. See http://www.fpml.org/coding-scheme/commodity-coal-product-source for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegDeliveryStreamCommoditySourceGrp](/fix/groups/leg-delivery-stream-commodity-source-grp)
+
+## 41462 · LegMarketDisruptionProvision [#tag-41462]
+
+<Badge intent="info" minimal>Tag 41462</Badge> <Badge intent="note" minimal>MarketDisruptionProvisionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The consequences of market disruption events.
+
+Code set **MarketDisruptionProvisionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | Applicable | Applicable |
+| `2` | AsInMasterAgreement | As specified in master agreement |
+| `3` | AsInConfirmation | As specified in confirmation |
+
+Used in: [LegMarketDisruption](/fix/components/leg-market-disruption)
+
+## 41463 · LegMarketDisruptionFallbackProvision [#tag-41463]
+
+<Badge intent="info" minimal>Tag 41463</Badge> <Badge intent="note" minimal>MarketDisruptionFallbackProvisionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the location of the fallback provision documentation.
+
+Code set **MarketDisruptionFallbackProvisionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | MasterAgreement | As specified in master agreement |
+| `1` | Confirmation | As specified in confirmation |
+
+Used in: [LegMarketDisruption](/fix/components/leg-market-disruption)
+
+## 41464 · LegMarketDisruptionMaximumDays [#tag-41464]
+
+<Badge intent="info" minimal>Tag 41464</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the maximum number of market disruption days (commodity or bullion business days) in a contract or confirmation. If none are specified, the maximum number of market disruption days is five (5).
+
+ISDA 2005 Commodity Definition.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegMarketDisruption](/fix/components/leg-market-disruption)
+
+## 41465 · LegMarketDisruptionMaterialityPercentage [#tag-41465]
+
+<Badge intent="info" minimal>Tag 41465</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used when a price materiality percentage applies to the price source disruption event and this event has been specified.
+
+Applicable to 2005 Commodity Definitions only.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [LegMarketDisruption](/fix/components/leg-market-disruption)
+
+## 41466 · LegMarketDisruptionMinimumFuturesContracts [#tag-41466]
+
+<Badge intent="info" minimal>Tag 41466</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the minimum futures contracts level that dictates whether or not a 'De Minimis Trading' event has occurred.
+
+Applicable to 1993 Commodity Definitions only.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegMarketDisruption](/fix/components/leg-market-disruption)
+
+## 41467 · NoLegMarketDisruptionEvents [#tag-41467]
+
+<Badge intent="info" minimal>Tag 41467</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of disruption events in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegMarketDisruptionEventGrp](/fix/groups/leg-market-disruption-event-grp)
+
+## 41468 · LegMarketDisruptionEvent [#tag-41468]
+
+<Badge intent="info" minimal>Tag 41468</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the market disruption event. For commodities see http://www.fpml.org/coding-scheme/commodity-market-disruption for values. For foreign exchange, see http://www.fixtradingcommunity.org/codelists#Market\_Disruption\_Event for code list of applicable event types.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegMarketDisruptionEventGrp](/fix/groups/leg-market-disruption-event-grp)
+
+## 41469 · NoLegMarketDisruptionFallbacks [#tag-41469]
+
+<Badge intent="info" minimal>Tag 41469</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of fallbacks in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegMarketDisruptionFallbackGrp](/fix/groups/leg-market-disruption-fallback-grp)
+
+## 41470 · LegMarketDisruptionFallbackType [#tag-41470]
+
+<Badge intent="info" minimal>Tag 41470</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of disruption fallback. See http://www.fpml.org/coding-scheme/commodity-market-disruption-fallback for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegMarketDisruptionFallbackGrp](/fix/groups/leg-market-disruption-fallback-grp)
+
+## 41471 · NoLegMarketDisruptionFallbackReferencePrices [#tag-41471]
+
+<Badge intent="info" minimal>Tag 41471</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of fallback reference securities in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegMarketDisruptionFallbackReferencePriceGrp](/fix/groups/leg-market-disruption-fallback-reference-price-grp)
+
+## 41472 · LegMarketDisruptionFallbackUnderlierType [#tag-41472]
+
+<Badge intent="info" minimal>Tag 41472</Badge> <Badge intent="note" minimal>MarketDisruptionFallbackUnderlierTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The type of reference price underlier.
+
+Code set **MarketDisruptionFallbackUnderlierTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Basket | Basket |
+| `1` | Bond | Bond |
+| `2` | Cash | Cash |
+| `3` | Commodity | Commodity |
+| `4` | ConvertibleBond | Convertible bond |
+| `5` | Equity | Equity |
+| `6` | ExchangeTradedFund | Exchange traded fund |
+| `7` | Future | Future |
+| `8` | Index | Index |
+| `9` | Loan | Loan |
+| `10` | Mortgage | Mortgage |
+| `11` | MutualFund | Mutual fund |
+
+Used in: [LegMarketDisruptionFallbackReferencePriceGrp](/fix/groups/leg-market-disruption-fallback-reference-price-grp)
+
+## 41473 · LegMarketDisruptionFallbackUnderlierSecurityID [#tag-41473]
+
+<Badge intent="info" minimal>Tag 41473</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the identifier value of the security.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegMarketDisruptionFallbackReferencePriceGrp](/fix/groups/leg-market-disruption-fallback-reference-price-grp)
+
+## 41474 · LegMarketDisruptionFallbackUnderlierSecurityIDSource [#tag-41474]
+
+<Badge intent="info" minimal>Tag 41474</Badge> <Badge intent="note" minimal>SecurityIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the class or source scheme of the security identifier.
+
+Code set **SecurityIDSourceCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | CUSIP | CUSIP |
+| `2` | SEDOL | SEDOL |
+| `3` | QUIK | QUIK |
+| `4` | ISINNumber | ISIN |
+| `5` | RICCode | RIC |
+| `6` | ISOCurrencyCode | ISO Currency Code |
+| `7` | ISOCountryCode | ISO Country Code |
+| `8` | ExchangeSymbol | Exchange symbol |
+| `9` | ConsolidatedTapeAssociation | Consolidated Tape Association (CTA) Symbol (SIAC CTS/CQS line format) |
+| `A` | BloombergSymbol | Bloomberg Symbol |
+| `B` | Wertpapier | Wertpapier |
+| `C` | Dutch | Dutch |
+| `D` | Valoren | Valoren |
+| `E` | Sicovam | Sicovam |
+| `F` | Belgian | Belgian |
+| `G` | Common | "Common" (Clearstream and Euroclear) |
+| `H` | ClearingHouse | Clearing house / Clearing organization |
+| `I` | ISDAFpMLSpecification | ISDA/FpML product specification (XML in SecurityXML(1185)) |
+| `J` | OptionPriceReportingAuthority | Option Price Reporting Authority |
+| `K` | ISDAFpMLURL | ISDA/FpML product URL (URL in SecurityID(48)) |
+| `L` | LetterOfCredit | Letter of credit |
+| `M` | MarketplaceAssignedIdentifier | Marketplace-assigned Identifier |
+| `N` | MarkitREDEntityCLIP | Markit RED entity CLIP |
+| `P` | MarkitREDPairCLIP | Markit RED pair CLIP |
+| `Q` | CFTCCommodityCode | CFTC commodity code |
+| `R` | ISDACommodityReferencePrice | ISDA Commodity Reference Price |
+| `S` | FinancialInstrumentGlobalIdentifier | Financial Instrument Global Identifier |
+| `T` | LegalEntityIdentifier | Legal entity identifier |
+| `U` | Synthetic | Synthetic |
+| `V` | FidessaInstrumentMnemonic | Fidessa Instrument Mnemonic (FIM) |
+| `W` | IndexName | Index name |
+| `X` | UniformSymbol | Uniform Symbol (UMTF Symbol) |
+
+Used in: [LegMarketDisruptionFallbackReferencePriceGrp](/fix/groups/leg-market-disruption-fallback-reference-price-grp)
+
+## 41475 · LegMarketDisruptionFallbackUnderlierSecurityDesc [#tag-41475]
+
+<Badge intent="info" minimal>Tag 41475</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the description of the underlying security.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegMarketDisruptionFallbackReferencePriceGrp](/fix/groups/leg-market-disruption-fallback-reference-price-grp)
+
+## 41476 · EncodedLegMarketDisruptionFallbackUnderlierSecurityDescLen [#tag-41476]
+
+<Badge intent="info" minimal>Tag 41476</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Byte length of encoded (non-ASCII characters) EncodedLegMarketDisruptionFallbackUnderlierSecurityDesc (41477) field.
+
+Type: [Length](/fix/datatypes#length)
+
+Used in: [LegMarketDisruptionFallbackReferencePriceGrp](/fix/groups/leg-market-disruption-fallback-reference-price-grp)
+
+## 41477 · EncodedLegMarketDisruptionFallbackUnderlierSecurityDesc [#tag-41477]
+
+<Badge intent="info" minimal>Tag 41477</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Encoded (non-ASCII characters) representation of the LegMarketDisruptionFallbackUnderlierSecurityDesc(41475) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the LegMarketDisruptionFallbackUnderlierSecurityDesc(41475) field.
+
+Type: [data](/fix/datatypes#data)
+
+Used in: [LegMarketDisruptionFallbackReferencePriceGrp](/fix/groups/leg-market-disruption-fallback-reference-price-grp)
+
+## 41478 · LegMarketDisruptionFallbackOpenUnits [#tag-41478]
+
+<Badge intent="info" minimal>Tag 41478</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+If there are multiple underlying assets, this specifies the number of units (index or securities) that constitute the underlier of the swap. In the case of a basket swap, this is used to reference both the number of basket units, and the number of each asset components of the basket when these are expressed in absolute terms.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [LegMarketDisruptionFallbackReferencePriceGrp](/fix/groups/leg-market-disruption-fallback-reference-price-grp)
+
+## 41479 · LegMarketDisruptionFallbackBasketCurrency [#tag-41479]
+
+<Badge intent="info" minimal>Tag 41479</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency if the underlier is a basket. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [LegMarketDisruptionFallbackReferencePriceGrp](/fix/groups/leg-market-disruption-fallback-reference-price-grp)
+
+## 41480 · LegMarketDisruptionFallbackBasketDivisor [#tag-41480]
+
+<Badge intent="info" minimal>Tag 41480</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the basket divisor amount. This value is normally used to adjust the constituent weight for pricing or to adjust for dividends, or other corporate actions.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [LegMarketDisruptionFallbackReferencePriceGrp](/fix/groups/leg-market-disruption-fallback-reference-price-grp)
+
+## 41481 · LegExerciseDesc [#tag-41481]
+
+<Badge intent="info" minimal>Tag 41481</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A description of the option exercise.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegOptionExercise](/fix/components/leg-option-exercise)
+
+## 41482 · EncodedLegExerciseDescLen [#tag-41482]
+
+<Badge intent="info" minimal>Tag 41482</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Byte length of encoded (non-ASCII characters) EncodedLegExerciseDesc(41483) field.
+
+Type: [Length](/fix/datatypes#length)
+
+Used in: [LegOptionExercise](/fix/components/leg-option-exercise)
+
+## 41483 · EncodedLegExerciseDesc [#tag-41483]
+
+<Badge intent="info" minimal>Tag 41483</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Encoded (non-ASCII characters) representation of the LegExerciseDesc(41481) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the LegExerciseDesc(41481) field.
+
+Type: [data](/fix/datatypes#data)
+
+Used in: [LegOptionExercise](/fix/components/leg-option-exercise)
+
+## 41484 · LegAutomaticExerciseIndicator [#tag-41484]
+
+<Badge intent="info" minimal>Tag 41484</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates (when 'Y') that exercise is automatic when the strike price is crossed or the underlying trade is in the money.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [LegOptionExercise](/fix/components/leg-option-exercise)
+
+## 41485 · LegAutomaticExerciseThresholdRate [#tag-41485]
+
+<Badge intent="info" minimal>Tag 41485</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The threshold rate for triggering automatic exercise.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [LegOptionExercise](/fix/components/leg-option-exercise)
+
+## 41486 · LegExerciseConfirmationMethod [#tag-41486]
+
+<Badge intent="info" minimal>Tag 41486</Badge> <Badge intent="note" minimal>ExerciseConfirmationMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether follow-up confirmation of exercise (written or electronic) is required following telephonic notice by the buyer to the seller or seller's agent.
+
+Code set **ExerciseConfirmationMethodCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotRequired | Not required |
+| `1` | NonElectronic | Non-electronic |
+| `2` | Electronic | Electronic |
+| `3` | Unknown | Unknown at time of report |
+
+Used in: [LegOptionExercise](/fix/components/leg-option-exercise)
+
+## 41487 · LegManualNoticeBusinessCenter [#tag-41487]
+
+<Badge intent="info" minimal>Tag 41487</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the business center used for adjusting the time for manual exercise notice. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegOptionExercise](/fix/components/leg-option-exercise)
+
+## 41488 · LegFallbackExerciseIndicator [#tag-41488]
+
+<Badge intent="info" minimal>Tag 41488</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether the notional amount of the underlying swap, not previously exercised under the option, will be automatically exercised at the expiration time on the expiration date if at such time the buyer is in-the-money, provided that the difference between the settlement rate and the fixed rate under the relevant underlying swap is not less than one tenth of a percentage point (0.10% or 0.001).
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [LegOptionExercise](/fix/components/leg-option-exercise)
+
+## 41489 · LegLimitRightToConfirmIndicator [#tag-41489]
+
+<Badge intent="info" minimal>Tag 41489</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether the Seller may request the Buyer to confirm its intent to exercise if not done on or before the expiration time on the expiration date. If true ("Y") specific rules will apply in relation to the settlement mode.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [LegOptionExercise](/fix/components/leg-option-exercise)
+
+## 41490 · LegExerciseSplitTicketIndicator [#tag-41490]
+
+<Badge intent="info" minimal>Tag 41490</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates in physical settlement of bond and convertible bond options whether the party required to deliver the bonds will divide those to be delivered as notifying party desires to facilitate delivery obligations.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [LegOptionExercise](/fix/components/leg-option-exercise)
+
+## 41491 · NoLegOptionExerciseBusinessCenters [#tag-41491]
+
+<Badge intent="info" minimal>Tag 41491</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of business centers in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegOptionExerciseBusinessCenterGrp](/fix/groups/leg-option-exercise-business-center-grp)
+
+## 41492 · LegOptionExerciseBusinessCenter [#tag-41492]
+
+<Badge intent="info" minimal>Tag 41492</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the option exercise dates, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegOptionExerciseBusinessCenterGrp](/fix/groups/leg-option-exercise-business-center-grp)
+
+## 41493 · LegOptionExerciseBusinessDayConvention [#tag-41493]
+
+<Badge intent="info" minimal>Tag 41493</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the option exercise dates. Used only to override the business day convention specified in the LegDateAdjustment component within the InstrumentLeg component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41494 · LegOptionExerciseEarliestDateOffsetDayType [#tag-41494]
+
+<Badge intent="info" minimal>Tag 41494</Badge> <Badge intent="note" minimal>ComplexEventDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the relative earliest exercise date offset.
+
+Code set **ComplexEventDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41495 · LegOptionExerciseEarliestDateOffsetPeriod [#tag-41495]
+
+<Badge intent="info" minimal>Tag 41495</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative earliest exercise date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41496 · LegOptionExerciseEarliestDateOffsetUnit [#tag-41496]
+
+<Badge intent="info" minimal>Tag 41496</Badge> <Badge intent="note" minimal>ProvisionOptionExerciseEarliestDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative earliest exercise date offset.
+
+Code set **ProvisionOptionExerciseEarliestDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41497 · LegOptionExerciseFrequencyPeriod [#tag-41497]
+
+<Badge intent="info" minimal>Tag 41497</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the frequency of exercise dates.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41498 · LegOptionExerciseFrequencyUnit [#tag-41498]
+
+<Badge intent="info" minimal>Tag 41498</Badge> <Badge intent="note" minimal>ProtectionTermEventUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the frequency of exercise dates.
+
+Code set **ProtectionTermEventUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41499 · LegOptionExerciseStartDateUnadjusted [#tag-41499]
+
+<Badge intent="info" minimal>Tag 41499</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted start date for calculating periodic exercise dates.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41500 · LegOptionExerciseStartDateRelativeTo [#tag-41500]
+
+<Badge intent="info" minimal>Tag 41500</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the option exercise start date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41501 · LegOptionExerciseStartDateOffsetPeriod [#tag-41501]
+
+<Badge intent="info" minimal>Tag 41501</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative exercise start date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41502 · LegOptionExerciseStartDateOffsetUnit [#tag-41502]
+
+<Badge intent="info" minimal>Tag 41502</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative exercise start date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41503 · LegOptionExerciseStartDateOffsetDayType [#tag-41503]
+
+<Badge intent="info" minimal>Tag 41503</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the relative option exercise start date offset.
+
+Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41504 · LegOptionExerciseStartDateAdjusted [#tag-41504]
+
+<Badge intent="info" minimal>Tag 41504</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted start date for calculating periodic exercise dates.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41505 · LegOptionExerciseSkip [#tag-41505]
+
+<Badge intent="info" minimal>Tag 41505</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The number of periods in the referenced date schedule that are between each date in the relative date schedule. Thus a skip of 2 would mean that dates are relative to every second date in the referenced schedule. If present this should have a value greater than 1.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41506 · LegOptionExerciseNominationDeadline [#tag-41506]
+
+<Badge intent="info" minimal>Tag 41506</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The last date (adjusted) for establishing the option exercise terms.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41507 · LegOptionExerciseFirstDateUnadjusted [#tag-41507]
+
+<Badge intent="info" minimal>Tag 41507</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted first exercise date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41508 · LegOptionExerciseLastDateUnadjusted [#tag-41508]
+
+<Badge intent="info" minimal>Tag 41508</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted last exercise date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41509 · LegOptionExerciseEarliestTime [#tag-41509]
+
+<Badge intent="info" minimal>Tag 41509</Badge> <Badge intent="note" minimal>LocalMktTime</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The earliest time at which notice of exercise can be given by the buyer to the seller (or seller's agent) (i) on the expriation date, in the case of a European style option, (ii) on each Bermuda option exercise date and the expiration date, in the case of a Bermuda style option, (iii) the commencement date to, and including, the expiration date, in the case of an American option.
+
+Type: [LocalMktTime](/fix/datatypes#local-mkt-time)
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41510 · LegOptionExerciseLatestTime [#tag-41510]
+
+<Badge intent="info" minimal>Tag 41510</Badge> <Badge intent="note" minimal>LocalMktTime</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The latest exercise time. See also LegOptionExerciseEarliestTime(41509).
+
+Type: [LocalMktTime](/fix/datatypes#local-mkt-time)
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41511 · LegOptionExerciseTimeBusinessCenter [#tag-41511]
+
+<Badge intent="info" minimal>Tag 41511</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center used to determine the locale for option exercise time, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates)
+
+## 41512 · NoLegOptionExerciseDates [#tag-41512]
+
+<Badge intent="info" minimal>Tag 41512</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of dates in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegOptionExerciseDateGrp](/fix/groups/leg-option-exercise-date-grp)
+
+## 41513 · LegOptionExerciseDate [#tag-41513]
+
+<Badge intent="info" minimal>Tag 41513</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted or unadjusted option exercise fixed date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegOptionExerciseDateGrp](/fix/groups/leg-option-exercise-date-grp)
+
+## 41514 · LegOptionExerciseDateType [#tag-41514]
+
+<Badge intent="info" minimal>Tag 41514</Badge> <Badge intent="note" minimal>OptionExerciseDateTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of option exercise date. When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type.
+
+Code set **OptionExerciseDateTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Unadjusted | Unadjusted |
+| `1` | Adjusted | Adjusted |
+
+Used in: [LegOptionExerciseDateGrp](/fix/groups/leg-option-exercise-date-grp)
+
+## 41515 · NoLegOptionExerciseExpirationDateBusinessCenters [#tag-41515]
+
+<Badge intent="info" minimal>Tag 41515</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of business centers in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegOptionExerciseExpirationDateBusinessCenterGrp](/fix/groups/leg-option-exercise-expiration-date-business-center-grp)
+
+## 41516 · LegOptionExerciseExpirationDateBusinessCenter [#tag-41516]
+
+<Badge intent="info" minimal>Tag 41516</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the option exercise expiration dates, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegOptionExerciseExpirationDateBusinessCenterGrp](/fix/groups/leg-option-exercise-expiration-date-business-center-grp)
+
+## 41517 · LegOptionExerciseExpirationDateBusinessDayConvention [#tag-41517]
+
+<Badge intent="info" minimal>Tag 41517</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the option exercise expiration dates. Used only to override the business day convention specified in the LegDateAdjustment component within the InstrumentLeg component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [LegOptionExerciseExpiration](/fix/components/leg-option-exercise-expiration)
+
+## 41518 · LegOptionExerciseExpirationDateRelativeTo [#tag-41518]
+
+<Badge intent="info" minimal>Tag 41518</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the option exercise expiration date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegOptionExerciseExpiration](/fix/components/leg-option-exercise-expiration)
+
+## 41519 · LegOptionExerciseExpirationDateOffsetPeriod [#tag-41519]
+
+<Badge intent="info" minimal>Tag 41519</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative exercise expiration date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegOptionExerciseExpiration](/fix/components/leg-option-exercise-expiration)
+
+## 41520 · LegOptionExerciseExpirationDateOffsetUnit [#tag-41520]
+
+<Badge intent="info" minimal>Tag 41520</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative exercise expiration date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegOptionExerciseExpiration](/fix/components/leg-option-exercise-expiration)
+
+## 41521 · LegOptionExerciseExpirationFrequencyPeriod [#tag-41521]
+
+<Badge intent="info" minimal>Tag 41521</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the frequency of exercise expiration dates.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegOptionExerciseExpiration](/fix/components/leg-option-exercise-expiration)
+
+## 41522 · LegOptionExerciseExpirationFrequencyUnit [#tag-41522]
+
+<Badge intent="info" minimal>Tag 41522</Badge> <Badge intent="note" minimal>ProtectionTermEventUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the frequency of exercise expiration dates.
+
+Code set **ProtectionTermEventUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegOptionExerciseExpiration](/fix/components/leg-option-exercise-expiration)
+
+## 41523 · LegOptionExerciseExpirationRollConvention [#tag-41523]
+
+<Badge intent="info" minimal>Tag 41523</Badge> <Badge intent="note" minimal>DateRollConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The convention for determining the sequence of exercise expiration dates. It is used in conjunction with a specified frequency. Used only to override the roll convention defined in the LegDateAdjustment component in InstrumentLeg.
+
+Code set **DateRollConventionCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | FirstDay | 1st day of the month |
+| `2` | SecondDay | 2nd day of the month |
+| `3` | ThirdDay | 3rd day of the month |
+| `4` | FourthDay | 4th day of the month |
+| `5` | FifthDay | 5th day of the month |
+| `6` | SixthDay | 6thd day of the month |
+| `7` | SeventhDay | 7th day of the month |
+| `8` | EighthDay | 8th day of the month |
+| `9` | NinthDay | 9th day of the month |
+| `10` | TenthDay | 10th day of the month |
+| `11` | EleventhDay | 11th day of the month |
+| `12` | TwelvthDay | 12th day of the month |
+| `13` | ThirteenthDay | 13th day of the month |
+| `14` | ForteenthDay | 14th day of the month |
+| `15` | FifteenthDay | 15th day of the month |
+| `16` | SixteenthDay | 16th day of the month |
+| `17` | SeventeenthDay | 17th day of the month |
+| `18` | EighteenthDay | 18th day of the month |
+| `19` | NineteenthDay | 19th day of the month |
+| `20` | TwentiethDay | 20th day of the month |
+| `21` | TwentyFirstDay | 21st day of the month |
+| `22` | TwentySecondDay | 22nd day of the month |
+| `23` | TwentyThirdDay | 23rd day of the month |
+| `24` | TwentyFourthDay | 24th day of the month |
+| `25` | TwentyFifthDay | 25th day of the month |
+| `26` | TwentySixthDay | 26th day of the month |
+| `27` | TwentySeventhDay | 27th day of the month |
+| `28` | TwentyEigthDa28y | 28th day of the month |
+| `29` | TwentyNinthDay | 29th day of the month |
+| `30` | ThirtiethDay | 30th day of the month |
+| `EOM` | EOM | The end of the month. |
+| `FRN` | FRN | The floating rate note convention or Eurodollar convention. |
+| `IMM` | IMM | The International Money Market settlement date, i.e. the 3rd Wednesday of the month. |
+| `IMMCAD` | IMMCAD | The last trading day/expiration day of the Canadian Derivatives Exchange. |
+| `IMMAUD` | IMMAUD | The last trading day of the Sydney Futures Exchange Australian 90-day bank accepted bill futures contract. |
+| `IMMNZD` | IMMNZD | The last trading day of the Sydney Futures Exchange New Zealand 90-day bank bill futures contract. |
+| `SFE` | SFE | The Sydney Futures Exchange 90-day bank accepted bill futures settlement dates. |
+| `NONE` | NONE | No adjustment |
+| `TBILL` | TBILL | The 13-week and 26-week U.S. Treasury Bill auction dates. |
+| `MON` | MON | Monday |
+| `TUE` | TUE | Tuesday |
+| `WED` | WED | Wednesday |
+| `THU` | THU | Thursday |
+| `FRI` | FRI | Friday |
+| `SAT` | SAT | Saturday |
+| `SUN` | SUN | Sunday |
+
+Used in: [LegOptionExerciseExpiration](/fix/components/leg-option-exercise-expiration)
+
+## 41524 · LegOptionExerciseExpirationDateOffsetDayType [#tag-41524]
+
+<Badge intent="info" minimal>Tag 41524</Badge> <Badge intent="note" minimal>ComplexEventDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the relative option exercise expiration date offset.
+
+Code set **ComplexEventDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [LegOptionExerciseExpiration](/fix/components/leg-option-exercise-expiration)
+
+## 41525 · LegOptionExerciseExpirationTime [#tag-41525]
+
+<Badge intent="info" minimal>Tag 41525</Badge> <Badge intent="note" minimal>LocalMktTime</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The option exercise expiration time.
+
+Type: [LocalMktTime](/fix/datatypes#local-mkt-time)
+
+Used in: [LegOptionExerciseExpiration](/fix/components/leg-option-exercise-expiration)
+
+## 41526 · LegOptionExerciseExpirationTimeBusinessCenter [#tag-41526]
+
+<Badge intent="info" minimal>Tag 41526</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center used to determine the locale for option exercise expiration time, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegOptionExerciseExpiration](/fix/components/leg-option-exercise-expiration)
+
+## 41527 · NoLegOptionExerciseExpirationDates [#tag-41527]
+
+<Badge intent="info" minimal>Tag 41527</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of fixed exercise expiration dates in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegOptionExerciseExpirationDateGrp](/fix/groups/leg-option-exercise-expiration-date-grp)
+
+## 41528 · LegOptionExerciseExpirationDate [#tag-41528]
+
+<Badge intent="info" minimal>Tag 41528</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted or unadjusted option exercise expiration fixed date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegOptionExerciseExpirationDateGrp](/fix/groups/leg-option-exercise-expiration-date-grp)
+
+## 41529 · LegOptionExerciseExpirationDateType [#tag-41529]
+
+<Badge intent="info" minimal>Tag 41529</Badge> <Badge intent="note" minimal>OptionExerciseDateTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of option exercise expiration date. When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type.
+
+Code set **OptionExerciseDateTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Unadjusted | Unadjusted |
+| `1` | Adjusted | Adjusted |
+
+Used in: [LegOptionExerciseExpirationDateGrp](/fix/groups/leg-option-exercise-expiration-date-grp)
+
+## 41530 · NoLegPaymentScheduleFixingDays [#tag-41530]
+
+<Badge intent="info" minimal>Tag 41530</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of fixing days in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegPaymentScheduleFixingDayGrp](/fix/groups/leg-payment-schedule-fixing-day-grp)
+
+## 41531 · LegPaymentScheduleFixingDayOfWeek [#tag-41531]
+
+<Badge intent="info" minimal>Tag 41531</Badge> <Badge intent="note" minimal>PaymentStreamPricingDayOfWeekCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The day of the week on which fixing takes place.
+
+Code set **PaymentStreamPricingDayOfWeekCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | EveryDay | Every day (the default if not specified) |
+| `1` | Monday | Monday |
+| `2` | Tuesday | Tuesday |
+| `3` | Wednesday | Wednesday |
+| `4` | Thursday | Thursday |
+| `5` | Friday | Friday |
+| `6` | Saturday | Saturday |
+| `7` | Sunday | Sunday |
+
+Used in: [LegPaymentScheduleFixingDayGrp](/fix/groups/leg-payment-schedule-fixing-day-grp)
+
+## 41532 · LegPaymentScheduleFixingDayNumber [#tag-41532]
+
+<Badge intent="info" minimal>Tag 41532</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The occurrence of the day of week on which fixing takes place.
+
+For example, a fixing of the 3rd Friday would be DayOfWk=5 DayNum=3. If omitted every day of the week is a fixing day.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentScheduleFixingDayGrp](/fix/groups/leg-payment-schedule-fixing-day-grp)
+
+## 41533 · LegPaymentScheduleXID [#tag-41533]
+
+<Badge intent="info" minimal>Tag 41533</Badge> <Badge intent="note" minimal>XID</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifier of this LegPaymentSchedule for cross referencing elsewhere in the message.
+
+Type: [XID](/fix/datatypes#xid)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 41534 · LegPaymentScheduleXIDRef [#tag-41534]
+
+<Badge intent="info" minimal>Tag 41534</Badge> <Badge intent="note" minimal>XIDREF</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Reference to payment schedule elsewhere in the message.
+
+Type: [XIDREF](/fix/datatypes#xidref)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 41535 · LegPaymentScheduleRateCurrency [#tag-41535]
+
+<Badge intent="info" minimal>Tag 41535</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The currency of the schedule rate. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 41536 · LegPaymentScheduleRateUnitOfMeasure [#tag-41536]
+
+<Badge intent="info" minimal>Tag 41536</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The schedule rate unit of measure (UOM).
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 41537 · LegPaymentScheduleRateConversionFactor [#tag-41537]
+
+<Badge intent="info" minimal>Tag 41537</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The number multipled by the derived floating rate of the leg's payment schedule in order to arrive at the payment rate. If omitted, the schedule rate conversion factor is 1.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 41538 · LegPaymentScheduleRateSpreadType [#tag-41538]
+
+<Badge intent="info" minimal>Tag 41538</Badge> <Badge intent="note" minimal>PaymentStreamRateSpreadTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies whether the rate spread is an absolute value to be added to the index rate or a percentage of the index rate.
+
+Code set **PaymentStreamRateSpreadTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Absolute | Absolute |
+| `1` | Percentage | Percentage |
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 41539 · LegPaymentScheduleSettlPeriodPrice [#tag-41539]
+
+<Badge intent="info" minimal>Tag 41539</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The schedule settlement period price.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 41540 · LegPaymentScheduleSettlPeriodPriceCurrency [#tag-41540]
+
+<Badge intent="info" minimal>Tag 41540</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The currency of the schedule settlement period price. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 41541 · LegPaymentScheduleSettlPeriodPriceUnitOfMeasure [#tag-41541]
+
+<Badge intent="info" minimal>Tag 41541</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The settlement period price unit of measure (UOM).
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 41542 · LegPaymentScheduleStepUnitOfMeasure [#tag-41542]
+
+<Badge intent="info" minimal>Tag 41542</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The schedule step unit of measure (UOM).
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 41543 · LegPaymentScheduleFixingDayDistribution [#tag-41543]
+
+<Badge intent="info" minimal>Tag 41543</Badge> <Badge intent="note" minimal>PaymentStreamPricingDayDistributionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The distribution of fixing days.
+
+Code set **PaymentStreamPricingDayDistributionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | All | All |
+| `1` | First | First |
+| `2` | Last | Last |
+| `3` | Penultimate | Penultimate |
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 41544 · LegPaymentScheduleFixingDayCount [#tag-41544]
+
+<Badge intent="info" minimal>Tag 41544</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The number of days over which fixing should take place.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 41545 · LegPaymentScheduleFixingLagPeriod [#tag-41545]
+
+<Badge intent="info" minimal>Tag 41545</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the fixing lag duration.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 41546 · LegPaymentScheduleFixingLagUnit [#tag-41546]
+
+<Badge intent="info" minimal>Tag 41546</Badge> <Badge intent="note" minimal>PaymentStreamInflationLagUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the fixing lag duration.
+
+Code set **PaymentStreamInflationLagUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 41547 · LegPaymentScheduleFixingFirstObservationDateOffsetPeriod [#tag-41547]
+
+<Badge intent="info" minimal>Tag 41547</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative first observation date offset.
+
+If the first observation offset is specified, the observation period will start the specified interval prior to each calculation period - i.e. if the first observation offset is 4 months and the lag duration is 3 months, observations will be taken in months 4, 3 and 2 (but not 1) prior to each calculation period. If no first observation offset is specified, the observation period will end immediately preceding each calculation period.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 41548 · LegPaymentScheduleFixingFirstObservationDateOffsetUnit [#tag-41548]
+
+<Badge intent="info" minimal>Tag 41548</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative first observation date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 41549 · LegPaymentStreamFlatRateIndicator [#tag-41549]
+
+<Badge intent="info" minimal>Tag 41549</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+When this element is specified and set to 'Y', the Flat Rate is the New Worldwide Tanker Nominal Freight Scale for the Freight Index Route taken at the trade date of the transaction "Fixed". If 'N' it is taken on each pricing date "Floating".
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 41550 · LegPaymentStreamFlatRateAmount [#tag-41550]
+
+<Badge intent="info" minimal>Tag 41550</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the actual monetary value of the flat rate when LegPaymentStreamFlatRateIndicator(41549) = 'Y'.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 41551 · LegPaymentStreamFlatRateCurrency [#tag-41551]
+
+<Badge intent="info" minimal>Tag 41551</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency of the actual flat rate. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 41552 · LegStreamMaximumPaymentAmount [#tag-41552]
+
+<Badge intent="info" minimal>Tag 41552</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the limit on the total payment amount.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 41553 · LegStreamMaximumPaymentCurrency [#tag-41553]
+
+<Badge intent="info" minimal>Tag 41553</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency of total payment amount limit. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 41554 · LegStreamMaximumTransactionAmount [#tag-41554]
+
+<Badge intent="info" minimal>Tag 41554</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the limit on the payment amount that goes out in any particular calculation period.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 41555 · LegStreamMaximumTransactionCurrency [#tag-41555]
+
+<Badge intent="info" minimal>Tag 41555</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency of the period payment amount limit. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 41556 · LegPaymentStreamFixedAmountUnitOfMeasure [#tag-41556]
+
+<Badge intent="info" minimal>Tag 41556</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The fixed payment amount unit of measure (UOM).
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [LegPaymentStreamFixedRate](/fix/components/leg-payment-stream-fixed-rate)
+
+## 41557 · LegPaymentStreamTotalFixedAmount [#tag-41557]
+
+<Badge intent="info" minimal>Tag 41557</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the total fixed payment amount.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [LegPaymentStreamFixedRate](/fix/components/leg-payment-stream-fixed-rate)
+
+## 41558 · LegPaymentStreamWorldScaleRate [#tag-41558]
+
+<Badge intent="info" minimal>Tag 41558</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The number of Worldscale points for purposes of the calculation of a fixed amount for a wet voyage charter commodity swap.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [LegPaymentStreamFixedRate](/fix/components/leg-payment-stream-fixed-rate)
+
+## 41559 · LegPaymentStreamContractPrice [#tag-41559]
+
+<Badge intent="info" minimal>Tag 41559</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The price per relevant unit for purposes of the calculation of a fixed amount for a dry voyage charter or time charter commodity swap.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [LegPaymentStreamFixedRate](/fix/components/leg-payment-stream-fixed-rate)
+
+## 41560 · LegPaymentStreamContractPriceCurrency [#tag-41560]
+
+<Badge intent="info" minimal>Tag 41560</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency of LegPaymentStreamContractPrice(41559). Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [LegPaymentStreamFixedRate](/fix/components/leg-payment-stream-fixed-rate)
+
+## 41561 · NoLegPaymentStreamPricingBusinessCenters [#tag-41561]
+
+<Badge intent="info" minimal>Tag 41561</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of business centers in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegPaymentStreamPricingBusinessCenterGrp](/fix/groups/leg-payment-stream-pricing-business-center-grp)
+
+## 41562 · LegPaymentStreamPricingBusinessCenter [#tag-41562]
+
+<Badge intent="info" minimal>Tag 41562</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the pricing dates, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegPaymentStreamPricingBusinessCenterGrp](/fix/groups/leg-payment-stream-pricing-business-center-grp)
+
+## 41563 · LegPaymentStreamRateIndex2CurveUnit [#tag-41563]
+
+<Badge intent="info" minimal>Tag 41563</Badge> <Badge intent="note" minimal>PaymentStreamRateIndexCurveUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Secondary time unit associated with the payment stream's floating rate index curve.
+
+Code set **PaymentStreamRateIndexCurveUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41564 · LegPaymentStreamRateIndex2CurvePeriod [#tag-41564]
+
+<Badge intent="info" minimal>Tag 41564</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Secondary time unit multiplier for the payment stream's floating rate index curve.
+
+May be used for a Forward Rate Agreement (FRA) with an average rate between two curve points.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41565 · LegPaymentStreamRateIndexLocation [#tag-41565]
+
+<Badge intent="info" minimal>Tag 41565</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the location of the floating rate index.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41566 · LegPaymentStreamRateIndexLevel [#tag-41566]
+
+<Badge intent="info" minimal>Tag 41566</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+This is the weather Cooling Degree Days (CDD), Heating Degree Days (HDD) or HDD index level specified as the number of (amount of) weather index units specified by the parties in the related confirmation.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41567 · LegPaymentStreamRateIndexUnitOfMeasure [#tag-41567]
+
+<Badge intent="info" minimal>Tag 41567</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unit of measure (UOM) of the rate index level.
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41568 · LegPaymentStreamSettlLevel [#tag-41568]
+
+<Badge intent="info" minimal>Tag 41568</Badge> <Badge intent="note" minimal>PaymentStreamSettlLevelCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies how weather index units are to be calculated.
+
+Code set **PaymentStreamSettlLevelCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Average | Average |
+| `1` | Maximum | Maximum |
+| `2` | Minimum | Minimum |
+| `3` | Cumulative | Cumulative |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41569 · LegPaymentStreamReferenceLevel [#tag-41569]
+
+<Badge intent="info" minimal>Tag 41569</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+This is the weather Cooling Degree Days (CDD), Heating Degree Days (HDD) or HDD reference level specified as the number of (amount of) weather index units specified by the parties in the related confirmation.
+
+Type: [Qty](/fix/datatypes#qty)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41570 · LegPaymentStreamReferenceLevelUnitOfMeasure [#tag-41570]
+
+<Badge intent="info" minimal>Tag 41570</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unit of measure (UOM) of the rate reference level.
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41571 · LegPaymentStreamReferenceLevelEqualsZeroIndicator [#tag-41571]
+
+<Badge intent="info" minimal>Tag 41571</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+When set to 'Y', it indicates that the weather reference level equals zero.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41572 · LegPaymentStreamRateSpreadCurrency [#tag-41572]
+
+<Badge intent="info" minimal>Tag 41572</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency of the floating rate spread. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41573 · LegPaymentStreamRateSpreadUnitOfMeasure [#tag-41573]
+
+<Badge intent="info" minimal>Tag 41573</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the unit of measure (UOM) of the floating rate spread.
+
+Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `Bcf` | BillionCubicFeet | Billion cubic feet |
+| `CBM` | CubicMeters | Cubic Meters |
+| `GJ` | Gigajoules | gigajoules |
+| `kHR` | HeatRate | Heat rate |
+| `kWh` | KilowattHours | Kilowatt hours |
+| `MHR` | MegaHeatRate | Mega heat rate |
+| `MMBtu` | OneMillionBTU | One Million BTU |
+| `MWh` | MegawattHours | Megawatt hours |
+| `thm` | Therms | therms |
+| `tnCO2` | TonsOfCarbonDioxide | Tons of carbon dioxide |
+| `MMbbl` | MillionBarrels | Million Barrels |
+| `Alw` | Allowances | Allowances |
+| `Bbl` | Barrels | Barrels |
+| `BDFT` | BoardFeet | Board feet |
+| `Bu` | Bushels | Bushels |
+| `Ccy` | Currency | Amount of currency |
+| `CDD` | CoolingDegreeDay | Cooling degree day |
+| `CER` | CertifiedEmissionsReduction | Certified emissions reduction |
+| `CPD` | CriticalPrecipDay | Critical precipitation day |
+| `CRT` | ClimateReserveTonnes | Climate reserve tonnes |
+| `cwt` | Hundredweight | Hundredweight(US) |
+| `day` | Day | Days |
+| `dt` | DryMetricTons | Dry metric tons |
+| `EnvAllwnc` | EnvAllwncCert | Environmental allowance certificates |
+| `EnvCrd` | EnvironmentalCredit | Environmental credit |
+| `EnvOfst` | EnvironmentalOffset | Environmental Offset |
+| `g` | Grams | Grams |
+| `Gal` | Gallons | Gallons |
+| `GT` | GrossTons | Gross tons |
+| `HDD` | HeatingDegreeDay | Heating degree day |
+| `IPNT` | IndexPoint | Index point |
+| `kg` | Kilograms | Kilograms |
+| `kL` | Kiloliters | kiloliters |
+| `kW-a` | KilowattYear | Kilowatt year (electrical capacity) |
+| `kW-d` | KilowattDay | Kilowatt day (electrical capacity) |
+| `kW-h` | KilowattHour | Kilowatt hour (electrical capacity) |
+| `kW-M` | KilowattMonth | Kilowatt month (electrical capacity) |
+| `kW-min` | KilowattMinute | Kilowatt-Minute (electrical capacity) |
+| `L` | Liters | liters |
+| `lbs` | Pounds | pounds |
+| `MW-a` | MegawattYear | Megawatt year (electrical capacity) |
+| `MW-d` | MegawattDay | Megawatt day (electrical capacity) |
+| `MW-h` | MegawattHour | Megawatt hour (electrical capacity) |
+| `MW-M` | MegawattMonth | Megawatt month (electrical capacity) |
+| `MW-min` | MegawattMinute | Megawatt minute (electrical capacity) |
+| `oz\_tr` | TroyOunces | Troy ounces |
+| `PRINC` | PrincipalWithRelationToDebtInstrument | Principal with relation to debt instrument |
+| `t` | MetricTons | Metric tons |
+| `tn` | Tons | Tons (US) |
+| `a` | Are | Are |
+| `ac` | Acre | Acre |
+| `cL` | Centiliter | Centiliter |
+| `cM` | Centimeter | Centimeter |
+| `DGE` | DieselGallonEquivalent | Diesel gallon equivalent |
+| `ft` | Foot | Foot |
+| `Gal\_gb` | GBGallon | GB Gallon |
+| `GGE` | GasolineGallonEquivalent | Gasonline gallon equivalent |
+| `ha` | Hectare | Hectare |
+| `in` | Inch | Inch |
+| `kM` | Kilometer | Kilometer |
+| `M` | Meter | Meter |
+| `mi` | Mile | Mile |
+| `mL` | Milliliter | Milliliter |
+| `mM` | Millimeter | Millimeter |
+| `oz` | USOunce | US ounce |
+| `pc` | Piece | Piece |
+| `pt` | USPint | US Pint |
+| `pt\_gb` | GBPint | GB pint |
+| `qt` | USQuart | US Quart |
+| `qt\_gb` | GBQuart | GB Quart |
+| `SqcM` | SquareCentimeter | Square centimeter |
+| `Sqft` | SquareFoot | Square foot |
+| `Sqin` | SquareInch | Square inch |
+| `SqkM` | SquareKilometer | Square kilometer |
+| `SqM` | SquareMeter | Square meter |
+| `Sqmi` | SquareMile | Square mile |
+| `SqmM` | SquareMillimeter | Square millimeter |
+| `Sqyd` | SquareYard | Square yard |
+| `yd` | Yard | Yard |
+| `USD` | USDollars | US Dollars |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41574 · LegPaymentStreamRateConversionFactor [#tag-41574]
+
+<Badge intent="info" minimal>Tag 41574</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The number to be multiplied by the derived floating rate of the leg's payment stream in order to arrive at the payment rate. If omitted, the floating rate conversion factor is 1.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41575 · LegPaymentStreamRateSpreadType [#tag-41575]
+
+<Badge intent="info" minimal>Tag 41575</Badge> <Badge intent="note" minimal>PaymentStreamRateSpreadTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies whether the rate spread is an absolute value to be added to the index rate or a percentage of the index rate.
+
+Code set **PaymentStreamRateSpreadTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Absolute | Absolute |
+| `1` | Percentage | Percentage |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41576 · LegPaymentStreamLastResetRate [#tag-41576]
+
+<Badge intent="info" minimal>Tag 41576</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The floating rate determined at the most recent reset. The rate is expressed in decimal form, e.g. 5% is represented as 0.05.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41577 · LegPaymentStreamFinalRate [#tag-41577]
+
+<Badge intent="info" minimal>Tag 41577</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The floating rate determined at the final reset. The rate is expressed in decimal form, e.g. 5% is represented as 0.05.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41578 · LegPaymentStreamCalculationLagPeriod [#tag-41578]
+
+<Badge intent="info" minimal>Tag 41578</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the calculation lag duration.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41579 · LegPaymentStreamCalculationLagUnit [#tag-41579]
+
+<Badge intent="info" minimal>Tag 41579</Badge> <Badge intent="note" minimal>PaymentStreamInflationLagUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the calculation lag duration.
+
+Code set **PaymentStreamInflationLagUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41580 · LegPaymentStreamFirstObservationDateOffsetPeriod [#tag-41580]
+
+<Badge intent="info" minimal>Tag 41580</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative first observation date offset.
+
+If the first observation offset is specified, the observation period will start the specified interval prior to each calculation period - i.e. if the first observation offset is 4 months and the lag duration is 3 months, observations will be taken in months 4, 3 and 2 (but not 1) prior to each calculation period. If no first observation offset is specified, the observation period will end immediately preceding each calculation period.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41581 · LegPaymentStreamFirstObservationDateOffsetUnit [#tag-41581]
+
+<Badge intent="info" minimal>Tag 41581</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative first observation date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41582 · LegPaymentStreamPricingDayType [#tag-41582]
+
+<Badge intent="info" minimal>Tag 41582</Badge> <Badge intent="note" minimal>ComplexEventDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the commodity pricing day type.
+
+Code set **ComplexEventDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41583 · LegPaymentStreamPricingDayDistribution [#tag-41583]
+
+<Badge intent="info" minimal>Tag 41583</Badge> <Badge intent="note" minimal>PaymentStreamPricingDayDistributionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The distribution of pricing days.
+
+Code set **PaymentStreamPricingDayDistributionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | All | All |
+| `1` | First | First |
+| `2` | Last | Last |
+| `3` | Penultimate | Penultimate |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41584 · LegPaymentStreamPricingDayCount [#tag-41584]
+
+<Badge intent="info" minimal>Tag 41584</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The number of days over which pricing should take place.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41585 · LegPaymentStreamPricingBusinessCalendar [#tag-41585]
+
+<Badge intent="info" minimal>Tag 41585</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the business calendar to use for pricing. See http://www.fpml.org/coding-scheme/commodity-business-calendar for values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41586 · LegPaymentStreamPricingBusinessDayConvention [#tag-41586]
+
+<Badge intent="info" minimal>Tag 41586</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the payment stream's pricing dates. Used only to override the business day convention specified in the LegDateAdjustment component within the InstrumentLeg component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 41587 · UnderlyingDeliveryStreamRiskApportionmentSource [#tag-41587]
+
+<Badge intent="info" minimal>Tag 41587</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the source or legal framework for the risk apportionment. See http://www.fixtradingcommunity.org/codelists#Risk\_Apportionment\_Source for the details of the external code list.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [UnderlyingDeliveryStream](/fix/components/underlying-delivery-stream)
+
+## 41588 · StreamCommoditySettlTimeType [#tag-41588]
+
+<Badge intent="info" minimal>Tag 41588</Badge> <Badge intent="note" minimal>DeliveryScheduleSettlTimeTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the format of the commodities settlement start and end times.
+
+Code set **DeliveryScheduleSettlTimeTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Hour | Hour of the day |
+| `1` | Timestamp | HH:MM time format |
+
+Used in: [StreamCommoditySettlTimeGrp](/fix/groups/stream-commodity-settl-time-grp)
+
+## 41589 · NoLegPaymentStreamPaymentDates [#tag-41589]
+
+<Badge intent="info" minimal>Tag 41589</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of payment dates in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegPaymentStreamPaymentDateGrp](/fix/groups/leg-payment-stream-payment-date-grp)
+
+## 41590 · LegPaymentStreamPaymentDate [#tag-41590]
+
+<Badge intent="info" minimal>Tag 41590</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted or unadjusted fixed stream payment date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegPaymentStreamPaymentDateGrp](/fix/groups/leg-payment-stream-payment-date-grp)
+
+## 41591 · LegPaymentStreamPaymentDateType [#tag-41591]
+
+<Badge intent="info" minimal>Tag 41591</Badge> <Badge intent="note" minimal>OptionExerciseDateTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of payment date. When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type.
+
+Code set **OptionExerciseDateTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Unadjusted | Unadjusted |
+| `1` | Adjusted | Adjusted |
+
+Used in: [LegPaymentStreamPaymentDateGrp](/fix/groups/leg-payment-stream-payment-date-grp)
+
+## 41592 · LegPaymentStreamMasterAgreementPaymentDatesIndicator [#tag-41592]
+
+<Badge intent="info" minimal>Tag 41592</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+When set to 'Y', it indicates that payment dates are specified in the relevant master agreement.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [LegPaymentStreamPaymentDates](/fix/components/leg-payment-stream-payment-dates)
+
+## 41593 · NoLegPaymentStreamPricingDates [#tag-41593]
+
+<Badge intent="info" minimal>Tag 41593</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of pricing dates in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegPaymentStreamPricingDateGrp](/fix/groups/leg-payment-stream-pricing-date-grp)
+
+## 41594 · LegPaymentStreamPricingDate [#tag-41594]
+
+<Badge intent="info" minimal>Tag 41594</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted or unadusted fixed stream pricing date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegPaymentStreamPricingDateGrp](/fix/groups/leg-payment-stream-pricing-date-grp)
+
+## 41595 · LegPaymentStreamPricingDateType [#tag-41595]
+
+<Badge intent="info" minimal>Tag 41595</Badge> <Badge intent="note" minimal>OptionExerciseDateTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of pricing date. When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type.
+
+Code set **OptionExerciseDateTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Unadjusted | Unadjusted |
+| `1` | Adjusted | Adjusted |
+
+Used in: [LegPaymentStreamPricingDateGrp](/fix/groups/leg-payment-stream-pricing-date-grp)
+
+## 41596 · NoLegPaymentStreamPricingDays [#tag-41596]
+
+<Badge intent="info" minimal>Tag 41596</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of pricing days in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegPaymentStreamPricingDayGrp](/fix/groups/leg-payment-stream-pricing-day-grp)
+
+## 41597 · LegPaymentStreamPricingDayOfWeek [#tag-41597]
+
+<Badge intent="info" minimal>Tag 41597</Badge> <Badge intent="note" minimal>PaymentStreamPricingDayOfWeekCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The day of the week on which pricing takes place..
+
+Code set **PaymentStreamPricingDayOfWeekCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | EveryDay | Every day (the default if not specified) |
+| `1` | Monday | Monday |
+| `2` | Tuesday | Tuesday |
+| `3` | Wednesday | Wednesday |
+| `4` | Thursday | Thursday |
+| `5` | Friday | Friday |
+| `6` | Saturday | Saturday |
+| `7` | Sunday | Sunday |
+
+Used in: [LegPaymentStreamPricingDayGrp](/fix/groups/leg-payment-stream-pricing-day-grp)
+
+## 41598 · LegPaymentStreamPricingDayNumber [#tag-41598]
+
+<Badge intent="info" minimal>Tag 41598</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The occurrence of the day of week on which pricing takes place.
+
+For example a pricing day of the 3rd Friday would be DayOfWk=5 DayNum=3.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamPricingDayGrp](/fix/groups/leg-payment-stream-pricing-day-grp)
+
+## 41599 · NoLegPhysicalSettlTerms [#tag-41599]
+
+<Badge intent="info" minimal>Tag 41599</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of entries in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegPhysicalSettlTermGrp](/fix/groups/leg-physical-settl-term-grp)
+

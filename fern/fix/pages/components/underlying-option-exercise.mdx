@@ -1,0 +1,34 @@
+---
+title: "UnderlyingOptionExercise"
+subtitle: "The UnderlyingOptionExercise component is a subcomponent of the UnderlyingInstrument component used to specify option exercise provisions. Its purpose is to identify the opportunities and conditions for exercise, e.g. the schedule of dates…"
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41810 | [UnderlyingExerciseDesc](/fix/fields/tags-41800-41999#tag-41810) | String | Optional | A description of the option exercise. |
+| 41811 | [EncodedUnderlyingExerciseDescLen](/fix/fields/tags-41800-41999#tag-41811) | Length | Optional | Must be set if EncodedUnderlyingExerciseDesc(41812) field is specified and must immediately precede it. |
+| 41812 | [EncodedUnderlyingExerciseDesc](/fix/fields/tags-41800-41999#tag-41812) | data | Optional | Encoded (non-ASCII characters) representation of the UnderlyingExerciseDesc(41810) field in the encoded format specified via the MessageEncoding(347) field. |
+| 41813 | [UnderlyingAutomaticExerciseIndicator](/fix/fields/tags-41800-41999#tag-41813) | Boolean | Optional | Indicates (when 'Y') that exercise is automatic when the strike price is crossed or the underlying trade is in the money. |
+| 41814 | [UnderlyingAutomaticExerciseThresholdRate](/fix/fields/tags-41800-41999#tag-41814) | float | Optional | The threshold rate for triggering automatic exercise. |
+| 41815 | [UnderlyingExerciseConfirmationMethod](/fix/fields/tags-41800-41999#tag-41815) | ExerciseConfirmationMethodCodeSet | Optional | Indicates whether follow-up confirmation of exercise (written or electronic) is required following telephonic notice by the buyer to the seller or seller's agent. |
+| 41816 | [UnderlyingManualNoticeBusinessCenter](/fix/fields/tags-41800-41999#tag-41816) | String | Optional | Identifies the business center used for adjusting the time for manual exercise notice. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values. |
+| 41817 | [UnderlyingFallbackExerciseIndicator](/fix/fields/tags-41800-41999#tag-41817) | Boolean | Optional | Indicates whether the notional amount of the underlying swap, not previously exercised under the option, will be automatically exercised at the expiration time on the expiration date if at such time the buyer is in-the-money, provided that the difference between the settlement rate and the fixed… |
+| 41818 | [UnderlyingLimitedRightToConfirmIndicator](/fix/fields/tags-41800-41999#tag-41818) | Boolean | Optional | Indicates whether the Seller may request the Buyer to confirm its intent to exercise if not done on or before the expiration time on the Expiration date. If true ("Y") specific rules will apply in relation to the settlement mode. |
+| 41819 | [UnderlyingExerciseSplitTicketIndicator](/fix/fields/tags-41800-41999#tag-41819) | Boolean | Optional | Indicates in physical settlement of bond and convertible bond options whether the party required to deliver the bonds will divide those to be delivered as notifying party desires to facilitate delivery obligations. |
+| 42887 | [UnderlyingSettlMethodElectingPartySide](/fix/fields/tags-42800-42999#tag-42887) | PaymentPaySideCodeSet | Optional | Side value of the party electing the settlement method. |
+| | [UnderlyingSettlMethodElectionDate](/fix/components/underlying-settl-method-election-date) | Component | Optional | The UnderlyingSettlMethodElectionDate component is a subcomponent within the UnderlyingOptionExercise component used to report the settlement method election date. |
+| | [UnderlyingOptionExerciseDates](/fix/components/underlying-option-exercise-dates) | Component | Optional | The UnderlyingOptionExerciseDate component is a subcomponent of the UnderlyingOptionExercise component used to specify option exercise dates. |
+| | [UnderlyingOptionExerciseExpiration](/fix/components/underlying-option-exercise-expiration) | Component | Optional | The UnderlyingOptionExerciseExpiration component is a subcomponent of the UnderlyingOptionExercise component used to specify option exercise expiration dates and times. The purpose of UnderlyingOptionExercise is to identify the scheduled opportunities for exercise. UnderlyingOptionExerciseExpiration… |
+| | [UnderlyingOptionExerciseMakeWholeProvision](/fix/components/underlying-option-exercise-make-whole-provision) | Component | Optional | UnderlyingOptionExerciseMakeWholeProvision is a subcomponent of the UnderlyingOptionExercise component used to specify the set of rules of maintaining balance when an option is exercised. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingInstrument](/fix/components/underlying-instrument)

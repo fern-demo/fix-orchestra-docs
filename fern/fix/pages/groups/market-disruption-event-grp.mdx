@@ -1,0 +1,23 @@
+---
+title: "MarketDisruptionEventGrp"
+subtitle: "The MarketDisruptionEventGrp is a repeating subcomponent of the MarketDisruption component used to specify the market disruption events."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41092</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoMarketDisruptionEvents (41092)](/fix/fields/tags-41000-41199#tag-41092).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41093 | [MarketDisruptionEvent](/fix/fields/tags-41000-41199#tag-41093) | String | Optional | Required if NoMarketDisruptionEvents(41092) &gt; 0. |
+| 40991 | [MarketDisruptionValue](/fix/fields/tags-40800-40999#tag-40991) | String | Optional | Applicable value for MarketDisruptionEvent(41093). |
+
+</StickyTable>
+
+## Used in
+
+[MarketDisruption](/fix/components/market-disruption)

@@ -1,0 +1,26 @@
+---
+title: "ComplexEventScheduleGrp"
+subtitle: "The ComplexEventScheduleGrp is a subcomponent of ComplexEventPeriodGrp for specifying a periodic schedule for an Asian, Barrier or Strike Schedule option feature."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41031</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoComplexEventSchedules (41031)](/fix/fields/tags-41000-41199#tag-41031).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41032 | [ComplexEventScheduleStartDate](/fix/fields/tags-41000-41199#tag-41032) | LocalMktDate | Optional | Required if NoComplexEventSchedules(41031) &gt; 0. |
+| 41033 | [ComplexEventScheduleEndDate](/fix/fields/tags-41000-41199#tag-41033) | LocalMktDate | Optional | The end date of the schedule. |
+| 41034 | [ComplexEventScheduleFrequencyPeriod](/fix/fields/tags-41000-41199#tag-41034) | int | Optional | Conditionally required when ComplexEventScheduleFrequencyUnit(41035) is specified. |
+| 41035 | [ComplexEventScheduleFrequencyUnit](/fix/fields/tags-41000-41199#tag-41035) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when ComplexEventScheduleFrequencPeriod(41034) is specified. |
+| 41036 | [ComplexEventScheduleRollConvention](/fix/fields/tags-41000-41199#tag-41036) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the DateAdjustment component in Instrument. The specified values would be specific to this instance of the schedule. |
+
+</StickyTable>
+
+## Used in
+
+[ComplexEventPeriodGrp](/fix/groups/complex-event-period-grp)

@@ -1,0 +1,27 @@
+---
+title: "ProvisionOptionRelevantUnderlyingDate"
+subtitle: "The ProvisionOptionRelevantUnderlyingDate is a subcomponent within the ProvisionGrp component used to report the option relevant underlying date defined in the provision."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40155 | [ProvisionOptionRelevantUnderlyingDateUnadjusted](/fix/fields/tags-40000-40199#tag-40155) | LocalMktDate | Optional | The unadjusted date on the underlying set by the exercise of an option. What this date is depends on the option (e.g. in a swaption it is the swap effective date, in an extendible/cancelable provision it is the swap termination date). |
+| 40156 | [ProvisionOptionRelevantUnderlyingDateBusinessDayConvention](/fix/fields/tags-40000-40199#tag-40156) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this instance of the provisional option relevant underlying date. |
+| 40956 | [ProvisionOptionRelevantUnderlyingDateBusinessCenterGrp](/fix/groups/provision-option-relevant-underlying-date-business-center-grp) | Repeating group | Optional | ProvisionOptionRelevantUnderlyingDateBusinessCenterGrp is a repeating subcomponent within the ProvisionOptionRelevantUnderlyingDate component. It is used to specify the set of business centers whose calendars drive date adjustment. Used only to override the business centers defined in the… |
+| 40158 | [ProvisionOptionRelevantUnderlyingDateRelativeTo](/fix/fields/tags-40000-40199#tag-40158) | int | Optional | Specifies the anchor date when the date relevant to the underlying trade on exercise is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 40159 | [ProvisionOptionRelevantUnderlyingDateOffsetPeriod](/fix/fields/tags-40000-40199#tag-40159) | int | Optional | Conditionally required when ProvisionOptionRelevantUnderlyingDateOffsetUnit(40160) is specified. |
+| 40160 | [ProvisionOptionRelevantUnderlyingDateOffsetUnit](/fix/fields/tags-40000-40199#tag-40160) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when ProvisionOptionRelevantUnderlyingDateOffsetPeriod(40159) is specified. |
+| 40161 | [ProvisionOptionRelevantUnderlyingDateOffsetDayType](/fix/fields/tags-40000-40199#tag-40161) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the provision's relative option relevant underlying date offset. |
+| 40162 | [ProvisionOptionRelevantUnderlyingDateAdjusted](/fix/fields/tags-40000-40199#tag-40162) | LocalMktDate | Optional | The adjusted date on the underlying set by the exercise of an option. What this date is depends on the option (e.g. in a swaption it is the swap effective date, in an extendible/cancelable provision it is the swap termination date). |
+
+</StickyTable>
+
+## Used in
+
+[ProvisionGrp](/fix/groups/provision-grp)

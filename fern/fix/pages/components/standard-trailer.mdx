@@ -1,0 +1,22 @@
+---
+title: "StandardTrailer"
+subtitle: "The standard FIX message trailer"
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Session</Badge> <Badge intent="success" minimal>Added FIX.4.0</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 93 | [SignatureLength](/fix/fields/tags-0-199#tag-93) | Length | Optional | Required when trailer contains signature. Note: Not to be included within SecureData field |
+| 89 | [Signature](/fix/fields/tags-0-199#tag-89) | data | Optional | Note: Not to be included within SecureData field |
+| 10 | [CheckSum](/fix/fields/tags-0-199#tag-10) | String | **Required** | (Always unencrypted, always last field in message) |
+
+</StickyTable>
+
+## Used in
+
+[AccountSummaryReport](/fix/messages/account-summary-report), [AdjustedPositionReport](/fix/messages/adjusted-position-report), [Advertisement](/fix/messages/advertisement), [AllocationInstruction](/fix/messages/allocation-instruction), [AllocationInstructionAck](/fix/messages/allocation-instruction-ack), [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationInstructionAlertRequest](/fix/messages/allocation-instruction-alert-request), [AllocationInstructionAlertRequestAck](/fix/messages/allocation-instruction-alert-request-ack), [AllocationReport](/fix/messages/allocation-report), [AllocationReportAck](/fix/messages/allocation-report-ack), [ApplicationMessageReport](/fix/messages/application-message-report), [ApplicationMessageRequest](/fix/messages/application-message-request), [ApplicationMessageRequestAck](/fix/messages/application-message-request-ack), [AssignmentReport](/fix/messages/assignment-report), [BidRequest](/fix/messages/bid-request), [BidResponse](/fix/messages/bid-response), [BusinessMessageReject](/fix/messages/business-message-reject), [CollateralAssignment](/fix/messages/collateral-assignment), [CollateralInquiry](/fix/messages/collateral-inquiry), [CollateralInquiryAck](/fix/messages/collateral-inquiry-ack), [CollateralReport](/fix/messages/collateral-report), [CollateralReportAck](/fix/messages/collateral-report-ack), [CollateralRequest](/fix/messages/collateral-request), [CollateralResponse](/fix/messages/collateral-response), [Confirmation](/fix/messages/confirmation), and 139 more

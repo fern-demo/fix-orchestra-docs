@@ -1,0 +1,124 @@
+---
+title: "TradeCaptureReportAck"
+subtitle: "The Trade Capture Report Ack message can be: - Used to acknowledge trade capture reports received from a counterparty. - Used to reject a trade capture report received from a counterparty."
+---
+
+<Badge intent="info">MsgType AR</Badge> <Badge intent="note" minimal>Trade Capture</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 571 | [TradeReportID](/fix/fields/tags-400-599#tag-571) | String | Optional | Unique identifier of trade capture report |
+| 1003 | [TradeID](/fix/fields/tags-1000-1199#tag-1003) | String | Optional | The unique ID assigned to the trade entity once it is received or matched by the exchange or central counterparty. |
+| 1040 | [SecondaryTradeID](/fix/fields/tags-1000-1199#tag-1040) | String | Optional | Used to carry an internal trade entity ID which may or may not be reported to the firm |
+| 1041 | [FirmTradeID](/fix/fields/tags-1000-1199#tag-1041) | String | Optional | The ID assigned to a trade by the Firm to track a trade within the Firm system. This ID can be assigned either before or after submission to the exchange or central counterpary |
+| 1042 | [SecondaryFirmTradeID](/fix/fields/tags-1000-1199#tag-1042) | String | Optional | Used to carry an internal firm assigned ID which may or may not be reported to the exchange or central counterpary |
+| 487 | [TradeReportTransType](/fix/fields/tags-400-599#tag-487) | TradeReportTransTypeCodeSet | Optional | Identifies Trade Report message transaction type (Prior to FIX 4.4 this field was of type char) |
+| 856 | [TradeReportType](/fix/fields/tags-800-999#tag-856) | TradeReportTypeCodeSet | Optional | Indicates action to take on trade. |
+| 828 | [TrdType](/fix/fields/tags-800-999#tag-828) | TrdTypeCodeSet | Optional | Type of trade assigned to a trade. |
+| 829 | [TrdSubType](/fix/fields/tags-800-999#tag-829) | TrdSubTypeCodeSet | Optional | Further qualification to the trade type |
+| 855 | [SecondaryTrdType](/fix/fields/tags-800-999#tag-855) | TrdTypeCodeSet | Optional | Type of trade assigned to a trade. Used in addition to TrdType(828). Must not be used when only one trade type needs to be assigned. |
+| 1849 | [OffsetInstruction](/fix/fields/tags-1800-1999#tag-1849) | OffsetInstructionCodeSet | Optional | Indicates the trade is a result of an offset or onset. |
+| 1123 | [TradeHandlingInstr](/fix/fields/tags-1000-1199#tag-1123) | TradeHandlingInstrCodeSet | Optional | Specified how the TradeCaptureReport(35=AE) should be handled by the respondent. |
+| 1124 | [OrigTradeHandlingInstr](/fix/fields/tags-1000-1199#tag-1124) | TradeHandlingInstrCodeSet | Optional | Optionally used with TradeHandlingInstr = 0 to relay the trade handling instruction used when reporting the trade to the marketplace. Same values as TradeHandlingInstr (1123) |
+| 1125 | [OrigTradeDate](/fix/fields/tags-1000-1199#tag-1125) | LocalMktDate | Optional | Used to preserve original trade date when original trade is being referenced in a subsequent trade transaction such as a transfer |
+| 1126 | [OrigTradeID](/fix/fields/tags-1000-1199#tag-1126) | String | Optional | Used to preserve original trade id when original trade is being referenced in a subsequent trade transaction such as a transfer |
+| 1127 | [OrigSecondaryTradeID](/fix/fields/tags-1000-1199#tag-1127) | String | Optional | Used to preserve original secondary trade id when original trade is being referenced in a subsequent trade transaction such as a transfer |
+| 830 | [TransferReason](/fix/fields/tags-800-999#tag-830) | String | Optional | Reason trade is being transferred |
+| 1116 | [RootParties](/fix/groups/root-parties) | Repeating group | Optional | The RootParties component block is a version of the Parties component block used to provide root information regarding the owning and entering parties of a transaction. |
+| 150 | [ExecType](/fix/fields/tags-0-199#tag-150) | ExecTypeCodeSet | Optional | Type of execution being reported. Uses subset of ExecType(150) for trade capture reports. |
+| 572 | [TradeReportRefID](/fix/fields/tags-400-599#tag-572) | String | Optional | The TradeReportID(571) that is being referenced for trade correction or cancelation. |
+| 881 | [SecondaryTradeReportRefID](/fix/fields/tags-800-999#tag-881) | String | Optional | The SecondaryTradeReportID that is being referenced for some action, such as correction or cancellation |
+| 939 | [TrdRptStatus](/fix/fields/tags-800-999#tag-939) | TrdRptStatusCodeSet | Optional | Status of trade report. |
+| 1523 | [TrdAckStatus](/fix/fields/tags-1400-1599#tag-1523) | TrdAckStatusCodeSet | Optional | Used to indicate the status of the trade submission (not the trade report) |
+| 751 | [TradeReportRejectReason](/fix/fields/tags-600-799#tag-751) | TradeReportRejectReasonCodeSet | Optional | Reason Trade Capture Request was rejected. 100+ Reserved and available for bi-laterally agreed upon user-defined values. |
+| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328) | String | Optional | Reason description for rejecting the TradeCaptureReport(35=AE). |
+| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664) | Length | Optional | Must be set if EncodedRejectText(1665) field is specified and must immediately precede it. |
+| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. |
+| 818 | [SecondaryTradeReportID](/fix/fields/tags-800-999#tag-818) | String | Optional | Secondary trade report identifier - can be used to associate an additional identifier with a trade. |
+| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263) | SubscriptionRequestTypeCodeSet | Optional | If the field is absent, SubscriptionRequestType(263)=0(Snapshot) will be the default. |
+| 820 | [TradeLinkID](/fix/fields/tags-800-999#tag-820) | String | Optional | Used to link a group of trades together. |
+| 880 | [TrdMatchID](/fix/fields/tags-800-999#tag-880) | String | Optional | Identifier assigned to a trade by a matching system. |
+| 17 | [ExecID](/fix/fields/tags-0-199#tag-17) | String | Optional | Exchanged assigned execution identifier (trade identifier). |
+| 527 | [SecondaryExecID](/fix/fields/tags-400-599#tag-527) | String | Optional | Assigned by the party which accepts the order. Can be used to provide the ExecID (17) used by an exchange or executing system. |
+| 378 | [ExecRestatementReason](/fix/fields/tags-200-399#tag-378) | ExecRestatementReasonCodeSet | Optional | The reason for restatement when an ExecutionReport(35=8) or TradeCaptureReport(35=AE) message is sent with ExecType(150) = D (Restated) or used when communicating an unsolicited cancel. |
+| 570 | [PreviouslyReported](/fix/fields/tags-400-599#tag-570) | PreviouslyReportedCodeSet | Optional | Indicates if the transaction was previously reported to the counterparty or market. |
+| 423 | [PriceType](/fix/fields/tags-400-599#tag-423) | PriceTypeCodeSet | Optional | Code to represent the price type. |
+| 2709 | [PriceQualifierGrp](/fix/groups/price-qualifier-grp) | Repeating group | Optional | The PriceQualifierGrp component clarifies the composition of the price when standard market practice for the security calls for a price that is atypical when traded in other markets, or when a price can be expressed in more than one way. |
+| 549 | [CrossType](/fix/fields/tags-400-599#tag-549) | CrossTypeCodeSet | Optional | Type of cross being submitted to a market |
+| 822 | [UnderlyingTradingSessionID](/fix/fields/tags-800-999#tag-822) | String | Optional | Trading Session in which the underlying instrument trades |
+| 823 | [UnderlyingTradingSessionSubID](/fix/fields/tags-800-999#tag-823) | String | Optional | Trading Session sub identifier in which the underlying instrument trades |
+| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716) | SettlSessIDCodeSet | Optional | Identifies a specific settlement session |
+| 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717) | String | Optional | SubID value associated with SettlSessID(716) |
+| 854 | [QtyType](/fix/fields/tags-800-999#tag-854) | QtyTypeCodeSet | Optional | Type of quantity specified in quantity field. ContractMultiplier (tag 231) is required when QtyType = 1 (Contracts). UnitOfMeasure (tag 996) and TimeUnit (tag 997) are required when QtyType = 2 (Units of Measure per Time Unit). |
+| 32 | [LastQty](/fix/fields/tags-0-199#tag-32) | Qty | Optional | Quantity (e.g. shares) bought/sold on this (last) fill. (Prior to FIX 4.2 this field was of type int) |
+| 31 | [LastPx](/fix/fields/tags-0-199#tag-31) | Price | Optional | Price of this (last) fill. |
+| 1430 | [VenueType](/fix/fields/tags-1400-1599#tag-1430) | VenueTypeCodeSet | Optional | Identifies the type of venue where a trade was executed |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Identifies the market |
+| | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [InstrumentExtension](/fix/components/instrument-extension) | Component | Optional | The InstrumentExtension component block identifies additional security attributes that are more commonly found for Fixed Income securities. |
+| | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This component identifies the legal agreement under which the deal was made and other unique characteristics of the transaction. For example, the… |
+| 669 | [LastParPx](/fix/fields/tags-600-799#tag-669) | Price | Optional | Last price expressed in percent-of-par. Conditionally required for Fixed Income trades when LastPx (31) is expressed in Yield, Spread, Discount or any other type. Usage: Execution Report and Allocation Report repeating executions block (from sellside). |
+| 1056 | [CalculatedCcyLastQty](/fix/fields/tags-1000-1199#tag-1056) | Qty | Optional | Used for the calculated quantity of the other side of the currency trade. Can be derived from LastQty and LastPx. |
+| 1071 | [LastSwapPoints](/fix/fields/tags-1000-1199#tag-1071) | PriceOffset | Optional | For FX Swap, this is used to express the last market event for the differential between the far leg's bid/offer and the near leg's bid/offer in a fill or partial fill. Value can be negative. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199 |
+| 2762 | [PriceMarkup](/fix/fields/tags-2600-2799#tag-2762) | PriceOffset | Optional | Dealer's markup of market price to LastPx(31). |
+| | [AveragePriceDetail](/fix/components/average-price-detail) | Component | Optional | The AveragePriceDetail component provides average pricing details in a trade report, including the average pricing model and the start and end times of averaging period. |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Primary currency of the specified currency pair. Used to qualify LastQty(32) and GrossTradeAmout(381). |
+| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120) | Currency | Optional | Contra currency of the deal. Used to qualify CalculatedCcyLastQty(1056). |
+| 194 | [LastSpotRate](/fix/fields/tags-0-199#tag-194) | Price | Optional | F/X spot rate. |
+| 195 | [LastForwardPoints](/fix/fields/tags-0-199#tag-195) | PriceOffset | Optional | F/X forward points added to LastSpotRate (94). May be a negative value. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199 |
+| 30 | [LastMkt](/fix/fields/tags-0-199#tag-30) | Exchange | Optional | Market of execution for last fill, or an indication of the market where an order was routed Valid values: See "Appendix 6-C" |
+| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | Optional | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | Optional | The business date for which the trade is expected to be cleared. |
+| 6 | [AvgPx](/fix/fields/tags-0-199#tag-6) | Price | Optional | Calculated average price of all fills on this order. For Fixed Income trades AvgPx is always expressed as percent-of-par, regardless of the PriceType (423) of LastPx (31). I.e., AvgPx will contain an average of percent-of-par values (see LastParPx (669)) for issues traded in Yield, Spread or… |
+| 1731 | [AvgPxGroupID](/fix/fields/tags-1600-1799#tag-1731) | String | Optional | Used by submitting firm to group trades being allocated into an average price group. The trades in average price group will be used to calculate an average price for the group. |
+| 819 | [AvgPxIndicator](/fix/fields/tags-800-999#tag-819) | AvgPxIndicatorCodeSet | Optional | Average pricing indicator. |
+| 442 | [MultiLegReportingType](/fix/fields/tags-400-599#tag-442) | MultiLegReportingTypeCodeSet | Optional | Used to indicate how the multi-legged security (e.g. option strategies, spreads, etc.) is being reported. |
+| 824 | [TradeLegRefID](/fix/fields/tags-800-999#tag-824) | String | Optional | Reference to the leg of a multileg instrument to which this trade refers |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Time this message was issued by matching system, trading system or counterparty. |
+| 63 | [SettlType](/fix/fields/tags-0-199#tag-63) | SettlTypeCodeSet | Optional | Indicates order settlement period. If present, SettlDate (64) overrides this field. If both SettlType (63) and SettDate (64) are omitted, the default for SettlType (63) is 0 (Regular) Regular is defined as the default settlement period for the particular security on the exchange of execution. In… |
+| 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
+| 573 | [MatchStatus](/fix/fields/tags-400-599#tag-573) | MatchStatusCodeSet | Optional | The status of this trade with respect to matching or comparison. |
+| 574 | [MatchType](/fix/fields/tags-400-599#tag-574) | MatchTypeCodeSet | Optional | The point in the matching process at which this trade was matched. |
+| 797 | [CopyMsgIndicator](/fix/fields/tags-600-799#tag-797) | Boolean | Optional | Indicates whether or not this message is a drop copy of another message. |
+| 1387 | [TrdRepIndicatorsGrp](/fix/groups/trd-rep-indicators-grp) | Repeating group | Optional |  |
+| 852 | [PublishTrdIndicator](/fix/fields/tags-800-999#tag-852) | PublishTrdIndicatorCodeSet | Optional | Indicates if a trade should be reported via a market reporting service. |
+| 1390 | [TradePublishIndicator](/fix/fields/tags-1200-1399#tag-1390) | TradePublishIndicatorCodeSet | Optional | Indicates if a trade should be or has been published via a market publication service. The indicator governs all publication services of the recipient. Replaces PublishTrdIndicator(852). |
+| 853 | [ShortSaleReason](/fix/fields/tags-800-999#tag-853) | ShortSaleReasonCodeSet | Optional | Reason for short sale. |
+| 555 | [TrdInstrmtLegGrp](/fix/groups/trd-instrmt-leg-grp) | Repeating group | Optional |  |
+| 768 | [TrdRegTimestamps](/fix/groups/trd-reg-timestamps) | Repeating group | Optional | The TrdRegTimestamps component block is used to express timestamps for an order or trade that are required by regulatory agencies These timesteamps are used to identify the timeframes for when an order or trade is received on the floor, received and executed by the broker, etc. |
+| 725 | [ResponseTransportType](/fix/fields/tags-600-799#tag-725) | ResponseTransportTypeCodeSet | Optional | Identifies how the response to the request should be transmitted. Details specified via ResponseDestination (726). |
+| 726 | [ResponseDestination](/fix/fields/tags-600-799#tag-726) | String | Optional | URI (Uniform Resource Identifier) for details) or other pre-arranged value. Used in conjunction with ResponseTransportType (725) value of Out-of-Band to identify the out-of-band destination. See "Appendix 6-B FIX Fields Based Upon Other Standards" |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text(58) field. |
+| 1015 | [AsOfIndicator](/fix/fields/tags-1000-1199#tag-1015) | AsOfIndicatorCodeSet | Optional | A trade that is being submitted for a trade date prior to the current trade or clearing date, e.g. in an open outcry market an out trade being submitted for the previous trading session or trading day. |
+| 635 | [ClearingFeeIndicator](/fix/fields/tags-600-799#tag-635) | ClearingFeeIndicatorCodeSet | Optional | Indicates type of fee being assessed of the customer for trade executions at an exchange. Applicable for futures markets only at this time. (Values source CBOT, CME, NYBOT, and NYMEX): |
+| 753 | [PositionAmountData](/fix/groups/position-amount-data) | Repeating group | Optional | The PositionAmountData component block is used to report netted amounts associated with position quantities. In the listed derivatives market the amount is generally expressing a type of futures variation or option premium. In the equities market this may be the net pay or collect on a given… |
+| 994 | [TierCode](/fix/fields/tags-800-999#tag-994) | String | Optional | Indicates the algorithm (tier) used to match a trade. |
+| 1011 | [MessageEventSource](/fix/fields/tags-1000-1199#tag-1011) | String | Optional | Used to identify the event or source which gave rise to a message. Valid values will be based on an exchange's implementation. Example values are: "MQM" (originated at Firm Back Office) "Clear" (originated in Clearing System) "Reg" (static data generated via Register request) |
+| 779 | [LastUpdateTime](/fix/fields/tags-600-799#tag-779) | UTCTimestamp | Optional | Used to indicate reports after a specific time. |
+| 991 | [RndPx](/fix/fields/tags-800-999#tag-991) | Price | Optional | Specifies the rounded price to quoted precision. |
+| 1841 | [TradeQtyGrp](/fix/groups/trade-qty-grp) | Repeating group | Optional | Quantities of the trade that have been processed and the type of processing that has occurred for that trade quantity. |
+| 552 | [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp) | Repeating group | Optional |  |
+| 1135 | [RptSys](/fix/fields/tags-1000-1199#tag-1135) | String | Optional | Indicates the system or medium on which the report has been published |
+| 381 | [GrossTradeAmt](/fix/fields/tags-200-399#tag-381) | Amt | Optional | (LastQty(32) \* LastPx(31) or LastParPx(669)). For Fixed Income, LastParPx(669) is used when LastPx(31) is not expressed as "percent of par" price. |
+| 64 | [SettlDate](/fix/fields/tags-0-199#tag-64) | LocalMktDate | Optional | Specific date of trade settlement (SettlementDate) in YYYYMMDD format. If present, this field overrides SettlType (63). This field is required if the value of SettlType (63) is 6 (Future) or 8 (Sellers Option). This field must be omitted if the value of SettlType (63) is 7 (When and If Issued)… |
+| 1329 | [FeeMultiplier](/fix/fields/tags-1200-1399#tag-1329) | float | Optional | This is a multiplier that Clearing (Fee system) will use to calculate fees and will be sent to the firms on their confirms. |
+| 2343 | [RiskLimitCheckStatus](/fix/fields/tags-2200-2399#tag-2343) | RiskLimitCheckStatusCodeSet | Optional | Indicates the status of the risk limit check performed on a trade. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="TradeCaptureReportAck" wordWrap
+8=FIXT.1.1|9=60|35=AR|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|10=007|
+```

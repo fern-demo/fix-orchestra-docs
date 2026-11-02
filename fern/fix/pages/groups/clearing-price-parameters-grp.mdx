@@ -1,0 +1,37 @@
+---
+title: "ClearingPriceParametersGrp"
+subtitle: "This component is used convey parameters that are relevant for the calculation of clearing prices that are different from the trading prices due to the nature of the product, e.g. variance futures."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2580</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoClearingPriceParameters (2580)](/fix/fields/tags-2400-2599#tag-2580).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 2581 | [BusinessDayType](/fix/fields/tags-2400-2599#tag-2581) | BusinessDayConventionCodeSet | Optional | Required if NoClearingPriceParameters (2580) &gt; 0. Use to identify the relative business day to which the parameters apply. |
+| 2582 | [ClearingPriceOffset](/fix/fields/tags-2400-2599#tag-2582) | PriceOffset | Optional | Constant value required for the calculation of the clearing price, e.g. for variance futures. |
+| 2583 | [VegaMultiplier](/fix/fields/tags-2400-2599#tag-2583) | float | Optional | Constant value required for the calculation of the clearing quantity, e.g. for variance futures. |
+| 2584 | [AnnualTradingBusinessDays](/fix/fields/tags-2400-2599#tag-2584) | int | Optional | Number of trading business days in a year. |
+| 2585 | [TotalTradingBusinessDays](/fix/fields/tags-2400-2599#tag-2585) | int | Optional | Number of trading business days over the lifetime of an instrument. |
+| 2586 | [TradingBusinessDays](/fix/fields/tags-2400-2599#tag-2586) | int | Optional | Number of actual trading business days of an instrument. |
+| 2588 | [StandardVariance](/fix/fields/tags-2400-2599#tag-2588) | float | Optional | Standard variance (over the lifetime of an instrument) or initial variance used to calculate settlement prices, e.g. for variance futures. |
+| 2587 | [RealizedVariance](/fix/fields/tags-2400-2599#tag-2587) | float | Optional | Actual or realized variance of an instrument used to calculate settlement prices, e.g. for variance futures. |
+| 2589 | [RelatedClosePrice](/fix/fields/tags-2400-2599#tag-2589) | Price | Optional | Closing price of the underlying required to calculate the RealizedVariance(2587). |
+| 1190 | [RiskFreeRate](/fix/fields/tags-1000-1199#tag-1190) | float | Optional | Interest rate until the instrument expires and used to calculate DiscountFactor(1592). |
+| 2590 | [OvernightInterestRate](/fix/fields/tags-2400-2599#tag-2590) | float | Optional | Used to calculate AccumulatedReturnModifiedVariationMargin(2591). |
+| 2591 | [AccumulatedReturnModifiedVariationMargin](/fix/fields/tags-2400-2599#tag-2591) | float | Optional | The economic cost of the variation margin from one trading day to the next. |
+| 1592 | [DiscountFactor](/fix/fields/tags-1400-1599#tag-1592) | float | Optional | Used to calculate the present value of an amount to be paid in the future. |
+| 1188 | [Volatility](/fix/fields/tags-1000-1199#tag-1188) | float | Optional | Annualized volatility for option model calculations |
+| 2528 | [ClearingSettlPrice](/fix/fields/tags-2400-2599#tag-2528) | Price | Optional | Clearing settlement price. |
+| 2592 | [CalculationMethod](/fix/fields/tags-2400-2599#tag-2592) | CalculationMethodCodeSet | Optional | Specifies how the calculation will be made. |
+
+</StickyTable>
+
+## Used in
+
+[SecurityStatus](/fix/messages/security-status)

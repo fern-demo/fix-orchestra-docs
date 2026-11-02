@@ -1,0 +1,32 @@
+---
+title: "PartyEntitlementAckGrp"
+subtitle: "The PartyEntitlementAckGrp component is used in the PartyEntitlementsDefinitionRequestAck(35=DB) message to provide the status of each action (add, modify or delete) requested by the PartyEntitlementsDefinitionRequest(35=DA) message."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1772</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The EntitlementStatus(1883) field is used to indicate the status. In the case where an add or modify request is accepted with changes, the EntitlementGrp component is required, with the complete set of entitlements that have been accepted for the party included.
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPartyEntitlements (1772)](/fix/fields/tags-1600-1799#tag-1772).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1324 | [ListUpdateAction](/fix/fields/tags-1200-1399#tag-1324) | ListUpdateActionCodeSet | Optional | Required if NoPartyEntitlements(1772). |
+| 1883 | [EntitlementStatus](/fix/fields/tags-1800-1999#tag-1883) | EntitlementStatusCodeSet | Optional | Required if NoPartyEntitlements(1772). |
+| 1884 | [EntitlementResult](/fix/fields/tags-1800-1999#tag-1884) | EntitlementRequestResultCodeSet | Optional | Result of entitlement definition for one party. |
+| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328) | String | Optional | Identifies the reason for rejection. |
+| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedRejectText(1665) field. |
+| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. If used, the ASCII (English) representation should also be specified in the RejectText(1328) field. |
+| 1671 | [PartyDetailGrp](/fix/groups/party-detail-grp) | Repeating group | Optional | Contains details for a party, including related parties and alternative party identifiers. |
+| 1773 | [EntitlementGrp](/fix/groups/entitlement-grp) | Repeating group | Optional | Conveys a list of entitlements for one specific party, or relationship between two parties. Each entitlement may be further limited or clarified using optional fields and components. |
+| 1885 | [EntitlementRefID](/fix/fields/tags-1800-1999#tag-1885) | String | Optional | Optional when PartyDetailGrp is provided or ListUpdateAction(1324) = A(Add). |
+
+</StickyTable>
+
+## Used in
+
+[PartyEntitlementsDefinitionRequestAck](/fix/messages/party-entitlements-definition-request-ack)

@@ -1,0 +1,55 @@
+---
+title: "MarketDefinitionUpdateReport"
+subtitle: "In a subscription for market structure information, this message is used once the initial snapshot of the information has been sent using the MarketDefinition(35=BU) message."
+---
+
+<Badge intent="info">MsgType BV</Badge> <Badge intent="note" minimal>Market Structure Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID,… |
+| 1394 | [MarketReportID](/fix/fields/tags-1200-1399#tag-1394) | String | **Required** | Unique identifier for each market definition message. |
+| 1393 | [MarketReqID](/fix/fields/tags-1200-1399#tag-1393) | String | Optional | Unique ID of a Market Definition Request message. |
+| 1395 | [MarketUpdateAction](/fix/fields/tags-1200-1399#tag-1395) | SecurityUpdateActionCodeSet | Optional | Specifies the action taken |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | **Required** | Identifies the market |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
+| 1396 | [MarketSegmentDesc](/fix/fields/tags-1200-1399#tag-1396) | String | Optional | Description or name of Market Segment |
+| 1397 | [EncodedMktSegmDescLen](/fix/fields/tags-1200-1399#tag-1397) | Length | Optional | Must be set if EncodedMktSegmDesc(1398) field is specified and must immediately precede it. |
+| 1398 | [EncodedMktSegmDesc](/fix/fields/tags-1200-1399#tag-1398) | data | Optional | Encoded (non-ASCII characters) representation of the MarketSegmDesc(1396) field in the encoded format specified via the MessageEncoding(347) field. |
+| 1325 | [ParentMktSegmID](/fix/fields/tags-1200-1399#tag-1325) | String | Optional | Specifies that the market segment specified in this message is a sub-segment of the market segment defined in this field. |
+| 2542 | [MarketSegmentStatus](/fix/fields/tags-2400-2599#tag-2542) | MarketSegmentStatusCodeSet | Optional | Status of market segment. |
+| 2543 | [MarketSegmentType](/fix/fields/tags-2400-2599#tag-2543) | MarketSegmentTypeCodeSet | Optional | Used to specify the purpose of a special market segment identified by MarketSegmentID(1300). Conditionally required if MarketSegmentSubType(2544) is specified. |
+| 2544 | [MarketSegmentSubType](/fix/fields/tags-2400-2599#tag-2544) | MarketSegmentSubTypeCodeSet | Optional | Used to further categorize market segments within a MarketSegmentType(2543). |
+| 1656 | [InstrumentScopeGrp](/fix/groups/instrument-scope-grp) | Repeating group | Optional | Repeating group of InstrumentScope Components. Used to specify the instruments to which a request applies. |
+| 2545 | [RelatedMarketSegmentGrp](/fix/groups/related-market-segment-grp) | Repeating group | Optional | This component is used to identify market segments that are related to each other for a business purpose. This component should not be used in lieu of available explicit FIX fields that denote specific relationships (e.g. ParentMktSegmID(1325) for parent market segments), but rather should be used… |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | The default trading currency |
+| | [BaseTradingRules](/fix/components/base-trading-rules) | Component | Optional | Trading rules that are applicable to a market, market segment or individual security independent of a trading session. |
+| 1237 | [OrdTypeRules](/fix/groups/ord-type-rules) | Repeating group | Optional |  |
+| 1239 | [TimeInForceRules](/fix/groups/time-in-force-rules) | Repeating group | Optional |  |
+| 1232 | [ExecInstRules](/fix/groups/exec-inst-rules) | Repeating group | Optional |  |
+| 2548 | [AuctionTypeRuleGrp](/fix/groups/auction-type-rule-grp) | Repeating group | Optional | The AuctionTypeRuleGrp component is used to specify the auction rule applicable for a given product group or complex, for example. |
+| 1141 | [MarketDataFeedTypes](/fix/groups/market-data-feed-types) | Repeating group | Optional | The MarketDataFeedTypes component is used to specify the different available feed types and sub-types, and additional market data feed related attributes, such as the market depth of the specified feed type. |
+| 1235 | [MatchRules](/fix/groups/match-rules) | Repeating group | Optional | The MatchRules component is used to specify the details of order matching rules for specified product group or complex. |
+| 2560 | [FlexProductEligibilityGrp](/fix/groups/flex-product-eligibility-grp) | Repeating group | Optional | The FlexProductEligibilityGrp component is used to specify whether securities within a product group or complex are eligible for creating flexible securities. |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 2400 | [EffectiveBusinessDate](/fix/fields/tags-2400-2599#tag-2400) | LocalMktDate | Optional | Specifies an explicit business date for associated reference data or transaction. Used when an implicit date is not sufficiently specific. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="MarketDefinitionUpdateReport" wordWrap
+8=FIXT.1.1|9=82|35=BV|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|1394=ABC123|1301=XNYS|10=208|
+```

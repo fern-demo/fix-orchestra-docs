@@ -1,0 +1,36 @@
+---
+title: "OrderMassStatusRequest"
+subtitle: "The order mass status request message requests the status for orders matching criteria specified within the request."
+---
+
+<Badge intent="info">MsgType AF</Badge> <Badge intent="note" minimal>Order Mass Handling</Badge> <Badge intent="tip" minimal>Trade</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 584 | [MassStatusReqID](/fix/fields/tags-400-599#tag-584) | String | **Required** | Unique ID of mass status request as assigned by the institution. |
+| 585 | [MassStatusReqType](/fix/fields/tags-400-599#tag-585) | MassStatusReqTypeCodeSet | **Required** | Specifies the scope of the mass status request |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 1461 | [TargetParties](/fix/groups/target-parties) | Repeating group | Optional |  |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Account |
+| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in their system. |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Trading Session |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures markets to identify exchange specific execution time bracket codes as required by US market regulations. Bilaterally agreed values of data… |
+| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [UnderlyingInstrument](/fix/components/underlying-instrument) | Component | Optional | The UnderlyingInstrument component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In the case of the UnderlyingInstrument component block it describes an instrument which underlies the primary instrument Refer to the Instrument… |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | Optional | Optional qualifier used to indicate the side of the market for which orders will be returned. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="OrderMassStatusRequest" wordWrap
+8=FIXT.1.1|9=77|35=AF|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|584=ABC123|585=1|10=079|
+```

@@ -1,0 +1,23 @@
+---
+title: "OrderAttributeGrp"
+subtitle: "The OrderAttributeGrp component provides additional attributes about the order. Attributes included in this component are primarily \"indicators\" that may be associated with regulatory requirements and are typically not part of normal…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2593</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoOrderAttributes (2593)](/fix/fields/tags-2400-2599#tag-2593).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 2594 | [OrderAttributeType](/fix/fields/tags-2400-2599#tag-2594) | OrderAttributeTypeCodeSet | Optional | Required if NoOrderAttributes(2593) &gt; 0. |
+| 2595 | [OrderAttributeValue](/fix/fields/tags-2400-2599#tag-2595) | String | Optional | Required if NoOrderAttributes(2593) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[ExecutionReport](/fix/messages/execution-report), [ListOrdGrp](/fix/groups/list-ord-grp), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [TradeReportOrderDetail](/fix/components/trade-report-order-detail)

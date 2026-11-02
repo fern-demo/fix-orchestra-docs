@@ -1,0 +1,44 @@
+---
+title: "LegFinancingDetails"
+subtitle: "Component block is optionally used for financial transactions where legal contracts, master agreements or master confirmations are to be referenced. This component identifies the legal agreement under which the deal was made and other…"
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 2497 | [LegAgreementDesc](/fix/fields/tags-2400-2599#tag-2497) | String | Optional | The full name of the base standard agreement, annexes and amendments in place between the principals applicable to a financing transaction. See http://www.fpml.org/coding-scheme/master-agreement-type for derivative values. |
+| 2498 | [LegAgreementID](/fix/fields/tags-2400-2599#tag-2498) | String | Optional | A common reference to the applicable standing agreement between the counterparties to a financing transaction. |
+| 2499 | [LegAgreementVersion](/fix/fields/tags-2400-2599#tag-2499) | String | Optional | The version of the master agreement. |
+| 2496 | [LegAgreementDate](/fix/fields/tags-2400-2599#tag-2496) | LocalMktDate | Optional | A reference to the date the underlying agreement specified by LegAgreementID(2498) and LegAgreementDesc(2497) was executed. |
+| 2495 | [LegAgreementCurrency](/fix/fields/tags-2400-2599#tag-2495) | Currency | Optional | Contractual currency forming the basis of a financing agreement and associated transactions. Usually, but not always, the same as the trade currency. |
+| 2511 | [LegMasterConfirmationDesc](/fix/fields/tags-2400-2599#tag-2511) | String | Optional | The type of master confirmation executed between the parties. See http://www.fpml.org/coding-scheme/master-confirmation-type for values. |
+| 2510 | [LegMasterConfirmationDate](/fix/fields/tags-2400-2599#tag-2510) | LocalMktDate | Optional | Alternative to broker confirmation. The date of the confirmation executed between the parties and intended to govern all relevant transactions between those parties. |
+| 2512 | [LegMasterConfirmationAnnexDesc](/fix/fields/tags-2400-2599#tag-2512) | String | Optional | The type of master confirmation annexation executed between the parties. See http://www.fpml.org/coding-scheme/master-confirmation-annex-type for values. |
+| 2509 | [LegMasterConfirmationAnnexDate](/fix/fields/tags-2400-2599#tag-2509) | LocalMktDate | Optional | The date that an annexation to the master confirmation was executed between the parties. |
+| 2500 | [LegBrokerConfirmationDesc](/fix/fields/tags-2400-2599#tag-2500) | String | Optional | Describes the type of broker confirmation executed between the parties. Can be used as an alternative to MasterConfirmationDesc(1962). See http://www.fpml.org/coding-scheme/broker-confirmation-type for values. |
+| 42198 | [LegFinancingContractualDefinitionsGrp](/fix/groups/leg-financing-contractual-definitions-grp) | Repeating group | Optional | The LegFinancingContractualDefinitionGrp is a repeating component within the LegFinancingDetails component used to report the definitions published by ISDA that define the terms of a derivative trade. |
+| 42200 | [LegFinancingTermSupplementGrp](/fix/groups/leg-financing-term-supplement-grp) | Repeating group | Optional | The LegFinancingTermSupplementGrp is a repeating component within the LegFinancingDetails component used to report contractual terms supplements of derivative trades. |
+| 42203 | [LegFinancingContractualMatrixGrp](/fix/groups/leg-financing-contractual-matrix-grp) | Repeating group | Optional | The LegFinancingContractualMatrixGrp is a repeating component within the LegFinancingDetails component used to report the ISDA Physical Settlement Matrix Transaction Type. |
+| 2502 | [LegCreditSupportAgreementDesc](/fix/fields/tags-2400-2599#tag-2502) | String | Optional | The type of ISDA Credit Support Agreement. See http://www.fpml.org/coding-scheme/credit-support-agreement-type for values. |
+| 2501 | [LegCreditSupportAgreementDate](/fix/fields/tags-2400-2599#tag-2501) | LocalMktDate | Optional | The date of the ISDA Credit Support Agreement executed between the parties and intended to govern collateral arrangements for all OTC derivatives transactions between those parties. |
+| 2503 | [LegCreditSupportAgreementID](/fix/fields/tags-2400-2599#tag-2503) | String | Optional | A common reference or unique identifier to identify the ISDA Credit Support Agreement executed between the parties. |
+| 2507 | [LegGoverningLaw](/fix/fields/tags-2400-2599#tag-2507) | String | Optional | Identification of the law governing the transaction. See http://www.fpml.org/coding-scheme/governing-law for values. |
+| 2505 | [LegDocumentationText](/fix/fields/tags-2400-2599#tag-2505) | String | Optional | A sentence or phrase pertinent to the trade, not a reference to an external document. E.g. "To be registered with the U.S. Environmental Protection Agency, Acid Rain Division, SO2 Allowance Tracking System". |
+| 2494 | [EncodedLegDocumentationTextLen](/fix/fields/tags-2400-2599#tag-2494) | Length | Optional | Must be set if EncodedLegDocumentationText(2493) field is specified and must immediately precede it. |
+| 2493 | [EncodedLegDocumentationText](/fix/fields/tags-2400-2599#tag-2493) | data | Optional | Encoded (non-ASCII characters) representation of the LegDocumentationText(2505) field in the encoded format specified via the MessageEncoding(347) field. |
+| 2514 | [LegTerminationType](/fix/fields/tags-2400-2599#tag-2514) | TerminationTypeCodeSet | Optional | Type of financing termination. |
+| 2513 | [LegStartDate](/fix/fields/tags-2400-2599#tag-2513) | LocalMktDate | Optional | Start date of a financing deal, i.e. the date the buyer pays the seller cash and takes control of the collateral. |
+| 2506 | [LegEndDate](/fix/fields/tags-2400-2599#tag-2506) | LocalMktDate | Optional | End date of a financing deal, i.e. the date the seller reimburses the buyer and takes back control of the collateral. |
+| 2504 | [LegDeliveryType](/fix/fields/tags-2400-2599#tag-2504) | DeliveryTypeCodeSet | Optional | Identifies type of settlement. |
+| 2508 | [LegMarginRatio](/fix/fields/tags-2400-2599#tag-2508) | Percentage | Optional | The fraction of the cash consideration that must be collateralized, expressed as a percent. A MarginRatio of 2% indicates that the value of the collateral (after deducting for "haircut") must exceed the cash consideration by 2%. |
+
+</StickyTable>
+
+## Used in
+
+[InstrmtLegGrp](/fix/groups/instrmt-leg-grp), [TrdInstrmtLegGrp](/fix/groups/trd-instrmt-leg-grp)

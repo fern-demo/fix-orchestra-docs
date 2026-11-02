@@ -1,0 +1,38 @@
+---
+title: "TradeAggregationRequest"
+subtitle: "TradeAggregationRequest(35=DW) is used to request that the identified trades between the initiator and respondent be aggregated together for further processing."
+---
+
+<Badge intent="info">MsgType DW</Badge> <Badge intent="note" minimal>Trade Management</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 2786 | [TradeAggregationRequestID](/fix/fields/tags-2600-2799#tag-2786) | String | **Required** | Unique identifier for the message. |
+| 2787 | [TradeAggregationRequestRefID](/fix/fields/tags-2600-2799#tag-2787) | String | Optional | Required when TradeAggregationTransType(2788)=1 (Cancel) or 2 (Replace) |
+| 2788 | [TradeAggregationTransType](/fix/fields/tags-2600-2799#tag-2788) | TradeAggregationTransTypeCodeSet | **Required** | Identifies the trade aggregation transaction type. |
+| 2789 | [AggregatedQty](/fix/fields/tags-2600-2799#tag-2789) | Qty | Optional | Total quantity of orders or fills quantity aggregated. |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency value whenever possible. See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values. |
+| 6 | [AvgPx](/fix/fields/tags-0-199#tag-6) | Price | Optional | Calculated average price of all fills on this order. For Fixed Income trades AvgPx is always expressed as percent-of-par, regardless of the PriceType (423) of LastPx (31). I.e., AvgPx will contain an average of percent-of-par values (see LastParPx (669)) for issues traded in Yield, Spread or… |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | **Required** | Side of order (see Volume : "Glossary" for value definitions) |
+| 2349 | [PricePrecision](/fix/fields/tags-2200-2399#tag-2349) | int | Optional | Specifies the price decimal precision of the instrument. |
+| 73 | [OrderAggregationGrp](/fix/groups/order-aggregation-grp) | Repeating group | Optional | Identifies the orders being aggregated together. |
+| 124 | [ExecutionAggregationGrp](/fix/groups/execution-aggregation-grp) | Repeating group | Optional | Identifies the fills being aggregated together. |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
+| | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="TradeAggregationRequest" wordWrap
+8=FIXT.1.1|9=84|35=DW|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|2786=ABC123|2788=0|54=1|10=165|
+```

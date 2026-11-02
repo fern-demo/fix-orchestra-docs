@@ -1,0 +1,2992 @@
+---
+title: "Tags 40200–40399"
+subtitle: "200 fields"
+---
+
+## 40200 · ProtectionTermEventQualifier [#tag-40200]
+
+<Badge intent="info" minimal>Tag 40200</Badge> <Badge intent="note" minimal>ProtectionTermEventQualifierCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Protection term event qualifier. Used to further qualify ProtectionTermEventType(40192).
+
+Code set **ProtectionTermEventQualifierCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `H` | RestructuringMultipleHoldingObligations | Retructuring - multiple holding obligations |
+| `E` | RestructuringMultipleCreditEventNotices | Restructuring - multiple credit event notices |
+| `C` | FloatingRateInterestShortfall | Floating rate interest shortfall |
+
+Used in: [ProtectionTermEventQualifierGrp](/fix/groups/protection-term-event-qualifier-grp)
+
+## 40201 · NoProtectionTermObligations [#tag-40201]
+
+<Badge intent="info" minimal>Tag 40201</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of obligations in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [ProtectionTermObligationGrp](/fix/groups/protection-term-obligation-grp)
+
+## 40202 · ProtectionTermObligationType [#tag-40202]
+
+<Badge intent="info" minimal>Tag 40202</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of obligation applicable to the protection terms. See http://www.fixtradingcommunity.org/codelists#Protection\_Term\_Obligation\_Types for code list of applicable obligation types.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProtectionTermObligationGrp](/fix/groups/protection-term-obligation-grp)
+
+## 40203 · ProtectionTermObligationValue [#tag-40203]
+
+<Badge intent="info" minimal>Tag 40203</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Protection term obligation value appropriate to ProtectionTermObligationType(40202). See http://www.fixtradingcommunity.org/codelists#Protection\_Term\_Obligation\_Types for applicable obligation type values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [ProtectionTermObligationGrp](/fix/groups/protection-term-obligation-grp)
+
+## 40204 · NoPhysicalSettlTerms [#tag-40204]
+
+<Badge intent="info" minimal>Tag 40204</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of entries in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [PhysicalSettlTermGrp](/fix/groups/physical-settl-term-grp)
+
+## 40205 · PhysicalSettlCurrency [#tag-40205]
+
+<Badge intent="info" minimal>Tag 40205</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency of physical settlement. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [PhysicalSettlTermGrp](/fix/groups/physical-settl-term-grp)
+
+## 40206 · PhysicalSettlBusinessDays [#tag-40206]
+
+<Badge intent="info" minimal>Tag 40206</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The number of business days used in the determination of physical settlement. Its precise meaning is dependant on the context in which this element is used.
+
+ISDA 2003 Term: Business Day.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [PhysicalSettlTermGrp](/fix/groups/physical-settl-term-grp)
+
+## 40207 · PhysicalSettlMaximumBusinessDays [#tag-40207]
+
+<Badge intent="info" minimal>Tag 40207</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A maximum number of business days. Its precise meaning is dependant on the context in which this element is used. Intended to be used to limit a particular ISDA fallback provision.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [PhysicalSettlTermGrp](/fix/groups/physical-settl-term-grp)
+
+## 40208 · PhysicalSettlTermXID [#tag-40208]
+
+<Badge intent="info" minimal>Tag 40208</Badge> <Badge intent="note" minimal>XID</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A named string value referenced by UnderlyingSettlTermXIDRef(41315).
+
+Type: [XID](/fix/datatypes#xid)
+
+Used in: [PhysicalSettlTermGrp](/fix/groups/physical-settl-term-grp)
+
+## 40209 · NoPhysicalSettlDeliverableObligations [#tag-40209]
+
+<Badge intent="info" minimal>Tag 40209</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of entries in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [PhysicalSettlDeliverableObligationGrp](/fix/groups/physical-settl-deliverable-obligation-grp)
+
+## 40210 · PhysicalSettlDeliverableObligationType [#tag-40210]
+
+<Badge intent="info" minimal>Tag 40210</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of deliverable obligation applicable for physical settlement. See http://www.fixtradingcommunity.org/codelists#Deliverable\_Obligation\_Types for code list for applicable deliverable obligation types.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PhysicalSettlDeliverableObligationGrp](/fix/groups/physical-settl-deliverable-obligation-grp)
+
+## 40211 · PhysicalSettlDeliverableObligationValue [#tag-40211]
+
+<Badge intent="info" minimal>Tag 40211</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Physical settlement deliverable obligation value appropriate to PhysicalSettlDeliverableObligationType(40210). See http://www.fixtradingcommunity.org/codelists#Deliverable\_Obligation\_Types for applicable obligation type values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PhysicalSettlDeliverableObligationGrp](/fix/groups/physical-settl-deliverable-obligation-grp)
+
+## 40212 · NoPayments [#tag-40212]
+
+<Badge intent="info" minimal>Tag 40212</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of additional settlement or bullet payments.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [PaymentGrp](/fix/groups/payment-grp)
+
+## 40213 · PaymentType [#tag-40213]
+
+<Badge intent="info" minimal>Tag 40213</Badge> <Badge intent="note" minimal>PaymentTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Type of payment.
+
+Code set **PaymentTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Brokerage | Brokerage |
+| `1` | UpfrontFee | Upfront fee |
+| `2` | IndependentAmountCollateral | Independent amount / collateral |
+| `3` | PrincipalExchange | Principal exchange |
+| `4` | NovationTermination | Novation / termination |
+| `5` | EarlyTerminationProvision | Early termination provision |
+| `6` | CancelableProvision | Cancelable provision |
+| `7` | ExtendibleProvision | Extendible provision |
+| `8` | CapRateProvision | Cap rate provision |
+| `9` | FloorRateProvision | Floor rate provision |
+| `10` | OptionPremium | Option premium |
+| `11` | SettlementPayment | Settlement payment |
+| `12` | CashSettl | Cash settlement |
+| `13` | SecurityLending | Security lending |
+| `14` | Rebate | Rebate |
+| `99` | Other | Other |
+
+Used in: [PaymentGrp](/fix/groups/payment-grp)
+
+## 40214 · PaymentPaySide [#tag-40214]
+
+<Badge intent="info" minimal>Tag 40214</Badge> <Badge intent="note" minimal>PaymentPaySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The side of the party paying the payment.
+
+Code set **PaymentPaySideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Buy | Buy |
+| `2` | Sell | Sell |
+
+Used in: [PaymentGrp](/fix/groups/payment-grp)
+
+## 40215 · PaymentReceiveSide [#tag-40215]
+
+<Badge intent="info" minimal>Tag 40215</Badge> <Badge intent="note" minimal>PaymentPaySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The side of the party receiving the payment.
+
+Code set **PaymentPaySideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Buy | Buy |
+| `2` | Sell | Sell |
+
+Used in: [PaymentGrp](/fix/groups/payment-grp)
+
+## 40216 · PaymentCurrency [#tag-40216]
+
+<Badge intent="info" minimal>Tag 40216</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency in which PaymentAmount(40217) is denominated. Uses ISO 4271 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [PaymentGrp](/fix/groups/payment-grp)
+
+## 40217 · PaymentAmount [#tag-40217]
+
+<Badge intent="info" minimal>Tag 40217</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The total payment amount.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [PaymentGrp](/fix/groups/payment-grp)
+
+## 40218 · PaymentPrice [#tag-40218]
+
+<Badge intent="info" minimal>Tag 40218</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The price determining the payment amount expressed in terms specified in PaymentPriceType(40919) and expressed in market format.
+
+Type: [Price](/fix/datatypes#price)
+
+Used in: [PaymentGrp](/fix/groups/payment-grp)
+
+## 40219 · PaymentDateUnadjusted [#tag-40219]
+
+<Badge intent="info" minimal>Tag 40219</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted payment date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [PaymentGrp](/fix/groups/payment-grp)
+
+## 40220 · PaymentBusinessDayConvention [#tag-40220]
+
+<Badge intent="info" minimal>Tag 40220</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the payment date. Used only to override the business day convention specified in the DateAdjustment component within the Instrument component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [PaymentGrp](/fix/groups/payment-grp)
+
+## 40221 · PaymentBusinessCenter [#tag-40221]
+
+<Badge intent="info" minimal>Tag 40221</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the payment date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PaymentBusinessCenterGrp](/fix/groups/payment-business-center-grp)
+
+## 40222 · PaymentDateAdjusted [#tag-40222]
+
+<Badge intent="info" minimal>Tag 40222</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted payment date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [PaymentGrp](/fix/groups/payment-grp)
+
+## 40223 · LegMarketDisruptionValue [#tag-40223]
+
+<Badge intent="info" minimal>Tag 40223</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Applicable value for LegMarketDisruptionEvent(41468).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegMarketDisruptionEventGrp](/fix/groups/leg-market-disruption-event-grp)
+
+## 40224 · PaymentDiscountFactor [#tag-40224]
+
+<Badge intent="info" minimal>Tag 40224</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The value representing the discount factor used to calculate the present value of the cash flow.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [PaymentGrp](/fix/groups/payment-grp)
+
+## 40225 · PaymentPresentValueAmount [#tag-40225]
+
+<Badge intent="info" minimal>Tag 40225</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The amount representing the present value of the forecast payment.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [PaymentGrp](/fix/groups/payment-grp)
+
+## 40226 · PaymentPresentValueCurrency [#tag-40226]
+
+<Badge intent="info" minimal>Tag 40226</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency the PaymentPresentValueAmount(40225) is denominated in. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [PaymentGrp](/fix/groups/payment-grp)
+
+## 40227 · PaymentSettlStyle [#tag-40227]
+
+<Badge intent="info" minimal>Tag 40227</Badge> <Badge intent="note" minimal>PaymentSettlStyleCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Payment settlement style.
+
+Code set **PaymentSettlStyleCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Standard | Standard |
+| `1` | Net | Net |
+| `2` | StandardfNet | Standard and net |
+
+Used in: [PaymentGrp](/fix/groups/payment-grp)
+
+## 40228 · LegPaymentStreamNonDeliverableSettlReferencePage [#tag-40228]
+
+<Badge intent="info" minimal>Tag 40228</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the reference "page" from the rate source. When LegPaymentStreamNonDeliverableSettlRateSource(40087) = 3 (ISDA Settlement Rate Option) this contains a value from the scheme that reflects the terms of the Annex A to the ISDA 1998 FX and Currency Option Definitions. See: http://www.fpml.org/coding-scheme/settlement-rate-option
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegPaymentStreamNonDeliverableSettlRateSource](/fix/components/leg-payment-stream-non-deliverable-settl-rate-source)
+
+## 40229 · PaymentText [#tag-40229]
+
+<Badge intent="info" minimal>Tag 40229</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Free form text to specify additional information or enumeration description when a sdtandard value does not apply. Identifies the payment type when PaymentType(40213) = 99 (Other).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PaymentGrp](/fix/groups/payment-grp)
+
+## 40230 · NoPaymentSettls [#tag-40230]
+
+<Badge intent="info" minimal>Tag 40230</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of additional settlements or bullet payments.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [PaymentSettlGrp](/fix/groups/payment-settl-grp)
+
+## 40231 · PaymentSettlAmount [#tag-40231]
+
+<Badge intent="info" minimal>Tag 40231</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The payment settlement amount.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [PaymentSettlGrp](/fix/groups/payment-settl-grp)
+
+## 40232 · PaymentSettlCurrency [#tag-40232]
+
+<Badge intent="info" minimal>Tag 40232</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency the PaymentSettlAmount(40231) is denominated in. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [PaymentSettlGrp](/fix/groups/payment-settl-grp)
+
+## 40233 · NoPaymentSettlPartyIDs [#tag-40233]
+
+<Badge intent="info" minimal>Tag 40233</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of parties identified in the additional settlement or bullet payment.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [PaymentSettlParties](/fix/groups/payment-settl-parties)
+
+## 40234 · PaymentSettlPartyID [#tag-40234]
+
+<Badge intent="info" minimal>Tag 40234</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The payment settlement party identifier.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PaymentSettlParties](/fix/groups/payment-settl-parties)
+
+## 40235 · PaymentSettlPartyIDSource [#tag-40235]
+
+<Badge intent="info" minimal>Tag 40235</Badge> <Badge intent="note" minimal>PartyIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the class or source of PaymentSettlPartyID(40234) value (e.g. BIC).
+
+Code set **PartyIDSourceCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `6` | UKNationalInsuranceOrPensionNumber | UK National Insurance or Pension Number |
+| `7` | USSocialSecurityNumber | US Social Security Number |
+| `8` | USEmployerOrTaxIDNumber | US Employer or Tax ID Number |
+| `9` | AustralianBusinessNumber | Australian Business Number |
+| `A` | AustralianTaxFileNumber | Australian Tax File Number |
+| `J` | TaxID | Tax ID |
+| `1` | KoreanInvestorID | Korean Investor ID |
+| `2` | TaiwaneseForeignInvestorID | Taiwanese Qualified Foreign Investor ID QFII/FID |
+| `3` | TaiwaneseTradingAcct | Taiwanese Trading Acct |
+| `4` | MalaysianCentralDepository | Malaysian Central Depository (MCD) number |
+| `5` | ChineseInvestorID | Chinese Investor ID |
+| `I` | ISITCAcronym | Directed broker three character acronym as defined in ISITC "ETC Best Practice" guidelines document |
+| `B` | BIC | BIC (Bank Identification Code - SWIFT managed) code (ISO9362 - See "Appendix 6-B") |
+| `C` | GeneralIdentifier | Generally accepted market participant identifier (e.g. NASD mnemonic) |
+| `D` | Proprietary | Proprietary / Custom code |
+| `E` | ISOCountryCode | ISO Country Code |
+| `F` | SettlementEntityLocation | Settlement Entity Location (note if Local Market Settlement use "E=ISO Country Code") (see "Appendix 6-G" for valid values) |
+| `G` | MIC | Market Identifier Code (ISO 10383) MIC |
+| `H` | CSDParticipant | CSD participant/member code (e.g.. Euroclear, DTC, CREST or Kassenverein number) |
+| `K` | AustralianCompanyNumber | Australian Company Number |
+| `L` | AustralianRegisteredBodyNumber | Australian Registered Body Number |
+| `M` | CFTCReportingFirmIdentifier | CFTC reporting firm identifier |
+| `N` | LegalEntityIdentifier | Legal Entity Identifier (ISO 17442) LEI |
+| `O` | InterimIdentifier | Interim identifier |
+| `P` | ShortCodeIdentifier | Short code identifier |
+| `Q` | NationalIDNaturalPerson | National ID of natural person |
+| `R` | IndiaPermanentAccountNumber | India Permanent Account Number |
+| `S` | FDID | Firm designated identifier |
+| `T` | SPSAID | Special Segregated Account ID |
+| `U` | MasterSPSAID | Master Special Segregated Account ID |
+
+Used in: [PaymentSettlParties](/fix/groups/payment-settl-parties)
+
+## 40236 · PaymentSettlPartyRole [#tag-40236]
+
+<Badge intent="info" minimal>Tag 40236</Badge> <Badge intent="note" minimal>PartyRoleCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the role of PaymentSettlPartyID(40234) (e.g. the beneficiary's bank or depository institution).
+
+Code set **PartyRoleCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | ExecutingFirm | Executing Firm (formerly FIX 4.2 ExecBroker) |
+| `2` | BrokerOfCredit | Broker of Credit (formerly FIX 4.2 BrokerOfCredit) |
+| `3` | ClientID | Client ID (formerly FIX 4.2 ClientID) |
+| `4` | ClearingFirm | Clearing Firm (formerly FIX 4.2 ClearingFirm) |
+| `5` | InvestorID | Investor ID |
+| `6` | IntroducingFirm | Introducing Firm |
+| `7` | EnteringFirm | Entering Firm |
+| `8` | Locate | Locate / Lending Firm (for short-sales) |
+| `9` | FundManagerClientID | Fund Manager Client ID (for CIV) |
+| `10` | SettlementLocation | Settlement Location (formerly FIX 4.2 SettlLocation) |
+| `11` | OrderOriginationTrader | Order Origination Trader (associated with Order Origination Firm - i.e. trader who initiates/submits the order) |
+| `12` | ExecutingTrader | Executing Trader (associated with Executing Firm - actually executes) |
+| `13` | OrderOriginationFirm | Order Origination Firm (e.g. buy-side firm) |
+| `14` | GiveupClearingFirmDepr | Giveup Clearing Firm (firm to which trade is given up) |
+| `15` | CorrespondantClearingFirm | Correspondant Clearing Firm |
+| `16` | ExecutingSystem | Executing System |
+| `17` | ContraFirm | Contra Firm |
+| `18` | ContraClearingFirm | Contra Clearing Firm |
+| `19` | SponsoringFirm | Sponsoring Firm |
+| `20` | UnderlyingContraFirm | Underlying Contra Firm |
+| `21` | ClearingOrganization | Clearing Organization |
+| `22` | Exchange | Exchange |
+| `24` | CustomerAccount | Customer Account |
+| `25` | CorrespondentClearingOrganization | Correspondent Clearing Organization |
+| `26` | CorrespondentBroker | Correspondent Broker |
+| `27` | Buyer | Buyer/Seller (Receiver/Deliverer) |
+| `28` | Custodian | Custodian |
+| `29` | Intermediary | Intermediary |
+| `30` | Agent | Agent |
+| `31` | SubCustodian | Sub-custodian |
+| `32` | Beneficiary | Beneficiary |
+| `33` | InterestedParty | Interested party |
+| `34` | RegulatoryBody | Regulatory body |
+| `35` | LiquidityProvider | Liquidity provider |
+| `36` | EnteringTrader | Entering trader |
+| `37` | ContraTrader | Contra trader |
+| `38` | PositionAccount | Position account |
+| `39` | ContraInvestorID | Contra Investor ID |
+| `40` | TransferToFirm | Transfer to Firm |
+| `41` | ContraPositionAccount | Contra Position Account |
+| `42` | ContraExchange | Contra Exchange |
+| `43` | InternalCarryAccount | Internal Carry Account |
+| `44` | OrderEntryOperatorID | Order Entry Operator ID |
+| `45` | SecondaryAccountNumber | Secondary Account Number |
+| `46` | ForeignFirm | Foreign Firm |
+| `47` | ThirdPartyAllocationFirm | Third Party Allocation Firm |
+| `48` | ClaimingAccount | Claiming Account |
+| `49` | AssetManager | Asset Manager |
+| `50` | PledgorAccount | Pledgor Account |
+| `51` | PledgeeAccount | Pledgee Account |
+| `52` | LargeTraderReportableAccount | Large Trader Reportable Account |
+| `53` | TraderMnemonic | Trader mnemonic |
+| `54` | SenderLocation | Sender Location |
+| `55` | SessionID | Session ID |
+| `56` | AcceptableCounterparty | Acceptable Counterparty |
+| `57` | UnacceptableCounterparty | Unacceptable Counterparty |
+| `58` | EnteringUnit | Entering Unit |
+| `59` | ExecutingUnit | Executing Unit |
+| `60` | IntroducingBroker | Introducing Broker |
+| `61` | QuoteOriginator | Quote originator |
+| `62` | ReportOriginator | Report originator |
+| `63` | SystematicInternaliser | Systematic internaliser (SI) |
+| `64` | MultilateralTradingFacility | Multilateral Trading Facility (MTF) |
+| `65` | RegulatedMarket | Regulated Market (RM) |
+| `66` | MarketMaker | Market Maker |
+| `67` | InvestmentFirm | Investment Firm |
+| `68` | HostCompetentAuthority | Host Competent Authority (Host CA) |
+| `69` | HomeCompetentAuthority | Home Competent Authority (Home CA) |
+| `70` | CompetentAuthorityLiquidity | Competent Authority of the most relevant market in terms of liquidity (CAL) |
+| `71` | CompetentAuthorityTransactionVenue | Competent Authority of the Transaction (Execution) Venue (CATV) |
+| `72` | ReportingIntermediary | Reporting intermediary |
+| `73` | ExecutionVenue | Execution Venue |
+| `74` | MarketDataEntryOriginator | Market data entry originator |
+| `75` | LocationID | Location ID |
+| `76` | DeskID | Desk ID |
+| `77` | MarketDataMarket | Market data market |
+| `78` | AllocationEntity | Allocation Entity |
+| `79` | PrimeBroker | Prime Broker providing General Trade Services |
+| `80` | StepOutFirm | Step-Out Firm (Prime Broker) |
+| `81` | BrokerClearingID | Broker cient ID |
+| `82` | CentralRegistrationDepository | Central Registration Depository (CRD) |
+| `83` | ClearingAccount | Clearing Account |
+| `84` | AcceptableSettlingCounterparty | Acceptable Settling Counterparty |
+| `85` | UnacceptableSettlingCounterparty | Unacceptable Settling Counterparty |
+| `86` | CLSMemberBank | CLS Member Bank |
+| `87` | InConcertGroup | In Concert Group |
+| `88` | InConcertControllingEntity | In Concert Controlling Entity |
+| `89` | LargePositionsReportingAccount | Large Positions Reporting Account |
+| `90` | SettlementFirm | Settlement Firm |
+| `91` | SettlementAccount | Settlement account |
+| `92` | ReportingMarketCenter | Reporting Market Center |
+| `93` | RelatedReportingMarketCenter | Related Reporting Market Center |
+| `94` | AwayMarket | Away Market |
+| `95` | GiveupTradingFirm | Give-up (trading) firm |
+| `96` | TakeupTradingFirm | Take-up (trading) firm |
+| `97` | GiveupClearingFirm | Give-up clearing firm |
+| `98` | TakeupClearingFirm | Take-up clearing firm |
+| `99` | OriginatingMarket | Originating Market |
+| `100` | MarginAccount | Margin account |
+| `101` | CollateralAssetAccount | Collateral asset account |
+| `102` | DataRepository | Data repository |
+| `103` | CalculationAgent | Calculation agent |
+| `104` | ExerciseNoticeSender | Sender of exercise notice |
+| `105` | ExerciseNoticeReceiver | Receiver of exercise notice |
+| `106` | RateReferenceBank | Rate reference bank |
+| `107` | Correspondent | Correspondent |
+| `109` | BeneficiaryBank | Beneficiary's bank or depository institution |
+| `110` | Borrower | Borrower |
+| `111` | PrimaryObligator | Primary obligator |
+| `112` | Guarantor | Guarantor |
+| `113` | ExcludedReferenceEntity | Excluded reference entity |
+| `114` | DeterminingParty | Determining party |
+| `115` | HedgingParty | Hedging party |
+| `116` | ReportingEntity | Reporting entity |
+| `117` | SalesPerson | Sales person |
+| `118` | Operator | Operator |
+| `119` | CSD | Central Securities Depository (CSD) |
+| `120` | ICSD | International Central Securities Depository (ICSD) |
+| `121` | TradingSubAccount | Trading sub-account |
+| `122` | InvestmentDecisionMaker | Investment decision maker |
+| `123` | PublishingIntermediary | Publishing intermediary |
+| `124` | CSDParticipant | Central Securities Depository (CSD) Participant |
+| `125` | Issuer | Issuer |
+| `126` | ContraCustomerAccount | Contra Customer Account |
+| `127` | ContraInvestmentDecisionMaker | Contra Investment Decision Maker |
+
+Used in: [PaymentSettlParties](/fix/groups/payment-settl-parties)
+
+## 40237 · PaymentSettlPartyRoleQualifier [#tag-40237]
+
+<Badge intent="info" minimal>Tag 40237</Badge> <Badge intent="note" minimal>PartyDetailRoleQualifierCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Qualifies the value of PaymentSettlPartyRole(40236).
+
+Code set **PartyDetailRoleQualifierCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `23` | FirmOrLegalEntity | Firm or legal entity |
+| `18` | Current | Current |
+| `19` | New | New |
+| `24` | NaturalPerson | Natural person |
+| `0` | Agency | Agency |
+| `1` | Principal | Principal |
+| `2` | RisklessPrincipal | Riskless principal |
+| `9` | PrimaryTrdRepository | Primary trade repository |
+| `10` | OrigTrdRepository | Original trade repository |
+| `11` | AddtnlIntlTrdRepository | Additional international trade repository |
+| `12` | AddtnlDomesticTrdRepository | Additional domestic trade repository |
+| `25` | RegularTrader | Regular trader |
+| `26` | HeadTrader | Head trader |
+| `27` | Supervisor | Supervisor |
+| `22` | Algorithm | Algorithm |
+| `13` | RelatedExchange | Related exchange |
+| `14` | OptionsExchange | Options exchange |
+| `15` | SpecifiedExchange | Specified exchange |
+| `16` | ConstituentExchange | Constituent exchange |
+| `7` | Bank | Bank |
+| `8` | Hub | Hub |
+| `28` | TriParty | Tri-party |
+| `29` | Lender | Lender |
+| `3` | GeneralClearingMember | General clearing member |
+| `4` | IndividualClearingMember | Individual clearing member |
+| `5` | PreferredMarketMaker | Preferred market maker |
+| `6` | DirectedMarketMaker | Directed market maker |
+| `20` | DesignatedSponsor | Designated sponsor |
+| `21` | Specialist | Specialist |
+| `17` | ExemptFromTradeReporting | Exempt from trade reporting |
+
+Used in: [PaymentSettlParties](/fix/groups/payment-settl-parties)
+
+## 40238 · NoPaymentSettlPartySubIDs [#tag-40238]
+
+<Badge intent="info" minimal>Tag 40238</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of sub-party IDs to be reported for the party.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [PaymentSettlPtysSubGrp](/fix/groups/payment-settl-ptys-sub-grp)
+
+## 40239 · PaymentSettlPartySubID [#tag-40239]
+
+<Badge intent="info" minimal>Tag 40239</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Party sub-identifier, if applicable, for PaymentSettlPartyRole(40236).
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PaymentSettlPtysSubGrp](/fix/groups/payment-settl-ptys-sub-grp)
+
+## 40240 · PaymentSettlPartySubIDType [#tag-40240]
+
+<Badge intent="info" minimal>Tag 40240</Badge> <Badge intent="note" minimal>PartySubIDTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The type of PaymentSettlPartySubID(40239) value.
+
+Code set **PartySubIDTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Firm | Firm |
+| `2` | Person | Person |
+| `3` | System | System |
+| `4` | Application | Application |
+| `5` | FullLegalNameOfFirm | Full legal name of firm |
+| `6` | PostalAddress | Postal address |
+| `7` | PhoneNumber | Phone number |
+| `8` | EmailAddress | Email address |
+| `9` | ContactName | Contact name |
+| `10` | SecuritiesAccountNumber | Securities account number (for settlement instructions) |
+| `11` | RegistrationNumber | Registration number (for settlement instructions and confirmations) |
+| `12` | RegisteredAddressForConfirmation | Registered address (for confirmation purposes) |
+| `13` | RegulatoryStatus | Regulatory status (for confirmation purposes) |
+| `14` | RegistrationName | Registration name (for settlement instructions) |
+| `15` | CashAccountNumber | Cash account number (for settlement instructions) |
+| `16` | BIC | BIC |
+| `17` | CSDParticipantMemberCode | CSD participant member code |
+| `18` | RegisteredAddress | Registered address |
+| `19` | FundAccountName | Fund account name |
+| `20` | TelexNumber | Telex number |
+| `21` | FaxNumber | Fax number |
+| `22` | SecuritiesAccountName | Securities account name |
+| `23` | CashAccountName | Cash account name |
+| `24` | Department | Department |
+| `25` | LocationDesk | Location desk |
+| `26` | PositionAccountType | Position account type |
+| `27` | SecurityLocateID | Security locate ID |
+| `28` | MarketMaker | Market maker |
+| `29` | EligibleCounterparty | Eligible counterparty |
+| `30` | ProfessionalClient | Professional client |
+| `31` | Location | Location |
+| `32` | ExecutionVenue | Execution venue |
+| `33` | CurrencyDeliveryIdentifier | Currency delivery identifier |
+| `34` | AddressCity | Address City |
+| `35` | AddressStateOrProvince | Address State/Province |
+| `36` | AddressPostalCode | Address Postal Code |
+| `37` | AddressStreet | Address Street |
+| `38` | AddressISOCountryCode | Address Country (ISO country code) |
+| `39` | ISOCountryCode | ISO country code |
+| `40` | MarketSegment | Market segment |
+| `41` | CustomerAccountType | Customer account type |
+| `42` | OmnibusAccount | Omnibus account |
+| `43` | FundsSegregationType | Funds segregation type |
+| `44` | GuaranteeFund | Guarantee fund |
+| `45` | SwapDealer | Swap dealer |
+| `46` | MajorParticipant | Major participant |
+| `47` | FinancialEntity | Financial entity |
+| `48` | USPerson | U.S. person |
+| `49` | ReportingEntityIndicator | Reporting entity indicator |
+| `50` | ElectedClearingRequirementException | Elected clearing requirement exception |
+| `51` | BusinessCenter | Business center |
+| `52` | ReferenceText | Reference text |
+| `53` | ShortMarkingExemptAccount | Short-marking exempt account |
+| `54` | ParentFirmIdentifier | Parent firm identifier |
+| `55` | ParentFirmName | Parent firm name |
+| `56` | DealIdentifier | Deal identifier |
+| `57` | SystemTradeID | System trade identifier |
+| `58` | SystemTradeSubID | System trade sub-identifier |
+| `59` | FCMCode | Futures Commission Merchant (FCM) code |
+| `60` | DlvryTrmlCode | Delivery terminal customer account/code |
+| `61` | VolntyRptEntity | Voluntary reporting entity |
+| `62` | RptObligJursdctn | Reporting obligation jurisdiction |
+| `63` | VolntyRptJursdctn | Voluntary reporting jurisdiction |
+| `64` | CompanyActivities | Company activities |
+| `65` | EEAreaDomiciled | European Economic Area domiciled |
+| `66` | ContractLinked | Contract linked to commercial or treasury financing for this counterparty |
+| `67` | ContractAbove | Contract above clearing threshold for this counterparty |
+| `68` | VolntyRptPty | Voluntary reporting party |
+| `69` | EndUser | End user |
+| `70` | LocationOrJurisdiction | Location or jurisdiction |
+| `71` | DerivativesDealer | Derivatives dealer |
+| `72` | Domicile | Domicile |
+| `73` | ExemptFromRecognition | Exempt from recognition |
+| `74` | Payer | Payer |
+| `75` | Receiver | Receiver |
+| `76` | SystematicInternaliser | Systematic Internaliser (SI) |
+| `77` | PublishingEntityIndicator | Publishing entity indicator |
+| `78` | FirstName | First name |
+| `79` | Surname | Surname |
+| `80` | DateOfBirth | Date of birth |
+| `81` | OrderTransmittingFirm | Order transmitting firm |
+| `82` | OrderTransmittingFirmBuyer | Order transmitting firm for buyer |
+| `83` | OrderTransmitterSeller | Order transmitter for seller |
+| `84` | LegalEntityIdentifier | Legal Entity Identifier (ISO 17442) LEI |
+| `85` | SubSectorClassification | Sub-sector classification |
+| `86` | PartySide | Party side |
+| `87` | LegalRegistrationCountry | Legal registration country |
+
+Used in: [PaymentSettlPtysSubGrp](/fix/groups/payment-settl-ptys-sub-grp)
+
+## 40241 · NoLegStreams [#tag-40241]
+
+<Badge intent="info" minimal>Tag 40241</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of swap streams in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegStreamGrp](/fix/groups/leg-stream-grp)
+
+## 40242 · LegStreamType [#tag-40242]
+
+<Badge intent="info" minimal>Tag 40242</Badge> <Badge intent="note" minimal>StreamTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Type of swap stream.
+
+Code set **StreamTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | PaymentCashSettlement | Payment / cash settlement |
+| `1` | PhysicalDelivery | Physical delivery |
+
+Used in: [LegStreamGrp](/fix/groups/leg-stream-grp)
+
+## 40243 · LegStreamDesc [#tag-40243]
+
+<Badge intent="info" minimal>Tag 40243</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A short descriptive name given to the payment stream, e.g. CDS, Fixed, Float, Float2, GBP. The description has no intrinsic meaning but should be arbitrarily chosen by the remitter as a reference.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegStreamGrp](/fix/groups/leg-stream-grp)
+
+## 40244 · LegStreamPaySide [#tag-40244]
+
+<Badge intent="info" minimal>Tag 40244</Badge> <Badge intent="note" minimal>PaymentPaySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The side of the party paying the stream.
+
+Code set **PaymentPaySideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Buy | Buy |
+| `2` | Sell | Sell |
+
+Used in: [LegStreamGrp](/fix/groups/leg-stream-grp)
+
+## 40245 · LegStreamReceiveSide [#tag-40245]
+
+<Badge intent="info" minimal>Tag 40245</Badge> <Badge intent="note" minimal>PaymentPaySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The side of the party receiving the stream.
+
+Code set **PaymentPaySideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Buy | Buy |
+| `2` | Sell | Sell |
+
+Used in: [LegStreamGrp](/fix/groups/leg-stream-grp)
+
+## 40246 · LegStreamNotional [#tag-40246]
+
+<Badge intent="info" minimal>Tag 40246</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Notional, or initial notional value for the payment stream. The LegPaymentSchedule component should be used for specifying the steps.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [LegStreamGrp](/fix/groups/leg-stream-grp)
+
+## 40247 · LegStreamCurrency [#tag-40247]
+
+<Badge intent="info" minimal>Tag 40247</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency the LegStreamNotional(40246) is denominated in. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [LegStreamGrp](/fix/groups/leg-stream-grp)
+
+## 40248 · LegStreamText [#tag-40248]
+
+<Badge intent="info" minimal>Tag 40248</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Free form text to specify additional information or enumeration description when a standard value does not apply.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegStreamGrp](/fix/groups/leg-stream-grp)
+
+## 40249 · LegStreamEffectiveDateUnadjusted [#tag-40249]
+
+<Badge intent="info" minimal>Tag 40249</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted effective date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegStreamEffectiveDate](/fix/components/leg-stream-effective-date)
+
+## 40250 · LegStreamEffectiveDateBusinessDayConvention [#tag-40250]
+
+<Badge intent="info" minimal>Tag 40250</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the instrument leg's stream's effective date or relative effective date. Used only to override the business day convention specified in the LegDateAdjustment component within the InstrumentLeg component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [LegStreamEffectiveDate](/fix/components/leg-stream-effective-date)
+
+## 40251 · LegStreamEffectiveDateBusinessCenter [#tag-40251]
+
+<Badge intent="info" minimal>Tag 40251</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the instrument leg's stream's effective date or relative effective date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegStreamEffectiveDateBusinessCenterGrp](/fix/groups/leg-stream-effective-date-business-center-grp)
+
+## 40252 · LegStreamEffectiveDateRelativeTo [#tag-40252]
+
+<Badge intent="info" minimal>Tag 40252</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the effective date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegStreamEffectiveDate](/fix/components/leg-stream-effective-date)
+
+## 40253 · LegStreamEffectiveDateOffsetPeriod [#tag-40253]
+
+<Badge intent="info" minimal>Tag 40253</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative effective date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegStreamEffectiveDate](/fix/components/leg-stream-effective-date)
+
+## 40254 · LegStreamEffectiveDateOffsetUnit [#tag-40254]
+
+<Badge intent="info" minimal>Tag 40254</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative effective date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegStreamEffectiveDate](/fix/components/leg-stream-effective-date)
+
+## 40255 · LegStreamEffectiveDateOffsetDayType [#tag-40255]
+
+<Badge intent="info" minimal>Tag 40255</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the relative effective date offset.
+
+Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [LegStreamEffectiveDate](/fix/components/leg-stream-effective-date)
+
+## 40256 · LegStreamEffectiveDateAdjusted [#tag-40256]
+
+<Badge intent="info" minimal>Tag 40256</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted effective date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegStreamEffectiveDate](/fix/components/leg-stream-effective-date)
+
+## 40257 · LegStreamTerminationDateUnadjusted [#tag-40257]
+
+<Badge intent="info" minimal>Tag 40257</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted termination date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegStreamTerminationDate](/fix/components/leg-stream-termination-date)
+
+## 40258 · LegStreamTerminationDateBusinessDayConvention [#tag-40258]
+
+<Badge intent="info" minimal>Tag 40258</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the instrument leg's stream's termination, or relative termination, date. Used only to override the business day convention specified in the LegDateAdjustment component within the InstrumentLeg component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [LegStreamTerminationDate](/fix/components/leg-stream-termination-date)
+
+## 40259 · LegStreamTerminationDateBusinessCenter [#tag-40259]
+
+<Badge intent="info" minimal>Tag 40259</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the instrument leg's stream's termination, or relative termination, date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegStreamTerminationDateBusinessCenterGrp](/fix/groups/leg-stream-termination-date-business-center-grp)
+
+## 40260 · LegStreamTerminationDateRelativeTo [#tag-40260]
+
+<Badge intent="info" minimal>Tag 40260</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the termination date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegStreamTerminationDate](/fix/components/leg-stream-termination-date)
+
+## 40261 · LegStreamTerminationDateOffsetPeriod [#tag-40261]
+
+<Badge intent="info" minimal>Tag 40261</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative termination date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegStreamTerminationDate](/fix/components/leg-stream-termination-date)
+
+## 40262 · LegStreamTerminationDateOffsetUnit [#tag-40262]
+
+<Badge intent="info" minimal>Tag 40262</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative termination date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegStreamTerminationDate](/fix/components/leg-stream-termination-date)
+
+## 40263 · LegStreamTerminationDateOffsetDayType [#tag-40263]
+
+<Badge intent="info" minimal>Tag 40263</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the relative termination date offset.
+
+Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [LegStreamTerminationDate](/fix/components/leg-stream-termination-date)
+
+## 40264 · LegStreamTerminationDateAdjusted [#tag-40264]
+
+<Badge intent="info" minimal>Tag 40264</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted termination date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegStreamTerminationDate](/fix/components/leg-stream-termination-date)
+
+## 40265 · LegStreamCalculationPeriodBusinessDayConvention [#tag-40265]
+
+<Badge intent="info" minimal>Tag 40265</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust calculation periods. Used only to override the business day convention specified in the LegDateAdjustment component within the InstrumentLeg component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [LegStreamCalculationPeriodDates](/fix/components/leg-stream-calculation-period-dates)
+
+## 40266 · LegStreamCalculationPeriodBusinessCenter [#tag-40266]
+
+<Badge intent="info" minimal>Tag 40266</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust calculation periods, e.g. "GLBO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegStreamCalculationPeriodBusinessCenterGrp](/fix/groups/leg-stream-calculation-period-business-center-grp)
+
+## 40267 · LegStreamFirstPeriodStartDateUnadjusted [#tag-40267]
+
+<Badge intent="info" minimal>Tag 40267</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted first calculation period start date if before the effective date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegStreamCalculationPeriodDates](/fix/components/leg-stream-calculation-period-dates)
+
+## 40268 · LegStreamFirstPeriodStartDateBusinessDayConvention [#tag-40268]
+
+<Badge intent="info" minimal>Tag 40268</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the instrument leg's stream's first calculation period start date. Used only to override the business day convention specified in the LegDateAdjustment component within the InstrumentLeg component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [LegStreamCalculationPeriodDates](/fix/components/leg-stream-calculation-period-dates)
+
+## 40269 · LegStreamFirstPeriodStartDateBusinessCenter [#tag-40269]
+
+<Badge intent="info" minimal>Tag 40269</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the instrument leg's stream's first calculation period start date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegStreamFirstPeriodStartDateBusinessCenterGrp](/fix/groups/leg-stream-first-period-start-date-business-center-grp)
+
+## 40270 · LegStreamFirstPeriodStartDateAdjusted [#tag-40270]
+
+<Badge intent="info" minimal>Tag 40270</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted first calculation period start date, if it is before the effective date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegStreamCalculationPeriodDates](/fix/components/leg-stream-calculation-period-dates)
+
+## 40271 · LegStreamFirstRegularPeriodStartDateUnadjusted [#tag-40271]
+
+<Badge intent="info" minimal>Tag 40271</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted first start date of the regular calculation period, if there is an initial stub period.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegStreamCalculationPeriodDates](/fix/components/leg-stream-calculation-period-dates)
+
+## 40272 · LegStreamFirstCompoundingPeriodEndDateUnadjusted [#tag-40272]
+
+<Badge intent="info" minimal>Tag 40272</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted end date of the initial compounding period.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegStreamCalculationPeriodDates](/fix/components/leg-stream-calculation-period-dates)
+
+## 40273 · LegStreamLastRegularPeriodEndDateUnadjusted [#tag-40273]
+
+<Badge intent="info" minimal>Tag 40273</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted last regular period end date if there is a final stub period.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegStreamCalculationPeriodDates](/fix/components/leg-stream-calculation-period-dates)
+
+## 40274 · LegStreamCalculationFrequencyPeriod [#tag-40274]
+
+<Badge intent="info" minimal>Tag 40274</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the frequency at which calculation period end dates occur.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegStreamCalculationPeriodDates](/fix/components/leg-stream-calculation-period-dates)
+
+## 40275 · LegStreamCalculationFrequencyUnit [#tag-40275]
+
+<Badge intent="info" minimal>Tag 40275</Badge> <Badge intent="note" minimal>CouponFrequencyUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the frequency at which calculation period end dates occur.
+
+Code set **CouponFrequencyUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+| `H` | Hour | Hour |
+| `Min` | Minute | Minute |
+| `S` | Second | Second |
+| `T` | Term | Term |
+
+Used in: [LegStreamCalculationPeriodDates](/fix/components/leg-stream-calculation-period-dates)
+
+## 40276 · LegStreamCalculationRollConvention [#tag-40276]
+
+<Badge intent="info" minimal>Tag 40276</Badge> <Badge intent="note" minimal>DateRollConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The convention for determining the sequence of end dates. It is used in conjunction with a specified frequency. Used only to override the roll convention specified in the LegDateAdjustment component within the InstrumentLeg component.
+
+Code set **DateRollConventionCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | FirstDay | 1st day of the month |
+| `2` | SecondDay | 2nd day of the month |
+| `3` | ThirdDay | 3rd day of the month |
+| `4` | FourthDay | 4th day of the month |
+| `5` | FifthDay | 5th day of the month |
+| `6` | SixthDay | 6thd day of the month |
+| `7` | SeventhDay | 7th day of the month |
+| `8` | EighthDay | 8th day of the month |
+| `9` | NinthDay | 9th day of the month |
+| `10` | TenthDay | 10th day of the month |
+| `11` | EleventhDay | 11th day of the month |
+| `12` | TwelvthDay | 12th day of the month |
+| `13` | ThirteenthDay | 13th day of the month |
+| `14` | ForteenthDay | 14th day of the month |
+| `15` | FifteenthDay | 15th day of the month |
+| `16` | SixteenthDay | 16th day of the month |
+| `17` | SeventeenthDay | 17th day of the month |
+| `18` | EighteenthDay | 18th day of the month |
+| `19` | NineteenthDay | 19th day of the month |
+| `20` | TwentiethDay | 20th day of the month |
+| `21` | TwentyFirstDay | 21st day of the month |
+| `22` | TwentySecondDay | 22nd day of the month |
+| `23` | TwentyThirdDay | 23rd day of the month |
+| `24` | TwentyFourthDay | 24th day of the month |
+| `25` | TwentyFifthDay | 25th day of the month |
+| `26` | TwentySixthDay | 26th day of the month |
+| `27` | TwentySeventhDay | 27th day of the month |
+| `28` | TwentyEigthDa28y | 28th day of the month |
+| `29` | TwentyNinthDay | 29th day of the month |
+| `30` | ThirtiethDay | 30th day of the month |
+| `EOM` | EOM | The end of the month. |
+| `FRN` | FRN | The floating rate note convention or Eurodollar convention. |
+| `IMM` | IMM | The International Money Market settlement date, i.e. the 3rd Wednesday of the month. |
+| `IMMCAD` | IMMCAD | The last trading day/expiration day of the Canadian Derivatives Exchange. |
+| `IMMAUD` | IMMAUD | The last trading day of the Sydney Futures Exchange Australian 90-day bank accepted bill futures contract. |
+| `IMMNZD` | IMMNZD | The last trading day of the Sydney Futures Exchange New Zealand 90-day bank bill futures contract. |
+| `SFE` | SFE | The Sydney Futures Exchange 90-day bank accepted bill futures settlement dates. |
+| `NONE` | NONE | No adjustment |
+| `TBILL` | TBILL | The 13-week and 26-week U.S. Treasury Bill auction dates. |
+| `MON` | MON | Monday |
+| `TUE` | TUE | Tuesday |
+| `WED` | WED | Wednesday |
+| `THU` | THU | Thursday |
+| `FRI` | FRI | Friday |
+| `SAT` | SAT | Saturday |
+| `SUN` | SUN | Sunday |
+
+Used in: [LegStreamCalculationPeriodDates](/fix/components/leg-stream-calculation-period-dates)
+
+## 40277 · NoCashSettlDealers [#tag-40277]
+
+<Badge intent="info" minimal>Tag 40277</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of dealers in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [CashSettlDealerGrp](/fix/groups/cash-settl-dealer-grp)
+
+## 40278 · NoBusinessCenters [#tag-40278]
+
+<Badge intent="info" minimal>Tag 40278</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of business centers in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [BusinessCenterGrp](/fix/groups/business-center-grp)
+
+## 40279 · LegPaymentStreamType [#tag-40279]
+
+<Badge intent="info" minimal>Tag 40279</Badge> <Badge intent="note" minimal>PaymentStreamTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the type of payment stream applicable to the swap stream associated with the instrument leg.
+
+Code set **PaymentStreamTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Periodic | Periodic (default) |
+| `1` | Initial | Initial |
+| `2` | Single | Single |
+| `3` | Dividend | Dividend |
+| `4` | Interest | Interest |
+| `5` | DividendReturn | Dividend return |
+| `6` | PriceReturn | Price return |
+| `7` | TotalReturn | Total return |
+| `8` | Variance | Variance |
+| `9` | Correlation | Correlation |
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 40280 · LegPaymentStreamMarketRate [#tag-40280]
+
+<Badge intent="info" minimal>Tag 40280</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used only for credit index trade. This contains the credit spread ("fair value") at which the trade was executed. The market rate varies over the life of the index depending on market conditions. This is the price of the index as quoted by trading desks.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 40281 · LegPaymentStreamDelayIndicator [#tag-40281]
+
+<Badge intent="info" minimal>Tag 40281</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Applicable to credit default swaps on mortgage backed securities to specify whether payment delays are applicable to the fixed amount. Residential mortgage backed securities typically have a payment delay of 5 days between the coupon date of the reference obligation and the payment date of the synthetic swap. Commercial mortage backed securities do not typically have a payment delay, with both payment dates (the coupon date of the reference obligation and the payment date of the synthetic swap) being on the 25th of each month.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 40282 · LegPaymentStreamSettlCurrency [#tag-40282]
+
+<Badge intent="info" minimal>Tag 40282</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency that the stream settles in (to support swaps that settle in a currency different from the notional currency). Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 40283 · LegPaymentStreamDayCount [#tag-40283]
+
+<Badge intent="info" minimal>Tag 40283</Badge> <Badge intent="note" minimal>CouponDayCountCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The day count convention used in the payment stream calculations.
+
+Code set **CouponDayCountCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | OneOne | 1/1 |
+| `1` | ThirtyThreeSixtyUS | 30/360 (30U/360 or Bond Basis) |
+| `2` | ThirtyThreeSixtySIA | 30/360 (SIA) |
+| `3` | ThirtyThreeSixtyM | 30/360M |
+| `4` | ThirtyEThreeSixty | 30E/360 (Eurobond Basis) |
+| `5` | ThirtyEThreeSixtyISDA | 30E/360 (ISDA) |
+| `6` | ActThreeSixty | Act/360 |
+| `7` | ActThreeSixtyFiveFixed | Act/365 (FIXED) |
+| `8` | ActActAFB | Act/Act (AFB) |
+| `9` | ActActICMA | Act/Act (ICMA) |
+| `10` | ActActISMAUltimo | Act/Act (ICMA Ultimo) |
+| `11` | ActActISDA | Act/Act (ISDA) |
+| `12` | BusTwoFiftyTwo | BUS/252 |
+| `13` | ThirtyEPlusThreeSixty | 30E+/360 |
+| `14` | ActThreeSixtyFiveL | Act/365L |
+| `15` | NLThreeSixtyFive | NL365 |
+| `16` | NLThreeSixty | NL360 |
+| `17` | Act364 | Act/364 |
+| `18` | ThirtyThreeSixtyFive | 30/365 |
+| `19` | ThirtyActual | 30/Actual |
+| `20` | ThirtyThreeSixtyICMA | 30/360 (ICMA or basis rule) |
+| `21` | ThirtyETwoThreeSixty | 30E2/360 (Eurobond basis model two) |
+| `22` | ThirtyEThreeThreeSixty | 30E3/360 (Eurobond basis model three) |
+| `99` | Other | Other |
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 40284 · LegPaymentStreamAccrualDays [#tag-40284]
+
+<Badge intent="info" minimal>Tag 40284</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The number of days from the adjusted calculation period start date to the adjusted value date, calculated in accordance with the applicable day count fraction.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 40285 · LegPaymentStreamDiscountType [#tag-40285]
+
+<Badge intent="info" minimal>Tag 40285</Badge> <Badge intent="note" minimal>PaymentStreamDiscountTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The method of calculating discounted payment amounts.
+
+Code set **PaymentStreamDiscountTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Standard | Standard |
+| `1` | FRA | Forward Rate Agreement (FRA) |
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 40286 · LegPaymentStreamDiscountRate [#tag-40286]
+
+<Badge intent="info" minimal>Tag 40286</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Discount rate. The rate is expressed in decimal, e.g. 5% is expressed as 0.05.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 40287 · LegPaymentStreamDiscountRateDayCount [#tag-40287]
+
+<Badge intent="info" minimal>Tag 40287</Badge> <Badge intent="note" minimal>CouponDayCountCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The day count convention applied to the LegPaymentStreamDiscountRate(40286).
+
+Code set **CouponDayCountCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | OneOne | 1/1 |
+| `1` | ThirtyThreeSixtyUS | 30/360 (30U/360 or Bond Basis) |
+| `2` | ThirtyThreeSixtySIA | 30/360 (SIA) |
+| `3` | ThirtyThreeSixtyM | 30/360M |
+| `4` | ThirtyEThreeSixty | 30E/360 (Eurobond Basis) |
+| `5` | ThirtyEThreeSixtyISDA | 30E/360 (ISDA) |
+| `6` | ActThreeSixty | Act/360 |
+| `7` | ActThreeSixtyFiveFixed | Act/365 (FIXED) |
+| `8` | ActActAFB | Act/Act (AFB) |
+| `9` | ActActICMA | Act/Act (ICMA) |
+| `10` | ActActISMAUltimo | Act/Act (ICMA Ultimo) |
+| `11` | ActActISDA | Act/Act (ISDA) |
+| `12` | BusTwoFiftyTwo | BUS/252 |
+| `13` | ThirtyEPlusThreeSixty | 30E+/360 |
+| `14` | ActThreeSixtyFiveL | Act/365L |
+| `15` | NLThreeSixtyFive | NL365 |
+| `16` | NLThreeSixty | NL360 |
+| `17` | Act364 | Act/364 |
+| `18` | ThirtyThreeSixtyFive | 30/365 |
+| `19` | ThirtyActual | 30/Actual |
+| `20` | ThirtyThreeSixtyICMA | 30/360 (ICMA or basis rule) |
+| `21` | ThirtyETwoThreeSixty | 30E2/360 (Eurobond basis model two) |
+| `22` | ThirtyEThreeThreeSixty | 30E3/360 (Eurobond basis model three) |
+| `99` | Other | Other |
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 40288 · LegPaymentStreamCompoundingMethod [#tag-40288]
+
+<Badge intent="info" minimal>Tag 40288</Badge> <Badge intent="note" minimal>PaymentStreamCompoundingMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Compounding method.
+
+Code set **PaymentStreamCompoundingMethodCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | None | None |
+| `1` | Flat | Flat |
+| `2` | Straight | Straight |
+| `3` | SpreadExclusive | Spread exclusive |
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 40289 · LegPaymentStreamInitialPrincipalExchangeIndicator [#tag-40289]
+
+<Badge intent="info" minimal>Tag 40289</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether there is an initial exchange of principal on the effective date.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 40290 · LegPaymentStreamInterimPrincipalExchangeIndicator [#tag-40290]
+
+<Badge intent="info" minimal>Tag 40290</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether there are intermediate or interim exchanges of principal during the term of the swap.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 40291 · LegPaymentStreamFinalPrincipalExchangeIndicator [#tag-40291]
+
+<Badge intent="info" minimal>Tag 40291</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether there is a final exchange of principal on the termination date.
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [LegPaymentStream](/fix/components/leg-payment-stream)
+
+## 40292 · LegPaymentStreamPaymentDateBusinessDayConvention [#tag-40292]
+
+<Badge intent="info" minimal>Tag 40292</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the payment stream's payment date. Used only to override the business day convention specified in the LegDateAdjustment component within the InstrumentLeg component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [LegPaymentStreamPaymentDates](/fix/components/leg-payment-stream-payment-dates)
+
+## 40293 · LegPaymentStreamPaymentDateBusinessCenter [#tag-40293]
+
+<Badge intent="info" minimal>Tag 40293</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the payment stream's payment date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegPaymentStreamPaymentDateBusinessCenterGrp](/fix/groups/leg-payment-stream-payment-date-business-center-grp)
+
+## 40294 · LegPaymentStreamPaymentFrequencyPeriod [#tag-40294]
+
+<Badge intent="info" minimal>Tag 40294</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the frequency of payments.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamPaymentDates](/fix/components/leg-payment-stream-payment-dates)
+
+## 40295 · LegPaymentStreamPaymentFrequencyUnit [#tag-40295]
+
+<Badge intent="info" minimal>Tag 40295</Badge> <Badge intent="note" minimal>PaymentStreamPaymentFrequencyUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the frequency of payments.
+
+Code set **PaymentStreamPaymentFrequencyUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+| `T` | Term | Term |
+
+Used in: [LegPaymentStreamPaymentDates](/fix/components/leg-payment-stream-payment-dates)
+
+## 40296 · LegPaymentStreamPaymentRollConvention [#tag-40296]
+
+<Badge intent="info" minimal>Tag 40296</Badge> <Badge intent="note" minimal>DateRollConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The convention for determining the sequence of end dates. It is used in conjunction with a specified frequency. Used only to override the roll convention specified in the LegDateAdjustment component within the InstrumentLeg component.
+
+Code set **DateRollConventionCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | FirstDay | 1st day of the month |
+| `2` | SecondDay | 2nd day of the month |
+| `3` | ThirdDay | 3rd day of the month |
+| `4` | FourthDay | 4th day of the month |
+| `5` | FifthDay | 5th day of the month |
+| `6` | SixthDay | 6thd day of the month |
+| `7` | SeventhDay | 7th day of the month |
+| `8` | EighthDay | 8th day of the month |
+| `9` | NinthDay | 9th day of the month |
+| `10` | TenthDay | 10th day of the month |
+| `11` | EleventhDay | 11th day of the month |
+| `12` | TwelvthDay | 12th day of the month |
+| `13` | ThirteenthDay | 13th day of the month |
+| `14` | ForteenthDay | 14th day of the month |
+| `15` | FifteenthDay | 15th day of the month |
+| `16` | SixteenthDay | 16th day of the month |
+| `17` | SeventeenthDay | 17th day of the month |
+| `18` | EighteenthDay | 18th day of the month |
+| `19` | NineteenthDay | 19th day of the month |
+| `20` | TwentiethDay | 20th day of the month |
+| `21` | TwentyFirstDay | 21st day of the month |
+| `22` | TwentySecondDay | 22nd day of the month |
+| `23` | TwentyThirdDay | 23rd day of the month |
+| `24` | TwentyFourthDay | 24th day of the month |
+| `25` | TwentyFifthDay | 25th day of the month |
+| `26` | TwentySixthDay | 26th day of the month |
+| `27` | TwentySeventhDay | 27th day of the month |
+| `28` | TwentyEigthDa28y | 28th day of the month |
+| `29` | TwentyNinthDay | 29th day of the month |
+| `30` | ThirtiethDay | 30th day of the month |
+| `EOM` | EOM | The end of the month. |
+| `FRN` | FRN | The floating rate note convention or Eurodollar convention. |
+| `IMM` | IMM | The International Money Market settlement date, i.e. the 3rd Wednesday of the month. |
+| `IMMCAD` | IMMCAD | The last trading day/expiration day of the Canadian Derivatives Exchange. |
+| `IMMAUD` | IMMAUD | The last trading day of the Sydney Futures Exchange Australian 90-day bank accepted bill futures contract. |
+| `IMMNZD` | IMMNZD | The last trading day of the Sydney Futures Exchange New Zealand 90-day bank bill futures contract. |
+| `SFE` | SFE | The Sydney Futures Exchange 90-day bank accepted bill futures settlement dates. |
+| `NONE` | NONE | No adjustment |
+| `TBILL` | TBILL | The 13-week and 26-week U.S. Treasury Bill auction dates. |
+| `MON` | MON | Monday |
+| `TUE` | TUE | Tuesday |
+| `WED` | WED | Wednesday |
+| `THU` | THU | Thursday |
+| `FRI` | FRI | Friday |
+| `SAT` | SAT | Saturday |
+| `SUN` | SUN | Sunday |
+
+Used in: [LegPaymentStreamPaymentDates](/fix/components/leg-payment-stream-payment-dates)
+
+## 40297 · LegPaymentStreamFirstPaymentDateUnadjusted [#tag-40297]
+
+<Badge intent="info" minimal>Tag 40297</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted first payment date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegPaymentStreamPaymentDates](/fix/components/leg-payment-stream-payment-dates)
+
+## 40298 · LegPaymentStreamLastRegularPaymentDateUnadjusted [#tag-40298]
+
+<Badge intent="info" minimal>Tag 40298</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted last regular payment date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegPaymentStreamPaymentDates](/fix/components/leg-payment-stream-payment-dates)
+
+## 40299 · LegPaymentStreamPaymentDateRelativeTo [#tag-40299]
+
+<Badge intent="info" minimal>Tag 40299</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when payment dates are relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamPaymentDates](/fix/components/leg-payment-stream-payment-dates)
+
+## 40300 · LegPaymentStreamPaymentDateOffsetPeriod [#tag-40300]
+
+<Badge intent="info" minimal>Tag 40300</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative payment date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamPaymentDates](/fix/components/leg-payment-stream-payment-dates)
+
+## 40301 · LegPaymentStreamPaymentDateOffsetUnit [#tag-40301]
+
+<Badge intent="info" minimal>Tag 40301</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative payment date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegPaymentStreamPaymentDates](/fix/components/leg-payment-stream-payment-dates)
+
+## 40302 · LegPaymentStreamPaymentDateOffsetDayType [#tag-40302]
+
+<Badge intent="info" minimal>Tag 40302</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the relative payment date offset.
+
+Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [LegPaymentStreamPaymentDates](/fix/components/leg-payment-stream-payment-dates)
+
+## 40303 · LegPaymentStreamResetDateRelativeTo [#tag-40303]
+
+<Badge intent="info" minimal>Tag 40303</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the reset dates are relative to an anchor date. If the reset frequency is specified as daily this element must not be included. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40304 · LegPaymentStreamResetDateBusinessDayConvention [#tag-40304]
+
+<Badge intent="info" minimal>Tag 40304</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the payment stream's reset date. Used only to override the business day convention specified in the LegDateAdjustment component within the InstrumentLeg component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40305 · LegPaymentStreamResetDateBusinessCenter [#tag-40305]
+
+<Badge intent="info" minimal>Tag 40305</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the payment stream's reset date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegPaymentStreamResetDateBusinessCenterGrp](/fix/groups/leg-payment-stream-reset-date-business-center-grp)
+
+## 40306 · LegPaymentStreamResetFrequencyPeriod [#tag-40306]
+
+<Badge intent="info" minimal>Tag 40306</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for frequency of resets.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40307 · LegPaymentStreamResetFrequencyUnit [#tag-40307]
+
+<Badge intent="info" minimal>Tag 40307</Badge> <Badge intent="note" minimal>CouponFrequencyUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with frequency of resets.
+
+Code set **CouponFrequencyUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+| `H` | Hour | Hour |
+| `Min` | Minute | Minute |
+| `S` | Second | Second |
+| `T` | Term | Term |
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40308 · LegPaymentStreamResetWeeklyRollConvention [#tag-40308]
+
+<Badge intent="info" minimal>Tag 40308</Badge> <Badge intent="note" minimal>PaymentStreamResetWeeklyRollConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Used to specify the day of the week in which the reset occurs for payments that reset on a weekly basis.
+
+Code set **PaymentStreamResetWeeklyRollConventionCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `MON` | Monday | Monday |
+| `TUE` | Tuesday | Tuesday |
+| `WED` | Wednesday | Wednesday |
+| `THU` | Thursday | Thursday |
+| `FRI` | Friday | Friday |
+| `SAT` | Saturday | Saturday |
+| `SUN` | Sunday | Sunday |
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40309 · LegPaymentStreamInitialFixingDateRelativeTo [#tag-40309]
+
+<Badge intent="info" minimal>Tag 40309</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the initial fixing date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40310 · LegPaymentStreamInitialFixingDateBusinessDayConvention [#tag-40310]
+
+<Badge intent="info" minimal>Tag 40310</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the payment stream's initial fixing date. Used only to override the business day convention specified in the LegDateAdjustment component within the InstrumentLeg component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40311 · LegPaymentStreamInitialFixingDateBusinessCenter [#tag-40311]
+
+<Badge intent="info" minimal>Tag 40311</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the payment stream's initial fixing date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegPaymentStreamInitialFixingDateBusinessCenterGrp](/fix/groups/leg-payment-stream-initial-fixing-date-business-center-grp)
+
+## 40312 · LegPaymentStreamInitialFixingDateOffsetPeriod [#tag-40312]
+
+<Badge intent="info" minimal>Tag 40312</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative initial fixing date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40313 · LegPaymentStreamInitialFixingDateOffsetUnit [#tag-40313]
+
+<Badge intent="info" minimal>Tag 40313</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative initial fixing date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40314 · LegPaymentStreamInitialFixingDateOffsetDayType [#tag-40314]
+
+<Badge intent="info" minimal>Tag 40314</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the relative initial fixing date offset.
+
+Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40315 · LegPaymentStreamInitialFixingDateAdjusted [#tag-40315]
+
+<Badge intent="info" minimal>Tag 40315</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted initial fixing date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40316 · LegPaymentStreamFixingDateRelativeTo [#tag-40316]
+
+<Badge intent="info" minimal>Tag 40316</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the fixing date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40317 · LegPaymentStreamFixingDateBusinessDayConvention [#tag-40317]
+
+<Badge intent="info" minimal>Tag 40317</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the payment stream's fixing date. Used only to override the business day convention specified in the LegDateAdjustment component within the InstrumentLeg component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40318 · LegPaymentStreamFixingDateBusinessCenter [#tag-40318]
+
+<Badge intent="info" minimal>Tag 40318</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the payment stream's fixing date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegPaymentStreamFixingDateBusinessCenterGrp](/fix/groups/leg-payment-stream-fixing-date-business-center-grp)
+
+## 40319 · LegPaymentStreamFixingDateOffsetPeriod [#tag-40319]
+
+<Badge intent="info" minimal>Tag 40319</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative fixing date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40320 · LegPaymentStreamFixingDateOffsetUnit [#tag-40320]
+
+<Badge intent="info" minimal>Tag 40320</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative fixing date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40321 · LegPaymentStreamFixingDateOffsetDayType [#tag-40321]
+
+<Badge intent="info" minimal>Tag 40321</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the relative fixing date offset.
+
+Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40322 · LegPaymentStreamFixingDateAdjusted [#tag-40322]
+
+<Badge intent="info" minimal>Tag 40322</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted fixing date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40323 · LegPaymentStreamRateCutoffDateOffsetPeriod [#tag-40323]
+
+<Badge intent="info" minimal>Tag 40323</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative rate cut-off date offset.
+
+This is generally the number of days preceeding the period end date or termination date, as appropriate, for the specified floating rate index.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40324 · LegPaymentStreamRateCutoffDateOffsetUnit [#tag-40324]
+
+<Badge intent="info" minimal>Tag 40324</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative rate cut-off date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40325 · LegPaymentStreamRateCutoffDateOffsetDayType [#tag-40325]
+
+<Badge intent="info" minimal>Tag 40325</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the relative rate cut-off date offset.
+
+Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [LegPaymentStreamResetDates](/fix/components/leg-payment-stream-reset-dates)
+
+## 40326 · LegPaymentStreamRate [#tag-40326]
+
+<Badge intent="info" minimal>Tag 40326</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The rate applicable to the fixed rate payment stream.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [LegPaymentStreamFixedRate](/fix/components/leg-payment-stream-fixed-rate)
+
+## 40327 · LegPaymentStreamFixedAmount [#tag-40327]
+
+<Badge intent="info" minimal>Tag 40327</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The leg instrument payment stream's fixed payment amount. In a CDS, this can be an alternative to LegPaymentStreamRate(40326).
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [LegPaymentStreamFixedRate](/fix/components/leg-payment-stream-fixed-rate)
+
+## 40328 · LegPaymentStreamRateOrAmountCurrency [#tag-40328]
+
+<Badge intent="info" minimal>Tag 40328</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the currency in which LegPaymentStreamFixedAmount(40327) or LegPaymentStreamRate(40326) is denominated. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [LegPaymentStreamFixedRate](/fix/components/leg-payment-stream-fixed-rate)
+
+## 40329 · LegPaymentStreamFutureValueNotional [#tag-40329]
+
+<Badge intent="info" minimal>Tag 40329</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The future value notional is normally only required for certain non-deliverable interest rate swaps (e.g. Brazillian Real (BRL) vs. CETIP Interbank Deposit Rate (CDI)). The value is calculated as follows: Future Value Notional = Notional Amount \* (1 + Fixed Rate) ^ (Fixed Rate Day Count Fraction). The currency is the same as the stream notional.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [LegPaymentStreamFixedRate](/fix/components/leg-payment-stream-fixed-rate)
+
+## 40330 · LegPaymentStreamFutureValueDateAdjusted [#tag-40330]
+
+<Badge intent="info" minimal>Tag 40330</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The adjusted value date of the future value amount.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegPaymentStreamFixedRate](/fix/components/leg-payment-stream-fixed-rate)
+
+## 40331 · LegPaymentStreamRateIndex [#tag-40331]
+
+<Badge intent="info" minimal>Tag 40331</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The payment stream floating rate index.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40332 · LegPaymentStreamRateIndexSource [#tag-40332]
+
+<Badge intent="info" minimal>Tag 40332</Badge> <Badge intent="note" minimal>PaymentStreamRateIndexSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The source of the payment stream floating rate index.
+
+Code set **PaymentStreamRateIndexSourceCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Bloomberg | Bloomberg |
+| `1` | Reuters | Reuters |
+| `2` | Telerate | Telerate |
+| `99` | Other | Other |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40333 · LegPaymentStreamRateIndexCurveUnit [#tag-40333]
+
+<Badge intent="info" minimal>Tag 40333</Badge> <Badge intent="note" minimal>PaymentStreamRateIndexCurveUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the payment stream's floating rate index curve period.
+
+Code set **PaymentStreamRateIndexCurveUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40334 · LegPaymentStreamRateIndexCurvePeriod [#tag-40334]
+
+<Badge intent="info" minimal>Tag 40334</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the payment stream's floating rate index curve period.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40335 · LegPaymentStreamRateMultiplier [#tag-40335]
+
+<Badge intent="info" minimal>Tag 40335</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A rate multiplier to apply to the floating rate. The multiplier can be less than or greater than 1 (one). This element should only be included if the multiplier is not equal to 1 (one) for the term of the stream.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40336 · LegPaymentStreamRateSpread [#tag-40336]
+
+<Badge intent="info" minimal>Tag 40336</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The basis points spread from the index specified in LegPaymentStreamRateIndex(40331).
+
+Type: [PriceOffset](/fix/datatypes#price-offset)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40337 · LegPaymentStreamRateSpreadPositionType [#tag-40337]
+
+<Badge intent="info" minimal>Tag 40337</Badge> <Badge intent="note" minimal>PaymentStreamRateSpreadPositionTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies whether the rate spread is applied to a long or short position.
+
+Code set **PaymentStreamRateSpreadPositionTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Short | Short |
+| `1` | Long | Long |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40338 · LegPaymentStreamRateTreatment [#tag-40338]
+
+<Badge intent="info" minimal>Tag 40338</Badge> <Badge intent="note" minimal>PaymentStreamRateTreatmentCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the yield calculation treatment for the index.
+
+Code set **PaymentStreamRateTreatmentCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | BondEquivalentYield | Bond equivalent yield |
+| `1` | MoneyMarketYield | Money market yield |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40339 · LegPaymentStreamCapRate [#tag-40339]
+
+<Badge intent="info" minimal>Tag 40339</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The cap rate, if any, which applies to the floating rate. It is only required where the floating rate on a swap stream is capped at a certain level The cap rate is assumed to be exclusive of any spread and is a per annum rate, expressed as a decimal. A cap rate of 5% would be represented as 0.05.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40340 · LegPaymentStreamCapRateBuySide [#tag-40340]
+
+<Badge intent="info" minimal>Tag 40340</Badge> <Badge intent="note" minimal>PaymentStreamCapRateBuySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Reference to the buyer of the cap rate option through its trade side.
+
+Code set **PaymentStreamCapRateBuySideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Buyer | Buyer of the trade |
+| `2` | Seller | Seller of the trade |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40341 · LegPaymentStreamCapRateSellSide [#tag-40341]
+
+<Badge intent="info" minimal>Tag 40341</Badge> <Badge intent="note" minimal>PaymentStreamCapRateBuySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Reference to the seller of the cap rate option through its trade side.
+
+Code set **PaymentStreamCapRateBuySideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Buyer | Buyer of the trade |
+| `2` | Seller | Seller of the trade |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40342 · LegPaymentStreamFloorRate [#tag-40342]
+
+<Badge intent="info" minimal>Tag 40342</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The floor rate, if any, which applies to the floating rate. The floor rate (strike) is only required where the floating rate on a swap stream is floored at a certain strike level The floor rate is assumed to be exclusive of any spread and is a per annum rate. The rate is expressed as a decimal, e.g. 5% is represented as 0.05.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40343 · LegPaymentStreamFloorRateBuySide [#tag-40343]
+
+<Badge intent="info" minimal>Tag 40343</Badge> <Badge intent="note" minimal>PaymentStreamFloorRateBuySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Reference to the buyer of the floor rate option through its trade side.
+
+Code set **PaymentStreamFloorRateBuySideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Buyer | Buyer of the trade |
+| `2` | Seller | Seller of the trade |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40344 · LegPaymentStreamFloorRateSellSide [#tag-40344]
+
+<Badge intent="info" minimal>Tag 40344</Badge> <Badge intent="note" minimal>PaymentStreamFloorRateBuySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Reference to the seller of the floor rate option through its trade side.
+
+Code set **PaymentStreamFloorRateBuySideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Buyer | Buyer of the trade |
+| `2` | Seller | Seller of the trade |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40345 · LegPaymentStreamInitialRate [#tag-40345]
+
+<Badge intent="info" minimal>Tag 40345</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The initial floating rate reset agreed between the principal parties involved in the trade. This is assumed to be the first required reset rate for the first regular calculation period. It should only be included when the rate is not equal to the rate published on the source implied by the floating rate index. The initial rate is expressed in decimal form, e.g. 5% is represented as 0.05.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40346 · LegPaymentStreamFinalRateRoundingDirection [#tag-40346]
+
+<Badge intent="info" minimal>Tag 40346</Badge> <Badge intent="note" minimal>RoundingDirectionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the rounding direction.
+
+Code set **RoundingDirectionCodeSet** ([char](/fix/datatypes#char))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | RoundToNearest | Round to nearest |
+| `1` | RoundDown | Round down |
+| `2` | RoundUp | Round up |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40347 · LegPaymentStreamFinalRatePrecision [#tag-40347]
+
+<Badge intent="info" minimal>Tag 40347</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the rounding precision in terms of a number of decimal places. Note how a percentage rate rounding of 5 decimal places is expressed as a rounding precision of 7.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40348 · LegPaymentStreamAveragingMethod [#tag-40348]
+
+<Badge intent="info" minimal>Tag 40348</Badge> <Badge intent="note" minimal>PaymentStreamAveragingMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+When averaging is applicable, used to specify whether a weighted or unweighted average method of calculation is to be used.
+
+Code set **PaymentStreamAveragingMethodCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Unweighted | Unweighted |
+| `1` | Weighted | Weighted |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40349 · LegPaymentStreamNegativeRateTreatment [#tag-40349]
+
+<Badge intent="info" minimal>Tag 40349</Badge> <Badge intent="note" minimal>PaymentStreamNegativeRateTreatmentCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The specification of any provisions for calculating payment obligations when a floating rate is negative (either due to a quoted negative floating rate or by operation of a spread that is subtracted from the floating rate).
+
+Code set **PaymentStreamNegativeRateTreatmentCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | ZeroInterestRateMethod | Zero interest rate method |
+| `1` | NegativeInterestRateMethod | Negative interest rate method |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40350 · LegPaymentStreamInflationLagPeriod [#tag-40350]
+
+<Badge intent="info" minimal>Tag 40350</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the inflation lag period. The lag period is the offsetting period from the payment date which determineds the reference period for which the inflation index is observed.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40351 · LegPaymentStreamInflationLagUnit [#tag-40351]
+
+<Badge intent="info" minimal>Tag 40351</Badge> <Badge intent="note" minimal>PaymentStreamInflationLagUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the inflation lag period.
+
+Code set **PaymentStreamInflationLagUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40352 · LegPaymentStreamInflationLagDayType [#tag-40352]
+
+<Badge intent="info" minimal>Tag 40352</Badge> <Badge intent="note" minimal>PaymentStreamInflationLagDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The inflation lag period day type.
+
+Code set **PaymentStreamInflationLagDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40353 · LegPaymentStreamInflationInterpolationMethod [#tag-40353]
+
+<Badge intent="info" minimal>Tag 40353</Badge> <Badge intent="note" minimal>PaymentStreamInflationInterpolationMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The method used when calculating the inflation index level from multiple points. The most common is linear method.
+
+Code set **PaymentStreamInflationInterpolationMethodCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | None | None |
+| `1` | LinearZeroYield | Linear zero yield |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40354 · LegPaymentStreamInflationIndexSource [#tag-40354]
+
+<Badge intent="info" minimal>Tag 40354</Badge> <Badge intent="note" minimal>PaymentStreamRateIndexSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The inflation index reference source.
+
+Code set **PaymentStreamRateIndexSourceCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Bloomberg | Bloomberg |
+| `1` | Reuters | Reuters |
+| `2` | Telerate | Telerate |
+| `99` | Other | Other |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40355 · LegPaymentStreamInflationPublicationSource [#tag-40355]
+
+<Badge intent="info" minimal>Tag 40355</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The publication source, such as relevant web site, news publication or a government body, where inflation information is obtained.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40356 · LegPaymentStreamInflationInitialIndexLevel [#tag-40356]
+
+<Badge intent="info" minimal>Tag 40356</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Initial known index level for the first calculation period.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40357 · LegPaymentStreamInflationFallbackBondApplicable [#tag-40357]
+
+<Badge intent="info" minimal>Tag 40357</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates whether a fallback bond as defined in the 2006 ISDA Inflation Derivatives Definitions, sections 1.3 and 1.8, is applicable or not. If not specified, the default value is "Y" (True/Yes).
+
+Type: [Boolean](/fix/datatypes#boolean)
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40358 · LegPaymentStreamFRADiscounting [#tag-40358]
+
+<Badge intent="info" minimal>Tag 40358</Badge> <Badge intent="note" minimal>PaymentStreamFRADiscountingCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The method of Forward Rate Agreement (FRA) discounting, if any, that will apply.
+
+Code set **PaymentStreamFRADiscountingCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | None | None |
+| `1` | ISDA | International Swaps and Derivatives Association (ISDA) |
+| `2` | AFMA | Australian Financial Markets Association (AFMA) |
+
+Used in: [LegPaymentStreamFloatingRate](/fix/components/leg-payment-stream-floating-rate)
+
+## 40359 · LegPaymentStreamNonDeliverableRefCurrency [#tag-40359]
+
+<Badge intent="info" minimal>Tag 40359</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Non-deliverable settlement reference currency. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [LegPaymentStreamNonDeliverableSettlTerms](/fix/components/leg-payment-stream-non-deliverable-settl-terms)
+
+## 40360 · LegPaymentStreamNonDeliverableFixingDatesBusinessDayConvention [#tag-40360]
+
+<Badge intent="info" minimal>Tag 40360</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the payment stream's fixing date for the non-deliverable settlement terms. Used only to override the business day convention specified in the LegDateAdjustment component within the InstrumentLeg component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [LegPaymentStreamNonDeliverableSettlTerms](/fix/components/leg-payment-stream-non-deliverable-settl-terms)
+
+## 40361 · LegPaymentStreamNonDeliverableFixingDatesBusinessCenter [#tag-40361]
+
+<Badge intent="info" minimal>Tag 40361</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business center calendar used to adjust the payment stream's fixing date for the non-deliverable terms, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegPaymentStreamNonDeliverableFixingDatesBusinessCenterGrp](/fix/groups/leg-payment-stream-non-deliverable-fixing-dates-business-center-grp)
+
+## 40362 · LegPaymentStreamNonDeliverableFixingDatesRelativeTo [#tag-40362]
+
+<Badge intent="info" minimal>Tag 40362</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the non-deliverable fixing dates are relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamNonDeliverableSettlTerms](/fix/components/leg-payment-stream-non-deliverable-settl-terms)
+
+## 40363 · LegPaymentStreamNonDeliverableFixingDatesOffsetPeriod [#tag-40363]
+
+<Badge intent="info" minimal>Tag 40363</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the relative non-deliverable fixing date offset.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentStreamNonDeliverableSettlTerms](/fix/components/leg-payment-stream-non-deliverable-settl-terms)
+
+## 40364 · LegPaymentStreamNonDeliverableFixingDatesOffsetUnit [#tag-40364]
+
+<Badge intent="info" minimal>Tag 40364</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the relative non-deliverable fixing date offset.
+
+Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+
+Used in: [LegPaymentStreamNonDeliverableSettlTerms](/fix/components/leg-payment-stream-non-deliverable-settl-terms)
+
+## 40365 · LegPaymentStreamNonDeliverableFixingDatesOffsetDayType [#tag-40365]
+
+<Badge intent="info" minimal>Tag 40365</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the day type of the relative non-deliverable fixing date offset.
+
+Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Business | Business |
+| `1` | Calendar | Calendar |
+| `2` | CommodityBusiness | Commodity business |
+| `3` | CurrencyBusiness | Currency business |
+| `4` | ExchangeBusiness | Exchange business |
+| `5` | ScheduledTradingDay | Scheduled trading day |
+
+Used in: [LegPaymentStreamNonDeliverableSettlTerms](/fix/components/leg-payment-stream-non-deliverable-settl-terms)
+
+## 40366 · LegSettlRateFallbackRateSource [#tag-40366]
+
+<Badge intent="info" minimal>Tag 40366</Badge> <Badge intent="note" minimal>RateSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the source of rate information.
+
+Code set **RateSourceCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Bloomberg | Bloomberg |
+| `1` | Reuters | Reuters |
+| `2` | Telerate | Telerate |
+| `3` | ISDARateOption | ISDA Settlement Rate Option |
+| `99` | Other | Other |
+
+Used in: [LegSettlRateFallbackRateSource](/fix/components/leg-settl-rate-fallback-rate-source)
+
+## 40367 · NoLegNonDeliverableFixingDates [#tag-40367]
+
+<Badge intent="info" minimal>Tag 40367</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of fixing dates in the repeating group.
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegPaymentStreamNonDeliverableFixingDateGrp](/fix/groups/leg-payment-stream-non-deliverable-fixing-date-grp)
+
+## 40368 · LegNonDeliverableFixingDate [#tag-40368]
+
+<Badge intent="info" minimal>Tag 40368</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The non-deliverable fixing date. Type of date is specified in LegNonDeliverableFixingDateType(40369).
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegPaymentStreamNonDeliverableFixingDateGrp](/fix/groups/leg-payment-stream-non-deliverable-fixing-date-grp)
+
+## 40369 · LegNonDeliverableFixingDateType [#tag-40369]
+
+<Badge intent="info" minimal>Tag 40369</Badge> <Badge intent="note" minimal>NonDeliverableFixingDateTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of date (e.g. adjusted for holidays).
+
+Code set **NonDeliverableFixingDateTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Unadjusted | Unadjusted |
+| `1` | Adjusted | Adjusted |
+
+Used in: [LegPaymentStreamNonDeliverableFixingDateGrp](/fix/groups/leg-payment-stream-non-deliverable-fixing-date-grp)
+
+## 40370 · LegSettlRateFallbackReferencePage [#tag-40370]
+
+<Badge intent="info" minimal>Tag 40370</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the reference "page" from the rate source. When LegSettlRateFallbackRateSource(40366) = 3(ISDA Settlement Rate Option) this contains the value from the scheme that reflects the terms of the Annex A to the ISDA 1998 FX and Currency Option Definitions. See: http://www.fpml.org/coding-scheme/settlement-rate-option
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [LegSettlRateFallbackRateSource](/fix/components/leg-settl-rate-fallback-rate-source)
+
+## 40371 · PaymentStreamNonDeliverableSettlRateSource [#tag-40371]
+
+<Badge intent="info" minimal>Tag 40371</Badge> <Badge intent="note" minimal>RateSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the source of rate information.
+
+Code set **RateSourceCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Bloomberg | Bloomberg |
+| `1` | Reuters | Reuters |
+| `2` | Telerate | Telerate |
+| `3` | ISDARateOption | ISDA Settlement Rate Option |
+| `99` | Other | Other |
+
+Used in: [PaymentStreamNonDeliverableSettlRateSource](/fix/components/payment-stream-non-deliverable-settl-rate-source)
+
+## 40372 · PaymentStreamNonDeliverableSettlReferencePage [#tag-40372]
+
+<Badge intent="info" minimal>Tag 40372</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the reference "page" from the rate source. When PaymentStreamNonDeliverableSettlRateSource(40371) = 3(ISDA Settlement Rate Option) this contains the value from the scheme that reflects the terms of the Annex A to the ISDA 1998 FX and Currency Option Definitions. See: http://www.fpml.org/coding-scheme/settlement-rate-option
+
+Type: [String](/fix/datatypes#string)
+
+Used in: [PaymentStreamNonDeliverableSettlRateSource](/fix/components/payment-stream-non-deliverable-settl-rate-source)
+
+## 40373 · SettlRateFallbackRateSource [#tag-40373]
+
+<Badge intent="info" minimal>Tag 40373</Badge> <Badge intent="note" minimal>RateSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies the source of rate information.
+
+Code set **RateSourceCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Bloomberg | Bloomberg |
+| `1` | Reuters | Reuters |
+| `2` | Telerate | Telerate |
+| `3` | ISDARateOption | ISDA Settlement Rate Option |
+| `99` | Other | Other |
+
+Used in: [SettlRateFallbackRateSource](/fix/components/settl-rate-fallback-rate-source)
+
+## 40374 · NoLegPaymentSchedules [#tag-40374]
+
+<Badge intent="info" minimal>Tag 40374</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Number of swap schedules in the repeating group
+
+Type: [NumInGroup](/fix/datatypes#num-in-group)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40375 · LegPaymentScheduleType [#tag-40375]
+
+<Badge intent="info" minimal>Tag 40375</Badge> <Badge intent="note" minimal>PaymentScheduleTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the type of schedule.
+
+Code set **PaymentScheduleTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Notional | Notional |
+| `1` | CashFlow | Cash flow |
+| `2` | FXLinkedNotional | FX linked notional |
+| `3` | FixedRate | Fixed rate |
+| `4` | FutureValueNotional | Future value notional |
+| `5` | KnownAmount | Known amount |
+| `6` | FloatingRateMultiplier | Floating rate multiplier |
+| `7` | Spread | Spread |
+| `8` | CapRate | Cap rate |
+| `9` | FloorRate | Floor rate |
+| `10` | NonDeliverableSettlPaymentDates | Non-deliverable settlement payment dates |
+| `11` | NonDeliverableSettlCalculationDates | Non-deliverable settlement calculation dates |
+| `12` | NonDeliverableFXFixingDates | Non-deliverable fixing dates. |
+| `13` | SettlPeriodNotnl | Settlement period notional |
+| `14` | SettlPeriodPx | Settlement period price |
+| `15` | CalcPeriod | Calculation period |
+| `16` | DividendAccrualRateMultiplier | Dividend accrual rate multiplier |
+| `17` | DividendAccrualRateSpread | Dividend accrual rate spread |
+| `18` | DividendAccrualCapRate | Dividend accrual cap rate |
+| `19` | DividendAccrualFloorRate | Dividend accrual floor rate |
+| `20` | CompoundingRateMultiplier | Compounding rate multiplier |
+| `21` | CompoundingRateSpread | Compounding rate spread |
+| `22` | CompoundingCapRate | Compounding cap rate |
+| `23` | CompoundingFloorRate | Compounding floor rate |
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40376 · LegPaymentScheduleStubType [#tag-40376]
+
+<Badge intent="info" minimal>Tag 40376</Badge> <Badge intent="note" minimal>PaymentStubTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Indicates to which stub this schedule applies.
+
+Code set **PaymentStubTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Initial | Initial |
+| `1` | Final | Final |
+| `2` | CompoundingInitial | Compounding initial |
+| `3` | CompoundingFinal | Compounding final |
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40377 · LegPaymentScheduleStartDateUnadjusted [#tag-40377]
+
+<Badge intent="info" minimal>Tag 40377</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted date on which the value is adjusted, or calculated if a future value notional for certain non-deliverable interest rate swaps (e.g. Brazillian Real (BRL) vs. CETIP Interbank Deposit Rate (CDI)), or the start date of a cashflow payment.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40378 · LegPaymentScheduleEndDateUnadjusted [#tag-40378]
+
+<Badge intent="info" minimal>Tag 40378</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted end date of a cashflow payment.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40379 · LegPaymentSchedulePaySide [#tag-40379]
+
+<Badge intent="info" minimal>Tag 40379</Badge> <Badge intent="note" minimal>PaymentPaySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The side of the party paying the step schedule.
+
+Code set **PaymentPaySideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Buy | Buy |
+| `2` | Sell | Sell |
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40380 · LegPaymentScheduleReceiveSide [#tag-40380]
+
+<Badge intent="info" minimal>Tag 40380</Badge> <Badge intent="note" minimal>PaymentPaySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The side of the party receiving the step schedule.
+
+Code set **PaymentPaySideCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `1` | Buy | Buy |
+| `2` | Sell | Sell |
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40381 · LegPaymentScheduleNotional [#tag-40381]
+
+<Badge intent="info" minimal>Tag 40381</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The notional value for this step schedule, or amount of a cashflow payment.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40382 · LegPaymentScheduleCurrency [#tag-40382]
+
+<Badge intent="info" minimal>Tag 40382</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The currency for this step schedule. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40383 · LegPaymentScheduleRate [#tag-40383]
+
+<Badge intent="info" minimal>Tag 40383</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The rate value for this step schedule.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40384 · LegPaymentScheduleRateMultiplier [#tag-40384]
+
+<Badge intent="info" minimal>Tag 40384</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A rate multiplier to apply to the floating rate. The multiplier can be less than or greater than 1 (one). This element should only be included if the multiplier is not equal to 1 (one) for the term of the stream.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40385 · LegPaymentScheduleRateSpread [#tag-40385]
+
+<Badge intent="info" minimal>Tag 40385</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The spread value for this step schedule.
+
+Type: [PriceOffset](/fix/datatypes#price-offset)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40386 · LegPaymentScheduleRateSpreadPositionType [#tag-40386]
+
+<Badge intent="info" minimal>Tag 40386</Badge> <Badge intent="note" minimal>PaymentStreamRateSpreadPositionTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Identifies whether the rate spread is applied to a long or a short position.
+
+Code set **PaymentStreamRateSpreadPositionTypeCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Short | Short |
+| `1` | Long | Long |
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40387 · LegPaymentScheduleRateTreatment [#tag-40387]
+
+<Badge intent="info" minimal>Tag 40387</Badge> <Badge intent="note" minimal>PaymentStreamRateTreatmentCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the yield calculation treatment for the step schedule.
+
+Code set **PaymentStreamRateTreatmentCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | BondEquivalentYield | Bond equivalent yield |
+| `1` | MoneyMarketYield | Money market yield |
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40388 · LegPaymentScheduleFixedAmount [#tag-40388]
+
+<Badge intent="info" minimal>Tag 40388</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The explicit payment amount for this step schedule.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40389 · LegPaymentScheduleFixedCurrency [#tag-40389]
+
+<Badge intent="info" minimal>Tag 40389</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The currency of the fixed amount. Uses ISO 4217 currency codes.
+
+Type: [Currency](/fix/datatypes#currency)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40390 · LegPaymentScheduleStepFrequencyPeriod [#tag-40390]
+
+<Badge intent="info" minimal>Tag 40390</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit multiplier for the step frequency.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40391 · LegPaymentScheduleStepFrequencyUnit [#tag-40391]
+
+<Badge intent="info" minimal>Tag 40391</Badge> <Badge intent="note" minimal>CouponFrequencyUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Time unit associated with the step frequency.
+
+Code set **CouponFrequencyUnitCodeSet** ([String](/fix/datatypes#string))
+
+| Value | Name | Description |
+|---|---|---|
+| `D` | Day | Day |
+| `Wk` | Week | Week |
+| `Mo` | Month | Month |
+| `Yr` | Year | Year |
+| `H` | Hour | Hour |
+| `Min` | Minute | Minute |
+| `S` | Second | Second |
+| `T` | Term | Term |
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40392 · LegPaymentScheduleStepOffsetValue [#tag-40392]
+
+<Badge intent="info" minimal>Tag 40392</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The explicit amount that the notional changes on each step date. This can be a positive or negative amount.
+
+Type: [Amt](/fix/datatypes#amt)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40393 · LegPaymentScheduleStepRate [#tag-40393]
+
+<Badge intent="info" minimal>Tag 40393</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The percentage by which the notional changes on each step date. The percentage is either a percentage applied to the initial notional amount or the previous outstanding notional, depending on the value specified in LegPaymentScheduleStepRelativeTo(40395). The percentage can be either positive or negative.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40394 · LegPaymentScheduleStepOffsetRate [#tag-40394]
+
+<Badge intent="info" minimal>Tag 40394</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The explicit amount that the rate changes on each step date. This can be a positive or negative value.
+
+Type: [Percentage](/fix/datatypes#percentage)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40395 · LegPaymentScheduleStepRelativeTo [#tag-40395]
+
+<Badge intent="info" minimal>Tag 40395</Badge> <Badge intent="note" minimal>PaymentScheduleStepRelativeToCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies whether the LegPaymentScheduleStepRate(40393) or LegPaymentScheduleStepOffsetValue(40392) should be applied to the initial notional or the previous notional in order to calculate the notional step change amount.
+
+Code set **PaymentScheduleStepRelativeToCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | Initial | Initial |
+| `1` | Previous | Previous |
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40396 · LegPaymentScheduleFixingDateUnadjusted [#tag-40396]
+
+<Badge intent="info" minimal>Tag 40396</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The unadjusted fixing date.
+
+Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40397 · LegPaymentScheduleWeight [#tag-40397]
+
+<Badge intent="info" minimal>Tag 40397</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Floating rate observation weight for cashflow payment.
+
+Type: [float](/fix/datatypes#float)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40398 · LegPaymentScheduleFixingDateRelativeTo [#tag-40398]
+
+<Badge intent="info" minimal>Tag 40398</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Specifies the anchor date when the fixing date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
+
+Type: [int](/fix/datatypes#int)
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+
+## 40399 · LegPaymentScheduleFixingDateBusinessDayConvention [#tag-40399]
+
+<Badge intent="info" minimal>Tag 40399</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+The business day convention used to adjust the payment schedule's fixing date. Used only to override the business day convention specified in the LegDateAdjustment component within the InstrumentLeg component.
+
+Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
+
+| Value | Name | Description |
+|---|---|---|
+| `0` | NotApplicable | Not applicable |
+| `1` | None | None (current day) |
+| `2` | FollowingDay | Following day |
+| `3` | FloatingRateNote | Floating rate note |
+| `4` | ModifiedFollowingDay | Modified following day |
+| `5` | PrecedingDay | Preceding day |
+| `6` | ModifiedPrecedingDay | Modified preceding day |
+| `7` | NearestDay | Nearest day |
+
+Used in: [LegPaymentScheduleGrp](/fix/groups/leg-payment-schedule-grp)
+

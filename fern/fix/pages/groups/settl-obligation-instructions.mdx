@@ -1,0 +1,36 @@
+---
+title: "SettlObligationInstructions"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1165</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoSettlOblig (1165)](/fix/fields/tags-1000-1199#tag-1165).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 430 | [NetGrossInd](/fix/fields/tags-400-599#tag-430) | NetGrossIndCodeSet | Optional | Code to represent whether value is net (inclusive of tax) or gross. |
+| 1161 | [SettlObligID](/fix/fields/tags-1000-1199#tag-1161) | String | Optional | Unique ID for this settlement instruction |
+| 1162 | [SettlObligTransType](/fix/fields/tags-1000-1199#tag-1162) | SettlObligTransTypeCodeSet | Optional | New, Replace, Cancel, or Restate |
+| 1163 | [SettlObligRefID](/fix/fields/tags-1000-1199#tag-1163) | String | Optional | Required where SettlObligTransType(1162) is Cancel or Replace. The SettlObligID(1161) of the settlement obligation being canceled or replaced. |
+| 1157 | [CcyAmt](/fix/fields/tags-1000-1199#tag-1157) | Amt | Optional | Net flow of currency 1 |
+| 119 | [SettlCurrAmt](/fix/fields/tags-0-199#tag-119) | Amt | Optional | Net flow of currency 2 |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Currency 1 in the stated currency pair, the dealt currency |
+| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120) | Currency | Optional | Currency 2 in the stated currency pair, the contra currency |
+| 155 | [SettlCurrFxRate](/fix/fields/tags-0-199#tag-155) | float | Optional | Derived rate of Ccy2 per Ccy1 based on netting |
+| 64 | [SettlDate](/fix/fields/tags-0-199#tag-64) | LocalMktDate | Optional | Value Date |
+| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 168 | [EffectiveTime](/fix/fields/tags-0-199#tag-168) | UTCTimestamp | Optional | Effective (start) date/time for this settlement instruction |
+| 126 | [ExpireTime](/fix/fields/tags-0-199#tag-126) | UTCTimestamp | Optional | Termination date/time for this settlement instruction. |
+| 779 | [LastUpdateTime](/fix/fields/tags-600-799#tag-779) | UTCTimestamp | Optional | Date/time this settlement instruction was last updated (or created if not updated since creation). |
+| 1158 | [SettlDetails](/fix/groups/settl-details) | Repeating group | Optional |  |
+
+</StickyTable>
+
+## Used in
+
+[SettlementObligationReport](/fix/messages/settlement-obligation-report)

@@ -1,0 +1,55 @@
+---
+title: "PositionMaintenanceRequest"
+subtitle: "The Position Maintenance Request message allows the position owner to submit requests to the holder of a position which will result in a specific action being taken which will affect the position. Generally, the holder of the position is a…"
+---
+
+<Badge intent="info">MsgType AL</Badge> <Badge intent="note" minimal>Position Maintenance</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 710 | [PosReqID](/fix/fields/tags-600-799#tag-710) | String | Optional | Unique identifier for the position maintenance request as assigned by the submitter. Conditionally required when used in a request/reply scenario (i.e. not required in batch scenario) |
+| 709 | [PosTransType](/fix/fields/tags-600-799#tag-709) | PosTransTypeCodeSet | **Required** | Identifies the type of position transaction. |
+| 712 | [PosMaintAction](/fix/fields/tags-600-799#tag-712) | PosMaintActionCodeSet | **Required** | Maintenance Action to be performed. |
+| 713 | [OrigPosReqRefID](/fix/fields/tags-600-799#tag-713) | String | Optional | Reference to the PosReqID of a previous maintenance request that is being replaced or canceled. |
+| 714 | [PosMaintRptRefID](/fix/fields/tags-600-799#tag-714) | String | Optional | Reference to a PosMaintRptID from a previous Position Maintenance Report that is being replaced or canceled. |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | **Required** | The Clearing Business Date referred to by this maintenance request |
+| 64 | [SettlDate](/fix/fields/tags-0-199#tag-64) | LocalMktDate | Optional | Specific date of trade settlement (SettlementDate) in YYYYMMDD format. If present, this field overrides SettlType (63). This field is required if the value of SettlType (63) is 6 (Future) or 8 (Sellers Option). This field must be omitted if the value of SettlType (63) is 7 (When and If Issued)… |
+| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716) | SettlSessIDCodeSet | Optional | Identifies a specific settlement session |
+| 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717) | String | Optional | SubID value associated with SettlSessID(716) |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | **Required** | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
+| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in their system. |
+| 581 | [AccountType](/fix/fields/tags-400-599#tag-581) | AccountTypeCodeSet | Optional | Type of account associated with the order (Origin) |
+| | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency value whenever possible. See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values. |
+| 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
+| 1647 | [RelatedInstrumentGrp](/fix/groups/related-instrument-grp) | Repeating group | Optional | The RelatedInstrumentGrp is a repeating component at the same hierarchical level as the Instrument component, describing relationships and linkages between the Instrument, UnderlyingInstrument and InstrumentLeg entries. If all instances of the UnderlyingInstrument in the message are true underliers… |
+| 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
+| 386 | [TrdgSesGrp](/fix/groups/trdg-ses-grp) | Repeating group | Optional |  |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Time this order request was initiated/released by the trader, trading system, or intermediary. |
+| 702 | [PositionQty](/fix/groups/position-qty) | Repeating group | **Required** | The PositionQty component block specifies the various types of position quantity in the position life-cycle including start-of-day, intraday, trade, adjustments, and end-of-day position quantities. Quantities are expressed in terms of long and short quantities. |
+| 753 | [PositionAmountData](/fix/groups/position-amount-data) | Repeating group | Optional | The PositionAmountData component block is used to report netted amounts associated with position quantities. In the listed derivatives market the amount is generally expressing a type of futures variation or option premium. In the equities market this may be the net pay or collect on a given… |
+| 718 | [AdjustmentType](/fix/fields/tags-600-799#tag-718) | AdjustmentTypeCodeSet | Optional | Type of adjustment to be applied, used for PCS & PAJ Delta\_plus, Delta\_minus, Final, If Adjustment Type is null, the request will be processed as Margin Disposition |
+| 719 | [ContraryInstructionIndicator](/fix/fields/tags-600-799#tag-719) | Boolean | Optional | Boolean - if Y then indicates you are requesting a position maintenance that acting |
+| 720 | [PriorSpreadIndicator](/fix/fields/tags-600-799#tag-720) | Boolean | Optional | Boolean - Y indicates you are requesting rollover of prior day's spread submissions |
+| 834 | [ThresholdAmount](/fix/fields/tags-800-999#tag-834) | PriceOffset | Optional | Amount that a position has to be in the money before it is exercised. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120) | Currency | Optional | Currency code of settlement denomination. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="PositionMaintenanceRequest" wordWrap
+8=FIXT.1.1|9=116|35=AL|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|709=1|712=1|715=20260102|453=1|448=ABC123|702=1|703=ALC|10=168|
+```

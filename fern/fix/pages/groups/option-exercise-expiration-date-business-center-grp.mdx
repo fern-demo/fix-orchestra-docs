@@ -1,0 +1,22 @@
+---
+title: "OptionExerciseExpirationDateBusinessCenterGrp"
+subtitle: "The OptionExerciseExpirationDateBusinessCenterGrp is a repeating subcomponent of the OptionExerciseExpiration component used to specify the set of business centers whose calendars drive date adjustment. Used only to override the business…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41140</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoOptionExerciseExpirationDateBusinessCenters (41140)](/fix/fields/tags-41000-41199#tag-41140).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41141 | [OptionExerciseExpirationDateBusinessCenter](/fix/fields/tags-41000-41199#tag-41141) | String | Optional | Required if NoOptionExerciseExpirationDateBusinessCenters(41140) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[OptionExerciseExpiration](/fix/components/option-exercise-expiration)

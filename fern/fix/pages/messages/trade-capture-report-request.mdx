@@ -1,0 +1,69 @@
+---
+title: "TradeCaptureReportRequest"
+subtitle: "The Trade Capture Report Request can be used to: • Request one or more trade capture reports based upon selection criteria provided on the trade capture report request • Subscribe for trade capture reports based upon selection criteria…"
+---
+
+<Badge intent="info">MsgType AD</Badge> <Badge intent="note" minimal>Trade Capture</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 568 | [TradeRequestID](/fix/fields/tags-400-599#tag-568) | String | **Required** | Unique identifier for the trade request. |
+| 1003 | [TradeID](/fix/fields/tags-1000-1199#tag-1003) | String | Optional | The unique ID assigned to the trade entity once it is received or matched by the exchange or central counterparty. |
+| 1040 | [SecondaryTradeID](/fix/fields/tags-1000-1199#tag-1040) | String | Optional | Used to carry an internal trade entity ID which may or may not be reported to the firm |
+| 1041 | [FirmTradeID](/fix/fields/tags-1000-1199#tag-1041) | String | Optional | The ID assigned to a trade by the Firm to track a trade within the Firm system. This ID can be assigned either before or after submission to the exchange or central counterpary |
+| 1042 | [SecondaryFirmTradeID](/fix/fields/tags-1000-1199#tag-1042) | String | Optional | Used to carry an internal firm assigned ID which may or may not be reported to the exchange or central counterpary |
+| 569 | [TradeRequestType](/fix/fields/tags-400-599#tag-569) | TradeRequestTypeCodeSet | **Required** | Type of Trade Capture Report. |
+| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263) | SubscriptionRequestTypeCodeSet | Optional | If the field is absent, SubscriptionRequestType(263)=0(Snapshot) will be the default. |
+| 571 | [TradeReportID](/fix/fields/tags-400-599#tag-571) | String | Optional | Can be used to request a specific trade report. |
+| 818 | [SecondaryTradeReportID](/fix/fields/tags-800-999#tag-818) | String | Optional | To request a specific trade report |
+| 527 | [SecondaryExecID](/fix/fields/tags-400-599#tag-527) | String | Optional | To request all trades based on secondary execution identifier |
+| 17 | [ExecID](/fix/fields/tags-0-199#tag-17) | String | Optional | Unique identifier of execution message as assigned by sell-side (broker, exchange, ECN) (will be 0 (zero) for ExecType (150)=I (Order Status)). Uniqueness must be guaranteed within a single trading day or the life of a multi-day order. Firms which accept multi-day orders should consider embedding a… |
+| 150 | [ExecType](/fix/fields/tags-0-199#tag-150) | ExecTypeCodeSet | Optional | Can be used to request all trades of a specific execution type. |
+| 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | Optional | Unique identifier for Order as assigned by sell-side (broker, exchange, ECN). Uniqueness must be guaranteed within a single trading day. Firms which accept multi-day orders should consider embedding a date within the OrderID field to assure uniqueness across days. |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | Unique identifier for Order as assigned by the buy-side (institution, broker, intermediary etc.) (identified by SenderCompID (49) or OnBehalfOfCompID (5) as appropriate). Uniqueness must be guaranteed within a single trading day. Firms, particularly those which electronically submit multi-day… |
+| 573 | [MatchStatus](/fix/fields/tags-400-599#tag-573) | MatchStatusCodeSet | Optional | The status of this trade with respect to matching or comparison. |
+| 828 | [TrdType](/fix/fields/tags-800-999#tag-828) | TrdTypeCodeSet | Optional | Can be used to request all trades of a specific trade type. |
+| 829 | [TrdSubType](/fix/fields/tags-800-999#tag-829) | TrdSubTypeCodeSet | Optional | Can be used to request all trades of a specific trade sub type. |
+| 1849 | [OffsetInstruction](/fix/fields/tags-1800-1999#tag-1849) | OffsetInstructionCodeSet | Optional | Indicates the trade is a result of an offset or onset. |
+| 1123 | [TradeHandlingInstr](/fix/fields/tags-1000-1199#tag-1123) | TradeHandlingInstrCodeSet | Optional | Specified how the TradeCaptureReport(35=AE) should be handled by the respondent. |
+| 830 | [TransferReason](/fix/fields/tags-800-999#tag-830) | String | Optional | Can be used to request all trades for a specific transfer reason. |
+| 855 | [SecondaryTrdType](/fix/fields/tags-800-999#tag-855) | TrdTypeCodeSet | Optional | Can be used to request all trades of a specific secondary trade type. |
+| 820 | [TradeLinkID](/fix/fields/tags-800-999#tag-820) | String | Optional | Can be used to request all trades of a specific trade link identifier. |
+| 880 | [TrdMatchID](/fix/fields/tags-800-999#tag-880) | String | Optional | Can be used to request a trade matching a specific TrdMatchID(880). |
+| 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by the FIX message containing the Parties Block. The Parties block allows many different types of entites to be expressed through use of the… |
+| | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in a security master database. The Instrument component block… |
+| | [InstrumentExtension](/fix/components/instrument-extension) | Component | Optional | The InstrumentExtension component block identifies additional security attributes that are more commonly found for Fixed Income securities. |
+| | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This component identifies the legal agreement under which the deal was made and other unique characteristics of the transaction. For example, the… |
+| 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
+| 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
+| 580 | [TrdCapDtGrp](/fix/groups/trd-cap-dt-grp) | Repeating group | Optional |  |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | Optional | Can be used to request trades for a specific clearing business date. |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Can be used to request trades for a specific trading session. |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Can be used to request trades for a specific trading session. |
+| 943 | [TimeBracket](/fix/fields/tags-800-999#tag-943) | String | Optional | Can be used to request trades within a specific time bracket. |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | Optional | Can be used to request trades for a specific side of a trade. |
+| 442 | [MultiLegReportingType](/fix/fields/tags-400-599#tag-442) | MultiLegReportingTypeCodeSet | Optional | Used to indicate if trades are to be returned for the individual legs of a multileg instrument or for the overall instrument. |
+| 578 | [TradeInputSource](/fix/fields/tags-400-599#tag-578) | String | Optional | Can be used to requests trades that were submitted from a specific trade input source. |
+| 579 | [TradeInputDevice](/fix/fields/tags-400-599#tag-579) | String | Optional | Can be used to request trades that were submitted from a specific trade input device. |
+| 725 | [ResponseTransportType](/fix/fields/tags-600-799#tag-725) | ResponseTransportTypeCodeSet | Optional | Identifies how the response to the request should be transmitted. Details specified via ResponseDestination (726). |
+| 726 | [ResponseDestination](/fix/fields/tags-600-799#tag-726) | String | Optional | URI (Uniform Resource Identifier) for details) or other pre-arranged value. Used in conjunction with ResponseTransportType (725) value of Out-of-Band to identify the out-of-band destination. See "Appendix 6-B FIX Fields Based Upon Other Standards" |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Used to match specific values within Text(58) fields. |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text(58) field. |
+| 1011 | [MessageEventSource](/fix/fields/tags-1000-1199#tag-1011) | String | Optional | Used to identify the event or source which gave rise to a message. Valid values will be based on an exchange's implementation. Example values are: "MQM" (originated at Firm Back Office) "Clear" (originated in Clearing System) "Reg" (static data generated via Register request) |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="TradeCaptureReportRequest" wordWrap
+8=FIXT.1.1|9=77|35=AD|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|568=ABC123|569=0|10=080|
+```

@@ -1,0 +1,33 @@
+---
+title: "RelatedInstrumentGrp"
+subtitle: "The RelatedInstrumentGrp is a repeating component at the same hierarchical level as the Instrument component, describing relationships and linkages between the Instrument, UnderlyingInstrument and InstrumentLeg entries. If all instances of…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1647</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+For simple relationships such as identifying a "hedges for" security the entry simply defines the symbol or identifier of an externally known security. For relationships within strategies and swaps the entry refers up through one of the "related to" fields to the Instrument, InstrumentLeg, UnderlyingInstrument, stream or dividend period with which the related security has correlation. It then points down through RelatedSecurityID(1650) or RelatedSymbol(1649) to an UnderlyingInstrument instance in the current message defining the related security. The nature of the relationship is given in RelatedInstrumentType(1648).
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedInstruments (1647)](/fix/fields/tags-1600-1799#tag-1647).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 1648 | [RelatedInstrumentType](/fix/fields/tags-1600-1799#tag-1648) | RelatedInstrumentTypeCodeSet | Optional | Conditionally required when NoRelatedInstruments &gt; 0 |
+| 1649 | [RelatedSymbol](/fix/fields/tags-1600-1799#tag-1649) | String | Optional | Either RelatedSymbol(1649) or RelatedSecurityID(1650) must be specified. For RelatedInstrumentType(1648)=1 ("hedges for" instrument) this would be the instrument being used to offset the option Instrument. If one of the "related to" fields is specified, this is the UnderlyingSymbol(311) of an… |
+| 1650 | [RelatedSecurityID](/fix/fields/tags-1600-1799#tag-1650) | String | Optional | Either RelatedSymbol(1649) or RelatedSecurityID(1650) must be specified. If one of the "related to" fields is specified, this is the UnderlyingSecurityID(309) of an underlying instrument defining the related security in the current message. |
+| 1651 | [RelatedSecurityIDSource](/fix/fields/tags-1600-1799#tag-1651) | SecurityIDSourceCodeSet | Optional | Conditionally required when RelatedSecurityID(1650) is specified. |
+| 1652 | [RelatedSecurityType](/fix/fields/tags-1600-1799#tag-1652) | String | Optional | May be omitted if RelatedSecurityID(1650) or RelatedSymbol(1649) refers to an underlying instrument in the current message. |
+| 1653 | [RelatedMaturityMonthYear](/fix/fields/tags-1600-1799#tag-1653) | MonthYear | Optional | May be omitted if RelatedSecurityID(1650) or RelatedSymbol(1649) refers to an underlying instrument in the current message. |
+| 2413 | [RelatedToSecurityID](/fix/fields/tags-2400-2599#tag-2413) | String | Optional | Mutually exclusive with RelatedToStreamXIDRef(2415) and RelatedToDividendPeriodXIDRef(2417). If correlation is with the security in Instrument component then all "related to" fields may be omitted. |
+| 2414 | [RelatedToSecurityIDSource](/fix/fields/tags-2400-2599#tag-2414) | SecurityIDSourceCodeSet | Optional | Conditionally required when RelatedToSecurityID(2413) is specified. |
+| 2415 | [RelatedToStreamXIDRef](/fix/fields/tags-2400-2599#tag-2415) | XIDREF | Optional | Mutually exclusive with RelatedToSecurityID(2413) and RelatedToDividendPeriodXIDRef(2417). If correlation is with the security in Instrument component then all "related to" fields may be omitted. |
+| 2417 | [RelatedToDividendPeriodXIDRef](/fix/fields/tags-2400-2599#tag-2417) | XIDREF | Optional | Mutually exclusive with RelatedToSecurityID(2413) and RelatedToStreamXIDRef(2415). If correlation is with the security in Instrument component then all "related to" fields may be omitted. |
+
+</StickyTable>
+
+## Used in
+
+[Advertisement](/fix/messages/advertisement), [IOI](/fix/messages/ioi), [InstrmtGrp](/fix/groups/instrmt-grp), [InstrmtMDReqGrp](/fix/groups/instrmt-md-req-grp), [MDIncGrp](/fix/groups/md-inc-grp), [MarketDataSnapshotFullRefresh](/fix/messages/market-data-snapshot-full-refresh), [MarketDataStatisticsReport](/fix/messages/market-data-statistics-report), [MarketDataStatisticsRequest](/fix/messages/market-data-statistics-request), [PositionMaintenanceReport](/fix/messages/position-maintenance-report), [PositionMaintenanceRequest](/fix/messages/position-maintenance-request), [PositionReport](/fix/messages/position-report), [SecListGrp](/fix/groups/sec-list-grp), [SecLstUpdRelSymGrp](/fix/groups/sec-lst-upd-rel-sym-grp), [SecMassStatGrp](/fix/groups/sec-mass-stat-grp), [SecurityDefinition](/fix/messages/security-definition), [SecurityDefinitionRequest](/fix/messages/security-definition-request), [SecurityDefinitionUpdateReport](/fix/messages/security-definition-update-report), [SecurityListRequest](/fix/messages/security-list-request), [SecurityStatus](/fix/messages/security-status), [SecurityStatusRequest](/fix/messages/security-status-request), [TradeCaptureReport](/fix/messages/trade-capture-report)

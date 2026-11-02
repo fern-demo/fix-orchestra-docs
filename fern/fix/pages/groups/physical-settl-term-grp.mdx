@@ -1,0 +1,26 @@
+---
+title: "PhysicalSettlTermGrp"
+subtitle: "The PhysicalSettlTermGrp is a repeating component within the Instrument component used to report physical settlement terms referenced from UnderlyingInstrument component."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40204</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPhysicalSettlTerms (40204)](/fix/fields/tags-40200-40399#tag-40204).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40209 | [PhysicalSettlDeliverableObligationGrp](/fix/groups/physical-settl-deliverable-obligation-grp) | Repeating group | Optional | The PhysicalSettlDeliverableObligationGrp is a repeating component within the PhysicalSettlTermGrp component used to report CDS physical settlement delivery obligations. |
+| 40205 | [PhysicalSettlCurrency](/fix/fields/tags-40200-40399#tag-40205) | Currency | Optional | Specifies the currency of physical settlement. Uses ISO 4217 currency codes. |
+| 40206 | [PhysicalSettlBusinessDays](/fix/fields/tags-40200-40399#tag-40206) | int | Optional | The number of business days used in the determination of physical settlement. Its precise meaning is dependant on the context in which this element is used. |
+| 40207 | [PhysicalSettlMaximumBusinessDays](/fix/fields/tags-40200-40399#tag-40207) | int | Optional | A maximum number of business days. Its precise meaning is dependant on the context in which this element is used. Intended to be used to limit a particular ISDA fallback provision. |
+| 40208 | [PhysicalSettlTermXID](/fix/fields/tags-40200-40399#tag-40208) | XID | Optional | A named string value referenced by UnderlyingSettlTermXIDRef(41315). |
+
+</StickyTable>
+
+## Used in
+
+[Instrument](/fix/components/instrument)

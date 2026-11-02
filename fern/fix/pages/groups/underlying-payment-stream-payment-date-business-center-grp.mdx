@@ -1,0 +1,22 @@
+---
+title: "UnderlyingPaymentStreamPaymentDateBusinessCenterGrp"
+subtitle: "UnderlyingPaymentStreamPaymentDateBusinessCenterGrp is a repeating subcomponent within the UnderlyingPaymentStreamPaymentDates component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40969</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingPaymentStreamPaymentDateBusinessCenters (40969)](/fix/fields/tags-40800-40999#tag-40969).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40582 | [UnderlyingPaymentStreamPaymentDateBusinessCenter](/fix/fields/tags-40400-40599#tag-40582) | String | Optional | Required if NoUnderlyingPaymentStreamPaymentDateBusinessCenters(40969) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[UnderlyingPaymentStreamPaymentDates](/fix/components/underlying-payment-stream-payment-dates)

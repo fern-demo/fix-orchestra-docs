@@ -1,0 +1,24 @@
+---
+title: "FinancingContractualMatrixGrp"
+subtitle: "The FinancingContractualMatrixGrp is a repeating component within the FinancingDetails component used to report the ISDA Physical Settlement Matrix Transaction Type."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40042</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoContractualMatrices (40042)](/fix/fields/tags-40000-40199#tag-40042).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40043 | [ContractualMatrixSource](/fix/fields/tags-40000-40199#tag-40043) | String | Optional | Required if NoContractualMatrices(40042) &gt; 0. |
+| 40044 | [ContractualMatrixDate](/fix/fields/tags-40000-40199#tag-40044) | LocalMktDate | Optional | The publication date of the applicable version of the contract matrix. If not specified, the ISDA Standard Terms Supplement defines rules for which version of the matrix is applicable. |
+| 40045 | [ContractualMatrixTerm](/fix/fields/tags-40000-40199#tag-40045) | String | Optional | Specifies the applicable key into the relevent contract matrix. In the case of 2000 ISDA Definitions Settlement Matrix for Early Termination and Swaptions, the ContractualMatrixTerm(40045) is not applicable and is to be omitted. See http://www.fpml.org/coding-scheme/credit-matrix-transaction-type… |
+
+</StickyTable>
+
+## Used in
+
+[FinancingDetails](/fix/components/financing-details)

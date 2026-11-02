@@ -1,0 +1,22 @@
+---
+title: "LegStreamEffectiveDateBusinessCenterGrp"
+subtitle: "LegStreamEffectiveDateBusinessCenterGrp is a repeating subcomponent within the LegStreamEffectiveDate component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40942</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegStreamEffectiveDateBusinessCenters (40942)](/fix/fields/tags-40800-40999#tag-40942).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40251 | [LegStreamEffectiveDateBusinessCenter](/fix/fields/tags-40200-40399#tag-40251) | String | Optional | Required if NoLegStreamEffectiveDateBusinessCenters(40942) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[LegStreamEffectiveDate](/fix/components/leg-stream-effective-date)

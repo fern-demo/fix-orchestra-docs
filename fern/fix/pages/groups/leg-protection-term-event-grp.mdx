@@ -1,0 +1,29 @@
+---
+title: "LegProtectionTermEventGrp"
+subtitle: "The LegProtectionTermEventGrp is a repeating component within the LegProtectionTermGrp component used to report applicable CDS credit events."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41625</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegProtectionTermEvents (41625)](/fix/fields/tags-41600-41799#tag-41625).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41626 | [LegProtectionTermEventType](/fix/fields/tags-41600-41799#tag-41626) | String | Optional | Required if NoLegProtectionTermEvents(41625) &gt; 0. |
+| 41627 | [LegProtectionTermEventValue](/fix/fields/tags-41600-41799#tag-41627) | String | Optional | Specifies the protection term event value appropriate to LegProtectionTermEventType(41626). See http:///www.fixtradingcommunity.org/codelists#Protection\_Term\_Event\_Types for applicable event type values. |
+| 41628 | [LegProtectionTermEventCurrency](/fix/fields/tags-41600-41799#tag-41628) | Currency | Optional | Applicable currency if the event value is an amount. Uses ISO 4217 currency codes. |
+| 41629 | [LegProtectionTermEventPeriod](/fix/fields/tags-41600-41799#tag-41629) | int | Optional | Conditionally required when LegProtectionTermEventUnit(41630). |
+| 41630 | [LegProtectionTermEventUnit](/fix/fields/tags-41600-41799#tag-41630) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when LegProtectionTermEventPeriod(41629). |
+| 41631 | [LegProtectionTermEventDayType](/fix/fields/tags-41600-41799#tag-41631) | PaymentStreamInflationLagDayTypeCodeSet | Optional | Specifies the day type for protection term events. |
+| 41632 | [LegProtectionTermEventRateSource](/fix/fields/tags-41600-41799#tag-41632) | String | Optional | Rate source for events that specify a rate source, e.g. floating rate interest shortfall. |
+| 41633 | [LegProtectionTermEventQualifierGrp](/fix/groups/leg-protection-term-event-qualifier-grp) | Repeating group | Optional | The LegProtectionTermEventQualifierGrp is a repeating component within the LegProtectionTermEventGrp component used to specify qualifying attributes to the event. |
+
+</StickyTable>
+
+## Used in
+
+[LegProtectionTermGrp](/fix/groups/leg-protection-term-grp)

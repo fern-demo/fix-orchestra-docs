@@ -1,0 +1,22 @@
+---
+title: "ComplexEventCreditEventQualifierGrp"
+subtitle: "The ComplexEventCreditEventQualifierGrp is a repeating component within the ComplexEventCreditEventGrp component used to specify qualifying attributes to an event."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41005</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoComplexEventCreditEventQualifiers (41005)](/fix/fields/tags-41000-41199#tag-41005).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 41006 | [ComplexEventCreditEventQualifier](/fix/fields/tags-41000-41199#tag-41006) | ProtectionTermEventQualifierCodeSet | Optional | Required if NoComplexEventCreditEventQualifiers(41005) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[ComplexEventCreditEventGrp](/fix/groups/complex-event-credit-event-grp)

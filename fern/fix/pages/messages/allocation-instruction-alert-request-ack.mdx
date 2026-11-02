@@ -1,0 +1,30 @@
+---
+title: "AllocationInstructionAlertRequestAck"
+subtitle: "This message is used in a clearinghouse 3-party allocation model to acknowledge a AllocationInstructionAlertRequest(35=DU) message for an AllocationInstructionAlert(35=BM) message from the clearinghouse."
+---
+
+<Badge intent="info">MsgType DV</Badge> <Badge intent="note" minimal>Allocation</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 2758 | [AllocRequestID](/fix/fields/tags-2600-2799#tag-2758) | String | **Required** | Used when responding to an AllocationInstructionAlertRequest(35=DU). |
+| 2768 | [AllocRequestStatus](/fix/fields/tags-2600-2799#tag-2768) | AllocRequestStatusCodeSet | **Required** | Status of the AllocationInstructionAlertRequest(35=DU). |
+| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328) | String | Optional | May be used to further describe rejection reasons when AllocRequestStatus(2768)=1 (Rejected). |
+| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664) | Length | Optional | Must be set if EncodedRejectText(1665) field is specified and must immediately precede it. |
+| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="AllocationInstructionAlertRequestAck" wordWrap
+8=FIXT.1.1|9=79|35=DV|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|2758=ABC123|2768=0|10=205|
+```

@@ -1,0 +1,56 @@
+---
+title: "ProvisionGrp"
+subtitle: "The ProvisionGrp is a repeating subcomponent of the Instrument component used to detail the additional terms and conditions associated with the instrument."
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40090</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+A swap may have one or more provisions defined.
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoProvisions (40090)](/fix/fields/tags-40000-40199#tag-40090).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40091 | [ProvisionType](/fix/fields/tags-40000-40199#tag-40091) | ProvisionTypeCodeSet | Optional | Required if NoProvisions(40090) &gt; 0. |
+| 40092 | [ProvisionDateUnadjusted](/fix/fields/tags-40000-40199#tag-40092) | LocalMktDate | Optional | The unadjusted date of the provision. |
+| 40093 | [ProvisionDateBusinessDayConvention](/fix/fields/tags-40000-40199#tag-40093) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this instance of the instrument provisions. |
+| 40957 | [ProvisionDateBusinessCenterGrp](/fix/groups/provision-date-business-center-grp) | Repeating group | Optional | ProvisionDateBusinessCenterGrp is a repeating subcomponent within the ProvisionGrp component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the DateAdjustment component in Instrument. |
+| 40095 | [ProvisionDateAdjusted](/fix/fields/tags-40000-40199#tag-40095) | LocalMktDate | Optional | The adjusted date of the provision. |
+| 40096 | [ProvisionDateTenorPeriod](/fix/fields/tags-40000-40199#tag-40096) | int | Optional | Conditionally required when ProvisionDateTenorUnit(40097) is specified. |
+| 40097 | [ProvisionDateTenorUnit](/fix/fields/tags-40000-40199#tag-40097) | ProvisionDateTenorUnitCodeSet | Optional | Conditionally required when ProvisionDateTenorPeriod(40096) is specified. |
+| 42707 | [ProvisionBreakFeeElection](/fix/fields/tags-42600-42799#tag-42707) | ProvisionBreakFeeElectionCodeSet | Optional | Type of fee elected for the break provision. |
+| 42708 | [ProvisionBreakFeeRate](/fix/fields/tags-42600-42799#tag-42708) | Percentage | Optional | Break fee election rate when the break fee is proportional to the notional. A fee rate of 5% would be represented as "0.05". |
+| 40098 | [ProvisionCalculationAgent](/fix/fields/tags-40000-40199#tag-40098) | ProvisionCalculationAgentCodeSet | Optional | Used to identify the calculation agent. The calculation agent may be identified in ProvisionCalculationAgent(40098) or in the ProvisionParties component. |
+| 40099 | [ProvisionOptionSinglePartyBuyerSide](/fix/fields/tags-40000-40199#tag-40099) | ProvisionOptionSinglePartyBuyerSideCodeSet | Optional | If optional early termination is not available to both parties then this component identifies the buyer of the option through its side of the trade. |
+| 40100 | [ProvisionOptionSinglePartySellerSide](/fix/fields/tags-40000-40199#tag-40100) | ProvisionOptionSinglePartyBuyerSideCodeSet | Optional | If optional early termination is not available to both parties then this component identifies the seller of the option through its side of the trade. |
+| | [ProvisionCashSettlValueDates](/fix/components/provision-cash-settl-value-dates) | Component | Optional | The ProvisionCashSettlValueDates component is a subcomponent within the ProvisionGrp component used to report the cash settlement value date and time defined in the provision. |
+| | [ProvisionOptionExerciseDates](/fix/components/provision-option-exercise-dates) | Component | Optional | The ProvisionOptionExerciseDates is a subcomponent within the ProvisionGrp component used to report the option exercise dates and times defined in the provision. |
+| | [ProvisionOptionExpirationDate](/fix/components/provision-option-expiration-date) | Component | Optional | The ProvisionOptionExerciseDate is a subcomponent within the ProvisionGrp component used to report the option expiration date and times defined in the provision. |
+| | [ProvisionOptionRelevantUnderlyingDate](/fix/components/provision-option-relevant-underlying-date) | Component | Optional | The ProvisionOptionRelevantUnderlyingDate is a subcomponent within the ProvisionGrp component used to report the option relevant underlying date defined in the provision. |
+| 40101 | [ProvisionOptionExerciseStyle](/fix/fields/tags-40000-40199#tag-40101) | ExerciseStyleCodeSet | Optional | The instrument provision option’s exercise style. |
+| 40102 | [ProvisionOptionExerciseMultipleNotional](/fix/fields/tags-40000-40199#tag-40102) | Amt | Optional | A notional amount which restricts the amount of notional that can be exercised when partial exercise or multiple exercise is applicable. The integral multiple amount defines a lower limit of notional that can be exercised and also defines a unit multiple of notional that can be exercised, i.e. only… |
+| 40103 | [ProvisionOptionExerciseMinimumNotional](/fix/fields/tags-40000-40199#tag-40103) | Amt | Optional | The minimum notional amount that can be exercised on a given exercise date. |
+| 40104 | [ProvisionOptionExerciseMaximumNotional](/fix/fields/tags-40000-40199#tag-40104) | Amt | Optional | The maximum notional amount that can be exercised on a given exercise date. |
+| 40105 | [ProvisionOptionMinimumNumber](/fix/fields/tags-40000-40199#tag-40105) | int | Optional | The minimum number of options that can be exercised on a given exercise date. |
+| 40106 | [ProvisionOptionMaximumNumber](/fix/fields/tags-40000-40199#tag-40106) | int | Optional | The maximum number of options that can be exercised on a given exercise date. If the number is not specified, it means that the maximum number of options corresponds to the remaining unexercised options. |
+| 40107 | [ProvisionOptionExerciseConfirmation](/fix/fields/tags-40000-40199#tag-40107) | Boolean | Optional | Used to indicate whether follow-up confirmation of exercise (written or electronic) is required following telephonic notice by the buyer to the seller or seller's agent. |
+| | [ProvisionCashSettlPaymentDates](/fix/components/provision-cash-settl-payment-dates) | Component | Optional | The ProvisionCashSettlPaymentDates component is a sub-component within the ProvisionGrp component used to report the cash settlement payment dates defined in the provision. |
+| 40108 | [ProvisionCashSettlMethod](/fix/fields/tags-40000-40199#tag-40108) | ProvisionCashSettlMethodCodeSet | Optional | An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in the 2006 ISDA Definitions, Section 18.3. Cash Settlement Methods, paragraph (e). |
+| 40109 | [ProvisionCashSettlCurrency](/fix/fields/tags-40000-40199#tag-40109) | Currency | Optional | Specifies the currency of settlement. Uses ISO 4217 currency codes. |
+| 40110 | [ProvisionCashSettlCurrency2](/fix/fields/tags-40000-40199#tag-40110) | Currency | Optional | Specifies the currency of settlement for a cross-currency provision. Uses ISO 4217 currency codes. |
+| 40111 | [ProvisionCashSettlQuoteType](/fix/fields/tags-40000-40199#tag-40111) | ProvisionCashSettlQuoteTypeCodeSet | Optional | Identifies the type of quote to be used. |
+| | [ProvisionCashSettlQuoteSource](/fix/components/provision-cash-settl-quote-source) | Component | Optional | The ProvisionCashSettlQuoteSource is a subcomponent of the ProvisionGrp component used to specify the reference source for currency or rate quote for cash settlement purposes. |
+| 40113 | [ProvisionText](/fix/fields/tags-40000-40199#tag-40113) | String | Optional | Free form text to specify additional information or enumeration description when a standard value does not apply. |
+| 40986 | [EncodedProvisionTextLen](/fix/fields/tags-40800-40999#tag-40986) | Length | Optional | Must be set if EncodedProvisionText(40987) field is specified and must immediately precede it. |
+| 40987 | [EncodedProvisionText](/fix/fields/tags-40800-40999#tag-40987) | data | Optional | Encoded (non-ASCII characters) representation of the ProvisionText(40113) field in the encoded format specified via the MessageEncoding(347) field. |
+| 40174 | [ProvisionParties](/fix/groups/provision-parties) | Repeating group | Optional | ProvisionParties is a repeating component within the Provision component used to report the parties identified in the contract provision. |
+
+</StickyTable>
+
+## Used in
+
+[Instrument](/fix/components/instrument)

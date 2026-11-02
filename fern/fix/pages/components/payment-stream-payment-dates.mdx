@@ -1,0 +1,35 @@
+---
+title: "PaymentStreamPaymentDates"
+subtitle: "PaymentStreamPaymentDates is a subcomponent of the PaymentStream component used to specify the payment dates of the stream."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+For equity return swaps this component is used to specify the interim price payment dates and the PaymentStreamFinalPricePaymentDate component is used to specify the final price payment date.
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40751 | [PaymentStreamPaymentDateBusinessDayConvention](/fix/fields/tags-40600-40799#tag-40751) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this instance of the payment stream's payment dates. |
+| 40947 | [PaymentStreamPaymentDateBusinessCenterGrp](/fix/groups/payment-stream-payment-date-business-center-grp) | Repeating group | Optional | PaymentStreamPaymentDateBusinessCenterGrp is a repeating subcomponent within the PaymentStreamPaymentDates component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the DateAdjustment component in… |
+| 41220 | [PaymentStreamPaymentDateGrp](/fix/groups/payment-stream-payment-date-grp) | Repeating group | Optional | The PaymentStreamPaymentDateGrp is a repeating subcomponent of the PaymentStreamPaymentDates component used to detail fixed dates for swap stream payments. |
+| 40753 | [PaymentStreamPaymentFrequencyPeriod](/fix/fields/tags-40600-40799#tag-40753) | int | Optional | Conditionally required when PaymentStreamPaymentFrequencyUnit(40754) is specified. |
+| 40754 | [PaymentStreamPaymentFrequencyUnit](/fix/fields/tags-40600-40799#tag-40754) | PaymentStreamPaymentFrequencyUnitCodeSet | Optional | Conditionally required when PaymentStreamPaymentFrequencyPeriod(40753) is specified. |
+| 40755 | [PaymentStreamPaymentRollConvention](/fix/fields/tags-40600-40799#tag-40755) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the DateAdjustment component in Instrument. The specified values would be specific to this instance of the stream payment dates |
+| 40756 | [PaymentStreamFirstPaymentDateUnadjusted](/fix/fields/tags-40600-40799#tag-40756) | LocalMktDate | Optional | The unadjusted first payment date. |
+| 40757 | [PaymentStreamLastRegularPaymentDateUnadjusted](/fix/fields/tags-40600-40799#tag-40757) | LocalMktDate | Optional | The unadjusted last regular payment date. |
+| 40758 | [PaymentStreamPaymentDateRelativeTo](/fix/fields/tags-40600-40799#tag-40758) | int | Optional | Specifies the anchor date when payment dates are relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 40759 | [PaymentStreamPaymentDateOffsetPeriod](/fix/fields/tags-40600-40799#tag-40759) | int | Optional | Conditionally required when PaymentStreamPaymentDateOffsetUnit(40760) is specified. |
+| 40760 | [PaymentStreamPaymentDateOffsetUnit](/fix/fields/tags-40600-40799#tag-40760) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when PaymentStreamPaymentDateOffsetPeriod(40759) is specified. |
+| 40920 | [PaymentStreamPaymentDateOffsetDayType](/fix/fields/tags-40800-40999#tag-40920) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative payment date offset. |
+| 41223 | [PaymentStreamMasterAgreementPaymentDatesIndicator](/fix/fields/tags-41200-41399#tag-41223) | Boolean | Optional | When set to 'Y', it indicates that payment dates are specified in the relevant master agreement. |
+| | [PaymentStreamFinalPricePaymentDate](/fix/components/payment-stream-final-price-payment-date) | Component | Optional | PaymentStreamFinalPricePaymentDate is a subcomponent of the PaymentStreamPaymentDates component used to specify the final price payment date, e.g. for an equity return swap. |
+
+</StickyTable>
+
+## Used in
+
+[PaymentStream](/fix/components/payment-stream)

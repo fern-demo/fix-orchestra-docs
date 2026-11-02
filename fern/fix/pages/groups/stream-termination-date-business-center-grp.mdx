@@ -1,0 +1,22 @@
+---
+title: "StreamTerminationDateBusinessCenterGrp"
+subtitle: "StreamTerminationDateBusinessCenterGrp is a repeating subcomponent within the StreamTerminationDate component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business…"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40961</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoStreamTerminationDateBusinessCenters (40961)](/fix/fields/tags-40800-40999#tag-40961).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 40067 | [StreamTerminationDateBusinessCenter](/fix/fields/tags-40000-40199#tag-40067) | String | Optional | Required if NoStreamTerminationDateBusinessCenters(40961) &gt; 0. |
+
+</StickyTable>
+
+## Used in
+
+[StreamTerminationDate](/fix/components/stream-termination-date)

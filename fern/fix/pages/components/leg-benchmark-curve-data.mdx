@@ -1,0 +1,24 @@
+---
+title: "LegBenchmarkCurveData"
+subtitle: "The LegBenchmarkCurveData is used to convey the benchmark information used for pricing in a multi-legged Fixed Income security."
+---
+
+<Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 676 | [LegBenchmarkCurveCurrency](/fix/fields/tags-600-799#tag-676) | Currency | Optional | LegBenchmarkPrice (679) currency See BenchmarkCurveCurrency (220) for description and valid values. |
+| 677 | [LegBenchmarkCurveName](/fix/fields/tags-600-799#tag-677) | BenchmarkCurveNameCodeSet | Optional | Name of the Leg Benchmark Curve. See BenchmarkCurveName (22) for description and valid values. |
+| 678 | [LegBenchmarkCurvePoint](/fix/fields/tags-600-799#tag-678) | String | Optional | Identifies the point on the Leg Benchmark Curve. See BenchmarkCurvePoint (222) for description and valid values. |
+| 679 | [LegBenchmarkPrice](/fix/fields/tags-600-799#tag-679) | Price | Optional | Used to identify the price of the benchmark security. See BenchmarkPrice (662) for description and valid values. |
+| 680 | [LegBenchmarkPriceType](/fix/fields/tags-600-799#tag-680) | PriceTypeCodeSet | Optional | The price type of the LegBenchmarkPrice(679). |
+
+</StickyTable>
+
+## Used in
+
+[InstrmtLegSecListGrp](/fix/groups/instrmt-leg-sec-list-grp), [LegQuotGrp](/fix/groups/leg-quot-grp), [QuotReqLegsGrp](/fix/groups/quot-req-legs-grp), [SecLstUpdRelSymsLegGrp](/fix/groups/sec-lst-upd-rel-syms-leg-grp)

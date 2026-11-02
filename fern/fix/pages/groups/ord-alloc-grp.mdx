@@ -1,0 +1,30 @@
+---
+title: "OrdAllocGrp"
+---
+
+<Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 73</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoOrders (73)](/fix/fields/tags-0-199#tag-73).
+
+## Members
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | Order identifier assigned by client if order(s) were electronically delivered over FIX (or otherwise assigned a ClOrdID) and executed. If order(s) were manually delivered (or otherwise not delivered over FIX) this field should contain string "MANUAL". Note where an order has undergone one or more… |
+| 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | Optional | Unique identifier for Order as assigned by sell-side (broker, exchange, ECN). Uniqueness must be guaranteed within a single trading day. Firms which accept multi-day orders should consider embedding a date within the OrderID field to assure uniqueness across days. |
+| 198 | [SecondaryOrderID](/fix/fields/tags-0-199#tag-198) | String | Optional | Can be used to provide order id used by exchange or executing system. |
+| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
+| 66 | [ListID](/fix/fields/tags-0-199#tag-66) | String | Optional | Required for List Orders. |
+| 756 | [NestedParties2](/fix/groups/nested-parties2) | Repeating group | Optional | The NestedParties2 component block is identical to the Parties Block. It is used in other component blocks and repeating groups when nesting will take place resulting in multiple occurrences of the Parties block within a single FIX message.. Use of NestedParties2 under these conditions avoids… |
+| 38 | [OrderQty](/fix/fields/tags-0-199#tag-38) | Qty | Optional | Quantity ordered. This represents the number of shares for equities or par, face or nominal value for FI instruments. (Prior to FIX 4.2 this field was of type int) |
+| 799 | [OrderAvgPx](/fix/fields/tags-600-799#tag-799) | Price | Optional | Average price for this order. For FX, if specified, expressed in terms of Currency(15). |
+| 800 | [OrderBookingQty](/fix/fields/tags-800-999#tag-800) | Qty | Optional | Quantity of this order that is being booked out by this message (will be equal to or less than this order's OrderQty) Note that the sum of the OrderBookingQty values in this repeating group must equal the total quantity being allocated (in Quantity (53) field) |
+| 40 | [OrdType](/fix/fields/tags-0-199#tag-40) | OrdTypeCodeSet | Optional | Order type. \*\*\* SOME VALUES ARE NO LONGER USED - See "Deprecated (Phased-out) Features and Supported Approach" \*\*\* (see Volume : "Glossary" for value definitions) |
+
+</StickyTable>
+
+## Used in
+
+[AllocationInstruction](/fix/messages/allocation-instruction), [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationReport](/fix/messages/allocation-report), [Confirmation](/fix/messages/confirmation), [ConfirmationRequest](/fix/messages/confirmation-request)

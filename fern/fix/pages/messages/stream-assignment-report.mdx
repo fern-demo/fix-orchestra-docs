@@ -1,0 +1,29 @@
+---
+title: "StreamAssignmentReport"
+subtitle: "he StreamAssignmentReport message is in response to the StreamAssignmentRequest message. It provides information back to the aggregator as to which clients to assign to receive which price stream based on requested CCY pair. This message…"
+---
+
+<Badge intent="info">MsgType CD</Badge> <Badge intent="note" minimal>Market Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+
+## Message structure
+
+<StickyTable>
+
+| Tag | Name | Type | Presence | Description |
+|---|---|---|---|---|
+| | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
+| 1501 | [StreamAsgnRptID](/fix/fields/tags-1400-1599#tag-1501) | String | **Required** | Unique identifier of the Stream Assignment Report. |
+| 1498 | [StreamAsgnReqType](/fix/fields/tags-1400-1599#tag-1498) | StreamAsgnReqTypeCodeSet | Optional | Required if report is being sent in response to a StreamAssignmentRequest. The value should be the same as the value in the corresponding request. |
+| 1497 | [StreamAsgnReqID](/fix/fields/tags-1400-1599#tag-1497) | String | Optional | Conditionally required if Stream Assignment Report is being sent in response to a StreamAssignmentRequest(MsgType=CC). Not required for unsolicited stream assignments. |
+| 1499 | [StrmAsgnRptGrp](/fix/groups/strm-asgn-rpt-grp) | Repeating group | Optional |  |
+| | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
+
+</StickyTable>
+
+## Example
+
+Required fields only, with illustrative values. `|` represents the SOH delimiter.
+
+```text title="StreamAssignmentReport" wordWrap
+8=FIXT.1.1|9=72|35=CD|49=BUYSIDE|56=SELLSIDE|34=42|52=20260102-14:30:00.000|1501=ABC123|10=095|
+```
