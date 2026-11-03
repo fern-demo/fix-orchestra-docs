@@ -3,7 +3,13 @@ title: "CrossRequest"
 subtitle: "The CrossRequest(35=DS) message is used to indicate the submission of orders or quotes that may result in a crossed trade."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType DS</Badge> <Badge intent="note" minimal>Indication</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType DS · Indication · Pre Trade · Added FIX.5.0SP2
+</llms-only>
 
 Regulatory requirements can allow exchanges to match orders belonging to the same account, firm or other common attribute. This can include the requirement to first announce the intention to cross orders. The time permitted between the announcement and the actual cross is typically well defined and may depend on the maximum quantity announced.
 
@@ -14,13 +20,13 @@ Regulatory requirements can allow exchanges to match orders belonging to the sam
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 2672 | [CrossRequestID](/fix/fields/tags-2600-2799#tag-2672) | String | **Required** | Unique identifier for cross request message. |
-| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Identifies the market |
-| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
+| 2672 | [CrossRequestID](/fix/fields/tags-2600-2799#tag-2672-crossrequestid) | String | **Required** | Unique identifier for cross request message. |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301-marketid) | Exchange | Optional | Identifies the market |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300-marketsegmentid) | String | Optional | Identifies the market segment |
 | | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
-| 38 | [OrderQty](/fix/fields/tags-0-199#tag-38) | Qty | Optional | Can be used to announce a maximum quantity that is subject to crossing. |
-| 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
-| 2404 | [ComplianceText](/fix/fields/tags-2400-2599#tag-2404) | String | Optional | Free text for compliance information required for regulatory reporting. |
+| 38 | [OrderQty](/fix/fields/tags-0-199#tag-38-orderqty) | Qty | Optional | Can be used to announce a maximum quantity that is subject to crossing. |
+| 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376-complianceid) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
+| 2404 | [ComplianceText](/fix/fields/tags-2400-2599#tag-2404-compliancetext) | String | Optional | Free text for compliance information required for regulatory reporting. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

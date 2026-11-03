@@ -3,11 +3,17 @@ title: "StreamGrp"
 subtitle: "The StreamGrp is a repeating subcomponent of the Instrument component used to detail the swap streams associated with the instrument."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40049</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Repeating group · NumInGroup 40049 · Added FIX.5.0SP2
+</llms-only>
 
 A swap will ordinarily have one or two streams. Each one may contain a StreamDesc(40051) with a descriptive string such as "Float" or "Fixed". However the choice of description should have no effect on the stream's purpose. StreamPaySide(40052) and StreamReceiveSide(40053) link the appropriate swap parties to their role in the stream. In pre-trade messages the side value (e.g. Side(54) field) of the request or order should be set to the same side value indicating the aggressor's desired role. On fills and post-trade messages the executing firm takes the opposite side and indicates its role by setting StreamPaySide(40052) and StreamReceiveSide(40053) to the opposite side of the aggressor's role.
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoStreams (40049)](/fix/fields/tags-40000-40199#tag-40049).
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoStreams (40049)](/fix/fields/tags-40000-40199#tag-40049-nostreams).
 
 ## Members
 
@@ -15,24 +21,24 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40050 | [StreamType](/fix/fields/tags-40000-40199#tag-40050) | StreamTypeCodeSet | Optional | Required if NoStreams(40049) &gt; 0. |
-| 41303 | [StreamXID](/fix/fields/tags-41200-41399#tag-41303) | XID | Optional | Identifier of this Stream for cross referencing elsewhere in the message. |
-| 40051 | [StreamDesc](/fix/fields/tags-40000-40199#tag-40051) | String | Optional | A short descriptive name given to the payment stream. Eg. CDS, Fixed, Float, Float2, GBP. The description has no intrinsic meaning but should be arbitrarily… |
-| 42784 | [StreamVersion](/fix/fields/tags-42600-42799#tag-42784) | String | Optional | The stream version identifier when there have been modifications to the contract over time. Helps signal when there are embedded changes. |
-| 42785 | [StreamVersionEffectiveDate](/fix/fields/tags-42600-42799#tag-42785) | LocalMktDate | Optional | The effective date of the StreamVersion(42784). |
-| 40052 | [StreamPaySide](/fix/fields/tags-40000-40199#tag-40052) | PaymentPaySideCodeSet | Optional | The side of the party paying the stream. |
-| 40053 | [StreamReceiveSide](/fix/fields/tags-40000-40199#tag-40053) | PaymentPaySideCodeSet | Optional | The side of the party receiving the stream. |
-| 41305 | [StreamNotionalXIDRef](/fix/fields/tags-41200-41399#tag-41305) | XIDREF | Optional | Cross reference to another Stream notional for duplicating its properties. |
-| 40054 | [StreamNotional](/fix/fields/tags-40000-40199#tag-40054) | Amt | Optional | Notional, or initial notional value for the payment stream. Use the PaymentScheduleGrp component to specify the rate steps. |
-| 40055 | [StreamCurrency](/fix/fields/tags-40000-40199#tag-40055) | Currency | Optional | Specifies the currency the StreamNotional(40054) is denominated in. Uses ISO 4217 currency codes. |
-| 42786 | [StreamNotionalDeterminationMethod](/fix/fields/tags-42600-42799#tag-42786) | String | Optional | Specifies the method for determining the floating notional value for equity swaps. See http://www.fpml.org/coding-scheme/determination-method for values. |
-| 42787 | [StreamNotionalAdjustments](/fix/fields/tags-42600-42799#tag-42787) | StreamNotionalAdjustmentsCodeSet | Optional | For equity swaps this specifies the conditions that govern the adjustment to the number of units of the swap. |
-| 41306 | [StreamNotionalFrequencyPeriod](/fix/fields/tags-41200-41399#tag-41306) | int | Optional | Conditionally required when StreamNotionalFrequencyUnit(41307) is specified. |
-| 41307 | [StreamNotionalFrequencyUnit](/fix/fields/tags-41200-41399#tag-41307) | TimeUnitCodeSet | Optional | Conditionally required when StreamNotionalFrequencyPeriod(41306) is specified. |
-| 41308 | [StreamNotionalCommodityFrequency](/fix/fields/tags-41200-41399#tag-41308) | StreamNotionalCommodityFrequencyCodeSet | Optional | The commodity's notional or quantity delivery frequency. |
-| 41309 | [StreamNotionalUnitOfMeasure](/fix/fields/tags-41200-41399#tag-41309) | UnitOfMeasureCodeSet | Optional | Specifies the delivery stream quantity unit of measure (UOM). |
-| 41310 | [StreamTotalNotional](/fix/fields/tags-41200-41399#tag-41310) | Qty | Optional | Total notional or delivery quantity over the term of the contract. |
-| 41311 | [StreamTotalNotionalUnitOfMeasure](/fix/fields/tags-41200-41399#tag-41311) | UnitOfMeasureCodeSet | Optional | Specifies the unit of measure (UOM) for the total notional or delivery quantity over the term of the contract. |
+| 40050 | [StreamType](/fix/fields/tags-40000-40199#tag-40050-streamtype) | StreamTypeCodeSet | Optional | Required if NoStreams(40049) &gt; 0. |
+| 41303 | [StreamXID](/fix/fields/tags-41200-41399#tag-41303-streamxid) | XID | Optional | Identifier of this Stream for cross referencing elsewhere in the message. |
+| 40051 | [StreamDesc](/fix/fields/tags-40000-40199#tag-40051-streamdesc) | String | Optional | A short descriptive name given to the payment stream. Eg. CDS, Fixed, Float, Float2, GBP. The description has no intrinsic meaning but should be arbitrarily… |
+| 42784 | [StreamVersion](/fix/fields/tags-42600-42799#tag-42784-streamversion) | String | Optional | The stream version identifier when there have been modifications to the contract over time. Helps signal when there are embedded changes. |
+| 42785 | [StreamVersionEffectiveDate](/fix/fields/tags-42600-42799#tag-42785-streamversioneffectivedate) | LocalMktDate | Optional | The effective date of the StreamVersion(42784). |
+| 40052 | [StreamPaySide](/fix/fields/tags-40000-40199#tag-40052-streampayside) | PaymentPaySideCodeSet | Optional | The side of the party paying the stream. |
+| 40053 | [StreamReceiveSide](/fix/fields/tags-40000-40199#tag-40053-streamreceiveside) | PaymentPaySideCodeSet | Optional | The side of the party receiving the stream. |
+| 41305 | [StreamNotionalXIDRef](/fix/fields/tags-41200-41399#tag-41305-streamnotionalxidref) | XIDREF | Optional | Cross reference to another Stream notional for duplicating its properties. |
+| 40054 | [StreamNotional](/fix/fields/tags-40000-40199#tag-40054-streamnotional) | Amt | Optional | Notional, or initial notional value for the payment stream. Use the PaymentScheduleGrp component to specify the rate steps. |
+| 40055 | [StreamCurrency](/fix/fields/tags-40000-40199#tag-40055-streamcurrency) | Currency | Optional | Specifies the currency the StreamNotional(40054) is denominated in. Uses ISO 4217 currency codes. |
+| 42786 | [StreamNotionalDeterminationMethod](/fix/fields/tags-42600-42799#tag-42786-streamnotionaldeterminationmethod) | String | Optional | Specifies the method for determining the floating notional value for equity swaps. See http://www.fpml.org/coding-scheme/determination-method for values. |
+| 42787 | [StreamNotionalAdjustments](/fix/fields/tags-42600-42799#tag-42787-streamnotionaladjustments) | StreamNotionalAdjustmentsCodeSet | Optional | For equity swaps this specifies the conditions that govern the adjustment to the number of units of the swap. |
+| 41306 | [StreamNotionalFrequencyPeriod](/fix/fields/tags-41200-41399#tag-41306-streamnotionalfrequencyperiod) | int | Optional | Conditionally required when StreamNotionalFrequencyUnit(41307) is specified. |
+| 41307 | [StreamNotionalFrequencyUnit](/fix/fields/tags-41200-41399#tag-41307-streamnotionalfrequencyunit) | TimeUnitCodeSet | Optional | Conditionally required when StreamNotionalFrequencyPeriod(41306) is specified. |
+| 41308 | [StreamNotionalCommodityFrequency](/fix/fields/tags-41200-41399#tag-41308-streamnotionalcommodityfrequency) | StreamNotionalCommodityFrequencyCodeSet | Optional | The commodity's notional or quantity delivery frequency. |
+| 41309 | [StreamNotionalUnitOfMeasure](/fix/fields/tags-41200-41399#tag-41309-streamnotionalunitofmeasure) | UnitOfMeasureCodeSet | Optional | Specifies the delivery stream quantity unit of measure (UOM). |
+| 41310 | [StreamTotalNotional](/fix/fields/tags-41200-41399#tag-41310-streamtotalnotional) | Qty | Optional | Total notional or delivery quantity over the term of the contract. |
+| 41311 | [StreamTotalNotionalUnitOfMeasure](/fix/fields/tags-41200-41399#tag-41311-streamtotalnotionalunitofmeasure) | UnitOfMeasureCodeSet | Optional | Specifies the unit of measure (UOM) for the total notional or delivery quantity over the term of the contract. |
 | | [StreamCommodity](/fix/components/stream-commodity) | Component | Optional | StreamCommodity is a subcomponent of the Stream component used to identify and describe the underlying commodity. |
 | | [StreamEffectiveDate](/fix/components/stream-effective-date) | Component | Optional | StreamEffectivedDate is a subcomponent of the StreamGrp component used to specify the effective date of the stream. |
 | | [StreamTerminationDate](/fix/components/stream-termination-date) | Component | Optional | StreamTerminationDate is a subcomponent of the StreamGrp component used to specify the termination date of the stream. |
@@ -42,9 +48,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 | 40872 | [PaymentStubGrp](/fix/groups/payment-stub-grp) | Repeating group | Optional | The PaymentStubGrp is a repeating subcomponent of the StreamGrp component used to specify front and back stubs of the payment stream. |
 | | [DeliveryStream](/fix/components/delivery-stream) | Component | Optional | The DeliveryStream component is used to optionally specify the attributes of a physical delivery stream in a swap. |
 | 41037 | [DeliveryScheduleGrp](/fix/groups/delivery-schedule-grp) | Repeating group | Optional | The DeliveryScheduleGrp is a repeating subcomponent of the Stream component used to detail step schedules associated with a delivery stream. |
-| 40056 | [StreamText](/fix/fields/tags-40000-40199#tag-40056) | String | Optional | Free form text to specify additional information or enumeration description when a standard value does not apply. |
-| 40982 | [EncodedStreamTextLen](/fix/fields/tags-40800-40999#tag-40982) | Length | Optional | Must be set if EncodedStreamText(40983) field is specified and must immediately precede it. |
-| 40983 | [EncodedStreamText](/fix/fields/tags-40800-40999#tag-40983) | data | Optional | Encoded (non-ASCII characters) representation of the StreamText(40056) field in the encoded format specified via the MessageEncoding(347) field. |
+| 40056 | [StreamText](/fix/fields/tags-40000-40199#tag-40056-streamtext) | String | Optional | Free form text to specify additional information or enumeration description when a standard value does not apply. |
+| 40982 | [EncodedStreamTextLen](/fix/fields/tags-40800-40999#tag-40982-encodedstreamtextlen) | Length | Optional | Must be set if EncodedStreamText(40983) field is specified and must immediately precede it. |
+| 40983 | [EncodedStreamText](/fix/fields/tags-40800-40999#tag-40983-encodedstreamtext) | data | Optional | Encoded (non-ASCII characters) representation of the StreamText(40056) field in the encoded format specified via the MessageEncoding(347) field. |
 
 </StickyTable>
 

@@ -3,9 +3,15 @@ title: "LegComplexEventPeriodGrp"
 subtitle: "LegComplexEventPeriodGrp is a subcomponent of LegComplexEvents for specifying the periods for an Asian, Barrier, Knock or Strike Schedule option feature."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41379</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegComplexEventPeriods (41379)](/fix/fields/tags-41200-41399#tag-41379).
+<llms-only>
+Repeating group · NumInGroup 41379 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegComplexEventPeriods (41379)](/fix/fields/tags-41200-41399#tag-41379-nolegcomplexeventperiods).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41380 | [LegComplexEventPeriodType](/fix/fields/tags-41200-41399#tag-41380) | ComplexEventPeriodTypeCodeSet | Optional | Required if NoLegComplexEventPeriods(41379) &gt; 0. |
-| 41381 | [LegComplexEventBusinessCenter](/fix/fields/tags-41200-41399#tag-41381) | String | Optional | The business center for adjusting dates and times in the schedule or date-time group. See http://www.fpml.org/coding-scheme/business-center for standard… |
+| 41380 | [LegComplexEventPeriodType](/fix/fields/tags-41200-41399#tag-41380-legcomplexeventperiodtype) | ComplexEventPeriodTypeCodeSet | Optional | Required if NoLegComplexEventPeriods(41379) &gt; 0. |
+| 41381 | [LegComplexEventBusinessCenter](/fix/fields/tags-41200-41399#tag-41381-legcomplexeventbusinesscenter) | String | Optional | The business center for adjusting dates and times in the schedule or date-time group. See http://www.fpml.org/coding-scheme/business-center for standard… |
 | 41400 | [LegComplexEventScheduleGrp](/fix/groups/leg-complex-event-schedule-grp) | Repeating group | Optional | LegComplexEventScheduleGrp is a subcomponent of LegComplexEventPeriodGrp for specifying a periodic schedule for an Asian, Barrier or Strike Schedule option… |
 | 41376 | [LegComplexEventPeriodDateGrp](/fix/groups/leg-complex-event-period-date-grp) | Repeating group | Optional | LegComplexEventPeriodDateGrp is a subcomponent of LegComplexEventPeriodGrp for specifying fixed period dates and times for an Asian or Strike Schedule option or… |
 | 41363 | [LegComplexEventAveragingObservationGrp](/fix/groups/leg-complex-event-averaging-observation-grp) | Repeating group | Optional | LegComplexEventAveragingObservationGrp is an optional subcomponent of LegComplexEventPeriodGrp for specifying the weight of each of the dated observations. |

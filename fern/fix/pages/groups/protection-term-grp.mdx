@@ -3,9 +3,15 @@ title: "ProtectionTermGrp"
 subtitle: "The ProtectionTermGrp is a repeating component within the Instrument component used to report protection term details referenced from UnderlyingInstrument component."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40181</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoProtectionTerms (40181)](/fix/fields/tags-40000-40199#tag-40181).
+<llms-only>
+Repeating group · NumInGroup 40181 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoProtectionTerms (40181)](/fix/fields/tags-40000-40199#tag-40181-noprotectionterms).
 
 ## Members
 
@@ -13,17 +19,17 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40182 | [ProtectionTermNotional](/fix/fields/tags-40000-40199#tag-40182) | Amt | Optional | Required if NoProtectionTerms(40181) &gt; 0. |
-| 40183 | [ProtectionTermCurrency](/fix/fields/tags-40000-40199#tag-40183) | Currency | Optional | The currency of ProtectionTermNotional(40182). Uses ISO 4217 currency codes. |
-| 40184 | [ProtectionTermSellerNotifies](/fix/fields/tags-40000-40199#tag-40184) | Boolean | Optional | The notifying party is the party that notifies the other party when a credit event has occurred by means of a credit event notice. If more than one party is… |
-| 40185 | [ProtectionTermBuyerNotifies](/fix/fields/tags-40000-40199#tag-40185) | Boolean | Optional | The notifying party is the party that notifies the other party when a credit event has occurred by means of a credit event notice. If more than one party is… |
-| 40186 | [ProtectionTermEventBusinessCenter](/fix/fields/tags-40000-40199#tag-40186) | String | Optional | When used, the business center indicates the local time of the business center that replaces the Greenwich Mean Time in Section 3.3 of the 2003 ISDA Credit… |
-| 40187 | [ProtectionTermStandardSources](/fix/fields/tags-40000-40199#tag-40187) | Boolean | Optional | Indicates whether ISDA defined Standard Public Sources are applicable (ProtectionTermStandardSources(40187)=Y) or not. |
-| 40188 | [ProtectionTermEventMinimumSources](/fix/fields/tags-40000-40199#tag-40188) | int | Optional | The minimum number of the specified public information sources that must publish information that reasonably confirms that a credit event has occurred. The… |
+| 40182 | [ProtectionTermNotional](/fix/fields/tags-40000-40199#tag-40182-protectiontermnotional) | Amt | Optional | Required if NoProtectionTerms(40181) &gt; 0. |
+| 40183 | [ProtectionTermCurrency](/fix/fields/tags-40000-40199#tag-40183-protectiontermcurrency) | Currency | Optional | The currency of ProtectionTermNotional(40182). Uses ISO 4217 currency codes. |
+| 40184 | [ProtectionTermSellerNotifies](/fix/fields/tags-40000-40199#tag-40184-protectiontermsellernotifies) | Boolean | Optional | The notifying party is the party that notifies the other party when a credit event has occurred by means of a credit event notice. If more than one party is… |
+| 40185 | [ProtectionTermBuyerNotifies](/fix/fields/tags-40000-40199#tag-40185-protectiontermbuyernotifies) | Boolean | Optional | The notifying party is the party that notifies the other party when a credit event has occurred by means of a credit event notice. If more than one party is… |
+| 40186 | [ProtectionTermEventBusinessCenter](/fix/fields/tags-40000-40199#tag-40186-protectiontermeventbusinesscenter) | String | Optional | When used, the business center indicates the local time of the business center that replaces the Greenwich Mean Time in Section 3.3 of the 2003 ISDA Credit… |
+| 40187 | [ProtectionTermStandardSources](/fix/fields/tags-40000-40199#tag-40187-protectiontermstandardsources) | Boolean | Optional | Indicates whether ISDA defined Standard Public Sources are applicable (ProtectionTermStandardSources(40187)=Y) or not. |
+| 40188 | [ProtectionTermEventMinimumSources](/fix/fields/tags-40000-40199#tag-40188-protectiontermeventminimumsources) | int | Optional | The minimum number of the specified public information sources that must publish information that reasonably confirms that a credit event has occurred. The… |
 | 40951 | [ProtectionTermEventNewsSourceGrp](/fix/groups/protection-term-event-news-source-grp) | Repeating group | Optional | ProtectionTermEventNewsSourceGrp is a repeating subcomponent within the ProtectionTermGrp component. It is used to specify the particular newspapers or… |
 | 40191 | [ProtectionTermEventGrp](/fix/groups/protection-term-event-grp) | Repeating group | Optional | The ProtectionTermEventGrp is a repeating component within the ProtectionTermGrp component used to report applicable CDS credit events. |
 | 40201 | [ProtectionTermObligationGrp](/fix/groups/protection-term-obligation-grp) | Repeating group | Optional | The ProtectionTermObligationGrp is a repeating component within the ProtectionTermGrp component used to report applicable CDS obligations. |
-| 40190 | [ProtectionTermXID](/fix/fields/tags-40000-40199#tag-40190) | XID | Optional | A named string value referenced by UnderlyingProtectionTermXIDRef(41314). |
+| 40190 | [ProtectionTermXID](/fix/fields/tags-40000-40199#tag-40190-protectiontermxid) | XID | Optional | A named string value referenced by UnderlyingProtectionTermXIDRef(41314). |
 
 </StickyTable>
 

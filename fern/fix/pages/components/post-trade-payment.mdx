@@ -3,7 +3,13 @@ title: "PostTradePayment"
 subtitle: "This component specifies the details of a payment between the parties involved."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Pay Management</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Pay Management · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,20 +17,20 @@ subtitle: "This component specifies the details of a payment between the parties
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2824 | [PostTradePaymentType](/fix/fields/tags-2800-2999#tag-2824) | String | **Required** | Type of post-trade payment. See ISITC "Payments Cash Purpose Codes" for list of payment type codes to use available at… |
-| 2817 | [PostTradePaymentAmount](/fix/fields/tags-2800-2999#tag-2817) | Amt | **Required** | The payment amount for the specified PostTradePaymentType(2824). |
-| 2818 | [PostTradePaymentCurrency](/fix/fields/tags-2800-2999#tag-2818) | Currency | Optional | Specifies the currency in which PostTradePaymentAmount(2817) is denominated. Uses ISO 4271 currency codes. |
-| 2825 | [PostTradePaymentCalculationDate](/fix/fields/tags-2800-2999#tag-2825) | LocalMktDate | **Required** | The date payment calculations are made. This may be earlier than the date in ClearingBusinessDate(715). When the report is sent unsolicited, this is the payment… |
-| 2826 | [PostTradePaymentValueDate](/fix/fields/tags-2800-2999#tag-2826) | LocalMktDate | **Required** | The date the payment is legally confirmed to settle. |
-| 2827 | [PostTradePaymentFinalValueDate](/fix/fields/tags-2800-2999#tag-2827) | LocalMktDate | Optional | The actual payment date in the event it differs from the date specified in PostTradePaymentValueDate(2826). |
-| 2819 | [PostTradePaymentDebitOrCredit](/fix/fields/tags-2800-2999#tag-2819) | PostTradePaymentDebitOrCreditCodeSet | **Required** | Payment side of this individual payment from the requesting firm's perspective. |
-| 2816 | [PostTradePaymentAccount](/fix/fields/tags-2800-2999#tag-2816) | String | **Required** | The cash account on the books of the receiver of the request or the sender of the report to be debited or credited. |
-| 2821 | [PostTradePaymentID](/fix/fields/tags-2800-2999#tag-2821) | String | Optional | The identifier for the individual payment. |
-| 2820 | [PostTradePaymentDesc](/fix/fields/tags-2800-2999#tag-2820) | String | Optional | A short descriptive name given to the payment, e.g. Premium, Upfront, etc. The description may be used as reference. |
-| 2815 | [EncodedPostTradePaymentDescLen](/fix/fields/tags-2800-2999#tag-2815) | Length | Optional | Must be set if EncodedPostTradePaymentDesc(2814) field is specified and must immediately precede it. |
-| 2814 | [EncodedPostTradePaymentDesc](/fix/fields/tags-2800-2999#tag-2814) | data | Optional | Encoded (non-ASCII characters) representation of the PostTradePaymentDesc(2820) field in the encoded format specified via the MessageEncoding(347) field. |
-| 2822 | [PostTradePaymentLinkID](/fix/fields/tags-2800-2999#tag-2822) | String | Optional | Used to link a group of payments together, e.g. cross-currency payments associated with a swap. |
-| 2823 | [PostTradePaymentStatus](/fix/fields/tags-2800-2999#tag-2823) | PostTradePaymentStatusCodeSet | Optional | Used when PayReportTransType(2804)=2 (Status) to report actual payment status from payment service (i.e. after payment or remittance instruction with payment… |
+| 2824 | [PostTradePaymentType](/fix/fields/tags-2800-2999#tag-2824-posttradepaymenttype) | String | **Required** | Type of post-trade payment. See ISITC "Payments Cash Purpose Codes" for list of payment type codes to use available at… |
+| 2817 | [PostTradePaymentAmount](/fix/fields/tags-2800-2999#tag-2817-posttradepaymentamount) | Amt | **Required** | The payment amount for the specified PostTradePaymentType(2824). |
+| 2818 | [PostTradePaymentCurrency](/fix/fields/tags-2800-2999#tag-2818-posttradepaymentcurrency) | Currency | Optional | Specifies the currency in which PostTradePaymentAmount(2817) is denominated. Uses ISO 4271 currency codes. |
+| 2825 | [PostTradePaymentCalculationDate](/fix/fields/tags-2800-2999#tag-2825-posttradepaymentcalculationdate) | LocalMktDate | **Required** | The date payment calculations are made. This may be earlier than the date in ClearingBusinessDate(715). When the report is sent unsolicited, this is the payment… |
+| 2826 | [PostTradePaymentValueDate](/fix/fields/tags-2800-2999#tag-2826-posttradepaymentvaluedate) | LocalMktDate | **Required** | The date the payment is legally confirmed to settle. |
+| 2827 | [PostTradePaymentFinalValueDate](/fix/fields/tags-2800-2999#tag-2827-posttradepaymentfinalvaluedate) | LocalMktDate | Optional | The actual payment date in the event it differs from the date specified in PostTradePaymentValueDate(2826). |
+| 2819 | [PostTradePaymentDebitOrCredit](/fix/fields/tags-2800-2999#tag-2819-posttradepaymentdebitorcredit) | PostTradePaymentDebitOrCreditCodeSet | **Required** | Payment side of this individual payment from the requesting firm's perspective. |
+| 2816 | [PostTradePaymentAccount](/fix/fields/tags-2800-2999#tag-2816-posttradepaymentaccount) | String | **Required** | The cash account on the books of the receiver of the request or the sender of the report to be debited or credited. |
+| 2821 | [PostTradePaymentID](/fix/fields/tags-2800-2999#tag-2821-posttradepaymentid) | String | Optional | The identifier for the individual payment. |
+| 2820 | [PostTradePaymentDesc](/fix/fields/tags-2800-2999#tag-2820-posttradepaymentdesc) | String | Optional | A short descriptive name given to the payment, e.g. Premium, Upfront, etc. The description may be used as reference. |
+| 2815 | [EncodedPostTradePaymentDescLen](/fix/fields/tags-2800-2999#tag-2815-encodedposttradepaymentdesclen) | Length | Optional | Must be set if EncodedPostTradePaymentDesc(2814) field is specified and must immediately precede it. |
+| 2814 | [EncodedPostTradePaymentDesc](/fix/fields/tags-2800-2999#tag-2814-encodedposttradepaymentdesc) | data | Optional | Encoded (non-ASCII characters) representation of the PostTradePaymentDesc(2820) field in the encoded format specified via the MessageEncoding(347) field. |
+| 2822 | [PostTradePaymentLinkID](/fix/fields/tags-2800-2999#tag-2822-posttradepaymentlinkid) | String | Optional | Used to link a group of payments together, e.g. cross-currency payments associated with a swap. |
+| 2823 | [PostTradePaymentStatus](/fix/fields/tags-2800-2999#tag-2823-posttradepaymentstatus) | PostTradePaymentStatusCodeSet | Optional | Used when PayReportTransType(2804)=2 (Status) to report actual payment status from payment service (i.e. after payment or remittance instruction with payment… |
 
 </StickyTable>
 

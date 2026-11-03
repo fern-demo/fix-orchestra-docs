@@ -3,9 +3,15 @@ title: "ValueChecksGrp"
 subtitle: "This component can be used by the message submitter to provide a list of value types to be checked by the counterparty or message recipient."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1868</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoValueChecks (1868)](/fix/fields/tags-1800-1999#tag-1868).
+<llms-only>
+Repeating group · NumInGroup 1868 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoValueChecks (1868)](/fix/fields/tags-1800-1999#tag-1868-novaluechecks).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1869 | [ValueCheckType](/fix/fields/tags-1800-1999#tag-1869) | ValueCheckTypeCodeSet | Optional | Required if NoValueChecks(1868) &gt; 0. |
-| 1870 | [ValueCheckAction](/fix/fields/tags-1800-1999#tag-1870) | ValueCheckActionCodeSet | Optional | Required if NoValueChecks(1868) &gt; 0. |
+| 1869 | [ValueCheckType](/fix/fields/tags-1800-1999#tag-1869-valuechecktype) | ValueCheckTypeCodeSet | Optional | Required if NoValueChecks(1868) &gt; 0. |
+| 1870 | [ValueCheckAction](/fix/fields/tags-1800-1999#tag-1870-valuecheckaction) | ValueCheckActionCodeSet | Optional | Required if NoValueChecks(1868) &gt; 0. |
 
 </StickyTable>
 

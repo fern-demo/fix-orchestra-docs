@@ -3,7 +3,13 @@ title: "ListCancelRequest"
 subtitle: "The List Cancel Request message type is used by institutions wishing to cancel previously submitted lists either before or during execution."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType K</Badge> <Badge intent="note" minimal>Program Trading</Badge> <Badge intent="tip" minimal>Trade</Badge> <Badge intent="success" minimal>Added FIX.2.7</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType K · Program Trading · Trade · Added FIX.2.7
+</llms-only>
 
 ## Message structure
 
@@ -12,14 +18,14 @@ subtitle: "The List Cancel Request message type is used by institutions wishing 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 66 | [ListID](/fix/fields/tags-0-199#tag-66) | String | **Required** | Unique identifier for list as assigned by institution, used to associate multiple individual orders. Uniqueness must be guaranteed within a single trading day.… |
+| 66 | [ListID](/fix/fields/tags-0-199#tag-66-listid) | String | **Required** | Unique identifier for list as assigned by institution, used to associate multiple individual orders. Uniqueness must be guaranteed within a single trading day.… |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | **Required** | Time this order request was initiated/released by the trader or trading system. |
-| 229 | [TradeOriginationDate](/fix/fields/tags-200-399#tag-229) | LocalMktDate | Optional | Used with Fixed Income for Muncipal New Issue Market. Agreement in principal between counter-parties prior to actual trade date. (Note tag # was reserved in FIX… |
-| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | Optional | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | **Required** | Time this order request was initiated/released by the trader or trading system. |
+| 229 | [TradeOriginationDate](/fix/fields/tags-200-399#tag-229-tradeoriginationdate) | LocalMktDate | Optional | Used with Fixed Income for Muncipal New Issue Market. Agreement in principal between counter-parties prior to actual trade date. (Note tag # was reserved in FIX… |
+| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75-tradedate) | LocalMktDate | Optional | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

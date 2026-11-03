@@ -3,7 +3,13 @@ title: "MarginRequirementReport"
 subtitle: "The Margin Requirement Report returns information about margin requirement either as on overview across all margin accounts or on a detailed level due to the inquiry making use of the optional Instrument component block. Application…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType CJ</Badge> <Badge intent="note" minimal>Margin Requirement Management</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType CJ · Margin Requirement Management · Post Trade · Added FIX.5.0SP2
+</llms-only>
 
 ## Message structure
 
@@ -13,28 +19,28 @@ subtitle: "The Margin Requirement Report returns information about margin requir
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
 | | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and… |
-| 1642 | [MarginReqmtRptID](/fix/fields/tags-1600-1799#tag-1642) | String | **Required** | Unique identifier for this margin requirement report |
-| 1635 | [MarginReqmtInqID](/fix/fields/tags-1600-1799#tag-1635) | String | Optional | Unique identifier for the inquiry associated with this report. This field should not be provided if the report was sent unsolicited. |
-| 1638 | [MarginReqmtRptType](/fix/fields/tags-1600-1799#tag-1638) | MarginReqmtRptTypeCodeSet | **Required** | Type of report provided |
-| 911 | [TotNumReports](/fix/fields/tags-800-999#tag-911) | int | Optional | Total number of reports generated in response to inquiry referenced by MarginReqmtInqID |
-| 912 | [LastRptRequested](/fix/fields/tags-800-999#tag-912) | LastRptRequestedCodeSet | Optional | Indicates whether this message is the last report message in response to a request message, e.g. OrderMassStatusRequest(35=AF),… |
-| 325 | [UnsolicitedIndicator](/fix/fields/tags-200-399#tag-325) | UnsolicitedIndicatorCodeSet | Optional | Set to 'Y' if message is sent as a result of a subscription request or out of band configuration as opposed to a Margin Requirement Inquiry. |
+| 1642 | [MarginReqmtRptID](/fix/fields/tags-1600-1799#tag-1642-marginreqmtrptid) | String | **Required** | Unique identifier for this margin requirement report |
+| 1635 | [MarginReqmtInqID](/fix/fields/tags-1600-1799#tag-1635-marginreqmtinqid) | String | Optional | Unique identifier for the inquiry associated with this report. This field should not be provided if the report was sent unsolicited. |
+| 1638 | [MarginReqmtRptType](/fix/fields/tags-1600-1799#tag-1638-marginreqmtrpttype) | MarginReqmtRptTypeCodeSet | **Required** | Type of report provided |
+| 911 | [TotNumReports](/fix/fields/tags-800-999#tag-911-totnumreports) | int | Optional | Total number of reports generated in response to inquiry referenced by MarginReqmtInqID |
+| 912 | [LastRptRequested](/fix/fields/tags-800-999#tag-912-lastrptrequested) | LastRptRequestedCodeSet | Optional | Indicates whether this message is the last report message in response to a request message, e.g. OrderMassStatusRequest(35=AF),… |
+| 325 | [UnsolicitedIndicator](/fix/fields/tags-200-399#tag-325-unsolicitedindicator) | UnsolicitedIndicatorCodeSet | Optional | Set to 'Y' if message is sent as a result of a subscription request or out of band configuration as opposed to a Margin Requirement Inquiry. |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
-| 1934 | [RegulatoryReportType](/fix/fields/tags-1800-1999#tag-1934) | RegulatoryReportTypeCodeSet | Optional | Type of regulatory report. |
-| 2869 | [RegulatoryReportTypeBusinessDate](/fix/fields/tags-2800-2999#tag-2869) | LocalMktDate | Optional | May be used when the business event date differs from when the regulatory report is actually being submitted (typically specified in TrdRegTimestamps… |
+| 1934 | [RegulatoryReportType](/fix/fields/tags-1800-1999#tag-1934-regulatoryreporttype) | RegulatoryReportTypeCodeSet | Optional | Type of regulatory report. |
+| 2869 | [RegulatoryReportTypeBusinessDate](/fix/fields/tags-2800-2999#tag-2869-regulatoryreporttypebusinessdate) | LocalMktDate | Optional | May be used when the business event date differs from when the regulatory report is actually being submitted (typically specified in TrdRegTimestamps… |
 | 768 | [TrdRegTimestamps](/fix/groups/trd-reg-timestamps) | Repeating group | Optional | The TrdRegTimestamps component block is used to express timestamps for an order or trade that are required by regulatory agencies These timesteamps are used to… |
-| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | Optional | Indicates the date for which the margin is to be calculated |
-| 2870 | [ClearingPortfolioID](/fix/fields/tags-2800-2999#tag-2870) | String | Optional | When the transaction is cleared and included in a portfolio of transactions this identifies the portfolio by its unique identifier. |
-| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716) | SettlSessIDCodeSet | Optional | Indicates the settlement session for which the margin is to be calculated – End Of Day or Intraday |
-| 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717) | String | Optional | SubID value associated with SettlSessID(716) |
-| 1639 | [MarginClass](/fix/fields/tags-1600-1799#tag-1639) | String | Optional | Used to identify a group of instruments with similar risk profile. |
-| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Base currency of the margin requirement |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715-clearingbusinessdate) | LocalMktDate | Optional | Indicates the date for which the margin is to be calculated |
+| 2870 | [ClearingPortfolioID](/fix/fields/tags-2800-2999#tag-2870-clearingportfolioid) | String | Optional | When the transaction is cleared and included in a portfolio of transactions this identifies the portfolio by its unique identifier. |
+| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716-settlsessid) | SettlSessIDCodeSet | Optional | Indicates the settlement session for which the margin is to be calculated – End Of Day or Intraday |
+| 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717-settlsesssubid) | String | Optional | SubID value associated with SettlSessID(716) |
+| 1639 | [MarginClass](/fix/fields/tags-1600-1799#tag-1639-marginclass) | String | Optional | Used to identify a group of instruments with similar risk profile. |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15-currency) | Currency | Optional | Base currency of the margin requirement |
 | | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | 1643 | [MarginAmount](/fix/groups/margin-amount) | Repeating group | **Required** |  |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Represents the time this message was generated |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Represents the time this message was generated |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

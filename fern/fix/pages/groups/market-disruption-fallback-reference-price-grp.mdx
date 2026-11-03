@@ -3,9 +3,15 @@ title: "MarketDisruptionFallbackReferencePriceGrp"
 subtitle: "The MarketDisruptionFallbackReferencePriceGrp is a repeating subcomponent of the MarketDisruption component used to specify the fallback reference price and underlying security provisions"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41096</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoMarketDisruptionFallbackReferencePrices (41096)](/fix/fields/tags-41000-41199#tag-41096).
+<llms-only>
+Repeating group · NumInGroup 41096 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoMarketDisruptionFallbackReferencePrices (41096)](/fix/fields/tags-41000-41199#tag-41096-nomarketdisruptionfallbackreferenceprices).
 
 ## Members
 
@@ -13,15 +19,15 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41097 | [MarketDisruptionFallbackUnderlierType](/fix/fields/tags-41000-41199#tag-41097) | MarketDisruptionFallbackUnderlierTypeCodeSet | Optional | Required if NoMarketDisruptionFallbackReferencePrices(41096) &gt; 0. |
-| 41098 | [MarketDisruptionFallbackUnderlierSecurityID](/fix/fields/tags-41000-41199#tag-41098) | String | Optional | Conditionally required when MarketDisruptionFallbackUnderlyerSecurityIDSource(41099) is specified. |
-| 41099 | [MarketDisruptionFallbackUnderlierSecurityIDSource](/fix/fields/tags-41000-41199#tag-41099) | SecurityIDSourceCodeSet | Optional | Conditionally required when MarketDisruptionFallbackUnderlierSecurityID(41098) is specified. |
-| 41100 | [MarketDisruptionFallbackUnderlierSecurityDesc](/fix/fields/tags-41000-41199#tag-41100) | String | Optional | Specifies the description of the underlying security. |
-| 41101 | [EncodedMarketDisruptionFallbackUnderlierSecurityDescLen](/fix/fields/tags-41000-41199#tag-41101) | Length | Optional | Must be set if EncodedMarketDisruptionFallbackUnderlierSecurityDesc(41102) field is specified and must immediately precede it |
-| 41102 | [EncodedMarketDisruptionFallbackUnderlierSecurityDesc](/fix/fields/tags-41000-41199#tag-41102) | data | Optional | Encoded (non-ASCII characters) representation of the MarketDisruptionFallbackUnderlierSecurityDesc(41100) field in the encoded format specified via the… |
-| 41103 | [MarketDisruptionFallbackOpenUnits](/fix/fields/tags-41000-41199#tag-41103) | Qty | Optional | If there are multiple underlying assets, this specifies the number of units (index or securities) that constitute the underlier of the swap. In the case of a… |
-| 41104 | [MarketDisruptionFallbackBasketCurrency](/fix/fields/tags-41000-41199#tag-41104) | Currency | Optional | Specifies the currency if the underlier is a basket. Uses ISO 4217 currency codes. |
-| 41105 | [MarketDisruptionFallbackBasketDivisor](/fix/fields/tags-41000-41199#tag-41105) | float | Optional | Specifies the basket divisor amount. This value is normally used to adjust the constituent weight for pricing or to adjust for dividends, or other corporate… |
+| 41097 | [MarketDisruptionFallbackUnderlierType](/fix/fields/tags-41000-41199#tag-41097-marketdisruptionfallbackunderliertype) | MarketDisruptionFallbackUnderlierTypeCodeSet | Optional | Required if NoMarketDisruptionFallbackReferencePrices(41096) &gt; 0. |
+| 41098 | [MarketDisruptionFallbackUnderlierSecurityID](/fix/fields/tags-41000-41199#tag-41098-marketdisruptionfallbackunderliersecurityid) | String | Optional | Conditionally required when MarketDisruptionFallbackUnderlyerSecurityIDSource(41099) is specified. |
+| 41099 | [MarketDisruptionFallbackUnderlierSecurityIDSource](/fix/fields/tags-41000-41199#tag-41099-marketdisruptionfallbackunderliersecurityidsource) | SecurityIDSourceCodeSet | Optional | Conditionally required when MarketDisruptionFallbackUnderlierSecurityID(41098) is specified. |
+| 41100 | [MarketDisruptionFallbackUnderlierSecurityDesc](/fix/fields/tags-41000-41199#tag-41100-marketdisruptionfallbackunderliersecuritydesc) | String | Optional | Specifies the description of the underlying security. |
+| 41101 | [EncodedMarketDisruptionFallbackUnderlierSecurityDescLen](/fix/fields/tags-41000-41199#tag-41101-encodedmarketdisruptionfallbackunderliersecuritydesclen) | Length | Optional | Must be set if EncodedMarketDisruptionFallbackUnderlierSecurityDesc(41102) field is specified and must immediately precede it |
+| 41102 | [EncodedMarketDisruptionFallbackUnderlierSecurityDesc](/fix/fields/tags-41000-41199#tag-41102-encodedmarketdisruptionfallbackunderliersecuritydesc) | data | Optional | Encoded (non-ASCII characters) representation of the MarketDisruptionFallbackUnderlierSecurityDesc(41100) field in the encoded format specified via the… |
+| 41103 | [MarketDisruptionFallbackOpenUnits](/fix/fields/tags-41000-41199#tag-41103-marketdisruptionfallbackopenunits) | Qty | Optional | If there are multiple underlying assets, this specifies the number of units (index or securities) that constitute the underlier of the swap. In the case of a… |
+| 41104 | [MarketDisruptionFallbackBasketCurrency](/fix/fields/tags-41000-41199#tag-41104-marketdisruptionfallbackbasketcurrency) | Currency | Optional | Specifies the currency if the underlier is a basket. Uses ISO 4217 currency codes. |
+| 41105 | [MarketDisruptionFallbackBasketDivisor](/fix/fields/tags-41000-41199#tag-41105-marketdisruptionfallbackbasketdivisor) | float | Optional | Specifies the basket divisor amount. This value is normally used to adjust the constituent weight for pricing or to adjust for dividends, or other corporate… |
 
 </StickyTable>
 

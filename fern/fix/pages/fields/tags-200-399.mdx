@@ -3,19 +3,31 @@ title: "Tags 200–399"
 subtitle: "193 fields"
 ---
 
-## 200 · MaturityMonthYear [#tag-200]
+## Tag 200: MaturityMonthYear
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 200</Badge> <Badge intent="note" minimal>MonthYear</Badge> <Badge intent="success" minimal>Added FIX.4.1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 200 · MonthYear · Added FIX.4.1
+</llms-only>
 
 Can be used with standardized derivatives vs. the MaturityDate (54) field. Month and Year of the maturity (used for standardized futures and options). Format: YYYYMM (e.g. 199903) YYYYMMDD (e.g. 20030323) YYYYMMwN (e.g. 200303w) for week A specific date or can be appended to the MaturityMonthYear. For instance, if multiple standard products exist that mature in the same Year and Month, but actually mature at a different time, a value can be appended, such as "w" or "w2" to indicate week as opposed to week 2 expiration. Likewise, the date (0-3) can be appended to indicate a specific expiration (maturity date).
 
-Type: [MonthYear](/fix/datatypes#month-year)
+Type: [MonthYear](/fix/datatypes#monthyear)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 201 · PutOrCall [#tag-201]
+## Tag 201: PutOrCall
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 201</Badge> <Badge intent="note" minimal>PutOrCallCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 201 · PutOrCallCodeSet · Added FIX.4.1
+</llms-only>
 
 Indicates whether an option contract is a put, call, chooser or undetermined.
 
@@ -30,9 +42,15 @@ Code set **PutOrCallCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 202 · StrikePrice [#tag-202]
+## Tag 202: StrikePrice
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 202</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.4.1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 202 · Price · Added FIX.4.1
+</llms-only>
 
 Strike Price for an Option.
 
@@ -40,9 +58,15 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 203 · CoveredOrUncovered [#tag-203]
+## Tag 203: CoveredOrUncovered
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 203</Badge> <Badge intent="note" minimal>CoveredOrUncoveredCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 203 · CoveredOrUncoveredCodeSet · Added FIX.4.1
+</llms-only>
 
 Used for derivative products, such as options
 
@@ -55,9 +79,15 @@ Code set **CoveredOrUncoveredCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ListOrdGrp](/fix/groups/list-ord-grp), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [SideCrossOrdModGrp](/fix/groups/side-cross-ord-mod-grp)
 
-## 206 · OptAttribute [#tag-206]
+## Tag 206: OptAttribute
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 206</Badge> <Badge intent="note" minimal>char</Badge> <Badge intent="success" minimal>Added FIX.4.1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 206 · char · Added FIX.4.1
+</llms-only>
 
 Provided to support versioning of option contracts as a result of corporate actions or events. Use of this field is defined by counterparty agreement or market conventions.
 
@@ -65,9 +95,15 @@ Type: [char](/fix/datatypes#char)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 207 · SecurityExchange [#tag-207]
+## Tag 207: SecurityExchange
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 207</Badge> <Badge intent="note" minimal>Exchange</Badge> <Badge intent="success" minimal>Added FIX.4.1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 207 · Exchange · Added FIX.4.1
+</llms-only>
 
 Market used to help identify a security. Valid values: See "Appendix 6-C"
 
@@ -75,9 +111,15 @@ Type: [Exchange](/fix/datatypes#exchange)
 
 Used in: [Instrument](/fix/components/instrument), [TradingSessionListRequest](/fix/messages/trading-session-list-request), [TradingSessionStatusRequest](/fix/messages/trading-session-status-request), [TrdSessLstGrp](/fix/groups/trd-sess-lst-grp)
 
-## 208 · NotifyBrokerOfCredit [#tag-208]
+## Tag 208: NotifyBrokerOfCredit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 208</Badge> <Badge intent="note" minimal>NotifyBrokerOfCreditCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 208 · NotifyBrokerOfCreditCodeSet · Added FIX.4.1
+</llms-only>
 
 Indicates whether or not details should be communicated to BrokerOfCredit (i.e. step-in broker).
 
@@ -90,9 +132,15 @@ Code set **NotifyBrokerOfCreditCodeSet** ([Boolean](/fix/datatypes#boolean))
 
 Used in: [AllocGrp](/fix/groups/alloc-grp)
 
-## 209 · AllocHandlInst [#tag-209]
+## Tag 209: AllocHandlInst
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 209</Badge> <Badge intent="note" minimal>AllocHandlInstCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 209 · AllocHandlInstCodeSet · Added FIX.4.1
+</llms-only>
 
 Indicates how the receiver (i.e. third party) of allocation information should handle/process the account details.
 
@@ -107,9 +155,15 @@ Code set **AllocHandlInstCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [AllocAckGrp](/fix/groups/alloc-ack-grp), [AllocGrp](/fix/groups/alloc-grp), [PreAllocGrp](/fix/groups/pre-alloc-grp), [TrdAllocGrp](/fix/groups/trd-alloc-grp)
 
-## 210 · MaxShow [#tag-210]
+## Tag 210: MaxShow
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 210</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.1</Badge> <Badge intent="warning">Deprecated FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 210 · Qty · Added FIX.4.1 · Deprecated FIX.5.0
+</llms-only>
 
 Maximum quantity (e.g. number of shares) within an order to be shown to other customers (i.e. sent via an IOI). (Prior to FIX 4.2 this field was of type int)
 
@@ -117,9 +171,15 @@ Type: [Qty](/fix/datatypes#qty)
 
 Used in: [CrossOrderCancelReplaceRequest](/fix/messages/cross-order-cancel-replace-request), [ExecutionReport](/fix/messages/execution-report), [ListOrdGrp](/fix/groups/list-ord-grp), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderCross](/fix/messages/new-order-cross), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request)
 
-## 211 · PegOffsetValue [#tag-211]
+## Tag 211: PegOffsetValue
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 211</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.4.1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 211 · float · Added FIX.4.1
+</llms-only>
 
 Amount (signed) added to the peg for a pegged order in the context of the PegOffsetType (836) (Prior to FIX 4.4 this field was of type PriceOffset)
 
@@ -127,9 +187,15 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [PegInstructions](/fix/components/peg-instructions)
 
-## 212 · XmlDataLen [#tag-212]
+## Tag 212: XmlDataLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 212</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 212 · Length · Added FIX.4.2
+</llms-only>
 
 Length of the XmlData data block.
 
@@ -137,9 +203,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [StandardHeader](/fix/components/standard-header)
 
-## 213 · XmlData [#tag-213]
+## Tag 213: XmlData
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 213</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 213 · data · Added FIX.4.2
+</llms-only>
 
 Actual XML data stream (e.g. FIXML). See approriate XML reference (e.g. FIXML). Note: may contain embedded SOH characters.
 
@@ -147,9 +219,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [StandardHeader](/fix/components/standard-header)
 
-## 214 · SettlInstRefID [#tag-214]
+## Tag 214: SettlInstRefID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 214</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 214 · String · Added FIX.4.2
+</llms-only>
 
 Reference identifier for the SettlInstID (162) with Cancel and Replace SettlInstTransType (163) transaction types.
 
@@ -157,19 +235,31 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [SettlInstGrp](/fix/groups/settl-inst-grp)
 
-## 215 · NoRoutingIDs [#tag-215]
+## Tag 215: NoRoutingIDs
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 215</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 215 · NumInGroup · Added FIX.4.2
+</llms-only>
 
 Number of repeating groups of RoutingID (217) and RoutingType (216) values. See Volume 3: "Pre-Trade Message Targeting/Routing"
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [RoutingGrp](/fix/groups/routing-grp)
 
-## 216 · RoutingType [#tag-216]
+## Tag 216: RoutingType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 216</Badge> <Badge intent="note" minimal>RoutingTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 216 · RoutingTypeCodeSet · Added FIX.4.2
+</llms-only>
 
 Indicates the type of RoutingID (217) specified.
 
@@ -186,9 +276,15 @@ Code set **RoutingTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [RoutingGrp](/fix/groups/routing-grp)
 
-## 217 · RoutingID [#tag-217]
+## Tag 217: RoutingID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 217</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 217 · String · Added FIX.4.2
+</llms-only>
 
 Assigned value used to identify a specific routing destination.
 
@@ -196,19 +292,31 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [RoutingGrp](/fix/groups/routing-grp)
 
-## 218 · Spread [#tag-218]
+## Tag 218: Spread
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 218</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 218 · PriceOffset · Added FIX.4.2
+</llms-only>
 
 For Fixed Income. Either Swap Spread or Spread to Benchmark depending upon the order type. Spread to Benchmark: Basis points relative to a benchmark. To be expressed as "count of basis points" (vs. an absolute value). E.g. High Grade Corporate Bonds may express price as basis points relative to benchmark (the BenchmarkCurveName (22) field). Note: Basis points can be negative. Swap Spread: Target spread for a swap.
 
-Type: [PriceOffset](/fix/datatypes#price-offset)
+Type: [PriceOffset](/fix/datatypes#priceoffset)
 
 Used in: [SpreadOrBenchmarkCurveData](/fix/components/spread-or-benchmark-curve-data)
 
-## 220 · BenchmarkCurveCurrency [#tag-220]
+## Tag 220: BenchmarkCurveCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 220</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 220 · Currency · Added FIX.4.2
+</llms-only>
 
 Identifies currency used for benchmark curve. See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values. (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -216,9 +324,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [SpreadOrBenchmarkCurveData](/fix/components/spread-or-benchmark-curve-data)
 
-## 221 · BenchmarkCurveName [#tag-221]
+## Tag 221: BenchmarkCurveName
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 221</Badge> <Badge intent="note" minimal>BenchmarkCurveNameCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 221 · BenchmarkCurveNameCodeSet · Added FIX.4.2
+</llms-only>
 
 Name of benchmark curve. (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -263,9 +377,15 @@ Code set **BenchmarkCurveNameCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [SpreadOrBenchmarkCurveData](/fix/components/spread-or-benchmark-curve-data)
 
-## 222 · BenchmarkCurvePoint [#tag-222]
+## Tag 222: BenchmarkCurvePoint
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 222</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 222 · String · Added FIX.4.2
+</llms-only>
 
 Point on benchmark curve. Free form values: e.g. "Y", "7Y", "INTERPOLATED". Sample values: M = combination of a number between 1-12 and a "M" for month Y = combination of number between 1-100 and a "Y" for year\} 10Y-OLD = see above, then add "-OLD" when appropriate INTERPOLATED = the point is mathematically derived 2/2031 5 3/8 = the point is stated via a combination of maturity month / year and coupon See Fixed Income-specific documentation at http://www.fixtradingcommunity.org for additional values. (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -273,9 +393,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [SpreadOrBenchmarkCurveData](/fix/components/spread-or-benchmark-curve-data)
 
-## 223 · CouponRate [#tag-223]
+## Tag 223: CouponRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 223</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 223 · Percentage · Added FIX.4.2
+</llms-only>
 
 The rate of interest that, when multiplied by the principal, par value, or face value of a bond, provides the currency amount of the periodic interest payment. The coupon is always cited, along with maturity, in any quotation of a bond's price.
 
@@ -283,29 +409,47 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 224 · CouponPaymentDate [#tag-224]
+## Tag 224: CouponPaymentDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 224</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 224 · LocalMktDate · Added FIX.4.2
+</llms-only>
 
 Date interest is to be paid. Used in identifying Corporate Bond issues. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to FIX 4.4 field was of type UTCDate)
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 225 · IssueDate [#tag-225]
+## Tag 225: IssueDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 225</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 225 · LocalMktDate · Added FIX.4.2
+</llms-only>
 
 The date on which a bond or stock offering is issued. It may or may not be the same as the effective date ("Dated Date") or the date on which interest begins to accrue ("Interest Accrual Date") (Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to FIX 4.4 field was of type UTCDate)
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 226 · RepurchaseTerm [#tag-226]
+## Tag 226: RepurchaseTerm
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 226</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge> <Badge intent="warning">Deprecated FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 226 · int · Added FIX.4.2 · Deprecated FIX.4.4
+</llms-only>
 
 Number of business days before repurchase of a repo. (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -313,9 +457,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 227 · RepurchaseRate [#tag-227]
+## Tag 227: RepurchaseRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 227</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge> <Badge intent="warning">Deprecated FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 227 · Percentage · Added FIX.4.2 · Deprecated FIX.4.4
+</llms-only>
 
 Percent of par at which a Repo will be repaid. Represented as a percent, e.g. .9525 represents 95-/4 percent of par. (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -323,9 +473,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 228 · Factor [#tag-228]
+## Tag 228: Factor
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 228</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 228 · float · Added FIX.4.2
+</llms-only>
 
 For Fixed Income: Amorization Factor for deriving Current face from Original face for ABS or MBS securities, note the fraction may be greater than, equal to or less than . In TIPS securities this is the Inflation index. Qty \* Factor \* Price = Gross Trade Amount For Derivatives: Contract Value Factor by which price must be adjusted to determine the true nominal value of one futures/options contract. (Qty \* Price) \* Factor = Nominal Value (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -333,29 +489,47 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 229 · TradeOriginationDate [#tag-229]
+## Tag 229: TradeOriginationDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 229</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 229 · LocalMktDate · Added FIX.4.2
+</llms-only>
 
 Used with Fixed Income for Muncipal New Issue Market. Agreement in principal between counter-parties prior to actual trade date. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to FIX 4.4 field was of type UTCDate)
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [AllocationInstruction](/fix/messages/allocation-instruction), [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationReport](/fix/messages/allocation-report), [ExecutionReport](/fix/messages/execution-report), [ListCancelRequest](/fix/messages/list-cancel-request), [ListOrdGrp](/fix/groups/list-ord-grp), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReject](/fix/messages/order-cancel-reject), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [QuotReqGrp](/fix/groups/quot-req-grp), [QuotReqRjctGrp](/fix/groups/quot-req-rjct-grp), [SideCrossOrdCxlGrp](/fix/groups/side-cross-ord-cxl-grp), [SideCrossOrdModGrp](/fix/groups/side-cross-ord-mod-grp)
 
-## 230 · ExDate [#tag-230]
+## Tag 230: ExDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 230</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 230 · LocalMktDate · Added FIX.4.2
+</llms-only>
 
 The date when a distribution of interest is deducted from a securities assets or set aside for payment to bondholders. On the ex-date, the securities price drops by the amount of the distribution (plus or minus any market activity). (Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to FIX 4.4 field was of type UTCDate)
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [Confirmation](/fix/messages/confirmation), [ExecutionReport](/fix/messages/execution-report), [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp)
 
-## 231 · ContractMultiplier [#tag-231]
+## Tag 231: ContractMultiplier
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 231</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 231 · float · Added FIX.4.2
+</llms-only>
 
 Specifies the ratio or multiply factor to convert from "nominal" units (e.g. contracts) to total units (e.g. shares) (e.g. 1.0, 100, 1000, etc). Applicable For Fixed Income, Convertible Bonds, Derivatives, etc.
 
@@ -365,19 +539,31 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 232 · NoStipulations [#tag-232]
+## Tag 232: NoStipulations
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 232</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 232 · NumInGroup · Added FIX.4.2
+</llms-only>
 
 Number of stipulation entries (Note tag # was reserved in FIX 4.1, added in FIX 4.3).
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [Stipulations](/fix/groups/stipulations)
 
-## 233 · StipulationType [#tag-233]
+## Tag 233: StipulationType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 233</Badge> <Badge intent="note" minimal>StipulationTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 233 · StipulationTypeCodeSet · Added FIX.4.2
+</llms-only>
 
 For Fixed Income. Type of Stipulation. Other types may be used by mutual agreement of the counterparties. (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -487,9 +673,15 @@ Code set **StipulationTypeCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [Stipulations](/fix/groups/stipulations)
 
-## 234 · StipulationValue [#tag-234]
+## Tag 234: StipulationValue
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 234</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 234 · String · Added FIX.4.2
+</llms-only>
 
 For Fixed Income. Value of stipulation. The expression can be an absolute single value or a combination of values and logical operators: &lt; value &gt; value &lt;= value &gt;= value value value - value2 value OR value2 value AND value2 YES NO Bargain conditions recognized by the London Stock Exchange - to be used when StipulationType is "BGNCON". CD = Special cum Dividend XD = Special ex Dividend CC = Special cum Coupon XC = Special ex Coupon CB = Special cum Bonus XB = Special ex Bonus CR = Special cum Rights XR = Special ex Rights CP = Special cum Capital Repayments XP = Special ex Capital Repayments CS = Cash Settlement SP = Special Price TR = Report for European Equity Market Securities in accordance with Chapter 8 of the Rules. GD = Guaranteed Delivery Values for StipulationType = "PXSOURCE": BB GENERIC BB FAIRVALUE BROKERTEC ESPEED GOVPX HILLIARD FARBER ICAP TRADEWEB TULLETT LIBERTY If a particular side of the market is wanted append /BID /OFFER or /MID. plus appropriate combinations of the above and other expressions by mutual agreement of the counterparties. Examples: "&gt;=60", ".25", "ORANGE OR CONTRACOSTA", etc. (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -497,9 +689,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [Stipulations](/fix/groups/stipulations)
 
-## 235 · YieldType [#tag-235]
+## Tag 235: YieldType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 235</Badge> <Badge intent="note" minimal>YieldTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 235 · YieldTypeCodeSet · Added FIX.4.2
+</llms-only>
 
 Type of yield. (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -544,9 +742,15 @@ Code set **YieldTypeCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [YieldData](/fix/components/yield-data)
 
-## 236 · Yield [#tag-236]
+## Tag 236: Yield
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 236</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 236 · Percentage · Added FIX.4.2
+</llms-only>
 
 Yield percentage. (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -554,9 +758,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [YieldData](/fix/components/yield-data)
 
-## 237 · TotalTakedown [#tag-237]
+## Tag 237: TotalTakedown
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 237</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 237 · Amt · Added FIX.4.2
+</llms-only>
 
 The price at which the securities are distributed to the different members of an underwriting group for the primary market in Municipals, total gross underwriter's spread. (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -564,9 +774,15 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [AllocationInstruction](/fix/messages/allocation-instruction), [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationReport](/fix/messages/allocation-report), [Confirmation](/fix/messages/confirmation), [ExecutionReport](/fix/messages/execution-report), [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp)
 
-## 238 · Concession [#tag-238]
+## Tag 238: Concession
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 238</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 238 · Amt · Added FIX.4.2
+</llms-only>
 
 Provides the reduction in price for the secondary market in Muncipals. (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -574,9 +790,15 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [AllocationInstruction](/fix/messages/allocation-instruction), [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationReport](/fix/messages/allocation-report), [Confirmation](/fix/messages/confirmation), [ExecutionReport](/fix/messages/execution-report), [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp)
 
-## 239 · RepoCollateralSecurityType [#tag-239]
+## Tag 239: RepoCollateralSecurityType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 239</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge> <Badge intent="warning">Deprecated FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 239 · String · Added FIX.4.3 · Deprecated FIX.4.4
+</llms-only>
 
 Identifies the collateral used in the transaction. Valid values: see SecurityType (167) field (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -584,39 +806,63 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 240 · RedemptionDate [#tag-240]
+## Tag 240: RedemptionDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 240</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge> <Badge intent="warning">Deprecated FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 240 · LocalMktDate · Added FIX.4.2 · Deprecated FIX.4.4
+</llms-only>
 
 Return of investor's principal in a security. Bond redemption can occur before maturity date.(Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to FIX 4.4 field was of type UTCDate)
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 241 · UnderlyingCouponPaymentDate [#tag-241]
+## Tag 241: UnderlyingCouponPaymentDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 241</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 241 · LocalMktDate · Added FIX.4.2
+</llms-only>
 
 Underlying security's CouponPaymentDate. See CouponPaymentDate (224) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to FIX 4.4 field was of type UTCDate)
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 242 · UnderlyingIssueDate [#tag-242]
+## Tag 242: UnderlyingIssueDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 242</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 242 · LocalMktDate · Added FIX.4.2
+</llms-only>
 
 Underlying security's IssueDate. See IssueDate (225) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to FIX 4.4 field was of type UTCDate)
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 243 · UnderlyingRepoCollateralSecurityType [#tag-243]
+## Tag 243: UnderlyingRepoCollateralSecurityType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 243</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge> <Badge intent="warning">Deprecated FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 243 · String · Added FIX.4.3 · Deprecated FIX.4.4
+</llms-only>
 
 Underlying security's RepoCollateralSecurityType. See RepoCollateralSecurityType (239) field for description.(Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -624,9 +870,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 244 · UnderlyingRepurchaseTerm [#tag-244]
+## Tag 244: UnderlyingRepurchaseTerm
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 244</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge> <Badge intent="warning">Deprecated FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 244 · int · Added FIX.4.2 · Deprecated FIX.4.4
+</llms-only>
 
 Underlying security's RepurchaseTerm. See RepurchaseTerm (226) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -634,9 +886,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 245 · UnderlyingRepurchaseRate [#tag-245]
+## Tag 245: UnderlyingRepurchaseRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 245</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge> <Badge intent="warning">Deprecated FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 245 · Percentage · Added FIX.4.2 · Deprecated FIX.4.4
+</llms-only>
 
 Underlying security's RepurchaseRate. See RepurchaseRate (227) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -644,9 +902,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 246 · UnderlyingFactor [#tag-246]
+## Tag 246: UnderlyingFactor
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 246</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 246 · float · Added FIX.4.2
+</llms-only>
 
 Underlying security's Factor. See Factor (228) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -654,39 +918,63 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 247 · UnderlyingRedemptionDate [#tag-247]
+## Tag 247: UnderlyingRedemptionDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 247</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge> <Badge intent="warning">Deprecated FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 247 · LocalMktDate · Added FIX.4.2 · Deprecated FIX.4.4
+</llms-only>
 
 Underlying security's RedemptionDate. See RedemptionDate (240) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to FIX 4.4 field was of type UTCDate)
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 248 · LegCouponPaymentDate [#tag-248]
+## Tag 248: LegCouponPaymentDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 248</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 248 · LocalMktDate · Added FIX.4.2
+</llms-only>
 
 Multileg instrument's individual leg security's CouponPaymentDate. See CouponPaymentDate (224) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to FIX 4.4 field was of type UTCDate)
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [InstrumentLeg](/fix/components/instrument-leg)
 
-## 249 · LegIssueDate [#tag-249]
+## Tag 249: LegIssueDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 249</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 249 · LocalMktDate · Added FIX.4.2
+</llms-only>
 
 Multileg instrument's individual leg security's IssueDate. See IssueDate (225) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to FIX 4.4 field was of type UTCDate)
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [InstrumentLeg](/fix/components/instrument-leg)
 
-## 250 · LegRepoCollateralSecurityType [#tag-250]
+## Tag 250: LegRepoCollateralSecurityType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 250</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge> <Badge intent="warning">Deprecated FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 250 · String · Added FIX.4.3 · Deprecated FIX.4.4
+</llms-only>
 
 Multileg instrument's individual leg security's RepoCollateralSecurityType. See RepoCollateralSecurityType (239) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -694,9 +982,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentLeg](/fix/components/instrument-leg)
 
-## 251 · LegRepurchaseTerm [#tag-251]
+## Tag 251: LegRepurchaseTerm
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 251</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge> <Badge intent="warning">Deprecated FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 251 · int · Added FIX.4.2 · Deprecated FIX.4.4
+</llms-only>
 
 Multileg instrument's individual leg security's RepurchaseTerm. See RepurchaseTerm (226) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -704,9 +998,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [InstrumentLeg](/fix/components/instrument-leg)
 
-## 252 · LegRepurchaseRate [#tag-252]
+## Tag 252: LegRepurchaseRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 252</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge> <Badge intent="warning">Deprecated FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 252 · Percentage · Added FIX.4.2 · Deprecated FIX.4.4
+</llms-only>
 
 Multileg instrument's individual leg security's RepurchaseRate. See RepurchaseRate (227) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -714,9 +1014,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [InstrumentLeg](/fix/components/instrument-leg)
 
-## 253 · LegFactor [#tag-253]
+## Tag 253: LegFactor
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 253</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 253 · float · Added FIX.4.2
+</llms-only>
 
 Multileg instrument's individual leg security's Factor. See Factor (228) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -724,19 +1030,31 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [InstrumentLeg](/fix/components/instrument-leg)
 
-## 254 · LegRedemptionDate [#tag-254]
+## Tag 254: LegRedemptionDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 254</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge> <Badge intent="warning">Deprecated FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 254 · LocalMktDate · Added FIX.4.2 · Deprecated FIX.4.4
+</llms-only>
 
 Multileg instrument's individual leg security's RedemptionDate. See RedemptionDate (240) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to FIX 4.4 field was of type UTCDate)
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [InstrumentLeg](/fix/components/instrument-leg)
 
-## 255 · CreditRating [#tag-255]
+## Tag 255: CreditRating
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 255</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 255 · String · Added FIX.4.2
+</llms-only>
 
 An evaluation of a company's ability to repay obligations or its likelihood of not defaulting. These evaluation are provided by Credit Rating Agencies, i.e. S&P, Moody's. (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -744,9 +1062,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 256 · UnderlyingCreditRating [#tag-256]
+## Tag 256: UnderlyingCreditRating
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 256</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 256 · String · Added FIX.4.2
+</llms-only>
 
 Underlying security's CreditRating. See CreditRating (255) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -754,9 +1078,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 257 · LegCreditRating [#tag-257]
+## Tag 257: LegCreditRating
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 257</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 257 · String · Added FIX.4.2
+</llms-only>
 
 Multileg instrument's individual leg security's CreditRating. See CreditRating (255) field for description (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -764,9 +1094,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentLeg](/fix/components/instrument-leg)
 
-## 258 · TradedFlatSwitch [#tag-258]
+## Tag 258: TradedFlatSwitch
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 258</Badge> <Badge intent="note" minimal>TradedFlatSwitchCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 258 · TradedFlatSwitchCodeSet · Added FIX.4.2
+</llms-only>
 
 Driver and part of trade in the event that the Security Master file was wrong at the point of entry(Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -779,19 +1115,31 @@ Code set **TradedFlatSwitchCodeSet** ([Boolean](/fix/datatypes#boolean))
 
 Used in: [ExecutionReport](/fix/messages/execution-report)
 
-## 259 · BasisFeatureDate [#tag-259]
+## Tag 259: BasisFeatureDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 259</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 259 · LocalMktDate · Added FIX.4.2
+</llms-only>
 
 BasisFeatureDate allows requesting firms within fixed income the ability to request an alternative yield-to-worst, -maturity, -extended or other call. This flows through the confirm process. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to FIX 4.4 field was of type UTCDate)
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [ExecutionReport](/fix/messages/execution-report)
 
-## 260 · BasisFeaturePrice [#tag-260]
+## Tag 260: BasisFeaturePrice
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 260</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 260 · Price · Added FIX.4.2
+</llms-only>
 
 Price for BasisFeatureDate. See BasisFeatureDate (259) (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
 
@@ -799,9 +1147,15 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [ExecutionReport](/fix/messages/execution-report)
 
-## 262 · MDReqID [#tag-262]
+## Tag 262: MDReqID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 262</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 262 · String · Added FIX.4.2
+</llms-only>
 
 Unique identifier for Market Data Request
 
@@ -809,9 +1163,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [MarketDataIncrementalRefresh](/fix/messages/market-data-incremental-refresh), [MarketDataRequest](/fix/messages/market-data-request), [MarketDataRequestReject](/fix/messages/market-data-request-reject), [MarketDataSnapshotFullRefresh](/fix/messages/market-data-snapshot-full-refresh)
 
-## 263 · SubscriptionRequestType [#tag-263]
+## Tag 263: SubscriptionRequestType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 263</Badge> <Badge intent="note" minimal>SubscriptionRequestTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 263 · SubscriptionRequestTypeCodeSet · Added FIX.4.2
+</llms-only>
 
 Subscription Request Type
 
@@ -825,9 +1185,15 @@ Code set **SubscriptionRequestTypeCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [CollateralInquiry](/fix/messages/collateral-inquiry), [DerivativeSecurityListRequest](/fix/messages/derivative-security-list-request), [MarginRequirementInquiry](/fix/messages/margin-requirement-inquiry), [MarginRequirementInquiryAck](/fix/messages/margin-requirement-inquiry-ack), [MarketDataRequest](/fix/messages/market-data-request), [MarketDataStatisticsRequest](/fix/messages/market-data-statistics-request), [MarketDefinitionRequest](/fix/messages/market-definition-request), [PartyDetailsListRequest](/fix/messages/party-details-list-request), [PartyEntitlementsRequest](/fix/messages/party-entitlements-request), [PartyRiskLimitsRequest](/fix/messages/party-risk-limits-request), [PositionReport](/fix/messages/position-report), [QuoteStatusRequest](/fix/messages/quote-status-request), [RFQRequest](/fix/messages/rfq-request), [RequestForPositions](/fix/messages/request-for-positions), [RequestForPositionsAck](/fix/messages/request-for-positions-ack), [SecurityDefinitionRequest](/fix/messages/security-definition-request), [SecurityListRequest](/fix/messages/security-list-request), [SecurityMassStatusRequest](/fix/messages/security-mass-status-request), [SecurityStatusRequest](/fix/messages/security-status-request), [SecurityTypes](/fix/messages/security-types), [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack), [TradeCaptureReportRequest](/fix/messages/trade-capture-report-request), [TradeCaptureReportRequestAck](/fix/messages/trade-capture-report-request-ack), [TradingSessionListRequest](/fix/messages/trading-session-list-request), and 1 more
 
-## 264 · MarketDepth [#tag-264]
+## Tag 264: MarketDepth
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 264</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 264 · int · Added FIX.4.2
+</llms-only>
 
 Depth of market for Book Snapshot / Incremental updates 0 - full book depth 1 - top of book 2 and above - book depth (number of levels)
 
@@ -835,9 +1201,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [MDIncGrp](/fix/groups/md-inc-grp), [MDStatisticParameters](/fix/components/md-statistic-parameters), [MarketDataFeedTypes](/fix/groups/market-data-feed-types), [MarketDataRequest](/fix/messages/market-data-request), [MarketDataSnapshotFullRefresh](/fix/messages/market-data-snapshot-full-refresh), [SecurityMassStatus](/fix/messages/security-mass-status), [SecurityStatus](/fix/messages/security-status)
 
-## 265 · MDUpdateType [#tag-265]
+## Tag 265: MDUpdateType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 265</Badge> <Badge intent="note" minimal>MDUpdateTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 265 · MDUpdateTypeCodeSet · Added FIX.4.2
+</llms-only>
 
 Specifies the type of Market Data update.
 
@@ -850,9 +1222,15 @@ Code set **MDUpdateTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [MarketDataRequest](/fix/messages/market-data-request)
 
-## 266 · AggregatedBook [#tag-266]
+## Tag 266: AggregatedBook
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 266</Badge> <Badge intent="note" minimal>AggregatedBookCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 266 · AggregatedBookCodeSet · Added FIX.4.2
+</llms-only>
 
 Specifies whether or not book entries should be aggregated. (Not specified) = broker option
 
@@ -865,29 +1243,47 @@ Code set **AggregatedBookCodeSet** ([Boolean](/fix/datatypes#boolean))
 
 Used in: [MarketDataRequest](/fix/messages/market-data-request)
 
-## 267 · NoMDEntryTypes [#tag-267]
+## Tag 267: NoMDEntryTypes
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 267</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 267 · NumInGroup · Added FIX.4.2
+</llms-only>
 
 Number of MDEntryType (269) fields requested.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [MDReqGrp](/fix/groups/md-req-grp)
 
-## 268 · NoMDEntries [#tag-268]
+## Tag 268: NoMDEntries
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 268</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 268 · NumInGroup · Added FIX.4.2
+</llms-only>
 
 Number of entries in Market Data message.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 269 · MDEntryType [#tag-269]
+## Tag 269: MDEntryType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 269</Badge> <Badge intent="note" minimal>MDEntryTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 269 · MDEntryTypeCodeSet · Added FIX.4.2
+</llms-only>
 
 Type of market data entry.
 
@@ -942,9 +1338,15 @@ Code set **MDEntryTypeCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [MDReqGrp](/fix/groups/md-req-grp)
 
-## 270 · MDEntryPx [#tag-270]
+## Tag 270: MDEntryPx
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 270</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 270 · Price · Added FIX.4.2
+</llms-only>
 
 Price of the Market Data Entry.
 
@@ -952,9 +1354,15 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 271 · MDEntrySize [#tag-271]
+## Tag 271: MDEntrySize
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 271</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 271 · Qty · Added FIX.4.2
+</llms-only>
 
 Quantity or volume represented by the Market Data Entry.
 
@@ -962,29 +1370,47 @@ Type: [Qty](/fix/datatypes#qty)
 
 Used in: [InstrmtMDReqGrp](/fix/groups/instrmt-md-req-grp), [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [StrmAsgnReqInstrmtGrp](/fix/groups/strm-asgn-req-instrmt-grp)
 
-## 272 · MDEntryDate [#tag-272]
+## Tag 272: MDEntryDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 272</Badge> <Badge intent="note" minimal>UTCDateOnly</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 272 · UTCDateOnly · Added FIX.4.2
+</llms-only>
 
 Date of Market Data Entry. (prior to FIX 4.4 field was of type UTCDate)
 
-Type: [UTCDateOnly](/fix/datatypes#utc-date-only)
+Type: [UTCDateOnly](/fix/datatypes#utcdateonly)
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 273 · MDEntryTime [#tag-273]
+## Tag 273: MDEntryTime
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 273</Badge> <Badge intent="note" minimal>UTCTimeOnly</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 273 · UTCTimeOnly · Added FIX.4.2
+</llms-only>
 
 Time of Market Data Entry.
 
-Type: [UTCTimeOnly](/fix/datatypes#utc-time-only)
+Type: [UTCTimeOnly](/fix/datatypes#utctimeonly)
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 274 · TickDirection [#tag-274]
+## Tag 274: TickDirection
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 274</Badge> <Badge intent="note" minimal>TickDirectionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 274 · TickDirectionCodeSet · Added FIX.4.2
+</llms-only>
 
 Direction of the "tick".
 
@@ -999,9 +1425,15 @@ Code set **TickDirectionCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 275 · MDMkt [#tag-275]
+## Tag 275: MDMkt
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 275</Badge> <Badge intent="note" minimal>Exchange</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge> <Badge intent="warning">Deprecated FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 275 · Exchange · Added FIX.4.2 · Deprecated FIX.5.0
+</llms-only>
 
 Market posting quote / trade. Valid values: See "Appendix 6-C"
 
@@ -1009,13 +1441,19 @@ Type: [Exchange](/fix/datatypes#exchange)
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 276 · QuoteCondition [#tag-276]
+## Tag 276: QuoteCondition
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 276</Badge> <Badge intent="note" minimal>QuoteConditionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 276 · QuoteConditionCodeSet · Added FIX.4.2
+</llms-only>
 
 Space-delimited list of conditions describing a quote.
 
-Code set **QuoteConditionCodeSet** ([MultipleStringValue](/fix/datatypes#multiple-string-value))
+Code set **QuoteConditionCodeSet** ([MultipleStringValue](/fix/datatypes#multiplestringvalue))
 
 | Value | Name | Description |
 |---|---|---|
@@ -1082,13 +1520,19 @@ Code set **QuoteConditionCodeSet** ([MultipleStringValue](/fix/datatypes#multipl
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [MDStatisticParameters](/fix/components/md-statistic-parameters)
 
-## 277 · TradeCondition [#tag-277]
+## Tag 277: TradeCondition
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 277</Badge> <Badge intent="note" minimal>TradeConditionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 277 · TradeConditionCodeSet · Added FIX.4.2
+</llms-only>
 
 Type of market data entry.
 
-Code set **TradeConditionCodeSet** ([MultipleStringValue](/fix/datatypes#multiple-string-value))
+Code set **TradeConditionCodeSet** ([MultipleStringValue](/fix/datatypes#multiplestringvalue))
 
 | Value | Name | Description |
 |---|---|---|
@@ -1184,9 +1628,15 @@ Code set **TradeConditionCodeSet** ([MultipleStringValue](/fix/datatypes#multipl
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [MDStatisticParameters](/fix/components/md-statistic-parameters)
 
-## 278 · MDEntryID [#tag-278]
+## Tag 278: MDEntryID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 278</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 278 · String · Added FIX.4.2
+</llms-only>
 
 Unique Market Data Entry identifier.
 
@@ -1194,9 +1644,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [ExecutionReport](/fix/messages/execution-report), [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 279 · MDUpdateAction [#tag-279]
+## Tag 279: MDUpdateAction
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 279</Badge> <Badge intent="note" minimal>MDUpdateActionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 279 · MDUpdateActionCodeSet · Added FIX.4.2
+</llms-only>
 
 Type of Market Data update action.
 
@@ -1213,9 +1669,15 @@ Code set **MDUpdateActionCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 280 · MDEntryRefID [#tag-280]
+## Tag 280: MDEntryRefID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 280</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 280 · String · Added FIX.4.2
+</llms-only>
 
 Refers to a previous MDEntryID (278).
 
@@ -1223,9 +1685,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 281 · MDReqRejReason [#tag-281]
+## Tag 281: MDReqRejReason
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 281</Badge> <Badge intent="note" minimal>MDReqRejReasonCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 281 · MDReqRejReasonCodeSet · Added FIX.4.2
+</llms-only>
 
 Reason for the rejection of a Market Data request.
 
@@ -1250,9 +1718,15 @@ Code set **MDReqRejReasonCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [MarketDataRequestReject](/fix/messages/market-data-request-reject)
 
-## 282 · MDEntryOriginator [#tag-282]
+## Tag 282: MDEntryOriginator
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 282</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge> <Badge intent="warning">Deprecated FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 282 · String · Added FIX.4.2 · Deprecated FIX.5.0
+</llms-only>
 
 Originator of a Market Data Entry
 
@@ -1260,9 +1734,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 283 · LocationID [#tag-283]
+## Tag 283: LocationID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 283</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 283 · String · Added FIX.4.2
+</llms-only>
 
 Identification of a Market Maker's location
 
@@ -1270,9 +1750,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [CompIDReqGrp](/fix/groups/comp-id-req-grp), [CompIDStatGrp](/fix/groups/comp-id-stat-grp), [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 284 · DeskID [#tag-284]
+## Tag 284: DeskID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 284</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 284 · String · Added FIX.4.2
+</llms-only>
 
 Identification of a Market Maker's desk
 
@@ -1280,9 +1766,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [CompIDReqGrp](/fix/groups/comp-id-req-grp), [CompIDStatGrp](/fix/groups/comp-id-stat-grp), [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 285 · DeleteReason [#tag-285]
+## Tag 285: DeleteReason
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 285</Badge> <Badge intent="note" minimal>DeleteReasonCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 285 · DeleteReasonCodeSet · Added FIX.4.2
+</llms-only>
 
 Reason for deletion.
 
@@ -1295,13 +1787,19 @@ Code set **DeleteReasonCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 286 · OpenCloseSettlFlag [#tag-286]
+## Tag 286: OpenCloseSettlFlag
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 286</Badge> <Badge intent="note" minimal>OpenCloseSettlFlagCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 286 · OpenCloseSettlFlagCodeSet · Added FIX.4.2
+</llms-only>
 
 Flag that identifies a market data entry. (Prior to FIX 4.3 this field was of type char)
 
-Code set **OpenCloseSettlFlagCodeSet** ([MultipleCharValue](/fix/datatypes#multiple-char-value))
+Code set **OpenCloseSettlFlagCodeSet** ([MultipleCharValue](/fix/datatypes#multiplecharvalue))
 
 | Value | Name | Description |
 |---|---|---|
@@ -1314,9 +1812,15 @@ Code set **OpenCloseSettlFlagCodeSet** ([MultipleCharValue](/fix/datatypes#multi
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [MarketDataRequest](/fix/messages/market-data-request)
 
-## 287 · SellerDays [#tag-287]
+## Tag 287: SellerDays
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 287</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 287 · int · Added FIX.4.2
+</llms-only>
 
 Specifies the number of days that may elapse before delivery of the security
 
@@ -1324,9 +1828,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 288 · MDEntryBuyer [#tag-288]
+## Tag 288: MDEntryBuyer
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 288</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 288 · String · Added FIX.4.2
+</llms-only>
 
 Buying party in a trade
 
@@ -1334,9 +1844,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 289 · MDEntrySeller [#tag-289]
+## Tag 289: MDEntrySeller
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 289</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 289 · String · Added FIX.4.2
+</llms-only>
 
 Selling party in a trade
 
@@ -1344,9 +1860,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 290 · MDEntryPositionNo [#tag-290]
+## Tag 290: MDEntryPositionNo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 290</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 290 · int · Added FIX.4.2
+</llms-only>
 
 Display position of a bid or offer, numbered from most competitive to least competitive, per market side, beginning with .
 
@@ -1354,13 +1876,19 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 291 · FinancialStatus [#tag-291]
+## Tag 291: FinancialStatus
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 291</Badge> <Badge intent="note" minimal>FinancialStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 291 · FinancialStatusCodeSet · Added FIX.4.2
+</llms-only>
 
 Identifies a firm's or a security's financial status
 
-Code set **FinancialStatusCodeSet** ([MultipleCharValue](/fix/datatypes#multiple-char-value))
+Code set **FinancialStatusCodeSet** ([MultipleCharValue](/fix/datatypes#multiplecharvalue))
 
 | Value | Name | Description |
 |---|---|---|
@@ -1370,13 +1898,19 @@ Code set **FinancialStatusCodeSet** ([MultipleCharValue](/fix/datatypes#multiple
 
 Used in: [CollateralReport](/fix/messages/collateral-report), [CollateralResponse](/fix/messages/collateral-response), [MDIncGrp](/fix/groups/md-inc-grp), [MarketDataSnapshotFullRefresh](/fix/messages/market-data-snapshot-full-refresh), [SecMassStatGrp](/fix/groups/sec-mass-stat-grp), [SecurityStatus](/fix/messages/security-status)
 
-## 292 · CorporateAction [#tag-292]
+## Tag 292: CorporateAction
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 292</Badge> <Badge intent="note" minimal>CorporateActionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 292 · CorporateActionCodeSet · Added FIX.4.2
+</llms-only>
 
 Identifies the type of Corporate Action.
 
-Code set **CorporateActionCodeSet** ([MultipleCharValue](/fix/datatypes#multiple-char-value))
+Code set **CorporateActionCodeSet** ([MultipleCharValue](/fix/datatypes#multiplecharvalue))
 
 | Value | Name | Description |
 |---|---|---|
@@ -1406,9 +1940,15 @@ Code set **CorporateActionCodeSet** ([MultipleCharValue](/fix/datatypes#multiple
 
 Used in: [MDIncGrp](/fix/groups/md-inc-grp), [MarketDataSnapshotFullRefresh](/fix/messages/market-data-snapshot-full-refresh), [RelSymDerivSecGrp](/fix/groups/rel-sym-deriv-sec-grp), [RelSymDerivSecUpdGrp](/fix/groups/rel-sym-deriv-sec-upd-grp), [SecMassStatGrp](/fix/groups/sec-mass-stat-grp), [SecurityDefinition](/fix/messages/security-definition), [SecurityDefinitionUpdateReport](/fix/messages/security-definition-update-report), [SecurityListUpdateReport](/fix/messages/security-list-update-report), [SecurityStatus](/fix/messages/security-status)
 
-## 293 · DefBidSize [#tag-293]
+## Tag 293: DefBidSize
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 293</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 293 · Qty · Added FIX.4.2
+</llms-only>
 
 Default Bid Size.
 
@@ -1416,9 +1956,15 @@ Type: [Qty](/fix/datatypes#qty)
 
 Used in: [MassQuote](/fix/messages/mass-quote)
 
-## 294 · DefOfferSize [#tag-294]
+## Tag 294: DefOfferSize
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 294</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 294 · Qty · Added FIX.4.2
+</llms-only>
 
 Default Offer Size.
 
@@ -1426,29 +1972,47 @@ Type: [Qty](/fix/datatypes#qty)
 
 Used in: [MassQuote](/fix/messages/mass-quote)
 
-## 295 · NoQuoteEntries [#tag-295]
+## Tag 295: NoQuoteEntries
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 295</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 295 · NumInGroup · Added FIX.4.2
+</llms-only>
 
 The number of quote entries for a QuoteSet.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [QuotCxlEntriesGrp](/fix/groups/quot-cxl-entries-grp), [QuotEntryAckGrp](/fix/groups/quot-entry-ack-grp), [QuotEntryGrp](/fix/groups/quot-entry-grp)
 
-## 296 · NoQuoteSets [#tag-296]
+## Tag 296: NoQuoteSets
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 296</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 296 · NumInGroup · Added FIX.4.2
+</llms-only>
 
 The number of sets of quotes in the message.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [QuotSetAckGrp](/fix/groups/quot-set-ack-grp), [QuotSetGrp](/fix/groups/quot-set-grp)
 
-## 297 · QuoteStatus [#tag-297]
+## Tag 297: QuoteStatus
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 297</Badge> <Badge intent="note" minimal>QuoteStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 297 · QuoteStatusCodeSet · Added FIX.4.2
+</llms-only>
 
 Identifies the status of the quote acknowledgement.
 
@@ -1483,9 +2047,15 @@ Code set **QuoteStatusCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [MassQuoteAck](/fix/messages/mass-quote-ack), [QuoteStatusReport](/fix/messages/quote-status-report)
 
-## 298 · QuoteCancelType [#tag-298]
+## Tag 298: QuoteCancelType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 298</Badge> <Badge intent="note" minimal>QuoteCancelTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 298 · QuoteCancelTypeCodeSet · Added FIX.4.2
+</llms-only>
 
 Identifies the type of quote cancel.
 
@@ -1504,9 +2074,15 @@ Code set **QuoteCancelTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [MassQuoteAck](/fix/messages/mass-quote-ack), [QuoteAck](/fix/messages/quote-ack), [QuoteCancel](/fix/messages/quote-cancel), [QuoteStatusReport](/fix/messages/quote-status-report)
 
-## 299 · QuoteEntryID [#tag-299]
+## Tag 299: QuoteEntryID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 299</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 299 · String · Added FIX.4.2
+</llms-only>
 
 Unique identifier for a quote. The QuoteEntryID stays with the quote as a static identifier even if the quote is updated.
 
@@ -1514,9 +2090,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [QuotEntryAckGrp](/fix/groups/quot-entry-ack-grp), [QuotEntryGrp](/fix/groups/quot-entry-grp)
 
-## 300 · QuoteRejectReason [#tag-300]
+## Tag 300: QuoteRejectReason
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 300</Badge> <Badge intent="note" minimal>QuoteRejectReasonCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 300 · QuoteRejectReasonCodeSet · Added FIX.4.2
+</llms-only>
 
 Reason Quote was rejected:
 
@@ -1549,9 +2131,15 @@ Code set **QuoteRejectReasonCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [MassQuoteAck](/fix/messages/mass-quote-ack), [QuoteAck](/fix/messages/quote-ack), [QuoteStatusReport](/fix/messages/quote-status-report)
 
-## 301 · QuoteResponseLevel [#tag-301]
+## Tag 301: QuoteResponseLevel
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 301</Badge> <Badge intent="note" minimal>QuoteResponseLevelCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 301 · QuoteResponseLevelCodeSet · Added FIX.4.2
+</llms-only>
 
 Level of Response requested from receiver of quote messages. A default value should be bilaterally agreed.
 
@@ -1566,9 +2154,15 @@ Code set **QuoteResponseLevelCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [MassQuote](/fix/messages/mass-quote), [MassQuoteAck](/fix/messages/mass-quote-ack), [Quote](/fix/messages/quote), [QuoteCancel](/fix/messages/quote-cancel)
 
-## 302 · QuoteSetID [#tag-302]
+## Tag 302: QuoteSetID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 302</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 302 · String · Added FIX.4.2
+</llms-only>
 
 Unique id for the Quote Set.
 
@@ -1576,9 +2170,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [QuotSetAckGrp](/fix/groups/quot-set-ack-grp), [QuotSetGrp](/fix/groups/quot-set-grp)
 
-## 303 · QuoteRequestType [#tag-303]
+## Tag 303: QuoteRequestType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 303</Badge> <Badge intent="note" minimal>QuoteRequestTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 303 · QuoteRequestTypeCodeSet · Added FIX.4.2
+</llms-only>
 
 Indicates the type of Quote Request being generated
 
@@ -1592,9 +2192,15 @@ Code set **QuoteRequestTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [QuotReqGrp](/fix/groups/quot-req-grp), [QuotReqRjctGrp](/fix/groups/quot-req-rjct-grp), [RFQReqGrp](/fix/groups/rfq-req-grp)
 
-## 304 · TotNoQuoteEntries [#tag-304]
+## Tag 304: TotNoQuoteEntries
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 304</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 304 · int · Added FIX.4.2
+</llms-only>
 
 Total number of quotes for the quote set.
 
@@ -1602,9 +2208,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [QuotSetAckGrp](/fix/groups/quot-set-ack-grp), [QuotSetGrp](/fix/groups/quot-set-grp)
 
-## 305 · UnderlyingSecurityIDSource [#tag-305]
+## Tag 305: UnderlyingSecurityIDSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 305</Badge> <Badge intent="note" minimal>SecurityIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 305 · SecurityIDSourceCodeSet · Added FIX.4.2
+</llms-only>
 
 Underlying security's SecurityIDSource. Valid values: see SecurityIDSource (22) field
 
@@ -1647,9 +2259,15 @@ Code set **SecurityIDSourceCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 306 · UnderlyingIssuer [#tag-306]
+## Tag 306: UnderlyingIssuer
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 306</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 306 · String · Added FIX.4.2
+</llms-only>
 
 Underlying security's Issuer. See Issuer (06) field for description
 
@@ -1657,9 +2275,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 307 · UnderlyingSecurityDesc [#tag-307]
+## Tag 307: UnderlyingSecurityDesc
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 307</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 307 · String · Added FIX.4.2
+</llms-only>
 
 Description of the underlying security. Can be used by the venue or one of the trading parties to provide an optional non-normative textual description of the financial instrument.
 
@@ -1667,9 +2291,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 308 · UnderlyingSecurityExchange [#tag-308]
+## Tag 308: UnderlyingSecurityExchange
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 308</Badge> <Badge intent="note" minimal>Exchange</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 308 · Exchange · Added FIX.4.2
+</llms-only>
 
 Underlying security's SecurityExchange. Can be used to identify the underlying security. Valid values: see SecurityExchange (207)
 
@@ -1677,9 +2307,15 @@ Type: [Exchange](/fix/datatypes#exchange)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 309 · UnderlyingSecurityID [#tag-309]
+## Tag 309: UnderlyingSecurityID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 309</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 309 · String · Added FIX.4.2
+</llms-only>
 
 Underlying security's SecurityID. See SecurityID (48) field for description
 
@@ -1687,9 +2323,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 310 · UnderlyingSecurityType [#tag-310]
+## Tag 310: UnderlyingSecurityType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 310</Badge> <Badge intent="note" minimal>SecurityTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 310 · SecurityTypeCodeSet · Added FIX.4.2
+</llms-only>
 
 Underlying security's SecurityType. Valid values: see SecurityType (167) field (see below for details concerning this fields use in conjunction with SecurityType=REPO) The following applies when used in conjunction with SecurityType=REPO Represents the general or specific type of security that underlies a financing agreement Valid values for SecurityType=REPO: If bonds of a particular issuer or country are wanted in an Order or are in the basket of an Execution and the SecurityType is not granular enough, include the UnderlyingIssuer (306), UnderlyingCountryOfIssue (592), UnderlyingProgram, UnderlyingRegType and/or &lt; UnderlyingStipulations &gt; block e.g.:
 
@@ -1854,9 +2496,15 @@ Code set **SecurityTypeCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 311 · UnderlyingSymbol [#tag-311]
+## Tag 311: UnderlyingSymbol
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 311</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 311 · String · Added FIX.4.2
+</llms-only>
 
 Underlying security's Symbol. See Symbol (55) field for description
 
@@ -1864,9 +2512,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 312 · UnderlyingSymbolSfx [#tag-312]
+## Tag 312: UnderlyingSymbolSfx
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 312</Badge> <Badge intent="note" minimal>SymbolSfxCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 312 · SymbolSfxCodeSet · Added FIX.4.2
+</llms-only>
 
 Underlying security's SymbolSfx. See SymbolSfx (65) field for description
 
@@ -1879,19 +2533,31 @@ Code set **SymbolSfxCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 313 · UnderlyingMaturityMonthYear [#tag-313]
+## Tag 313: UnderlyingMaturityMonthYear
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 313</Badge> <Badge intent="note" minimal>MonthYear</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 313 · MonthYear · Added FIX.4.2
+</llms-only>
 
 Underlying security's MaturityMonthYear. Can be used with standardized derivatives vs. the UnderlyingMaturityDate (542) field. See MaturityMonthYear (200) field for description
 
-Type: [MonthYear](/fix/datatypes#month-year)
+Type: [MonthYear](/fix/datatypes#monthyear)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 315 · UnderlyingPutOrCall [#tag-315]
+## Tag 315: UnderlyingPutOrCall
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 315</Badge> <Badge intent="note" minimal>PutOrCallCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 315 · PutOrCallCodeSet · Added FIX.4.2
+</llms-only>
 
 Indicates whether an underlying option contract is a put, call, chooser or undetermined.
 
@@ -1906,9 +2572,15 @@ Code set **PutOrCallCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 316 · UnderlyingStrikePrice [#tag-316]
+## Tag 316: UnderlyingStrikePrice
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 316</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 316 · Price · Added FIX.4.2
+</llms-only>
 
 Underlying security's StrikePrice. See StrikePrice (202) field for description
 
@@ -1916,9 +2588,15 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 317 · UnderlyingOptAttribute [#tag-317]
+## Tag 317: UnderlyingOptAttribute
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 317</Badge> <Badge intent="note" minimal>char</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 317 · char · Added FIX.4.2
+</llms-only>
 
 Underlying security's OptAttribute. See OptAttribute (206) field for description
 
@@ -1926,9 +2604,15 @@ Type: [char](/fix/datatypes#char)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 318 · UnderlyingCurrency [#tag-318]
+## Tag 318: UnderlyingCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 318</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 318 · Currency · Added FIX.4.2
+</llms-only>
 
 Underlying security's Currency. See Currency (5) field for description and valid values
 
@@ -1936,9 +2620,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 320 · SecurityReqID [#tag-320]
+## Tag 320: SecurityReqID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 320</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 320 · String · Added FIX.4.2
+</llms-only>
 
 Unique ID of a Security Definition Request.
 
@@ -1946,9 +2636,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [DerivativeSecurityList](/fix/messages/derivative-security-list), [DerivativeSecurityListRequest](/fix/messages/derivative-security-list-request), [DerivativeSecurityListUpdateReport](/fix/messages/derivative-security-list-update-report), [SecurityDefinition](/fix/messages/security-definition), [SecurityDefinitionRequest](/fix/messages/security-definition-request), [SecurityDefinitionUpdateReport](/fix/messages/security-definition-update-report), [SecurityList](/fix/messages/security-list), [SecurityListRequest](/fix/messages/security-list-request), [SecurityListUpdateReport](/fix/messages/security-list-update-report), [SecurityTypeRequest](/fix/messages/security-type-request), [SecurityTypes](/fix/messages/security-types)
 
-## 321 · SecurityRequestType [#tag-321]
+## Tag 321: SecurityRequestType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 321</Badge> <Badge intent="note" minimal>SecurityRequestTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 321 · SecurityRequestTypeCodeSet · Added FIX.4.2
+</llms-only>
 
 Type of Security Definition Request.
 
@@ -1969,9 +2665,15 @@ Code set **SecurityRequestTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [SecurityDefinitionRequest](/fix/messages/security-definition-request)
 
-## 322 · SecurityResponseID [#tag-322]
+## Tag 322: SecurityResponseID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 322</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 322 · String · Added FIX.4.2
+</llms-only>
 
 Unique ID of a Security Definition message.
 
@@ -1979,9 +2681,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [DerivativeSecurityList](/fix/messages/derivative-security-list), [DerivativeSecurityListUpdateReport](/fix/messages/derivative-security-list-update-report), [SecurityDefinition](/fix/messages/security-definition), [SecurityDefinitionUpdateReport](/fix/messages/security-definition-update-report), [SecurityList](/fix/messages/security-list), [SecurityListUpdateReport](/fix/messages/security-list-update-report), [SecurityTypes](/fix/messages/security-types)
 
-## 323 · SecurityResponseType [#tag-323]
+## Tag 323: SecurityResponseType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 323</Badge> <Badge intent="note" minimal>SecurityResponseTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 323 · SecurityResponseTypeCodeSet · Added FIX.4.2
+</llms-only>
 
 Type of Security Definition message response.
 
@@ -1998,9 +2706,15 @@ Code set **SecurityResponseTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [SecurityDefinition](/fix/messages/security-definition), [SecurityDefinitionUpdateReport](/fix/messages/security-definition-update-report), [SecurityTypes](/fix/messages/security-types)
 
-## 324 · SecurityStatusReqID [#tag-324]
+## Tag 324: SecurityStatusReqID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 324</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 324 · String · Added FIX.4.2
+</llms-only>
 
 Unique ID of a Security Status Request or a Security Mass Status Request message.
 
@@ -2008,9 +2722,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [SecurityMassStatus](/fix/messages/security-mass-status), [SecurityMassStatusRequest](/fix/messages/security-mass-status-request), [SecurityStatus](/fix/messages/security-status), [SecurityStatusRequest](/fix/messages/security-status-request)
 
-## 325 · UnsolicitedIndicator [#tag-325]
+## Tag 325: UnsolicitedIndicator
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 325</Badge> <Badge intent="note" minimal>UnsolicitedIndicatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 325 · UnsolicitedIndicatorCodeSet · Added FIX.4.2
+</llms-only>
 
 Indicates whether or not message is being sent as a result of a subscription request or not.
 
@@ -2023,9 +2743,15 @@ Code set **UnsolicitedIndicatorCodeSet** ([Boolean](/fix/datatypes#boolean))
 
 Used in: [MarginRequirementReport](/fix/messages/margin-requirement-report), [MarketDataStatisticsReport](/fix/messages/market-data-statistics-report), [PartyRiskLimitsReport](/fix/messages/party-risk-limits-report), [PositionReport](/fix/messages/position-report), [RequestForPositionsAck](/fix/messages/request-for-positions-ack), [SecurityMassStatus](/fix/messages/security-mass-status), [SecurityStatus](/fix/messages/security-status), [TradeCaptureReport](/fix/messages/trade-capture-report), [TradingSessionStatus](/fix/messages/trading-session-status), [TrdSessLstGrp](/fix/groups/trd-sess-lst-grp)
 
-## 326 · SecurityTradingStatus [#tag-326]
+## Tag 326: SecurityTradingStatus
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 326</Badge> <Badge intent="note" minimal>SecurityTradingStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 326 · SecurityTradingStatusCodeSet · Added FIX.4.2
+</llms-only>
 
 Identifies the trading status applicable to the transaction.
 
@@ -2062,9 +2788,15 @@ Code set **SecurityTradingStatusCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [SecMassStatGrp](/fix/groups/sec-mass-stat-grp), [SecurityStatus](/fix/messages/security-status)
 
-## 327 · HaltReason [#tag-327]
+## Tag 327: HaltReason
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 327</Badge> <Badge intent="note" minimal>HaltReasonCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 327 · HaltReasonCodeSet · Added FIX.4.2
+</llms-only>
 
 Denotes the reason for the Opening Delay or Trading Halt.
 
@@ -2081,9 +2813,15 @@ Code set **HaltReasonCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [SecMassStatGrp](/fix/groups/sec-mass-stat-grp), [SecurityStatus](/fix/messages/security-status)
 
-## 328 · InViewOfCommon [#tag-328]
+## Tag 328: InViewOfCommon
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 328</Badge> <Badge intent="note" minimal>InViewOfCommonCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 328 · InViewOfCommonCodeSet · Added FIX.4.2
+</llms-only>
 
 Indicates whether or not the halt was due to Common Stock trading being halted.
 
@@ -2096,9 +2834,15 @@ Code set **InViewOfCommonCodeSet** ([Boolean](/fix/datatypes#boolean))
 
 Used in: [SecurityStatus](/fix/messages/security-status)
 
-## 329 · DueToRelated [#tag-329]
+## Tag 329: DueToRelated
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 329</Badge> <Badge intent="note" minimal>DueToRelatedCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 329 · DueToRelatedCodeSet · Added FIX.4.2
+</llms-only>
 
 Indicates whether or not the halt was due to the Related Security being halted.
 
@@ -2111,9 +2855,15 @@ Code set **DueToRelatedCodeSet** ([Boolean](/fix/datatypes#boolean))
 
 Used in: [SecurityStatus](/fix/messages/security-status)
 
-## 330 · BuyVolume [#tag-330]
+## Tag 330: BuyVolume
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 330</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 330 · Qty · Added FIX.4.2
+</llms-only>
 
 Quantity bought.
 
@@ -2121,9 +2871,15 @@ Type: [Qty](/fix/datatypes#qty)
 
 Used in: [SecurityStatus](/fix/messages/security-status)
 
-## 331 · SellVolume [#tag-331]
+## Tag 331: SellVolume
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 331</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 331 · Qty · Added FIX.4.2
+</llms-only>
 
 Quantity sold.
 
@@ -2131,9 +2887,15 @@ Type: [Qty](/fix/datatypes#qty)
 
 Used in: [SecurityStatus](/fix/messages/security-status)
 
-## 332 · HighPx [#tag-332]
+## Tag 332: HighPx
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 332</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 332 · Price · Added FIX.4.2
+</llms-only>
 
 Represents an indication of the high end of the price range for a security prior to the open or reopen
 
@@ -2141,9 +2903,15 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [SecurityStatus](/fix/messages/security-status)
 
-## 333 · LowPx [#tag-333]
+## Tag 333: LowPx
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 333</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 333 · Price · Added FIX.4.2
+</llms-only>
 
 Represents an indication of the low end of the price range for a security prior to the open or reopen
 
@@ -2151,9 +2919,15 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [SecurityStatus](/fix/messages/security-status)
 
-## 334 · Adjustment [#tag-334]
+## Tag 334: Adjustment
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 334</Badge> <Badge intent="note" minimal>AdjustmentCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 334 · AdjustmentCodeSet · Added FIX.4.2
+</llms-only>
 
 Identifies the type of adjustment.
 
@@ -2167,9 +2941,15 @@ Code set **AdjustmentCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [SecurityMassStatus](/fix/messages/security-mass-status), [SecurityStatus](/fix/messages/security-status)
 
-## 335 · TradSesReqID [#tag-335]
+## Tag 335: TradSesReqID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 335</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 335 · String · Added FIX.4.2
+</llms-only>
 
 Unique ID of a Trading Session Status message.
 
@@ -2177,9 +2957,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [TradingSessionList](/fix/messages/trading-session-list), [TradingSessionListRequest](/fix/messages/trading-session-list-request), [TradingSessionListUpdateReport](/fix/messages/trading-session-list-update-report), [TradingSessionStatus](/fix/messages/trading-session-status), [TradingSessionStatusRequest](/fix/messages/trading-session-status-request)
 
-## 336 · TradingSessionID [#tag-336]
+## Tag 336: TradingSessionID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 336</Badge> <Badge intent="note" minimal>TradingSessionIDCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 336 · TradingSessionIDCodeSet · Added FIX.4.2
+</llms-only>
 
 Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is determined by market or counterparties. To specify good for session where session spans more than one calendar day, use TimeInForce = 0 (Day) in conjunction with TradingSessionID(336). Bilaterally agreed values of data type "String" that start with a character can be used for backward compatibility.
 
@@ -2197,9 +2983,15 @@ Code set **TradingSessionIDCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [Advertisement](/fix/messages/advertisement), [AllocationInstruction](/fix/messages/allocation-instruction), [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationReport](/fix/messages/allocation-report), [BidCompReqGrp](/fix/groups/bid-comp-req-grp), [BidCompRspGrp](/fix/groups/bid-comp-rsp-grp), [CollateralAssignment](/fix/messages/collateral-assignment), [CollateralInquiry](/fix/messages/collateral-inquiry), [CollateralInquiryAck](/fix/messages/collateral-inquiry-ack), [CollateralReport](/fix/messages/collateral-report), [CollateralRequest](/fix/messages/collateral-request), [DerivativeSecurityListRequest](/fix/messages/derivative-security-list-request), [ExecutionReport](/fix/messages/execution-report), [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [MDStatisticParameters](/fix/components/md-statistic-parameters), [OrderMassActionReport](/fix/messages/order-mass-action-report), [OrderMassActionRequest](/fix/messages/order-mass-action-request), [OrderMassCancelReport](/fix/messages/order-mass-cancel-report), [OrderMassCancelRequest](/fix/messages/order-mass-cancel-request), [OrderMassStatusRequest](/fix/messages/order-mass-status-request), [QuotEntryAckGrp](/fix/groups/quot-entry-ack-grp), [QuotEntryGrp](/fix/groups/quot-entry-grp), [QuotReqGrp](/fix/groups/quot-req-grp), [QuotReqRjctGrp](/fix/groups/quot-req-rjct-grp), and 24 more
 
-## 337 · ContraTrader [#tag-337]
+## Tag 337: ContraTrader
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 337</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 337 · String · Added FIX.4.2
+</llms-only>
 
 Identifies the trader (e.g. "badge number") of the ContraBroker.
 
@@ -2207,9 +2999,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [ContraGrp](/fix/groups/contra-grp)
 
-## 338 · TradSesMethod [#tag-338]
+## Tag 338: TradSesMethod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 338</Badge> <Badge intent="note" minimal>TradSesMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 338 · TradSesMethodCodeSet · Added FIX.4.2
+</llms-only>
 
 Method of trading
 
@@ -2224,9 +3022,15 @@ Code set **TradSesMethodCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [MDStatisticParameters](/fix/components/md-statistic-parameters), [TradingSessionListRequest](/fix/messages/trading-session-list-request), [TradingSessionStatus](/fix/messages/trading-session-status), [TradingSessionStatusRequest](/fix/messages/trading-session-status-request), [TrdSessLstGrp](/fix/groups/trd-sess-lst-grp)
 
-## 339 · TradSesMode [#tag-339]
+## Tag 339: TradSesMode
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 339</Badge> <Badge intent="note" minimal>TradSesModeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 339 · TradSesModeCodeSet · Added FIX.4.2
+</llms-only>
 
 Trading Session Mode
 
@@ -2240,9 +3044,15 @@ Code set **TradSesModeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [TradingSessionListRequest](/fix/messages/trading-session-list-request), [TradingSessionStatus](/fix/messages/trading-session-status), [TradingSessionStatusRequest](/fix/messages/trading-session-status-request), [TrdSessLstGrp](/fix/groups/trd-sess-lst-grp)
 
-## 340 · TradSesStatus [#tag-340]
+## Tag 340: TradSesStatus
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 340</Badge> <Badge intent="note" minimal>TradSesStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 340 · TradSesStatusCodeSet · Added FIX.4.2
+</llms-only>
 
 State of the trading session.
 
@@ -2260,59 +3070,95 @@ Code set **TradSesStatusCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [TradingSessionStatus](/fix/messages/trading-session-status), [TrdSessLstGrp](/fix/groups/trd-sess-lst-grp)
 
-## 341 · TradSesStartTime [#tag-341]
+## Tag 341: TradSesStartTime
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 341</Badge> <Badge intent="note" minimal>UTCTimestamp</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 341 · UTCTimestamp · Added FIX.4.2
+</llms-only>
 
 Starting time of the trading session
 
-Type: [UTCTimestamp](/fix/datatypes#utc-timestamp)
+Type: [UTCTimestamp](/fix/datatypes#utctimestamp)
 
 Used in: [TradingSessionStatus](/fix/messages/trading-session-status), [TrdSessLstGrp](/fix/groups/trd-sess-lst-grp)
 
-## 342 · TradSesOpenTime [#tag-342]
+## Tag 342: TradSesOpenTime
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 342</Badge> <Badge intent="note" minimal>UTCTimestamp</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 342 · UTCTimestamp · Added FIX.4.2
+</llms-only>
 
 Time of the opening of the trading session
 
-Type: [UTCTimestamp](/fix/datatypes#utc-timestamp)
+Type: [UTCTimestamp](/fix/datatypes#utctimestamp)
 
 Used in: [TradingSessionStatus](/fix/messages/trading-session-status), [TrdSessLstGrp](/fix/groups/trd-sess-lst-grp)
 
-## 343 · TradSesPreCloseTime [#tag-343]
+## Tag 343: TradSesPreCloseTime
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 343</Badge> <Badge intent="note" minimal>UTCTimestamp</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 343 · UTCTimestamp · Added FIX.4.2
+</llms-only>
 
 Time of the pre-closed of the trading session
 
-Type: [UTCTimestamp](/fix/datatypes#utc-timestamp)
+Type: [UTCTimestamp](/fix/datatypes#utctimestamp)
 
 Used in: [TradingSessionStatus](/fix/messages/trading-session-status), [TrdSessLstGrp](/fix/groups/trd-sess-lst-grp)
 
-## 344 · TradSesCloseTime [#tag-344]
+## Tag 344: TradSesCloseTime
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 344</Badge> <Badge intent="note" minimal>UTCTimestamp</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 344 · UTCTimestamp · Added FIX.4.2
+</llms-only>
 
 Closing time of the trading session
 
-Type: [UTCTimestamp](/fix/datatypes#utc-timestamp)
+Type: [UTCTimestamp](/fix/datatypes#utctimestamp)
 
 Used in: [TradingSessionStatus](/fix/messages/trading-session-status), [TrdSessLstGrp](/fix/groups/trd-sess-lst-grp)
 
-## 345 · TradSesEndTime [#tag-345]
+## Tag 345: TradSesEndTime
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 345</Badge> <Badge intent="note" minimal>UTCTimestamp</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 345 · UTCTimestamp · Added FIX.4.2
+</llms-only>
 
 End time of the trading session
 
-Type: [UTCTimestamp](/fix/datatypes#utc-timestamp)
+Type: [UTCTimestamp](/fix/datatypes#utctimestamp)
 
 Used in: [TradingSessionStatus](/fix/messages/trading-session-status), [TrdSessLstGrp](/fix/groups/trd-sess-lst-grp)
 
-## 346 · NumberOfOrders [#tag-346]
+## Tag 346: NumberOfOrders
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 346</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 346 · int · Added FIX.4.2
+</llms-only>
 
 Number of orders in the market.
 
@@ -2320,9 +3166,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp)
 
-## 347 · MessageEncoding [#tag-347]
+## Tag 347: MessageEncoding
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 347</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 347 · String · Added FIX.4.2
+</llms-only>
 
 Type of message encoding (non-ASCII (non-English) characters) used in a message's "Encoded" fields.
 
@@ -2330,9 +3182,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [StandardHeader](/fix/components/standard-header)
 
-## 348 · EncodedIssuerLen [#tag-348]
+## Tag 348: EncodedIssuerLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 348</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 348 · Length · Added FIX.4.2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedIssuer (349) field.
 
@@ -2340,9 +3198,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 349 · EncodedIssuer [#tag-349]
+## Tag 349: EncodedIssuer
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 349</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 349 · data · Added FIX.4.2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the Issuer field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Issuer field.
 
@@ -2350,9 +3214,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 350 · EncodedSecurityDescLen [#tag-350]
+## Tag 350: EncodedSecurityDescLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 350</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 350 · Length · Added FIX.4.2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedSecurityDesc (351) field.
 
@@ -2360,9 +3230,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 351 · EncodedSecurityDesc [#tag-351]
+## Tag 351: EncodedSecurityDesc
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 351</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 351 · data · Added FIX.4.2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the SecurityDesc (107) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the SecurityDesc field.
 
@@ -2370,9 +3246,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 352 · EncodedListExecInstLen [#tag-352]
+## Tag 352: EncodedListExecInstLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 352</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 352 · Length · Added FIX.4.2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedListExecInst (353) field.
 
@@ -2380,9 +3262,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [NewOrderList](/fix/messages/new-order-list)
 
-## 353 · EncodedListExecInst [#tag-353]
+## Tag 353: EncodedListExecInst
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 353</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 353 · data · Added FIX.4.2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the ListExecInst (69) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the ListExecInst field.
 
@@ -2390,9 +3278,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [NewOrderList](/fix/messages/new-order-list)
 
-## 354 · EncodedTextLen [#tag-354]
+## Tag 354: EncodedTextLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 354</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 354 · Length · Added FIX.4.2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedText (355) field.
 
@@ -2400,9 +3294,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [Advertisement](/fix/messages/advertisement), [AllocationInstruction](/fix/messages/allocation-instruction), [AllocationInstructionAck](/fix/messages/allocation-instruction-ack), [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationReport](/fix/messages/allocation-report), [AllocationReportAck](/fix/messages/allocation-report-ack), [ApplicationMessageReport](/fix/messages/application-message-report), [ApplicationMessageRequest](/fix/messages/application-message-request), [ApplicationMessageRequestAck](/fix/messages/application-message-request-ack), [AssignmentReport](/fix/messages/assignment-report), [BidCompRspGrp](/fix/groups/bid-comp-rsp-grp), [BidRequest](/fix/messages/bid-request), [BusinessMessageReject](/fix/messages/business-message-reject), [CollateralAssignment](/fix/messages/collateral-assignment), [CollateralInquiry](/fix/messages/collateral-inquiry), [CollateralInquiryAck](/fix/messages/collateral-inquiry-ack), [CollateralReport](/fix/messages/collateral-report), [CollateralReportAck](/fix/messages/collateral-report-ack), [CollateralRequest](/fix/messages/collateral-request), [CollateralResponse](/fix/messages/collateral-response), [Confirmation](/fix/messages/confirmation), [ConfirmationAck](/fix/messages/confirmation-ack), [ConfirmationRequest](/fix/messages/confirmation-request), [ContraryIntentionReport](/fix/messages/contrary-intention-report), [DerivativeSecurityListRequest](/fix/messages/derivative-security-list-request), and 100 more
 
-## 355 · EncodedText [#tag-355]
+## Tag 355: EncodedText
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 355</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 355 · data · Added FIX.4.2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Text(58) field.
 
@@ -2410,9 +3310,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [Advertisement](/fix/messages/advertisement), [AllocationInstruction](/fix/messages/allocation-instruction), [AllocationInstructionAck](/fix/messages/allocation-instruction-ack), [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationReport](/fix/messages/allocation-report), [AllocationReportAck](/fix/messages/allocation-report-ack), [ApplicationMessageReport](/fix/messages/application-message-report), [ApplicationMessageRequest](/fix/messages/application-message-request), [ApplicationMessageRequestAck](/fix/messages/application-message-request-ack), [AssignmentReport](/fix/messages/assignment-report), [BidCompRspGrp](/fix/groups/bid-comp-rsp-grp), [BidRequest](/fix/messages/bid-request), [BusinessMessageReject](/fix/messages/business-message-reject), [CollateralAssignment](/fix/messages/collateral-assignment), [CollateralInquiry](/fix/messages/collateral-inquiry), [CollateralInquiryAck](/fix/messages/collateral-inquiry-ack), [CollateralReport](/fix/messages/collateral-report), [CollateralReportAck](/fix/messages/collateral-report-ack), [CollateralRequest](/fix/messages/collateral-request), [CollateralResponse](/fix/messages/collateral-response), [Confirmation](/fix/messages/confirmation), [ConfirmationAck](/fix/messages/confirmation-ack), [ConfirmationRequest](/fix/messages/confirmation-request), [ContraryIntentionReport](/fix/messages/contrary-intention-report), [DerivativeSecurityListRequest](/fix/messages/derivative-security-list-request), and 100 more
 
-## 356 · EncodedSubjectLen [#tag-356]
+## Tag 356: EncodedSubjectLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 356</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 356 · Length · Added FIX.4.2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedSubject (357) field.
 
@@ -2420,9 +3326,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [Email](/fix/messages/email)
 
-## 357 · EncodedSubject [#tag-357]
+## Tag 357: EncodedSubject
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 357</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 357 · data · Added FIX.4.2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the Subject (147) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Subject field.
 
@@ -2430,9 +3342,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [Email](/fix/messages/email)
 
-## 358 · EncodedHeadlineLen [#tag-358]
+## Tag 358: EncodedHeadlineLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 358</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 358 · Length · Added FIX.4.2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedHeadline (359) field.
 
@@ -2440,9 +3358,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [News](/fix/messages/news)
 
-## 359 · EncodedHeadline [#tag-359]
+## Tag 359: EncodedHeadline
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 359</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 359 · data · Added FIX.4.2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the Headline (148) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the Headline field.
 
@@ -2450,9 +3374,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [News](/fix/messages/news)
 
-## 360 · EncodedAllocTextLen [#tag-360]
+## Tag 360: EncodedAllocTextLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 360</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 360 · Length · Added FIX.4.2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedAllocText (361) field.
 
@@ -2460,9 +3390,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [AllocAckGrp](/fix/groups/alloc-ack-grp), [AllocGrp](/fix/groups/alloc-grp), [TrdAllocGrp](/fix/groups/trd-alloc-grp)
 
-## 361 · EncodedAllocText [#tag-361]
+## Tag 361: EncodedAllocText
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 361</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 361 · data · Added FIX.4.2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the AllocText (161) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the AllocText field.
 
@@ -2470,9 +3406,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [AllocAckGrp](/fix/groups/alloc-ack-grp), [AllocGrp](/fix/groups/alloc-grp), [TrdAllocGrp](/fix/groups/trd-alloc-grp)
 
-## 362 · EncodedUnderlyingIssuerLen [#tag-362]
+## Tag 362: EncodedUnderlyingIssuerLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 362</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 362 · Length · Added FIX.4.2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedUnderlyingIssuer (363) field.
 
@@ -2480,9 +3422,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 363 · EncodedUnderlyingIssuer [#tag-363]
+## Tag 363: EncodedUnderlyingIssuer
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 363</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 363 · data · Added FIX.4.2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the UnderlyingIssuer (306) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the UnderlyingIssuer field.
 
@@ -2490,9 +3438,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 364 · EncodedUnderlyingSecurityDescLen [#tag-364]
+## Tag 364: EncodedUnderlyingSecurityDescLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 364</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 364 · Length · Added FIX.4.2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedUnderlyingSecurityDesc (365) field.
 
@@ -2500,9 +3454,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 365 · EncodedUnderlyingSecurityDesc [#tag-365]
+## Tag 365: EncodedUnderlyingSecurityDesc
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 365</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 365 · data · Added FIX.4.2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the UnderlyingSecurityDesc (307) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the UnderlyingSecurityeDesc field.
 
@@ -2510,9 +3470,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 366 · AllocPrice [#tag-366]
+## Tag 366: AllocPrice
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 366</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 366 · Price · Added FIX.4.2
+</llms-only>
 
 Executed price for an AllocAccount (79) entry used when using "executed price" vs. "average price" allocations (e.g. Japan).
 
@@ -2520,19 +3486,31 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [AllocAckGrp](/fix/groups/alloc-ack-grp), [AllocGrp](/fix/groups/alloc-grp)
 
-## 367 · QuoteSetValidUntilTime [#tag-367]
+## Tag 367: QuoteSetValidUntilTime
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 367</Badge> <Badge intent="note" minimal>UTCTimestamp</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 367 · UTCTimestamp · Added FIX.4.2
+</llms-only>
 
 Indicates expiration time of this particular QuoteSet (always expressed in UTC (Universal Time Coordinated, also known as "GMT")
 
-Type: [UTCTimestamp](/fix/datatypes#utc-timestamp)
+Type: [UTCTimestamp](/fix/datatypes#utctimestamp)
 
 Used in: [QuotSetAckGrp](/fix/groups/quot-set-ack-grp), [QuotSetGrp](/fix/groups/quot-set-grp)
 
-## 368 · QuoteEntryRejectReason [#tag-368]
+## Tag 368: QuoteEntryRejectReason
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 368</Badge> <Badge intent="note" minimal>QuoteRejectReasonCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 368 · QuoteRejectReasonCodeSet · Added FIX.4.2
+</llms-only>
 
 Reason Quote Entry was rejected:
 
@@ -2565,19 +3543,31 @@ Code set **QuoteRejectReasonCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [QuotEntryAckGrp](/fix/groups/quot-entry-ack-grp)
 
-## 369 · LastMsgSeqNumProcessed [#tag-369]
+## Tag 369: LastMsgSeqNumProcessed
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 369</Badge> <Badge intent="note" minimal>SeqNum</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 369 · SeqNum · Added FIX.4.2
+</llms-only>
 
 The last MsgSeqNum (34) value received by the FIX engine and processed by downstream application, such as trading engine or order routing system. Can be specified on every message sent. Useful for detecting a backlog with a counterparty.
 
-Type: [SeqNum](/fix/datatypes#seq-num)
+Type: [SeqNum](/fix/datatypes#seqnum)
 
 Used in: [StandardHeader](/fix/components/standard-header)
 
-## 371 · RefTagID [#tag-371]
+## Tag 371: RefTagID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 371</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 371 · int · Added FIX.4.2
+</llms-only>
 
 The tag number of the FIX field being referenced.
 
@@ -2585,9 +3575,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [Reject](/fix/messages/reject)
 
-## 372 · RefMsgType [#tag-372]
+## Tag 372: RefMsgType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 372</Badge> <Badge intent="note" minimal>MsgTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 372 · MsgTypeCodeSet · Added FIX.4.2
+</llms-only>
 
 The MsgType (35) of the FIX message being referenced.
 
@@ -2762,9 +3758,15 @@ Code set **MsgTypeCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [BusinessMessageReject](/fix/messages/business-message-reject), [MsgTypeGrp](/fix/groups/msg-type-grp), [Reject](/fix/messages/reject)
 
-## 373 · SessionRejectReason [#tag-373]
+## Tag 373: SessionRejectReason
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 373</Badge> <Badge intent="note" minimal>SessionRejectReasonCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 373 · SessionRejectReasonCodeSet · Added FIX.4.2
+</llms-only>
 
 Code to identify reason for a session-level Reject message.
 
@@ -2795,9 +3797,15 @@ Code set **SessionRejectReasonCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [Reject](/fix/messages/reject)
 
-## 374 · BidRequestTransType [#tag-374]
+## Tag 374: BidRequestTransType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 374</Badge> <Badge intent="note" minimal>BidRequestTransTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 374 · BidRequestTransTypeCodeSet · Added FIX.4.2
+</llms-only>
 
 Identifies the Bid Request message type.
 
@@ -2810,9 +3818,15 @@ Code set **BidRequestTransTypeCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [BidRequest](/fix/messages/bid-request)
 
-## 375 · ContraBroker [#tag-375]
+## Tag 375: ContraBroker
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 375</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 375 · String · Added FIX.4.2
+</llms-only>
 
 Identifies contra broker. Standard NASD market-maker mnemonic is preferred.
 
@@ -2820,9 +3834,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [ContraGrp](/fix/groups/contra-grp)
 
-## 376 · ComplianceID [#tag-376]
+## Tag 376: ComplianceID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 376</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 376 · String · Added FIX.4.2
+</llms-only>
 
 ID used to represent this transaction for compliance purposes (e.g. OATS reporting).
 
@@ -2830,9 +3850,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [CrossOrderCancelReplaceRequest](/fix/messages/cross-order-cancel-replace-request), [CrossRequest](/fix/messages/cross-request), [CrossRequestAck](/fix/messages/cross-request-ack), [ExecutionReport](/fix/messages/execution-report), [ListOrdGrp](/fix/groups/list-ord-grp), [MassQuote](/fix/messages/mass-quote), [MassQuoteAck](/fix/messages/mass-quote-ack), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderCross](/fix/messages/new-order-cross), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [OrderCancelRequest](/fix/messages/order-cancel-request), [OrderMassActionReport](/fix/messages/order-mass-action-report), [OrderMassActionRequest](/fix/messages/order-mass-action-request), [Quote](/fix/messages/quote), [QuoteRequest](/fix/messages/quote-request), [SecurityDefinitionRequest](/fix/messages/security-definition-request), [SideCrossOrdCxlGrp](/fix/groups/side-cross-ord-cxl-grp), [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
 
-## 377 · SolicitedFlag [#tag-377]
+## Tag 377: SolicitedFlag
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 377</Badge> <Badge intent="note" minimal>SolicitedFlagCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 377 · SolicitedFlagCodeSet · Added FIX.4.2
+</llms-only>
 
 Indicates whether or not the order was solicited.
 
@@ -2845,9 +3871,15 @@ Code set **SolicitedFlagCodeSet** ([Boolean](/fix/datatypes#boolean))
 
 Used in: [ExecutionReport](/fix/messages/execution-report), [ListOrdGrp](/fix/groups/list-ord-grp), [MultilegOrderCancelReplace](/fix/messages/multileg-order-cancel-replace), [NewOrderMultileg](/fix/messages/new-order-multileg), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [Quote](/fix/messages/quote), [SideCrossOrdModGrp](/fix/groups/side-cross-ord-mod-grp), [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
 
-## 378 · ExecRestatementReason [#tag-378]
+## Tag 378: ExecRestatementReason
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 378</Badge> <Badge intent="note" minimal>ExecRestatementReasonCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 378 · ExecRestatementReasonCodeSet · Added FIX.4.2
+</llms-only>
 
 The reason for restatement when an ExecutionReport(35=8) or TradeCaptureReport(35=AE) message is sent with ExecType(150) = D (Restated) or used when communicating an unsolicited cancel.
 
@@ -2876,9 +3908,15 @@ Code set **ExecRestatementReasonCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ExecutionReport](/fix/messages/execution-report), [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack)
 
-## 379 · BusinessRejectRefID [#tag-379]
+## Tag 379: BusinessRejectRefID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 379</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 379 · String · Added FIX.4.2
+</llms-only>
 
 The value of the business-level "ID" field on the message being referenced.
 
@@ -2886,9 +3924,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [BusinessMessageReject](/fix/messages/business-message-reject)
 
-## 380 · BusinessRejectReason [#tag-380]
+## Tag 380: BusinessRejectReason
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 380</Badge> <Badge intent="note" minimal>BusinessRejectReasonCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 380 · BusinessRejectReasonCodeSet · Added FIX.4.2
+</llms-only>
 
 Code to identify reason for a Business Message Reject message.
 
@@ -2911,9 +3955,15 @@ Code set **BusinessRejectReasonCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [BusinessMessageReject](/fix/messages/business-message-reject)
 
-## 381 · GrossTradeAmt [#tag-381]
+## Tag 381: GrossTradeAmt
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 381</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 381 · Amt · Added FIX.4.2
+</llms-only>
 
 Total amount traded expressed in units of currency - usually quantity \* price. For FX Futures this is used to express the notional value of a fill when quantity fields are expressed in terms of contract size (i.e. quantity \* price \* contract size).
 
@@ -2921,19 +3971,31 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [AllocationInstruction](/fix/messages/allocation-instruction), [AllocationInstructionAlert](/fix/messages/allocation-instruction-alert), [AllocationReport](/fix/messages/allocation-report), [Confirmation](/fix/messages/confirmation), [ExecutionReport](/fix/messages/execution-report), [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack)
 
-## 382 · NoContraBrokers [#tag-382]
+## Tag 382: NoContraBrokers
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 382</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 382 · NumInGroup · Added FIX.4.2
+</llms-only>
 
 The number of ContraBroker (375) entries.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ContraGrp](/fix/groups/contra-grp)
 
-## 383 · MaxMessageSize [#tag-383]
+## Tag 383: MaxMessageSize
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 383</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 383 · Length · Added FIX.4.2
+</llms-only>
 
 Maximum number of bytes supported for a single message.
 
@@ -2941,19 +4003,31 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [Logon](/fix/messages/logon)
 
-## 384 · NoMsgTypes [#tag-384]
+## Tag 384: NoMsgTypes
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 384</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 384 · NumInGroup · Added FIX.4.2
+</llms-only>
 
 Number of MsgTypes (35) in repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [MsgTypeGrp](/fix/groups/msg-type-grp)
 
-## 385 · MsgDirection [#tag-385]
+## Tag 385: MsgDirection
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 385</Badge> <Badge intent="note" minimal>MsgDirectionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 385 · MsgDirectionCodeSet · Added FIX.4.2
+</llms-only>
 
 Specifies the direction of the messsage.
 
@@ -2966,19 +4040,31 @@ Code set **MsgDirectionCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [MsgTypeGrp](/fix/groups/msg-type-grp)
 
-## 386 · NoTradingSessions [#tag-386]
+## Tag 386: NoTradingSessions
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 386</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 386 · NumInGroup · Added FIX.4.2
+</llms-only>
 
 Number of TradingSessionIDs (336) in repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [TrdSessLstGrp](/fix/groups/trd-sess-lst-grp), [TrdgSesGrp](/fix/groups/trdg-ses-grp)
 
-## 387 · TotalVolumeTraded [#tag-387]
+## Tag 387: TotalVolumeTraded
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 387</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 387 · Qty · Added FIX.4.2
+</llms-only>
 
 Total volume (quantity) traded.
 
@@ -2986,9 +4072,15 @@ Type: [Qty](/fix/datatypes#qty)
 
 Used in: [TradingSessionStatus](/fix/messages/trading-session-status), [TrdSessLstGrp](/fix/groups/trd-sess-lst-grp)
 
-## 388 · DiscretionInst [#tag-388]
+## Tag 388: DiscretionInst
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 388</Badge> <Badge intent="note" minimal>DiscretionInstCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 388 · DiscretionInstCodeSet · Added FIX.4.2
+</llms-only>
 
 Code to identify the price a DiscretionOffsetValue (389) is related to and should be mathematically added to.
 
@@ -3007,9 +4099,15 @@ Code set **DiscretionInstCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [DiscretionInstructions](/fix/components/discretion-instructions)
 
-## 389 · DiscretionOffsetValue [#tag-389]
+## Tag 389: DiscretionOffsetValue
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 389</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 389 · float · Added FIX.4.2
+</llms-only>
 
 Amount (signed) added to the "related to" price specified via DiscretionInst (388), in the context of DiscretionOffsetType (842) (Prior to FIX 4.4 this field was of type PriceOffset)
 
@@ -3017,9 +4115,15 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [DiscretionInstructions](/fix/components/discretion-instructions)
 
-## 390 · BidID [#tag-390]
+## Tag 390: BidID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 390</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 390 · String · Added FIX.4.2
+</llms-only>
 
 For bid lists, unique identifier for BidResponse(35=I) as assigned by sell-side (broker, exchange, ECN). Uniqueness must be guaranteed within a single trading day. For quotes, unique identifier for the bid side of the quote assigned by the quote issuer.
 
@@ -3027,9 +4131,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [BidRequest](/fix/messages/bid-request), [BidResponse](/fix/messages/bid-response), [ListExecute](/fix/messages/list-execute), [NewOrderList](/fix/messages/new-order-list), [Quote](/fix/messages/quote), [QuoteStatusReport](/fix/messages/quote-status-report)
 
-## 391 · ClientBidID [#tag-391]
+## Tag 391: ClientBidID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 391</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 391 · String · Added FIX.4.2
+</llms-only>
 
 Unique identifier for a Bid Request as assigned by institution. Uniqueness must be guaranteed within a single trading day.
 
@@ -3037,9 +4147,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [BidRequest](/fix/messages/bid-request), [BidResponse](/fix/messages/bid-response), [ListExecute](/fix/messages/list-execute), [NewOrderList](/fix/messages/new-order-list)
 
-## 392 · ListName [#tag-392]
+## Tag 392: ListName
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 392</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 392 · String · Added FIX.4.2
+</llms-only>
 
 Descriptive name for list order.
 
@@ -3047,9 +4163,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [BidRequest](/fix/messages/bid-request)
 
-## 393 · TotNoRelatedSym [#tag-393]
+## Tag 393: TotNoRelatedSym
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 393</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 393 · int · Added FIX.4.2
+</llms-only>
 
 Total number of securities. (Prior to FIX 4.4 this field was named TotalNumSecurities)
 
@@ -3057,9 +4179,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [BidRequest](/fix/messages/bid-request), [DerivativeSecurityList](/fix/messages/derivative-security-list), [DerivativeSecurityListUpdateReport](/fix/messages/derivative-security-list-update-report), [SecurityList](/fix/messages/security-list), [SecurityListUpdateReport](/fix/messages/security-list-update-report)
 
-## 394 · BidType [#tag-394]
+## Tag 394: BidType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 394</Badge> <Badge intent="note" minimal>BidTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 394 · BidTypeCodeSet · Added FIX.4.2
+</llms-only>
 
 Code to identify the type of Bid Request.
 
@@ -3073,9 +4201,15 @@ Code set **BidTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [BidRequest](/fix/messages/bid-request), [NewOrderList](/fix/messages/new-order-list)
 
-## 395 · NumTickets [#tag-395]
+## Tag 395: NumTickets
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 395</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 395 · int · Added FIX.4.2
+</llms-only>
 
 Total number of tickets.
 
@@ -3083,9 +4217,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [BidRequest](/fix/messages/bid-request)
 
-## 396 · SideValue1 [#tag-396]
+## Tag 396: SideValue1
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 396</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 396 · Amt · Added FIX.4.2
+</llms-only>
 
 Amounts in currency
 
@@ -3093,9 +4233,15 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [BidRequest](/fix/messages/bid-request)
 
-## 397 · SideValue2 [#tag-397]
+## Tag 397: SideValue2
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 397</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 397 · Amt · Added FIX.4.2
+</llms-only>
 
 Amounts in currency
 
@@ -3103,19 +4249,31 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [BidRequest](/fix/messages/bid-request)
 
-## 398 · NoBidDescriptors [#tag-398]
+## Tag 398: NoBidDescriptors
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 398</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 398 · NumInGroup · Added FIX.4.2
+</llms-only>
 
 Number of BidDescriptor (400) entries.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [BidDescReqGrp](/fix/groups/bid-desc-req-grp)
 
-## 399 · BidDescriptorType [#tag-399]
+## Tag 399: BidDescriptorType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 399</Badge> <Badge intent="note" minimal>BidDescriptorTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 399 · BidDescriptorTypeCodeSet · Added FIX.4.2
+</llms-only>
 
 Code to identify the type of BidDescriptor (400).
 

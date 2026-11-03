@@ -3,7 +3,13 @@ title: "OrderMassActionReport"
 subtitle: "The Order Mass Action Report is used to acknowledge an Order Mass Action Request. Note that each affected order that is suspended or released or canceled is acknowledged with a separate Execution Report for each order."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType BZ</Badge> <Badge intent="note" minimal>Order Mass Handling</Badge> <Badge intent="tip" minimal>Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType BZ · Order Mass Handling · Trade · Added FIX.5.0
+</llms-only>
 
 ## Message structure
 
@@ -12,40 +18,40 @@ subtitle: "The Order Mass Action Report is used to acknowledge an Order Mass Act
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | ClOrdID provided on the Order Mass Action Request. |
-| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
-| 1369 | [MassActionReportID](/fix/fields/tags-1200-1399#tag-1369) | String | **Required** | Unique Identifier for the Order Mass Action Report |
-| 1373 | [MassActionType](/fix/fields/tags-1200-1399#tag-1373) | MassActionTypeCodeSet | **Required** | Order Mass Action Request Type accepted by the system |
-| 1374 | [MassActionScope](/fix/fields/tags-1200-1399#tag-1374) | MassActionScopeCodeSet | **Required** | Specifies the scope of the action |
-| 2675 | [MassActionReason](/fix/fields/tags-2600-2799#tag-2675) | MassActionReasonCodeSet | Optional | Specifies the reason for the action taken. |
-| 1375 | [MassActionResponse](/fix/fields/tags-1200-1399#tag-1375) | MassActionResponseCodeSet | **Required** | Indicates the action taken by the counterparty order handling system as a result of the Action Request. |
-| 1376 | [MassActionRejectReason](/fix/fields/tags-1200-1399#tag-1376) | MassActionRejectReasonCodeSet | Optional | Indicates why Order Mass Action Request was rejected Required if MassActionResponse(1375) = 0 (Rejected). |
-| 533 | [TotalAffectedOrders](/fix/fields/tags-400-599#tag-533) | int | Optional | Optional field used to indicate the total number of orders affected by the Order Mass Action Request |
-| 2678 | [TotalNotAffectedOrders](/fix/fields/tags-2600-2799#tag-2678) | int | Optional | Optional field used to indicate the total number of orders within the scope but not affected by the OrderMassActionRequest(35=CA). |
-| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893) | LastFragmentCodeSet | Optional | Indicates whether this is the last fragment in a sequence of message fragments. Only required where message has been fragmented. |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11-clordid) | String | Optional | ClOrdID provided on the Order Mass Action Request. |
+| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526-secondaryclordid) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
+| 1369 | [MassActionReportID](/fix/fields/tags-1200-1399#tag-1369-massactionreportid) | String | **Required** | Unique Identifier for the Order Mass Action Report |
+| 1373 | [MassActionType](/fix/fields/tags-1200-1399#tag-1373-massactiontype) | MassActionTypeCodeSet | **Required** | Order Mass Action Request Type accepted by the system |
+| 1374 | [MassActionScope](/fix/fields/tags-1200-1399#tag-1374-massactionscope) | MassActionScopeCodeSet | **Required** | Specifies the scope of the action |
+| 2675 | [MassActionReason](/fix/fields/tags-2600-2799#tag-2675-massactionreason) | MassActionReasonCodeSet | Optional | Specifies the reason for the action taken. |
+| 1375 | [MassActionResponse](/fix/fields/tags-1200-1399#tag-1375-massactionresponse) | MassActionResponseCodeSet | **Required** | Indicates the action taken by the counterparty order handling system as a result of the Action Request. |
+| 1376 | [MassActionRejectReason](/fix/fields/tags-1200-1399#tag-1376-massactionrejectreason) | MassActionRejectReasonCodeSet | Optional | Indicates why Order Mass Action Request was rejected Required if MassActionResponse(1375) = 0 (Rejected). |
+| 533 | [TotalAffectedOrders](/fix/fields/tags-400-599#tag-533-totalaffectedorders) | int | Optional | Optional field used to indicate the total number of orders affected by the Order Mass Action Request |
+| 2678 | [TotalNotAffectedOrders](/fix/fields/tags-2600-2799#tag-2678-totalnotaffectedorders) | int | Optional | Optional field used to indicate the total number of orders within the scope but not affected by the OrderMassActionRequest(35=CA). |
+| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893-lastfragment) | LastFragmentCodeSet | Optional | Indicates whether this is the last fragment in a sequence of message fragments. Only required where message has been fragmented. |
 | 534 | [AffectedOrdGrp](/fix/groups/affected-ord-grp) | Repeating group | Optional |  |
 | 1370 | [NotAffectedOrdGrp](/fix/groups/not-affected-ord-grp) | Repeating group | Optional |  |
 | 1791 | [AffectedMarketSegmentGrp](/fix/groups/affected-market-segment-grp) | Repeating group | Optional | List of market segments that have been affected by a mass action. |
 | 1793 | [NotAffectedMarketSegmentGrp](/fix/groups/not-affected-market-segment-grp) | Repeating group | Optional | List of market segments that were not affected by a mass action. |
-| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | MarketID for which orders are to be affected |
-| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | MarketSegmentID for which orders are to be affected. Mutually exclusive with TargetMarketSegmentGrp component. |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301-marketid) | Exchange | Optional | MarketID for which orders are to be affected |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300-marketsegmentid) | String | Optional | MarketSegmentID for which orders are to be affected. Mutually exclusive with TargetMarketSegmentGrp component. |
 | 1789 | [TargetMarketSegmentGrp](/fix/groups/target-market-segment-grp) | Repeating group | Optional | Convey a list of market segments upon which an action is to be taken. |
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | TradingSessionID for which orders are to be affected |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | TradingSessionSubID for which orders are to be affected |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336-tradingsessionid) | TradingSessionIDCodeSet | Optional | TradingSessionID for which orders are to be affected |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625-tradingsessionsubid) | TradingSessionSubIDCodeSet | Optional | TradingSessionSubID for which orders are to be affected |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
 | 1461 | [TargetParties](/fix/groups/target-parties) | Repeating group | Optional |  |
 | | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | | [UnderlyingInstrument](/fix/components/underlying-instrument) | Component | Optional | The UnderlyingInstrument component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In… |
-| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | Optional | Side of the market specified on the Order Mass Action Request |
-| 44 | [Price](/fix/fields/tags-0-199#tag-44) | Price | Optional | Price per unit of quantity (e.g. per share) |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Time this report was initiated/released by the sells-side (broker, exchange, ECN) or sell-side executing system. |
-| 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
-| 2404 | [ComplianceText](/fix/fields/tags-2400-2599#tag-2404) | String | Optional | Free text for compliance information required for regulatory reporting. |
-| 2351 | [EncodedComplianceTextLen](/fix/fields/tags-2200-2399#tag-2351) | Length | Optional | Must be set if EncodedComplianceText(2352) field is specified and must immediately precede it. |
-| 2352 | [EncodedComplianceText](/fix/fields/tags-2200-2399#tag-2352) | data | Optional | Encoded (non-ASCII characters) representation of the ComplianceText(2404) field in the encoded format specified via the MessageEncoding(347) field. |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54-side) | SideCodeSet | Optional | Side of the market specified on the Order Mass Action Request |
+| 44 | [Price](/fix/fields/tags-0-199#tag-44-price) | Price | Optional | Price per unit of quantity (e.g. per share) |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Time this report was initiated/released by the sells-side (broker, exchange, ECN) or sell-side executing system. |
+| 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376-complianceid) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
+| 2404 | [ComplianceText](/fix/fields/tags-2400-2599#tag-2404-compliancetext) | String | Optional | Free text for compliance information required for regulatory reporting. |
+| 2351 | [EncodedComplianceTextLen](/fix/fields/tags-2200-2399#tag-2351-encodedcompliancetextlen) | Length | Optional | Must be set if EncodedComplianceText(2352) field is specified and must immediately precede it. |
+| 2352 | [EncodedComplianceText](/fix/fields/tags-2200-2399#tag-2352-encodedcompliancetext) | data | Optional | Encoded (non-ASCII characters) representation of the ComplianceText(2404) field in the encoded format specified via the MessageEncoding(347) field. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

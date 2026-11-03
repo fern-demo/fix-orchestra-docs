@@ -3,9 +3,15 @@ title: "PaymentStreamFixingDateBusinessCenterGrp"
 subtitle: "PaymentStreamFixingDateBusinessCenterGrp is a repeating subcomponent within the PaymentStreamResetDates component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40950</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoPaymentStreamFixingDateBusinessCenters (40950)](/fix/fields/tags-40800-40999#tag-40950).
+<llms-only>
+Repeating group · NumInGroup 40950 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPaymentStreamFixingDateBusinessCenters (40950)](/fix/fields/tags-40800-40999#tag-40950-nopaymentstreamfixingdatebusinesscenters).
 
 ## Members
 
@@ -13,7 +19,7 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40776 | [PaymentStreamFixingDateBusinessCenter](/fix/fields/tags-40600-40799#tag-40776) | String | Optional | Required if NoPaymentStreamFixingDateBusinessCenters(40950) &gt; 0. |
+| 40776 | [PaymentStreamFixingDateBusinessCenter](/fix/fields/tags-40600-40799#tag-40776-paymentstreamfixingdatebusinesscenter) | String | Optional | Required if NoPaymentStreamFixingDateBusinessCenters(40950) &gt; 0. |
 
 </StickyTable>
 

@@ -3,11 +3,17 @@ title: "EvntGrp"
 subtitle: "The EvntGrp is a repeating subcomponent of the Instrument component used to specify straightforward events associated with the instrument. Examples include put and call dates for bonds and options; first exercise date for options; inventory…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 864</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Repeating group · NumInGroup 864 · Added FIX.4.4
+</llms-only>
 
 The EvntGrp contains three different methods to express a "time" associated with the event using the EventDate(866) and EventTime(1145) pair of fields or the EventTimeUnit(1827) and EventTimePeriod(1826) pair of fields or EventMonthYear(2340). The EventDate(866), and optional EventTime(1145), may be used to specify an exact date and optional time for the event. The EventTimeUnit(1827) and EventTimePeriod(1826) may be used to express a time period associated with the event, e.g. 3-month, 4-years, 2-weeks. The EventMonthYear(2340), and optional EventTime(1145), may be used to express the event as a month of year, with optional day of month or week of month. Either EventDate(866) or EventMonthYear(2340), and the optional EventTime(1145), must be specified or EventTimeUnit(1827) and EventTimePeriod(1826) must be specified. The EventMonthYear(2340) may be used instead of EventDate(866) when month-year, with optional day of month or week of month, is required instead of a date.
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoEvents (864)](/fix/fields/tags-800-999#tag-864).
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoEvents (864)](/fix/fields/tags-800-999#tag-864-noevents).
 
 ## Members
 
@@ -15,16 +21,16 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 865 | [EventType](/fix/fields/tags-800-999#tag-865) | EventTypeCodeSet | Optional | Required if NoEvents(864) &gt; 0. |
-| 866 | [EventDate](/fix/fields/tags-800-999#tag-866) | LocalMktDate | Optional | Conditionally required when EventTime(1145) is specified. |
-| 1145 | [EventTime](/fix/fields/tags-1000-1199#tag-1145) | UTCTimestamp | Optional | Specific time of event. To be used in combination with EventDate \[866\] |
-| 1827 | [EventTimeUnit](/fix/fields/tags-1800-1999#tag-1827) | EventTimeUnitCodeSet | Optional | Conditionally required when EventTimePeriod(1826) is specified. |
-| 1826 | [EventTimePeriod](/fix/fields/tags-1800-1999#tag-1826) | int | Optional | Conditionally required when EventTimeUnit(1827) is specified. |
-| 2340 | [EventMonthYear](/fix/fields/tags-2200-2399#tag-2340) | MonthYear | Optional | Used with derivatives when an event is express as a month-year with optional day or month or week of month. Format: YYYYMM (e.g. 199903) YYYYMMDD (e.g.… |
-| 867 | [EventPx](/fix/fields/tags-800-999#tag-867) | Price | Optional | Predetermined price of issue at event, if applicable |
-| 868 | [EventText](/fix/fields/tags-800-999#tag-868) | String | Optional | Comments related to the event. |
-| 1578 | [EncodedEventTextLen](/fix/fields/tags-1400-1599#tag-1578) | Length | Optional | Must be set if EncodedEventText(1579) field is specified and must immediately precede it. |
-| 1579 | [EncodedEventText](/fix/fields/tags-1400-1599#tag-1579) | data | Optional | Encoded (non-ASCII characters) representation of the EventText(868) field in the encoded format specified via the MessageEncoding(347) field. |
+| 865 | [EventType](/fix/fields/tags-800-999#tag-865-eventtype) | EventTypeCodeSet | Optional | Required if NoEvents(864) &gt; 0. |
+| 866 | [EventDate](/fix/fields/tags-800-999#tag-866-eventdate) | LocalMktDate | Optional | Conditionally required when EventTime(1145) is specified. |
+| 1145 | [EventTime](/fix/fields/tags-1000-1199#tag-1145-eventtime) | UTCTimestamp | Optional | Specific time of event. To be used in combination with EventDate \[866\] |
+| 1827 | [EventTimeUnit](/fix/fields/tags-1800-1999#tag-1827-eventtimeunit) | EventTimeUnitCodeSet | Optional | Conditionally required when EventTimePeriod(1826) is specified. |
+| 1826 | [EventTimePeriod](/fix/fields/tags-1800-1999#tag-1826-eventtimeperiod) | int | Optional | Conditionally required when EventTimeUnit(1827) is specified. |
+| 2340 | [EventMonthYear](/fix/fields/tags-2200-2399#tag-2340-eventmonthyear) | MonthYear | Optional | Used with derivatives when an event is express as a month-year with optional day or month or week of month. Format: YYYYMM (e.g. 199903) YYYYMMDD (e.g.… |
+| 867 | [EventPx](/fix/fields/tags-800-999#tag-867-eventpx) | Price | Optional | Predetermined price of issue at event, if applicable |
+| 868 | [EventText](/fix/fields/tags-800-999#tag-868-eventtext) | String | Optional | Comments related to the event. |
+| 1578 | [EncodedEventTextLen](/fix/fields/tags-1400-1599#tag-1578-encodedeventtextlen) | Length | Optional | Must be set if EncodedEventText(1579) field is specified and must immediately precede it. |
+| 1579 | [EncodedEventText](/fix/fields/tags-1400-1599#tag-1579-encodedeventtext) | data | Optional | Encoded (non-ASCII characters) representation of the EventText(868) field in the encoded format specified via the MessageEncoding(347) field. |
 
 </StickyTable>
 

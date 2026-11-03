@@ -2,9 +2,15 @@
 title: "TrdCapDtGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 580</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoDates (580)](/fix/fields/tags-400-599#tag-580).
+<llms-only>
+Repeating group · NumInGroup 580 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoDates (580)](/fix/fields/tags-400-599#tag-580-nodates).
 
 ## Members
 
@@ -12,9 +18,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | Optional | Used when reporting other than current day trades. Conditionally required if NoDates &gt; 0 |
-| 779 | [LastUpdateTime](/fix/fields/tags-600-799#tag-779) | UTCTimestamp | Optional | Timestamp of last update to data item (or creation if no updates made since creation). |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | To request trades for a specific time. |
+| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75-tradedate) | LocalMktDate | Optional | Used when reporting other than current day trades. Conditionally required if NoDates &gt; 0 |
+| 779 | [LastUpdateTime](/fix/fields/tags-600-799#tag-779-lastupdatetime) | UTCTimestamp | Optional | Timestamp of last update to data item (or creation if no updates made since creation). |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | To request trades for a specific time. |
 
 </StickyTable>
 

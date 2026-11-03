@@ -3,9 +3,15 @@ title: "Tags 42600–42799"
 subtitle: "200 fields"
 ---
 
-## 42600 · PaymentStreamCashSettlIndicator [#tag-42600]
+## Tag 42600: PaymentStreamCashSettlIndicator
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42600</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42600 · Boolean · Added FIX.5.0SP2
+</llms-only>
 
 Indicates whether cash settlement is applicable.
 
@@ -13,9 +19,15 @@ Type: [Boolean](/fix/datatypes#boolean)
 
 Used in: [PaymentStream](/fix/components/payment-stream)
 
-## 42601 · PaymentStreamCompoundingXIDRef [#tag-42601]
+## Tag 42601: PaymentStreamCompoundingXIDRef
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42601</Badge> <Badge intent="note" minimal>XIDREF</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42601 · XIDREF · Added FIX.5.0SP2
+</llms-only>
 
 Reference to the stream which details the compounding fixed or floating rate.
 
@@ -23,19 +35,31 @@ Type: [XIDREF](/fix/datatypes#xidref)
 
 Used in: [PaymentStream](/fix/components/payment-stream)
 
-## 42602 · PaymentStreamCompoundingSpread [#tag-42602]
+## Tag 42602: PaymentStreamCompoundingSpread
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42602</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42602 · PriceOffset · Added FIX.5.0SP2
+</llms-only>
 
 The spread to be used for compounding. Used in scenarios where the interest payment is based on a compounding formula that uses a compounding spread in addition to the regular spread.
 
-Type: [PriceOffset](/fix/datatypes#price-offset)
+Type: [PriceOffset](/fix/datatypes#priceoffset)
 
 Used in: [PaymentStream](/fix/components/payment-stream)
 
-## 42603 · PaymentStreamInterpolationMethod [#tag-42603]
+## Tag 42603: PaymentStreamInterpolationMethod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42603</Badge> <Badge intent="note" minimal>PaymentStreamInflationInterpolationMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42603 · PaymentStreamInflationInterpolationMethodCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The method used when calculating the index rate from multiple points on the curve. The most common is linear method.
 
@@ -48,9 +72,15 @@ Code set **PaymentStreamInflationInterpolationMethodCodeSet** ([int](/fix/dataty
 
 Used in: [PaymentStream](/fix/components/payment-stream)
 
-## 42604 · PaymentStreamInterpolationPeriod [#tag-42604]
+## Tag 42604: PaymentStreamInterpolationPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42604</Badge> <Badge intent="note" minimal>PaymentStreamInterpolationPeriodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42604 · PaymentStreamInterpolationPeriodCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Defines applicable periods for interpolation.
 
@@ -65,9 +95,15 @@ Code set **PaymentStreamInterpolationPeriodCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStream](/fix/components/payment-stream)
 
-## 42605 · PaymentStreamCompoundingFixedRate [#tag-42605]
+## Tag 42605: PaymentStreamCompoundingFixedRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42605</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42605 · float · Added FIX.5.0SP2
+</llms-only>
 
 The compounding fixed rate applicable to the payment stream.
 
@@ -75,29 +111,47 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [PaymentStream](/fix/components/payment-stream)
 
-## 42606 · NoPaymentStreamCompoundingDates [#tag-42606]
+## Tag 42606: NoPaymentStreamCompoundingDates
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42606</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42606 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of dates in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentStreamCompoundingDateGrp](/fix/groups/payment-stream-compounding-date-grp)
 
-## 42607 · PaymentStreamCompoundingDate [#tag-42607]
+## Tag 42607: PaymentStreamCompoundingDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42607</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42607 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The compounding date. The type of date is specified in PaymentStreamCompoundingDateType(42608).
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentStreamCompoundingDateGrp](/fix/groups/payment-stream-compounding-date-grp)
 
-## 42608 · PaymentStreamCompoundingDateType [#tag-42608]
+## Tag 42608: PaymentStreamCompoundingDateType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42608</Badge> <Badge intent="note" minimal>NonDeliverableFixingDateTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42608 · NonDeliverableFixingDateTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the type of payment compounding date (e.g. adjusted for holidays).
 
@@ -110,9 +164,15 @@ Code set **NonDeliverableFixingDateTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamCompoundingDateGrp](/fix/groups/payment-stream-compounding-date-grp)
 
-## 42609 · PaymentStreamCompoundingDatesBusinessDayConvention [#tag-42609]
+## Tag 42609: PaymentStreamCompoundingDatesBusinessDayConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42609</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42609 · BusinessDayConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The compounding dates business day convention.
 
@@ -131,9 +191,15 @@ Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamCompoundingDates](/fix/components/payment-stream-compounding-dates)
 
-## 42610 · PaymentStreamCompoundingDatesRelativeTo [#tag-42610]
+## Tag 42610: PaymentStreamCompoundingDatesRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42610</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42610 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the anchor date when the compounding dates are relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
 
@@ -141,9 +207,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamCompoundingDates](/fix/components/payment-stream-compounding-dates)
 
-## 42611 · PaymentStreamCompoundingDatesOffsetPeriod [#tag-42611]
+## Tag 42611: PaymentStreamCompoundingDatesOffsetPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42611</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42611 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the relative compounding date offset.
 
@@ -151,9 +223,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamCompoundingDates](/fix/components/payment-stream-compounding-dates)
 
-## 42612 · PaymentStreamCompoundingDatesOffsetUnit [#tag-42612]
+## Tag 42612: PaymentStreamCompoundingDatesOffsetUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42612</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42612 · PaymentStreamPaymentDateOffsetUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the relative compounding date offset.
 
@@ -168,9 +246,15 @@ Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#
 
 Used in: [PaymentStreamCompoundingDates](/fix/components/payment-stream-compounding-dates)
 
-## 42613 · PaymentStreamCompoundingDatesOffsetDayType [#tag-42613]
+## Tag 42613: PaymentStreamCompoundingDatesOffsetDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42613</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42613 · PaymentStreamPaymentDateOffsetDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the day type of the relative compounding date offset.
 
@@ -187,9 +271,15 @@ Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#
 
 Used in: [PaymentStreamCompoundingDates](/fix/components/payment-stream-compounding-dates)
 
-## 42614 · PaymentStreamCompoundingPeriodSkip [#tag-42614]
+## Tag 42614: PaymentStreamCompoundingPeriodSkip
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42614</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42614 · int · Added FIX.5.0SP2
+</llms-only>
 
 The number of periods in the "RelativeTo" schedule that are between each date in the compounding schedule. A skip of 2 would mean that compounding dates are relative to every second date in the "RelativeTo" schedule. If present this should have a value greater than 1.
 
@@ -197,9 +287,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamCompoundingDates](/fix/components/payment-stream-compounding-dates)
 
-## 42615 · PaymentStreamCompoundingFrequencyPeriod [#tag-42615]
+## Tag 42615: PaymentStreamCompoundingFrequencyPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42615</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42615 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the frequency at which compounding dates occur.
 
@@ -207,9 +303,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamCompoundingDates](/fix/components/payment-stream-compounding-dates)
 
-## 42616 · PaymentStreamCompoundingFrequencyUnit [#tag-42616]
+## Tag 42616: PaymentStreamCompoundingFrequencyUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42616</Badge> <Badge intent="note" minimal>CouponFrequencyUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42616 · CouponFrequencyUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the frequency at which compounding dates occur.
 
@@ -228,9 +330,15 @@ Code set **CouponFrequencyUnitCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [PaymentStreamCompoundingDates](/fix/components/payment-stream-compounding-dates)
 
-## 42617 · PaymentStreamCompoundingRollConvention [#tag-42617]
+## Tag 42617: PaymentStreamCompoundingRollConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42617</Badge> <Badge intent="note" minimal>DateRollConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42617 · DateRollConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The convention for determining the sequence of compounding dates. It is used in conjunction with a specified frequency.
 
@@ -287,39 +395,63 @@ Code set **DateRollConventionCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [PaymentStreamCompoundingDates](/fix/components/payment-stream-compounding-dates)
 
-## 42618 · PaymentStreamBoundsFirstDateUnadjusted [#tag-42618]
+## Tag 42618: PaymentStreamBoundsFirstDateUnadjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42618</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42618 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The unadjusted first date of the compounding schedule. This can be used to restrict the range of dates when they are relative.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentStreamCompoundingDates](/fix/components/payment-stream-compounding-dates)
 
-## 42619 · PaymentStreamBoundsLastDateUnadjusted [#tag-42619]
+## Tag 42619: PaymentStreamBoundsLastDateUnadjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42619</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42619 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The unadjusted last date of the compounding schedule. This can be used to restrict the range of dates when they are relative.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentStreamCompoundingDates](/fix/components/payment-stream-compounding-dates)
 
-## 42620 · NoPaymentStreamCompoundingDatesBusinessCenters [#tag-42620]
+## Tag 42620: NoPaymentStreamCompoundingDatesBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42620</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42620 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentStreamCompoundingDatesBusinessCenterGrp](/fix/groups/payment-stream-compounding-dates-business-center-grp)
 
-## 42621 · PaymentStreamCompoundingDatesBusinessCenter [#tag-42621]
+## Tag 42621: PaymentStreamCompoundingDatesBusinessCenter
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42621</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42621 · String · Added FIX.5.0SP2
+</llms-only>
 
 The business center calendar used for date adjustment of the payment stream compounding dates, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
 
@@ -327,19 +459,31 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PaymentStreamCompoundingDatesBusinessCenterGrp](/fix/groups/payment-stream-compounding-dates-business-center-grp)
 
-## 42622 · PaymentStreamCompoundingEndDateUnadjusted [#tag-42622]
+## Tag 42622: PaymentStreamCompoundingEndDateUnadjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42622</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42622 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The unadjusted compounding end date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentStreamCompoundingEndDate](/fix/components/payment-stream-compounding-end-date)
 
-## 42623 · PaymentStreamCompoundingEndDateRelativeTo [#tag-42623]
+## Tag 42623: PaymentStreamCompoundingEndDateRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42623</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42623 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the anchor date when the compounding end date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
 
@@ -347,9 +491,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamCompoundingEndDate](/fix/components/payment-stream-compounding-end-date)
 
-## 42624 · PaymentStreamCompoundingEndDateOffsetPeriod [#tag-42624]
+## Tag 42624: PaymentStreamCompoundingEndDateOffsetPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42624</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42624 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the relative compounding end date offset.
 
@@ -357,9 +507,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamCompoundingEndDate](/fix/components/payment-stream-compounding-end-date)
 
-## 42625 · PaymentStreamCompoundingEndDateOffsetUnit [#tag-42625]
+## Tag 42625: PaymentStreamCompoundingEndDateOffsetUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42625</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42625 · PaymentStreamPaymentDateOffsetUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the relative compounding end date offset.
 
@@ -374,9 +530,15 @@ Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#
 
 Used in: [PaymentStreamCompoundingEndDate](/fix/components/payment-stream-compounding-end-date)
 
-## 42626 · PaymentStreamCompoundingEndDateOffsetDayType [#tag-42626]
+## Tag 42626: PaymentStreamCompoundingEndDateOffsetDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42626</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42626 · PaymentStreamPaymentDateOffsetDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the day type of the relative compounding end date offset.
 
@@ -393,19 +555,31 @@ Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#
 
 Used in: [PaymentStreamCompoundingEndDate](/fix/components/payment-stream-compounding-end-date)
 
-## 42627 · PaymentStreamCompoundingEndDateAdjusted [#tag-42627]
+## Tag 42627: PaymentStreamCompoundingEndDateAdjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42627</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42627 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The adjusted compounding end date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentStreamCompoundingEndDate](/fix/components/payment-stream-compounding-end-date)
 
-## 42628 · PaymentStreamCompoundingRateIndex [#tag-42628]
+## Tag 42628: PaymentStreamCompoundingRateIndex
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42628</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42628 · String · Added FIX.5.0SP2
+</llms-only>
 
 The payment stream's compounding floating rate index.
 
@@ -413,9 +587,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42629 · PaymentStreamCompoundingRateIndexCurvePeriod [#tag-42629]
+## Tag 42629: PaymentStreamCompoundingRateIndexCurvePeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42629</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42629 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the payment stream's compounding floating rate index curve period.
 
@@ -423,9 +603,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42630 · PaymentStreamCompoundingRateIndexCurveUnit [#tag-42630]
+## Tag 42630: PaymentStreamCompoundingRateIndexCurveUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42630</Badge> <Badge intent="note" minimal>PaymentStreamRateIndexCurveUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42630 · PaymentStreamRateIndexCurveUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the payment stream's compounding floating rate index curve period.
 
@@ -440,9 +626,15 @@ Code set **PaymentStreamRateIndexCurveUnitCodeSet** ([String](/fix/datatypes#str
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42631 · PaymentStreamCompoundingRateMultiplier [#tag-42631]
+## Tag 42631: PaymentStreamCompoundingRateMultiplier
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42631</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42631 · float · Added FIX.5.0SP2
+</llms-only>
 
 A rate multiplier to apply to the compounding floating rate. The multiplier can be less than or greater than 1 (one). This should only be included if the multiplier is not equal to 1 (one) for the term of the stream.
 
@@ -450,19 +642,31 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42632 · PaymentStreamCompoundingRateSpread [#tag-42632]
+## Tag 42632: PaymentStreamCompoundingRateSpread
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42632</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42632 · PriceOffset · Added FIX.5.0SP2
+</llms-only>
 
 The basis points spread from the index specified in PaymentStreamCompoundingRateIndex(42628).
 
-Type: [PriceOffset](/fix/datatypes#price-offset)
+Type: [PriceOffset](/fix/datatypes#priceoffset)
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42633 · PaymentStreamCompoundingRateSpreadPositionType [#tag-42633]
+## Tag 42633: PaymentStreamCompoundingRateSpreadPositionType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42633</Badge> <Badge intent="note" minimal>PaymentStreamRateSpreadPositionTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42633 · PaymentStreamRateSpreadPositionTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Identifies whether the rate spread is applied to a long or short position.
 
@@ -475,9 +679,15 @@ Code set **PaymentStreamRateSpreadPositionTypeCodeSet** ([int](/fix/datatypes#in
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42634 · PaymentStreamCompoundingRateTreatment [#tag-42634]
+## Tag 42634: PaymentStreamCompoundingRateTreatment
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42634</Badge> <Badge intent="note" minimal>PaymentStreamRateTreatmentCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42634 · PaymentStreamRateTreatmentCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the yield calculation treatment for the index.
 
@@ -490,9 +700,15 @@ Code set **PaymentStreamRateTreatmentCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42635 · PaymentStreamCompoundingCapRate [#tag-42635]
+## Tag 42635: PaymentStreamCompoundingCapRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42635</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42635 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 The cap rate, if any, which applies to the compounding floating rate. It is only required where the compounding floating rate on a swap stream is capped at a certain level. The cap rate is assumed to be exclusive of any spread and is a per annum rate, expressed as a decimal. A cap rate of 5% would be represented as "0.05".
 
@@ -500,9 +716,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42636 · PaymentStreamCompoundingCapRateBuySide [#tag-42636]
+## Tag 42636: PaymentStreamCompoundingCapRateBuySide
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42636</Badge> <Badge intent="note" minimal>PaymentStreamCapRateBuySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42636 · PaymentStreamCapRateBuySideCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Reference to the buyer of the compounding cap rate option through its trade side.
 
@@ -515,9 +737,15 @@ Code set **PaymentStreamCapRateBuySideCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42637 · PaymentStreamCompoundingCapRateSellSide [#tag-42637]
+## Tag 42637: PaymentStreamCompoundingCapRateSellSide
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42637</Badge> <Badge intent="note" minimal>PaymentStreamCapRateBuySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42637 · PaymentStreamCapRateBuySideCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Reference to the seller of the compounding cap rate option through its trade side.
 
@@ -530,9 +758,15 @@ Code set **PaymentStreamCapRateBuySideCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42638 · PaymentStreamCompoundingFloorRate [#tag-42638]
+## Tag 42638: PaymentStreamCompoundingFloorRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42638</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42638 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 The floor rate, if any, which applies to the compounding floating rate. The floor rate (strike) is only required where the compounding floating rate on a swap stream is floored at a certain strike level. The floor rate is assumed to be exclusive of any spread and is a per annum rate. The rate is expressed as a decimal, e.g. 5% is represented as "0.05".
 
@@ -540,9 +774,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42639 · PaymentStreamCompoundingFloorRateBuySide [#tag-42639]
+## Tag 42639: PaymentStreamCompoundingFloorRateBuySide
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42639</Badge> <Badge intent="note" minimal>PaymentStreamFloorRateBuySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42639 · PaymentStreamFloorRateBuySideCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Reference to the buyer of the compounding floor rate option through its trade side.
 
@@ -555,9 +795,15 @@ Code set **PaymentStreamFloorRateBuySideCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42640 · PaymentStreamCompoundingFloorRateSellSide [#tag-42640]
+## Tag 42640: PaymentStreamCompoundingFloorRateSellSide
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42640</Badge> <Badge intent="note" minimal>PaymentStreamFloorRateBuySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42640 · PaymentStreamFloorRateBuySideCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Reference to the seller of the floor rate option through its trade side.
 
@@ -570,9 +816,15 @@ Code set **PaymentStreamFloorRateBuySideCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42641 · PaymentStreamCompoundingInitialRate [#tag-42641]
+## Tag 42641: PaymentStreamCompoundingInitialRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42641</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42641 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 The initial compounding floating rate reset agreed between the principal parties involved in the trade. It should only be included when the rate is not equal to the rate published on the source implied by the floating rate index. The initial rate is expressed in decimal form, e.g. 5% is represented as "0.05".
 
@@ -580,9 +832,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42642 · PaymentStreamCompoundingFinalRateRoundingDirection [#tag-42642]
+## Tag 42642: PaymentStreamCompoundingFinalRateRoundingDirection
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42642</Badge> <Badge intent="note" minimal>RoundingDirectionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42642 · RoundingDirectionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the rounding direction for the compounding floating rate.
 
@@ -596,9 +854,15 @@ Code set **RoundingDirectionCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42643 · PaymentStreamCompoundingFinalRatePrecision [#tag-42643]
+## Tag 42643: PaymentStreamCompoundingFinalRatePrecision
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42643</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42643 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the compounding floating rate rounding precision in terms of a number of decimal places. Note how a percentage rate rounding of 5 decimal places is expressed as a rounding precision of 7.
 
@@ -606,9 +870,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42644 · PaymentStreamCompoundingAveragingMethod [#tag-42644]
+## Tag 42644: PaymentStreamCompoundingAveragingMethod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42644</Badge> <Badge intent="note" minimal>PaymentStreamAveragingMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42644 · PaymentStreamAveragingMethodCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the averaging method when compounding floating rate averaging is applicable (e.g. weighted or unweighted).
 
@@ -621,9 +891,15 @@ Code set **PaymentStreamAveragingMethodCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42645 · PaymentStreamCompoundingNegativeRateTreatment [#tag-42645]
+## Tag 42645: PaymentStreamCompoundingNegativeRateTreatment
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42645</Badge> <Badge intent="note" minimal>PaymentStreamNegativeRateTreatmentCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42645 · PaymentStreamNegativeRateTreatmentCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the method for calculating payment obligations when a compounding floating rate is negative (either due to a quoted negative floating rate or by operation of a spread that is subtracted from the floating rate).
 
@@ -636,19 +912,31 @@ Code set **PaymentStreamNegativeRateTreatmentCodeSet** ([int](/fix/datatypes#int
 
 Used in: [PaymentStreamCompoundingFloatingRate](/fix/components/payment-stream-compounding-floating-rate)
 
-## 42646 · PaymentStreamCompoundingStartDateUnadjusted [#tag-42646]
+## Tag 42646: PaymentStreamCompoundingStartDateUnadjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42646</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42646 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The unadjusted compounding start date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentStreamCompoundingStartDate](/fix/components/payment-stream-compounding-start-date)
 
-## 42647 · PaymentStreamCompoundingStartDateRelativeTo [#tag-42647]
+## Tag 42647: PaymentStreamCompoundingStartDateRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42647</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42647 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the anchor date when the compounding start date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
 
@@ -656,9 +944,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamCompoundingStartDate](/fix/components/payment-stream-compounding-start-date)
 
-## 42648 · PaymentStreamCompoundingStartDateOffsetPeriod [#tag-42648]
+## Tag 42648: PaymentStreamCompoundingStartDateOffsetPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42648</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42648 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the relative compounding start date offset.
 
@@ -666,9 +960,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamCompoundingStartDate](/fix/components/payment-stream-compounding-start-date)
 
-## 42649 · PaymentStreamCompoundingStartDateOffsetUnit [#tag-42649]
+## Tag 42649: PaymentStreamCompoundingStartDateOffsetUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42649</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42649 · PaymentStreamPaymentDateOffsetUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the relative compounding start date offset.
 
@@ -683,9 +983,15 @@ Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#
 
 Used in: [PaymentStreamCompoundingStartDate](/fix/components/payment-stream-compounding-start-date)
 
-## 42650 · PaymentStreamCompoundingStartDateOffsetDayType [#tag-42650]
+## Tag 42650: PaymentStreamCompoundingStartDateOffsetDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42650</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42650 · PaymentStreamPaymentDateOffsetDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the day type of the relative compounding start date offset.
 
@@ -702,19 +1008,31 @@ Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#
 
 Used in: [PaymentStreamCompoundingStartDate](/fix/components/payment-stream-compounding-start-date)
 
-## 42651 · PaymentStreamCompoundingStartDateAdjusted [#tag-42651]
+## Tag 42651: PaymentStreamCompoundingStartDateAdjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42651</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42651 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The adjusted compounding start date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentStreamCompoundingStartDate](/fix/components/payment-stream-compounding-start-date)
 
-## 42652 · PaymentStreamFormulaImageLength [#tag-42652]
+## Tag 42652: PaymentStreamFormulaImageLength
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42652</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42652 · Length · Added FIX.5.0SP2
+</llms-only>
 
 Length in bytes of the PaymentStreamFormulaImage(42563) field.
 
@@ -722,9 +1040,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [PaymentStreamFormulaImage](/fix/components/payment-stream-formula-image)
 
-## 42653 · PaymentStreamFormulaImage [#tag-42653]
+## Tag 42653: PaymentStreamFormulaImage
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42653</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42653 · data · Added FIX.5.0SP2
+</llms-only>
 
 Image of the formula image when represented through an encoded clip in base64Binary.
 
@@ -732,19 +1056,31 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [PaymentStreamFormulaImage](/fix/components/payment-stream-formula-image)
 
-## 42654 · PaymentStreamFinalPricePaymentDateUnadjusted [#tag-42654]
+## Tag 42654: PaymentStreamFinalPricePaymentDateUnadjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42654</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42654 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The unadjusted final price payment date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentStreamFinalPricePaymentDate](/fix/components/payment-stream-final-price-payment-date)
 
-## 42655 · PaymentStreamFinalPricePaymentDateRelativeTo [#tag-42655]
+## Tag 42655: PaymentStreamFinalPricePaymentDateRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42655</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42655 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the anchor date when the final price payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
 
@@ -752,9 +1088,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamFinalPricePaymentDate](/fix/components/payment-stream-final-price-payment-date)
 
-## 42656 · PaymentStreamFinalPricePaymentDateOffsetfPeriod [#tag-42656]
+## Tag 42656: PaymentStreamFinalPricePaymentDateOffsetfPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42656</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42656 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the relative final price payment date offset.
 
@@ -762,9 +1104,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamFinalPricePaymentDate](/fix/components/payment-stream-final-price-payment-date)
 
-## 42657 · PaymentStreamFinalPricePaymentDateOffsetUnit [#tag-42657]
+## Tag 42657: PaymentStreamFinalPricePaymentDateOffsetUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42657</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42657 · PaymentStreamPaymentDateOffsetUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the relative final price payment date offset.
 
@@ -779,9 +1127,15 @@ Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#
 
 Used in: [PaymentStreamFinalPricePaymentDate](/fix/components/payment-stream-final-price-payment-date)
 
-## 42658 · PaymentStreamFinalPricePaymentDateOffsetDayType [#tag-42658]
+## Tag 42658: PaymentStreamFinalPricePaymentDateOffsetDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42658</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42658 · PaymentStreamPaymentDateOffsetDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the day type of the relative final price payment date offset.
 
@@ -798,39 +1152,63 @@ Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#
 
 Used in: [PaymentStreamFinalPricePaymentDate](/fix/components/payment-stream-final-price-payment-date)
 
-## 42659 · PaymentStreamFinalPricePaymentDateAdjusted [#tag-42659]
+## Tag 42659: PaymentStreamFinalPricePaymentDateAdjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42659</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42659 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The adjusted final price payment date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentStreamFinalPricePaymentDate](/fix/components/payment-stream-final-price-payment-date)
 
-## 42660 · NoPaymentStreamFixingDates [#tag-42660]
+## Tag 42660: NoPaymentStreamFixingDates
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42660</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42660 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of fixing dates in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentStreamFixingDateGrp](/fix/groups/payment-stream-fixing-date-grp)
 
-## 42661 · PaymentStreamFixingDate [#tag-42661]
+## Tag 42661: PaymentStreamFixingDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42661</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42661 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The fixing date. The type of date is specified in PaymentStreamFixingDateType(42662).
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentStreamFixingDateGrp](/fix/groups/payment-stream-fixing-date-grp)
 
-## 42662 · PaymentStreamFixingDateType [#tag-42662]
+## Tag 42662: PaymentStreamFixingDateType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42662</Badge> <Badge intent="note" minimal>NonDeliverableFixingDateTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42662 · NonDeliverableFixingDateTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the type of fixing date (e.g. adjusted for holidays).
 
@@ -843,19 +1221,31 @@ Code set **NonDeliverableFixingDateTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamFixingDateGrp](/fix/groups/payment-stream-fixing-date-grp)
 
-## 42663 · PaymentStreamFirstObservationDateUnadjusted [#tag-42663]
+## Tag 42663: PaymentStreamFirstObservationDateUnadjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42663</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42663 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The unadjusted initial price observation date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42664 · PaymentStreamFirstObservationDateRelativeTo [#tag-42664]
+## Tag 42664: PaymentStreamFirstObservationDateRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42664</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42664 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the anchor date when the initial price observation date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
 
@@ -863,9 +1253,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42665 · PaymentStreamFirstObservationDateOffsetDayType [#tag-42665]
+## Tag 42665: PaymentStreamFirstObservationDateOffsetDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42665</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42665 · PaymentStreamPaymentDateOffsetDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the day type of the initial price observation date offset.
 
@@ -882,19 +1278,31 @@ Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42666 · PaymentStreamFirstObservationDateAdjusted [#tag-42666]
+## Tag 42666: PaymentStreamFirstObservationDateAdjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42666</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42666 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The adjusted initial price observation date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42667 · PaymentStreamUnderlierRefID [#tag-42667]
+## Tag 42667: PaymentStreamUnderlierRefID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42667</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42667 · String · Added FIX.5.0SP2
+</llms-only>
 
 References the dividend underlier through the instrument's UnderlyingSecurityID(309) which must be fully specified in an instance of the UnderlyingInstrument component.
 
@@ -902,9 +1310,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42668 · ReturnRateNotionalReset [#tag-42668]
+## Tag 42668: ReturnRateNotionalReset
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42668</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42668 · Boolean · Added FIX.5.0SP2
+</llms-only>
 
 Indicates whether the term "Equity Notional Reset" as defined in the ISDA 2002 Equity Derivatives Definitions is applicable ("Y") or not.
 
@@ -912,9 +1326,15 @@ Type: [Boolean](/fix/datatypes#boolean)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42669 · PaymentStreamLinkInitialLevel [#tag-42669]
+## Tag 42669: PaymentStreamLinkInitialLevel
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42669</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42669 · Price · Added FIX.5.0SP2
+</llms-only>
 
 Price level at which the correlation or variance swap contract will strike.
 
@@ -922,9 +1342,15 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42670 · PaymentStreamLinkClosingLevelIndicator [#tag-42670]
+## Tag 42670: PaymentStreamLinkClosingLevelIndicator
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42670</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42670 · Boolean · Added FIX.5.0SP2
+</llms-only>
 
 Indicates whether the correlation or variance swap contract will ("Y") strike off the closing level of the default exchange traded contract or not.
 
@@ -932,9 +1358,15 @@ Type: [Boolean](/fix/datatypes#boolean)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42671 · PaymentStreamLinkExpiringLevelIndicator [#tag-42671]
+## Tag 42671: PaymentStreamLinkExpiringLevelIndicator
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42671</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42671 · Boolean · Added FIX.5.0SP2
+</llms-only>
 
 Indicates whether the correlation or variance swap contract will ("Y") strike off the expiring level of the default exchange traded contract or not.
 
@@ -942,9 +1374,15 @@ Type: [Boolean](/fix/datatypes#boolean)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42672 · PaymentStreamLinkEstimatedTradingDays [#tag-42672]
+## Tag 42672: PaymentStreamLinkEstimatedTradingDays
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42672</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42672 · int · Added FIX.5.0SP2
+</llms-only>
 
 The expected number of trading days in the variance or correlation swap stream.
 
@@ -952,9 +1390,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42673 · PaymentStreamLinkStrikePrice [#tag-42673]
+## Tag 42673: PaymentStreamLinkStrikePrice
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42673</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42673 · Price · Added FIX.5.0SP2
+</llms-only>
 
 The strike price of a correlation or variance swap stream.
 
@@ -962,9 +1406,15 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42674 · PaymentStreamLinkStrikePriceType [#tag-42674]
+## Tag 42674: PaymentStreamLinkStrikePriceType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42674</Badge> <Badge intent="note" minimal>PaymentStreamLinkStrikePriceTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42674 · PaymentStreamLinkStrikePriceTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 For a variance swap specifies how PaymentStreamLinkStrikePrice(42673) is expressed.
 
@@ -977,9 +1427,15 @@ Code set **PaymentStreamLinkStrikePriceTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42675 · PaymentStreamLinkMaximumBoundary [#tag-42675]
+## Tag 42675: PaymentStreamLinkMaximumBoundary
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42675</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42675 · float · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the maximum or upper boundary for variance or strike determination. For a variation swap stream all observations above this price level will be excluded from the variance calculation. For a correlation swap stream the maximum boundary is a percentage of the strike price.
 
@@ -987,9 +1443,15 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42676 · PaymentStreamLinkMinimumBoundary [#tag-42676]
+## Tag 42676: PaymentStreamLinkMinimumBoundary
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42676</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42676 · float · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the minimum or lower boundary for variance or strike determination. For a variation swap stream all observations below this price level will be excluded from the variance calculation. For a correlation swap stream the minimum boundary is a percentage of the strike price.
 
@@ -997,9 +1459,15 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42677 · PaymentStreamLinkNumberOfDataSeries [#tag-42677]
+## Tag 42677: PaymentStreamLinkNumberOfDataSeries
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42677</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42677 · int · Added FIX.5.0SP2
+</llms-only>
 
 Number of data series for a correlation swap. Normal market practice is that correlation data sets are drawn from geographic market areas, such as America, Europe and Asia Pacific. Each of these geographic areas will have its own data series to avoid contagion.
 
@@ -1007,9 +1475,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42678 · PaymentStreamVarianceUnadjustedCap [#tag-42678]
+## Tag 42678: PaymentStreamVarianceUnadjustedCap
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42678</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42678 · float · Added FIX.5.0SP2
+</llms-only>
 
 Indicates the scaling factor to be multiplied by the variance strike price thereby making variance cap applicable.
 
@@ -1017,9 +1491,15 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42679 · PaymentStreamRealizedVarianceMethod [#tag-42679]
+## Tag 42679: PaymentStreamRealizedVarianceMethod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42679</Badge> <Badge intent="note" minimal>PaymentStreamRealizedVarianceMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42679 · PaymentStreamRealizedVarianceMethodCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Indicates which price to use to satisfy the boundary condition.
 
@@ -1033,9 +1513,15 @@ Code set **PaymentStreamRealizedVarianceMethodCodeSet** ([int](/fix/datatypes#in
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42680 · PaymentStreamDaysAdjustmentIndicator [#tag-42680]
+## Tag 42680: PaymentStreamDaysAdjustmentIndicator
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42680</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42680 · Boolean · Added FIX.5.0SP2
+</llms-only>
 
 Indicates whether the contract specifies that the notional should be scaled by the number of days in range divided by the estimate trading days or not. The number of "days in range" refers to the number of returns that contribute to the realized volatility.
 
@@ -1043,9 +1529,15 @@ Type: [Boolean](/fix/datatypes#boolean)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42681 · PaymentStreamNearestExchangeContractRefID [#tag-42681]
+## Tag 42681: PaymentStreamNearestExchangeContractRefID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42681</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42681 · String · Added FIX.5.0SP2
+</llms-only>
 
 References a contract listed on an exchange through the instrument's UnderlyingSecurityID(309) which must be fully specified in an instance of the UnderlyingInstrument component.
 
@@ -1053,9 +1545,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42682 · PaymentStreamVegaNotionalAmount [#tag-42682]
+## Tag 42682: PaymentStreamVegaNotionalAmount
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42682</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42682 · float · Added FIX.5.0SP2
+</llms-only>
 
 "Vega Notional" represents the approximate gain/loss at maturity for a 1% difference between RVol (realised volatility) and KVol (strike volatility). It does not necessarily represent the Vega risk of the trade.
 
@@ -1063,29 +1561,47 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 42683 · NoPaymentStreamFormulas [#tag-42683]
+## Tag 42683: NoPaymentStreamFormulas
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42683</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42683 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of formulas in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentStreamFormulaMathGrp](/fix/groups/payment-stream-formula-math-grp)
 
-## 42684 · PaymentStreamFormula [#tag-42684]
+## Tag 42684: PaymentStreamFormula
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42684</Badge> <Badge intent="note" minimal>XMLData</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42684 · XMLData · Added FIX.5.0SP2
+</llms-only>
 
 Contains an XML representation of the formula. Defined for flexibility in choice of language (MathML, OpenMath or text).
 
-Type: [XMLData](/fix/datatypes#xml-data)
+Type: [XMLData](/fix/datatypes#xmldata)
 
 Used in: [PaymentStreamFormulaMathGrp](/fix/groups/payment-stream-formula-math-grp)
 
-## 42685 · PaymentStreamFormulaDesc [#tag-42685]
+## Tag 42685: PaymentStreamFormulaDesc
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42685</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42685 · String · Added FIX.5.0SP2
+</llms-only>
 
 A description of the math formula in PaymentStreamFormula(42684).
 
@@ -1093,9 +1609,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PaymentStreamFormulaMathGrp](/fix/groups/payment-stream-formula-math-grp)
 
-## 42686 · PaymentStreamFormulaCurrency [#tag-42686]
+## Tag 42686: PaymentStreamFormulaCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42686</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42686 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 The currency in which the formula amount is denominated. Uses ISO 4217 currency codes.
 
@@ -1103,9 +1625,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [PaymentStreamFormula](/fix/components/payment-stream-formula)
 
-## 42687 · PaymentStreamFormulaCurrencyDeterminationMethod [#tag-42687]
+## Tag 42687: PaymentStreamFormulaCurrencyDeterminationMethod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42687</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42687 · String · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the method according to which the formula amount currency is determined. See http://www.fpml.org/coding-scheme/determination-method for values.
 
@@ -1113,9 +1641,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PaymentStreamFormula](/fix/components/payment-stream-formula)
 
-## 42688 · PaymentStreamFormulaReferenceAmount [#tag-42688]
+## Tag 42688: PaymentStreamFormulaReferenceAmount
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42688</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42688 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the reference amount when this term either corresponds to the standard ISDA Definition (either the 2002 Equity Definition for the Equity Amount, or the 2000 Definition for the Interest Amount), or refers to a term defined elsewhere in the swap document. See http://www.fixtradingcommunity.org/codelists#Payment\_Amount\_Relative\_To for code list of reference amounts.
 
@@ -1123,19 +1657,31 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamFormula](/fix/components/payment-stream-formula)
 
-## 42689 · PaymentStubEndDateUnadjusted [#tag-42689]
+## Tag 42689: PaymentStubEndDateUnadjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42689</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42689 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The unadjusted stub end date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentStubEndDate](/fix/components/payment-stub-end-date)
 
-## 42690 · PaymentStubEndDateBusinessDayConvention [#tag-42690]
+## Tag 42690: PaymentStubEndDateBusinessDayConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42690</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42690 · BusinessDayConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The stub end date business day convention.
 
@@ -1154,9 +1700,15 @@ Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStubEndDate](/fix/components/payment-stub-end-date)
 
-## 42691 · PaymentStubEndDateRelativeTo [#tag-42691]
+## Tag 42691: PaymentStubEndDateRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42691</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42691 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the anchor date when the stub end date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
 
@@ -1164,9 +1716,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStubEndDate](/fix/components/payment-stub-end-date)
 
-## 42692 · PaymentStubEndDateOffsetPeriod [#tag-42692]
+## Tag 42692: PaymentStubEndDateOffsetPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42692</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42692 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the relative stub end date offset.
 
@@ -1174,9 +1732,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStubEndDate](/fix/components/payment-stub-end-date)
 
-## 42693 · PaymentStubEndDateOffsetUnit [#tag-42693]
+## Tag 42693: PaymentStubEndDateOffsetUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42693</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42693 · PaymentStreamPaymentDateOffsetUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the relative stub end date offset.
 
@@ -1191,9 +1755,15 @@ Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#
 
 Used in: [PaymentStubEndDate](/fix/components/payment-stub-end-date)
 
-## 42694 · PaymentStubEndDateOffsetDayType [#tag-42694]
+## Tag 42694: PaymentStubEndDateOffsetDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42694</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42694 · PaymentStreamPaymentDateOffsetDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the day type of the relative stub end date offset.
 
@@ -1210,29 +1780,47 @@ Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#
 
 Used in: [PaymentStubEndDate](/fix/components/payment-stub-end-date)
 
-## 42695 · PaymentStubEndDateAdjusted [#tag-42695]
+## Tag 42695: PaymentStubEndDateAdjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42695</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42695 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The adjusted stub end date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentStubEndDate](/fix/components/payment-stub-end-date)
 
-## 42696 · NoPaymentStubEndDateBusinessCenters [#tag-42696]
+## Tag 42696: NoPaymentStubEndDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42696</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42696 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentStubEndDateBusinessCenterGrp](/fix/groups/payment-stub-end-date-business-center-grp)
 
-## 42697 · PaymentStubEndDateBusinessCenter [#tag-42697]
+## Tag 42697: PaymentStubEndDateBusinessCenter
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42697</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42697 · String · Added FIX.5.0SP2
+</llms-only>
 
 The business center calendar used for date adjustment of the payment stub end date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
 
@@ -1240,19 +1828,31 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PaymentStubEndDateBusinessCenterGrp](/fix/groups/payment-stub-end-date-business-center-grp)
 
-## 42698 · PaymentStubStartDateUnadjusted [#tag-42698]
+## Tag 42698: PaymentStubStartDateUnadjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42698</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42698 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The unadjusted stub start date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentStubStartDate](/fix/components/payment-stub-start-date)
 
-## 42699 · PaymentStubStartDateBusinessDayConvention [#tag-42699]
+## Tag 42699: PaymentStubStartDateBusinessDayConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42699</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42699 · BusinessDayConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The stub start date business day convention.
 
@@ -1271,9 +1871,15 @@ Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStubStartDate](/fix/components/payment-stub-start-date)
 
-## 42700 · PaymentStubStartDateRelativeTo [#tag-42700]
+## Tag 42700: PaymentStubStartDateRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42700</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42700 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the anchor date when the stub start date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
 
@@ -1281,9 +1887,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStubStartDate](/fix/components/payment-stub-start-date)
 
-## 42701 · PaymentStubStartDateOffsetPeriod [#tag-42701]
+## Tag 42701: PaymentStubStartDateOffsetPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42701</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42701 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the relative stub start date offset.
 
@@ -1291,9 +1903,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStubStartDate](/fix/components/payment-stub-start-date)
 
-## 42702 · PaymentStubStartDateOffsetUnit [#tag-42702]
+## Tag 42702: PaymentStubStartDateOffsetUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42702</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42702 · PaymentStreamPaymentDateOffsetUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the relative stub start date offset.
 
@@ -1308,9 +1926,15 @@ Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#
 
 Used in: [PaymentStubStartDate](/fix/components/payment-stub-start-date)
 
-## 42703 · PaymentStubStartDateOffsetDayType [#tag-42703]
+## Tag 42703: PaymentStubStartDateOffsetDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42703</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42703 · PaymentStreamPaymentDateOffsetDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the day type of the relative stub start date offset.
 
@@ -1327,29 +1951,47 @@ Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#
 
 Used in: [PaymentStubStartDate](/fix/components/payment-stub-start-date)
 
-## 42704 · PaymentStubStartDateAdjusted [#tag-42704]
+## Tag 42704: PaymentStubStartDateAdjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42704</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42704 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The adjusted stub start date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentStubStartDate](/fix/components/payment-stub-start-date)
 
-## 42705 · NoPaymentStubStartDateBusinessCenters [#tag-42705]
+## Tag 42705: NoPaymentStubStartDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42705</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42705 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentStubStartDateBusinessCenterGrp](/fix/groups/payment-stub-start-date-business-center-grp)
 
-## 42706 · PaymentStubStartDateBusinessCenter [#tag-42706]
+## Tag 42706: PaymentStubStartDateBusinessCenter
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42706</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42706 · String · Added FIX.5.0SP2
+</llms-only>
 
 The business center calendar used for date adjustment of the payment stub start date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
 
@@ -1357,9 +1999,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PaymentStubStartDateBusinessCenterGrp](/fix/groups/payment-stub-start-date-business-center-grp)
 
-## 42707 · ProvisionBreakFeeElection [#tag-42707]
+## Tag 42707: ProvisionBreakFeeElection
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42707</Badge> <Badge intent="note" minimal>ProvisionBreakFeeElectionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42707 · ProvisionBreakFeeElectionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Type of fee elected for the break provision.
 
@@ -1375,9 +2023,15 @@ Code set **ProvisionBreakFeeElectionCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ProvisionGrp](/fix/groups/provision-grp)
 
-## 42708 · ProvisionBreakFeeRate [#tag-42708]
+## Tag 42708: ProvisionBreakFeeRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42708</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42708 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 Break fee election rate when the break fee is proportional to the notional. A fee rate of 5% would be represented as "0.05".
 
@@ -1385,19 +2039,31 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [ProvisionGrp](/fix/groups/provision-grp)
 
-## 42709 · NoReturnRateDates [#tag-42709]
+## Tag 42709: NoReturnRateDates
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42709</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42709 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of iterations in the return rate date repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42710 · ReturnRateDateMode [#tag-42710]
+## Tag 42710: ReturnRateDateMode
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42710</Badge> <Badge intent="note" minimal>ReturnRateDateModeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42710 · ReturnRateDateModeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the valuation type applicable to the return rate date.
 
@@ -1410,9 +2076,15 @@ Code set **ReturnRateDateModeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42711 · ReturnRateValuationDateRelativeTo [#tag-42711]
+## Tag 42711: ReturnRateValuationDateRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42711</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42711 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the anchor date when the return rate valuation dates are relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
 
@@ -1420,9 +2092,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42712 · ReturnRateValuationDateOffsetPeriod [#tag-42712]
+## Tag 42712: ReturnRateValuationDateOffsetPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42712</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42712 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the relative return rate valuation date offset.
 
@@ -1430,9 +2108,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42713 · ReturnRateValuationDateOffsetUnit [#tag-42713]
+## Tag 42713: ReturnRateValuationDateOffsetUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42713</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42713 · PaymentStreamPaymentDateOffsetUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the relative return rate valuation date offset.
 
@@ -1447,9 +2131,15 @@ Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42714 · ReturnRateValuationDateOffsetDayType [#tag-42714]
+## Tag 42714: ReturnRateValuationDateOffsetDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42714</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42714 · PaymentStreamPaymentDateOffsetDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the day type of the relative return rate valuation date offset.
 
@@ -1466,19 +2156,31 @@ Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42715 · ReturnRateValuationStartDateUnadjusted [#tag-42715]
+## Tag 42715: ReturnRateValuationStartDateUnadjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42715</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42715 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The unadjusted start date for return rate valuation. This can be used to restrict the range of dates when they are relative.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42716 · ReturnRateValuationStartDateRelativeTo [#tag-42716]
+## Tag 42716: ReturnRateValuationStartDateRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42716</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42716 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the anchor date when the return rate valuation start date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
 
@@ -1486,9 +2188,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42717 · ReturnRateValuationStartDateOffsetPeriod [#tag-42717]
+## Tag 42717: ReturnRateValuationStartDateOffsetPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42717</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42717 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the relative return rate valuation start date offset.
 
@@ -1496,9 +2204,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42718 · ReturnRateValuationStartDateOffsetUnit [#tag-42718]
+## Tag 42718: ReturnRateValuationStartDateOffsetUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42718</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42718 · PaymentStreamPaymentDateOffsetUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the relative return rate valuation start date offset.
 
@@ -1513,9 +2227,15 @@ Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42719 · ReturnRateValuationStartDateOffsetDayType [#tag-42719]
+## Tag 42719: ReturnRateValuationStartDateOffsetDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42719</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42719 · PaymentStreamPaymentDateOffsetDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the day type of the relative return rate valuation start date offset.
 
@@ -1532,29 +2252,47 @@ Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42720 · ReturnRateValuationStartDateAdjusted [#tag-42720]
+## Tag 42720: ReturnRateValuationStartDateAdjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42720</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42720 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The adjusted start date for return rate valuation. This can be used to restrict the range of dates when they are relative.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42721 · ReturnRateValuationEndDateUnadjusted [#tag-42721]
+## Tag 42721: ReturnRateValuationEndDateUnadjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42721</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42721 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The unadjusted end date for return rate valuation. This can be used to restrict the range of dates when they are relative.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42722 · ReturnRateValuationEndDateRelativeTo [#tag-42722]
+## Tag 42722: ReturnRateValuationEndDateRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42722</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42722 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the anchor date when the return rate valuation end date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
 
@@ -1562,9 +2300,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42723 · ReturnRateValuationEndDateOffsetPeriod [#tag-42723]
+## Tag 42723: ReturnRateValuationEndDateOffsetPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42723</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42723 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the relative return rate valuation end date offset.
 
@@ -1572,9 +2316,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42724 · ReturnRateValuationEndDateOffsetUnit [#tag-42724]
+## Tag 42724: ReturnRateValuationEndDateOffsetUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42724</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42724 · PaymentStreamPaymentDateOffsetUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the relative return rate valuation end date offset.
 
@@ -1589,9 +2339,15 @@ Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42725 · ReturnRateValuationEndDateOffsetDayType [#tag-42725]
+## Tag 42725: ReturnRateValuationEndDateOffsetDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42725</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42725 · PaymentStreamPaymentDateOffsetDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the day type of the relative return rate valuation end date offset.
 
@@ -1608,19 +2364,31 @@ Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42726 · ReturnRateValuationEndDateAdjusted [#tag-42726]
+## Tag 42726: ReturnRateValuationEndDateAdjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42726</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42726 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The adjusted end date for return rate valuation. This can be used to restrict the range of dates when they are relative.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42727 · ReturnRateValuationFrequencyPeriod [#tag-42727]
+## Tag 42727: ReturnRateValuationFrequencyPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42727</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42727 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the frequency at which return rate valuation dates occur.
 
@@ -1628,9 +2396,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42728 · ReturnRateValuationFrequencyUnit [#tag-42728]
+## Tag 42728: ReturnRateValuationFrequencyUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42728</Badge> <Badge intent="note" minimal>CouponFrequencyUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42728 · CouponFrequencyUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the frequency at which return rate valuation dates occur.
 
@@ -1649,9 +2423,15 @@ Code set **CouponFrequencyUnitCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42729 · ReturnRateValuationFrequencyRollConvention [#tag-42729]
+## Tag 42729: ReturnRateValuationFrequencyRollConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42729</Badge> <Badge intent="note" minimal>DateRollConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42729 · DateRollConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The convention for determining the sequence of return rate valuation dates. It is used in conjunction with a specified frequency.
 
@@ -1708,9 +2488,15 @@ Code set **DateRollConventionCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42730 · ReturnRateValuationDateBusinessDayConvention [#tag-42730]
+## Tag 42730: ReturnRateValuationDateBusinessDayConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42730</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42730 · BusinessDayConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The return rate valuation dates business day convention.
 
@@ -1729,19 +2515,31 @@ Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ReturnRateDateGrp](/fix/groups/return-rate-date-grp)
 
-## 42731 · NoReturnRateFXConversions [#tag-42731]
+## Tag 42731: NoReturnRateFXConversions
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42731</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42731 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of iterations in the return rate FX conversion repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ReturnRateFXConversionGrp](/fix/groups/return-rate-fx-conversion-grp)
 
-## 42732 · ReturnRateFXCurrencySymbol [#tag-42732]
+## Tag 42732: ReturnRateFXCurrencySymbol
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42732</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42732 · String · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the currency pair for the FX conversion expressed using the CCY1/CCY2 convention. Uses ISO 4217 currency codes.
 
@@ -1749,9 +2547,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [ReturnRateFXConversionGrp](/fix/groups/return-rate-fx-conversion-grp)
 
-## 42733 · ReturnRateFXRate [#tag-42733]
+## Tag 42733: ReturnRateFXRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42733</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42733 · float · Added FIX.5.0SP2
+</llms-only>
 
 The rate of exchange between the two currencies specified in ReturnRateFXCurrencySymbol(42732).
 
@@ -1759,9 +2563,15 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [ReturnRateFXConversionGrp](/fix/groups/return-rate-fx-conversion-grp)
 
-## 42734 · ReturnRateFXRateCalc [#tag-42734]
+## Tag 42734: ReturnRateFXRateCalc
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42734</Badge> <Badge intent="note" minimal>SettlCurrFxRateCalcCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42734 · SettlCurrFxRateCalcCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies whether ReturnRateFXRate(42733) should be multiplied or divided.
 
@@ -1774,19 +2584,31 @@ Code set **SettlCurrFxRateCalcCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [ReturnRateFXConversionGrp](/fix/groups/return-rate-fx-conversion-grp)
 
-## 42735 · NoReturnRates [#tag-42735]
+## Tag 42735: NoReturnRates
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42735</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42735 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of iterations in the return rate repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42736 · ReturnRatePriceSequence [#tag-42736]
+## Tag 42736: ReturnRatePriceSequence
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42736</Badge> <Badge intent="note" minimal>ReturnRatePriceSequenceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42736 · ReturnRatePriceSequenceCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the type of price sequence of the return rate.
 
@@ -1800,9 +2622,15 @@ Code set **ReturnRatePriceSequenceCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42737 · ReturnRateCommissionBasis [#tag-42737]
+## Tag 42737: ReturnRateCommissionBasis
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42737</Badge> <Badge intent="note" minimal>CommTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42737 · CommTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the basis or unit used to calculate the commission.
 
@@ -1821,9 +2649,15 @@ Code set **CommTypeCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42738 · ReturnRateCommissionAmount [#tag-42738]
+## Tag 42738: ReturnRateCommissionAmount
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42738</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42738 · Amt · Added FIX.5.0SP2
+</llms-only>
 
 The commission amount.
 
@@ -1831,9 +2665,15 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42739 · ReturnRateCommissionCurrency [#tag-42739]
+## Tag 42739: ReturnRateCommissionCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42739</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42739 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the currency the commission amount is denominated in. Uses ISO 4217 currency codes.
 
@@ -1841,9 +2681,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42740 · ReturnRateTotalCommissionPerTrade [#tag-42740]
+## Tag 42740: ReturnRateTotalCommissionPerTrade
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42740</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42740 · Amt · Added FIX.5.0SP2
+</llms-only>
 
 The total commission per trade.
 
@@ -1851,9 +2697,15 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42741 · ReturnRateDeterminationMethod [#tag-42741]
+## Tag 42741: ReturnRateDeterminationMethod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42741</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42741 · String · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the method by which the underlier prices are determined. See http://www.fpml.org/coding-scheme/determination-method for values.
 
@@ -1861,9 +2713,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42742 · ReturnRateAmountRelativeTo [#tag-42742]
+## Tag 42742: ReturnRateAmountRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42742</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42742 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the reference amount when the return rate amount is relative to another amount in the trade. See http://www.fixtradingcommunity.org/codelists#Payment\_Amount\_Relative\_To for code list of relative amounts.
 
@@ -1871,9 +2729,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42743 · ReturnRateQuoteMeasureType [#tag-42743]
+## Tag 42743: ReturnRateQuoteMeasureType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42743</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42743 · String · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the type of the measure applied to the return rate's asset, e.g. valuation, sensitivity risk. This could be an NPV, a cash flow, a clean price, etc. See http://www.fpml.org/coding-scheme/asset-measure for values.
 
@@ -1881,9 +2745,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42744 · ReturnRateQuoteUnits [#tag-42744]
+## Tag 42744: ReturnRateQuoteUnits
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42744</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42744 · String · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the units that the measure is expressed in. If not specified, the default is a price/value in currency units. See http://www.fpml.org/coding-scheme/price-quote-units for values.
 
@@ -1891,9 +2761,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42745 · ReturnRateQuoteMethod [#tag-42745]
+## Tag 42745: ReturnRateQuoteMethod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42745</Badge> <Badge intent="note" minimal>CashSettlQuoteMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42745 · CashSettlQuoteMethodCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the type of quote used to determine the return rate of the swap.
 
@@ -1907,9 +2783,15 @@ Code set **CashSettlQuoteMethodCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42746 · ReturnRateQuoteCurrency [#tag-42746]
+## Tag 42746: ReturnRateQuoteCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42746</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42746 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the currency the return rate quote is denominated in. Uses ISO 4217 Currency Code.
 
@@ -1917,9 +2799,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42747 · ReturnRateQuoteCurrencyType [#tag-42747]
+## Tag 42747: ReturnRateQuoteCurrencyType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42747</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42747 · String · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the type of currency, e.g. settlement currency, base currency, etc., that the quote is reported in. See http://www.fpml.org/coding-scheme/reporting-currency-type for values.
 
@@ -1927,9 +2815,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42748 · ReturnRateQuoteTimeType [#tag-42748]
+## Tag 42748: ReturnRateQuoteTimeType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42748</Badge> <Badge intent="note" minimal>ReturnRateQuoteTimeTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42748 · ReturnRateQuoteTimeTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies how or the timing when the quote is to be obtained.
 
@@ -1948,39 +2842,63 @@ Code set **ReturnRateQuoteTimeTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42749 · ReturnRateQuoteTime [#tag-42749]
+## Tag 42749: ReturnRateQuoteTime
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42749</Badge> <Badge intent="note" minimal>LocalMktTime</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42749 · LocalMktTime · Added FIX.5.0SP2
+</llms-only>
 
 The time when the quote is to be generated.
 
-Type: [LocalMktTime](/fix/datatypes#local-mkt-time)
+Type: [LocalMktTime](/fix/datatypes#localmkttime)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42750 · ReturnRateQuoteDate [#tag-42750]
+## Tag 42750: ReturnRateQuoteDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42750</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42750 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The date when the quote is to be generated.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42751 · ReturnRateQuoteExpirationTime [#tag-42751]
+## Tag 42751: ReturnRateQuoteExpirationTime
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42751</Badge> <Badge intent="note" minimal>LocalMktTime</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42751 · LocalMktTime · Added FIX.5.0SP2
+</llms-only>
 
 The time when the quote ceases to be valid.
 
-Type: [LocalMktTime](/fix/datatypes#local-mkt-time)
+Type: [LocalMktTime](/fix/datatypes#localmkttime)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42752 · ReturnRateQuoteBusinessCenter [#tag-42752]
+## Tag 42752: ReturnRateQuoteBusinessCenter
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42752</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42752 · String · Added FIX.5.0SP2
+</llms-only>
 
 The business center calendar used for adjustments associated with ReturnRateQuoteTimeType(42748) or ReturnRateQuoteTime(42749) and ReturnRateQuoteDate(42750), e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
 
@@ -1988,9 +2906,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42753 · ReturnRateQuoteExchange [#tag-42753]
+## Tag 42753: ReturnRateQuoteExchange
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42753</Badge> <Badge intent="note" minimal>Exchange</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42753 · Exchange · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the exchange (e.g. stock or listed futures/options exchange) from which the quote is obtained.
 
@@ -1998,9 +2922,15 @@ Type: [Exchange](/fix/datatypes#exchange)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42754 · ReturnRateQuotePricingModel [#tag-42754]
+## Tag 42754: ReturnRateQuotePricingModel
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42754</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42754 · String · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the pricing model used to evaluate the underlying asset price. See http://www.fpml.org/coding-scheme/pricing-model for values.
 
@@ -2008,9 +2938,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42755 · ReturnRateCashFlowType [#tag-42755]
+## Tag 42755: ReturnRateCashFlowType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42755</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42755 · String · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the type of cash flows, e.g. coupon payment, premium fee, settlement fee, etc. See http://www.fpml.org/coding-scheme/cashflow-type for values.
 
@@ -2018,9 +2954,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42756 · ReturnRateValuationTimeType [#tag-42756]
+## Tag 42756: ReturnRateValuationTimeType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42756</Badge> <Badge intent="note" minimal>ReturnRateQuoteTimeTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42756 · ReturnRateQuoteTimeTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the timing at which the calculation agent values the underlying.
 
@@ -2039,19 +2981,31 @@ Code set **ReturnRateQuoteTimeTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42757 · ReturnRateValuationTime [#tag-42757]
+## Tag 42757: ReturnRateValuationTime
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42757</Badge> <Badge intent="note" minimal>LocalMktTime</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42757 · LocalMktTime · Added FIX.5.0SP2
+</llms-only>
 
 The time at which the calculation agent values the underlying asset.
 
-Type: [LocalMktTime](/fix/datatypes#local-mkt-time)
+Type: [LocalMktTime](/fix/datatypes#localmkttime)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42758 · ReturnRateValuationTimeBusinessCenter [#tag-42758]
+## Tag 42758: ReturnRateValuationTimeBusinessCenter
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42758</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42758 · String · Added FIX.5.0SP2
+</llms-only>
 
 The business center calendar used for adjustments associated with ReturnRateValuationTimeType(42756) or ReturnRateValuationTime(42757), e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
 
@@ -2059,9 +3013,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42759 · ReturnRateValuationPriceOption [#tag-42759]
+## Tag 42759: ReturnRateValuationPriceOption
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42759</Badge> <Badge intent="note" minimal>ReturnRateValuationPriceOptionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42759 · ReturnRateValuationPriceOptionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Indicates whether an ISDA price option applies, and if applicable which type of price.
 
@@ -2075,9 +3035,15 @@ Code set **ReturnRateValuationPriceOptionCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42760 · ReturnRateFinalPriceFallback [#tag-42760]
+## Tag 42760: ReturnRateFinalPriceFallback
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42760</Badge> <Badge intent="note" minimal>ComplexEventPVFinalPriceElectionFallbackCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42760 · ComplexEventPVFinalPriceElectionFallbackCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the fallback provision for the hedging party in the determination of the final price.
 
@@ -2090,19 +3056,31 @@ Code set **ComplexEventPVFinalPriceElectionFallbackCodeSet** ([int](/fix/datatyp
 
 Used in: [ReturnRateGrp](/fix/groups/return-rate-grp)
 
-## 42761 · NoReturnRateInformationSources [#tag-42761]
+## Tag 42761: NoReturnRateInformationSources
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42761</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42761 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of iterations in the return rate information source repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ReturnRateInformationSourceGrp](/fix/groups/return-rate-information-source-grp)
 
-## 42762 · ReturnRateInformationSource [#tag-42762]
+## Tag 42762: ReturnRateInformationSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42762</Badge> <Badge intent="note" minimal>RateSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42762 · RateSourceCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the source of rate information. For FX the references source to be used for the FX spot rate.
 
@@ -2118,9 +3096,15 @@ Code set **RateSourceCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ReturnRateInformationSourceGrp](/fix/groups/return-rate-information-source-grp)
 
-## 42763 · ReturnRateReferencePage [#tag-42763]
+## Tag 42763: ReturnRateReferencePage
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42763</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42763 · String · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the reference "page" from the rate source. For FX, the reference page to the spot rate to be used for the reference FX spot rate. When ReturnRateInformationSource(42762) = 3 (ISDA Settlement Rate Option) this contains the value from the scheme that reflects the terms of the Annex A to the ISDA 1998 FX and Currency Option Definitions. See: http://www.fpml.org/coding-scheme/settlement-rate-option
 
@@ -2128,9 +3112,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [ReturnRateInformationSourceGrp](/fix/groups/return-rate-information-source-grp)
 
-## 42764 · ReturnRateReferencePageHeading [#tag-42764]
+## Tag 42764: ReturnRateReferencePageHeading
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42764</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42764 · String · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the page heading from the rate source.
 
@@ -2138,19 +3128,31 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [ReturnRateInformationSourceGrp](/fix/groups/return-rate-information-source-grp)
 
-## 42765 · NoReturnRatePrices [#tag-42765]
+## Tag 42765: NoReturnRatePrices
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42765</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42765 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of iterations in the return rate price repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ReturnRatePriceGrp](/fix/groups/return-rate-price-grp)
 
-## 42766 · ReturnRatePriceBasis [#tag-42766]
+## Tag 42766: ReturnRatePriceBasis
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42766</Badge> <Badge intent="note" minimal>ReturnRatePriceBasisCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42766 · ReturnRatePriceBasisCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The basis of the return price.
 
@@ -2165,9 +3167,15 @@ Code set **ReturnRatePriceBasisCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ReturnRatePriceGrp](/fix/groups/return-rate-price-grp)
 
-## 42767 · ReturnRatePrice [#tag-42767]
+## Tag 42767: ReturnRatePrice
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42767</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42767 · Price · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the price of the underlying swap asset.
 
@@ -2175,9 +3183,15 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [ReturnRatePriceGrp](/fix/groups/return-rate-price-grp)
 
-## 42768 · ReturnRatePriceCurrency [#tag-42768]
+## Tag 42768: ReturnRatePriceCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42768</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42768 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the currency of the price of the underlying swap asset. Uses ISO 4217 currency codes.
 
@@ -2185,9 +3199,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [ReturnRatePriceGrp](/fix/groups/return-rate-price-grp)
 
-## 42769 · ReturnRatePriceType [#tag-42769]
+## Tag 42769: ReturnRatePriceType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42769</Badge> <Badge intent="note" minimal>ReturnRatePriceTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42769 · ReturnRatePriceTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies whether the ReturnRatePrice(42767) is expressed in absolute or relative terms.
 
@@ -2200,19 +3220,31 @@ Code set **ReturnRatePriceTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ReturnRatePriceGrp](/fix/groups/return-rate-price-grp)
 
-## 42770 · NoReturnRateValuationDateBusinessCenters [#tag-42770]
+## Tag 42770: NoReturnRateValuationDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42770</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42770 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of iterations in the return rate valuation date business center repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ReturnRateValuationDateBusinessCenterGrp](/fix/groups/return-rate-valuation-date-business-center-grp)
 
-## 42771 · ReturnRateValuationDateBusinessCenter [#tag-42771]
+## Tag 42771: ReturnRateValuationDateBusinessCenter
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42771</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42771 · String · Added FIX.5.0SP2
+</llms-only>
 
 The business center calendar used for date adjustment of the return rate valuation unadjusted or relative dates, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
 
@@ -2220,29 +3252,47 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [ReturnRateValuationDateBusinessCenterGrp](/fix/groups/return-rate-valuation-date-business-center-grp)
 
-## 42772 · NoReturnRateValuationDates [#tag-42772]
+## Tag 42772: NoReturnRateValuationDates
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42772</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42772 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of iterations in the return rate valuation date repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ReturnRateValuationDateGrp](/fix/groups/return-rate-valuation-date-grp)
 
-## 42773 · ReturnRateValuationDate [#tag-42773]
+## Tag 42773: ReturnRateValuationDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42773</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42773 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The return rate valuation date. Type of date is specified in ReturnRateValuationDateType(42774).
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [ReturnRateValuationDateGrp](/fix/groups/return-rate-valuation-date-grp)
 
-## 42774 · ReturnRateValuationDateType [#tag-42774]
+## Tag 42774: ReturnRateValuationDateType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42774</Badge> <Badge intent="note" minimal>NonDeliverableFixingDateTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42774 · NonDeliverableFixingDateTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the type of return rate valuation date (e.g. adjusted for holidays).
 
@@ -2255,19 +3305,31 @@ Code set **NonDeliverableFixingDateTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ReturnRateValuationDateGrp](/fix/groups/return-rate-valuation-date-grp)
 
-## 42775 · NoSettlMethodElectionDateBusinessCenters [#tag-42775]
+## Tag 42775: NoSettlMethodElectionDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42775</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42775 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [SettlMethodElectionDateBusinessCenterGrp](/fix/groups/settl-method-election-date-business-center-grp)
 
-## 42776 · SettlMethodElectionDateBusinessCenter [#tag-42776]
+## Tag 42776: SettlMethodElectionDateBusinessCenter
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42776</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42776 · String · Added FIX.5.0SP2
+</llms-only>
 
 The business center calendar used for date adjustment of the settlement method election unadjusted or relative date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
 
@@ -2275,19 +3337,31 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [SettlMethodElectionDateBusinessCenterGrp](/fix/groups/settl-method-election-date-business-center-grp)
 
-## 42777 · SettlMethodElectionDateUnadjusted [#tag-42777]
+## Tag 42777: SettlMethodElectionDateUnadjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42777</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42777 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The unadjusted settlement method election date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [SettlMethodElectionDate](/fix/components/settl-method-election-date)
 
-## 42778 · SettlMethodElectionDateBusinessDayConvention [#tag-42778]
+## Tag 42778: SettlMethodElectionDateBusinessDayConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42778</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42778 · BusinessDayConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The settlement method election date adjustment business day convention.
 
@@ -2306,9 +3380,15 @@ Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [SettlMethodElectionDate](/fix/components/settl-method-election-date)
 
-## 42779 · SettlMethodElectionDateRelativeTo [#tag-42779]
+## Tag 42779: SettlMethodElectionDateRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42779</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42779 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the anchor date when the settlement method election date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
 
@@ -2316,9 +3396,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [SettlMethodElectionDate](/fix/components/settl-method-election-date)
 
-## 42780 · SettlMethodElectionDateOffsetPeriod [#tag-42780]
+## Tag 42780: SettlMethodElectionDateOffsetPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42780</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42780 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the relative settlement method election date offset.
 
@@ -2326,9 +3412,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [SettlMethodElectionDate](/fix/components/settl-method-election-date)
 
-## 42781 · SettlMethodElectionDateOffsetUnit [#tag-42781]
+## Tag 42781: SettlMethodElectionDateOffsetUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42781</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42781 · PaymentStreamPaymentDateOffsetUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the relative settlement method election date offset.
 
@@ -2343,9 +3435,15 @@ Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#
 
 Used in: [SettlMethodElectionDate](/fix/components/settl-method-election-date)
 
-## 42782 · SettlMethodElectionDateOffsetDayType [#tag-42782]
+## Tag 42782: SettlMethodElectionDateOffsetDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42782</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42782 · PaymentStreamPaymentDateOffsetDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the day type of the relative settlement method election date offset.
 
@@ -2362,19 +3460,31 @@ Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#
 
 Used in: [SettlMethodElectionDate](/fix/components/settl-method-election-date)
 
-## 42783 · SettlMethodElectionDateAdjusted [#tag-42783]
+## Tag 42783: SettlMethodElectionDateAdjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42783</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42783 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The adjusted settlement method election date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [SettlMethodElectionDate](/fix/components/settl-method-election-date)
 
-## 42784 · StreamVersion [#tag-42784]
+## Tag 42784: StreamVersion
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42784</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42784 · String · Added FIX.5.0SP2
+</llms-only>
 
 The stream version identifier when there have been modifications to the contract over time. Helps signal when there are embedded changes.
 
@@ -2382,19 +3492,31 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [StreamGrp](/fix/groups/stream-grp)
 
-## 42785 · StreamVersionEffectiveDate [#tag-42785]
+## Tag 42785: StreamVersionEffectiveDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42785</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42785 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The effective date of the StreamVersion(42784).
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [StreamGrp](/fix/groups/stream-grp)
 
-## 42786 · StreamNotionalDeterminationMethod [#tag-42786]
+## Tag 42786: StreamNotionalDeterminationMethod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42786</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42786 · String · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the method for determining the floating notional value for equity swaps. See http://www.fpml.org/coding-scheme/determination-method for values.
 
@@ -2402,9 +3524,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [StreamGrp](/fix/groups/stream-grp)
 
-## 42787 · StreamNotionalAdjustments [#tag-42787]
+## Tag 42787: StreamNotionalAdjustments
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42787</Badge> <Badge intent="note" minimal>StreamNotionalAdjustmentsCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42787 · StreamNotionalAdjustmentsCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 For equity swaps this specifies the conditions that govern the adjustment to the number of units of the swap.
 
@@ -2418,19 +3546,31 @@ Code set **StreamNotionalAdjustmentsCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [StreamGrp](/fix/groups/stream-grp)
 
-## 42788 · NoUnderlyingCashSettlDateBusinessCenters [#tag-42788]
+## Tag 42788: NoUnderlyingCashSettlDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42788</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42788 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [UnderlyingCashSettlDateBusinessCenterGrp](/fix/groups/underlying-cash-settl-date-business-center-grp)
 
-## 42789 · UnderlyingCashSettlDateBusinessCenter [#tag-42789]
+## Tag 42789: UnderlyingCashSettlDateBusinessCenter
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42789</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42789 · String · Added FIX.5.0SP2
+</llms-only>
 
 The business center calendar used for date adjustment of the cash settlement unadjusted or relative date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
 
@@ -2438,19 +3578,31 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [UnderlyingCashSettlDateBusinessCenterGrp](/fix/groups/underlying-cash-settl-date-business-center-grp)
 
-## 42790 · UnderlyingCashSettlDateUnadjusted [#tag-42790]
+## Tag 42790: UnderlyingCashSettlDateUnadjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42790</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42790 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The unadjusted cash settlement date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [UnderlyingCashSettlDate](/fix/components/underlying-cash-settl-date)
 
-## 42791 · UnderlyingCashSettlDateBusinessDayConvention [#tag-42791]
+## Tag 42791: UnderlyingCashSettlDateBusinessDayConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42791</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42791 · BusinessDayConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The business day convention used to adjust the cash settlement provision's date. Used only to override the business day convention defined in the UnderlyingInstrument component.
 
@@ -2469,9 +3621,15 @@ Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [UnderlyingCashSettlDate](/fix/components/underlying-cash-settl-date)
 
-## 42792 · UnderlyingCashSettlDateRelativeTo [#tag-42792]
+## Tag 42792: UnderlyingCashSettlDateRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42792</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42792 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the anchor date when the cash settlement date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
 
@@ -2479,9 +3637,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [UnderlyingCashSettlDate](/fix/components/underlying-cash-settl-date)
 
-## 42793 · UnderlyingCashSettlDateOffsetPeriod [#tag-42793]
+## Tag 42793: UnderlyingCashSettlDateOffsetPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42793</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42793 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the relative cash settlement date offset.
 
@@ -2489,9 +3653,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [UnderlyingCashSettlDate](/fix/components/underlying-cash-settl-date)
 
-## 42794 · UnderlyingCashSettlDateOffsetUnit [#tag-42794]
+## Tag 42794: UnderlyingCashSettlDateOffsetUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42794</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42794 · PaymentStreamPaymentDateOffsetUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the relative cash settlement date offset.
 
@@ -2506,9 +3676,15 @@ Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#
 
 Used in: [UnderlyingCashSettlDate](/fix/components/underlying-cash-settl-date)
 
-## 42795 · UnderlyingCashSettlDateOffsetDayType [#tag-42795]
+## Tag 42795: UnderlyingCashSettlDateOffsetDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42795</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42795 · PaymentStreamPaymentDateOffsetDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the day type of the relative cash settlement date offset.
 
@@ -2525,19 +3701,31 @@ Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#
 
 Used in: [UnderlyingCashSettlDate](/fix/components/underlying-cash-settl-date)
 
-## 42796 · UnderlyingCashSettlDateAdjusted [#tag-42796]
+## Tag 42796: UnderlyingCashSettlDateAdjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42796</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42796 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The adjusted cash settlement date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [UnderlyingCashSettlDate](/fix/components/underlying-cash-settl-date)
 
-## 42797 · UnderlyingCashSettlPriceSource [#tag-42797]
+## Tag 42797: UnderlyingCashSettlPriceSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42797</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42797 · String · Added FIX.5.0SP2
+</llms-only>
 
 The source from which the settlement price is to be obtained. See http://www.fpml.org/coding-scheme/settlement-price-source for values.
 
@@ -2545,9 +3733,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [UnderlyingCashSettlTermGrp](/fix/groups/underlying-cash-settl-term-grp)
 
-## 42798 · UnderlyingCashSettlPriceDefault [#tag-42798]
+## Tag 42798: UnderlyingCashSettlPriceDefault
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42798</Badge> <Badge intent="note" minimal>CashSettlPriceDefaultCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42798 · CashSettlPriceDefaultCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The default election for determining settlement price.
 
@@ -2560,13 +3754,19 @@ Code set **CashSettlPriceDefaultCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [UnderlyingCashSettlTermGrp](/fix/groups/underlying-cash-settl-term-grp)
 
-## 42799 · NoUnderlyingDividendAccrualPaymentDateBusinessCenters [#tag-42799]
+## Tag 42799: NoUnderlyingDividendAccrualPaymentDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 42799</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 42799 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of entries in the UnderlyingDividendAccrualPaymentDateBusinessCenterGrp.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [UnderlyingDividendAccrualPaymentDateBusinessCenterGrp](/fix/groups/underlying-dividend-accrual-payment-date-business-center-grp)
 

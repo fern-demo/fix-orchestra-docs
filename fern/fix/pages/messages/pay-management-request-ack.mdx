@@ -3,7 +3,13 @@ title: "PayManagementRequestAck"
 subtitle: "PayManagementRequestAck(35=DZ) is used to acknowledge the receipt of the PayManagementRequest(35=DY) message (i.e. a technical acknowledgement of receipt). Acceptance or rejection of the request is reported in the corresponding…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType DZ</Badge> <Badge intent="note" minimal>Pay Management</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType DZ · Pay Management · Post Trade · Added FIX.5.0SP2
+</llms-only>
 
 ## Message structure
 
@@ -12,8 +18,8 @@ subtitle: "PayManagementRequestAck(35=DZ) is used to acknowledge the receipt of 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 2812 | [PayRequestID](/fix/fields/tags-2800-2999#tag-2812) | String | **Required** | Unique ID of the PayManagementRequest(35=DY) message. |
-| 2813 | [PayRequestStatus](/fix/fields/tags-2800-2999#tag-2813) | PayRequestStatusCodeSet | **Required** | Only PayRequestStuats(2813)=0 (Received) is applicable in this message. |
+| 2812 | [PayRequestID](/fix/fields/tags-2800-2999#tag-2812-payrequestid) | String | **Required** | Unique ID of the PayManagementRequest(35=DY) message. |
+| 2813 | [PayRequestStatus](/fix/fields/tags-2800-2999#tag-2813-payrequeststatus) | PayRequestStatusCodeSet | **Required** | Only PayRequestStuats(2813)=0 (Received) is applicable in this message. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

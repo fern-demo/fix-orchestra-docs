@@ -2,9 +2,15 @@
 title: "BidDescReqGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 398</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoBidDescriptors (398)](/fix/fields/tags-200-399#tag-398).
+<llms-only>
+Repeating group · NumInGroup 398 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoBidDescriptors (398)](/fix/fields/tags-200-399#tag-398-nobiddescriptors).
 
 ## Members
 
@@ -12,17 +18,17 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 399 | [BidDescriptorType](/fix/fields/tags-200-399#tag-399) | BidDescriptorTypeCodeSet | Optional | Required if NoBidDescriptors &gt; 0. Must be first field in repeating group. |
-| 400 | [BidDescriptor](/fix/fields/tags-400-599#tag-400) | String | Optional | BidDescriptor value. Usage depends upon BidDescriptorTyp (399). If BidDescriptorType = 1 Industrials etc - Free text If BidDescriptorType = 2 "FR" etc - ISO… |
-| 401 | [SideValueInd](/fix/fields/tags-400-599#tag-401) | SideValueIndCodeSet | Optional | Refers to the SideValue1 or SideValue2. These are used as opposed to Buy or Sell so that the basket can be quoted either way as Buy or Sell. |
-| 404 | [LiquidityValue](/fix/fields/tags-400-599#tag-404) | Amt | Optional | Value between LiquidityPctLow and LiquidityPctHigh in Currency |
-| 441 | [LiquidityNumSecurities](/fix/fields/tags-400-599#tag-441) | int | Optional | Number of Securites between LiquidityPctLow and LiquidityPctHigh in Currency |
-| 402 | [LiquidityPctLow](/fix/fields/tags-400-599#tag-402) | Percentage | Optional | Liquidity indicator or lower limit if LiquidityNumSecurities &gt; 1 |
-| 403 | [LiquidityPctHigh](/fix/fields/tags-400-599#tag-403) | Percentage | Optional | Upper liquidity indicator if LiquidityNumSecurities &gt; 1 |
-| 405 | [EFPTrackingError](/fix/fields/tags-400-599#tag-405) | Percentage | Optional | Eg Used in EFP (Exchange For Physical) trades 12% |
-| 406 | [FairValue](/fix/fields/tags-400-599#tag-406) | Amt | Optional | Used in EFP trades |
-| 407 | [OutsideIndexPct](/fix/fields/tags-400-599#tag-407) | Percentage | Optional | Used in EFP trades |
-| 408 | [ValueOfFutures](/fix/fields/tags-400-599#tag-408) | Amt | Optional | Used in EFP trades |
+| 399 | [BidDescriptorType](/fix/fields/tags-200-399#tag-399-biddescriptortype) | BidDescriptorTypeCodeSet | Optional | Required if NoBidDescriptors &gt; 0. Must be first field in repeating group. |
+| 400 | [BidDescriptor](/fix/fields/tags-400-599#tag-400-biddescriptor) | String | Optional | BidDescriptor value. Usage depends upon BidDescriptorTyp (399). If BidDescriptorType = 1 Industrials etc - Free text If BidDescriptorType = 2 "FR" etc - ISO… |
+| 401 | [SideValueInd](/fix/fields/tags-400-599#tag-401-sidevalueind) | SideValueIndCodeSet | Optional | Refers to the SideValue1 or SideValue2. These are used as opposed to Buy or Sell so that the basket can be quoted either way as Buy or Sell. |
+| 404 | [LiquidityValue](/fix/fields/tags-400-599#tag-404-liquidityvalue) | Amt | Optional | Value between LiquidityPctLow and LiquidityPctHigh in Currency |
+| 441 | [LiquidityNumSecurities](/fix/fields/tags-400-599#tag-441-liquiditynumsecurities) | int | Optional | Number of Securites between LiquidityPctLow and LiquidityPctHigh in Currency |
+| 402 | [LiquidityPctLow](/fix/fields/tags-400-599#tag-402-liquiditypctlow) | Percentage | Optional | Liquidity indicator or lower limit if LiquidityNumSecurities &gt; 1 |
+| 403 | [LiquidityPctHigh](/fix/fields/tags-400-599#tag-403-liquiditypcthigh) | Percentage | Optional | Upper liquidity indicator if LiquidityNumSecurities &gt; 1 |
+| 405 | [EFPTrackingError](/fix/fields/tags-400-599#tag-405-efptrackingerror) | Percentage | Optional | Eg Used in EFP (Exchange For Physical) trades 12% |
+| 406 | [FairValue](/fix/fields/tags-400-599#tag-406-fairvalue) | Amt | Optional | Used in EFP trades |
+| 407 | [OutsideIndexPct](/fix/fields/tags-400-599#tag-407-outsideindexpct) | Percentage | Optional | Used in EFP trades |
+| 408 | [ValueOfFutures](/fix/fields/tags-400-599#tag-408-valueoffutures) | Amt | Optional | Used in EFP trades |
 
 </StickyTable>
 

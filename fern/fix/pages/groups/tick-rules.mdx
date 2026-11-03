@@ -3,9 +3,15 @@ title: "TickRules"
 subtitle: "The TickRules component specifies the rules for determining how a security ticks, i.e. the price increments which it can be quoted, traded, and for certain cases settled, depending on the current price of the security."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1205</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoTickRules (1205)](/fix/fields/tags-1200-1399#tag-1205).
+<llms-only>
+Repeating group · NumInGroup 1205 · Added FIX.5.0
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoTickRules (1205)](/fix/fields/tags-1200-1399#tag-1205-notickrules).
 
 ## Members
 
@@ -13,13 +19,13 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1206 | [StartTickPriceRange](/fix/fields/tags-1200-1399#tag-1206) | Price | Optional | Required if NoTickRules(1205) &gt; 0. |
-| 1207 | [EndTickPriceRange](/fix/fields/tags-1200-1399#tag-1207) | Price | Optional | Ending price range for the specified tick increment |
-| 1208 | [TickIncrement](/fix/fields/tags-1200-1399#tag-1208) | Price | Optional | Tick increment for stated price range. Specifies the valid price increments at which a security can be quoted and traded |
-| 1209 | [TickRuleType](/fix/fields/tags-1200-1399#tag-1209) | TickRuleTypeCodeSet | Optional | Specifies the type of tick rule which is being described |
-| 2571 | [TickRuleProductComplex](/fix/fields/tags-2400-2599#tag-2571) | String | Optional | Can be used to limit tick rule to specific product suite. |
-| 1830 | [SettlPriceIncrement](/fix/fields/tags-1800-1999#tag-1830) | Price | Optional | Settlement price increment for stated price range. |
-| 1831 | [SettlPriceSecondaryIncrement](/fix/fields/tags-1800-1999#tag-1831) | Price | Optional | Secondary settlement price increment for stated price range. The meaning of secondary is left to bilateral agreement, e.g. it may refer to final settlement for… |
+| 1206 | [StartTickPriceRange](/fix/fields/tags-1200-1399#tag-1206-starttickpricerange) | Price | Optional | Required if NoTickRules(1205) &gt; 0. |
+| 1207 | [EndTickPriceRange](/fix/fields/tags-1200-1399#tag-1207-endtickpricerange) | Price | Optional | Ending price range for the specified tick increment |
+| 1208 | [TickIncrement](/fix/fields/tags-1200-1399#tag-1208-tickincrement) | Price | Optional | Tick increment for stated price range. Specifies the valid price increments at which a security can be quoted and traded |
+| 1209 | [TickRuleType](/fix/fields/tags-1200-1399#tag-1209-tickruletype) | TickRuleTypeCodeSet | Optional | Specifies the type of tick rule which is being described |
+| 2571 | [TickRuleProductComplex](/fix/fields/tags-2400-2599#tag-2571-tickruleproductcomplex) | String | Optional | Can be used to limit tick rule to specific product suite. |
+| 1830 | [SettlPriceIncrement](/fix/fields/tags-1800-1999#tag-1830-settlpriceincrement) | Price | Optional | Settlement price increment for stated price range. |
+| 1831 | [SettlPriceSecondaryIncrement](/fix/fields/tags-1800-1999#tag-1831-settlpricesecondaryincrement) | Price | Optional | Secondary settlement price increment for stated price range. The meaning of secondary is left to bilateral agreement, e.g. it may refer to final settlement for… |
 
 </StickyTable>
 

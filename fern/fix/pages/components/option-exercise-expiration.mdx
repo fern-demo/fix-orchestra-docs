@@ -3,7 +3,13 @@ title: "OptionExerciseExpiration"
 subtitle: "The OptionExerciseExpiration component is a subcomponent of the OptionExercise component used to specify option exercise expiration dates and times. The purpose of OptionExercise is to identify the scheduled opportunities for exercise.…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,18 +17,18 @@ subtitle: "The OptionExerciseExpiration component is a subcomponent of the Optio
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41142 | [OptionExerciseExpirationDateBusinessDayConvention](/fix/fields/tags-41000-41199#tag-41142) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this… |
+| 41142 | [OptionExerciseExpirationDateBusinessDayConvention](/fix/fields/tags-41000-41199#tag-41142-optionexerciseexpirationdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this… |
 | 41140 | [OptionExerciseExpirationDateBusinessCenterGrp](/fix/groups/option-exercise-expiration-date-business-center-grp) | Repeating group | Optional | The OptionExerciseExpirationDateBusinessCenterGrp is a repeating subcomponent of the OptionExerciseExpiration component used to specify the set of business… |
 | 41152 | [OptionExerciseExpirationDateGrp](/fix/groups/option-exercise-expiration-date-grp) | Repeating group | Optional | The OptionExerciseExpirationDateGrp is a repeating subcomponent of the OptionExerciseExpiration component used to specify fixed dates for expiration. |
-| 41143 | [OptionExerciseExpirationDateRelativeTo](/fix/fields/tags-41000-41199#tag-41143) | int | Optional | Specifies the anchor date when the option exercise expiration date is relative to an anchor date. See… |
-| 41144 | [OptionExerciseExpirationDateOffsetPeriod](/fix/fields/tags-41000-41199#tag-41144) | int | Optional | Conditionally required when OptionExerciseExpirationDateOffsetUnit(41145) is specified. |
-| 41145 | [OptionExerciseExpirationDateOffsetUnit](/fix/fields/tags-41000-41199#tag-41145) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when OptionExerciseExpirationDateOffsetPeriod(41144) is specified. |
-| 41146 | [OptionExerciseExpirationFrequencyPeriod](/fix/fields/tags-41000-41199#tag-41146) | int | Optional | Conditionally required when OptionExerciseExpirationFrequencyUnit(41147) is specified. |
-| 41147 | [OptionExerciseExpirationFrequencyUnit](/fix/fields/tags-41000-41199#tag-41147) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when OptionExerciseExpirationFrequencyPeriod(41146) is specified. |
-| 41148 | [OptionExerciseExpirationRollConvention](/fix/fields/tags-41000-41199#tag-41148) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the DateAdjustment component in Instrument. The specified values would be specific to this… |
-| 41149 | [OptionExerciseExpirationDateOffsetDayType](/fix/fields/tags-41000-41199#tag-41149) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative option exercise expiration date offset. |
-| 41150 | [OptionExerciseExpirationTime](/fix/fields/tags-41000-41199#tag-41150) | LocalMktTime | Optional | The option exercise expiration time. |
-| 41151 | [OptionExerciseExpirationTimeBusinessCenter](/fix/fields/tags-41000-41199#tag-41151) | String | Optional | The business center used to determine the locale for option exercise expiration time, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for… |
+| 41143 | [OptionExerciseExpirationDateRelativeTo](/fix/fields/tags-41000-41199#tag-41143-optionexerciseexpirationdaterelativeto) | int | Optional | Specifies the anchor date when the option exercise expiration date is relative to an anchor date. See… |
+| 41144 | [OptionExerciseExpirationDateOffsetPeriod](/fix/fields/tags-41000-41199#tag-41144-optionexerciseexpirationdateoffsetperiod) | int | Optional | Conditionally required when OptionExerciseExpirationDateOffsetUnit(41145) is specified. |
+| 41145 | [OptionExerciseExpirationDateOffsetUnit](/fix/fields/tags-41000-41199#tag-41145-optionexerciseexpirationdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when OptionExerciseExpirationDateOffsetPeriod(41144) is specified. |
+| 41146 | [OptionExerciseExpirationFrequencyPeriod](/fix/fields/tags-41000-41199#tag-41146-optionexerciseexpirationfrequencyperiod) | int | Optional | Conditionally required when OptionExerciseExpirationFrequencyUnit(41147) is specified. |
+| 41147 | [OptionExerciseExpirationFrequencyUnit](/fix/fields/tags-41000-41199#tag-41147-optionexerciseexpirationfrequencyunit) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when OptionExerciseExpirationFrequencyPeriod(41146) is specified. |
+| 41148 | [OptionExerciseExpirationRollConvention](/fix/fields/tags-41000-41199#tag-41148-optionexerciseexpirationrollconvention) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the DateAdjustment component in Instrument. The specified values would be specific to this… |
+| 41149 | [OptionExerciseExpirationDateOffsetDayType](/fix/fields/tags-41000-41199#tag-41149-optionexerciseexpirationdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative option exercise expiration date offset. |
+| 41150 | [OptionExerciseExpirationTime](/fix/fields/tags-41000-41199#tag-41150-optionexerciseexpirationtime) | LocalMktTime | Optional | The option exercise expiration time. |
+| 41151 | [OptionExerciseExpirationTimeBusinessCenter](/fix/fields/tags-41000-41199#tag-41151-optionexerciseexpirationtimebusinesscenter) | String | Optional | The business center used to determine the locale for option exercise expiration time, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for… |
 
 </StickyTable>
 

@@ -3,7 +3,13 @@ title: "SettlementInstructionRequest"
 subtitle: "The Settlement Instruction Request message is used to request standing settlement instructions from another party."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType AV</Badge> <Badge intent="note" minimal>Settlement Instruction</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType AV · Settlement Instruction · Post Trade · Added FIX.4.4
+</llms-only>
 
 ## Message structure
 
@@ -12,23 +18,23 @@ subtitle: "The Settlement Instruction Request message is used to request standin
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 791 | [SettlInstReqID](/fix/fields/tags-600-799#tag-791) | String | **Required** | Unique message ID |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | **Required** | Date/Time this request message was generated |
+| 791 | [SettlInstReqID](/fix/fields/tags-600-799#tag-791-settlinstreqid) | String | **Required** | Unique message ID |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | **Required** | Date/Time this request message was generated |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
-| 79 | [AllocAccount](/fix/fields/tags-0-199#tag-79) | String | Optional | Should not be populated if StandInstDbType is populated |
-| 661 | [AllocAcctIDSource](/fix/fields/tags-600-799#tag-661) | AcctIDSourceCodeSet | Optional | Required if AllocAccount populated Should not be populated if StandInstDbType is populated |
-| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | Optional | Should not be populated if StandInstDbType is populated |
-| 460 | [Product](/fix/fields/tags-400-599#tag-460) | ProductCodeSet | Optional | Should not be populated if StandInstDbType is populated |
-| 167 | [SecurityType](/fix/fields/tags-0-199#tag-167) | SecurityTypeCodeSet | Optional | Should not be populated if StandInstDbType is populated |
-| 461 | [CFICode](/fix/fields/tags-400-599#tag-461) | String | Optional | Should not be populated if StandInstDbType is populated |
-| 2891 | [UPICode](/fix/fields/tags-2800-2999#tag-2891) | String | Optional | Should not be populated if StandInstDbType is populated |
-| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120) | Currency | Optional | Should not be populated if StandInstDbType is populated |
-| 168 | [EffectiveTime](/fix/fields/tags-0-199#tag-168) | UTCTimestamp | Optional | Should not be populated if StandInstDbType is populated |
-| 126 | [ExpireTime](/fix/fields/tags-0-199#tag-126) | UTCTimestamp | Optional | Should not be populated if StandInstDbType is populated |
-| 779 | [LastUpdateTime](/fix/fields/tags-600-799#tag-779) | UTCTimestamp | Optional | Should not be populated if StandInstDbType is populated |
-| 169 | [StandInstDbType](/fix/fields/tags-0-199#tag-169) | StandInstDbTypeCodeSet | Optional | Should not be populated if any of AllocAccount through to LastUpdateTime are populated |
-| 170 | [StandInstDbName](/fix/fields/tags-0-199#tag-170) | String | Optional | Should not be populated if any of AllocAccount through to LastUpdateTime are populated |
-| 171 | [StandInstDbID](/fix/fields/tags-0-199#tag-171) | String | Optional | The identifier of the standing instructions within the database specified in StandInstDbType Required if StandInstDbType populated Should not be populated if… |
+| 79 | [AllocAccount](/fix/fields/tags-0-199#tag-79-allocaccount) | String | Optional | Should not be populated if StandInstDbType is populated |
+| 661 | [AllocAcctIDSource](/fix/fields/tags-600-799#tag-661-allocacctidsource) | AcctIDSourceCodeSet | Optional | Required if AllocAccount populated Should not be populated if StandInstDbType is populated |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54-side) | SideCodeSet | Optional | Should not be populated if StandInstDbType is populated |
+| 460 | [Product](/fix/fields/tags-400-599#tag-460-product) | ProductCodeSet | Optional | Should not be populated if StandInstDbType is populated |
+| 167 | [SecurityType](/fix/fields/tags-0-199#tag-167-securitytype) | SecurityTypeCodeSet | Optional | Should not be populated if StandInstDbType is populated |
+| 461 | [CFICode](/fix/fields/tags-400-599#tag-461-cficode) | String | Optional | Should not be populated if StandInstDbType is populated |
+| 2891 | [UPICode](/fix/fields/tags-2800-2999#tag-2891-upicode) | String | Optional | Should not be populated if StandInstDbType is populated |
+| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120-settlcurrency) | Currency | Optional | Should not be populated if StandInstDbType is populated |
+| 168 | [EffectiveTime](/fix/fields/tags-0-199#tag-168-effectivetime) | UTCTimestamp | Optional | Should not be populated if StandInstDbType is populated |
+| 126 | [ExpireTime](/fix/fields/tags-0-199#tag-126-expiretime) | UTCTimestamp | Optional | Should not be populated if StandInstDbType is populated |
+| 779 | [LastUpdateTime](/fix/fields/tags-600-799#tag-779-lastupdatetime) | UTCTimestamp | Optional | Should not be populated if StandInstDbType is populated |
+| 169 | [StandInstDbType](/fix/fields/tags-0-199#tag-169-standinstdbtype) | StandInstDbTypeCodeSet | Optional | Should not be populated if any of AllocAccount through to LastUpdateTime are populated |
+| 170 | [StandInstDbName](/fix/fields/tags-0-199#tag-170-standinstdbname) | String | Optional | Should not be populated if any of AllocAccount through to LastUpdateTime are populated |
+| 171 | [StandInstDbID](/fix/fields/tags-0-199#tag-171-standinstdbid) | String | Optional | The identifier of the standing instructions within the database specified in StandInstDbType Required if StandInstDbType populated Should not be populated if… |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

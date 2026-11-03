@@ -3,9 +3,15 @@ title: "UnderlyingPaymentStreamCompoundingDateGrp"
 subtitle: "UnderlyingPaymentStreamCompoundingDateGrp is a subcomponent of the UnderlyingPaymentStreamCompoundingDates component used to specify predetermined compounding dates."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42901</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingPaymentStreamCompoundingDates (42901)](/fix/fields/tags-42800-42999#tag-42901).
+<llms-only>
+Repeating group · NumInGroup 42901 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingPaymentStreamCompoundingDates (42901)](/fix/fields/tags-42800-42999#tag-42901-nounderlyingpaymentstreamcompoundingdates).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42902 | [UnderlyingPaymentStreamCompoundingDate](/fix/fields/tags-42800-42999#tag-42902) | LocalMktDate | Optional | Required if NoUnderlyingPaymentStreamCompoundingDates(42901) &gt; 0. |
-| 42903 | [UnderlyingPaymentStreamCompoundingDateType](/fix/fields/tags-42800-42999#tag-42903) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date instance but to all subsequent date instances in the group until overridden when a new type is specified. |
+| 42902 | [UnderlyingPaymentStreamCompoundingDate](/fix/fields/tags-42800-42999#tag-42902-underlyingpaymentstreamcompoundingdate) | LocalMktDate | Optional | Required if NoUnderlyingPaymentStreamCompoundingDates(42901) &gt; 0. |
+| 42903 | [UnderlyingPaymentStreamCompoundingDateType](/fix/fields/tags-42800-42999#tag-42903-underlyingpaymentstreamcompoundingdatetype) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date instance but to all subsequent date instances in the group until overridden when a new type is specified. |
 
 </StickyTable>
 

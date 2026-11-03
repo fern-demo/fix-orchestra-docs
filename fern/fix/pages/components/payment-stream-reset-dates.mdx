@@ -3,7 +3,13 @@ title: "PaymentStreamResetDates"
 subtitle: "PaymentStreamResetDates is a subcomponent of the PaymentStream component used to specify the floating rate reset dates of the stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,29 +17,29 @@ subtitle: "PaymentStreamResetDates is a subcomponent of the PaymentStream compon
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40761 | [PaymentStreamResetDateRelativeTo](/fix/fields/tags-40600-40799#tag-40761) | int | Optional | Specifies the anchor date when the reset dates are relative to an anchor date. If the reset frequency is specified as daily this element must not be included.… |
-| 40762 | [PaymentStreamResetDateBusinessDayConvention](/fix/fields/tags-40600-40799#tag-40762) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this… |
+| 40761 | [PaymentStreamResetDateRelativeTo](/fix/fields/tags-40600-40799#tag-40761-paymentstreamresetdaterelativeto) | int | Optional | Specifies the anchor date when the reset dates are relative to an anchor date. If the reset frequency is specified as daily this element must not be included.… |
+| 40762 | [PaymentStreamResetDateBusinessDayConvention](/fix/fields/tags-40600-40799#tag-40762-paymentstreamresetdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this… |
 | 40948 | [PaymentStreamResetDateBusinessCenterGrp](/fix/groups/payment-stream-reset-date-business-center-grp) | Repeating group | Optional | PaymentStreamResetDateBusinessCenterGrp is a repeating subcomponent within the PaymentStreamResetDates component. It is used to specify the set of business… |
-| 40764 | [PaymentStreamResetFrequencyPeriod](/fix/fields/tags-40600-40799#tag-40764) | int | Optional | Conditionally required when PaymentStreamResetFrequencyUnit(40765) is specified. |
-| 40765 | [PaymentStreamResetFrequencyUnit](/fix/fields/tags-40600-40799#tag-40765) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when PaymentStreamResetFrequencyPeriod(40764) is specified. |
-| 40766 | [PaymentStreamResetWeeklyRollConvention](/fix/fields/tags-40600-40799#tag-40766) | PaymentStreamResetWeeklyRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the DateAdjustment component in Instrument. The specified values would be specific to this… |
-| 40767 | [PaymentStreamInitialFixingDateRelativeTo](/fix/fields/tags-40600-40799#tag-40767) | int | Optional | Specifies the anchor date when the initial fixing date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for… |
-| 40768 | [PaymentStreamInitialFixingDateBusinessDayConvention](/fix/fields/tags-40600-40799#tag-40768) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this… |
+| 40764 | [PaymentStreamResetFrequencyPeriod](/fix/fields/tags-40600-40799#tag-40764-paymentstreamresetfrequencyperiod) | int | Optional | Conditionally required when PaymentStreamResetFrequencyUnit(40765) is specified. |
+| 40765 | [PaymentStreamResetFrequencyUnit](/fix/fields/tags-40600-40799#tag-40765-paymentstreamresetfrequencyunit) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when PaymentStreamResetFrequencyPeriod(40764) is specified. |
+| 40766 | [PaymentStreamResetWeeklyRollConvention](/fix/fields/tags-40600-40799#tag-40766-paymentstreamresetweeklyrollconvention) | PaymentStreamResetWeeklyRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the DateAdjustment component in Instrument. The specified values would be specific to this… |
+| 40767 | [PaymentStreamInitialFixingDateRelativeTo](/fix/fields/tags-40600-40799#tag-40767-paymentstreaminitialfixingdaterelativeto) | int | Optional | Specifies the anchor date when the initial fixing date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for… |
+| 40768 | [PaymentStreamInitialFixingDateBusinessDayConvention](/fix/fields/tags-40600-40799#tag-40768-paymentstreaminitialfixingdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this… |
 | 40949 | [PaymentStreamInitialFixingDateBusinessCenterGrp](/fix/groups/payment-stream-initial-fixing-date-business-center-grp) | Repeating group | Optional | PaymentStreamInitialFixingDateBusinessCenterGrp is a repeating subcomponent within the PaymentStreamResetDates component. It is used to specify the set of… |
-| 40770 | [PaymentStreamInitialFixingDateOffsetPeriod](/fix/fields/tags-40600-40799#tag-40770) | int | Optional | Conditionally required when PaymentStreamInitialFixingDateOffsetUnit(40771) is specified. |
-| 40771 | [PaymentStreamInitialFixingDateOffsetUnit](/fix/fields/tags-40600-40799#tag-40771) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when PaymentStreamInitialFixingDateOffsetPeriod(40770) is specified. |
-| 40772 | [PaymentStreamInitialFixingDateOffsetDayType](/fix/fields/tags-40600-40799#tag-40772) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative initial fixing date offset. |
-| 40773 | [PaymentStreamInitialFixingDateAdjusted](/fix/fields/tags-40600-40799#tag-40773) | LocalMktDate | Optional | The adjusted initial fixing date. |
-| 40774 | [PaymentStreamFixingDateRelativeTo](/fix/fields/tags-40600-40799#tag-40774) | int | Optional | Specifies the anchor date when the fixing date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
-| 40775 | [PaymentStreamFixingDateBusinessDayConvention](/fix/fields/tags-40600-40799#tag-40775) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this… |
+| 40770 | [PaymentStreamInitialFixingDateOffsetPeriod](/fix/fields/tags-40600-40799#tag-40770-paymentstreaminitialfixingdateoffsetperiod) | int | Optional | Conditionally required when PaymentStreamInitialFixingDateOffsetUnit(40771) is specified. |
+| 40771 | [PaymentStreamInitialFixingDateOffsetUnit](/fix/fields/tags-40600-40799#tag-40771-paymentstreaminitialfixingdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when PaymentStreamInitialFixingDateOffsetPeriod(40770) is specified. |
+| 40772 | [PaymentStreamInitialFixingDateOffsetDayType](/fix/fields/tags-40600-40799#tag-40772-paymentstreaminitialfixingdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative initial fixing date offset. |
+| 40773 | [PaymentStreamInitialFixingDateAdjusted](/fix/fields/tags-40600-40799#tag-40773-paymentstreaminitialfixingdateadjusted) | LocalMktDate | Optional | The adjusted initial fixing date. |
+| 40774 | [PaymentStreamFixingDateRelativeTo](/fix/fields/tags-40600-40799#tag-40774-paymentstreamfixingdaterelativeto) | int | Optional | Specifies the anchor date when the fixing date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 40775 | [PaymentStreamFixingDateBusinessDayConvention](/fix/fields/tags-40600-40799#tag-40775-paymentstreamfixingdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this… |
 | 40950 | [PaymentStreamFixingDateBusinessCenterGrp](/fix/groups/payment-stream-fixing-date-business-center-grp) | Repeating group | Optional | PaymentStreamFixingDateBusinessCenterGrp is a repeating subcomponent within the PaymentStreamResetDates component. It is used to specify the set of business… |
-| 40777 | [PaymentStreamFixingDateOffsetPeriod](/fix/fields/tags-40600-40799#tag-40777) | int | Optional | Conditionally required when PaymentStreamFixingDateOffsetUnit(40778) is specified. |
-| 40778 | [PaymentStreamFixingDateOffsetUnit](/fix/fields/tags-40600-40799#tag-40778) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when PaymentStreamFixingDateOffsetPeriod(40777) is specified. |
-| 40779 | [PaymentStreamFixingDateOffsetDayType](/fix/fields/tags-40600-40799#tag-40779) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative fixing date offset. |
-| 40780 | [PaymentStreamFixingDateAdjusted](/fix/fields/tags-40600-40799#tag-40780) | LocalMktDate | Optional | The adjusted fixing date. |
-| 40781 | [PaymentStreamRateCutoffDateOffsetPeriod](/fix/fields/tags-40600-40799#tag-40781) | int | Optional | Conditionally required when PaymentStreamRateCutoffDateOffsetUnit(40782) is specified. |
-| 40782 | [PaymentStreamRateCutoffDateOffsetUnit](/fix/fields/tags-40600-40799#tag-40782) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when PaymentStreamRateCutoffDateOffsetPeriod(40783) is specified. |
-| 40783 | [PaymentStreamRateCutoffDateOffsetDayType](/fix/fields/tags-40600-40799#tag-40783) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative rate cut-off date offset. |
+| 40777 | [PaymentStreamFixingDateOffsetPeriod](/fix/fields/tags-40600-40799#tag-40777-paymentstreamfixingdateoffsetperiod) | int | Optional | Conditionally required when PaymentStreamFixingDateOffsetUnit(40778) is specified. |
+| 40778 | [PaymentStreamFixingDateOffsetUnit](/fix/fields/tags-40600-40799#tag-40778-paymentstreamfixingdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when PaymentStreamFixingDateOffsetPeriod(40777) is specified. |
+| 40779 | [PaymentStreamFixingDateOffsetDayType](/fix/fields/tags-40600-40799#tag-40779-paymentstreamfixingdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative fixing date offset. |
+| 40780 | [PaymentStreamFixingDateAdjusted](/fix/fields/tags-40600-40799#tag-40780-paymentstreamfixingdateadjusted) | LocalMktDate | Optional | The adjusted fixing date. |
+| 40781 | [PaymentStreamRateCutoffDateOffsetPeriod](/fix/fields/tags-40600-40799#tag-40781-paymentstreamratecutoffdateoffsetperiod) | int | Optional | Conditionally required when PaymentStreamRateCutoffDateOffsetUnit(40782) is specified. |
+| 40782 | [PaymentStreamRateCutoffDateOffsetUnit](/fix/fields/tags-40600-40799#tag-40782-paymentstreamratecutoffdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when PaymentStreamRateCutoffDateOffsetPeriod(40783) is specified. |
+| 40783 | [PaymentStreamRateCutoffDateOffsetDayType](/fix/fields/tags-40600-40799#tag-40783-paymentstreamratecutoffdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative rate cut-off date offset. |
 | 42660 | [PaymentStreamFixingDateGrp](/fix/groups/payment-stream-fixing-date-grp) | Repeating group | Optional | PaymentStreamFixingDateGrp is a subcomponent of the PaymentStreamResetDates component used to specify predetermined fixing dates. |
 
 </StickyTable>

@@ -3,7 +3,13 @@ title: "AccountSummaryReport"
 subtitle: "The AccountSummaryReport is provided by the clearinghouse to its clearing members on a daily basis. It contains margin, settlement, collateral and pay/collect data for each clearing member level account type. Clearing member account types…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType CQ</Badge> <Badge intent="note" minimal>Account Reporting</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType CQ · Account Reporting · Post Trade · Added FIX.5.0SP2
+</llms-only>
 
 The Parties component and PtysSubGrp sub-component are used to describe the clearing member number and account type for that report. Net settlement amount or amounts are provided using the SettlementAmountGrp component. Margin requirement amounts are provided using the MarginAmountData component. The current collateral values for each valid collateral type is provided using the CollateralAmountGrp component. Likewise pay/collect information is provided using the PayCollectGrp component. Margin and pay/collect amounts can optionally be tied to markets and market segments for clearing houses that support multiple markets and market segments.
 
@@ -14,14 +20,14 @@ The Parties component and PtysSubGrp sub-component are used to describe the clea
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 1699 | [AccountSummaryReportID](/fix/fields/tags-1600-1799#tag-1699) | String | **Required** | Unique identifier for the AccountSummaryReport(35=CQ). |
-| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | **Required** | The business date for which the trade is expected to be cleared. |
-| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies the base reporting currency used in this report. |
-| 900 | [TotalNetValue](/fix/fields/tags-800-999#tag-900) | Amt | Optional | TotalNetValue is determined as follows: At the initial collateral assignment TotalNetValue is the sum of (UnderlyingStartValue \* (1-haircut)). In a collateral… |
-| 899 | [MarginExcess](/fix/fields/tags-800-999#tag-899) | Amt | Optional | Excess margin amount (deficit if value is negative) |
-| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716) | SettlSessIDCodeSet | Optional | Identifies a specific settlement session |
-| 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717) | String | Optional | SubID value associated with SettlSessID(716) |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 1699 | [AccountSummaryReportID](/fix/fields/tags-1600-1799#tag-1699-accountsummaryreportid) | String | **Required** | Unique identifier for the AccountSummaryReport(35=CQ). |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715-clearingbusinessdate) | LocalMktDate | **Required** | The business date for which the trade is expected to be cleared. |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15-currency) | Currency | Optional | Identifies the base reporting currency used in this report. |
+| 900 | [TotalNetValue](/fix/fields/tags-800-999#tag-900-totalnetvalue) | Amt | Optional | TotalNetValue is determined as follows: At the initial collateral assignment TotalNetValue is the sum of (UnderlyingStartValue \* (1-haircut)). In a collateral… |
+| 899 | [MarginExcess](/fix/fields/tags-800-999#tag-899-marginexcess) | Amt | Optional | Excess margin amount (deficit if value is negative) |
+| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716-settlsessid) | SettlSessIDCodeSet | Optional | Identifies a specific settlement session |
+| 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717-settlsesssubid) | String | Optional | SubID value associated with SettlSessID(716) |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
 | 1700 | [SettlementAmountGrp](/fix/groups/settlement-amount-grp) | Repeating group | Optional | The Settlement Amount Group component block is a repeating group of settlement amounts for an account |
 | 1643 | [MarginAmount](/fix/groups/margin-amount) | Repeating group | Optional |  |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | **Required** | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |

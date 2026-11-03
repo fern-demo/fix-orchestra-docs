@@ -3,9 +3,15 @@ title: "ComplexEventDates"
 subtitle: "The ComplexEventDate and ComplexEventTime components are used to constrain a complex event to a specific date range or time range. If specified the event is only effective on or within the specified dates and times."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1491</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoComplexEventDates (1491)](/fix/fields/tags-1400-1599#tag-1491).
+<llms-only>
+Repeating group · NumInGroup 1491 · Added FIX.5.0SP1
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoComplexEventDates (1491)](/fix/fields/tags-1400-1599#tag-1491-nocomplexeventdates).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1492 | [ComplexEventStartDate](/fix/fields/tags-1400-1599#tag-1492) | UTCDateOnly | Optional | Required if NoComplexEventDates(1491) &gt; 0. |
-| 1493 | [ComplexEventEndDate](/fix/fields/tags-1400-1599#tag-1493) | UTCDateOnly | Optional | Required if NoComplexEventDates(1491) &gt; 0. |
+| 1492 | [ComplexEventStartDate](/fix/fields/tags-1400-1599#tag-1492-complexeventstartdate) | UTCDateOnly | Optional | Required if NoComplexEventDates(1491) &gt; 0. |
+| 1493 | [ComplexEventEndDate](/fix/fields/tags-1400-1599#tag-1493-complexeventenddate) | UTCDateOnly | Optional | Required if NoComplexEventDates(1491) &gt; 0. |
 | 1494 | [ComplexEventTimes](/fix/groups/complex-event-times) | Repeating group | Optional | The ComplexEventTime component is nested within the ComplexEventDate in order to further qualify any dates placed on the event and is used to specify time… |
 
 </StickyTable>

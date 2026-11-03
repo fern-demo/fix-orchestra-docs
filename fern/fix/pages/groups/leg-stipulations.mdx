@@ -3,9 +3,15 @@ title: "LegStipulations"
 subtitle: "The LegStipulations component block has the same usage as the Stipulations component block, but for a leg instrument in a multi-legged security."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 683</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegStipulations (683)](/fix/fields/tags-600-799#tag-683).
+<llms-only>
+Repeating group · NumInGroup 683 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegStipulations (683)](/fix/fields/tags-600-799#tag-683-nolegstipulations).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 688 | [LegStipulationType](/fix/fields/tags-600-799#tag-688) | StipulationTypeCodeSet | Optional | Required if NoLegStipulations &gt;0 |
-| 689 | [LegStipulationValue](/fix/fields/tags-600-799#tag-689) | String | Optional | For Fixed Income, value of stipulation. See StipulationValue (234) for description and valid values |
+| 688 | [LegStipulationType](/fix/fields/tags-600-799#tag-688-legstipulationtype) | StipulationTypeCodeSet | Optional | Required if NoLegStipulations &gt;0 |
+| 689 | [LegStipulationValue](/fix/fields/tags-600-799#tag-689-legstipulationvalue) | String | Optional | For Fixed Income, value of stipulation. See StipulationValue (234) for description and valid values |
 
 </StickyTable>
 

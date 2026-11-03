@@ -3,7 +3,13 @@ title: "MarginRequirementInquiry"
 subtitle: "The purpose of this message is to initiate a margin requirement inquiry for a margin account. The inquiry may be submitted at the detail level or the summary level. It can also be used to inquire margin excess/deficit or net position…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType CH</Badge> <Badge intent="note" minimal>Margin Requirement Management</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType CH · Margin Requirement Management · Post Trade · Added FIX.5.0SP2
+</llms-only>
 
 ## Message structure
 
@@ -12,21 +18,21 @@ subtitle: "The purpose of this message is to initiate a margin requirement inqui
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 1635 | [MarginReqmtInqID](/fix/fields/tags-1600-1799#tag-1635) | String | **Required** | Unique identifier for this message |
+| 1635 | [MarginReqmtInqID](/fix/fields/tags-1600-1799#tag-1635-marginreqmtinqid) | String | **Required** | Unique identifier for this message |
 | 1636 | [MarginReqmtInqQualGrp](/fix/groups/margin-reqmt-inq-qual-grp) | Repeating group | **Required** |  |
-| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263) | SubscriptionRequestTypeCodeSet | Optional | Used to subscribe / unsubscribe for margin requirement reports. If the field is absent, the default will be snapshot request only - no subscription. |
-| 725 | [ResponseTransportType](/fix/fields/tags-600-799#tag-725) | ResponseTransportTypeCodeSet | Optional | Ability to specify whether the response to the request should be delivered inband or via pre-arranged out-of-band transport. |
-| 726 | [ResponseDestination](/fix/fields/tags-600-799#tag-726) | String | Optional | URI destination name. Used if ResponseTransportType is out-of-band. |
+| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263-subscriptionrequesttype) | SubscriptionRequestTypeCodeSet | Optional | Used to subscribe / unsubscribe for margin requirement reports. If the field is absent, the default will be snapshot request only - no subscription. |
+| 725 | [ResponseTransportType](/fix/fields/tags-600-799#tag-725-responsetransporttype) | ResponseTransportTypeCodeSet | Optional | Ability to specify whether the response to the request should be delivered inband or via pre-arranged out-of-band transport. |
+| 726 | [ResponseDestination](/fix/fields/tags-600-799#tag-726-responsedestination) | String | Optional | URI destination name. Used if ResponseTransportType is out-of-band. |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
-| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | Optional | Indicates the date for which the margin is to be calculated |
-| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716) | SettlSessIDCodeSet | Optional | Indicates the settlement session for which the margin is to be calculated – End Of Day or Intraday |
-| 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717) | String | Optional | SubID value associated with SettlSessID(716) |
-| 1639 | [MarginClass](/fix/fields/tags-1600-1799#tag-1639) | String | Optional | Used to identify a group of instruments with similar risk profile. |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715-clearingbusinessdate) | LocalMktDate | Optional | Indicates the date for which the margin is to be calculated |
+| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716-settlsessid) | SettlSessIDCodeSet | Optional | Indicates the settlement session for which the margin is to be calculated – End Of Day or Intraday |
+| 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717-settlsesssubid) | String | Optional | SubID value associated with SettlSessID(716) |
+| 1639 | [MarginClass](/fix/fields/tags-1600-1799#tag-1639-marginclass) | String | Optional | Used to identify a group of instruments with similar risk profile. |
 | | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Represents the time the inquiry was submitted |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Represents the time the inquiry was submitted |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

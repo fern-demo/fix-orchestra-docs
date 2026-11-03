@@ -3,7 +3,13 @@ title: "LegDeliveryStream"
 subtitle: "The LegDeliveryStream component is a subcomponent of the LegStream used to detail the attributes of a physical delivery stream in a swap."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,35 +17,35 @@ subtitle: "The LegDeliveryStream component is a subcomponent of the LegStream us
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41429 | [LegDeliveryStreamType](/fix/fields/tags-41400-41599#tag-41429) | DeliveryStreamTypeCodeSet | Optional | Specifies the type of delivery stream. |
+| 41429 | [LegDeliveryStreamType](/fix/fields/tags-41400-41599#tag-41429-legdeliverystreamtype) | DeliveryStreamTypeCodeSet | Optional | Specifies the type of delivery stream. |
 | 41460 | [LegDeliveryStreamCommoditySourceGrp](/fix/groups/leg-delivery-stream-commodity-source-grp) | Repeating group | Optional | The LegDeliveryStreamCommoditySourceGrp is a repeating subcomponent of the LegDeliveryStream component used to detail the origins or sources of the commodity. |
-| 41430 | [LegDeliveryStreamPipeline](/fix/fields/tags-41400-41599#tag-41430) | String | Optional | The name of the oil delivery pipeline. |
-| 41431 | [LegDeliveryStreamEntryPoint](/fix/fields/tags-41400-41599#tag-41431) | String | Optional | The point at which the commodity will enter the delivery mechanism or pipeline. |
-| 41432 | [LegDeliveryStreamWithdrawalPoint](/fix/fields/tags-41400-41599#tag-41432) | String | Optional | The point at which the commodity product will be withdrawn prior to delivery. |
-| 41433 | [LegDeliveryStreamDeliveryPoint](/fix/fields/tags-41400-41599#tag-41433) | String | Optional | The point at which the commodity product will be delivered and received. Value specified should follow market convention appropriate for the commodity product.… |
-| 42194 | [LegDeliveryStreamDeliveryPointSource](/fix/fields/tags-42000-42199#tag-42194) | DeliveryStreamDeliveryPointSourceCodeSet | Optional | Identifies the class or source of LegDeliveryStreamDeliveryPoint(41433). |
-| 42195 | [LegDeliveryStreamDeliveryPointDesc](/fix/fields/tags-42000-42199#tag-42195) | String | Optional | Description of the delivery point identified in LegDeliveryStreamDeliveryPoint(41433). |
-| 41434 | [LegDeliveryStreamDeliveryRestriction](/fix/fields/tags-41400-41599#tag-41434) | DeliveryStreamDeliveryRestrictionCodeSet | Optional | Specifies under what conditions the buyer and seller should be excused of their delivery obligations. |
-| 41435 | [LegDeliveryStreamDeliveryContingency](/fix/fields/tags-41400-41599#tag-41435) | String | Optional | Specifies the electricity delivery contingency. See http://www.fpml.org/coding-scheme/electricity-transmission-contingency for values. |
-| 41436 | [LegDeliveryStreamDeliveryContingentPartySide](/fix/fields/tags-41400-41599#tag-41436) | DeliveryStreamElectingPartySideCodeSet | Optional | The trade side value of the party responsible for electricity delivery contingency. |
-| 41437 | [LegDeliveryStreamDeliverAtSourceIndicator](/fix/fields/tags-41400-41599#tag-41437) | Boolean | Optional | When this element is specified and set to 'Y', delivery of the coal product is to be at its source. |
-| 41438 | [LegDeliveryStreamRiskApportionment](/fix/fields/tags-41400-41599#tag-41438) | String | Optional | Specifies how the parties to the trade apportion responsibility for the delivery of the commodity product. See… |
-| 41219 | [LegDeliveryStreamRiskApportionmentSource](/fix/fields/tags-41200-41399#tag-41219) | String | Optional | Specifies the source or legal framework for the risk apportionment. See http://www.fixtradingcommunity.org/codelists#Risk\_Apportionment\_Source for the details… |
+| 41430 | [LegDeliveryStreamPipeline](/fix/fields/tags-41400-41599#tag-41430-legdeliverystreampipeline) | String | Optional | The name of the oil delivery pipeline. |
+| 41431 | [LegDeliveryStreamEntryPoint](/fix/fields/tags-41400-41599#tag-41431-legdeliverystreamentrypoint) | String | Optional | The point at which the commodity will enter the delivery mechanism or pipeline. |
+| 41432 | [LegDeliveryStreamWithdrawalPoint](/fix/fields/tags-41400-41599#tag-41432-legdeliverystreamwithdrawalpoint) | String | Optional | The point at which the commodity product will be withdrawn prior to delivery. |
+| 41433 | [LegDeliveryStreamDeliveryPoint](/fix/fields/tags-41400-41599#tag-41433-legdeliverystreamdeliverypoint) | String | Optional | The point at which the commodity product will be delivered and received. Value specified should follow market convention appropriate for the commodity product.… |
+| 42194 | [LegDeliveryStreamDeliveryPointSource](/fix/fields/tags-42000-42199#tag-42194-legdeliverystreamdeliverypointsource) | DeliveryStreamDeliveryPointSourceCodeSet | Optional | Identifies the class or source of LegDeliveryStreamDeliveryPoint(41433). |
+| 42195 | [LegDeliveryStreamDeliveryPointDesc](/fix/fields/tags-42000-42199#tag-42195-legdeliverystreamdeliverypointdesc) | String | Optional | Description of the delivery point identified in LegDeliveryStreamDeliveryPoint(41433). |
+| 41434 | [LegDeliveryStreamDeliveryRestriction](/fix/fields/tags-41400-41599#tag-41434-legdeliverystreamdeliveryrestriction) | DeliveryStreamDeliveryRestrictionCodeSet | Optional | Specifies under what conditions the buyer and seller should be excused of their delivery obligations. |
+| 41435 | [LegDeliveryStreamDeliveryContingency](/fix/fields/tags-41400-41599#tag-41435-legdeliverystreamdeliverycontingency) | String | Optional | Specifies the electricity delivery contingency. See http://www.fpml.org/coding-scheme/electricity-transmission-contingency for values. |
+| 41436 | [LegDeliveryStreamDeliveryContingentPartySide](/fix/fields/tags-41400-41599#tag-41436-legdeliverystreamdeliverycontingentpartyside) | DeliveryStreamElectingPartySideCodeSet | Optional | The trade side value of the party responsible for electricity delivery contingency. |
+| 41437 | [LegDeliveryStreamDeliverAtSourceIndicator](/fix/fields/tags-41400-41599#tag-41437-legdeliverystreamdeliveratsourceindicator) | Boolean | Optional | When this element is specified and set to 'Y', delivery of the coal product is to be at its source. |
+| 41438 | [LegDeliveryStreamRiskApportionment](/fix/fields/tags-41400-41599#tag-41438-legdeliverystreamriskapportionment) | String | Optional | Specifies how the parties to the trade apportion responsibility for the delivery of the commodity product. See… |
+| 41219 | [LegDeliveryStreamRiskApportionmentSource](/fix/fields/tags-41200-41399#tag-41219-legdeliverystreamriskapportionmentsource) | String | Optional | Specifies the source or legal framework for the risk apportionment. See http://www.fixtradingcommunity.org/codelists#Risk\_Apportionment\_Source for the details… |
 | 41456 | [LegDeliveryStreamCycleGrp](/fix/groups/leg-delivery-stream-cycle-grp) | Repeating group | Optional | The LegDeliveryStreamCycleGrp is a repeating subcomponent of the LegDeliveryStream component used to detail delivery cycles during which the oil product will be… |
-| 41439 | [LegDeliveryStreamTitleTransferLocation](/fix/fields/tags-41400-41599#tag-41439) | String | Optional | Specifies the title transfer location. |
-| 41440 | [LegDeliveryStreamTitleTransferCondition](/fix/fields/tags-41400-41599#tag-41440) | DeliveryStreamTitleTransferConditionCodeSet | Optional | Specifies the condition of title transfer. |
-| 41441 | [LegDeliveryStreamImporterOfRecord](/fix/fields/tags-41400-41599#tag-41441) | String | Optional | A party, not necessarily of the trade, who is the Importer of Record for the purposes of paying customs duties and applicable taxes or costs related to… |
-| 41442 | [LegDeliveryStreamNegativeTolerance](/fix/fields/tags-41400-41599#tag-41442) | float | Optional | Specifies the negative tolerance value. The value may be an absolute quantity or a percentage, as specified in LegDeliveryStreamToleranceType(41445). Percentage… |
-| 41443 | [LegDeliveryStreamPositiveTolerance](/fix/fields/tags-41400-41599#tag-41443) | float | Optional | Specifies the positive tolerance value. The value may be an absolute quantity or a percentage, as specified in LegDeliveryStreamToleranceType(41445). Value may… |
-| 41444 | [LegDeliveryStreamToleranceUnitOfMeasure](/fix/fields/tags-41400-41599#tag-41444) | UnitOfMeasureCodeSet | Optional | Specifies the tolerance value's unit of measure (UOM). |
-| 41445 | [LegDeliveryStreamToleranceType](/fix/fields/tags-41400-41599#tag-41445) | DeliveryScheduleToleranceTypeCodeSet | Optional | Specifies the tolerance value type. |
-| 41446 | [LegDeliveryStreamToleranceOptionSide](/fix/fields/tags-41400-41599#tag-41446) | DeliveryStreamToleranceOptionSideCodeSet | Optional | Indicates whether the tolerance is at the seller's or buyer's option. |
-| 41447 | [LegDeliveryStreamTotalPositiveTolerance](/fix/fields/tags-41400-41599#tag-41447) | Percentage | Optional | The positive percent tolerance which applies to the total quantity delivered over all shipment periods. Percentage value is to be expressed relative to "1.0"… |
-| 41448 | [LegDeliveryStreamTotalNegativeTolerance](/fix/fields/tags-41400-41599#tag-41448) | Percentage | Optional | The negative percent tolerance which applies to the total quantity delivered over all shipment periods. Percentage value is to be expressed relative to "1.0"… |
-| 41449 | [LegDeliveryStreamNotionalConversionFactor](/fix/fields/tags-41400-41599#tag-41449) | float | Optional | If the notional quantity is specified in a unit that does not match the unit in which the commodity reference price is quoted, the scaling or conversion factor… |
-| 41450 | [LegDeliveryStreamTransportEquipment](/fix/fields/tags-41400-41599#tag-41450) | String | Optional | The transportation equipment with which the commodity product will be delivered and received. |
-| 41451 | [LegDeliveryStreamElectingPartySide](/fix/fields/tags-41400-41599#tag-41451) | DeliveryStreamElectingPartySideCodeSet | Optional | A reference to the party able to choose whether the gas is delivered for a particular period e.g. a swing or interruptible contract. |
-| 43095 | [LegDeliveryStreamRouteOrCharter](/fix/fields/tags-43000-43199#tag-43095) | String | Optional | Specific delivery route or time charter average. Applicable to commodity freight swaps. |
+| 41439 | [LegDeliveryStreamTitleTransferLocation](/fix/fields/tags-41400-41599#tag-41439-legdeliverystreamtitletransferlocation) | String | Optional | Specifies the title transfer location. |
+| 41440 | [LegDeliveryStreamTitleTransferCondition](/fix/fields/tags-41400-41599#tag-41440-legdeliverystreamtitletransfercondition) | DeliveryStreamTitleTransferConditionCodeSet | Optional | Specifies the condition of title transfer. |
+| 41441 | [LegDeliveryStreamImporterOfRecord](/fix/fields/tags-41400-41599#tag-41441-legdeliverystreamimporterofrecord) | String | Optional | A party, not necessarily of the trade, who is the Importer of Record for the purposes of paying customs duties and applicable taxes or costs related to… |
+| 41442 | [LegDeliveryStreamNegativeTolerance](/fix/fields/tags-41400-41599#tag-41442-legdeliverystreamnegativetolerance) | float | Optional | Specifies the negative tolerance value. The value may be an absolute quantity or a percentage, as specified in LegDeliveryStreamToleranceType(41445). Percentage… |
+| 41443 | [LegDeliveryStreamPositiveTolerance](/fix/fields/tags-41400-41599#tag-41443-legdeliverystreampositivetolerance) | float | Optional | Specifies the positive tolerance value. The value may be an absolute quantity or a percentage, as specified in LegDeliveryStreamToleranceType(41445). Value may… |
+| 41444 | [LegDeliveryStreamToleranceUnitOfMeasure](/fix/fields/tags-41400-41599#tag-41444-legdeliverystreamtoleranceunitofmeasure) | UnitOfMeasureCodeSet | Optional | Specifies the tolerance value's unit of measure (UOM). |
+| 41445 | [LegDeliveryStreamToleranceType](/fix/fields/tags-41400-41599#tag-41445-legdeliverystreamtolerancetype) | DeliveryScheduleToleranceTypeCodeSet | Optional | Specifies the tolerance value type. |
+| 41446 | [LegDeliveryStreamToleranceOptionSide](/fix/fields/tags-41400-41599#tag-41446-legdeliverystreamtoleranceoptionside) | DeliveryStreamToleranceOptionSideCodeSet | Optional | Indicates whether the tolerance is at the seller's or buyer's option. |
+| 41447 | [LegDeliveryStreamTotalPositiveTolerance](/fix/fields/tags-41400-41599#tag-41447-legdeliverystreamtotalpositivetolerance) | Percentage | Optional | The positive percent tolerance which applies to the total quantity delivered over all shipment periods. Percentage value is to be expressed relative to "1.0"… |
+| 41448 | [LegDeliveryStreamTotalNegativeTolerance](/fix/fields/tags-41400-41599#tag-41448-legdeliverystreamtotalnegativetolerance) | Percentage | Optional | The negative percent tolerance which applies to the total quantity delivered over all shipment periods. Percentage value is to be expressed relative to "1.0"… |
+| 41449 | [LegDeliveryStreamNotionalConversionFactor](/fix/fields/tags-41400-41599#tag-41449-legdeliverystreamnotionalconversionfactor) | float | Optional | If the notional quantity is specified in a unit that does not match the unit in which the commodity reference price is quoted, the scaling or conversion factor… |
+| 41450 | [LegDeliveryStreamTransportEquipment](/fix/fields/tags-41400-41599#tag-41450-legdeliverystreamtransportequipment) | String | Optional | The transportation equipment with which the commodity product will be delivered and received. |
+| 41451 | [LegDeliveryStreamElectingPartySide](/fix/fields/tags-41400-41599#tag-41451-legdeliverystreamelectingpartyside) | DeliveryStreamElectingPartySideCodeSet | Optional | A reference to the party able to choose whether the gas is delivered for a particular period e.g. a swing or interruptible contract. |
+| 43095 | [LegDeliveryStreamRouteOrCharter](/fix/fields/tags-43000-43199#tag-43095-legdeliverystreamrouteorcharter) | String | Optional | Specific delivery route or time charter average. Applicable to commodity freight swaps. |
 
 </StickyTable>
 

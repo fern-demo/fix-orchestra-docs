@@ -3,7 +3,13 @@ title: "DiscretionInstructions"
 subtitle: "The presence of DiscretionInstructions component block on an order indicates that the trader wishes to display one price but will accept trades at another price."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.4.4
+</llms-only>
 
 ## Members
 
@@ -11,13 +17,13 @@ subtitle: "The presence of DiscretionInstructions component block on an order in
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 388 | [DiscretionInst](/fix/fields/tags-200-399#tag-388) | DiscretionInstCodeSet | Optional | What the discretionary price is related to (e.g. primary price, display price etc) |
-| 389 | [DiscretionOffsetValue](/fix/fields/tags-200-399#tag-389) | float | Optional | Amount (signed) added to the "related to" price specified via DiscretionInst, in the context of DiscretionOffsetType |
-| 841 | [DiscretionMoveType](/fix/fields/tags-800-999#tag-841) | DiscretionMoveTypeCodeSet | Optional | Describes whether discretion price is static/fixed or floats |
-| 842 | [DiscretionOffsetType](/fix/fields/tags-800-999#tag-842) | DiscretionOffsetTypeCodeSet | Optional | Type of Discretion Offset (e.g. price offset, tick offset etc) |
-| 843 | [DiscretionLimitType](/fix/fields/tags-800-999#tag-843) | DiscretionLimitTypeCodeSet | Optional | Specifies the nature of the resulting discretion price (e.g. or better limit, strict limit etc) |
-| 844 | [DiscretionRoundDirection](/fix/fields/tags-800-999#tag-844) | DiscretionRoundDirectionCodeSet | Optional | If the calculated discretion price is not a valid tick price, specifies how to round the price (e.g. to be more or less aggressive) |
-| 846 | [DiscretionScope](/fix/fields/tags-800-999#tag-846) | DiscretionScopeCodeSet | Optional | The scope of "related to" price of the discretion (e.g. local, global etc) |
+| 388 | [DiscretionInst](/fix/fields/tags-200-399#tag-388-discretioninst) | DiscretionInstCodeSet | Optional | What the discretionary price is related to (e.g. primary price, display price etc) |
+| 389 | [DiscretionOffsetValue](/fix/fields/tags-200-399#tag-389-discretionoffsetvalue) | float | Optional | Amount (signed) added to the "related to" price specified via DiscretionInst, in the context of DiscretionOffsetType |
+| 841 | [DiscretionMoveType](/fix/fields/tags-800-999#tag-841-discretionmovetype) | DiscretionMoveTypeCodeSet | Optional | Describes whether discretion price is static/fixed or floats |
+| 842 | [DiscretionOffsetType](/fix/fields/tags-800-999#tag-842-discretionoffsettype) | DiscretionOffsetTypeCodeSet | Optional | Type of Discretion Offset (e.g. price offset, tick offset etc) |
+| 843 | [DiscretionLimitType](/fix/fields/tags-800-999#tag-843-discretionlimittype) | DiscretionLimitTypeCodeSet | Optional | Specifies the nature of the resulting discretion price (e.g. or better limit, strict limit etc) |
+| 844 | [DiscretionRoundDirection](/fix/fields/tags-800-999#tag-844-discretionrounddirection) | DiscretionRoundDirectionCodeSet | Optional | If the calculated discretion price is not a valid tick price, specifies how to round the price (e.g. to be more or less aggressive) |
+| 846 | [DiscretionScope](/fix/fields/tags-800-999#tag-846-discretionscope) | DiscretionScopeCodeSet | Optional | The scope of "related to" price of the discretion (e.g. local, global etc) |
 
 </StickyTable>
 

@@ -3,7 +3,13 @@ title: "OrderMassActionRequest"
 subtitle: "The Order Mass Action Request message can be used to request the suspension or release of a group of orders that match the criteria specified within the request. This is equivalent to individual Order Cancel Replace Requests for each order…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType CA</Badge> <Badge intent="note" minimal>Order Mass Handling</Badge> <Badge intent="tip" minimal>Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType CA · Order Mass Handling · Trade · Added FIX.5.0
+</llms-only>
 
 ## Message structure
 
@@ -12,30 +18,30 @@ subtitle: "The Order Mass Action Request message can be used to request the susp
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | **Required** | Unique ID of Order Mass Action Request as assigned by the institution. |
-| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
-| 1373 | [MassActionType](/fix/fields/tags-1200-1399#tag-1373) | MassActionTypeCodeSet | **Required** | Specifies the type of action requested |
-| 1374 | [MassActionScope](/fix/fields/tags-1200-1399#tag-1374) | MassActionScopeCodeSet | **Required** | Specifies the scope of the action |
-| 2675 | [MassActionReason](/fix/fields/tags-2600-2799#tag-2675) | MassActionReasonCodeSet | Optional | Specifies the reason for the action requested. |
-| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | MarketID for which orders are to be affected |
-| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | MarketSegmentID for which orders are to be affected. Mutually exclusive with TargetMarketSegmentGrp component. |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11-clordid) | String | **Required** | Unique ID of Order Mass Action Request as assigned by the institution. |
+| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526-secondaryclordid) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
+| 1373 | [MassActionType](/fix/fields/tags-1200-1399#tag-1373-massactiontype) | MassActionTypeCodeSet | **Required** | Specifies the type of action requested |
+| 1374 | [MassActionScope](/fix/fields/tags-1200-1399#tag-1374-massactionscope) | MassActionScopeCodeSet | **Required** | Specifies the scope of the action |
+| 2675 | [MassActionReason](/fix/fields/tags-2600-2799#tag-2675-massactionreason) | MassActionReasonCodeSet | Optional | Specifies the reason for the action requested. |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301-marketid) | Exchange | Optional | MarketID for which orders are to be affected |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300-marketsegmentid) | String | Optional | MarketSegmentID for which orders are to be affected. Mutually exclusive with TargetMarketSegmentGrp component. |
 | 1789 | [TargetMarketSegmentGrp](/fix/groups/target-market-segment-grp) | Repeating group | Optional | Convey a list of market segments upon which an action is to be taken. |
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Trading Session in which orders are to be affected |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336-tradingsessionid) | TradingSessionIDCodeSet | Optional | Trading Session in which orders are to be affected |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625-tradingsessionsubid) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
 | 1461 | [TargetParties](/fix/groups/target-parties) | Repeating group | Optional |  |
 | | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | | [UnderlyingInstrument](/fix/components/underlying-instrument) | Component | Optional | The UnderlyingInstrument component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In… |
-| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | Optional | Can be used to filter for orders of a single instrument. |
-| 44 | [Price](/fix/fields/tags-0-199#tag-44) | Price | Optional | Can be used to filter for orders of a single instrument. |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | **Required** | Timestamp when the business transaction represented by the message occurred. |
-| 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
-| 2404 | [ComplianceText](/fix/fields/tags-2400-2599#tag-2404) | String | Optional | Free text for compliance information required for regulatory reporting. |
-| 2351 | [EncodedComplianceTextLen](/fix/fields/tags-2200-2399#tag-2351) | Length | Optional | Must be set if EncodedComplianceText(2352) field is specified and must immediately precede it. |
-| 2352 | [EncodedComplianceText](/fix/fields/tags-2200-2399#tag-2352) | data | Optional | Encoded (non-ASCII characters) representation of the ComplianceText(2404) field in the encoded format specified via the MessageEncoding(347) field. |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54-side) | SideCodeSet | Optional | Can be used to filter for orders of a single instrument. |
+| 44 | [Price](/fix/fields/tags-0-199#tag-44-price) | Price | Optional | Can be used to filter for orders of a single instrument. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | **Required** | Timestamp when the business transaction represented by the message occurred. |
+| 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376-complianceid) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
+| 2404 | [ComplianceText](/fix/fields/tags-2400-2599#tag-2404-compliancetext) | String | Optional | Free text for compliance information required for regulatory reporting. |
+| 2351 | [EncodedComplianceTextLen](/fix/fields/tags-2200-2399#tag-2351-encodedcompliancetextlen) | Length | Optional | Must be set if EncodedComplianceText(2352) field is specified and must immediately precede it. |
+| 2352 | [EncodedComplianceText](/fix/fields/tags-2200-2399#tag-2352-encodedcompliancetext) | data | Optional | Encoded (non-ASCII characters) representation of the ComplianceText(2404) field in the encoded format specified via the MessageEncoding(347) field. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

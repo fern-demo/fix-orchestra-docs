@@ -3,9 +3,15 @@ title: "TrdInstrmtLegExecGrp"
 subtitle: "The TrdInstrmtLegExecGrp component comprises individual executions for legs of the trade side of a trade match report for a specific instrument."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1892</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegExecs (1892)](/fix/fields/tags-1800-1999#tag-1892).
+<llms-only>
+Repeating group · NumInGroup 1892 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegExecs (1892)](/fix/fields/tags-1800-1999#tag-1892-nolegexecs).
 
 ## Members
 
@@ -13,21 +19,21 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 654 | [LegRefID](/fix/fields/tags-600-799#tag-654) | String | Optional | Required if NoLegExecs(1892) &gt; 0. |
-| 1893 | [LegExecID](/fix/fields/tags-1800-1999#tag-1893) | String | Optional | The ExecID(17) value corresponding to a trade leg. |
-| 1901 | [LegExecRefID](/fix/fields/tags-1800-1999#tag-1901) | String | Optional | Used to reference the value from LegExecID(1893). |
-| 1894 | [LegTradeID](/fix/fields/tags-1800-1999#tag-1894) | String | Optional | The TradeID(1003) value corresponding to a trade leg. |
-| 1895 | [LegTradeReportID](/fix/fields/tags-1800-1999#tag-1895) | String | Optional | The TradeReportID(571) value corresponding to a trade leg. |
-| 685 | [LegOrderQty](/fix/fields/tags-600-799#tag-685) | Qty | Optional | Quantity ordered of this leg. See OrderQty (38) for description and valid values |
-| 564 | [LegPositionEffect](/fix/fields/tags-400-599#tag-564) | PositionEffectCodeSet | Optional | Can be used to specify the position effect for the leg if it is different from the position effect of the overall multileg security. |
-| 565 | [LegCoveredOrUncovered](/fix/fields/tags-400-599#tag-565) | CoveredOrUncoveredCodeSet | Optional | Can be used to specify whether the option is a cover, if it is different from the overall multileg security. |
+| 654 | [LegRefID](/fix/fields/tags-600-799#tag-654-legrefid) | String | Optional | Required if NoLegExecs(1892) &gt; 0. |
+| 1893 | [LegExecID](/fix/fields/tags-1800-1999#tag-1893-legexecid) | String | Optional | The ExecID(17) value corresponding to a trade leg. |
+| 1901 | [LegExecRefID](/fix/fields/tags-1800-1999#tag-1901-legexecrefid) | String | Optional | Used to reference the value from LegExecID(1893). |
+| 1894 | [LegTradeID](/fix/fields/tags-1800-1999#tag-1894-legtradeid) | String | Optional | The TradeID(1003) value corresponding to a trade leg. |
+| 1895 | [LegTradeReportID](/fix/fields/tags-1800-1999#tag-1895-legtradereportid) | String | Optional | The TradeReportID(571) value corresponding to a trade leg. |
+| 685 | [LegOrderQty](/fix/fields/tags-600-799#tag-685-legorderqty) | Qty | Optional | Quantity ordered of this leg. See OrderQty (38) for description and valid values |
+| 564 | [LegPositionEffect](/fix/fields/tags-400-599#tag-564-legpositioneffect) | PositionEffectCodeSet | Optional | Can be used to specify the position effect for the leg if it is different from the position effect of the overall multileg security. |
+| 565 | [LegCoveredOrUncovered](/fix/fields/tags-400-599#tag-565-legcoveredoruncovered) | CoveredOrUncoveredCodeSet | Optional | Can be used to specify whether the option is a cover, if it is different from the overall multileg security. |
 | 948 | [NestedParties3](/fix/groups/nested-parties3) | Repeating group | Optional | The NestedParties3 component block is identical to the Parties Block. It is used in other component blocks and repeating groups when nesting will take place… |
-| 637 | [LegLastPx](/fix/fields/tags-600-799#tag-637) | Price | Optional | Execution price assigned to a leg of a multileg instrument. See LastPx (31) field for description and values |
-| 686 | [LegPriceType](/fix/fields/tags-600-799#tag-686) | PriceTypeCodeSet | Optional | The price type of the LegBidPx (681) and/or LegOfferPx (684). See PriceType (423) for description and valid values |
-| 675 | [LegSettlCurrency](/fix/fields/tags-600-799#tag-675) | Currency | Optional | Identifies settlement currency for the Leg. See SettlCurrency (20) for description and valid values |
-| 1689 | [LegShortSaleExemptionReason](/fix/fields/tags-1600-1799#tag-1689) | ShortSaleExemptionReasonCodeSet | Optional | Indicates the reason a short sale is exempted from applicable regulation (e.g. Reg SHO addendum (b)(1) in the U.S.) |
-| 1418 | [LegLastQty](/fix/fields/tags-1400-1599#tag-1418) | Qty | Optional | Fill quantity for the leg instrument |
-| 1591 | [LegQtyType](/fix/fields/tags-1400-1599#tag-1591) | QtyTypeCodeSet | Optional | Type of quantity specified in LegQty field. LegContractMultiplier (614) is required when LegQtyType = 1 (Contracts). LegUnitOfMeasure (tag 999) and LegTimeUnit… |
+| 637 | [LegLastPx](/fix/fields/tags-600-799#tag-637-leglastpx) | Price | Optional | Execution price assigned to a leg of a multileg instrument. See LastPx (31) field for description and values |
+| 686 | [LegPriceType](/fix/fields/tags-600-799#tag-686-legpricetype) | PriceTypeCodeSet | Optional | The price type of the LegBidPx (681) and/or LegOfferPx (684). See PriceType (423) for description and valid values |
+| 675 | [LegSettlCurrency](/fix/fields/tags-600-799#tag-675-legsettlcurrency) | Currency | Optional | Identifies settlement currency for the Leg. See SettlCurrency (20) for description and valid values |
+| 1689 | [LegShortSaleExemptionReason](/fix/fields/tags-1600-1799#tag-1689-legshortsaleexemptionreason) | ShortSaleExemptionReasonCodeSet | Optional | Indicates the reason a short sale is exempted from applicable regulation (e.g. Reg SHO addendum (b)(1) in the U.S.) |
+| 1418 | [LegLastQty](/fix/fields/tags-1400-1599#tag-1418-leglastqty) | Qty | Optional | Fill quantity for the leg instrument |
+| 1591 | [LegQtyType](/fix/fields/tags-1400-1599#tag-1591-legqtytype) | QtyTypeCodeSet | Optional | Type of quantity specified in LegQty field. LegContractMultiplier (614) is required when LegQtyType = 1 (Contracts). LegUnitOfMeasure (tag 999) and LegTimeUnit… |
 
 </StickyTable>
 

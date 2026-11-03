@@ -3,7 +3,13 @@ title: "PartyActionRequest"
 subtitle: "The PartyActionRequest message is used suspend or halt the specified party from further trading activities at the Respondent. The Respondent must respond with a PartyActionReport(35=DI) message."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType DH</Badge> <Badge intent="note" minimal>Parties Action</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType DH · Parties Action · Pre Trade · Added FIX.5.0SP2
+</llms-only>
 
 ## Message structure
 
@@ -12,19 +18,19 @@ subtitle: "The PartyActionRequest message is used suspend or halt the specified 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 2328 | [PartyActionRequestID](/fix/fields/tags-2200-2399#tag-2328) | String | **Required** | The unique identifier of the PartyActionRequest(35=DH) message. |
-| 2329 | [PartyActionType](/fix/fields/tags-2200-2399#tag-2329) | PartyActionTypeCodeSet | **Required** | Specifies the type of action to take or was taken for a given party. |
-| 2330 | [ApplTestMessageIndicator](/fix/fields/tags-2200-2399#tag-2330) | Boolean | Optional | Used to indicate whether the message being sent is to test the receiving application's availability to process the message. When set to "Y" the message is a… |
-| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Use to reduce the scope to a market |
-| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Use to reduce the scope to a market segment |
+| 2328 | [PartyActionRequestID](/fix/fields/tags-2200-2399#tag-2328-partyactionrequestid) | String | **Required** | The unique identifier of the PartyActionRequest(35=DH) message. |
+| 2329 | [PartyActionType](/fix/fields/tags-2200-2399#tag-2329-partyactiontype) | PartyActionTypeCodeSet | **Required** | Specifies the type of action to take or was taken for a given party. |
+| 2330 | [ApplTestMessageIndicator](/fix/fields/tags-2200-2399#tag-2330-appltestmessageindicator) | Boolean | Optional | Used to indicate whether the message being sent is to test the receiving application's availability to process the message. When set to "Y" the message is a… |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301-marketid) | Exchange | Optional | Use to reduce the scope to a market |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300-marketsegmentid) | String | Optional | Use to reduce the scope to a market segment |
 | | [InstrumentScope](/fix/components/instrument-scope) | Component | Optional | Used to specify the instrument |
 | 1657 | [RequestingPartyGrp](/fix/groups/requesting-party-grp) | Repeating group | Optional | Identifies the party making the request. |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | **Required** | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
 | 1562 | [RelatedPartyDetailGrp](/fix/groups/related-party-detail-grp) | Repeating group | Optional | Party details for parties related to the Party specified in the PartyDetailGrp. |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

@@ -3,9 +3,15 @@ title: "UnderlyingAdditionalTermBondRefGrp"
 subtitle: "The UnderlyingAdditionalTermBondRefGrp is a repeating group subcomponent of the UnderlyingAdditionalTermGrp component used to identify an underlying reference bond for a swap."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41340</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingAdditionalTermBondRefs (41340)](/fix/fields/tags-41200-41399#tag-41340).
+<llms-only>
+Repeating group · NumInGroup 41340 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingAdditionalTermBondRefs (41340)](/fix/fields/tags-41200-41399#tag-41340-nounderlyingadditionaltermbondrefs).
 
 ## Members
 
@@ -13,24 +19,24 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41341 | [UnderlyingAdditionalTermBondSecurityID](/fix/fields/tags-41200-41399#tag-41341) | String | Optional | Required if NoUnderlyingAdditionalTermBondRefs(41340) &gt; 0. |
-| 41701 | [UnderlyingAdditionalTermBondSecurityIDSource](/fix/fields/tags-41600-41799#tag-41701) | SecurityIDSourceCodeSet | Optional | Conditionally required when UnderlyingAdditionalTermBondSecurityID(41341) is specified. |
-| 41709 | [UnderlyingAdditionalTermBondDesc](/fix/fields/tags-41600-41799#tag-41709) | String | Optional | Description of the bond. |
-| 41710 | [EncodedUnderlyingAdditionalTermBondDescLen](/fix/fields/tags-41600-41799#tag-41710) | Length | Optional | Must be set if EncodedUnderlyingAdditionalTermBondDesc(41709) field is specified and must immediately precede it. |
-| 41711 | [EncodedUnderlyingAdditionalTermBondDesc](/fix/fields/tags-41600-41799#tag-41711) | data | Optional | Encoded (non-ASCII characters) representation of the UnderlyingAdditionalTermBondDesc(41709) field in the encoded format specified via the MessageEncoding(347)… |
-| 41712 | [UnderlyingAdditionalTermBondCurrency](/fix/fields/tags-41600-41799#tag-41712) | Currency | Optional | Specifies the currency the bond value is denominated in. Uses ISO 4217 currency codes. |
-| 42017 | [UnderlyingAdditionalTermBondIssuer](/fix/fields/tags-42000-42199#tag-42017) | String | Optional | Issuer of the bond. |
-| 42025 | [EncodedUnderlyingAdditionalTermBondIssuerLen](/fix/fields/tags-42000-42199#tag-42025) | Length | Optional | Must be set if EncodedUnderlyingAdditionalTermBondIssuer(42017) field is specified and must immediately precede it. |
-| 42026 | [EncodedUnderlyingAdditionalTermBondIssuer](/fix/fields/tags-42000-42199#tag-42026) | data | Optional | Encoded (non-ASCII characters) representation of the UnderlyingAdditionalTermBondIssuer(42017) field in the encoded format specified via the… |
-| 42027 | [UnderlyingAdditionalTermBondSeniority](/fix/fields/tags-42000-42199#tag-42027) | SeniorityCodeSet | Optional | Specifies the bond's payment priority in the event of a default. |
-| 42028 | [UnderlyingAdditionalTermBondCouponType](/fix/fields/tags-42000-42199#tag-42028) | CouponTypeCodeSet | Optional | Coupon type of the bond. |
-| 42029 | [UnderlyingAdditionalTermBondCouponRate](/fix/fields/tags-42000-42199#tag-42029) | Percentage | Optional | Coupon rate of the bond. See also CouponRate(223). |
-| 42030 | [UnderlyingAdditionalTermBondMaturityDate](/fix/fields/tags-42000-42199#tag-42030) | LocalMktDate | Optional | The maturity date of the bond. |
-| 42031 | [UnderlyingAdditionalTermBondParValue](/fix/fields/tags-42000-42199#tag-42031) | Amt | Optional | The par value of the bond. |
-| 42032 | [UnderlyingAdditionalTermBondCurrentTotalIssuedAmount](/fix/fields/tags-42000-42199#tag-42032) | Amt | Optional | Total issued amount of the bond. |
-| 42033 | [UnderlyingAdditionalTermBondCouponFrequencyPeriod](/fix/fields/tags-42000-42199#tag-42033) | int | Optional | Conditionally required when UnderlyingAdditionalTermBondCouponFrequencyUnit(42034) is specified. |
-| 42034 | [UnderlyingAdditionalTermBondCouponFrequencyUnit](/fix/fields/tags-42000-42199#tag-42034) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when UnderlyingAdditionalTermBondCouponFrequencyPeriod(42033) is specified. |
-| 42035 | [UnderlyingAdditionalTermBondDayCount](/fix/fields/tags-42000-42199#tag-42035) | CouponDayCountCodeSet | Optional | The day count convention used in interest calculations for a bond or an interest bearing security. |
+| 41341 | [UnderlyingAdditionalTermBondSecurityID](/fix/fields/tags-41200-41399#tag-41341-underlyingadditionaltermbondsecurityid) | String | Optional | Required if NoUnderlyingAdditionalTermBondRefs(41340) &gt; 0. |
+| 41701 | [UnderlyingAdditionalTermBondSecurityIDSource](/fix/fields/tags-41600-41799#tag-41701-underlyingadditionaltermbondsecurityidsource) | SecurityIDSourceCodeSet | Optional | Conditionally required when UnderlyingAdditionalTermBondSecurityID(41341) is specified. |
+| 41709 | [UnderlyingAdditionalTermBondDesc](/fix/fields/tags-41600-41799#tag-41709-underlyingadditionaltermbonddesc) | String | Optional | Description of the bond. |
+| 41710 | [EncodedUnderlyingAdditionalTermBondDescLen](/fix/fields/tags-41600-41799#tag-41710-encodedunderlyingadditionaltermbonddesclen) | Length | Optional | Must be set if EncodedUnderlyingAdditionalTermBondDesc(41709) field is specified and must immediately precede it. |
+| 41711 | [EncodedUnderlyingAdditionalTermBondDesc](/fix/fields/tags-41600-41799#tag-41711-encodedunderlyingadditionaltermbonddesc) | data | Optional | Encoded (non-ASCII characters) representation of the UnderlyingAdditionalTermBondDesc(41709) field in the encoded format specified via the MessageEncoding(347)… |
+| 41712 | [UnderlyingAdditionalTermBondCurrency](/fix/fields/tags-41600-41799#tag-41712-underlyingadditionaltermbondcurrency) | Currency | Optional | Specifies the currency the bond value is denominated in. Uses ISO 4217 currency codes. |
+| 42017 | [UnderlyingAdditionalTermBondIssuer](/fix/fields/tags-42000-42199#tag-42017-underlyingadditionaltermbondissuer) | String | Optional | Issuer of the bond. |
+| 42025 | [EncodedUnderlyingAdditionalTermBondIssuerLen](/fix/fields/tags-42000-42199#tag-42025-encodedunderlyingadditionaltermbondissuerlen) | Length | Optional | Must be set if EncodedUnderlyingAdditionalTermBondIssuer(42017) field is specified and must immediately precede it. |
+| 42026 | [EncodedUnderlyingAdditionalTermBondIssuer](/fix/fields/tags-42000-42199#tag-42026-encodedunderlyingadditionaltermbondissuer) | data | Optional | Encoded (non-ASCII characters) representation of the UnderlyingAdditionalTermBondIssuer(42017) field in the encoded format specified via the… |
+| 42027 | [UnderlyingAdditionalTermBondSeniority](/fix/fields/tags-42000-42199#tag-42027-underlyingadditionaltermbondseniority) | SeniorityCodeSet | Optional | Specifies the bond's payment priority in the event of a default. |
+| 42028 | [UnderlyingAdditionalTermBondCouponType](/fix/fields/tags-42000-42199#tag-42028-underlyingadditionaltermbondcoupontype) | CouponTypeCodeSet | Optional | Coupon type of the bond. |
+| 42029 | [UnderlyingAdditionalTermBondCouponRate](/fix/fields/tags-42000-42199#tag-42029-underlyingadditionaltermbondcouponrate) | Percentage | Optional | Coupon rate of the bond. See also CouponRate(223). |
+| 42030 | [UnderlyingAdditionalTermBondMaturityDate](/fix/fields/tags-42000-42199#tag-42030-underlyingadditionaltermbondmaturitydate) | LocalMktDate | Optional | The maturity date of the bond. |
+| 42031 | [UnderlyingAdditionalTermBondParValue](/fix/fields/tags-42000-42199#tag-42031-underlyingadditionaltermbondparvalue) | Amt | Optional | The par value of the bond. |
+| 42032 | [UnderlyingAdditionalTermBondCurrentTotalIssuedAmount](/fix/fields/tags-42000-42199#tag-42032-underlyingadditionaltermbondcurrenttotalissuedamount) | Amt | Optional | Total issued amount of the bond. |
+| 42033 | [UnderlyingAdditionalTermBondCouponFrequencyPeriod](/fix/fields/tags-42000-42199#tag-42033-underlyingadditionaltermbondcouponfrequencyperiod) | int | Optional | Conditionally required when UnderlyingAdditionalTermBondCouponFrequencyUnit(42034) is specified. |
+| 42034 | [UnderlyingAdditionalTermBondCouponFrequencyUnit](/fix/fields/tags-42000-42199#tag-42034-underlyingadditionaltermbondcouponfrequencyunit) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when UnderlyingAdditionalTermBondCouponFrequencyPeriod(42033) is specified. |
+| 42035 | [UnderlyingAdditionalTermBondDayCount](/fix/fields/tags-42000-42199#tag-42035-underlyingadditionaltermbonddaycount) | CouponDayCountCodeSet | Optional | The day count convention used in interest calculations for a bond or an interest bearing security. |
 
 </StickyTable>
 

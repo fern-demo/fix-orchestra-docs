@@ -3,9 +3,15 @@ title: "UnderlyingReturnRateInformationSourceGrp"
 subtitle: "UnderlyingReturnRateInformationSourceGrp is a repeating subcomponent within the UnderlyingReturnRateGrp component. It is used to specify the information sources for equity prices and FX rates for an equity return swap payment stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 43060</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingReturnRateInformationSources (43060)](/fix/fields/tags-43000-43199#tag-43060).
+<llms-only>
+Repeating group · NumInGroup 43060 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingReturnRateInformationSources (43060)](/fix/fields/tags-43000-43199#tag-43060-nounderlyingreturnrateinformationsources).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 43061 | [UnderlyingReturnRateInformationSource](/fix/fields/tags-43000-43199#tag-43061) | RateSourceCodeSet | Optional | Required if NoUnderlyingReturnRateInformationSources(43060) &gt; 0. |
-| 43062 | [UnderlyingReturnRateReferencePage](/fix/fields/tags-43000-43199#tag-43062) | String | Optional | Identifies the reference "page" from the rate source. For FX, the reference page to the spot rate to be used for the reference FX spot rate. When… |
-| 43063 | [UnderlyingReturnRateReferencePageHeading](/fix/fields/tags-43000-43199#tag-43063) | String | Optional | Identifies the page heading from the rate source. |
+| 43061 | [UnderlyingReturnRateInformationSource](/fix/fields/tags-43000-43199#tag-43061-underlyingreturnrateinformationsource) | RateSourceCodeSet | Optional | Required if NoUnderlyingReturnRateInformationSources(43060) &gt; 0. |
+| 43062 | [UnderlyingReturnRateReferencePage](/fix/fields/tags-43000-43199#tag-43062-underlyingreturnratereferencepage) | String | Optional | Identifies the reference "page" from the rate source. For FX, the reference page to the spot rate to be used for the reference FX spot rate. When… |
+| 43063 | [UnderlyingReturnRateReferencePageHeading](/fix/fields/tags-43000-43199#tag-43063-underlyingreturnratereferencepageheading) | String | Optional | Identifies the page heading from the rate source. |
 
 </StickyTable>
 

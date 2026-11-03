@@ -3,9 +3,15 @@ title: "PriceQualifierGrp"
 subtitle: "The PriceQualifierGrp component clarifies the composition of the price when standard market practice for the security calls for a price that is atypical when traded in other markets, or when a price can be expressed in more than one way."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2709</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoPriceQualifiers (2709)](/fix/fields/tags-2600-2799#tag-2709).
+<llms-only>
+Repeating group · NumInGroup 2709 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPriceQualifiers (2709)](/fix/fields/tags-2600-2799#tag-2709-nopricequalifiers).
 
 ## Members
 
@@ -13,7 +19,7 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2710 | [PriceQualifier](/fix/fields/tags-2600-2799#tag-2710) | PriceQualifierCodeSet | Optional | Required if NoPriceQualifiers(2709) &gt; 0. |
+| 2710 | [PriceQualifier](/fix/fields/tags-2600-2799#tag-2710-pricequalifier) | PriceQualifierCodeSet | Optional | Required if NoPriceQualifiers(2709) &gt; 0. |
 
 </StickyTable>
 

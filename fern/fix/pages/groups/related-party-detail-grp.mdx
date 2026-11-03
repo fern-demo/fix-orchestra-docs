@@ -3,9 +3,15 @@ title: "RelatedPartyDetailGrp"
 subtitle: "Party details for parties related to the Party specified in the PartyDetailGrp."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1562</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedPartyDetailID (1562)](/fix/fields/tags-1400-1599#tag-1562).
+<llms-only>
+Repeating group · NumInGroup 1562 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedPartyDetailID (1562)](/fix/fields/tags-1400-1599#tag-1562-norelatedpartydetailid).
 
 ## Members
 
@@ -13,10 +19,10 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1563 | [RelatedPartyDetailID](/fix/fields/tags-1400-1599#tag-1563) | String | Optional | Required if NoRelatedPartyDetails &gt; 0. |
-| 1564 | [RelatedPartyDetailIDSource](/fix/fields/tags-1400-1599#tag-1564) | PartyIDSourceCodeSet | Optional | Required if NoRelatedPartyDetails &gt; 0. |
-| 1565 | [RelatedPartyDetailRole](/fix/fields/tags-1400-1599#tag-1565) | PartyRoleCodeSet | Optional | Required if NoRelatedPartyDetails &gt; 0. |
-| 1675 | [RelatedPartyDetailRoleQualifier](/fix/fields/tags-1600-1799#tag-1675) | PartyDetailRoleQualifierCodeSet | Optional | Qualifies the value of RelatedPartyRole(1565) |
+| 1563 | [RelatedPartyDetailID](/fix/fields/tags-1400-1599#tag-1563-relatedpartydetailid) | String | Optional | Required if NoRelatedPartyDetails &gt; 0. |
+| 1564 | [RelatedPartyDetailIDSource](/fix/fields/tags-1400-1599#tag-1564-relatedpartydetailidsource) | PartyIDSourceCodeSet | Optional | Required if NoRelatedPartyDetails &gt; 0. |
+| 1565 | [RelatedPartyDetailRole](/fix/fields/tags-1400-1599#tag-1565-relatedpartydetailrole) | PartyRoleCodeSet | Optional | Required if NoRelatedPartyDetails &gt; 0. |
+| 1675 | [RelatedPartyDetailRoleQualifier](/fix/fields/tags-1600-1799#tag-1675-relatedpartydetailrolequalifier) | PartyDetailRoleQualifierCodeSet | Optional | Qualifies the value of RelatedPartyRole(1565) |
 | 1566 | [RelatedPartyDetailSubGrp](/fix/groups/related-party-detail-sub-grp) | Repeating group | Optional | PartySubGrp for related parties. |
 | 1569 | [RelatedPartyDetailAltIDGrp](/fix/groups/related-party-detail-alt-id-grp) | Repeating group | Optional | Alternative identifiers for parties related to the party specified in the PartyDetailGrp. |
 | 1514 | [PartyRelationshipGrp](/fix/groups/party-relationship-grp) | Repeating group | Optional | Repeating group of party relationships. |

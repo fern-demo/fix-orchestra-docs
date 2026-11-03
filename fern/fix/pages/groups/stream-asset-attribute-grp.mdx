@@ -3,9 +3,15 @@ title: "StreamAssetAttributeGrp"
 subtitle: "The StreamAssetAttributeGrp is a repeating subcomponent of the StreamCommodity component used to detail commodity attributes, quality standards and reject limits."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41237</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoStreamAssetAttributes (41237)](/fix/fields/tags-41200-41399#tag-41237).
+<llms-only>
+Repeating group · NumInGroup 41237 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoStreamAssetAttributes (41237)](/fix/fields/tags-41200-41399#tag-41237-nostreamassetattributes).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41238 | [StreamAssetAttributeType](/fix/fields/tags-41200-41399#tag-41238) | String | Optional | Required if NoStreamAssetAttributes(41237) &gt; 0. |
-| 41239 | [StreamAssetAttributeValue](/fix/fields/tags-41200-41399#tag-41239) | String | Optional | Specifies the value of the attribute. |
-| 41240 | [StreamAssetAttributeLimit](/fix/fields/tags-41200-41399#tag-41240) | String | Optional | Limit or lower acceptable value of the attribute. |
+| 41238 | [StreamAssetAttributeType](/fix/fields/tags-41200-41399#tag-41238-streamassetattributetype) | String | Optional | Required if NoStreamAssetAttributes(41237) &gt; 0. |
+| 41239 | [StreamAssetAttributeValue](/fix/fields/tags-41200-41399#tag-41239-streamassetattributevalue) | String | Optional | Specifies the value of the attribute. |
+| 41240 | [StreamAssetAttributeLimit](/fix/fields/tags-41200-41399#tag-41240-streamassetattributelimit) | String | Optional | Limit or lower acceptable value of the attribute. |
 
 </StickyTable>
 

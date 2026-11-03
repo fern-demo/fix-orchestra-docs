@@ -3,7 +3,13 @@ title: "AllocationInstructionAck"
 subtitle: "In versions of FIX prior to version 4.4, this message was known as the Allocation ACK message. The Allocation Instruction Ack message is used to acknowledge the receipt of and provide status for an Allocation Instruction message."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType P</Badge> <Badge intent="note" minimal>Allocation</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.2.7</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType P · Allocation · Post Trade · Added FIX.2.7
+</llms-only>
 
 ## Message structure
 
@@ -12,27 +18,27 @@ subtitle: "In versions of FIX prior to version 4.4, this message was known as th
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 70 | [AllocID](/fix/fields/tags-0-199#tag-70) | String | **Required** | Unique identifier for allocation message. (Prior to FIX 4.1 this field was of type int) |
-| 2758 | [AllocRequestID](/fix/fields/tags-2600-2799#tag-2758) | String | Optional | May be used to link to a previously submitted AllocationInstructionAlertRequest(35=DU) message. |
+| 70 | [AllocID](/fix/fields/tags-0-199#tag-70-allocid) | String | **Required** | Unique identifier for allocation message. (Prior to FIX 4.1 this field was of type int) |
+| 2758 | [AllocRequestID](/fix/fields/tags-2600-2799#tag-2758-allocrequestid) | String | Optional | May be used to link to a previously submitted AllocationInstructionAlertRequest(35=DU) message. |
 | | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
-| 793 | [SecondaryAllocID](/fix/fields/tags-600-799#tag-793) | String | Optional | Optional second identifier for the allocation instruction being acknowledged (need not be unique) |
-| 1730 | [AllocGroupID](/fix/fields/tags-1600-1799#tag-1730) | String | Optional | Group identifier assigned by the clearinghouse |
-| 1728 | [FirmGroupID](/fix/fields/tags-1600-1799#tag-1728) | String | Optional | Firm assigned entity identifier for the allocation |
-| 1731 | [AvgPxGroupID](/fix/fields/tags-1600-1799#tag-1731) | String | Optional | Firm designated group identifier for average pricing |
-| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | Optional | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Date/Time Allocation Instruction Ack generated |
-| 87 | [AllocStatus](/fix/fields/tags-0-199#tag-87) | AllocStatusCodeSet | **Required** | Denotes the status of the allocation instruction; received (but not yet processed), rejected (at block or account level) or accepted (and processed). |
-| 88 | [AllocRejCode](/fix/fields/tags-0-199#tag-88) | AllocRejCodeCodeSet | Optional | Required for AllocStatus = 1 ( block level reject) and for AllocStatus 2 (account level reject) if the individual accounts and reject reasons are not provided… |
-| 626 | [AllocType](/fix/fields/tags-600-799#tag-626) | AllocTypeCodeSet | Optional | Describes the specific type or purpose of an Allocation message (i.e. "Buyside Calculated") (see Volume : "Glossary" for value definitions) \*\*\* SOME VALUES HAVE… |
-| 808 | [AllocIntermedReqType](/fix/fields/tags-800-999#tag-808) | AllocIntermedReqTypeCodeSet | Optional | Required if AllocType = 8 (Request to Intermediary) Indicates status that is requested to be transmitted to counterparty by the intermediary (i.e. clearing… |
-| 573 | [MatchStatus](/fix/fields/tags-400-599#tag-573) | MatchStatusCodeSet | Optional | Denotes whether the financial details provided on the Allocation Instruction were successfully matched. |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Can include explanation for AllocRejCode = 7 (other) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
-| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328) | String | Optional | Identifies the reason for rejection. |
-| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664) | Length | Optional | Must be set if EncodedRejectText(1665) field is specified and must immediately precede it. |
-| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. |
+| 793 | [SecondaryAllocID](/fix/fields/tags-600-799#tag-793-secondaryallocid) | String | Optional | Optional second identifier for the allocation instruction being acknowledged (need not be unique) |
+| 1730 | [AllocGroupID](/fix/fields/tags-1600-1799#tag-1730-allocgroupid) | String | Optional | Group identifier assigned by the clearinghouse |
+| 1728 | [FirmGroupID](/fix/fields/tags-1600-1799#tag-1728-firmgroupid) | String | Optional | Firm assigned entity identifier for the allocation |
+| 1731 | [AvgPxGroupID](/fix/fields/tags-1600-1799#tag-1731-avgpxgroupid) | String | Optional | Firm designated group identifier for average pricing |
+| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75-tradedate) | LocalMktDate | Optional | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Date/Time Allocation Instruction Ack generated |
+| 87 | [AllocStatus](/fix/fields/tags-0-199#tag-87-allocstatus) | AllocStatusCodeSet | **Required** | Denotes the status of the allocation instruction; received (but not yet processed), rejected (at block or account level) or accepted (and processed). |
+| 88 | [AllocRejCode](/fix/fields/tags-0-199#tag-88-allocrejcode) | AllocRejCodeCodeSet | Optional | Required for AllocStatus = 1 ( block level reject) and for AllocStatus 2 (account level reject) if the individual accounts and reject reasons are not provided… |
+| 626 | [AllocType](/fix/fields/tags-600-799#tag-626-alloctype) | AllocTypeCodeSet | Optional | Describes the specific type or purpose of an Allocation message (i.e. "Buyside Calculated") (see Volume : "Glossary" for value definitions) \*\*\* SOME VALUES HAVE… |
+| 808 | [AllocIntermedReqType](/fix/fields/tags-800-999#tag-808-allocintermedreqtype) | AllocIntermedReqTypeCodeSet | Optional | Required if AllocType = 8 (Request to Intermediary) Indicates status that is requested to be transmitted to counterparty by the intermediary (i.e. clearing… |
+| 573 | [MatchStatus](/fix/fields/tags-400-599#tag-573-matchstatus) | MatchStatusCodeSet | Optional | Denotes whether the financial details provided on the Allocation Instruction were successfully matched. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Can include explanation for AllocRejCode = 7 (other) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
+| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328-rejecttext) | String | Optional | Identifies the reason for rejection. |
+| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664-encodedrejecttextlen) | Length | Optional | Must be set if EncodedRejectText(1665) field is specified and must immediately precede it. |
+| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665-encodedrejecttext) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. |
 | 1907 | [RegulatoryTradeIDGrp](/fix/groups/regulatory-trade-id-grp) | Repeating group | Optional | The RegulatoryTradeIDGrp is a repeating component within the TradeCaptureReport message used to report the source, value and relationship of multiple… |
 | 78 | [AllocAckGrp](/fix/groups/alloc-ack-grp) | Repeating group | Optional | This repeating group is optionally used for messages with AllocStatus(87) = 2 (Account level reject), to provide details of the individual accounts that were… |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |

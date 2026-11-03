@@ -3,7 +3,13 @@ title: "OrderStatusRequest"
 subtitle: "The order status request message is used by the institution to generate an order status message back from the broker."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType H</Badge> <Badge intent="note" minimal>Single General Order Handling</Badge> <Badge intent="tip" minimal>Trade</Badge> <Badge intent="success" minimal>Added FIX.2.7</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType H · Single General Order Handling · Trade · Added FIX.2.7
+</llms-only>
 
 ## Message structure
 
@@ -12,19 +18,19 @@ subtitle: "The order status request message is used by the institution to genera
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | Optional | Conditionally required if ClOrdID(11) is not provided. Either OrderID or ClOrdID must be provided. |
-| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | The ClOrdID of the order whose status is being requested. Conditionally required if the OrderID(37) is not provided. Either OrderID or ClOrdID must be provided. |
-| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
-| 583 | [ClOrdLinkID](/fix/fields/tags-400-599#tag-583) | String | Optional | Permits order originators to tie together groups of orders in which trades resulting from orders are associated for a specific purpose, for example the… |
+| 37 | [OrderID](/fix/fields/tags-0-199#tag-37-orderid) | String | Optional | Conditionally required if ClOrdID(11) is not provided. Either OrderID or ClOrdID must be provided. |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11-clordid) | String | Optional | The ClOrdID of the order whose status is being requested. Conditionally required if the OrderID(37) is not provided. Either OrderID or ClOrdID must be provided. |
+| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526-secondaryclordid) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
+| 583 | [ClOrdLinkID](/fix/fields/tags-400-599#tag-583-clordlinkid) | String | Optional | Permits order originators to tie together groups of orders in which trades resulting from orders are associated for a specific purpose, for example the… |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
-| 790 | [OrdStatusReqID](/fix/fields/tags-600-799#tag-790) | String | Optional | Optional, can be used to uniquely identify a specific Order Status Request message. Echoed back on Execution Report if provided. |
-| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
-| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
+| 790 | [OrdStatusReqID](/fix/fields/tags-600-799#tag-790-ordstatusreqid) | String | Optional | Optional, can be used to uniquely identify a specific Order Status Request message. Echoed back on Execution Report if provided. |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1-account) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
+| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660-acctidsource) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
 | | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This… |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
-| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
-| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | **Required** | Side of order (see Volume : "Glossary" for value definitions) |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300-marketsegmentid) | String | Optional | Identifies the market segment |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54-side) | SideCodeSet | **Required** | Side of order (see Volume : "Glossary" for value definitions) |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

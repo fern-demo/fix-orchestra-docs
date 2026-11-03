@@ -3,7 +3,13 @@ title: "ApplicationMessageRequestAck"
 subtitle: "This message is used to acknowledge an Application Message Request providing a status on the request (i.e. whether successful or not). This message does not provide the actual content of the messages to be resent."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType BX</Badge> <Badge intent="note" minimal>Application</Badge> <Badge intent="tip" minimal>Infrastructure</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType BX · Application · Infrastructure · Added FIX.5.0
+</llms-only>
 
 ## Message structure
 
@@ -12,16 +18,16 @@ subtitle: "This message is used to acknowledge an Application Message Request pr
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 1353 | [ApplResponseID](/fix/fields/tags-1200-1399#tag-1353) | String | **Required** | Identifier for the Application Message Request Ack |
-| 1346 | [ApplReqID](/fix/fields/tags-1200-1399#tag-1346) | String | Optional | Identifier of the request associated with this ACK message |
-| 1347 | [ApplReqType](/fix/fields/tags-1200-1399#tag-1347) | ApplReqTypeCodeSet | Optional | Type of Application Message Request being made. |
-| 1348 | [ApplResponseType](/fix/fields/tags-1200-1399#tag-1348) | ApplResponseTypeCodeSet | Optional | Used to indicate the type of acknowledgement being sent. |
-| 1349 | [ApplTotalMessageCount](/fix/fields/tags-1200-1399#tag-1349) | int | Optional | Total number of messages included in transmission |
+| 1353 | [ApplResponseID](/fix/fields/tags-1200-1399#tag-1353-applresponseid) | String | **Required** | Identifier for the Application Message Request Ack |
+| 1346 | [ApplReqID](/fix/fields/tags-1200-1399#tag-1346-applreqid) | String | Optional | Identifier of the request associated with this ACK message |
+| 1347 | [ApplReqType](/fix/fields/tags-1200-1399#tag-1347-applreqtype) | ApplReqTypeCodeSet | Optional | Type of Application Message Request being made. |
+| 1348 | [ApplResponseType](/fix/fields/tags-1200-1399#tag-1348-applresponsetype) | ApplResponseTypeCodeSet | Optional | Used to indicate the type of acknowledgement being sent. |
+| 1349 | [ApplTotalMessageCount](/fix/fields/tags-1200-1399#tag-1349-appltotalmessagecount) | int | Optional | Total number of messages included in transmission |
 | 1351 | [ApplIDRequestAckGrp](/fix/groups/appl-id-request-ack-grp) | Repeating group | Optional |  |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

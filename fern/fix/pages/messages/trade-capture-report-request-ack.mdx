@@ -3,7 +3,13 @@ title: "TradeCaptureReportRequestAck"
 subtitle: "The Trade Capture Request Ack message is used to: - Provide an acknowledgement to a Trade Capture Report Request in the case where the Trade Capture Report Request is used to specify a subscription or delivery of reports via an out-of-band…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType AQ</Badge> <Badge intent="note" minimal>Trade Capture</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType AQ · Trade Capture · Post Trade · Added FIX.4.4
+</llms-only>
 
 ## Message structure
 
@@ -12,27 +18,27 @@ subtitle: "The Trade Capture Request Ack message is used to: - Provide an acknow
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 568 | [TradeRequestID](/fix/fields/tags-400-599#tag-568) | String | **Required** | Identifier for the trade request |
-| 1003 | [TradeID](/fix/fields/tags-1000-1199#tag-1003) | String | Optional | The unique ID assigned to the trade entity once it is received or matched by the exchange or central counterparty. |
-| 1040 | [SecondaryTradeID](/fix/fields/tags-1000-1199#tag-1040) | String | Optional | Used to carry an internal trade entity ID which may or may not be reported to the firm |
-| 1041 | [FirmTradeID](/fix/fields/tags-1000-1199#tag-1041) | String | Optional | The ID assigned to a trade by the Firm to track a trade within the Firm system. This ID can be assigned either before or after submission to the exchange or… |
-| 1042 | [SecondaryFirmTradeID](/fix/fields/tags-1000-1199#tag-1042) | String | Optional | Used to carry an internal firm assigned ID which may or may not be reported to the exchange or central counterpary |
-| 569 | [TradeRequestType](/fix/fields/tags-400-599#tag-569) | TradeRequestTypeCodeSet | **Required** | Type of Trade Capture Report. |
-| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263) | SubscriptionRequestTypeCodeSet | Optional | Used to subscribe / unsubscribe for trade capture reports If the field is absent, the value 0 will be the default |
-| 748 | [TotNumTradeReports](/fix/fields/tags-600-799#tag-748) | int | Optional | Number of trade reports returned |
-| 749 | [TradeRequestResult](/fix/fields/tags-600-799#tag-749) | TradeRequestResultCodeSet | **Required** | Result of Trade Request |
-| 750 | [TradeRequestStatus](/fix/fields/tags-600-799#tag-750) | TradeRequestStatusCodeSet | **Required** | Status of Trade Request |
+| 568 | [TradeRequestID](/fix/fields/tags-400-599#tag-568-traderequestid) | String | **Required** | Identifier for the trade request |
+| 1003 | [TradeID](/fix/fields/tags-1000-1199#tag-1003-tradeid) | String | Optional | The unique ID assigned to the trade entity once it is received or matched by the exchange or central counterparty. |
+| 1040 | [SecondaryTradeID](/fix/fields/tags-1000-1199#tag-1040-secondarytradeid) | String | Optional | Used to carry an internal trade entity ID which may or may not be reported to the firm |
+| 1041 | [FirmTradeID](/fix/fields/tags-1000-1199#tag-1041-firmtradeid) | String | Optional | The ID assigned to a trade by the Firm to track a trade within the Firm system. This ID can be assigned either before or after submission to the exchange or… |
+| 1042 | [SecondaryFirmTradeID](/fix/fields/tags-1000-1199#tag-1042-secondaryfirmtradeid) | String | Optional | Used to carry an internal firm assigned ID which may or may not be reported to the exchange or central counterpary |
+| 569 | [TradeRequestType](/fix/fields/tags-400-599#tag-569-traderequesttype) | TradeRequestTypeCodeSet | **Required** | Type of Trade Capture Report. |
+| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263-subscriptionrequesttype) | SubscriptionRequestTypeCodeSet | Optional | Used to subscribe / unsubscribe for trade capture reports If the field is absent, the value 0 will be the default |
+| 748 | [TotNumTradeReports](/fix/fields/tags-600-799#tag-748-totnumtradereports) | int | Optional | Number of trade reports returned |
+| 749 | [TradeRequestResult](/fix/fields/tags-600-799#tag-749-traderequestresult) | TradeRequestResultCodeSet | **Required** | Result of Trade Request |
+| 750 | [TradeRequestStatus](/fix/fields/tags-600-799#tag-750-traderequeststatus) | TradeRequestStatusCodeSet | **Required** | Status of Trade Request |
 | | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | | [InstrumentExtension](/fix/components/instrument-extension) | Component | Optional | The InstrumentExtension component block identifies additional security attributes that are more commonly found for Fixed Income securities. |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
-| 442 | [MultiLegReportingType](/fix/fields/tags-400-599#tag-442) | MultiLegReportingTypeCodeSet | Optional | Specify type of multileg reporting to be returned. |
-| 725 | [ResponseTransportType](/fix/fields/tags-600-799#tag-725) | ResponseTransportTypeCodeSet | Optional | Ability to specify whether the response to the request should be delivered inband or via pre-arranged out-of-band transport. |
-| 726 | [ResponseDestination](/fix/fields/tags-600-799#tag-726) | String | Optional | URI destination name. Used if ResponseTransportType is out-of-band. |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | May be used by the executing market to record any execution Details that are particular to that market |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
-| 1011 | [MessageEventSource](/fix/fields/tags-1000-1199#tag-1011) | String | Optional | Used to identify the event or source which gave rise to a message |
+| 442 | [MultiLegReportingType](/fix/fields/tags-400-599#tag-442-multilegreportingtype) | MultiLegReportingTypeCodeSet | Optional | Specify type of multileg reporting to be returned. |
+| 725 | [ResponseTransportType](/fix/fields/tags-600-799#tag-725-responsetransporttype) | ResponseTransportTypeCodeSet | Optional | Ability to specify whether the response to the request should be delivered inband or via pre-arranged out-of-band transport. |
+| 726 | [ResponseDestination](/fix/fields/tags-600-799#tag-726-responsedestination) | String | Optional | URI destination name. Used if ResponseTransportType is out-of-band. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | May be used by the executing market to record any execution Details that are particular to that market |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 1011 | [MessageEventSource](/fix/fields/tags-1000-1199#tag-1011-messageeventsource) | String | Optional | Used to identify the event or source which gave rise to a message |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

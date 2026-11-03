@@ -3,11 +3,17 @@ title: "IndexRollMonthGrp"
 subtitle: "Used for specifying multiple roll months in a given year for an index."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2734</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Repeating group · NumInGroup 2734 · Added FIX.5.0SP2
+</llms-only>
 
 For MiFID II RTS 2 Annex IV Table 2 reference data - all months when the roll is expected as established by the CDS index provider for a given year - repeated for each month in the roll.
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoIndexRollMonths (2734)](/fix/fields/tags-2600-2799#tag-2734).
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoIndexRollMonths (2734)](/fix/fields/tags-2600-2799#tag-2734-noindexrollmonths).
 
 ## Members
 
@@ -15,7 +21,7 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2733 | [IndexRollMonth](/fix/fields/tags-2600-2799#tag-2733) | String | Optional | Required if NoIndexRollMonths(2734) &gt; 0. |
+| 2733 | [IndexRollMonth](/fix/fields/tags-2600-2799#tag-2733-indexrollmonth) | String | Optional | Required if NoIndexRollMonths(2734) &gt; 0. |
 
 </StickyTable>
 

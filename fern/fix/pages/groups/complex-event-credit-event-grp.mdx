@@ -3,9 +3,15 @@ title: "ComplexEventCreditEventGrp"
 subtitle: "The ComplexEventCreditEventGrp is a repeating component within the ComplexEventGrp component used to report applicable option credit events."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40997</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoComplexEventCreditEvents (40997)](/fix/fields/tags-40800-40999#tag-40997).
+<llms-only>
+Repeating group · NumInGroup 40997 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoComplexEventCreditEvents (40997)](/fix/fields/tags-40800-40999#tag-40997-nocomplexeventcreditevents).
 
 ## Members
 
@@ -13,13 +19,13 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40998 | [ComplexEventCreditEventType](/fix/fields/tags-40800-40999#tag-40998) | String | Optional | Required if NoComplexEventCreditEvents(40996) &gt; 0. |
-| 40999 | [ComplexEventCreditEventValue](/fix/fields/tags-40800-40999#tag-40999) | String | Optional | The credit event value appropriate to ComplexEventCreditEventType(40998). See http://www.fixtradingcommunity.org/codelists#Credit\_Event\_Types for applicable… |
-| 41000 | [ComplexEventCreditEventCurrency](/fix/fields/tags-41000-41199#tag-41000) | Currency | Optional | Specifies the applicable currency when ComplexEventCreditEventValue(40999) is an amount. Uses ISO 4217 currency codes. |
-| 41001 | [ComplexEventCreditEventPeriod](/fix/fields/tags-41000-41199#tag-41001) | int | Optional | Conditionally required when ComplexEventCreditEventUnit(41002) is specified. |
-| 41002 | [ComplexEventCreditEventUnit](/fix/fields/tags-41000-41199#tag-41002) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when ComplexEventCreditEventPeriod(41001) is specified. |
-| 41003 | [ComplexEventCreditEventDayType](/fix/fields/tags-41000-41199#tag-41003) | ComplexEventDateOffsetDayTypeCodeSet | Optional | Specifies the day type for the complex credit events. |
-| 41004 | [ComplexEventCreditEventRateSource](/fix/fields/tags-41000-41199#tag-41004) | int | Optional | Identifies the source of rate information used for credit events. See http://www.fixtradingcommunity.org/codelists#Credit\_Event\_Rate\_Source for code list of… |
+| 40998 | [ComplexEventCreditEventType](/fix/fields/tags-40800-40999#tag-40998-complexeventcrediteventtype) | String | Optional | Required if NoComplexEventCreditEvents(40996) &gt; 0. |
+| 40999 | [ComplexEventCreditEventValue](/fix/fields/tags-40800-40999#tag-40999-complexeventcrediteventvalue) | String | Optional | The credit event value appropriate to ComplexEventCreditEventType(40998). See http://www.fixtradingcommunity.org/codelists#Credit\_Event\_Types for applicable… |
+| 41000 | [ComplexEventCreditEventCurrency](/fix/fields/tags-41000-41199#tag-41000-complexeventcrediteventcurrency) | Currency | Optional | Specifies the applicable currency when ComplexEventCreditEventValue(40999) is an amount. Uses ISO 4217 currency codes. |
+| 41001 | [ComplexEventCreditEventPeriod](/fix/fields/tags-41000-41199#tag-41001-complexeventcrediteventperiod) | int | Optional | Conditionally required when ComplexEventCreditEventUnit(41002) is specified. |
+| 41002 | [ComplexEventCreditEventUnit](/fix/fields/tags-41000-41199#tag-41002-complexeventcrediteventunit) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when ComplexEventCreditEventPeriod(41001) is specified. |
+| 41003 | [ComplexEventCreditEventDayType](/fix/fields/tags-41000-41199#tag-41003-complexeventcrediteventdaytype) | ComplexEventDateOffsetDayTypeCodeSet | Optional | Specifies the day type for the complex credit events. |
+| 41004 | [ComplexEventCreditEventRateSource](/fix/fields/tags-41000-41199#tag-41004-complexeventcrediteventratesource) | int | Optional | Identifies the source of rate information used for credit events. See http://www.fixtradingcommunity.org/codelists#Credit\_Event\_Rate\_Source for code list of… |
 | 41005 | [ComplexEventCreditEventQualifierGrp](/fix/groups/complex-event-credit-event-qualifier-grp) | Repeating group | Optional | The ComplexEventCreditEventQualifierGrp is a repeating component within the ComplexEventCreditEventGrp component used to specify qualifying attributes to an… |
 
 </StickyTable>

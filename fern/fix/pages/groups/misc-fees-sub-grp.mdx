@@ -3,9 +3,15 @@ title: "MiscFeesSubGrp"
 subtitle: "The MiscFeesSubGrp component is used to provide further details for a given MiscFeeType(139) value."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2633</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoMiscFeeSubTypes (2633)](/fix/fields/tags-2600-2799#tag-2633).
+<llms-only>
+Repeating group · NumInGroup 2633 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoMiscFeeSubTypes (2633)](/fix/fields/tags-2600-2799#tag-2633-nomiscfeesubtypes).
 
 ## Members
 
@@ -13,11 +19,11 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2634 | [MiscFeeSubType](/fix/fields/tags-2600-2799#tag-2634) | String | Optional | Required if NoMiscFeeSubTypes(2633) &gt; 0. |
-| 2635 | [MiscFeeSubTypeAmt](/fix/fields/tags-2600-2799#tag-2635) | Amt | Optional | The amount of the specified MiscFeeSubType(2634). |
-| 2636 | [MiscFeeSubTypeDesc](/fix/fields/tags-2600-2799#tag-2636) | String | Optional | Can be used to provide an optional textual description of the fee sub-type. |
-| 2637 | [EncodedMiscFeeSubTypeDescLen](/fix/fields/tags-2600-2799#tag-2637) | Length | Optional | Must be set if EncodedMiscFeeSubTypeDesc(2638) field is specified and must immediately precede it. |
-| 2638 | [EncodedMiscFeeSubTypeDesc](/fix/fields/tags-2600-2799#tag-2638) | data | Optional | Encoded (non-ASCII characters) representation of the MiscFeeSubTypeDesc(2636) field in the encoded format specified via the MessageEncoding(347) field. |
+| 2634 | [MiscFeeSubType](/fix/fields/tags-2600-2799#tag-2634-miscfeesubtype) | String | Optional | Required if NoMiscFeeSubTypes(2633) &gt; 0. |
+| 2635 | [MiscFeeSubTypeAmt](/fix/fields/tags-2600-2799#tag-2635-miscfeesubtypeamt) | Amt | Optional | The amount of the specified MiscFeeSubType(2634). |
+| 2636 | [MiscFeeSubTypeDesc](/fix/fields/tags-2600-2799#tag-2636-miscfeesubtypedesc) | String | Optional | Can be used to provide an optional textual description of the fee sub-type. |
+| 2637 | [EncodedMiscFeeSubTypeDescLen](/fix/fields/tags-2600-2799#tag-2637-encodedmiscfeesubtypedesclen) | Length | Optional | Must be set if EncodedMiscFeeSubTypeDesc(2638) field is specified and must immediately precede it. |
+| 2638 | [EncodedMiscFeeSubTypeDesc](/fix/fields/tags-2600-2799#tag-2638-encodedmiscfeesubtypedesc) | data | Optional | Encoded (non-ASCII characters) representation of the MiscFeeSubTypeDesc(2636) field in the encoded format specified via the MessageEncoding(347) field. |
 
 </StickyTable>
 

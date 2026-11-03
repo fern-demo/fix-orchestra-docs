@@ -3,9 +3,15 @@ title: "TradeQtyGrp"
 subtitle: "Quantities of the trade that have been processed and the type of processing that has occurred for that trade quantity."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1841</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoTradeQtys (1841)](/fix/fields/tags-1800-1999#tag-1841).
+<llms-only>
+Repeating group · NumInGroup 1841 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoTradeQtys (1841)](/fix/fields/tags-1800-1999#tag-1841-notradeqtys).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1842 | [TradeQtyType](/fix/fields/tags-1800-1999#tag-1842) | TradeQtyTypeCodeSet | Optional | Required if NoTradeQty(1841) &gt; 0. |
-| 1843 | [TradeQty](/fix/fields/tags-1800-1999#tag-1843) | Qty | Optional | Required if NoTradeQty(1841) &gt; 0. |
+| 1842 | [TradeQtyType](/fix/fields/tags-1800-1999#tag-1842-tradeqtytype) | TradeQtyTypeCodeSet | Optional | Required if NoTradeQty(1841) &gt; 0. |
+| 1843 | [TradeQty](/fix/fields/tags-1800-1999#tag-1843-tradeqty) | Qty | Optional | Required if NoTradeQty(1841) &gt; 0. |
 
 </StickyTable>
 

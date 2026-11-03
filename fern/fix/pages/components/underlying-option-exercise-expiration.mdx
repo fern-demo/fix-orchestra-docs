@@ -3,7 +3,13 @@ title: "UnderlyingOptionExerciseExpiration"
 subtitle: "The UnderlyingOptionExerciseExpiration component is a subcomponent of the UnderlyingOptionExercise component used to specify option exercise expiration dates and times. The purpose of UnderlyingOptionExercise is to identify the scheduled…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,18 +17,18 @@ subtitle: "The UnderlyingOptionExerciseExpiration component is a subcomponent of
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41846 | [UnderlyingOptionExerciseExpirationDateBusinessDayConvention](/fix/fields/tags-41800-41999#tag-41846) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
+| 41846 | [UnderlyingOptionExerciseExpirationDateBusinessDayConvention](/fix/fields/tags-41800-41999#tag-41846-underlyingoptionexerciseexpirationdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
 | 41844 | [UnderlyingOptionExerciseExpirationDateBusinessCenterGrp](/fix/groups/underlying-option-exercise-expiration-date-business-center-grp) | Repeating group | Optional | UnderlyingOptionExerciseExpirationDateBusinessCenterGrp is a repeating subcomponent of the UnderlyingOptionExerciseExpiration component used to specify the set… |
 | 41856 | [UnderlyingOptionExerciseExpirationDateGrp](/fix/groups/underlying-option-exercise-expiration-date-grp) | Repeating group | Optional | The UnderlyingOptionExerciseExpirationDateGrp is a repeating subcomponent of the UnderlyingOptionExerciseExpiration component used to specify fixed dates for… |
-| 41847 | [UnderlyingOptionExerciseExpirationDateRelativeTo](/fix/fields/tags-41800-41999#tag-41847) | int | Optional | Specifies the anchor date when the option exercise expiration date is relative to an anchor date. See… |
-| 41848 | [UnderlyingOptionExerciseExpirationDateOffsetPeriod](/fix/fields/tags-41800-41999#tag-41848) | int | Optional | Conditionally required when UnderlyingOptionExerciseExpirationDateOffsetUnit(41849) is specified. |
-| 41849 | [UnderlyingOptionExerciseExpirationDateOffsetUnit](/fix/fields/tags-41800-41999#tag-41849) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingOptionExerciseExpirationDateOffsetPeriod(41848) is specified. |
-| 41850 | [UnderlyingOptionExerciseExpirationFrequencyPeriod](/fix/fields/tags-41800-41999#tag-41850) | int | Optional | Conditionally required when UnderlyingOptionExerciseExpirationFrequencyUnit(41851) is specified. |
-| 41851 | [UnderlyingOptionExerciseExpirationFrequencyUnit](/fix/fields/tags-41800-41999#tag-41851) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when UnderlyingOptionExerciseExpirationFrequencyPeriod(41850) is specified. |
-| 41852 | [UnderlyingOptionExerciseExpirationRollConvention](/fix/fields/tags-41800-41999#tag-41852) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified values would be… |
-| 41853 | [UnderlyingOptionExerciseExpirationDateOffsetDayType](/fix/fields/tags-41800-41999#tag-41853) | ComplexEventDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative option exercise expiration date offset. |
-| 41854 | [UnderlyingOptionExerciseExpirationTime](/fix/fields/tags-41800-41999#tag-41854) | LocalMktTime | Optional | The option exercise expiration time. |
-| 41855 | [UnderlyingOptionExerciseExpirationTimeBusinessCenter](/fix/fields/tags-41800-41999#tag-41855) | String | Optional | The business center used to determine the locale for option exercise expiration time, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for… |
+| 41847 | [UnderlyingOptionExerciseExpirationDateRelativeTo](/fix/fields/tags-41800-41999#tag-41847-underlyingoptionexerciseexpirationdaterelativeto) | int | Optional | Specifies the anchor date when the option exercise expiration date is relative to an anchor date. See… |
+| 41848 | [UnderlyingOptionExerciseExpirationDateOffsetPeriod](/fix/fields/tags-41800-41999#tag-41848-underlyingoptionexerciseexpirationdateoffsetperiod) | int | Optional | Conditionally required when UnderlyingOptionExerciseExpirationDateOffsetUnit(41849) is specified. |
+| 41849 | [UnderlyingOptionExerciseExpirationDateOffsetUnit](/fix/fields/tags-41800-41999#tag-41849-underlyingoptionexerciseexpirationdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingOptionExerciseExpirationDateOffsetPeriod(41848) is specified. |
+| 41850 | [UnderlyingOptionExerciseExpirationFrequencyPeriod](/fix/fields/tags-41800-41999#tag-41850-underlyingoptionexerciseexpirationfrequencyperiod) | int | Optional | Conditionally required when UnderlyingOptionExerciseExpirationFrequencyUnit(41851) is specified. |
+| 41851 | [UnderlyingOptionExerciseExpirationFrequencyUnit](/fix/fields/tags-41800-41999#tag-41851-underlyingoptionexerciseexpirationfrequencyunit) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when UnderlyingOptionExerciseExpirationFrequencyPeriod(41850) is specified. |
+| 41852 | [UnderlyingOptionExerciseExpirationRollConvention](/fix/fields/tags-41800-41999#tag-41852-underlyingoptionexerciseexpirationrollconvention) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified values would be… |
+| 41853 | [UnderlyingOptionExerciseExpirationDateOffsetDayType](/fix/fields/tags-41800-41999#tag-41853-underlyingoptionexerciseexpirationdateoffsetdaytype) | ComplexEventDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative option exercise expiration date offset. |
+| 41854 | [UnderlyingOptionExerciseExpirationTime](/fix/fields/tags-41800-41999#tag-41854-underlyingoptionexerciseexpirationtime) | LocalMktTime | Optional | The option exercise expiration time. |
+| 41855 | [UnderlyingOptionExerciseExpirationTimeBusinessCenter](/fix/fields/tags-41800-41999#tag-41855-underlyingoptionexerciseexpirationtimebusinesscenter) | String | Optional | The business center used to determine the locale for option exercise expiration time, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for… |
 
 </StickyTable>
 

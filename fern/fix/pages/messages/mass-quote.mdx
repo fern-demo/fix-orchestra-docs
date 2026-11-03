@@ -3,7 +3,13 @@ title: "MassQuote"
 subtitle: "The Mass Quote message can contain quotes for multiple securities to support applications that allow for the mass quoting of an option series. Two levels of repeating groups have been provided to minimize the amount of data required to…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType i</Badge> <Badge intent="note" minimal>Quotation Negotiation</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType i · Quotation Negotiation · Pre Trade · Added FIX.4.2
+</llms-only>
 
 ## Message structure
 
@@ -12,24 +18,24 @@ subtitle: "The Mass Quote message can contain quotes for multiple securities to 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 131 | [QuoteReqID](/fix/fields/tags-0-199#tag-131) | String | Optional | Required when quote is in response to a Quote Request message |
-| 117 | [QuoteID](/fix/fields/tags-0-199#tag-117) | String | **Required** | Unique identifier for quote |
-| 537 | [QuoteType](/fix/fields/tags-400-599#tag-537) | QuoteTypeCodeSet | Optional | Type of Quote Default is Indicative if not specified |
-| 2403 | [QuoteModelType](/fix/fields/tags-2400-2599#tag-2403) | QuoteModelTypeCodeSet | Optional | Quote model type |
-| 301 | [QuoteResponseLevel](/fix/fields/tags-200-399#tag-301) | QuoteResponseLevelCodeSet | Optional | Level of Response requested from receiver of quote messages. |
+| 131 | [QuoteReqID](/fix/fields/tags-0-199#tag-131-quotereqid) | String | Optional | Required when quote is in response to a Quote Request message |
+| 117 | [QuoteID](/fix/fields/tags-0-199#tag-117-quoteid) | String | **Required** | Unique identifier for quote |
+| 537 | [QuoteType](/fix/fields/tags-400-599#tag-537-quotetype) | QuoteTypeCodeSet | Optional | Type of Quote Default is Indicative if not specified |
+| 2403 | [QuoteModelType](/fix/fields/tags-2400-2599#tag-2403-quotemodeltype) | QuoteModelTypeCodeSet | Optional | Quote model type |
+| 301 | [QuoteResponseLevel](/fix/fields/tags-200-399#tag-301-quoteresponselevel) | QuoteResponseLevelCodeSet | Optional | Level of Response requested from receiver of quote messages. |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
-| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
-| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
-| 581 | [AccountType](/fix/fields/tags-400-599#tag-581) | AccountTypeCodeSet | Optional | Type of account associated with the order (Origin) |
-| 293 | [DefBidSize](/fix/fields/tags-200-399#tag-293) | Qty | Optional | Default Bid Size for quote contained within this quote message - if not explicitly provided. |
-| 294 | [DefOfferSize](/fix/fields/tags-200-399#tag-294) | Qty | Optional | Default Offer Size for quotes contained within this quote message - if not explicitly provided. |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1-account) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
+| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660-acctidsource) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
+| 581 | [AccountType](/fix/fields/tags-400-599#tag-581-accounttype) | AccountTypeCodeSet | Optional | Type of account associated with the order (Origin) |
+| 293 | [DefBidSize](/fix/fields/tags-200-399#tag-293-defbidsize) | Qty | Optional | Default Bid Size for quote contained within this quote message - if not explicitly provided. |
+| 294 | [DefOfferSize](/fix/fields/tags-200-399#tag-294-defoffersize) | Qty | Optional | Default Offer Size for quotes contained within this quote message - if not explicitly provided. |
 | 296 | [QuotSetGrp](/fix/groups/quot-set-grp) | Repeating group | **Required** |  |
-| 2362 | [SelfMatchPreventionID](/fix/fields/tags-2200-2399#tag-2362) | String | Optional | Identifies an order or trade that should not be matched to an opposite order or trade if both buy and sell orders for the same asset contain the same… |
-| 1685 | [ThrottleInst](/fix/fields/tags-1600-1799#tag-1685) | ThrottleInstCodeSet | Optional | Describes action recipient should take if a throttle limit were exceeded. |
-| 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
-| 2404 | [ComplianceText](/fix/fields/tags-2400-2599#tag-2404) | String | Optional | Free text for compliance information required for regulatory reporting. |
-| 2351 | [EncodedComplianceTextLen](/fix/fields/tags-2200-2399#tag-2351) | Length | Optional | Must be set if EncodedComplianceText(2352) field is specified and must immediately precede it. |
-| 2352 | [EncodedComplianceText](/fix/fields/tags-2200-2399#tag-2352) | data | Optional | Encoded (non-ASCII characters) representation of the ComplianceText(2404) field in the encoded format specified via the MessageEncoding(347) field. |
+| 2362 | [SelfMatchPreventionID](/fix/fields/tags-2200-2399#tag-2362-selfmatchpreventionid) | String | Optional | Identifies an order or trade that should not be matched to an opposite order or trade if both buy and sell orders for the same asset contain the same… |
+| 1685 | [ThrottleInst](/fix/fields/tags-1600-1799#tag-1685-throttleinst) | ThrottleInstCodeSet | Optional | Describes action recipient should take if a throttle limit were exceeded. |
+| 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376-complianceid) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
+| 2404 | [ComplianceText](/fix/fields/tags-2400-2599#tag-2404-compliancetext) | String | Optional | Free text for compliance information required for regulatory reporting. |
+| 2351 | [EncodedComplianceTextLen](/fix/fields/tags-2200-2399#tag-2351-encodedcompliancetextlen) | Length | Optional | Must be set if EncodedComplianceText(2352) field is specified and must immediately precede it. |
+| 2352 | [EncodedComplianceText](/fix/fields/tags-2200-2399#tag-2352-encodedcompliancetext) | data | Optional | Encoded (non-ASCII characters) representation of the ComplianceText(2404) field in the encoded format specified via the MessageEncoding(347) field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

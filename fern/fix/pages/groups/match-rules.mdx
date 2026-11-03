@@ -3,9 +3,15 @@ title: "MatchRules"
 subtitle: "The MatchRules component is used to specify the details of order matching rules for specified product group or complex."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1235</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoMatchRules (1235)](/fix/fields/tags-1200-1399#tag-1235).
+<llms-only>
+Repeating group · NumInGroup 1235 · Added FIX.5.0
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoMatchRules (1235)](/fix/fields/tags-1200-1399#tag-1235-nomatchrules).
 
 ## Members
 
@@ -13,10 +19,10 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1142 | [MatchAlgorithm](/fix/fields/tags-1000-1199#tag-1142) | String | Optional | Required if NoMatchRules(1235) &gt; 0. |
-| 574 | [MatchType](/fix/fields/tags-400-599#tag-574) | MatchTypeCodeSet | Optional | The point in the matching process at which this trade was matched. |
-| 2569 | [MatchRuleProductComplex](/fix/fields/tags-2400-2599#tag-2569) | String | Optional | Can be used to limit match rule to specific product suite. |
-| 2570 | [CustomerPriority](/fix/fields/tags-2400-2599#tag-2570) | CustomerPriorityCodeSet | Optional | Can be used to give customer orders priority for the given matching algorithm. |
+| 1142 | [MatchAlgorithm](/fix/fields/tags-1000-1199#tag-1142-matchalgorithm) | String | Optional | Required if NoMatchRules(1235) &gt; 0. |
+| 574 | [MatchType](/fix/fields/tags-400-599#tag-574-matchtype) | MatchTypeCodeSet | Optional | The point in the matching process at which this trade was matched. |
+| 2569 | [MatchRuleProductComplex](/fix/fields/tags-2400-2599#tag-2569-matchruleproductcomplex) | String | Optional | Can be used to limit match rule to specific product suite. |
+| 2570 | [CustomerPriority](/fix/fields/tags-2400-2599#tag-2570-customerpriority) | CustomerPriorityCodeSet | Optional | Can be used to give customer orders priority for the given matching algorithm. |
 
 </StickyTable>
 

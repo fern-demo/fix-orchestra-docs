@@ -2,9 +2,15 @@
 title: "TrdRepIndicatorsGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1387</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoTrdRepIndicators (1387)](/fix/fields/tags-1200-1399#tag-1387).
+<llms-only>
+Repeating group · NumInGroup 1387 · Added FIX.5.0
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoTrdRepIndicators (1387)](/fix/fields/tags-1200-1399#tag-1387-notrdrepindicators).
 
 ## Members
 
@@ -12,8 +18,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1388 | [TrdRepPartyRole](/fix/fields/tags-1200-1399#tag-1388) | PartyRoleCodeSet | Optional | Identifies the type of party for trade reporting. Same values as PartyRole(452). |
-| 1389 | [TrdRepIndicator](/fix/fields/tags-1200-1399#tag-1389) | Boolean | Optional | Specifies whether the trade should be reported (or not) to parties of the provided TrdRepPartyRole(1388). Used to override standard reporting behavior by the… |
+| 1388 | [TrdRepPartyRole](/fix/fields/tags-1200-1399#tag-1388-trdreppartyrole) | PartyRoleCodeSet | Optional | Identifies the type of party for trade reporting. Same values as PartyRole(452). |
+| 1389 | [TrdRepIndicator](/fix/fields/tags-1200-1399#tag-1389-trdrepindicator) | Boolean | Optional | Specifies whether the trade should be reported (or not) to parties of the provided TrdRepPartyRole(1388). Used to override standard reporting behavior by the… |
 
 </StickyTable>
 

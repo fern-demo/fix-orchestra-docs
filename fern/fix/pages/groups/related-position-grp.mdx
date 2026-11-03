@@ -3,9 +3,15 @@ title: "RelatedPositionGrp"
 subtitle: "This component is used to identify positions that are related to each other or to other trades. This should not be used in lieu of explicit FIX fields that denote specific semantic relationships, but rather should be used when no such…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1861</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedPositions (1861)](/fix/fields/tags-1800-1999#tag-1861).
+<llms-only>
+Repeating group · NumInGroup 1861 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedPositions (1861)](/fix/fields/tags-1800-1999#tag-1861-norelatedpositions).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1862 | [RelatedPositionID](/fix/fields/tags-1800-1999#tag-1862) | String | Optional | Required if NoRelatedPositions(1861) &gt; 0. |
-| 1863 | [RelatedPositionIDSource](/fix/fields/tags-1800-1999#tag-1863) | RelatedPositionIDSourceCodeSet | Optional | Describes the source of the identifier that RelatedPositionID(1862) represents. |
-| 1864 | [RelatedPositionDate](/fix/fields/tags-1800-1999#tag-1864) | LocalMktDate | Optional | Used to help identify the position when RelatedPositionID(1862) is not unique across multiple days. This date is generally the creation date of the identifier. |
+| 1862 | [RelatedPositionID](/fix/fields/tags-1800-1999#tag-1862-relatedpositionid) | String | Optional | Required if NoRelatedPositions(1861) &gt; 0. |
+| 1863 | [RelatedPositionIDSource](/fix/fields/tags-1800-1999#tag-1863-relatedpositionidsource) | RelatedPositionIDSourceCodeSet | Optional | Describes the source of the identifier that RelatedPositionID(1862) represents. |
+| 1864 | [RelatedPositionDate](/fix/fields/tags-1800-1999#tag-1864-relatedpositiondate) | LocalMktDate | Optional | Used to help identify the position when RelatedPositionID(1862) is not unique across multiple days. This date is generally the creation date of the identifier. |
 
 </StickyTable>
 

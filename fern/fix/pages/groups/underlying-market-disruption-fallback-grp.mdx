@@ -3,9 +3,15 @@ title: "UnderlyingMarketDisruptionFallbackGrp"
 subtitle: "The UnderlyingMarketDisruptionFallbackGrp is a repeating subcomponent of the UnderlyingMarketDisruption component used to specify the market disruption fallback provisions."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41866</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingMarketDisruptionFallbacks (41866)](/fix/fields/tags-41800-41999#tag-41866).
+<llms-only>
+Repeating group · NumInGroup 41866 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingMarketDisruptionFallbacks (41866)](/fix/fields/tags-41800-41999#tag-41866-nounderlyingmarketdisruptionfallbacks).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41867 | [UnderlyingMarketDisruptionFallbackType](/fix/fields/tags-41800-41999#tag-41867) | String | Optional | Required if NoUnderlyingMarketDisruptionFallbacks(41866) &gt; 0. The sequence of entries specifies the order in which the fallback provisions should be applied. |
-| 41339 | [UnderlyingMarketDisruptionFallbackValue](/fix/fields/tags-41200-41399#tag-41339) | String | Optional | Applicable value for UnderlyingMarketDisruptionFallbackType(41867). |
+| 41867 | [UnderlyingMarketDisruptionFallbackType](/fix/fields/tags-41800-41999#tag-41867-underlyingmarketdisruptionfallbacktype) | String | Optional | Required if NoUnderlyingMarketDisruptionFallbacks(41866) &gt; 0. The sequence of entries specifies the order in which the fallback provisions should be applied. |
+| 41339 | [UnderlyingMarketDisruptionFallbackValue](/fix/fields/tags-41200-41399#tag-41339-underlyingmarketdisruptionfallbackvalue) | String | Optional | Applicable value for UnderlyingMarketDisruptionFallbackType(41867). |
 
 </StickyTable>
 

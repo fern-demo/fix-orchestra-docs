@@ -3,11 +3,17 @@ title: "ProvisionOptionExerciseFixedDateGrp"
 subtitle: "The ProvisionOptionExerciseFixedDateGrp is a repeating component within the ProvisionOptionExerciseDates component used to report an array of unadjusted or adjusted fixed exercise dates."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40142</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Repeating group · NumInGroup 40142 · Added FIX.5.0SP2
+</llms-only>
 
 For the purpose of optimization, the ProvisionOptionExerciseFixedDateType(40144) field may optionally be omitted after the first instance provided the instance(s) which immediately follow is of the same date type. When the next instance requires a different date type from the prior instance, the ProvisionOptionExerciseFixedDateType(40144) is required to specify the date type.
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoProvisionOptionExerciseFixedDates (40142)](/fix/fields/tags-40000-40199#tag-40142).
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoProvisionOptionExerciseFixedDates (40142)](/fix/fields/tags-40000-40199#tag-40142-noprovisionoptionexercisefixeddates).
 
 ## Members
 
@@ -15,8 +21,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40143 | [ProvisionOptionExerciseFixedDate](/fix/fields/tags-40000-40199#tag-40143) | LocalMktDate | Optional | Required if NoProvisionOptionExerciseFixedDates (40142) &gt; 0. |
-| 40144 | [ProvisionOptionExerciseFixedDateType](/fix/fields/tags-40000-40199#tag-40144) | ProvisionOptionExerciseFixedDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
+| 40143 | [ProvisionOptionExerciseFixedDate](/fix/fields/tags-40000-40199#tag-40143-provisionoptionexercisefixeddate) | LocalMktDate | Optional | Required if NoProvisionOptionExerciseFixedDates (40142) &gt; 0. |
+| 40144 | [ProvisionOptionExerciseFixedDateType](/fix/fields/tags-40000-40199#tag-40144-provisionoptionexercisefixeddatetype) | ProvisionOptionExerciseFixedDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
 
 </StickyTable>
 

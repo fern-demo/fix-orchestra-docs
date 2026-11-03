@@ -3,7 +3,13 @@ title: "UnderlyingPaymentStreamNonDeliverableSettlTerms"
 subtitle: "UnderlyingPaymentStreamNonDeliverableSettlTerms is a subcomponent of the UnderlyingPaymentStream component used to specify the non-deliverable settlement terms of the stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,13 +17,13 @@ subtitle: "UnderlyingPaymentStreamNonDeliverableSettlTerms is a subcomponent of 
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40648 | [UnderlyingPaymentStreamNonDeliverableRefCurrency](/fix/fields/tags-40600-40799#tag-40648) | Currency | Optional | The non-deliverable settlement reference currency. Uses ISO 4217 currency codes. |
-| 40649 | [UnderlyingPaymentStreamNonDeliverableFixingDatesBusinessDayConvention](/fix/fields/tags-40600-40799#tag-40649) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
+| 40648 | [UnderlyingPaymentStreamNonDeliverableRefCurrency](/fix/fields/tags-40600-40799#tag-40648-underlyingpaymentstreamnondeliverablerefcurrency) | Currency | Optional | The non-deliverable settlement reference currency. Uses ISO 4217 currency codes. |
+| 40649 | [UnderlyingPaymentStreamNonDeliverableFixingDatesBusinessDayConvention](/fix/fields/tags-40600-40799#tag-40649-underlyingpaymentstreamnondeliverablefixingdatesbusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
 | 40968 | [UnderlyingPaymentStreamNonDeliverableFixingDatesBusinessCenterGrp](/fix/groups/underlying-payment-stream-non-deliverable-fixing-dates-business-center-grp) | Repeating group | Optional | UnderlyingPaymentStreamNonDeliverableFixingDatesBusinessCenterGrp is a repeating subcomponent within the UnderlyingPaymentStreamNonDeliverableSettlTerms… |
-| 40651 | [UnderlyingPaymentStreamNonDeliverableFixingDatesRelativeTo](/fix/fields/tags-40600-40799#tag-40651) | int | Optional | Specifies the anchor date when the non-deliverable fixing dates are relative to an anchor date. See… |
-| 40652 | [UnderlyingPaymentStreamNonDeliverableFixingDatesOffsetPeriod](/fix/fields/tags-40600-40799#tag-40652) | int | Optional | Conditionally required when UnderlyingPaymentStreamNonDeliverableFixingDatesOffsetUnit(40653) is specified. |
-| 40653 | [UnderlyingPaymentStreamNonDeliverableFixingDatesOffsetUnit](/fix/fields/tags-40600-40799#tag-40653) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingPaymentStreamNonDeliverableFixingDatesOffsetPeriod(40652) is specified. |
-| 40654 | [UnderlyingPaymentStreamNonDeliverableFixingDatesOffsetDayType](/fix/fields/tags-40600-40799#tag-40654) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative non-deliverable fixing date offset. |
+| 40651 | [UnderlyingPaymentStreamNonDeliverableFixingDatesRelativeTo](/fix/fields/tags-40600-40799#tag-40651-underlyingpaymentstreamnondeliverablefixingdatesrelativeto) | int | Optional | Specifies the anchor date when the non-deliverable fixing dates are relative to an anchor date. See… |
+| 40652 | [UnderlyingPaymentStreamNonDeliverableFixingDatesOffsetPeriod](/fix/fields/tags-40600-40799#tag-40652-underlyingpaymentstreamnondeliverablefixingdatesoffsetperiod) | int | Optional | Conditionally required when UnderlyingPaymentStreamNonDeliverableFixingDatesOffsetUnit(40653) is specified. |
+| 40653 | [UnderlyingPaymentStreamNonDeliverableFixingDatesOffsetUnit](/fix/fields/tags-40600-40799#tag-40653-underlyingpaymentstreamnondeliverablefixingdatesoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingPaymentStreamNonDeliverableFixingDatesOffsetPeriod(40652) is specified. |
+| 40654 | [UnderlyingPaymentStreamNonDeliverableFixingDatesOffsetDayType](/fix/fields/tags-40600-40799#tag-40654-underlyingpaymentstreamnondeliverablefixingdatesoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative non-deliverable fixing date offset. |
 | | [UnderlyingPaymentStreamNonDeliverableSettlRateSource](/fix/components/underlying-payment-stream-non-deliverable-settl-rate-source) | Component | Optional | UnderlyingPaymentStreamNonDeliverableSettlRateSource is a subcomponent of the UnderlyingPaymentStreamNonDeliverableSettlTerms component used to specify the rate… |
 | 40656 | [UnderlyingPaymentStreamNonDeliverableFixingDateGrp](/fix/groups/underlying-payment-stream-non-deliverable-fixing-date-grp) | Repeating group | Optional | UnderlyingPaymentStreamNonDeliverableFixingDate is a subcomponent of the UnderlyingPaymentStreamNonDeliverableSettlTerms component used to specify predetermined… |
 | 40659 | [UnderlyingSettlRateDisruptionFallbackGrp](/fix/groups/underlying-settl-rate-disruption-fallback-grp) | Repeating group | Optional | The UnderlyingSettlRateDisruptionFallbackGrp is a repeating subcomponent of the UnderlyingPaymentStreamNonDeliverableSettlTermGrp component used to specify the… |

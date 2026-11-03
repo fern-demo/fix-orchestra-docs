@@ -3,7 +3,13 @@ title: "DerivativeSecurityList"
 subtitle: "The Derivative Security List message is used to return a list of securities that matches the criteria specified in a Derivative Security List Request."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType AA</Badge> <Badge intent="note" minimal>Securities Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType AA · Securities Reference Data · Pre Trade · Added FIX.4.3
+</llms-only>
 
 ## Message structure
 
@@ -13,18 +19,18 @@ subtitle: "The Derivative Security List message is used to return a list of secu
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
 | | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and… |
-| 964 | [SecurityReportID](/fix/fields/tags-800-999#tag-964) | int | Optional | Identifies a Security List message. |
-| 320 | [SecurityReqID](/fix/fields/tags-200-399#tag-320) | String | Optional | Unique ID of a Security Definition Request. |
-| 322 | [SecurityResponseID](/fix/fields/tags-200-399#tag-322) | String | Optional | Identifier for the Derivative Security List message |
-| 560 | [SecurityRequestResult](/fix/fields/tags-400-599#tag-560) | SecurityRequestResultCodeSet | Optional | Result of the Security Request identified by SecurityReqID |
-| 1607 | [SecurityRejectReason](/fix/fields/tags-1600-1799#tag-1607) | SecurityRejectReasonCodeSet | Optional | Used to specify a rejection reason when SecurityResponseType (323) is equal to 1 (Invalid or unsupported request) or 5 (Request for instrument data not… |
-| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | Optional | The business date for which the trade is expected to be cleared. |
+| 964 | [SecurityReportID](/fix/fields/tags-800-999#tag-964-securityreportid) | int | Optional | Identifies a Security List message. |
+| 320 | [SecurityReqID](/fix/fields/tags-200-399#tag-320-securityreqid) | String | Optional | Unique ID of a Security Definition Request. |
+| 322 | [SecurityResponseID](/fix/fields/tags-200-399#tag-322-securityresponseid) | String | Optional | Identifier for the Derivative Security List message |
+| 560 | [SecurityRequestResult](/fix/fields/tags-400-599#tag-560-securityrequestresult) | SecurityRequestResultCodeSet | Optional | Result of the Security Request identified by SecurityReqID |
+| 1607 | [SecurityRejectReason](/fix/fields/tags-1600-1799#tag-1607-securityrejectreason) | SecurityRejectReasonCodeSet | Optional | Used to specify a rejection reason when SecurityResponseType (323) is equal to 1 (Invalid or unsupported request) or 5 (Request for instrument data not… |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715-clearingbusinessdate) | LocalMktDate | Optional | The business date for which the trade is expected to be cleared. |
 | | [UnderlyingInstrument](/fix/components/underlying-instrument) | Component | Optional | The UnderlyingInstrument component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In… |
 | | [DerivativeSecurityDefinition](/fix/components/derivative-security-definition) | Component | Optional |  |
-| 779 | [LastUpdateTime](/fix/fields/tags-600-799#tag-779) | UTCTimestamp | Optional | Represents the time at which a security was last updated |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
-| 393 | [TotNoRelatedSym](/fix/fields/tags-200-399#tag-393) | int | Optional | Used to indicate the total number of securities being returned for this request. Used in the event that message fragmentation is required. |
-| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893) | LastFragmentCodeSet | Optional | Indicates whether this is the last fragment in a sequence of message fragments. Only required where message has been fragmented. |
+| 779 | [LastUpdateTime](/fix/fields/tags-600-799#tag-779-lastupdatetime) | UTCTimestamp | Optional | Represents the time at which a security was last updated |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 393 | [TotNoRelatedSym](/fix/fields/tags-200-399#tag-393-totnorelatedsym) | int | Optional | Used to indicate the total number of securities being returned for this request. Used in the event that message fragmentation is required. |
+| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893-lastfragment) | LastFragmentCodeSet | Optional | Indicates whether this is the last fragment in a sequence of message fragments. Only required where message has been fragmented. |
 | 146 | [RelSymDerivSecGrp](/fix/groups/rel-sym-deriv-sec-grp) | Repeating group | Optional |  |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 

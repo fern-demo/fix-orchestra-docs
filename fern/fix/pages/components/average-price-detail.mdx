@@ -3,7 +3,13 @@ title: "AveragePriceDetail"
 subtitle: "The AveragePriceDetail component provides average pricing details in a trade report, including the average pricing model and the start and end times of averaging period."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,9 +17,9 @@ subtitle: "The AveragePriceDetail component provides average pricing details in 
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2763 | [AveragePriceType](/fix/fields/tags-2600-2799#tag-2763) | AveragePriceTypeCodeSet | Optional | The average pricing model used for block trades. |
-| 2764 | [AveragePriceStartTime](/fix/fields/tags-2600-2799#tag-2764) | UTCTimestamp | Optional | Required if AveragePriceType(2763)=2 (Percent of volume average price) or 0 (Time weighted average price). |
-| 2765 | [AveragePriceEndTime](/fix/fields/tags-2600-2799#tag-2765) | UTCTimestamp | Optional | Required if AveragePriceType(2763)=2 (Percent of volume average price) or 0 (Time weighted average price). |
+| 2763 | [AveragePriceType](/fix/fields/tags-2600-2799#tag-2763-averagepricetype) | AveragePriceTypeCodeSet | Optional | The average pricing model used for block trades. |
+| 2764 | [AveragePriceStartTime](/fix/fields/tags-2600-2799#tag-2764-averagepricestarttime) | UTCTimestamp | Optional | Required if AveragePriceType(2763)=2 (Percent of volume average price) or 0 (Time weighted average price). |
+| 2765 | [AveragePriceEndTime](/fix/fields/tags-2600-2799#tag-2765-averagepriceendtime) | UTCTimestamp | Optional | Required if AveragePriceType(2763)=2 (Percent of volume average price) or 0 (Time weighted average price). |
 
 </StickyTable>
 

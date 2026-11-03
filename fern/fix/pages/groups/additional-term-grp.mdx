@@ -3,9 +3,15 @@ title: "AdditionalTermGrp"
 subtitle: "The AdditionalTermGrp is a repeating subcomponent of the Instrument component used to report additional contract terms."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40019</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoAdditionalTerms (40019)](/fix/fields/tags-40000-40199#tag-40019).
+<llms-only>
+Repeating group · NumInGroup 40019 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoAdditionalTerms (40019)](/fix/fields/tags-40000-40199#tag-40019-noadditionalterms).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40020 | [AdditionalTermConditionPrecedentBondIndicator](/fix/fields/tags-40000-40199#tag-40020) | Boolean | Optional | Required if NoAdditionalTerms(40019) &gt; 0. |
-| 40021 | [AdditionalTermDiscrepancyClauseIndicator](/fix/fields/tags-40000-40199#tag-40021) | Boolean | Optional | Indicates whether the discrepancy clause is applicable. |
+| 40020 | [AdditionalTermConditionPrecedentBondIndicator](/fix/fields/tags-40000-40199#tag-40020-additionaltermconditionprecedentbondindicator) | Boolean | Optional | Required if NoAdditionalTerms(40019) &gt; 0. |
+| 40021 | [AdditionalTermDiscrepancyClauseIndicator](/fix/fields/tags-40000-40199#tag-40021-additionaltermdiscrepancyclauseindicator) | Boolean | Optional | Indicates whether the discrepancy clause is applicable. |
 | 40000 | [AdditionalTermBondRefGrp](/fix/groups/additional-term-bond-ref-grp) | Repeating group | Optional | The AdditionalTermBondRefGrp is a repeating group subcomponent of the AdditionalTermGrp component used to identify an underlying reference bond for a swap. |
 
 </StickyTable>

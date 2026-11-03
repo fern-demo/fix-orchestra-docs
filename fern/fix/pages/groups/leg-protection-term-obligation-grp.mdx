@@ -3,9 +3,15 @@ title: "LegProtectionTermObligationGrp"
 subtitle: "The LegProtectionTermObligationGrp is a repeating component within the LegProtectionTermGrp component used to report applicable credit default swap (CDS) obligations."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41635</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegProtectionTermObligations (41635)](/fix/fields/tags-41600-41799#tag-41635).
+<llms-only>
+Repeating group · NumInGroup 41635 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegProtectionTermObligations (41635)](/fix/fields/tags-41600-41799#tag-41635-nolegprotectiontermobligations).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41636 | [LegProtectionTermObligationType](/fix/fields/tags-41600-41799#tag-41636) | String | Optional | Required if NoLegProtectionTermObligations(41635) &gt; 0. |
-| 41637 | [LegProtectionTermObligationValue](/fix/fields/tags-41600-41799#tag-41637) | String | Optional | The value associated with the protection term obligation specified in LegProtectionTermObligationType(41636). See… |
+| 41636 | [LegProtectionTermObligationType](/fix/fields/tags-41600-41799#tag-41636-legprotectiontermobligationtype) | String | Optional | Required if NoLegProtectionTermObligations(41635) &gt; 0. |
+| 41637 | [LegProtectionTermObligationValue](/fix/fields/tags-41600-41799#tag-41637-legprotectiontermobligationvalue) | String | Optional | The value associated with the protection term obligation specified in LegProtectionTermObligationType(41636). See… |
 
 </StickyTable>
 

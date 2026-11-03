@@ -3,11 +3,17 @@ title: "MiscFeesGrp"
 subtitle: "The MiscFeesGrp component is used to provide details of trade and transaction fees other than commissions, e.g. regulatory, exchange, taxes, levies, markup, trade reporting, etc. In the context of ESMA RTS 27 Best Execution Reporting, it…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 136</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Repeating group · NumInGroup 136 · Added FIX.4.4
+</llms-only>
 
 MiscFeesGrp should be used to convey fees related to the transaction (e.g. taxes, transaction based fees, etc.) and should not be used to specify payments based on the price or terms of the contract (e.g. upfront fee, premium amount, security lending fee, contract-based rebates, related fee resets, payment frequency, etc.). For contractual payments use the PaymentGrp component instead.
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoMiscFees (136)](/fix/fields/tags-0-199#tag-136).
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoMiscFees (136)](/fix/fields/tags-0-199#tag-136-nomiscfees).
 
 ## Members
 
@@ -15,15 +21,15 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 137 | [MiscFeeAmt](/fix/fields/tags-0-199#tag-137) | Amt | Optional | Required if NoMiscFees(136) &gt; 0. |
-| 138 | [MiscFeeCurr](/fix/fields/tags-0-199#tag-138) | Currency | Optional | Currency of miscellaneous fee |
-| 139 | [MiscFeeType](/fix/fields/tags-0-199#tag-139) | MiscFeeTypeCodeSet | Optional | Required if NoMiscFees(136) &gt; 0. |
-| 2712 | [MiscFeeQualifier](/fix/fields/tags-2600-2799#tag-2712) | MiscFeeQualifierCodeSet | Optional | Identifies whether the current entry contributes to the trade or transaction economics, i.e. affects NetMoney(118). |
+| 137 | [MiscFeeAmt](/fix/fields/tags-0-199#tag-137-miscfeeamt) | Amt | Optional | Required if NoMiscFees(136) &gt; 0. |
+| 138 | [MiscFeeCurr](/fix/fields/tags-0-199#tag-138-miscfeecurr) | Currency | Optional | Currency of miscellaneous fee |
+| 139 | [MiscFeeType](/fix/fields/tags-0-199#tag-139-miscfeetype) | MiscFeeTypeCodeSet | Optional | Required if NoMiscFees(136) &gt; 0. |
+| 2712 | [MiscFeeQualifier](/fix/fields/tags-2600-2799#tag-2712-miscfeequalifier) | MiscFeeQualifierCodeSet | Optional | Identifies whether the current entry contributes to the trade or transaction economics, i.e. affects NetMoney(118). |
 | 2633 | [MiscFeesSubGrp](/fix/groups/misc-fees-sub-grp) | Repeating group | Optional | The MiscFeesSubGrp component is used to provide further details for a given MiscFeeType(139) value. |
-| 891 | [MiscFeeBasis](/fix/fields/tags-800-999#tag-891) | MiscFeeBasisCodeSet | Optional | Defines the unit for a miscellaneous fee. |
-| 2216 | [MiscFeeRate](/fix/fields/tags-2200-2399#tag-2216) | Percentage | Optional | The fee rate when MiscFeeAmt(137) is a percentage of trade quantity. |
-| 2217 | [MiscFeeAmountDue](/fix/fields/tags-2200-2399#tag-2217) | Amt | Optional | The fee amount due if different from MiscFeeAmt(137). |
-| 2713 | [MiscFeeDesc](/fix/fields/tags-2600-2799#tag-2713) | String | Optional | Can be used to provide a textual description of the fee type. |
+| 891 | [MiscFeeBasis](/fix/fields/tags-800-999#tag-891-miscfeebasis) | MiscFeeBasisCodeSet | Optional | Defines the unit for a miscellaneous fee. |
+| 2216 | [MiscFeeRate](/fix/fields/tags-2200-2399#tag-2216-miscfeerate) | Percentage | Optional | The fee rate when MiscFeeAmt(137) is a percentage of trade quantity. |
+| 2217 | [MiscFeeAmountDue](/fix/fields/tags-2200-2399#tag-2217-miscfeeamountdue) | Amt | Optional | The fee amount due if different from MiscFeeAmt(137). |
+| 2713 | [MiscFeeDesc](/fix/fields/tags-2600-2799#tag-2713-miscfeedesc) | String | Optional | Can be used to provide a textual description of the fee type. |
 
 </StickyTable>
 

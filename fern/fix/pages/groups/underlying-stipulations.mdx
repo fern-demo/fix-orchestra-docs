@@ -3,9 +3,15 @@ title: "UnderlyingStipulations"
 subtitle: "The UnderlyingStipulations component block has the same usage as the Stipulations component block, but for an underlying security."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 887</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingStips (887)](/fix/fields/tags-800-999#tag-887).
+<llms-only>
+Repeating group · NumInGroup 887 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingStips (887)](/fix/fields/tags-800-999#tag-887-nounderlyingstips).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 888 | [UnderlyingStipType](/fix/fields/tags-800-999#tag-888) | StipulationTypeCodeSet | Optional | Required if NoUnderlyingStips &gt;0 |
-| 889 | [UnderlyingStipValue](/fix/fields/tags-800-999#tag-889) | String | Optional | Value of stipulation. Same values as StipulationValue (234) |
+| 888 | [UnderlyingStipType](/fix/fields/tags-800-999#tag-888-underlyingstiptype) | StipulationTypeCodeSet | Optional | Required if NoUnderlyingStips &gt;0 |
+| 889 | [UnderlyingStipValue](/fix/fields/tags-800-999#tag-889-underlyingstipvalue) | String | Optional | Value of stipulation. Same values as StipulationValue (234) |
 
 </StickyTable>
 

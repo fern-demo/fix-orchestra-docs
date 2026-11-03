@@ -2,9 +2,15 @@
 title: "SecMassStatGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 146</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedSym (146)](/fix/fields/tags-0-199#tag-146).
+<llms-only>
+Repeating group · NumInGroup 146 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedSym (146)](/fix/fields/tags-0-199#tag-146-norelatedsym).
 
 ## Members
 
@@ -18,14 +24,14 @@ Each repetition starts with the first member listed. The count of repetitions is
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
 | 1647 | [RelatedInstrumentGrp](/fix/groups/related-instrument-grp) | Repeating group | Optional | The RelatedInstrumentGrp is a repeating component at the same hierarchical level as the Instrument component, describing relationships and linkages between the… |
-| 326 | [SecurityTradingStatus](/fix/fields/tags-200-399#tag-326) | SecurityTradingStatusCodeSet | Optional | Conditionally required if NoRelatedSym &gt; 0. |
-| 1174 | [SecurityTradingEvent](/fix/fields/tags-1000-1199#tag-1174) | SecurityTradingEventCodeSet | Optional | Identifies an event related to a SecurityTradingStatus(326). An event occurs and is gone, it is not a state that applies for a period of time. |
-| 327 | [HaltReason](/fix/fields/tags-200-399#tag-327) | HaltReasonCodeSet | Optional | Denotes the reason for the Opening Delay or Trading Halt. |
-| 291 | [FinancialStatus](/fix/fields/tags-200-399#tag-291) | FinancialStatusCodeSet | Optional | Identifies a firm's or a security's financial status |
-| 292 | [CorporateAction](/fix/fields/tags-200-399#tag-292) | CorporateActionCodeSet | Optional | Identifies the type of Corporate Action. |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Comment, instructions, or other identifying information. |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 326 | [SecurityTradingStatus](/fix/fields/tags-200-399#tag-326-securitytradingstatus) | SecurityTradingStatusCodeSet | Optional | Conditionally required if NoRelatedSym &gt; 0. |
+| 1174 | [SecurityTradingEvent](/fix/fields/tags-1000-1199#tag-1174-securitytradingevent) | SecurityTradingEventCodeSet | Optional | Identifies an event related to a SecurityTradingStatus(326). An event occurs and is gone, it is not a state that applies for a period of time. |
+| 327 | [HaltReason](/fix/fields/tags-200-399#tag-327-haltreason) | HaltReasonCodeSet | Optional | Denotes the reason for the Opening Delay or Trading Halt. |
+| 291 | [FinancialStatus](/fix/fields/tags-200-399#tag-291-financialstatus) | FinancialStatusCodeSet | Optional | Identifies a firm's or a security's financial status |
+| 292 | [CorporateAction](/fix/fields/tags-200-399#tag-292-corporateaction) | CorporateActionCodeSet | Optional | Identifies the type of Corporate Action. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Comment, instructions, or other identifying information. |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 
 </StickyTable>
 

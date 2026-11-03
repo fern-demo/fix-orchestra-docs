@@ -3,7 +3,13 @@ title: "UnderlyingPaymentStreamCompoundingDates"
 subtitle: "UnderlyingPaymentStreamCompoundingDates is a subcomponent of the UnderlyingPaymentStream component used to specify the compounding dates of the stream - either specific, relative or periodic dates."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,21 +17,21 @@ subtitle: "UnderlyingPaymentStreamCompoundingDates is a subcomponent of the Unde
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42904 | [UnderlyingPaymentStreamCompoundingDatesBusinessDayConvention](/fix/fields/tags-42800-42999#tag-42904) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
+| 42904 | [UnderlyingPaymentStreamCompoundingDatesBusinessDayConvention](/fix/fields/tags-42800-42999#tag-42904-underlyingpaymentstreamcompoundingdatesbusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
 | 42915 | [UnderlyingPaymentStreamCompoundingDatesBusinessCenterGrp](/fix/groups/underlying-payment-stream-compounding-dates-business-center-grp) | Repeating group | Optional | UnderlyingPaymentStreamCompoundingDatesBusinessCenterGrp is a repeating subcomponent within the UnderlyingPaymentStreamCompoundingDates component. It is used to… |
 | 42901 | [UnderlyingPaymentStreamCompoundingDateGrp](/fix/groups/underlying-payment-stream-compounding-date-grp) | Repeating group | Optional | UnderlyingPaymentStreamCompoundingDateGrp is a subcomponent of the UnderlyingPaymentStreamCompoundingDates component used to specify predetermined compounding… |
-| 42905 | [UnderlyingPaymentStreamCompoundingDatesRelativeTo](/fix/fields/tags-42800-42999#tag-42905) | int | Optional | Specifies the anchor date when the compounding dates are relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for… |
-| 42906 | [UnderlyingPaymentStreamCompoundingDatesOffsetPeriod](/fix/fields/tags-42800-42999#tag-42906) | int | Optional | Conditionally required when UnderlyingPaymentStreamCompoundingDatesOffsetUnit(42907) is specified. |
-| 42907 | [UnderlyingPaymentStreamCompoundingDatesOffsetUnit](/fix/fields/tags-42800-42999#tag-42907) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingPaymentStreamCompoundingDatesOffsetPeriod(42906) is specified. |
-| 42908 | [UnderlyingPaymentStreamCompoundingDatesOffsetDayType](/fix/fields/tags-42800-42999#tag-42908) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative compounding date offset. |
-| 42909 | [UnderlyingPaymentStreamCompoundingPeriodSkip](/fix/fields/tags-42800-42999#tag-42909) | int | Optional | The number of periods in the "RelativeTo" schedule that are between each date in the compounding schedule. A skip of 2 would mean that compounding dates are… |
+| 42905 | [UnderlyingPaymentStreamCompoundingDatesRelativeTo](/fix/fields/tags-42800-42999#tag-42905-underlyingpaymentstreamcompoundingdatesrelativeto) | int | Optional | Specifies the anchor date when the compounding dates are relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for… |
+| 42906 | [UnderlyingPaymentStreamCompoundingDatesOffsetPeriod](/fix/fields/tags-42800-42999#tag-42906-underlyingpaymentstreamcompoundingdatesoffsetperiod) | int | Optional | Conditionally required when UnderlyingPaymentStreamCompoundingDatesOffsetUnit(42907) is specified. |
+| 42907 | [UnderlyingPaymentStreamCompoundingDatesOffsetUnit](/fix/fields/tags-42800-42999#tag-42907-underlyingpaymentstreamcompoundingdatesoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingPaymentStreamCompoundingDatesOffsetPeriod(42906) is specified. |
+| 42908 | [UnderlyingPaymentStreamCompoundingDatesOffsetDayType](/fix/fields/tags-42800-42999#tag-42908-underlyingpaymentstreamcompoundingdatesoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative compounding date offset. |
+| 42909 | [UnderlyingPaymentStreamCompoundingPeriodSkip](/fix/fields/tags-42800-42999#tag-42909-underlyingpaymentstreamcompoundingperiodskip) | int | Optional | The number of periods in the "RelativeTo" schedule that are between each date in the compounding schedule. A skip of 2 would mean that compounding dates are… |
 | | [UnderlyingPaymentStreamCompoundingStartDate](/fix/components/underlying-payment-stream-compounding-start-date) | Component | Optional | UnderlyingPaymentStreamCompoundingStartDate is a subcomponent of the UnderlyingPaymentStreamCompoundingDates component used to specify the start date for… |
 | | [UnderlyingPaymentStreamCompoundingEndDate](/fix/components/underlying-payment-stream-compounding-end-date) | Component | Optional | UnderlyingPaymentStreamCompoundingEndDate is a subcomponent of the UnderlyingPaymentStreamCompoundingDates component used to specify the end date for… |
-| 42910 | [UnderlyingPaymentStreamCompoundingFrequencyPeriod](/fix/fields/tags-42800-42999#tag-42910) | int | Optional | Conditionally required when UnderlyingPaymentStreamCompoundingFrequencyUnit(42911) is specified. |
-| 42911 | [UnderlyingPaymentStreamCompoundingFrequencyUnit](/fix/fields/tags-42800-42999#tag-42911) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when UnderlyingPaymentStreamCompoundingFrequencyPeriod(42910) is specified. |
-| 42912 | [UnderlyingPaymentStreamCompoundingRollConvention](/fix/fields/tags-42800-42999#tag-42912) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would be… |
-| 42913 | [UnderlyingPaymentStreamBoundsFirstDateUnadjusted](/fix/fields/tags-42800-42999#tag-42913) | LocalMktDate | Optional | The unadjusted first date of the compounding schedule. This can be used to restrict the range of dates when they are relative. |
-| 42914 | [UnderlyingPaymentStreamBoundsLastDateUnadjusted](/fix/fields/tags-42800-42999#tag-42914) | LocalMktDate | Optional | The unadjusted last date of the compounding schedule. This can be used to restrict the range of dates when they are relative. |
+| 42910 | [UnderlyingPaymentStreamCompoundingFrequencyPeriod](/fix/fields/tags-42800-42999#tag-42910-underlyingpaymentstreamcompoundingfrequencyperiod) | int | Optional | Conditionally required when UnderlyingPaymentStreamCompoundingFrequencyUnit(42911) is specified. |
+| 42911 | [UnderlyingPaymentStreamCompoundingFrequencyUnit](/fix/fields/tags-42800-42999#tag-42911-underlyingpaymentstreamcompoundingfrequencyunit) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when UnderlyingPaymentStreamCompoundingFrequencyPeriod(42910) is specified. |
+| 42912 | [UnderlyingPaymentStreamCompoundingRollConvention](/fix/fields/tags-42800-42999#tag-42912-underlyingpaymentstreamcompoundingrollconvention) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would be… |
+| 42913 | [UnderlyingPaymentStreamBoundsFirstDateUnadjusted](/fix/fields/tags-42800-42999#tag-42913-underlyingpaymentstreamboundsfirstdateunadjusted) | LocalMktDate | Optional | The unadjusted first date of the compounding schedule. This can be used to restrict the range of dates when they are relative. |
+| 42914 | [UnderlyingPaymentStreamBoundsLastDateUnadjusted](/fix/fields/tags-42800-42999#tag-42914-underlyingpaymentstreamboundslastdateunadjusted) | LocalMktDate | Optional | The unadjusted last date of the compounding schedule. This can be used to restrict the range of dates when they are relative. |
 
 </StickyTable>
 

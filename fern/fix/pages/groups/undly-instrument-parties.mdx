@@ -3,9 +3,15 @@ title: "UndlyInstrumentParties"
 subtitle: "The use of this component block is restricted to instrument definition only and is not permitted to contain transactional information. Only a specified subset of party roles will be supported within the InstrumentParty block."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1058</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUndlyInstrumentParties (1058)](/fix/fields/tags-1000-1199#tag-1058).
+<llms-only>
+Repeating group · NumInGroup 1058 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUndlyInstrumentParties (1058)](/fix/fields/tags-1000-1199#tag-1058-noundlyinstrumentparties).
 
 ## Members
 
@@ -13,10 +19,10 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1059 | [UnderlyingInstrumentPartyID](/fix/fields/tags-1000-1199#tag-1059) | String | Optional | Used to identify the source of PartyID. Required if UnderlyingInstrumentPartyIDSource(1060) is specified. Required if NoUndlyInstrumentParties(1058) &gt; 0. |
-| 1060 | [UnderlyingInstrumentPartyIDSource](/fix/fields/tags-1000-1199#tag-1060) | PartyIDSourceCodeSet | Optional | Used to identify class source of UnderlyingInstrumentPartyID(1059) value (e.g. BIC). Required if UnderlyingInstrumentPartyID(1059) is specified. Required if… |
-| 1061 | [UnderlyingInstrumentPartyRole](/fix/fields/tags-1000-1199#tag-1061) | PartyRoleCodeSet | Optional | Identifies the type of UnderlyingInstrumentPartyID(1059) (e.g. Executing Broker). Required if NoUndlyInstrumentParties(1058) &gt; 0. |
-| 2391 | [UnderlyingInstrumentPartyRoleQualifier](/fix/fields/tags-2200-2399#tag-2391) | PartyDetailRoleQualifierCodeSet | Optional | Used to further qualify the value of UnderlyingInstrumentPartyRole(1061). |
+| 1059 | [UnderlyingInstrumentPartyID](/fix/fields/tags-1000-1199#tag-1059-underlyinginstrumentpartyid) | String | Optional | Used to identify the source of PartyID. Required if UnderlyingInstrumentPartyIDSource(1060) is specified. Required if NoUndlyInstrumentParties(1058) &gt; 0. |
+| 1060 | [UnderlyingInstrumentPartyIDSource](/fix/fields/tags-1000-1199#tag-1060-underlyinginstrumentpartyidsource) | PartyIDSourceCodeSet | Optional | Used to identify class source of UnderlyingInstrumentPartyID(1059) value (e.g. BIC). Required if UnderlyingInstrumentPartyID(1059) is specified. Required if… |
+| 1061 | [UnderlyingInstrumentPartyRole](/fix/fields/tags-1000-1199#tag-1061-underlyinginstrumentpartyrole) | PartyRoleCodeSet | Optional | Identifies the type of UnderlyingInstrumentPartyID(1059) (e.g. Executing Broker). Required if NoUndlyInstrumentParties(1058) &gt; 0. |
+| 2391 | [UnderlyingInstrumentPartyRoleQualifier](/fix/fields/tags-2200-2399#tag-2391-underlyinginstrumentpartyrolequalifier) | PartyDetailRoleQualifierCodeSet | Optional | Used to further qualify the value of UnderlyingInstrumentPartyRole(1061). |
 | 1062 | [UndlyInstrumentPtysSubGrp](/fix/groups/undly-instrument-ptys-sub-grp) | Repeating group | Optional |  |
 
 </StickyTable>

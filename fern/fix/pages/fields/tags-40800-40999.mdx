@@ -3,9 +3,15 @@ title: "Tags 40800–40999"
 subtitle: "200 fields"
 ---
 
-## 40800 · PaymentStreamFloorRate [#tag-40800]
+## Tag 40800: PaymentStreamFloorRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40800</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40800 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 The floor rate, if any, which applies to the floating rate. The floor rate (strike) is only required where the floating rate on a swap stream is floored at a certain strike level. The floor rate is assumed to be exclusive of any spread and is a per annum rate, expressed as a decimal. A floor rate of 5% would be represented as 0.05.
 
@@ -13,9 +19,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 40801 · PaymentStreamFloorRateBuySide [#tag-40801]
+## Tag 40801: PaymentStreamFloorRateBuySide
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40801</Badge> <Badge intent="note" minimal>PaymentStreamFloorRateBuySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40801 · PaymentStreamFloorRateBuySideCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Reference to the buyer of the floor rate option through its trade side.
 
@@ -28,9 +40,15 @@ Code set **PaymentStreamFloorRateBuySideCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 40802 · PaymentStreamFloorRateSellSide [#tag-40802]
+## Tag 40802: PaymentStreamFloorRateSellSide
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40802</Badge> <Badge intent="note" minimal>PaymentStreamFloorRateBuySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40802 · PaymentStreamFloorRateBuySideCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Reference to the seller of the floor rate option through its trade side.
 
@@ -43,9 +61,15 @@ Code set **PaymentStreamFloorRateBuySideCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 40803 · PaymentStreamInitialRate [#tag-40803]
+## Tag 40803: PaymentStreamInitialRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40803</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40803 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 The initial floating rate reset agreed between the principal parties involved in the trade. This is assumed to be the first required reset rate for the first regular calculation period. It should only be included when the rate is not equal to the rate published on the source implied by the floating rate index. An initial rate of 5% would be represented as 0.05.
 
@@ -53,9 +77,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 40804 · PaymentStreamFinalRateRoundingDirection [#tag-40804]
+## Tag 40804: PaymentStreamFinalRateRoundingDirection
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40804</Badge> <Badge intent="note" minimal>RoundingDirectionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40804 · RoundingDirectionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the rounding direction.
 
@@ -69,9 +99,15 @@ Code set **RoundingDirectionCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 40805 · PaymentStreamFinalRatePrecision [#tag-40805]
+## Tag 40805: PaymentStreamFinalRatePrecision
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40805</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40805 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the rounding precision in terms of a number of decimal places. Note how a percentage rate rounding of 5 decimal places is expressed as a rounding precision of 7.
 
@@ -79,9 +115,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 40806 · PaymentStreamAveragingMethod [#tag-40806]
+## Tag 40806: PaymentStreamAveragingMethod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40806</Badge> <Badge intent="note" minimal>PaymentStreamAveragingMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40806 · PaymentStreamAveragingMethodCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 When rate averaging is applicable, used to specify whether a weighted or unweighted average calculation method is to be used.
 
@@ -94,9 +136,15 @@ Code set **PaymentStreamAveragingMethodCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 40807 · PaymentStreamNegativeRateTreatment [#tag-40807]
+## Tag 40807: PaymentStreamNegativeRateTreatment
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40807</Badge> <Badge intent="note" minimal>PaymentStreamNegativeRateTreatmentCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40807 · PaymentStreamNegativeRateTreatmentCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The specification of any provisions for calculating payment obligations when a floating rate is negative (either due to a quoted negative floating rate or by operation of a spread that is subtracted from the floating rate).
 
@@ -109,9 +157,15 @@ Code set **PaymentStreamNegativeRateTreatmentCodeSet** ([int](/fix/datatypes#int
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 40808 · PaymentStreamInflationLagPeriod [#tag-40808]
+## Tag 40808: PaymentStreamInflationLagPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40808</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40808 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the inflation lag period. The lag period is the offsetting period from the payment date which determines the reference period for which the inflation index is observed.
 
@@ -119,9 +173,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 40809 · PaymentStreamInflationLagUnit [#tag-40809]
+## Tag 40809: PaymentStreamInflationLagUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40809</Badge> <Badge intent="note" minimal>PaymentStreamInflationLagUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40809 · PaymentStreamInflationLagUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the inflation lag period.
 
@@ -136,9 +196,15 @@ Code set **PaymentStreamInflationLagUnitCodeSet** ([String](/fix/datatypes#strin
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 40810 · PaymentStreamInflationLagDayType [#tag-40810]
+## Tag 40810: PaymentStreamInflationLagDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40810</Badge> <Badge intent="note" minimal>PaymentStreamInflationLagDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40810 · PaymentStreamInflationLagDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The inflation lag period day type.
 
@@ -155,9 +221,15 @@ Code set **PaymentStreamInflationLagDayTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 40811 · PaymentStreamInflationInterpolationMethod [#tag-40811]
+## Tag 40811: PaymentStreamInflationInterpolationMethod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40811</Badge> <Badge intent="note" minimal>PaymentStreamInflationInterpolationMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40811 · PaymentStreamInflationInterpolationMethodCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The method used when calculating the Inflation Index Level from multiple points - the most common is Linear.
 
@@ -170,9 +242,15 @@ Code set **PaymentStreamInflationInterpolationMethodCodeSet** ([int](/fix/dataty
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 40812 · PaymentStreamInflationIndexSource [#tag-40812]
+## Tag 40812: PaymentStreamInflationIndexSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40812</Badge> <Badge intent="note" minimal>PaymentStreamRateIndexSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40812 · PaymentStreamRateIndexSourceCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The inflation index reference source.
 
@@ -187,9 +265,15 @@ Code set **PaymentStreamRateIndexSourceCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 40813 · PaymentStreamInflationPublicationSource [#tag-40813]
+## Tag 40813: PaymentStreamInflationPublicationSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40813</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40813 · String · Added FIX.5.0SP2
+</llms-only>
 
 The current main publication source such as relevant web site or a government body.
 
@@ -197,9 +281,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 40814 · PaymentStreamInflationInitialIndexLevel [#tag-40814]
+## Tag 40814: PaymentStreamInflationInitialIndexLevel
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40814</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40814 · float · Added FIX.5.0SP2
+</llms-only>
 
 Initial known index level for the first calculation period.
 
@@ -207,9 +297,15 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 40815 · PaymentStreamInflationFallbackBondApplicable [#tag-40815]
+## Tag 40815: PaymentStreamInflationFallbackBondApplicable
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40815</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40815 · Boolean · Added FIX.5.0SP2
+</llms-only>
 
 Indicates whether a fallback bond as defined in the 2006 ISDA Inflation Derivatives Definitions, sections 1.3 and 1.8, is applicable or not. If not specified, the default value is "Y" (True/Yes).
 
@@ -217,9 +313,15 @@ Type: [Boolean](/fix/datatypes#boolean)
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 40816 · PaymentStreamFRADiscounting [#tag-40816]
+## Tag 40816: PaymentStreamFRADiscounting
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40816</Badge> <Badge intent="note" minimal>PaymentStreamFRADiscountingCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40816 · PaymentStreamFRADiscountingCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The method of Forward Rate Agreement (FRA) discounting, if any, that will apply.
 
@@ -233,9 +335,15 @@ Code set **PaymentStreamFRADiscountingCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamFloatingRate](/fix/components/payment-stream-floating-rate)
 
-## 40817 · PaymentStreamNonDeliverableRefCurrency [#tag-40817]
+## Tag 40817: PaymentStreamNonDeliverableRefCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40817</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40817 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 The non-deliverable settlement reference currency. Uses ISO 4217 currency codes.
 
@@ -243,9 +351,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [PaymentStreamNonDeliverableSettlTerms](/fix/components/payment-stream-non-deliverable-settl-terms)
 
-## 40818 · PaymentStreamNonDeliverableFixingDatesBusinessDayConvention [#tag-40818]
+## Tag 40818: PaymentStreamNonDeliverableFixingDatesBusinessDayConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40818</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40818 · BusinessDayConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The business day convention used to adjust the payment stream's fixing date for the non-deliverable settlement terms. Used only to override the business day convention specified in the DateAdjustment component within the Instrument component
 
@@ -264,9 +378,15 @@ Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamNonDeliverableSettlTerms](/fix/components/payment-stream-non-deliverable-settl-terms)
 
-## 40819 · PaymentStreamNonDeliverableFixingDatesBusinessCenter [#tag-40819]
+## Tag 40819: PaymentStreamNonDeliverableFixingDatesBusinessCenter
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40819</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40819 · String · Added FIX.5.0SP2
+</llms-only>
 
 The business center calendar used to adjust the payment stream's fixing date for the non-deliverable terms, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
 
@@ -274,9 +394,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PaymentStreamNonDeliverableFixingDatesBusinessCenterGrp](/fix/groups/payment-stream-non-deliverable-fixing-dates-business-center-grp)
 
-## 40820 · PaymentStreamNonDeliverableFixingDatesRelativeTo [#tag-40820]
+## Tag 40820: PaymentStreamNonDeliverableFixingDatesRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40820</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40820 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the anchor date when the non-deliverable fixing dates are relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
 
@@ -284,9 +410,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamNonDeliverableSettlTerms](/fix/components/payment-stream-non-deliverable-settl-terms)
 
-## 40821 · PaymentStreamNonDeliverableFixingDatesOffsetPeriod [#tag-40821]
+## Tag 40821: PaymentStreamNonDeliverableFixingDatesOffsetPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40821</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40821 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the relative non-deliverable fixing date offset.
 
@@ -294,9 +426,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStreamNonDeliverableSettlTerms](/fix/components/payment-stream-non-deliverable-settl-terms)
 
-## 40822 · PaymentStreamNonDeliverableFixingDatesOffsetUnit [#tag-40822]
+## Tag 40822: PaymentStreamNonDeliverableFixingDatesOffsetUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40822</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40822 · PaymentStreamPaymentDateOffsetUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the relative non-deliverable fixing date offset.
 
@@ -311,9 +449,15 @@ Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#
 
 Used in: [PaymentStreamNonDeliverableSettlTerms](/fix/components/payment-stream-non-deliverable-settl-terms)
 
-## 40823 · PaymentStreamNonDeliverableFixingDatesOffsetDayType [#tag-40823]
+## Tag 40823: PaymentStreamNonDeliverableFixingDatesOffsetDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40823</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40823 · PaymentStreamPaymentDateOffsetDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the day type of the relative non-deliverable fixing date offset.
 
@@ -330,9 +474,15 @@ Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#
 
 Used in: [PaymentStreamNonDeliverableSettlTerms](/fix/components/payment-stream-non-deliverable-settl-terms)
 
-## 40824 · UnderlyingPaymentStreamNonDeliverableSettlReferencePage [#tag-40824]
+## Tag 40824: UnderlyingPaymentStreamNonDeliverableSettlReferencePage
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40824</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40824 · String · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the reference "page" from the rate source. When UnderlyingPaymentStreamNonDeliverableSettlRateSource(40661) = 3(ISDA Settlement Rate Option) this contains the value from the scheme that reflects the terms of the Annex A to the ISDA 1998 FX and Currency Option Definitions. See: http://www.fpml.org/coding-scheme/settlement-rate-option
 
@@ -340,29 +490,47 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [UnderlyingPaymentStreamNonDeliverableSettlRateSource](/fix/components/underlying-payment-stream-non-deliverable-settl-rate-source)
 
-## 40825 · NoNonDeliverableFixingDates [#tag-40825]
+## Tag 40825: NoNonDeliverableFixingDates
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40825</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40825 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of Fixing dates in the repeating group
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentStreamNonDeliverableFixingDateGrp](/fix/groups/payment-stream-non-deliverable-fixing-date-grp)
 
-## 40826 · NonDeliverableFixingDate [#tag-40826]
+## Tag 40826: NonDeliverableFixingDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40826</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40826 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 Non-deliverable fixing date unadjusted or adjusted depending on NonDeliverableFixingDateType(40827).
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentStreamNonDeliverableFixingDateGrp](/fix/groups/payment-stream-non-deliverable-fixing-date-grp)
 
-## 40827 · NonDeliverableFixingDateType [#tag-40827]
+## Tag 40827: NonDeliverableFixingDateType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40827</Badge> <Badge intent="note" minimal>NonDeliverableFixingDateTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40827 · NonDeliverableFixingDateTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the type of date (e.g. adjusted for holidays).
 
@@ -375,19 +543,31 @@ Code set **NonDeliverableFixingDateTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStreamNonDeliverableFixingDateGrp](/fix/groups/payment-stream-non-deliverable-fixing-date-grp)
 
-## 40828 · NoPaymentSchedules [#tag-40828]
+## Tag 40828: NoPaymentSchedules
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40828</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40828 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of swap schedules in the repeating group
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40829 · PaymentScheduleType [#tag-40829]
+## Tag 40829: PaymentScheduleType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40829</Badge> <Badge intent="note" minimal>PaymentScheduleTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40829 · PaymentScheduleTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Type of schedule.
 
@@ -422,9 +602,15 @@ Code set **PaymentScheduleTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40830 · PaymentScheduleStubType [#tag-40830]
+## Tag 40830: PaymentScheduleStubType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40830</Badge> <Badge intent="note" minimal>PaymentStubTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40830 · PaymentStubTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Indicates to which stub this schedule applies.
 
@@ -439,29 +625,47 @@ Code set **PaymentStubTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40831 · PaymentScheduleStartDateUnadjusted [#tag-40831]
+## Tag 40831: PaymentScheduleStartDateUnadjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40831</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40831 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The date on which the value is adjusted, or calculated if a future value notional for certain non-deliverable interest rate swaps (e.g. Brazillian Real (BRL) vs. CETIP Interbank Deposit Rate (CDI)), or the start date of a cashflow payment.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40832 · PaymentScheduleEndDateUnadjusted [#tag-40832]
+## Tag 40832: PaymentScheduleEndDateUnadjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40832</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40832 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The unadjusted end date of a cash flow payment.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40833 · PaymentSchedulePaySide [#tag-40833]
+## Tag 40833: PaymentSchedulePaySide
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40833</Badge> <Badge intent="note" minimal>PaymentPaySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40833 · PaymentPaySideCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The side of the party paying the step schedule.
 
@@ -474,9 +678,15 @@ Code set **PaymentPaySideCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40834 · PaymentScheduleReceiveSide [#tag-40834]
+## Tag 40834: PaymentScheduleReceiveSide
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40834</Badge> <Badge intent="note" minimal>PaymentPaySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40834 · PaymentPaySideCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The side of the party receiving the stepf schedule.
 
@@ -489,9 +699,15 @@ Code set **PaymentPaySideCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40835 · PaymentScheduleNotional [#tag-40835]
+## Tag 40835: PaymentScheduleNotional
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40835</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40835 · Amt · Added FIX.5.0SP2
+</llms-only>
 
 The notional value for this step, or amount of a cashflow payment.
 
@@ -499,9 +715,15 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40836 · PaymentScheduleCurrency [#tag-40836]
+## Tag 40836: PaymentScheduleCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40836</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40836 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 The currency for this step. Uses ISO 4217 currency codes.
 
@@ -509,9 +731,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40837 · PaymentScheduleRate [#tag-40837]
+## Tag 40837: PaymentScheduleRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40837</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40837 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 The rate value for this step schedule.
 
@@ -519,9 +747,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40838 · PaymentScheduleRateMultiplier [#tag-40838]
+## Tag 40838: PaymentScheduleRateMultiplier
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40838</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40838 · float · Added FIX.5.0SP2
+</llms-only>
 
 A rate multiplier to apply to the floating rate. The multiplier can be less than or greater than 1 (one). This element should only be included if the multiplier is not equal to 1 (one) for the term of the stream.
 
@@ -529,19 +763,31 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40839 · PaymentScheduleRateSpread [#tag-40839]
+## Tag 40839: PaymentScheduleRateSpread
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40839</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40839 · PriceOffset · Added FIX.5.0SP2
+</llms-only>
 
 The spread value for this step schedule.
 
-Type: [PriceOffset](/fix/datatypes#price-offset)
+Type: [PriceOffset](/fix/datatypes#priceoffset)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40840 · PaymentScheduleRateSpreadPositionType [#tag-40840]
+## Tag 40840: PaymentScheduleRateSpreadPositionType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40840</Badge> <Badge intent="note" minimal>PaymentStreamRateSpreadPositionTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40840 · PaymentStreamRateSpreadPositionTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Identifies whether the rate spread is applied to a long or short position.
 
@@ -554,9 +800,15 @@ Code set **PaymentStreamRateSpreadPositionTypeCodeSet** ([int](/fix/datatypes#in
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40841 · PaymentScheduleRateTreatment [#tag-40841]
+## Tag 40841: PaymentScheduleRateTreatment
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40841</Badge> <Badge intent="note" minimal>PaymentStreamRateTreatmentCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40841 · PaymentStreamRateTreatmentCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the yield calculation treatment for the step schedule.
 
@@ -569,9 +821,15 @@ Code set **PaymentStreamRateTreatmentCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40842 · PaymentScheduleFixedAmount [#tag-40842]
+## Tag 40842: PaymentScheduleFixedAmount
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40842</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40842 · Amt · Added FIX.5.0SP2
+</llms-only>
 
 The explicit payment amount for this step schedule.
 
@@ -579,9 +837,15 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40843 · PaymentScheduleFixedCurrency [#tag-40843]
+## Tag 40843: PaymentScheduleFixedCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40843</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40843 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 The currency of the fixed amount. Uses ISO 4217 currency codes.
 
@@ -589,9 +853,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40844 · PaymentScheduleStepFrequencyPeriod [#tag-40844]
+## Tag 40844: PaymentScheduleStepFrequencyPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40844</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40844 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the step frequency.
 
@@ -599,9 +869,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40845 · PaymentScheduleStepFrequencyUnit [#tag-40845]
+## Tag 40845: PaymentScheduleStepFrequencyUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40845</Badge> <Badge intent="note" minimal>CouponFrequencyUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40845 · CouponFrequencyUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the step frequency.
 
@@ -620,9 +896,15 @@ Code set **CouponFrequencyUnitCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40846 · PaymentScheduleStepOffsetValue [#tag-40846]
+## Tag 40846: PaymentScheduleStepOffsetValue
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40846</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40846 · Amt · Added FIX.5.0SP2
+</llms-only>
 
 The explicit amount that the notional changes on each step date. This can be a positive or negative amount.
 
@@ -630,9 +912,15 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40847 · PaymentScheduleStepRate [#tag-40847]
+## Tag 40847: PaymentScheduleStepRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40847</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40847 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 The percentage by which the notional changes on each step date. The percentage is either a percentage applied to the initial notional amount or the previous outstanding notional, depending on the value specified in PaymentScheduleStepRelativeTo(40849). The percentage can be either positive or negative.
 
@@ -640,9 +928,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40848 · PaymentScheduleStepOffsetRate [#tag-40848]
+## Tag 40848: PaymentScheduleStepOffsetRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40848</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40848 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 The explicit amount that the rate changes on each step date. This can be a positive or negative value.
 
@@ -650,9 +944,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40849 · PaymentScheduleStepRelativeTo [#tag-40849]
+## Tag 40849: PaymentScheduleStepRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40849</Badge> <Badge intent="note" minimal>PaymentScheduleStepRelativeToCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40849 · PaymentScheduleStepRelativeToCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies whether the PaymentScheduleStepRate(40847) or PaymentScheduleStepOffsetValue(40846) should be applied to the initial notional or the previous notional in order to calculate the notional step change amount.
 
@@ -665,19 +965,31 @@ Code set **PaymentScheduleStepRelativeToCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40850 · PaymentScheduleFixingDateUnadjusted [#tag-40850]
+## Tag 40850: PaymentScheduleFixingDateUnadjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40850</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40850 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The unadjusted fixing date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40851 · PaymentScheduleWeight [#tag-40851]
+## Tag 40851: PaymentScheduleWeight
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40851</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40851 · float · Added FIX.5.0SP2
+</llms-only>
 
 Floating rate observation weight for cashflow payment.
 
@@ -685,9 +997,15 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40852 · PaymentScheduleFixingDateRelativeTo [#tag-40852]
+## Tag 40852: PaymentScheduleFixingDateRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40852</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40852 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the anchor date when the fixing date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
 
@@ -695,9 +1013,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40853 · PaymentScheduleFixingDateBusinessDayConvention [#tag-40853]
+## Tag 40853: PaymentScheduleFixingDateBusinessDayConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40853</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40853 · BusinessDayConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The business day convention used to adjust the payment schedule's fixing date. Used only to override the business day convention specified in the DateAdjustment component within the Instrument component.
 
@@ -716,9 +1040,15 @@ Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40854 · PaymentScheduleFixingDateBusinessCenter [#tag-40854]
+## Tag 40854: PaymentScheduleFixingDateBusinessCenter
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40854</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40854 · String · Added FIX.5.0SP2
+</llms-only>
 
 The business center calendar used to adjust the payment schedule's fixing date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
 
@@ -726,9 +1056,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PaymentScheduleFixingDateBusinessCenterGrp](/fix/groups/payment-schedule-fixing-date-business-center-grp)
 
-## 40855 · PaymentScheduleFixingDateOffsetPeriod [#tag-40855]
+## Tag 40855: PaymentScheduleFixingDateOffsetPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40855</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40855 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the relative fixing date offset.
 
@@ -736,9 +1072,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40856 · PaymentScheduleFixingDateOffsetUnit [#tag-40856]
+## Tag 40856: PaymentScheduleFixingDateOffsetUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40856</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40856 · PaymentStreamPaymentDateOffsetUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the relative fixing date offset.
 
@@ -753,9 +1095,15 @@ Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40857 · PaymentScheduleFixingDateOffsetDayType [#tag-40857]
+## Tag 40857: PaymentScheduleFixingDateOffsetDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40857</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40857 · PaymentStreamPaymentDateOffsetDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the day type of the relative fixing date offset.
 
@@ -772,29 +1120,47 @@ Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40858 · PaymentScheduleFixingDateAdjusted [#tag-40858]
+## Tag 40858: PaymentScheduleFixingDateAdjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40858</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40858 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The adjusted fixing date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40859 · PaymentScheduleFixingTime [#tag-40859]
+## Tag 40859: PaymentScheduleFixingTime
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40859</Badge> <Badge intent="note" minimal>LocalMktTime</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40859 · LocalMktTime · Added FIX.5.0SP2
+</llms-only>
 
 The fixing time associated with the step schedule.
 
-Type: [LocalMktTime](/fix/datatypes#local-mkt-time)
+Type: [LocalMktTime](/fix/datatypes#localmkttime)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40860 · PaymentScheduleFixingTimeBusinessCenter [#tag-40860]
+## Tag 40860: PaymentScheduleFixingTimeBusinessCenter
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40860</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40860 · String · Added FIX.5.0SP2
+</llms-only>
 
 Business center for determining fixing time. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
 
@@ -802,9 +1168,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40861 · PaymentScheduleInterimExchangePaymentDateRelativeTo [#tag-40861]
+## Tag 40861: PaymentScheduleInterimExchangePaymentDateRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40861</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40861 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the anchor date when the interim exchange payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
 
@@ -812,9 +1184,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40862 · PaymentScheduleInterimExchangeDatesBusinessDayConvention [#tag-40862]
+## Tag 40862: PaymentScheduleInterimExchangeDatesBusinessDayConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40862</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40862 · BusinessDayConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The business day convention used to adjust the payment schedule's interim exchange date. Used only to override the business day convention specified in the DateAdjustment component within the Instrument component.
 
@@ -833,9 +1211,15 @@ Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40863 · PaymentScheduleInterimExchangeDatesBusinessCenter [#tag-40863]
+## Tag 40863: PaymentScheduleInterimExchangeDatesBusinessCenter
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40863</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40863 · String · Added FIX.5.0SP2
+</llms-only>
 
 The business center calendar used to adjust the payment schedule's interim exchange date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
 
@@ -843,9 +1227,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PaymentScheduleInterimExchangeDateBusinessCenterGrp](/fix/groups/payment-schedule-interim-exchange-date-business-center-grp)
 
-## 40864 · PaymentScheduleInterimExchangeDatesOffsetPeriod [#tag-40864]
+## Tag 40864: PaymentScheduleInterimExchangeDatesOffsetPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40864</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40864 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the relative interim exchange date offset.
 
@@ -853,9 +1243,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40865 · PaymentScheduleInterimExchangeDatesOffsetUnit [#tag-40865]
+## Tag 40865: PaymentScheduleInterimExchangeDatesOffsetUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40865</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40865 · PaymentStreamPaymentDateOffsetUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the relative interim exchange date offset.
 
@@ -870,9 +1266,15 @@ Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40866 · PaymentScheduleInterimExchangeDatesOffsetDayType [#tag-40866]
+## Tag 40866: PaymentScheduleInterimExchangeDatesOffsetDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40866</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40866 · PaymentStreamPaymentDateOffsetDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the day type of the relative interim exchange date offset.
 
@@ -889,29 +1291,47 @@ Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40867 · PaymentScheduleInterimExchangeDateAdjusted [#tag-40867]
+## Tag 40867: PaymentScheduleInterimExchangeDateAdjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40867</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40867 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The adjusted interim exchange date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PaymentScheduleGrp](/fix/groups/payment-schedule-grp)
 
-## 40868 · NoPaymentScheduleRateSources [#tag-40868]
+## Tag 40868: NoPaymentScheduleRateSources
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40868</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40868 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of swap schedule rate sources.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentScheduleRateSourceGrp](/fix/groups/payment-schedule-rate-source-grp)
 
-## 40869 · PaymentScheduleRateSource [#tag-40869]
+## Tag 40869: PaymentScheduleRateSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40869</Badge> <Badge intent="note" minimal>RateSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40869 · RateSourceCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the source of rate information.
 
@@ -927,9 +1347,15 @@ Code set **RateSourceCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentScheduleRateSourceGrp](/fix/groups/payment-schedule-rate-source-grp)
 
-## 40870 · PaymentScheduleRateSourceType [#tag-40870]
+## Tag 40870: PaymentScheduleRateSourceType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40870</Badge> <Badge intent="note" minimal>RateSourceTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40870 · RateSourceTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Rate source type.
 
@@ -942,9 +1368,15 @@ Code set **RateSourceTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentScheduleRateSourceGrp](/fix/groups/payment-schedule-rate-source-grp)
 
-## 40871 · PaymentScheduleReferencePage [#tag-40871]
+## Tag 40871: PaymentScheduleReferencePage
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40871</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40871 · String · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the reference “page” from the rate source. For FX, the reference page to the spot rate to be used for the reference FX spot rate. When RateSource(1446) = 3 (ISDA Settlement Rate Option) this contains the value from the scheme that reflects the terms of the Annex A to the ISDA 1998 FX and Currency Option Definitions. See: http://www.fpml.org/coding-scheme/settlement-rate-option
 
@@ -952,19 +1384,31 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PaymentScheduleRateSourceGrp](/fix/groups/payment-schedule-rate-source-grp)
 
-## 40872 · NoPaymentStubs [#tag-40872]
+## Tag 40872: NoPaymentStubs
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40872</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40872 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of stubs in the repeating group
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40873 · PaymentStubType [#tag-40873]
+## Tag 40873: PaymentStubType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40873</Badge> <Badge intent="note" minimal>PaymentStubTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40873 · PaymentStubTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Stub type.
 
@@ -979,9 +1423,15 @@ Code set **PaymentStubTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40874 · PaymentStubLength [#tag-40874]
+## Tag 40874: PaymentStubLength
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40874</Badge> <Badge intent="note" minimal>PaymentStubLengthCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40874 · PaymentStubLengthCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Optional indication whether stub is shorter or longer than the regular swap period.
 
@@ -994,9 +1444,15 @@ Code set **PaymentStubLengthCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40875 · PaymentStubRate [#tag-40875]
+## Tag 40875: PaymentStubRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40875</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40875 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 The agreed upon fixed rate for this stub.
 
@@ -1004,9 +1460,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40876 · PaymentStubFixedAmount [#tag-40876]
+## Tag 40876: PaymentStubFixedAmount
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40876</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40876 · Amt · Added FIX.5.0SP2
+</llms-only>
 
 A fixed payment amount for the stub.
 
@@ -1014,9 +1476,15 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40877 · PaymentStubFixedCurrency [#tag-40877]
+## Tag 40877: PaymentStubFixedCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40877</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40877 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 The currency of the fixed payment amount. Uses ISO 4217 currency codes.
 
@@ -1024,9 +1492,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40878 · PaymentStubIndex [#tag-40878]
+## Tag 40878: PaymentStubIndex
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40878</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40878 · String · Added FIX.5.0SP2
+</llms-only>
 
 The stub floating rate index.
 
@@ -1034,9 +1508,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40879 · PaymentStubIndexSource [#tag-40879]
+## Tag 40879: PaymentStubIndexSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40879</Badge> <Badge intent="note" minimal>PaymentStreamRateIndexSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40879 · PaymentStreamRateIndexSourceCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The source of the stub floating rate index.
 
@@ -1051,9 +1531,15 @@ Code set **PaymentStreamRateIndexSourceCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40880 · PaymentStubIndexCurvePeriod [#tag-40880]
+## Tag 40880: PaymentStubIndexCurvePeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40880</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40880 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the stub floating rate index.
 
@@ -1061,9 +1547,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40881 · PaymentStubIndexCurveUnit [#tag-40881]
+## Tag 40881: PaymentStubIndexCurveUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40881</Badge> <Badge intent="note" minimal>PaymentStreamRateIndexCurveUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40881 · PaymentStreamRateIndexCurveUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the stub floating rate index.
 
@@ -1078,9 +1570,15 @@ Code set **PaymentStreamRateIndexCurveUnitCodeSet** ([String](/fix/datatypes#str
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40882 · PaymentStubIndexRateMultiplier [#tag-40882]
+## Tag 40882: PaymentStubIndexRateMultiplier
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40882</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40882 · float · Added FIX.5.0SP2
+</llms-only>
 
 A rate multiplier to apply to the floating rate. The multiplier can be less than or greater than 1 (one). This element should only be included if the multiplier is not equal to 1 (one) for the term of the stream.
 
@@ -1088,19 +1586,31 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40883 · PaymentStubIndexRateSpread [#tag-40883]
+## Tag 40883: PaymentStubIndexRateSpread
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40883</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40883 · PriceOffset · Added FIX.5.0SP2
+</llms-only>
 
 Spread from floating rate index.
 
-Type: [PriceOffset](/fix/datatypes#price-offset)
+Type: [PriceOffset](/fix/datatypes#priceoffset)
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40884 · PaymentStubIndexRateSpreadPositionType [#tag-40884]
+## Tag 40884: PaymentStubIndexRateSpreadPositionType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40884</Badge> <Badge intent="note" minimal>PaymentStreamRateSpreadPositionTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40884 · PaymentStreamRateSpreadPositionTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Identifies whether the rate spread is applied to a long or short position.
 
@@ -1113,9 +1623,15 @@ Code set **PaymentStreamRateSpreadPositionTypeCodeSet** ([int](/fix/datatypes#in
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40885 · PaymentStubIndexRateTreatment [#tag-40885]
+## Tag 40885: PaymentStubIndexRateTreatment
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40885</Badge> <Badge intent="note" minimal>PaymentStreamRateTreatmentCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40885 · PaymentStreamRateTreatmentCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the yield calculation treatment for the payment stub index.
 
@@ -1128,9 +1644,15 @@ Code set **PaymentStreamRateTreatmentCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40886 · PaymentStubIndexCapRate [#tag-40886]
+## Tag 40886: PaymentStubIndexCapRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40886</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40886 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 The cap rate, if any, which applies to the floating rate. The cap rate (strike) is only required where the floating rate on a swap stream is capped at a certain level. The cap rate is assumed to be exclusive of any spread and is a per annum rate, expressed as a decimal. A cap rate of 5% would be represented as 0.05.
 
@@ -1138,9 +1660,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40887 · PaymentStubIndexCapRateBuySide [#tag-40887]
+## Tag 40887: PaymentStubIndexCapRateBuySide
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40887</Badge> <Badge intent="note" minimal>PaymentStreamCapRateBuySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40887 · PaymentStreamCapRateBuySideCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Reference to the buyer of the cap rate option through its trade side.
 
@@ -1153,9 +1681,15 @@ Code set **PaymentStreamCapRateBuySideCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40888 · PaymentStubIndexCapRateSellSide [#tag-40888]
+## Tag 40888: PaymentStubIndexCapRateSellSide
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40888</Badge> <Badge intent="note" minimal>PaymentStreamCapRateBuySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40888 · PaymentStreamCapRateBuySideCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Reference to the seller of the cap rate option through its trade side.
 
@@ -1168,9 +1702,15 @@ Code set **PaymentStreamCapRateBuySideCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40889 · PaymentStubIndexFloorRate [#tag-40889]
+## Tag 40889: PaymentStubIndexFloorRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40889</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40889 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 The floor rate, if any, which applies to the floating rate. The floor rate (strike) is only required where the floating rate on a swap stream is floored at a certain strike level. The floor rate is assumed to be exclusive of any spread and is a per annum rate, expressed as a decimal. A floor rate of 5% would be represented as 0.05.
 
@@ -1178,9 +1718,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40890 · PaymentStubIndexFloorRateBuySide [#tag-40890]
+## Tag 40890: PaymentStubIndexFloorRateBuySide
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40890</Badge> <Badge intent="note" minimal>PaymentStreamFloorRateBuySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40890 · PaymentStreamFloorRateBuySideCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Reference to the buyer of the floor rate option through its trade side.
 
@@ -1193,9 +1739,15 @@ Code set **PaymentStreamFloorRateBuySideCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40891 · PaymentStubIndexFloorRateSellSide [#tag-40891]
+## Tag 40891: PaymentStubIndexFloorRateSellSide
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40891</Badge> <Badge intent="note" minimal>PaymentStreamFloorRateBuySideCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40891 · PaymentStreamFloorRateBuySideCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Reference to the seller of the floor rate option through its trade side.
 
@@ -1208,9 +1760,15 @@ Code set **PaymentStreamFloorRateBuySideCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40892 · PaymentStubIndex2 [#tag-40892]
+## Tag 40892: PaymentStubIndex2
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40892</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40892 · String · Added FIX.5.0SP2
+</llms-only>
 
 The second stub floating rate index.
 
@@ -1218,9 +1776,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40893 · PaymentStubIndex2Source [#tag-40893]
+## Tag 40893: PaymentStubIndex2Source
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40893</Badge> <Badge intent="note" minimal>PaymentStreamRateIndexSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40893 · PaymentStreamRateIndexSourceCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The source of the second stub floating rate index.
 
@@ -1235,9 +1799,15 @@ Code set **PaymentStreamRateIndexSourceCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40894 · PaymentStubIndex2CurvePeriod [#tag-40894]
+## Tag 40894: PaymentStubIndex2CurvePeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40894</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40894 · int · Added FIX.5.0SP2
+</llms-only>
 
 Secondary time unit multiplier for the stub floating rate index curve.
 
@@ -1245,9 +1815,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40895 · PaymentStubIndex2CurveUnit [#tag-40895]
+## Tag 40895: PaymentStubIndex2CurveUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40895</Badge> <Badge intent="note" minimal>PaymentStreamRateIndexCurveUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40895 · PaymentStreamRateIndexCurveUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Secondary time unit associated with the stub floating rate index curve.
 
@@ -1262,9 +1838,15 @@ Code set **PaymentStreamRateIndexCurveUnitCodeSet** ([String](/fix/datatypes#str
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40896 · PaymentStubIndex2RateMultiplier [#tag-40896]
+## Tag 40896: PaymentStubIndex2RateMultiplier
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40896</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40896 · float · Added FIX.5.0SP2
+</llms-only>
 
 A rate multiplier to apply to the second floating rate. The multiplier can be less than or greater than 1 (one). This element should only be included if the multiplier is not equal to 1 (one) for the term of the stream.
 
@@ -1272,19 +1854,31 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40897 · PaymentStubIndex2RateSpread [#tag-40897]
+## Tag 40897: PaymentStubIndex2RateSpread
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40897</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40897 · PriceOffset · Added FIX.5.0SP2
+</llms-only>
 
 Spread from the second floating rate index.
 
-Type: [PriceOffset](/fix/datatypes#price-offset)
+Type: [PriceOffset](/fix/datatypes#priceoffset)
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40898 · PaymentStubIndex2RateSpreadPositionType [#tag-40898]
+## Tag 40898: PaymentStubIndex2RateSpreadPositionType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40898</Badge> <Badge intent="note" minimal>PaymentStreamRateSpreadPositionTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40898 · PaymentStreamRateSpreadPositionTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Identifies whether the rate spread is applied to a long or short position.
 
@@ -1297,9 +1891,15 @@ Code set **PaymentStreamRateSpreadPositionTypeCodeSet** ([int](/fix/datatypes#in
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40899 · PaymentStubIndex2RateTreatment [#tag-40899]
+## Tag 40899: PaymentStubIndex2RateTreatment
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40899</Badge> <Badge intent="note" minimal>PaymentStreamRateTreatmentCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40899 · PaymentStreamRateTreatmentCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the yield calculation treatment for the second stub index.
 
@@ -1312,9 +1912,15 @@ Code set **PaymentStreamRateTreatmentCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40900 · PaymentStubIndex2CapRate [#tag-40900]
+## Tag 40900: PaymentStubIndex2CapRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40900</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40900 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 The cap rate, if any, which applies to the second floating rate. The cap rate (strike) is only required where the floating rate on a swap stream is capped at a certain level. The cap rate is assumed to be exclusive of any spread and is a per annum rate, expressed as a decimal. A cap rate of 5% would be represented as 0.05.
 
@@ -1322,9 +1928,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40901 · PaymentStubIndex2FloorRate [#tag-40901]
+## Tag 40901: PaymentStubIndex2FloorRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40901</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40901 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 The floor rate, if any, which applies to the second floating rate. The floor rate (strike) is only required where the floating rate on a swap stream is floored at a certain strike level. The floor rate is assumed to be exclusive of any spread and is a per annum rate, expressed as a decimal. A floor rate of 5% would be represented as 0.05.
 
@@ -1332,19 +1944,31 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [PaymentStubGrp](/fix/groups/payment-stub-grp)
 
-## 40902 · NoLegSettlRateFallbacks [#tag-40902]
+## Tag 40902: NoLegSettlRateFallbacks
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40902</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40902 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of settlement rate fallbacks in the repeating group
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegSettlRateDisruptionFallbackGrp](/fix/groups/leg-settl-rate-disruption-fallback-grp)
 
-## 40903 · LegSettlRatePostponementMaximumDays [#tag-40903]
+## Tag 40903: LegSettlRatePostponementMaximumDays
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40903</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40903 · int · Added FIX.5.0SP2
+</llms-only>
 
 The maximum number of days to wait for a quote from the disrupted settlement rate option before proceding to this method.
 
@@ -1352,9 +1976,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [LegSettlRateDisruptionFallbackGrp](/fix/groups/leg-settl-rate-disruption-fallback-grp)
 
-## 40904 · UnderlyingSettlRateFallbackRateSource [#tag-40904]
+## Tag 40904: UnderlyingSettlRateFallbackRateSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40904</Badge> <Badge intent="note" minimal>RateSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40904 · RateSourceCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the source of rate information.
 
@@ -1370,9 +2000,15 @@ Code set **RateSourceCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [UnderlyingSettlRateFallbackRateSource](/fix/components/underlying-settl-rate-fallback-rate-source)
 
-## 40905 · LegSettlRatePostponementSurvey [#tag-40905]
+## Tag 40905: LegSettlRatePostponementSurvey
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40905</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40905 · Boolean · Added FIX.5.0SP2
+</llms-only>
 
 Indicates whether to request a settlement rate quote from the market.
 
@@ -1380,9 +2016,15 @@ Type: [Boolean](/fix/datatypes#boolean)
 
 Used in: [LegSettlRateDisruptionFallbackGrp](/fix/groups/leg-settl-rate-disruption-fallback-grp)
 
-## 40906 · LegSettlRatePostponementCalculationAgent [#tag-40906]
+## Tag 40906: LegSettlRatePostponementCalculationAgent
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40906</Badge> <Badge intent="note" minimal>ProvisionCalculationAgentCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40906 · ProvisionCalculationAgentCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Used to identify the settlement rate postponement calculation agent.
 
@@ -1397,19 +2039,31 @@ Code set **ProvisionCalculationAgentCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [LegSettlRateDisruptionFallbackGrp](/fix/groups/leg-settl-rate-disruption-fallback-grp)
 
-## 40907 · StreamEffectiveDateUnadjusted [#tag-40907]
+## Tag 40907: StreamEffectiveDateUnadjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40907</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40907 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The unadjusted effective date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [StreamEffectiveDate](/fix/components/stream-effective-date)
 
-## 40908 · StreamEffectiveDateBusinessDayConvention [#tag-40908]
+## Tag 40908: StreamEffectiveDateBusinessDayConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40908</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40908 · BusinessDayConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The business day convention used to adjust the instrument's stream's effective, or relative effective, date. Used only to override the business day convention specified in the DateAdjustment component within the Instrument component.
 
@@ -1428,9 +2082,15 @@ Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [StreamEffectiveDate](/fix/components/stream-effective-date)
 
-## 40909 · StreamEffectiveDateBusinessCenter [#tag-40909]
+## Tag 40909: StreamEffectiveDateBusinessCenter
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40909</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40909 · String · Added FIX.5.0SP2
+</llms-only>
 
 The business center calendar used to adjust the instrument's stream's effective, or relative effective, date, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
 
@@ -1438,9 +2098,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [StreamEffectiveBusinessCenterGrp](/fix/groups/stream-effective-business-center-grp)
 
-## 40910 · StreamEffectiveDateRelativeTo [#tag-40910]
+## Tag 40910: StreamEffectiveDateRelativeTo
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40910</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40910 · int · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the anchor date when the effective date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values.
 
@@ -1448,9 +2114,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [StreamEffectiveDate](/fix/components/stream-effective-date)
 
-## 40911 · StreamEffectiveDateOffsetPeriod [#tag-40911]
+## Tag 40911: StreamEffectiveDateOffsetPeriod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40911</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40911 · int · Added FIX.5.0SP2
+</llms-only>
 
 Time unit multiplier for the relative effective date offset.
 
@@ -1458,9 +2130,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [StreamEffectiveDate](/fix/components/stream-effective-date)
 
-## 40912 · StreamEffectiveDateOffsetUnit [#tag-40912]
+## Tag 40912: StreamEffectiveDateOffsetUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40912</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40912 · PaymentStreamPaymentDateOffsetUnitCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Time unit associated with the relative effective date offset.
 
@@ -1475,9 +2153,15 @@ Code set **PaymentStreamPaymentDateOffsetUnitCodeSet** ([String](/fix/datatypes#
 
 Used in: [StreamEffectiveDate](/fix/components/stream-effective-date)
 
-## 40913 · StreamEffectiveDateOffsetDayType [#tag-40913]
+## Tag 40913: StreamEffectiveDateOffsetDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40913</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40913 · PaymentStreamPaymentDateOffsetDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the day type of the relative effective date offset.
 
@@ -1494,19 +2178,31 @@ Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#
 
 Used in: [StreamEffectiveDate](/fix/components/stream-effective-date)
 
-## 40914 · StreamEffectiveDateAdjusted [#tag-40914]
+## Tag 40914: StreamEffectiveDateAdjusted
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40914</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40914 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The adjusted effective date.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [StreamEffectiveDate](/fix/components/stream-effective-date)
 
-## 40915 · UnderlyingSettlRateFallbackReferencePage [#tag-40915]
+## Tag 40915: UnderlyingSettlRateFallbackReferencePage
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40915</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40915 · String · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the reference "page" from the rate source. When UnderlyingSettlRateFallbackRateSource(40904) = 3(ISDA Settlement Rate Option) this contains the value from the scheme that reflects the terms of the Annex A to the ISDA 1998 FX and Currency Option Definitions. See: http://www.fpml.org/coding-scheme/settlement-rate-option
 
@@ -1514,9 +2210,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [UnderlyingSettlRateFallbackRateSource](/fix/components/underlying-settl-rate-fallback-rate-source)
 
-## 40916 · CashSettlValuationSubsequentBusinessDaysOffset [#tag-40916]
+## Tag 40916: CashSettlValuationSubsequentBusinessDaysOffset
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40916</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40916 · int · Added FIX.5.0SP2
+</llms-only>
 
 The number of business days between successive valuation dates when multiple valuation dates are applicable for cash settlement.
 
@@ -1526,9 +2228,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
 
-## 40917 · CashSettlNumOfValuationDates [#tag-40917]
+## Tag 40917: CashSettlNumOfValuationDates
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40917</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40917 · int · Added FIX.5.0SP2
+</llms-only>
 
 Where multiple valuation dates are specified as being applicable for cash settlement, this specifies the number of applicable valuation dates.
 
@@ -1538,9 +2246,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [CashSettlTermGrp](/fix/groups/cash-settl-term-grp)
 
-## 40918 · UnderlyingProvisionPartyRoleQualifier [#tag-40918]
+## Tag 40918: UnderlyingProvisionPartyRoleQualifier
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40918</Badge> <Badge intent="note" minimal>PartyDetailRoleQualifierCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40918 · PartyDetailRoleQualifierCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Used to further qualify the value of UnderlyingProvisionPartyRole(42176).
 
@@ -1581,9 +2295,15 @@ Code set **PartyDetailRoleQualifierCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [UnderlyingProvisionParties](/fix/groups/underlying-provision-parties)
 
-## 40919 · PaymentPriceType [#tag-40919]
+## Tag 40919: PaymentPriceType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40919</Badge> <Badge intent="note" minimal>PriceTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40919 · PriceTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the type of price for PaymentPrice(40218).
 
@@ -1619,9 +2339,15 @@ Code set **PriceTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentGrp](/fix/groups/payment-grp)
 
-## 40920 · PaymentStreamPaymentDateOffsetDayType [#tag-40920]
+## Tag 40920: PaymentStreamPaymentDateOffsetDayType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40920</Badge> <Badge intent="note" minimal>PaymentStreamPaymentDateOffsetDayTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40920 · PaymentStreamPaymentDateOffsetDayTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the day type of the relative payment date offset.
 
@@ -1638,9 +2364,15 @@ Code set **PaymentStreamPaymentDateOffsetDayTypeCodeSet** ([int](/fix/datatypes#
 
 Used in: [PaymentStreamPaymentDates](/fix/components/payment-stream-payment-dates)
 
-## 40921 · BusinessDayConvention [#tag-40921]
+## Tag 40921: BusinessDayConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40921</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40921 · BusinessDayConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The business day convention used for adjusting dates. The value defined here applies to all adjustable dates in the instrument unless specifically overridden.
 
@@ -1659,9 +2391,15 @@ Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [DateAdjustment](/fix/components/date-adjustment)
 
-## 40922 · DateRollConvention [#tag-40922]
+## Tag 40922: DateRollConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40922</Badge> <Badge intent="note" minimal>DateRollConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40922 · DateRollConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The convention for determining a sequence of dates. It is used in conjunction with a specified frequency. The value defined here applies to all adjustable dates in the instrument unless specifically overridden. Additional values may be used by mutual agreement of the counterparties.
 
@@ -1718,19 +2456,31 @@ Code set **DateRollConventionCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [DateAdjustment](/fix/components/date-adjustment)
 
-## 40923 · NoLegBusinessCenters [#tag-40923]
+## Tag 40923: NoLegBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40923</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40923 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegBusinessCenterGrp](/fix/groups/leg-business-center-grp)
 
-## 40924 · LegBusinessCenter [#tag-40924]
+## Tag 40924: LegBusinessCenter
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40924</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40924 · String · Added FIX.5.0SP2
+</llms-only>
 
 A business center whose calendar is used for date adjustment, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
 
@@ -1738,9 +2488,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [LegBusinessCenterGrp](/fix/groups/leg-business-center-grp)
 
-## 40925 · LegBusinessDayConvention [#tag-40925]
+## Tag 40925: LegBusinessDayConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40925</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40925 · BusinessDayConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The business day convention used for adjusting dates. The value defined here applies to all adjustable dates in the instrument leg unless specifically overridden.
 
@@ -1759,9 +2515,15 @@ Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [LegDateAdjustment](/fix/components/leg-date-adjustment)
 
-## 40926 · LegDateRollConvention [#tag-40926]
+## Tag 40926: LegDateRollConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40926</Badge> <Badge intent="note" minimal>DateRollConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40926 · DateRollConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The convention for determining a sequence of dates. It is used in conjunction with a specified frequency. The value defined here applies to all adjustable dates in the instrument leg unless specifically overridden.
 
@@ -1818,369 +2580,591 @@ Code set **DateRollConventionCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [LegDateAdjustment](/fix/components/leg-date-adjustment)
 
-## 40927 · NoLegPaymentScheduleFixingDateBusinessCenters [#tag-40927]
+## Tag 40927: NoLegPaymentScheduleFixingDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40927</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40927 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegPaymentScheduleFixingDateBusinessCenterGrp](/fix/groups/leg-payment-schedule-fixing-date-business-center-grp)
 
-## 40928 · NoLegPaymentScheduleInterimExchangeDateBusinessCenters [#tag-40928]
+## Tag 40928: NoLegPaymentScheduleInterimExchangeDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40928</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40928 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegPaymentScheduleInterimExchangeDateBusinessCenterGrp](/fix/groups/leg-payment-schedule-interim-exchange-date-business-center-grp)
 
-## 40929 · NoLegPaymentStreamNonDeliverableFixingDateBusinessCenters [#tag-40929]
+## Tag 40929: NoLegPaymentStreamNonDeliverableFixingDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40929</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40929 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegPaymentStreamNonDeliverableFixingDatesBusinessCenterGrp](/fix/groups/leg-payment-stream-non-deliverable-fixing-dates-business-center-grp)
 
-## 40930 · NoLegPaymentStreamPaymentDateBusinessCenters [#tag-40930]
+## Tag 40930: NoLegPaymentStreamPaymentDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40930</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40930 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegPaymentStreamPaymentDateBusinessCenterGrp](/fix/groups/leg-payment-stream-payment-date-business-center-grp)
 
-## 40931 · NoLegPaymentStreamResetDateBusinessCenters [#tag-40931]
+## Tag 40931: NoLegPaymentStreamResetDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40931</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40931 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegPaymentStreamResetDateBusinessCenterGrp](/fix/groups/leg-payment-stream-reset-date-business-center-grp)
 
-## 40932 · NoLegPaymentStreamInitialFixingDateBusinessCenters [#tag-40932]
+## Tag 40932: NoLegPaymentStreamInitialFixingDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40932</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40932 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegPaymentStreamInitialFixingDateBusinessCenterGrp](/fix/groups/leg-payment-stream-initial-fixing-date-business-center-grp)
 
-## 40933 · NoLegPaymentStreamFixingDateBusinessCenters [#tag-40933]
+## Tag 40933: NoLegPaymentStreamFixingDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40933</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40933 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegPaymentStreamFixingDateBusinessCenterGrp](/fix/groups/leg-payment-stream-fixing-date-business-center-grp)
 
-## 40934 · NoLegProvisionCashSettlPaymentDateBusinessCenters [#tag-40934]
+## Tag 40934: NoLegProvisionCashSettlPaymentDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40934</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40934 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegProvisionCashSettlPaymentDateBusinessCenterGrp](/fix/groups/leg-provision-cash-settl-payment-date-business-center-grp)
 
-## 40935 · NoLegProvisionCashSettlValueDateBusinessCenters [#tag-40935]
+## Tag 40935: NoLegProvisionCashSettlValueDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40935</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40935 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegProvisionCashSettlValueDateBusinessCenterGrp](/fix/groups/leg-provision-cash-settl-value-date-business-center-grp)
 
-## 40936 · NoLegProvisionOptionExerciseBusinessCenters [#tag-40936]
+## Tag 40936: NoLegProvisionOptionExerciseBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40936</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40936 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegProvisionOptionExerciseBusinessCenterGrp](/fix/groups/leg-provision-option-exercise-business-center-grp)
 
-## 40937 · NoLegProvisionOptionExpirationDateBusinessCenters [#tag-40937]
+## Tag 40937: NoLegProvisionOptionExpirationDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40937</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40937 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegProvisionOptionExpirationDateBusinessCenterGrp](/fix/groups/leg-provision-option-expiration-date-business-center-grp)
 
-## 40938 · NoLegProvisionOptionRelevantUnderlyingDateBusinessCenters [#tag-40938]
+## Tag 40938: NoLegProvisionOptionRelevantUnderlyingDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40938</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40938 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegProvisionOptionRelevantUnderlyingDateBusinessCenterGrp](/fix/groups/leg-provision-option-relevant-underlying-date-business-center-grp)
 
-## 40939 · NoLegProvisionDateBusinessCenters [#tag-40939]
+## Tag 40939: NoLegProvisionDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40939</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40939 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegProvisionDateBusinessCenterGrp](/fix/groups/leg-provision-date-business-center-grp)
 
-## 40940 · NoLegStreamCalculationPeriodBusinessCenters [#tag-40940]
+## Tag 40940: NoLegStreamCalculationPeriodBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40940</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40940 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegStreamCalculationPeriodBusinessCenterGrp](/fix/groups/leg-stream-calculation-period-business-center-grp)
 
-## 40941 · NoLegStreamFirstPeriodStartDateBusinessCenters [#tag-40941]
+## Tag 40941: NoLegStreamFirstPeriodStartDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40941</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40941 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegStreamFirstPeriodStartDateBusinessCenterGrp](/fix/groups/leg-stream-first-period-start-date-business-center-grp)
 
-## 40942 · NoLegStreamEffectiveDateBusinessCenters [#tag-40942]
+## Tag 40942: NoLegStreamEffectiveDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40942</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40942 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegStreamEffectiveDateBusinessCenterGrp](/fix/groups/leg-stream-effective-date-business-center-grp)
 
-## 40943 · NoLegStreamTerminationDateBusinessCenters [#tag-40943]
+## Tag 40943: NoLegStreamTerminationDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40943</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40943 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegStreamTerminationDateBusinessCenterGrp](/fix/groups/leg-stream-termination-date-business-center-grp)
 
-## 40944 · NoPaymentBusinessCenters [#tag-40944]
+## Tag 40944: NoPaymentBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40944</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40944 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentBusinessCenterGrp](/fix/groups/payment-business-center-grp)
 
-## 40945 · NoPaymentScheduleInterimExchangeDateBusinessCenters [#tag-40945]
+## Tag 40945: NoPaymentScheduleInterimExchangeDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40945</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40945 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentScheduleInterimExchangeDateBusinessCenterGrp](/fix/groups/payment-schedule-interim-exchange-date-business-center-grp)
 
-## 40946 · NoPaymentStreamNonDeliverableFixingDatesBusinessCenters [#tag-40946]
+## Tag 40946: NoPaymentStreamNonDeliverableFixingDatesBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40946</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40946 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentStreamNonDeliverableFixingDatesBusinessCenterGrp](/fix/groups/payment-stream-non-deliverable-fixing-dates-business-center-grp)
 
-## 40947 · NoPaymentStreamPaymentDateBusinessCenters [#tag-40947]
+## Tag 40947: NoPaymentStreamPaymentDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40947</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40947 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentStreamPaymentDateBusinessCenterGrp](/fix/groups/payment-stream-payment-date-business-center-grp)
 
-## 40948 · NoPaymentStreamResetDateBusinessCenters [#tag-40948]
+## Tag 40948: NoPaymentStreamResetDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40948</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40948 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentStreamResetDateBusinessCenterGrp](/fix/groups/payment-stream-reset-date-business-center-grp)
 
-## 40949 · NoPaymentStreamInitialFixingDateBusinessCenters [#tag-40949]
+## Tag 40949: NoPaymentStreamInitialFixingDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40949</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40949 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentStreamInitialFixingDateBusinessCenterGrp](/fix/groups/payment-stream-initial-fixing-date-business-center-grp)
 
-## 40950 · NoPaymentStreamFixingDateBusinessCenters [#tag-40950]
+## Tag 40950: NoPaymentStreamFixingDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40950</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40950 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentStreamFixingDateBusinessCenterGrp](/fix/groups/payment-stream-fixing-date-business-center-grp)
 
-## 40951 · NoProtectionTermEventNewsSources [#tag-40951]
+## Tag 40951: NoProtectionTermEventNewsSources
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40951</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40951 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of event news sources in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ProtectionTermEventNewsSourceGrp](/fix/groups/protection-term-event-news-source-grp)
 
-## 40952 · NoProvisionCashSettlPaymentDateBusinessCenters [#tag-40952]
+## Tag 40952: NoProvisionCashSettlPaymentDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40952</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40952 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ProvisionCashSettlPaymentDateBusinessCenterGrp](/fix/groups/provision-cash-settl-payment-date-business-center-grp)
 
-## 40953 · NoProvisionCashSettlValueDateBusinessCenters [#tag-40953]
+## Tag 40953: NoProvisionCashSettlValueDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40953</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40953 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ProvisionCashSettlValueDateBusinessCenterGrp](/fix/groups/provision-cash-settl-value-date-business-center-grp)
 
-## 40954 · NoProvisionOptionExerciseBusinessCenters [#tag-40954]
+## Tag 40954: NoProvisionOptionExerciseBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40954</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40954 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ProvisionOptionExerciseBusinessCenterGrp](/fix/groups/provision-option-exercise-business-center-grp)
 
-## 40955 · NoProvisionOptionExpirationDateBusinessCenters [#tag-40955]
+## Tag 40955: NoProvisionOptionExpirationDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40955</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40955 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ProvisionOptionExpirationDateBusinessCenterGrp](/fix/groups/provision-option-expiration-date-business-center-grp)
 
-## 40956 · NoProvisionOptionRelevantUnderlyingDateBusinessCenters [#tag-40956]
+## Tag 40956: NoProvisionOptionRelevantUnderlyingDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40956</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40956 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ProvisionOptionRelevantUnderlyingDateBusinessCenterGrp](/fix/groups/provision-option-relevant-underlying-date-business-center-grp)
 
-## 40957 · NoProvisionDateBusinessCenters [#tag-40957]
+## Tag 40957: NoProvisionDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40957</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40957 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ProvisionDateBusinessCenterGrp](/fix/groups/provision-date-business-center-grp)
 
-## 40958 · NoStreamCalculationPeriodBusinessCenters [#tag-40958]
+## Tag 40958: NoStreamCalculationPeriodBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40958</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40958 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [StreamCalculationPeriodBusinessCenterGrp](/fix/groups/stream-calculation-period-business-center-grp)
 
-## 40959 · NoStreamFirstPeriodStartDateBusinessCenters [#tag-40959]
+## Tag 40959: NoStreamFirstPeriodStartDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40959</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40959 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [StreamFirstPeriodStartDateBusinessCenterGrp](/fix/groups/stream-first-period-start-date-business-center-grp)
 
-## 40960 · NoStreamEffectiveBusinessCenters [#tag-40960]
+## Tag 40960: NoStreamEffectiveBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40960</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40960 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [StreamEffectiveBusinessCenterGrp](/fix/groups/stream-effective-business-center-grp)
 
-## 40961 · NoStreamTerminationDateBusinessCenters [#tag-40961]
+## Tag 40961: NoStreamTerminationDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40961</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40961 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [StreamTerminationDateBusinessCenterGrp](/fix/groups/stream-termination-date-business-center-grp)
 
-## 40962 · NoUnderlyingBusinessCenters [#tag-40962]
+## Tag 40962: NoUnderlyingBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40962</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40962 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [UnderlyingBusinessCenterGrp](/fix/groups/underlying-business-center-grp)
 
-## 40963 · UnderlyingBusinessCenter [#tag-40963]
+## Tag 40963: UnderlyingBusinessCenter
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40963</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40963 · String · Added FIX.5.0SP2
+</llms-only>
 
 A business center whose calendar is used for date adjustment, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.
 
@@ -2188,9 +3172,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [UnderlyingBusinessCenterGrp](/fix/groups/underlying-business-center-grp)
 
-## 40964 · UnderlyingBusinessDayConvention [#tag-40964]
+## Tag 40964: UnderlyingBusinessDayConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40964</Badge> <Badge intent="note" minimal>BusinessDayConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40964 · BusinessDayConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The business day convention used for adjusting dates. The value defined here applies to all adjustable dates in the underlying instrument unless specifically overridden.
 
@@ -2209,9 +3199,15 @@ Code set **BusinessDayConventionCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [UnderlyingDateAdjustment](/fix/components/underlying-date-adjustment)
 
-## 40965 · UnderlyingDateRollConvention [#tag-40965]
+## Tag 40965: UnderlyingDateRollConvention
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40965</Badge> <Badge intent="note" minimal>DateRollConventionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40965 · DateRollConventionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The convention for determining a sequence of dates. It is used in conjunction with a specified frequency. The value defined here applies to all adjustable dates in the underlying instrument unless specifically overridden.
 
@@ -2268,129 +3264,207 @@ Code set **DateRollConventionCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [UnderlyingDateAdjustment](/fix/components/underlying-date-adjustment)
 
-## 40966 · NoUnderlyingPaymentScheduleFixingDateBusinessCenters [#tag-40966]
+## Tag 40966: NoUnderlyingPaymentScheduleFixingDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40966</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40966 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [UnderlyingPaymentScheduleFixingDateBusinessCenterGrp](/fix/groups/underlying-payment-schedule-fixing-date-business-center-grp)
 
-## 40967 · NoUnderlyingPaymentScheduleInterimExchangeDateBusinessCenters [#tag-40967]
+## Tag 40967: NoUnderlyingPaymentScheduleInterimExchangeDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40967</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40967 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [UnderlyingPaymentScheduleInterimExchangeDateBusinessCenterGrp](/fix/groups/underlying-payment-schedule-interim-exchange-date-business-center-grp)
 
-## 40968 · NoUnderlyingPaymentStreamNonDeliverableFixingDatesBusinessCenters [#tag-40968]
+## Tag 40968: NoUnderlyingPaymentStreamNonDeliverableFixingDatesBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40968</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40968 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [UnderlyingPaymentStreamNonDeliverableFixingDatesBusinessCenterGrp](/fix/groups/underlying-payment-stream-non-deliverable-fixing-dates-business-center-grp)
 
-## 40969 · NoUnderlyingPaymentStreamPaymentDateBusinessCenters [#tag-40969]
+## Tag 40969: NoUnderlyingPaymentStreamPaymentDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40969</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40969 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [UnderlyingPaymentStreamPaymentDateBusinessCenterGrp](/fix/groups/underlying-payment-stream-payment-date-business-center-grp)
 
-## 40970 · NoUnderlyingPaymentStreamResetDateBusinessCenters [#tag-40970]
+## Tag 40970: NoUnderlyingPaymentStreamResetDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40970</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40970 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [UnderlyingPaymentStreamResetDateBusinessCenterGrp](/fix/groups/underlying-payment-stream-reset-date-business-center-grp)
 
-## 40971 · NoUnderlyingPaymentStreamInitialFixingDateBusinessCenters [#tag-40971]
+## Tag 40971: NoUnderlyingPaymentStreamInitialFixingDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40971</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40971 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [UnderlyingPaymentStreamInitialFixingDateBusinessCenterGrp](/fix/groups/underlying-payment-stream-initial-fixing-date-business-center-grp)
 
-## 40972 · NoUnderlyingPaymentStreamFixingDateBusinessCenters [#tag-40972]
+## Tag 40972: NoUnderlyingPaymentStreamFixingDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40972</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40972 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [UnderlyingPaymentStreamFixingDateBusinessCenterGrp](/fix/groups/underlying-payment-stream-fixing-date-business-center-grp)
 
-## 40973 · NoUnderlyingStreamCalculationPeriodBusinessCenters [#tag-40973]
+## Tag 40973: NoUnderlyingStreamCalculationPeriodBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40973</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40973 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [UnderlyingStreamCalculationPeriodBusinessCenterGrp](/fix/groups/underlying-stream-calculation-period-business-center-grp)
 
-## 40974 · NoUnderlyingStreamFirstPeriodStartDateBusinessCenters [#tag-40974]
+## Tag 40974: NoUnderlyingStreamFirstPeriodStartDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40974</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40974 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [UnderlyingStreamFirstPeriodStartDateBusinessCenterGrp](/fix/groups/underlying-stream-first-period-start-date-business-center-grp)
 
-## 40975 · NoUnderlyingStreamEffectiveDateBusinessCenters [#tag-40975]
+## Tag 40975: NoUnderlyingStreamEffectiveDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40975</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40975 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [UnderlyingStreamEffectiveDateBusinessCenterGrp](/fix/groups/underlying-stream-effective-date-business-center-grp)
 
-## 40976 · NoUnderlyingStreamTerminationDateBusinessCenters [#tag-40976]
+## Tag 40976: NoUnderlyingStreamTerminationDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40976</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40976 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [UnderlyingStreamTerminationDateBusinessCenterGrp](/fix/groups/underlying-stream-termination-date-business-center-grp)
 
-## 40977 · NoPaymentScheduleFixingDateBusinessCenters [#tag-40977]
+## Tag 40977: NoPaymentScheduleFixingDateBusinessCenters
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40977</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40977 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of business centers in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PaymentScheduleFixingDateBusinessCenterGrp](/fix/groups/payment-schedule-fixing-date-business-center-grp)
 
-## 40978 · EncodedLegStreamTextLen [#tag-40978]
+## Tag 40978: EncodedLegStreamTextLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40978</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40978 · Length · Added FIX.5.0SP2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedLegStreamText(40979) field.
 
@@ -2398,9 +3472,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [LegStreamGrp](/fix/groups/leg-stream-grp)
 
-## 40979 · EncodedLegStreamText [#tag-40979]
+## Tag 40979: EncodedLegStreamText
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40979</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40979 · data · Added FIX.5.0SP2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the LegStreamText(40248) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the LegStreamText(40248) field.
 
@@ -2408,9 +3488,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [LegStreamGrp](/fix/groups/leg-stream-grp)
 
-## 40980 · EncodedLegProvisionTextLen [#tag-40980]
+## Tag 40980: EncodedLegProvisionTextLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40980</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40980 · Length · Added FIX.5.0SP2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedLegProvisionText(40472) field.
 
@@ -2418,9 +3504,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [LegProvisionGrp](/fix/groups/leg-provision-grp)
 
-## 40981 · EncodedLegProvisionText [#tag-40981]
+## Tag 40981: EncodedLegProvisionText
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40981</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40981 · data · Added FIX.5.0SP2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the LegProvisionText(40472) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the LegProvisionText(40472) field.
 
@@ -2428,9 +3520,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [LegProvisionGrp](/fix/groups/leg-provision-grp)
 
-## 40982 · EncodedStreamTextLen [#tag-40982]
+## Tag 40982: EncodedStreamTextLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40982</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40982 · Length · Added FIX.5.0SP2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedStreamText(40983) field.
 
@@ -2438,9 +3536,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [StreamGrp](/fix/groups/stream-grp)
 
-## 40983 · EncodedStreamText [#tag-40983]
+## Tag 40983: EncodedStreamText
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40983</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40983 · data · Added FIX.5.0SP2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the StreamText(40056) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the StreamText(40056) field.
 
@@ -2448,9 +3552,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [StreamGrp](/fix/groups/stream-grp)
 
-## 40984 · EncodedPaymentTextLen [#tag-40984]
+## Tag 40984: EncodedPaymentTextLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40984</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40984 · Length · Added FIX.5.0SP2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedPaymentText(40985) field.
 
@@ -2458,9 +3568,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [PaymentGrp](/fix/groups/payment-grp)
 
-## 40985 · EncodedPaymentText [#tag-40985]
+## Tag 40985: EncodedPaymentText
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40985</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40985 · data · Added FIX.5.0SP2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the PaymentText(40229) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the PaymentText(40229) field.
 
@@ -2468,9 +3584,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [PaymentGrp](/fix/groups/payment-grp)
 
-## 40986 · EncodedProvisionTextLen [#tag-40986]
+## Tag 40986: EncodedProvisionTextLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40986</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40986 · Length · Added FIX.5.0SP2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedProvisionText(40987) field.
 
@@ -2478,9 +3600,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [ProvisionGrp](/fix/groups/provision-grp)
 
-## 40987 · EncodedProvisionText [#tag-40987]
+## Tag 40987: EncodedProvisionText
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40987</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40987 · data · Added FIX.5.0SP2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the ProvisionText(40113) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the ProvisionText(40113) field.
 
@@ -2488,9 +3616,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [ProvisionGrp](/fix/groups/provision-grp)
 
-## 40988 · EncodedUnderlyingStreamTextLen [#tag-40988]
+## Tag 40988: EncodedUnderlyingStreamTextLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40988</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40988 · Length · Added FIX.5.0SP2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedUnderlyingStreamText(40989) field.
 
@@ -2498,9 +3632,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [UnderlyingStreamGrp](/fix/groups/underlying-stream-grp)
 
-## 40989 · EncodedUnderlyingStreamText [#tag-40989]
+## Tag 40989: EncodedUnderlyingStreamText
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40989</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40989 · data · Added FIX.5.0SP2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the UnderlyingStreamText(40547) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the UnderlyingStreamText(40547) field.
 
@@ -2508,9 +3648,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [UnderlyingStreamGrp](/fix/groups/underlying-stream-grp)
 
-## 40990 · LegMarketDisruptionFallbackValue [#tag-40990]
+## Tag 40990: LegMarketDisruptionFallbackValue
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40990</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40990 · String · Added FIX.5.0SP2
+</llms-only>
 
 Applicable value for LegMarketDisruptionFallbackType(41470).
 
@@ -2518,9 +3664,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [LegMarketDisruptionFallbackGrp](/fix/groups/leg-market-disruption-fallback-grp)
 
-## 40991 · MarketDisruptionValue [#tag-40991]
+## Tag 40991: MarketDisruptionValue
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40991</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40991 · String · Added FIX.5.0SP2
+</llms-only>
 
 Applicable value for MarketDisruptionEvent(41093).
 
@@ -2528,9 +3680,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [MarketDisruptionEventGrp](/fix/groups/market-disruption-event-grp)
 
-## 40992 · MarketDisruptionFallbackValue [#tag-40992]
+## Tag 40992: MarketDisruptionFallbackValue
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40992</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40992 · String · Added FIX.5.0SP2
+</llms-only>
 
 Applicable value for MarketDisruptionFallbackType(41095).
 
@@ -2538,9 +3696,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [MarketDisruptionFallbackGrp](/fix/groups/market-disruption-fallback-grp)
 
-## 40993 · PaymentSubType [#tag-40993]
+## Tag 40993: PaymentSubType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40993</Badge> <Badge intent="note" minimal>PaymentSubTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40993 · PaymentSubTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Used to further clarify the value of PaymentType(40213).
 
@@ -2562,19 +3726,31 @@ Code set **PaymentSubTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PaymentGrp](/fix/groups/payment-grp)
 
-## 40994 · NoComplexEventAveragingObservations [#tag-40994]
+## Tag 40994: NoComplexEventAveragingObservations
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40994</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40994 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 The number of averaging observations in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ComplexEventAveragingObservationGrp](/fix/groups/complex-event-averaging-observation-grp)
 
-## 40995 · ComplexEventAveragingObservationNumber [#tag-40995]
+## Tag 40995: ComplexEventAveragingObservationNumber
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40995</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40995 · int · Added FIX.5.0SP2
+</llms-only>
 
 Cross reference to the ordinal observation as specified either in the ComplexEventScheduleGrp or ComplexEventPeriodDateGrp components.
 
@@ -2582,9 +3758,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [ComplexEventAveragingObservationGrp](/fix/groups/complex-event-averaging-observation-grp)
 
-## 40996 · ComplexEventAveragingWeight [#tag-40996]
+## Tag 40996: ComplexEventAveragingWeight
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40996</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40996 · float · Added FIX.5.0SP2
+</llms-only>
 
 The weight factor to be applied to the observation.
 
@@ -2592,19 +3774,31 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [ComplexEventAveragingObservationGrp](/fix/groups/complex-event-averaging-observation-grp)
 
-## 40997 · NoComplexEventCreditEvents [#tag-40997]
+## Tag 40997: NoComplexEventCreditEvents
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40997</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40997 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 The number of credit events specified in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ComplexEventCreditEventGrp](/fix/groups/complex-event-credit-event-grp)
 
-## 40998 · ComplexEventCreditEventType [#tag-40998]
+## Tag 40998: ComplexEventCreditEventType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40998</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40998 · String · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the type of credit event. See http://www.fixtradingcommunity.org/codelists#Credit\_Event\_Types for code list of applicable event types.
 
@@ -2612,9 +3806,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [ComplexEventCreditEventGrp](/fix/groups/complex-event-credit-event-grp)
 
-## 40999 · ComplexEventCreditEventValue [#tag-40999]
+## Tag 40999: ComplexEventCreditEventValue
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 40999</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 40999 · String · Added FIX.5.0SP2
+</llms-only>
 
 The credit event value appropriate to ComplexEventCreditEventType(40998). See http://www.fixtradingcommunity.org/codelists#Credit\_Event\_Types for applicable event type values.
 

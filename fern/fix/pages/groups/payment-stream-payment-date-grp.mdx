@@ -3,9 +3,15 @@ title: "PaymentStreamPaymentDateGrp"
 subtitle: "The PaymentStreamPaymentDateGrp is a repeating subcomponent of the PaymentStreamPaymentDates component used to detail fixed dates for swap stream payments."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41220</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoPaymentStreamPaymentDates (41220)](/fix/fields/tags-41200-41399#tag-41220).
+<llms-only>
+Repeating group · NumInGroup 41220 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPaymentStreamPaymentDates (41220)](/fix/fields/tags-41200-41399#tag-41220-nopaymentstreampaymentdates).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41221 | [PaymentStreamPaymentDate](/fix/fields/tags-41200-41399#tag-41221) | LocalMktDate | Optional | Required if NoPaymentStreamPaymentDates(41220) &gt; 0. |
-| 41222 | [PaymentStreamPaymentDateType](/fix/fields/tags-41200-41399#tag-41222) | OptionExerciseDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
+| 41221 | [PaymentStreamPaymentDate](/fix/fields/tags-41200-41399#tag-41221-paymentstreampaymentdate) | LocalMktDate | Optional | Required if NoPaymentStreamPaymentDates(41220) &gt; 0. |
+| 41222 | [PaymentStreamPaymentDateType](/fix/fields/tags-41200-41399#tag-41222-paymentstreampaymentdatetype) | OptionExerciseDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
 
 </StickyTable>
 

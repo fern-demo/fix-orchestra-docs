@@ -3,7 +3,13 @@ title: "LegOptionExerciseDates"
 subtitle: "The LegOptionExerciseDates component is a subcomponent of the LegOptionExercise component used to specify option exercise dates."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,27 +17,27 @@ subtitle: "The LegOptionExerciseDates component is a subcomponent of the LegOpti
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41493 | [LegOptionExerciseBusinessDayConvention](/fix/fields/tags-41400-41599#tag-41493) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
+| 41493 | [LegOptionExerciseBusinessDayConvention](/fix/fields/tags-41400-41599#tag-41493-legoptionexercisebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
 | 41491 | [LegOptionExerciseBusinessCenterGrp](/fix/groups/leg-option-exercise-business-center-grp) | Repeating group | Optional | LegOptionExerciseBusinessCenterGrp is a repeating subcomponent of the LegOptionExerciseDates component used to specify the set of business centers whose… |
 | 41512 | [LegOptionExerciseDateGrp](/fix/groups/leg-option-exercise-date-grp) | Repeating group | Optional | The LegOptionExerciseDateGrp is a repeating subcomponent of the LegOptionExerciseDates component used to specify fixed dates for exercise. |
-| 41494 | [LegOptionExerciseEarliestDateOffsetDayType](/fix/fields/tags-41400-41599#tag-41494) | ComplexEventDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative earliest exercise date offset. |
-| 41495 | [LegOptionExerciseEarliestDateOffsetPeriod](/fix/fields/tags-41400-41599#tag-41495) | int | Optional | Conditionally required when LegOptionExerciseEarliestDateUnit(41496) is specified. |
-| 41496 | [LegOptionExerciseEarliestDateOffsetUnit](/fix/fields/tags-41400-41599#tag-41496) | ProvisionOptionExerciseEarliestDateOffsetUnitCodeSet | Optional | Conditionally required when LegOptionExerciseEarliestDatePeriod(41495) is specified. |
-| 41497 | [LegOptionExerciseFrequencyPeriod](/fix/fields/tags-41400-41599#tag-41497) | int | Optional | Conditionally required when LegOptionExerciseFrequencyUnit(41498) is specified. |
-| 41498 | [LegOptionExerciseFrequencyUnit](/fix/fields/tags-41400-41599#tag-41498) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when LegOptionExerciseFequencyPeriod(41497) is specified. |
-| 41499 | [LegOptionExerciseStartDateUnadjusted](/fix/fields/tags-41400-41599#tag-41499) | LocalMktDate | Optional | The unadjusted start date for calculating periodic exercise dates. |
-| 41500 | [LegOptionExerciseStartDateRelativeTo](/fix/fields/tags-41400-41599#tag-41500) | int | Optional | Specifies the anchor date when the option exercise start date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date… |
-| 41501 | [LegOptionExerciseStartDateOffsetPeriod](/fix/fields/tags-41400-41599#tag-41501) | int | Optional | Conditionally required when LegOptionExerciseStartDateOffsetUnit(41502) is specified. |
-| 41502 | [LegOptionExerciseStartDateOffsetUnit](/fix/fields/tags-41400-41599#tag-41502) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegOptionExerciseStartDateOffsetPeriod(41501) is specified. |
-| 41503 | [LegOptionExerciseStartDateOffsetDayType](/fix/fields/tags-41400-41599#tag-41503) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative option exercise start date offset. |
-| 41504 | [LegOptionExerciseStartDateAdjusted](/fix/fields/tags-41400-41599#tag-41504) | LocalMktDate | Optional | The adjusted start date for calculating periodic exercise dates. |
-| 41505 | [LegOptionExerciseSkip](/fix/fields/tags-41400-41599#tag-41505) | int | Optional | The number of periods in the referenced date schedule that are between each date in the relative date schedule. Thus a skip of 2 would mean that dates are… |
-| 41506 | [LegOptionExerciseNominationDeadline](/fix/fields/tags-41400-41599#tag-41506) | LocalMktDate | Optional | The last date (adjusted) for establishing the option exercise terms. |
-| 41507 | [LegOptionExerciseFirstDateUnadjusted](/fix/fields/tags-41400-41599#tag-41507) | LocalMktDate | Optional | The unadjusted first exercise date. |
-| 41508 | [LegOptionExerciseLastDateUnadjusted](/fix/fields/tags-41400-41599#tag-41508) | LocalMktDate | Optional | The unadjusted last exercise date. |
-| 41509 | [LegOptionExerciseEarliestTime](/fix/fields/tags-41400-41599#tag-41509) | LocalMktTime | Optional | The earliest time at which notice of exercise can be given by the buyer to the seller (or seller's agent) (i) on the expriation date, in the case of a European… |
-| 41510 | [LegOptionExerciseLatestTime](/fix/fields/tags-41400-41599#tag-41510) | LocalMktTime | Optional | The latest exercise time. See also LegOptionExerciseEarliestTime(41509). |
-| 41511 | [LegOptionExerciseTimeBusinessCenter](/fix/fields/tags-41400-41599#tag-41511) | String | Optional | The business center used to determine the locale for option exercise time, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard… |
+| 41494 | [LegOptionExerciseEarliestDateOffsetDayType](/fix/fields/tags-41400-41599#tag-41494-legoptionexerciseearliestdateoffsetdaytype) | ComplexEventDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative earliest exercise date offset. |
+| 41495 | [LegOptionExerciseEarliestDateOffsetPeriod](/fix/fields/tags-41400-41599#tag-41495-legoptionexerciseearliestdateoffsetperiod) | int | Optional | Conditionally required when LegOptionExerciseEarliestDateUnit(41496) is specified. |
+| 41496 | [LegOptionExerciseEarliestDateOffsetUnit](/fix/fields/tags-41400-41599#tag-41496-legoptionexerciseearliestdateoffsetunit) | ProvisionOptionExerciseEarliestDateOffsetUnitCodeSet | Optional | Conditionally required when LegOptionExerciseEarliestDatePeriod(41495) is specified. |
+| 41497 | [LegOptionExerciseFrequencyPeriod](/fix/fields/tags-41400-41599#tag-41497-legoptionexercisefrequencyperiod) | int | Optional | Conditionally required when LegOptionExerciseFrequencyUnit(41498) is specified. |
+| 41498 | [LegOptionExerciseFrequencyUnit](/fix/fields/tags-41400-41599#tag-41498-legoptionexercisefrequencyunit) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when LegOptionExerciseFequencyPeriod(41497) is specified. |
+| 41499 | [LegOptionExerciseStartDateUnadjusted](/fix/fields/tags-41400-41599#tag-41499-legoptionexercisestartdateunadjusted) | LocalMktDate | Optional | The unadjusted start date for calculating periodic exercise dates. |
+| 41500 | [LegOptionExerciseStartDateRelativeTo](/fix/fields/tags-41400-41599#tag-41500-legoptionexercisestartdaterelativeto) | int | Optional | Specifies the anchor date when the option exercise start date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date… |
+| 41501 | [LegOptionExerciseStartDateOffsetPeriod](/fix/fields/tags-41400-41599#tag-41501-legoptionexercisestartdateoffsetperiod) | int | Optional | Conditionally required when LegOptionExerciseStartDateOffsetUnit(41502) is specified. |
+| 41502 | [LegOptionExerciseStartDateOffsetUnit](/fix/fields/tags-41400-41599#tag-41502-legoptionexercisestartdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegOptionExerciseStartDateOffsetPeriod(41501) is specified. |
+| 41503 | [LegOptionExerciseStartDateOffsetDayType](/fix/fields/tags-41400-41599#tag-41503-legoptionexercisestartdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative option exercise start date offset. |
+| 41504 | [LegOptionExerciseStartDateAdjusted](/fix/fields/tags-41400-41599#tag-41504-legoptionexercisestartdateadjusted) | LocalMktDate | Optional | The adjusted start date for calculating periodic exercise dates. |
+| 41505 | [LegOptionExerciseSkip](/fix/fields/tags-41400-41599#tag-41505-legoptionexerciseskip) | int | Optional | The number of periods in the referenced date schedule that are between each date in the relative date schedule. Thus a skip of 2 would mean that dates are… |
+| 41506 | [LegOptionExerciseNominationDeadline](/fix/fields/tags-41400-41599#tag-41506-legoptionexercisenominationdeadline) | LocalMktDate | Optional | The last date (adjusted) for establishing the option exercise terms. |
+| 41507 | [LegOptionExerciseFirstDateUnadjusted](/fix/fields/tags-41400-41599#tag-41507-legoptionexercisefirstdateunadjusted) | LocalMktDate | Optional | The unadjusted first exercise date. |
+| 41508 | [LegOptionExerciseLastDateUnadjusted](/fix/fields/tags-41400-41599#tag-41508-legoptionexerciselastdateunadjusted) | LocalMktDate | Optional | The unadjusted last exercise date. |
+| 41509 | [LegOptionExerciseEarliestTime](/fix/fields/tags-41400-41599#tag-41509-legoptionexerciseearliesttime) | LocalMktTime | Optional | The earliest time at which notice of exercise can be given by the buyer to the seller (or seller's agent) (i) on the expriation date, in the case of a European… |
+| 41510 | [LegOptionExerciseLatestTime](/fix/fields/tags-41400-41599#tag-41510-legoptionexerciselatesttime) | LocalMktTime | Optional | The latest exercise time. See also LegOptionExerciseEarliestTime(41509). |
+| 41511 | [LegOptionExerciseTimeBusinessCenter](/fix/fields/tags-41400-41599#tag-41511-legoptionexercisetimebusinesscenter) | String | Optional | The business center used to determine the locale for option exercise time, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard… |
 
 </StickyTable>
 

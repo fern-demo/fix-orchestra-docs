@@ -3,7 +3,13 @@ title: "LegSettlMethodElectionDate"
 subtitle: "The LegSettlMethodElectionDate component is a subcomponent within the LegOptionExercise component used to report the settlement method election date."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,14 +17,14 @@ subtitle: "The LegSettlMethodElectionDate component is a subcomponent within the
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42574 | [LegSettlMethodElectionDateUnadjusted](/fix/fields/tags-42400-42599#tag-42574) | LocalMktDate | Optional | The unadjusted settlement method election date. |
-| 42575 | [LegSettlMethodElectionDateBusinessDayConvention](/fix/fields/tags-42400-42599#tag-42575) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
+| 42574 | [LegSettlMethodElectionDateUnadjusted](/fix/fields/tags-42400-42599#tag-42574-legsettlmethodelectiondateunadjusted) | LocalMktDate | Optional | The unadjusted settlement method election date. |
+| 42575 | [LegSettlMethodElectionDateBusinessDayConvention](/fix/fields/tags-42400-42599#tag-42575-legsettlmethodelectiondatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
 | 42581 | [LegSettlMethodElectionDateBusinessCenterGrp](/fix/groups/leg-settl-method-election-date-business-center-grp) | Repeating group | Optional | LegSettlMethodElectionDateBusinessCenterGrp is a repeating subcomponent within the LegSettlMethodElectionDate component. It is used to specify the set of… |
-| 42576 | [LegSettlMethodElectionDateRelativeTo](/fix/fields/tags-42400-42599#tag-42576) | int | Optional | Specifies the anchor date when the settlement method election date is relative to an anchor date. See… |
-| 42577 | [LegSettlMethodElectionDateOffsetPeriod](/fix/fields/tags-42400-42599#tag-42577) | int | Optional | Conditionally required when LegSettlMethodElectionDateOffsetUnit(42578) is specified. |
-| 42578 | [LegSettlMethodElectionDateOffsetUnit](/fix/fields/tags-42400-42599#tag-42578) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegSettlMethodElectionDateOffsetPeriod(42577) is specified. |
-| 42579 | [LegSettlMethodElectionDateOffsetDayType](/fix/fields/tags-42400-42599#tag-42579) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative settlement method election date offset. |
-| 42580 | [LegSettlMethodElectionDateAdjusted](/fix/fields/tags-42400-42599#tag-42580) | LocalMktDate | Optional | The adjusted settlement method election date. |
+| 42576 | [LegSettlMethodElectionDateRelativeTo](/fix/fields/tags-42400-42599#tag-42576-legsettlmethodelectiondaterelativeto) | int | Optional | Specifies the anchor date when the settlement method election date is relative to an anchor date. See… |
+| 42577 | [LegSettlMethodElectionDateOffsetPeriod](/fix/fields/tags-42400-42599#tag-42577-legsettlmethodelectiondateoffsetperiod) | int | Optional | Conditionally required when LegSettlMethodElectionDateOffsetUnit(42578) is specified. |
+| 42578 | [LegSettlMethodElectionDateOffsetUnit](/fix/fields/tags-42400-42599#tag-42578-legsettlmethodelectiondateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegSettlMethodElectionDateOffsetPeriod(42577) is specified. |
+| 42579 | [LegSettlMethodElectionDateOffsetDayType](/fix/fields/tags-42400-42599#tag-42579-legsettlmethodelectiondateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative settlement method election date offset. |
+| 42580 | [LegSettlMethodElectionDateAdjusted](/fix/fields/tags-42400-42599#tag-42580-legsettlmethodelectiondateadjusted) | LocalMktDate | Optional | The adjusted settlement method election date. |
 
 </StickyTable>
 

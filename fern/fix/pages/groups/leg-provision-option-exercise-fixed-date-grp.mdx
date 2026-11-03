@@ -3,11 +3,17 @@ title: "LegProvisionOptionExerciseFixedDateGrp"
 subtitle: "The LegProvisionOptionExerciseFixedDateGrp is a repeating component within the LegProvisionOptionExerciseDates component used to report an array of unadjusted or adjusted fixed exercise dates."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40495</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Repeating group · NumInGroup 40495 · Added FIX.5.0SP2
+</llms-only>
 
 For the purpose of optimization, the LegProvisionOptionExerciseFixedDateType(40497) field may optionally be omitted after the first instance provided the instance(s) which immediately follow is of the same date type. When the next instance requires a different date type from the prior instance, the LegProvisionOptionExerciseFixedDateType(40497) is required to specify the date type.
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegProvisionOptionExerciseFixedDates (40495)](/fix/fields/tags-40400-40599#tag-40495).
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegProvisionOptionExerciseFixedDates (40495)](/fix/fields/tags-40400-40599#tag-40495-nolegprovisionoptionexercisefixeddates).
 
 ## Members
 
@@ -15,8 +21,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40496 | [LegProvisionOptionExerciseFixedDate](/fix/fields/tags-40400-40599#tag-40496) | LocalMktDate | Optional | Required if NoLegProvisionOptionExerciseFixedDates(40495) &gt; 0. |
-| 40497 | [LegProvisionOptionExerciseFixedDateType](/fix/fields/tags-40400-40599#tag-40497) | ProvisionOptionExerciseFixedDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
+| 40496 | [LegProvisionOptionExerciseFixedDate](/fix/fields/tags-40400-40599#tag-40496-legprovisionoptionexercisefixeddate) | LocalMktDate | Optional | Required if NoLegProvisionOptionExerciseFixedDates(40495) &gt; 0. |
+| 40497 | [LegProvisionOptionExerciseFixedDateType](/fix/fields/tags-40400-40599#tag-40497-legprovisionoptionexercisefixeddatetype) | ProvisionOptionExerciseFixedDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
 
 </StickyTable>
 

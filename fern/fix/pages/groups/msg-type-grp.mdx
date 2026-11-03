@@ -2,9 +2,15 @@
 title: "MsgTypeGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 384</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoMsgTypes (384)](/fix/fields/tags-200-399#tag-384).
+<llms-only>
+Repeating group · NumInGroup 384 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoMsgTypes (384)](/fix/fields/tags-200-399#tag-384-nomsgtypes).
 
 ## Members
 
@@ -12,12 +18,12 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 372 | [RefMsgType](/fix/fields/tags-200-399#tag-372) | MsgTypeCodeSet | Optional | Specifies a specific, supported MsgType. Required if NoMsgTypes is &gt; 0. Should be specified from the point of view of the sender of the Logon message |
-| 385 | [MsgDirection](/fix/fields/tags-200-399#tag-385) | MsgDirectionCodeSet | Optional | Indicates direction (send vs. receive) of a supported MsgType. Required if NoMsgTypes is &gt; 0. Should be specified from the point of view of the sender of the… |
-| 1130 | [RefApplVerID](/fix/fields/tags-1000-1199#tag-1130) | ApplVerIDCodeSet | Optional | Specifies the service pack release being applied to an application message. |
-| 1406 | [RefApplExtID](/fix/fields/tags-1400-1599#tag-1406) | int | Optional | Specified the extension pack being applied to a message. |
-| 1131 | [RefCstmApplVerID](/fix/fields/tags-1000-1199#tag-1131) | String | Optional | Specifies a custom extension to a message being applied at the session level. |
-| 1410 | [DefaultVerIndicator](/fix/fields/tags-1400-1599#tag-1410) | Boolean | Optional | Indicates that this Application Version (RefApplVerID(1130), RefApplExtID(1406),RefCstmApplVerID(1131)) is the default for the RefMsgType(372) field. |
+| 372 | [RefMsgType](/fix/fields/tags-200-399#tag-372-refmsgtype) | MsgTypeCodeSet | Optional | Specifies a specific, supported MsgType. Required if NoMsgTypes is &gt; 0. Should be specified from the point of view of the sender of the Logon message |
+| 385 | [MsgDirection](/fix/fields/tags-200-399#tag-385-msgdirection) | MsgDirectionCodeSet | Optional | Indicates direction (send vs. receive) of a supported MsgType. Required if NoMsgTypes is &gt; 0. Should be specified from the point of view of the sender of the… |
+| 1130 | [RefApplVerID](/fix/fields/tags-1000-1199#tag-1130-refapplverid) | ApplVerIDCodeSet | Optional | Specifies the service pack release being applied to an application message. |
+| 1406 | [RefApplExtID](/fix/fields/tags-1400-1599#tag-1406-refapplextid) | int | Optional | Specified the extension pack being applied to a message. |
+| 1131 | [RefCstmApplVerID](/fix/fields/tags-1000-1199#tag-1131-refcstmapplverid) | String | Optional | Specifies a custom extension to a message being applied at the session level. |
+| 1410 | [DefaultVerIndicator](/fix/fields/tags-1400-1599#tag-1410-defaultverindicator) | Boolean | Optional | Indicates that this Application Version (RefApplVerID(1130), RefApplExtID(1406),RefCstmApplVerID(1131)) is the default for the RefMsgType(372) field. |
 
 </StickyTable>
 

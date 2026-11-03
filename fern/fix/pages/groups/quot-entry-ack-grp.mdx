@@ -2,9 +2,15 @@
 title: "QuotEntryAckGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 295</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoQuoteEntries (295)](/fix/fields/tags-200-399#tag-295).
+<llms-only>
+Repeating group · NumInGroup 295 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoQuoteEntries (295)](/fix/fields/tags-200-399#tag-295-noquoteentries).
 
 ## Members
 
@@ -12,37 +18,37 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 299 | [QuoteEntryID](/fix/fields/tags-200-399#tag-299) | String | Optional | Uniquely identifies the quote across the complete set of all quotes for a given quote provider. First field in repeating group. Required if NoQuoteEntries &gt; 0. |
+| 299 | [QuoteEntryID](/fix/fields/tags-200-399#tag-299-quoteentryid) | String | Optional | Uniquely identifies the quote across the complete set of all quotes for a given quote provider. First field in repeating group. Required if NoQuoteEntries &gt; 0. |
 | | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
-| 132 | [BidPx](/fix/fields/tags-0-199#tag-132) | Price | Optional | If F/X quote, should be the "all-in" rate (spot rate adjusted for forward points). Note that either BidPx, OfferPx or both must be specified. |
-| 133 | [OfferPx](/fix/fields/tags-0-199#tag-133) | Price | Optional | If F/X quote, should be the "all-in" rate (spot rate adjusted for forward points). Note that either BidPx, OfferPx or both must be specified. |
-| 134 | [BidSize](/fix/fields/tags-0-199#tag-134) | Qty | Optional | Quantity of bid (Prior to FIX 4.2 this field was of type int) |
-| 135 | [OfferSize](/fix/fields/tags-0-199#tag-135) | Qty | Optional | Quantity of offer (Prior to FIX 4.2 this field was of type int) |
-| 62 | [ValidUntilTime](/fix/fields/tags-0-199#tag-62) | UTCTimestamp | Optional | Indicates expiration time of indication message (always expressed in UTC (Universal Time Coordinated, also known as "GMT") |
-| 188 | [BidSpotRate](/fix/fields/tags-0-199#tag-188) | Price | Optional | May be applicable for F/X quotes |
-| 190 | [OfferSpotRate](/fix/fields/tags-0-199#tag-190) | Price | Optional | May be applicable for F/X quotes |
-| 189 | [BidForwardPoints](/fix/fields/tags-0-199#tag-189) | PriceOffset | Optional | May be applicable for F/X quotes |
-| 191 | [OfferForwardPoints](/fix/fields/tags-0-199#tag-191) | PriceOffset | Optional | May be applicable for F/X quotes |
-| 631 | [MidPx](/fix/fields/tags-600-799#tag-631) | Price | Optional | Mid price/rate. For OTC swaps this is the mid-market mark (for example, as defined by CFTC). For uncleared OTC swaps, LegMidPx(2346) and the MidPx(631) fields… |
-| 632 | [BidYield](/fix/fields/tags-600-799#tag-632) | Percentage | Optional | Bid yield |
-| 633 | [MidYield](/fix/fields/tags-600-799#tag-633) | Percentage | Optional | Mid yield |
-| 634 | [OfferYield](/fix/fields/tags-600-799#tag-634) | Percentage | Optional | Offer yield |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
-| 64 | [SettlDate](/fix/fields/tags-0-199#tag-64) | LocalMktDate | Optional | Can be used with forex quotes to specify a specific "value date" |
-| 40 | [OrdType](/fix/fields/tags-0-199#tag-40) | OrdTypeCodeSet | Optional | Can be used to specify the type of order the quote is for |
-| 193 | [SettlDate2](/fix/fields/tags-0-199#tag-193) | LocalMktDate | Optional | Can be used with OrdType = "Forex - Swap" to specify the "value date" for the future portion of a F/X swap. |
-| 192 | [OrderQty2](/fix/fields/tags-0-199#tag-192) | Qty | Optional | Can be used with OrdType = "Forex - Swap" to specify the order quantity for the future portion of a F/X swap. |
-| 642 | [BidForwardPoints2](/fix/fields/tags-600-799#tag-642) | PriceOffset | Optional | Bid F/X forward points of the future portion of a F/X swap quote added to spot rate. May be a negative value |
-| 643 | [OfferForwardPoints2](/fix/fields/tags-600-799#tag-643) | PriceOffset | Optional | Offer F/X forward points of the future portion of a F/X swap quote added to spot rate. May be a negative value |
-| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Can be used to specify the currency of the quoted price. |
-| 775 | [BookingType](/fix/fields/tags-600-799#tag-775) | BookingTypeCodeSet | Optional | Method for booking out this order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an OTC derivative (e.g. CFD or… |
-| 528 | [OrderCapacity](/fix/fields/tags-400-599#tag-528) | OrderCapacityCodeSet | Optional | Designates the capacity of the firm placing the order. (as of FIX 4.3, this field replaced Rule80A (tag 47) --used in conjunction with OrderRestrictions (529)… |
-| 529 | [OrderRestrictions](/fix/fields/tags-400-599#tag-529) | OrderRestrictionsCodeSet | Optional | Restrictions associated with an order. If more than one restriction is applicable to an order, this field can contain multiple instructions separated by space. |
-| 1167 | [QuoteEntryStatus](/fix/fields/tags-1000-1199#tag-1167) | QuoteEntryStatusCodeSet | Optional | Identifies the status of an individual quote. See also QuoteStatus(297) which is used for single Quotes. |
-| 368 | [QuoteEntryRejectReason](/fix/fields/tags-200-399#tag-368) | QuoteRejectReasonCodeSet | Optional | Reason Quote Entry was rejected. |
+| 132 | [BidPx](/fix/fields/tags-0-199#tag-132-bidpx) | Price | Optional | If F/X quote, should be the "all-in" rate (spot rate adjusted for forward points). Note that either BidPx, OfferPx or both must be specified. |
+| 133 | [OfferPx](/fix/fields/tags-0-199#tag-133-offerpx) | Price | Optional | If F/X quote, should be the "all-in" rate (spot rate adjusted for forward points). Note that either BidPx, OfferPx or both must be specified. |
+| 134 | [BidSize](/fix/fields/tags-0-199#tag-134-bidsize) | Qty | Optional | Quantity of bid (Prior to FIX 4.2 this field was of type int) |
+| 135 | [OfferSize](/fix/fields/tags-0-199#tag-135-offersize) | Qty | Optional | Quantity of offer (Prior to FIX 4.2 this field was of type int) |
+| 62 | [ValidUntilTime](/fix/fields/tags-0-199#tag-62-validuntiltime) | UTCTimestamp | Optional | Indicates expiration time of indication message (always expressed in UTC (Universal Time Coordinated, also known as "GMT") |
+| 188 | [BidSpotRate](/fix/fields/tags-0-199#tag-188-bidspotrate) | Price | Optional | May be applicable for F/X quotes |
+| 190 | [OfferSpotRate](/fix/fields/tags-0-199#tag-190-offerspotrate) | Price | Optional | May be applicable for F/X quotes |
+| 189 | [BidForwardPoints](/fix/fields/tags-0-199#tag-189-bidforwardpoints) | PriceOffset | Optional | May be applicable for F/X quotes |
+| 191 | [OfferForwardPoints](/fix/fields/tags-0-199#tag-191-offerforwardpoints) | PriceOffset | Optional | May be applicable for F/X quotes |
+| 631 | [MidPx](/fix/fields/tags-600-799#tag-631-midpx) | Price | Optional | Mid price/rate. For OTC swaps this is the mid-market mark (for example, as defined by CFTC). For uncleared OTC swaps, LegMidPx(2346) and the MidPx(631) fields… |
+| 632 | [BidYield](/fix/fields/tags-600-799#tag-632-bidyield) | Percentage | Optional | Bid yield |
+| 633 | [MidYield](/fix/fields/tags-600-799#tag-633-midyield) | Percentage | Optional | Mid yield |
+| 634 | [OfferYield](/fix/fields/tags-600-799#tag-634-offeryield) | Percentage | Optional | Offer yield |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336-tradingsessionid) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625-tradingsessionsubid) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
+| 64 | [SettlDate](/fix/fields/tags-0-199#tag-64-settldate) | LocalMktDate | Optional | Can be used with forex quotes to specify a specific "value date" |
+| 40 | [OrdType](/fix/fields/tags-0-199#tag-40-ordtype) | OrdTypeCodeSet | Optional | Can be used to specify the type of order the quote is for |
+| 193 | [SettlDate2](/fix/fields/tags-0-199#tag-193-settldate2) | LocalMktDate | Optional | Can be used with OrdType = "Forex - Swap" to specify the "value date" for the future portion of a F/X swap. |
+| 192 | [OrderQty2](/fix/fields/tags-0-199#tag-192-orderqty2) | Qty | Optional | Can be used with OrdType = "Forex - Swap" to specify the order quantity for the future portion of a F/X swap. |
+| 642 | [BidForwardPoints2](/fix/fields/tags-600-799#tag-642-bidforwardpoints2) | PriceOffset | Optional | Bid F/X forward points of the future portion of a F/X swap quote added to spot rate. May be a negative value |
+| 643 | [OfferForwardPoints2](/fix/fields/tags-600-799#tag-643-offerforwardpoints2) | PriceOffset | Optional | Offer F/X forward points of the future portion of a F/X swap quote added to spot rate. May be a negative value |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15-currency) | Currency | Optional | Can be used to specify the currency of the quoted price. |
+| 775 | [BookingType](/fix/fields/tags-600-799#tag-775-bookingtype) | BookingTypeCodeSet | Optional | Method for booking out this order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an OTC derivative (e.g. CFD or… |
+| 528 | [OrderCapacity](/fix/fields/tags-400-599#tag-528-ordercapacity) | OrderCapacityCodeSet | Optional | Designates the capacity of the firm placing the order. (as of FIX 4.3, this field replaced Rule80A (tag 47) --used in conjunction with OrderRestrictions (529)… |
+| 529 | [OrderRestrictions](/fix/fields/tags-400-599#tag-529-orderrestrictions) | OrderRestrictionsCodeSet | Optional | Restrictions associated with an order. If more than one restriction is applicable to an order, this field can contain multiple instructions separated by space. |
+| 1167 | [QuoteEntryStatus](/fix/fields/tags-1000-1199#tag-1167-quoteentrystatus) | QuoteEntryStatusCodeSet | Optional | Identifies the status of an individual quote. See also QuoteStatus(297) which is used for single Quotes. |
+| 368 | [QuoteEntryRejectReason](/fix/fields/tags-200-399#tag-368-quoteentryrejectreason) | QuoteRejectReasonCodeSet | Optional | Reason Quote Entry was rejected. |
 
 </StickyTable>
 

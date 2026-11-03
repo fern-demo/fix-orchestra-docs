@@ -2,9 +2,15 @@
 title: "InstrmtLegIOIGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 555</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegs (555)](/fix/fields/tags-400-599#tag-555).
+<llms-only>
+Repeating group · NumInGroup 555 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegs (555)](/fix/fields/tags-400-599#tag-555-nolegs).
 
 ## Members
 
@@ -13,7 +19,7 @@ Each repetition starts with the first member listed. The count of repetitions is
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [InstrumentLeg](/fix/components/instrument-leg) | Component | Optional | The InstrumentLeg component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In the case… |
-| 682 | [LegIOIQty](/fix/fields/tags-600-799#tag-682) | IOIQtyCodeSet | Optional | Required for multileg IOIs and for each leg. |
+| 682 | [LegIOIQty](/fix/fields/tags-600-799#tag-682-legioiqty) | IOIQtyCodeSet | Optional | Required for multileg IOIs and for each leg. |
 | 683 | [LegStipulations](/fix/groups/leg-stipulations) | Repeating group | Optional | The LegStipulations component block has the same usage as the Stipulations component block, but for a leg instrument in a multi-legged security. |
 
 </StickyTable>

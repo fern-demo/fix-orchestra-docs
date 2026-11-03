@@ -3,7 +3,13 @@ title: "CrossRequestAck"
 subtitle: "The CrossRequestAck(35=DT) message is used to confirm the receipt of a CrossRequest(35=DS) message."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType DT</Badge> <Badge intent="note" minimal>Indication</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType DT · Indication · Pre Trade · Added FIX.5.0SP2
+</llms-only>
 
 ## Message structure
 
@@ -12,13 +18,13 @@ subtitle: "The CrossRequestAck(35=DT) message is used to confirm the receipt of 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 2672 | [CrossRequestID](/fix/fields/tags-2600-2799#tag-2672) | String | **Required** | Unique identifier for the cross request message being confirmed. |
-| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Identifies the market |
-| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
+| 2672 | [CrossRequestID](/fix/fields/tags-2600-2799#tag-2672-crossrequestid) | String | **Required** | Unique identifier for the cross request message being confirmed. |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301-marketid) | Exchange | Optional | Identifies the market |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300-marketsegmentid) | String | Optional | Identifies the market segment |
 | | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
-| 38 | [OrderQty](/fix/fields/tags-0-199#tag-38) | Qty | Optional | Quantity ordered. This represents the number of shares for equities or par, face or nominal value for FI instruments. (Prior to FIX 4.2 this field was of type… |
-| 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
-| 2404 | [ComplianceText](/fix/fields/tags-2400-2599#tag-2404) | String | Optional | Free text for compliance information required for regulatory reporting. |
+| 38 | [OrderQty](/fix/fields/tags-0-199#tag-38-orderqty) | Qty | Optional | Quantity ordered. This represents the number of shares for equities or par, face or nominal value for FI instruments. (Prior to FIX 4.2 this field was of type… |
+| 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376-complianceid) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
+| 2404 | [ComplianceText](/fix/fields/tags-2400-2599#tag-2404-compliancetext) | String | Optional | Free text for compliance information required for regulatory reporting. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

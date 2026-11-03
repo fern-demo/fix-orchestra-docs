@@ -3,7 +3,13 @@ title: "AdjustedPositionReport"
 subtitle: "Used to report changes in position, primarily in equity options, due to modifications to the underlying due to corporate actions"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType BL</Badge> <Badge intent="note" minimal>Position Maintenance</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType BL · Position Maintenance · Post Trade · Added FIX.4.4
+</llms-only>
 
 ## Message structure
 
@@ -12,16 +18,16 @@ subtitle: "Used to report changes in position, primarily in equity options, due 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 721 | [PosMaintRptID](/fix/fields/tags-600-799#tag-721) | String | **Required** | Unique identifier for this Adjusted Position report |
-| 724 | [PosReqType](/fix/fields/tags-600-799#tag-724) | PosReqTypeCodeSet | Optional | Used to specify the type of position request being made. |
-| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | **Required** | The Clearing Business Date referred to by this maintenance request |
-| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716) | SettlSessIDCodeSet | Optional | Identifies a specific settlement session |
-| 714 | [PosMaintRptRefID](/fix/fields/tags-600-799#tag-714) | String | Optional | Reference to a PosMaintRptID (721) from a previous Position Maintenance Report that is being replaced or canceled. |
+| 721 | [PosMaintRptID](/fix/fields/tags-600-799#tag-721-posmaintrptid) | String | **Required** | Unique identifier for this Adjusted Position report |
+| 724 | [PosReqType](/fix/fields/tags-600-799#tag-724-posreqtype) | PosReqTypeCodeSet | Optional | Used to specify the type of position request being made. |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715-clearingbusinessdate) | LocalMktDate | **Required** | The Clearing Business Date referred to by this maintenance request |
+| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716-settlsessid) | SettlSessIDCodeSet | Optional | Identifies a specific settlement session |
+| 714 | [PosMaintRptRefID](/fix/fields/tags-600-799#tag-714-posmaintrptrefid) | String | Optional | Reference to a PosMaintRptID (721) from a previous Position Maintenance Report that is being replaced or canceled. |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | **Required** | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
 | 702 | [PositionQty](/fix/groups/position-qty) | Repeating group | **Required** | The PositionQty component block specifies the various types of position quantity in the position life-cycle including start-of-day, intraday, trade,… |
 | 146 | [InstrmtGrp](/fix/groups/instrmt-grp) | Repeating group | Optional |  |
-| 730 | [SettlPrice](/fix/fields/tags-600-799#tag-730) | Price | Optional | Settlement Price |
-| 734 | [PriorSettlPrice](/fix/fields/tags-600-799#tag-734) | Price | Optional | Prior Settlement Price |
+| 730 | [SettlPrice](/fix/fields/tags-600-799#tag-730-settlprice) | Price | Optional | Settlement Price |
+| 734 | [PriorSettlPrice](/fix/fields/tags-600-799#tag-734-priorsettlprice) | Price | Optional | Prior Settlement Price |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

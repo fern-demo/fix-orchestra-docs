@@ -3,9 +3,15 @@ title: "SettlementAmountGrp"
 subtitle: "The Settlement Amount Group component block is a repeating group of settlement amounts for an account"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1700</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoSettlementAmounts (1700)](/fix/fields/tags-1600-1799#tag-1700).
+<llms-only>
+Repeating group · NumInGroup 1700 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoSettlementAmounts (1700)](/fix/fields/tags-1600-1799#tag-1700-nosettlementamounts).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1701 | [SettlementAmount](/fix/fields/tags-1600-1799#tag-1701) | Amt | Optional | Required if NoSettlementAmounts &gt; 0. |
-| 1702 | [SettlementAmountCurrency](/fix/fields/tags-1600-1799#tag-1702) | Currency | Optional | The currency of the reported settlement amount. |
+| 1701 | [SettlementAmount](/fix/fields/tags-1600-1799#tag-1701-settlementamount) | Amt | Optional | Required if NoSettlementAmounts &gt; 0. |
+| 1702 | [SettlementAmountCurrency](/fix/fields/tags-1600-1799#tag-1702-settlementamountcurrency) | Currency | Optional | The currency of the reported settlement amount. |
 
 </StickyTable>
 

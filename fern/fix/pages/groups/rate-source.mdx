@@ -2,9 +2,15 @@
 title: "RateSource"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1445</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoRateSources (1445)](/fix/fields/tags-1400-1599#tag-1445).
+<llms-only>
+Repeating group · NumInGroup 1445 · Added FIX.5.0SP1
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRateSources (1445)](/fix/fields/tags-1400-1599#tag-1445-noratesources).
 
 ## Members
 
@@ -12,11 +18,11 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1446 | [RateSource](/fix/fields/tags-1400-1599#tag-1446) | RateSourceCodeSet | Optional | Required if NoRateSource(1445) &gt; 0 |
-| 1447 | [RateSourceType](/fix/fields/tags-1400-1599#tag-1447) | RateSourceTypeCodeSet | Optional | Required if NoRateSources(1445) &gt; 0 |
-| 1448 | [ReferencePage](/fix/fields/tags-1400-1599#tag-1448) | String | Optional | May be used when RateSource(1446)=99 (Other) |
-| 2412 | [RateSourceReferemcePageHeading](/fix/fields/tags-2400-2599#tag-2412) | String | Optional | Identifies the page heading from the rate source. |
-| 2796 | [FXBenchmarkRateFix](/fix/fields/tags-2600-2799#tag-2796) | String | Optional | Specifies the foreign exchange benchmark rate fixing to be used in valuing the transaction. For example "London 4 p.m." or "Tokyo 3 p.m." |
+| 1446 | [RateSource](/fix/fields/tags-1400-1599#tag-1446-ratesource) | RateSourceCodeSet | Optional | Required if NoRateSource(1445) &gt; 0 |
+| 1447 | [RateSourceType](/fix/fields/tags-1400-1599#tag-1447-ratesourcetype) | RateSourceTypeCodeSet | Optional | Required if NoRateSources(1445) &gt; 0 |
+| 1448 | [ReferencePage](/fix/fields/tags-1400-1599#tag-1448-referencepage) | String | Optional | May be used when RateSource(1446)=99 (Other) |
+| 2412 | [RateSourceReferemcePageHeading](/fix/fields/tags-2400-2599#tag-2412-ratesourcereferemcepageheading) | String | Optional | Identifies the page heading from the rate source. |
+| 2796 | [FXBenchmarkRateFix](/fix/fields/tags-2600-2799#tag-2796-fxbenchmarkratefix) | String | Optional | Specifies the foreign exchange benchmark rate fixing to be used in valuing the transaction. For example "London 4 p.m." or "Tokyo 3 p.m." |
 
 </StickyTable>
 

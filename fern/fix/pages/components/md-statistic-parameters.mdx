@@ -3,7 +3,13 @@ title: "MDStatisticParameters"
 subtitle: "This component comprises all parameters that can be used to describe the market data statistics. These can be part of the request as well as the response. All parameters defined on the MarketDataStatisticsRequest(35=DO) message should be…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Market Data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Market Data · Added FIX.5.0SP2
+</llms-only>
 
 MDStatisticScope(2457), MDStatisticSubScope(2458) and MDStatisticScopeType(2459) form a set of scope relationships to filter further the type of statistic being requested or being provided. It should be noted that some of the enumeration values for MDStatisticScopeType(2459) may not be applicable or useful for a given MDStatisticScope(2457) - e.g. MDStatisticScopeType(2459)=4 (Downward move) is more applicable to prices than to orders or trades.
 
@@ -13,46 +19,46 @@ MDStatisticScope(2457), MDStatisticSubScope(2458) and MDStatisticScopeType(2459)
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2456 | [MDStatisticType](/fix/fields/tags-2400-2599#tag-2456) | MDStatisticTypeCodeSet | **Required** | Type of statistic value. |
-| 2457 | [MDStatisticScope](/fix/fields/tags-2400-2599#tag-2457) | MDStatisticScopeCodeSet | **Required** | Entities used as basis for the statistics. |
-| 2458 | [MDStatisticSubScope](/fix/fields/tags-2400-2599#tag-2458) | MDStatisticSubScopeCodeSet | Optional | Sub-scope of the statistics to further reduce the entities used as basis for the statistics. |
-| 2459 | [MDStatisticScopeType](/fix/fields/tags-2400-2599#tag-2459) | MDStatisticScopeTypeCodeSet | Optional | Scope details of the statistics to reduce the number of events being used as basis for the statistics. |
-| 2454 | [MDStatisticName](/fix/fields/tags-2400-2599#tag-2454) | String | Optional | The short name or acronym for a set of statistic parameters. |
-| 2455 | [MDStatisticDesc](/fix/fields/tags-2400-2599#tag-2455) | String | Optional | Can be used to provide an optional textual description for a statistic. |
-| 2481 | [EncodedMDStatisticDescLen](/fix/fields/tags-2400-2599#tag-2481) | Length | Optional | Must be set if EncodedMDStatisticDesc(2482) field is specified and must immediately precede it. |
-| 2482 | [EncodedMDStatisticDesc](/fix/fields/tags-2400-2599#tag-2482) | data | Optional | Encoded (non-ASCII characters) representation of the MDStatisticDesc(2455) field in the encoded format specified via the MessageEncoding(347) field. |
-| 264 | [MarketDepth](/fix/fields/tags-200-399#tag-264) | int | Optional | May be used to specify the market depth up to specified level. |
-| 2460 | [MDStatisticFrequencyPeriod](/fix/fields/tags-2400-2599#tag-2460) | int | Optional | Conditionally required when MDStatisticFrequencyUnit(2461) is specified. Omission represents a one-time dissemination. |
-| 2461 | [MDStatisticFrequencyUnit](/fix/fields/tags-2400-2599#tag-2461) | OrderDelayUnitCodeSet | Optional | Conditionally required when MDStatisticFrequencyPeriod(2460) is specified. |
-| 2462 | [MDStatisticDelayPeriod](/fix/fields/tags-2400-2599#tag-2462) | int | Optional | Conditionally required when MDStatisticDelayUnit(2463) is specified. |
-| 2463 | [MDStatisticDelayUnit](/fix/fields/tags-2400-2599#tag-2463) | OrderDelayUnitCodeSet | Optional | Conditionally required when MDStatisticDelayPeriod(2462) is specified. |
-| 2464 | [MDStatisticIntervalType](/fix/fields/tags-2400-2599#tag-2464) | MDStatisticIntervalTypeCodeSet | **Required** | Type of interval over which statistic is calculated. |
-| 2465 | [MDStatisticIntervalTypeUnit](/fix/fields/tags-2400-2599#tag-2465) | TimeUnitCodeSet | Optional | Conditionally required when MDStatisticIntervalType (2464) = 5(Current time unit), 6(Previous time unit) or 8(Maximum range up to previous time unit). |
-| 2466 | [MDStatisticIntervalPeriod](/fix/fields/tags-2400-2599#tag-2466) | int | Optional | Conditionally required if/when MDStatisticIntervalUnit(2467) is specified. Conditionally required when MDStatisticIntervalType(2464) = 1 (Sliding window) or 2… |
-| 2467 | [MDStatisticIntervalUnit](/fix/fields/tags-2400-2599#tag-2467) | OrderDelayUnitCodeSet | Optional | Conditionally required when MDStatisticIntervalPeriod(2466) is specified. |
-| 2468 | [MDStatisticStartDate](/fix/fields/tags-2400-2599#tag-2468) | UTCTimestamp | Optional | Can be used to define a date range for a sliding window peak other than the current day. Omission represents a date range starting with the first available day. |
-| 2469 | [MDStatisticEndDate](/fix/fields/tags-2400-2599#tag-2469) | UTCTimestamp | Optional | Can be used to define a date range for a sliding window peak other than the current day. Omission represents a date range including the current day. |
-| 2470 | [MDStatisticStartTime](/fix/fields/tags-2400-2599#tag-2470) | UTCTimeOnly | Optional | Can be used to define a time range for a sliding window peak other than the complete day. Omission represents a time range starting at midnight. |
-| 2471 | [MDStatisticEndTime](/fix/fields/tags-2400-2599#tag-2471) | UTCTimeOnly | Optional | Can be used to define a time range for a sliding window peak other than the complete day. Omission represents a time range ending with the time of dissemination… |
-| 2472 | [MDStatisticRatioType](/fix/fields/tags-2400-2599#tag-2472) | MDStatisticRatioTypeCodeSet | Optional | Conditionally required when MDStatisticType(2456) = 5(Ratio). |
+| 2456 | [MDStatisticType](/fix/fields/tags-2400-2599#tag-2456-mdstatistictype) | MDStatisticTypeCodeSet | **Required** | Type of statistic value. |
+| 2457 | [MDStatisticScope](/fix/fields/tags-2400-2599#tag-2457-mdstatisticscope) | MDStatisticScopeCodeSet | **Required** | Entities used as basis for the statistics. |
+| 2458 | [MDStatisticSubScope](/fix/fields/tags-2400-2599#tag-2458-mdstatisticsubscope) | MDStatisticSubScopeCodeSet | Optional | Sub-scope of the statistics to further reduce the entities used as basis for the statistics. |
+| 2459 | [MDStatisticScopeType](/fix/fields/tags-2400-2599#tag-2459-mdstatisticscopetype) | MDStatisticScopeTypeCodeSet | Optional | Scope details of the statistics to reduce the number of events being used as basis for the statistics. |
+| 2454 | [MDStatisticName](/fix/fields/tags-2400-2599#tag-2454-mdstatisticname) | String | Optional | The short name or acronym for a set of statistic parameters. |
+| 2455 | [MDStatisticDesc](/fix/fields/tags-2400-2599#tag-2455-mdstatisticdesc) | String | Optional | Can be used to provide an optional textual description for a statistic. |
+| 2481 | [EncodedMDStatisticDescLen](/fix/fields/tags-2400-2599#tag-2481-encodedmdstatisticdesclen) | Length | Optional | Must be set if EncodedMDStatisticDesc(2482) field is specified and must immediately precede it. |
+| 2482 | [EncodedMDStatisticDesc](/fix/fields/tags-2400-2599#tag-2482-encodedmdstatisticdesc) | data | Optional | Encoded (non-ASCII characters) representation of the MDStatisticDesc(2455) field in the encoded format specified via the MessageEncoding(347) field. |
+| 264 | [MarketDepth](/fix/fields/tags-200-399#tag-264-marketdepth) | int | Optional | May be used to specify the market depth up to specified level. |
+| 2460 | [MDStatisticFrequencyPeriod](/fix/fields/tags-2400-2599#tag-2460-mdstatisticfrequencyperiod) | int | Optional | Conditionally required when MDStatisticFrequencyUnit(2461) is specified. Omission represents a one-time dissemination. |
+| 2461 | [MDStatisticFrequencyUnit](/fix/fields/tags-2400-2599#tag-2461-mdstatisticfrequencyunit) | OrderDelayUnitCodeSet | Optional | Conditionally required when MDStatisticFrequencyPeriod(2460) is specified. |
+| 2462 | [MDStatisticDelayPeriod](/fix/fields/tags-2400-2599#tag-2462-mdstatisticdelayperiod) | int | Optional | Conditionally required when MDStatisticDelayUnit(2463) is specified. |
+| 2463 | [MDStatisticDelayUnit](/fix/fields/tags-2400-2599#tag-2463-mdstatisticdelayunit) | OrderDelayUnitCodeSet | Optional | Conditionally required when MDStatisticDelayPeriod(2462) is specified. |
+| 2464 | [MDStatisticIntervalType](/fix/fields/tags-2400-2599#tag-2464-mdstatisticintervaltype) | MDStatisticIntervalTypeCodeSet | **Required** | Type of interval over which statistic is calculated. |
+| 2465 | [MDStatisticIntervalTypeUnit](/fix/fields/tags-2400-2599#tag-2465-mdstatisticintervaltypeunit) | TimeUnitCodeSet | Optional | Conditionally required when MDStatisticIntervalType (2464) = 5(Current time unit), 6(Previous time unit) or 8(Maximum range up to previous time unit). |
+| 2466 | [MDStatisticIntervalPeriod](/fix/fields/tags-2400-2599#tag-2466-mdstatisticintervalperiod) | int | Optional | Conditionally required if/when MDStatisticIntervalUnit(2467) is specified. Conditionally required when MDStatisticIntervalType(2464) = 1 (Sliding window) or 2… |
+| 2467 | [MDStatisticIntervalUnit](/fix/fields/tags-2400-2599#tag-2467-mdstatisticintervalunit) | OrderDelayUnitCodeSet | Optional | Conditionally required when MDStatisticIntervalPeriod(2466) is specified. |
+| 2468 | [MDStatisticStartDate](/fix/fields/tags-2400-2599#tag-2468-mdstatisticstartdate) | UTCTimestamp | Optional | Can be used to define a date range for a sliding window peak other than the current day. Omission represents a date range starting with the first available day. |
+| 2469 | [MDStatisticEndDate](/fix/fields/tags-2400-2599#tag-2469-mdstatisticenddate) | UTCTimestamp | Optional | Can be used to define a date range for a sliding window peak other than the current day. Omission represents a date range including the current day. |
+| 2470 | [MDStatisticStartTime](/fix/fields/tags-2400-2599#tag-2470-mdstatisticstarttime) | UTCTimeOnly | Optional | Can be used to define a time range for a sliding window peak other than the complete day. Omission represents a time range starting at midnight. |
+| 2471 | [MDStatisticEndTime](/fix/fields/tags-2400-2599#tag-2471-mdstatisticendtime) | UTCTimeOnly | Optional | Can be used to define a time range for a sliding window peak other than the complete day. Omission represents a time range ending with the time of dissemination… |
+| 2472 | [MDStatisticRatioType](/fix/fields/tags-2400-2599#tag-2472-mdstatisticratiotype) | MDStatisticRatioTypeCodeSet | Optional | Conditionally required when MDStatisticType(2456) = 5(Ratio). |
 | 539 | [NestedParties](/fix/groups/nested-parties) | Repeating group | Optional | The NestedParties component block is identical to the Parties Block. It is used in other component blocks and repeating groups when nesting will take place… |
-| 2584 | [AnnualTradingBusinessDays](/fix/fields/tags-2400-2599#tag-2584) | int | Optional | Number of trading business days in a year. |
-| 1815 | [TradingCapacity](/fix/fields/tags-1800-1999#tag-1815) | TradingCapacityCodeSet | Optional | Designates the capacity in which the order is submitted for trading by the market participant. |
-| 40 | [OrdType](/fix/fields/tags-0-199#tag-40) | OrdTypeCodeSet | Optional | Order type. \*\*\* SOME VALUES ARE NO LONGER USED - See "Deprecated (Phased-out) Features and Supported Approach" \*\*\* (see Volume : "Glossary" for value… |
-| 59 | [TimeInForce](/fix/fields/tags-0-199#tag-59) | TimeInForceCodeSet | Optional | Specifies how long the order remains in effect. Absence of this field is interpreted as DAY. NOTE not applicable to CIV Orders. |
-| 276 | [QuoteCondition](/fix/fields/tags-200-399#tag-276) | QuoteConditionCodeSet | Optional | Space-delimited list of conditions describing a quote. |
-| 277 | [TradeCondition](/fix/fields/tags-200-399#tag-277) | TradeConditionCodeSet | Optional | Type of market data entry. |
-| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | Optional | Side of order (see Volume : "Glossary" for value definitions) |
-| 578 | [TradeInputSource](/fix/fields/tags-400-599#tag-578) | String | Optional | Type of input device or system from which the trade was entered. |
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
-| 1024 | [MDOriginType](/fix/fields/tags-1000-1199#tag-1024) | MDOriginTypeCodeSet | Optional | Used to describe the origin of the market data entry. |
-| 2711 | [MDValueTier](/fix/fields/tags-2600-2799#tag-2711) | MDValueTierCodeSet | Optional | Describes the reporting ranges for executed transactions. |
-| 338 | [TradSesMethod](/fix/fields/tags-200-399#tag-338) | TradSesMethodCodeSet | Optional | Method of trading |
-| 1022 | [MDFeedType](/fix/fields/tags-1000-1199#tag-1022) | String | Optional | Describes a class of service for a given data feed, ie Regular and Market Maker, Bandwidth Intensive or Bandwidth Conservative |
-| 1629 | [ExposureDuration](/fix/fields/tags-1600-1799#tag-1629) | int | Optional | This is the time in seconds of a "Good for Time" (GFT) TimeInForce. Positive integer value which represents the time is seconds in which the new order remains… |
-| 1916 | [ExposureDurationUnit](/fix/fields/tags-1800-1999#tag-1916) | OrderDelayUnitCodeSet | Optional | Conditionally required when ExposureDuration(1629) is specified. |
-| 1057 | [AggressorIndicator](/fix/fields/tags-1000-1199#tag-1057) | AggressorIndicatorCodeSet | Optional | Used to identify whether the order initiator is an aggressor or not in the trade. |
+| 2584 | [AnnualTradingBusinessDays](/fix/fields/tags-2400-2599#tag-2584-annualtradingbusinessdays) | int | Optional | Number of trading business days in a year. |
+| 1815 | [TradingCapacity](/fix/fields/tags-1800-1999#tag-1815-tradingcapacity) | TradingCapacityCodeSet | Optional | Designates the capacity in which the order is submitted for trading by the market participant. |
+| 40 | [OrdType](/fix/fields/tags-0-199#tag-40-ordtype) | OrdTypeCodeSet | Optional | Order type. \*\*\* SOME VALUES ARE NO LONGER USED - See "Deprecated (Phased-out) Features and Supported Approach" \*\*\* (see Volume : "Glossary" for value… |
+| 59 | [TimeInForce](/fix/fields/tags-0-199#tag-59-timeinforce) | TimeInForceCodeSet | Optional | Specifies how long the order remains in effect. Absence of this field is interpreted as DAY. NOTE not applicable to CIV Orders. |
+| 276 | [QuoteCondition](/fix/fields/tags-200-399#tag-276-quotecondition) | QuoteConditionCodeSet | Optional | Space-delimited list of conditions describing a quote. |
+| 277 | [TradeCondition](/fix/fields/tags-200-399#tag-277-tradecondition) | TradeConditionCodeSet | Optional | Type of market data entry. |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54-side) | SideCodeSet | Optional | Side of order (see Volume : "Glossary" for value definitions) |
+| 578 | [TradeInputSource](/fix/fields/tags-400-599#tag-578-tradeinputsource) | String | Optional | Type of input device or system from which the trade was entered. |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336-tradingsessionid) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625-tradingsessionsubid) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
+| 1024 | [MDOriginType](/fix/fields/tags-1000-1199#tag-1024-mdorigintype) | MDOriginTypeCodeSet | Optional | Used to describe the origin of the market data entry. |
+| 2711 | [MDValueTier](/fix/fields/tags-2600-2799#tag-2711-mdvaluetier) | MDValueTierCodeSet | Optional | Describes the reporting ranges for executed transactions. |
+| 338 | [TradSesMethod](/fix/fields/tags-200-399#tag-338-tradsesmethod) | TradSesMethodCodeSet | Optional | Method of trading |
+| 1022 | [MDFeedType](/fix/fields/tags-1000-1199#tag-1022-mdfeedtype) | String | Optional | Describes a class of service for a given data feed, ie Regular and Market Maker, Bandwidth Intensive or Bandwidth Conservative |
+| 1629 | [ExposureDuration](/fix/fields/tags-1600-1799#tag-1629-exposureduration) | int | Optional | This is the time in seconds of a "Good for Time" (GFT) TimeInForce. Positive integer value which represents the time is seconds in which the new order remains… |
+| 1916 | [ExposureDurationUnit](/fix/fields/tags-1800-1999#tag-1916-exposuredurationunit) | OrderDelayUnitCodeSet | Optional | Conditionally required when ExposureDuration(1629) is specified. |
+| 1057 | [AggressorIndicator](/fix/fields/tags-1000-1199#tag-1057-aggressorindicator) | AggressorIndicatorCodeSet | Optional | Used to identify whether the order initiator is an aggressor or not in the trade. |
 
 </StickyTable>
 

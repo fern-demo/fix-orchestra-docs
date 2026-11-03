@@ -3,9 +3,15 @@ title: "LegComplexEventDates"
 subtitle: "The LegComplexEventDates and subcomponent LegComplexEventTimes components are used to constrain a complex event to a specific date range, and optional time range. If specified the event is only effective on or within the specified dates and…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2250</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegComplexEventDates (2250)](/fix/fields/tags-2200-2399#tag-2250).
+<llms-only>
+Repeating group · NumInGroup 2250 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegComplexEventDates (2250)](/fix/fields/tags-2200-2399#tag-2250-nolegcomplexeventdates).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2251 | [LegComplexEventStartDate](/fix/fields/tags-2200-2399#tag-2251) | UTCDateOnly | Optional | Required if NoLegComplexEventDates(2250) &gt; 0. |
-| 2252 | [LegComplexEventEndDate](/fix/fields/tags-2200-2399#tag-2252) | UTCDateOnly | Optional | Required if NoLegComplexEventDates(2250) &gt; 0. |
+| 2251 | [LegComplexEventStartDate](/fix/fields/tags-2200-2399#tag-2251-legcomplexeventstartdate) | UTCDateOnly | Optional | Required if NoLegComplexEventDates(2250) &gt; 0. |
+| 2252 | [LegComplexEventEndDate](/fix/fields/tags-2200-2399#tag-2252-legcomplexeventenddate) | UTCDateOnly | Optional | Required if NoLegComplexEventDates(2250) &gt; 0. |
 | 2253 | [LegComplexEventTimes](/fix/groups/leg-complex-event-times) | Repeating group | Optional | The LegComplexEventTimes is a repeating subcomponent of the LegComplexEventDates component. It is used to further qualify any dates placed on the event and is… |
 
 </StickyTable>

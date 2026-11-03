@@ -2,9 +2,15 @@
 title: "MaturityRules"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1236</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoMaturityRules (1236)](/fix/fields/tags-1200-1399#tag-1236).
+<llms-only>
+Repeating group · NumInGroup 1236 · Added FIX.5.0
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoMaturityRules (1236)](/fix/fields/tags-1200-1399#tag-1236-nomaturityrules).
 
 ## Members
 
@@ -12,12 +18,12 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1222 | [MaturityRuleID](/fix/fields/tags-1200-1399#tag-1222) | String | Optional | Allows maturity rule to be referenced via an identifier so that rules do not need to be explicitly enumerated |
-| 1303 | [MaturityMonthYearFormat](/fix/fields/tags-1200-1399#tag-1303) | MaturityMonthYearFormatCodeSet | Optional | Format used to generate the MMY for each option contract: |
-| 1302 | [MaturityMonthYearIncrementUnits](/fix/fields/tags-1200-1399#tag-1302) | MaturityMonthYearIncrementUnitsCodeSet | Optional | enumeration specifying the increment unit: |
-| 1241 | [StartMaturityMonthYear](/fix/fields/tags-1200-1399#tag-1241) | MonthYear | Optional | Starting maturity for the range to which the StrikeIncrement applies. Price refers to the price of the underlying |
-| 1226 | [EndMaturityMonthYear](/fix/fields/tags-1200-1399#tag-1226) | MonthYear | Optional | Ending maturity monthy year to which the StrikeIncrement applies. Price refers to the price of the underlying |
-| 1229 | [MaturityMonthYearIncrement](/fix/fields/tags-1200-1399#tag-1229) | int | Optional | Value by which maturity month year should be incremented within the specified price range. |
+| 1222 | [MaturityRuleID](/fix/fields/tags-1200-1399#tag-1222-maturityruleid) | String | Optional | Allows maturity rule to be referenced via an identifier so that rules do not need to be explicitly enumerated |
+| 1303 | [MaturityMonthYearFormat](/fix/fields/tags-1200-1399#tag-1303-maturitymonthyearformat) | MaturityMonthYearFormatCodeSet | Optional | Format used to generate the MMY for each option contract: |
+| 1302 | [MaturityMonthYearIncrementUnits](/fix/fields/tags-1200-1399#tag-1302-maturitymonthyearincrementunits) | MaturityMonthYearIncrementUnitsCodeSet | Optional | enumeration specifying the increment unit: |
+| 1241 | [StartMaturityMonthYear](/fix/fields/tags-1200-1399#tag-1241-startmaturitymonthyear) | MonthYear | Optional | Starting maturity for the range to which the StrikeIncrement applies. Price refers to the price of the underlying |
+| 1226 | [EndMaturityMonthYear](/fix/fields/tags-1200-1399#tag-1226-endmaturitymonthyear) | MonthYear | Optional | Ending maturity monthy year to which the StrikeIncrement applies. Price refers to the price of the underlying |
+| 1229 | [MaturityMonthYearIncrement](/fix/fields/tags-1200-1399#tag-1229-maturitymonthyearincrement) | int | Optional | Value by which maturity month year should be incremented within the specified price range. |
 
 </StickyTable>
 

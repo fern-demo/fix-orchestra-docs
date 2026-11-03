@@ -3,9 +3,15 @@ title: "UnderlyingProtectionTermGrp"
 subtitle: "The UnderlyingProtectionTermGrp is a repeating component within the UnderlyingInstrument component used to report contract protection term details."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42068</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingProtectionTerms (42068)](/fix/fields/tags-42000-42199#tag-42068).
+<llms-only>
+Repeating group · NumInGroup 42068 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingProtectionTerms (42068)](/fix/fields/tags-42000-42199#tag-42068-nounderlyingprotectionterms).
 
 ## Members
 
@@ -13,17 +19,17 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42069 | [UnderlyingProtectionTermNotional](/fix/fields/tags-42000-42199#tag-42069) | Amt | Optional | Required if NoUnderlyingProtectionTerms(42068) &gt; 0. |
-| 42070 | [UnderlyingProtectionTermCurrency](/fix/fields/tags-42000-42199#tag-42070) | Currency | Optional | The currency of UnderlyingProtectionTermNotional(42069). Uses ISO 4217 currency codes. |
-| 42071 | [UnderlyingProtectionTermSellerNotifies](/fix/fields/tags-42000-42199#tag-42071) | Boolean | Optional | The notifying party is the party that notifies the other party when a credit event has occurred by means of a credit event notice. If more than one party is… |
-| 42072 | [UnderlyingProtectionTermBuyerNotifies](/fix/fields/tags-42000-42199#tag-42072) | Boolean | Optional | The notifying party is the party that notifies the other party when a credit event has occurred by means of a credit event notice. If more than one party is… |
-| 42073 | [UnderlyingProtectionTermEventBusinessCenter](/fix/fields/tags-42000-42199#tag-42073) | String | Optional | When used, the business center indicates the local time of the business center that replaces the Greenwich Mean Time in Section 3.3 of the 2003 ISDA Credit… |
-| 42074 | [UnderlyingProtectionTermStandardSources](/fix/fields/tags-42000-42199#tag-42074) | Boolean | Optional | Indicates whether ISDA defined Standard Public Sources are applicable (UnderlyingProtectionTermStandardSources(42074)=Y) or not. |
-| 42075 | [UnderlyingProtectionTermEventMinimumSources](/fix/fields/tags-42000-42199#tag-42075) | int | Optional | The minimum number of the specified public information sources that must publish information that reasonably confirms that a credit event has occurred. The… |
+| 42069 | [UnderlyingProtectionTermNotional](/fix/fields/tags-42000-42199#tag-42069-underlyingprotectiontermnotional) | Amt | Optional | Required if NoUnderlyingProtectionTerms(42068) &gt; 0. |
+| 42070 | [UnderlyingProtectionTermCurrency](/fix/fields/tags-42000-42199#tag-42070-underlyingprotectiontermcurrency) | Currency | Optional | The currency of UnderlyingProtectionTermNotional(42069). Uses ISO 4217 currency codes. |
+| 42071 | [UnderlyingProtectionTermSellerNotifies](/fix/fields/tags-42000-42199#tag-42071-underlyingprotectiontermsellernotifies) | Boolean | Optional | The notifying party is the party that notifies the other party when a credit event has occurred by means of a credit event notice. If more than one party is… |
+| 42072 | [UnderlyingProtectionTermBuyerNotifies](/fix/fields/tags-42000-42199#tag-42072-underlyingprotectiontermbuyernotifies) | Boolean | Optional | The notifying party is the party that notifies the other party when a credit event has occurred by means of a credit event notice. If more than one party is… |
+| 42073 | [UnderlyingProtectionTermEventBusinessCenter](/fix/fields/tags-42000-42199#tag-42073-underlyingprotectiontermeventbusinesscenter) | String | Optional | When used, the business center indicates the local time of the business center that replaces the Greenwich Mean Time in Section 3.3 of the 2003 ISDA Credit… |
+| 42074 | [UnderlyingProtectionTermStandardSources](/fix/fields/tags-42000-42199#tag-42074-underlyingprotectiontermstandardsources) | Boolean | Optional | Indicates whether ISDA defined Standard Public Sources are applicable (UnderlyingProtectionTermStandardSources(42074)=Y) or not. |
+| 42075 | [UnderlyingProtectionTermEventMinimumSources](/fix/fields/tags-42000-42199#tag-42075-underlyingprotectiontermeventminimumsources) | int | Optional | The minimum number of the specified public information sources that must publish information that reasonably confirms that a credit event has occurred. The… |
 | 42090 | [UnderlyingProtectionTermEventNewsSourceGrp](/fix/groups/underlying-protection-term-event-news-source-grp) | Repeating group | Optional | UnderlyingProtectionTermEventNewsSourceGrp is a repeating subcomponent within the UnderlyingProtectionTermGrp component. It is used to specify the particular… |
 | 42077 | [UnderlyingProtectionTermEventGrp](/fix/groups/underlying-protection-term-event-grp) | Repeating group | Optional | The UnderlyingProtectionTermEventGrp is a repeating component within the UnderlyingProtectionTermGrp component used to report applicable CDS credit events. |
 | 42087 | [UnderlyingProtectionTermObligationGrp](/fix/groups/underlying-protection-term-obligation-grp) | Repeating group | Optional | The UnderlyingProtectionTermObligationGrp is a repeating component within the UnderlyingProtectionTermGrp component used to report applicable CDS obligations. |
-| 42076 | [UnderlyingProtectionTermXID](/fix/fields/tags-42000-42199#tag-42076) | XID | Optional | A named string value referenced by UnderlyingProtectionTermXIDRef(41314). |
+| 42076 | [UnderlyingProtectionTermXID](/fix/fields/tags-42000-42199#tag-42076-underlyingprotectiontermxid) | XID | Optional | A named string value referenced by UnderlyingProtectionTermXIDRef(41314). |
 
 </StickyTable>
 

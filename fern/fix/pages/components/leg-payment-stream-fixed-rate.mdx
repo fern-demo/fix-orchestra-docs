@@ -3,7 +3,13 @@ title: "LegPaymentStreamFixedRate"
 subtitle: "LegPaymentStreamFixedRate is a subcomponent of the LegPaymentStream component used to report the fixed rate or fixed payment amount of the payment stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,16 +17,16 @@ subtitle: "LegPaymentStreamFixedRate is a subcomponent of the LegPaymentStream c
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40326 | [LegPaymentStreamRate](/fix/fields/tags-40200-40399#tag-40326) | Percentage | Optional | Mutually exclusive with LegPaymentStreamFixedAmount(40327). |
-| 40327 | [LegPaymentStreamFixedAmount](/fix/fields/tags-40200-40399#tag-40327) | Amt | Optional | Mutually exclusive with LegPaymentStreamRate(40326). |
-| 40328 | [LegPaymentStreamRateOrAmountCurrency](/fix/fields/tags-40200-40399#tag-40328) | Currency | Optional | Specifies the currency in which LegPaymentStreamFixedAmount(40327) or LegPaymentStreamRate(40326) is denominated. Uses ISO 4217 currency codes. |
-| 41556 | [LegPaymentStreamFixedAmountUnitOfMeasure](/fix/fields/tags-41400-41599#tag-41556) | UnitOfMeasureCodeSet | Optional | The fixed payment amount unit of measure (UOM). |
-| 41557 | [LegPaymentStreamTotalFixedAmount](/fix/fields/tags-41400-41599#tag-41557) | Amt | Optional | Specifies the total fixed payment amount. |
-| 40329 | [LegPaymentStreamFutureValueNotional](/fix/fields/tags-40200-40399#tag-40329) | Amt | Optional | The future value notional is normally only required for certain non-deliverable interest rate swaps (e.g. Brazillian Real (BRL) vs. CETIP Interbank Deposit Rate… |
-| 40330 | [LegPaymentStreamFutureValueDateAdjusted](/fix/fields/tags-40200-40399#tag-40330) | LocalMktDate | Optional | The adjusted value date of the future value amount. |
-| 41558 | [LegPaymentStreamWorldScaleRate](/fix/fields/tags-41400-41599#tag-41558) | float | Optional | The number of Worldscale points for purposes of the calculation of a fixed amount for a wet voyage charter commodity swap. |
-| 41559 | [LegPaymentStreamContractPrice](/fix/fields/tags-41400-41599#tag-41559) | Price | Optional | The price per relevant unit for purposes of the calculation of a fixed amount for a dry voyage charter or time charter commodity swap. |
-| 41560 | [LegPaymentStreamContractPriceCurrency](/fix/fields/tags-41400-41599#tag-41560) | Currency | Optional | Specifies the currency of LegPaymentStreamContractPrice(41559). Uses ISO 4217 currency codes. |
+| 40326 | [LegPaymentStreamRate](/fix/fields/tags-40200-40399#tag-40326-legpaymentstreamrate) | Percentage | Optional | Mutually exclusive with LegPaymentStreamFixedAmount(40327). |
+| 40327 | [LegPaymentStreamFixedAmount](/fix/fields/tags-40200-40399#tag-40327-legpaymentstreamfixedamount) | Amt | Optional | Mutually exclusive with LegPaymentStreamRate(40326). |
+| 40328 | [LegPaymentStreamRateOrAmountCurrency](/fix/fields/tags-40200-40399#tag-40328-legpaymentstreamrateoramountcurrency) | Currency | Optional | Specifies the currency in which LegPaymentStreamFixedAmount(40327) or LegPaymentStreamRate(40326) is denominated. Uses ISO 4217 currency codes. |
+| 41556 | [LegPaymentStreamFixedAmountUnitOfMeasure](/fix/fields/tags-41400-41599#tag-41556-legpaymentstreamfixedamountunitofmeasure) | UnitOfMeasureCodeSet | Optional | The fixed payment amount unit of measure (UOM). |
+| 41557 | [LegPaymentStreamTotalFixedAmount](/fix/fields/tags-41400-41599#tag-41557-legpaymentstreamtotalfixedamount) | Amt | Optional | Specifies the total fixed payment amount. |
+| 40329 | [LegPaymentStreamFutureValueNotional](/fix/fields/tags-40200-40399#tag-40329-legpaymentstreamfuturevaluenotional) | Amt | Optional | The future value notional is normally only required for certain non-deliverable interest rate swaps (e.g. Brazillian Real (BRL) vs. CETIP Interbank Deposit Rate… |
+| 40330 | [LegPaymentStreamFutureValueDateAdjusted](/fix/fields/tags-40200-40399#tag-40330-legpaymentstreamfuturevaluedateadjusted) | LocalMktDate | Optional | The adjusted value date of the future value amount. |
+| 41558 | [LegPaymentStreamWorldScaleRate](/fix/fields/tags-41400-41599#tag-41558-legpaymentstreamworldscalerate) | float | Optional | The number of Worldscale points for purposes of the calculation of a fixed amount for a wet voyage charter commodity swap. |
+| 41559 | [LegPaymentStreamContractPrice](/fix/fields/tags-41400-41599#tag-41559-legpaymentstreamcontractprice) | Price | Optional | The price per relevant unit for purposes of the calculation of a fixed amount for a dry voyage charter or time charter commodity swap. |
+| 41560 | [LegPaymentStreamContractPriceCurrency](/fix/fields/tags-41400-41599#tag-41560-legpaymentstreamcontractpricecurrency) | Currency | Optional | Specifies the currency of LegPaymentStreamContractPrice(41559). Uses ISO 4217 currency codes. |
 
 </StickyTable>
 

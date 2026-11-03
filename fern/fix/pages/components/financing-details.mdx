@@ -3,7 +3,13 @@ title: "FinancingDetails"
 subtitle: "Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This component identifies the legal agreement under which the deal was made and other unique…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.4.4
+</llms-only>
 
 ## Members
 
@@ -11,31 +17,31 @@ subtitle: "Component block is optionally used for financial transaction where le
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 913 | [AgreementDesc](/fix/fields/tags-800-999#tag-913) | String | Optional | The full name of the base standard agreement, annexes and amendments in place between the principals and applicable to this deal |
-| 914 | [AgreementID](/fix/fields/tags-800-999#tag-914) | String | Optional | A common reference to the applicable standing agreement between the principals |
-| 1961 | [AgreementVersion](/fix/fields/tags-1800-1999#tag-1961) | String | Optional | The version of the master agreement |
-| 915 | [AgreementDate](/fix/fields/tags-800-999#tag-915) | LocalMktDate | Optional | A reference to the date the underlying agreement was executed. |
-| 918 | [AgreementCurrency](/fix/fields/tags-800-999#tag-918) | Currency | Optional | Currency of the underlying agreement. |
-| 1962 | [MasterConfirmationDesc](/fix/fields/tags-1800-1999#tag-1962) | String | Optional | The type of master confirmation executed between the parties. See http://www.fpml.org/coding-scheme/master-confirmation-type for values. |
-| 1963 | [MasterConfirmationDate](/fix/fields/tags-1800-1999#tag-1963) | LocalMktDate | Optional | Alternative to broker confirmation. The date of the confirmation executed between the parties and intended to govern all relevant transactions between those… |
-| 1964 | [MasterConfirmationAnnexDesc](/fix/fields/tags-1800-1999#tag-1964) | String | Optional | The type of master confirmation annex executed between the parties. See http://www.fpml.org/coding-scheme/master-confirmation-annex-type for values. |
-| 1965 | [MasterConfirmationAnnexDate](/fix/fields/tags-1800-1999#tag-1965) | LocalMktDate | Optional | The date that an annex to the master confirmation was executed between the parties. |
-| 1966 | [BrokerConfirmationDesc](/fix/fields/tags-1800-1999#tag-1966) | String | Optional | Describes the type of broker confirmation executed between the parites. Can be used as an alterative to MasterConfirmationDesc(1962). See… |
+| 913 | [AgreementDesc](/fix/fields/tags-800-999#tag-913-agreementdesc) | String | Optional | The full name of the base standard agreement, annexes and amendments in place between the principals and applicable to this deal |
+| 914 | [AgreementID](/fix/fields/tags-800-999#tag-914-agreementid) | String | Optional | A common reference to the applicable standing agreement between the principals |
+| 1961 | [AgreementVersion](/fix/fields/tags-1800-1999#tag-1961-agreementversion) | String | Optional | The version of the master agreement |
+| 915 | [AgreementDate](/fix/fields/tags-800-999#tag-915-agreementdate) | LocalMktDate | Optional | A reference to the date the underlying agreement was executed. |
+| 918 | [AgreementCurrency](/fix/fields/tags-800-999#tag-918-agreementcurrency) | Currency | Optional | Currency of the underlying agreement. |
+| 1962 | [MasterConfirmationDesc](/fix/fields/tags-1800-1999#tag-1962-masterconfirmationdesc) | String | Optional | The type of master confirmation executed between the parties. See http://www.fpml.org/coding-scheme/master-confirmation-type for values. |
+| 1963 | [MasterConfirmationDate](/fix/fields/tags-1800-1999#tag-1963-masterconfirmationdate) | LocalMktDate | Optional | Alternative to broker confirmation. The date of the confirmation executed between the parties and intended to govern all relevant transactions between those… |
+| 1964 | [MasterConfirmationAnnexDesc](/fix/fields/tags-1800-1999#tag-1964-masterconfirmationannexdesc) | String | Optional | The type of master confirmation annex executed between the parties. See http://www.fpml.org/coding-scheme/master-confirmation-annex-type for values. |
+| 1965 | [MasterConfirmationAnnexDate](/fix/fields/tags-1800-1999#tag-1965-masterconfirmationannexdate) | LocalMktDate | Optional | The date that an annex to the master confirmation was executed between the parties. |
+| 1966 | [BrokerConfirmationDesc](/fix/fields/tags-1800-1999#tag-1966-brokerconfirmationdesc) | String | Optional | Describes the type of broker confirmation executed between the parites. Can be used as an alterative to MasterConfirmationDesc(1962). See… |
 | 40040 | [FinancingContractualDefinitionGrp](/fix/groups/financing-contractual-definition-grp) | Repeating group | Optional | The FinancingContractualDefinitionGrp is a repeating component within the FinancingDetails component used to report the definitions published by ISDA that… |
 | 40046 | [FinancingTermSupplementGrp](/fix/groups/financing-term-supplement-grp) | Repeating group | Optional | The FinancingTermSupplementGrp is a repeating component within the FinancingDetails component used to report contractual terms supplements of derivative trades. |
 | 40042 | [FinancingContractualMatrixGrp](/fix/groups/financing-contractual-matrix-grp) | Repeating group | Optional | The FinancingContractualMatrixGrp is a repeating component within the FinancingDetails component used to report the ISDA Physical Settlement Matrix Transaction… |
-| 1967 | [CreditSupportAgreementDesc](/fix/fields/tags-1800-1999#tag-1967) | String | Optional | The type of ISDA Credit Support Agreement. See http://www.fpml.org/coding-scheme/credit-support-agreement-type for values. |
-| 1968 | [CreditSupportAgreementDate](/fix/fields/tags-1800-1999#tag-1968) | LocalMktDate | Optional | The date of the ISDA Credit Support Agreement executed between the parties and intended to govern collateral arrangements for all OTC derivatives transactions… |
-| 1969 | [CreditSupportAgreementID](/fix/fields/tags-1800-1999#tag-1969) | String | Optional | A common reference or unique identifier to identify the ISDA Credit Support Agreement executed between the parties. |
-| 1970 | [GoverningLaw](/fix/fields/tags-1800-1999#tag-1970) | String | Optional | Identification of the law governing the transaction. See http://www.fpml.org/coding-scheme/governing-law for values. |
-| 1513 | [DocumentationText](/fix/fields/tags-1400-1599#tag-1513) | String | Optional | A sentence or phrase pertenant to the trade, not a reference to an external document. E.g. "To be registered with the U.S. Environmental Protection Agency, Acid… |
-| 1525 | [EncodedDocumentationTextLen](/fix/fields/tags-1400-1599#tag-1525) | Length | Optional | Must be set if EncodedDocumentationText(1527) field is specified and must immediately precede it. |
-| 1527 | [EncodedDocumentationText](/fix/fields/tags-1400-1599#tag-1527) | data | Optional | Encoded (non-ASCII characters) representation of the DocumentationText(1513) field in the encoded format specified via the MessageEncoding(347) field. |
-| 788 | [TerminationType](/fix/fields/tags-600-799#tag-788) | TerminationTypeCodeSet | Optional | For Repos the timing or method for terminating the agreement. |
-| 916 | [StartDate](/fix/fields/tags-800-999#tag-916) | LocalMktDate | Optional | Settlement date of the beginning of the deal |
-| 917 | [EndDate](/fix/fields/tags-800-999#tag-917) | LocalMktDate | Optional | Repayment / repurchase date |
-| 919 | [DeliveryType](/fix/fields/tags-800-999#tag-919) | DeliveryTypeCodeSet | Optional | Delivery or custody arrangement for the underlying securities |
-| 898 | [MarginRatio](/fix/fields/tags-800-999#tag-898) | Percentage | Optional | Percentage of cash value that underlying security collateral must meet. |
+| 1967 | [CreditSupportAgreementDesc](/fix/fields/tags-1800-1999#tag-1967-creditsupportagreementdesc) | String | Optional | The type of ISDA Credit Support Agreement. See http://www.fpml.org/coding-scheme/credit-support-agreement-type for values. |
+| 1968 | [CreditSupportAgreementDate](/fix/fields/tags-1800-1999#tag-1968-creditsupportagreementdate) | LocalMktDate | Optional | The date of the ISDA Credit Support Agreement executed between the parties and intended to govern collateral arrangements for all OTC derivatives transactions… |
+| 1969 | [CreditSupportAgreementID](/fix/fields/tags-1800-1999#tag-1969-creditsupportagreementid) | String | Optional | A common reference or unique identifier to identify the ISDA Credit Support Agreement executed between the parties. |
+| 1970 | [GoverningLaw](/fix/fields/tags-1800-1999#tag-1970-governinglaw) | String | Optional | Identification of the law governing the transaction. See http://www.fpml.org/coding-scheme/governing-law for values. |
+| 1513 | [DocumentationText](/fix/fields/tags-1400-1599#tag-1513-documentationtext) | String | Optional | A sentence or phrase pertenant to the trade, not a reference to an external document. E.g. "To be registered with the U.S. Environmental Protection Agency, Acid… |
+| 1525 | [EncodedDocumentationTextLen](/fix/fields/tags-1400-1599#tag-1525-encodeddocumentationtextlen) | Length | Optional | Must be set if EncodedDocumentationText(1527) field is specified and must immediately precede it. |
+| 1527 | [EncodedDocumentationText](/fix/fields/tags-1400-1599#tag-1527-encodeddocumentationtext) | data | Optional | Encoded (non-ASCII characters) representation of the DocumentationText(1513) field in the encoded format specified via the MessageEncoding(347) field. |
+| 788 | [TerminationType](/fix/fields/tags-600-799#tag-788-terminationtype) | TerminationTypeCodeSet | Optional | For Repos the timing or method for terminating the agreement. |
+| 916 | [StartDate](/fix/fields/tags-800-999#tag-916-startdate) | LocalMktDate | Optional | Settlement date of the beginning of the deal |
+| 917 | [EndDate](/fix/fields/tags-800-999#tag-917-enddate) | LocalMktDate | Optional | Repayment / repurchase date |
+| 919 | [DeliveryType](/fix/fields/tags-800-999#tag-919-deliverytype) | DeliveryTypeCodeSet | Optional | Delivery or custody arrangement for the underlying securities |
+| 898 | [MarginRatio](/fix/fields/tags-800-999#tag-898-marginratio) | Percentage | Optional | Percentage of cash value that underlying security collateral must meet. |
 
 </StickyTable>
 

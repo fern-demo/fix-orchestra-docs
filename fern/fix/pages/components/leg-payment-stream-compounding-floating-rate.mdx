@@ -3,7 +3,13 @@ title: "LegPaymentStreamCompoundingFloatingRate"
 subtitle: "LegPaymentStreamCompoundingFloatingRate is a subcomponent of the LegPaymentStream component used to report the parameters for determining the compounding floating rate of the stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,24 +17,24 @@ subtitle: "LegPaymentStreamCompoundingFloatingRate is a subcomponent of the LegP
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42427 | [LegPaymentStreamCompoundingRateIndex](/fix/fields/tags-42400-42599#tag-42427) | String | Optional | The payment stream's compounding floating rate index. |
-| 42428 | [LegPaymentStreamCompoundingRateIndexCurvePeriod](/fix/fields/tags-42400-42599#tag-42428) | int | Optional | Conditionally required if LegPaymentStreamCompoundingRateIndexCurveUnit(42429) is specified. |
-| 42429 | [LegPaymentStreamCompoundingRateIndexCurveUnit](/fix/fields/tags-42400-42599#tag-42429) | PaymentStreamRateIndexCurveUnitCodeSet | Optional | Conditionally required if LegPaymentStreamCompoundingRateIndexCurvePeriod(42428) is specified. |
-| 42430 | [LegPaymentStreamCompoundingRateMultiplier](/fix/fields/tags-42400-42599#tag-42430) | float | Optional | A rate multiplier to apply to the compounding floating rate. The multiplier can be less than or greater than 1 (one). This should only be included if the… |
-| 42431 | [LegPaymentStreamCompoundingRateSpread](/fix/fields/tags-42400-42599#tag-42431) | PriceOffset | Optional | The basis points spread from the index specified in LegPaymentStreamCompoundingRateIndex(42427). |
-| 42432 | [LegPaymentStreamCompoundingRateSpreadPositionType](/fix/fields/tags-42400-42599#tag-42432) | PaymentStreamRateSpreadPositionTypeCodeSet | Optional | Identifies whether the rate spread is applied to a long or short position. |
-| 42433 | [LegPaymentStreamCompoundingRateTreatment](/fix/fields/tags-42400-42599#tag-42433) | PaymentStreamRateTreatmentCodeSet | Optional | Specifies the yield calculation treatment for the index. |
-| 42434 | [LegPaymentStreamCompoundingCapRate](/fix/fields/tags-42400-42599#tag-42434) | Percentage | Optional | The cap rate, if any, which applies to the compounding floating rate. It is only required where the compounding floating rate on a swap stream is capped at a… |
-| 42435 | [LegPaymentStreamCompoundingCapRateBuySide](/fix/fields/tags-42400-42599#tag-42435) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the buyer of the compounding cap rate option through its trade side. |
-| 42436 | [LegPaymentStreamCompoundingCapRateSellSide](/fix/fields/tags-42400-42599#tag-42436) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the seller of the compounding cap rate option through its trade side. |
-| 42437 | [LegPaymentStreamCompoundingFloorRate](/fix/fields/tags-42400-42599#tag-42437) | Percentage | Optional | The floor rate, if any, which applies to the compounding floating rate. The floor rate (strike) is only required where the compounding floating rate on a swap… |
-| 42438 | [LegPaymentStreamCompoundingFloorRateBuySide](/fix/fields/tags-42400-42599#tag-42438) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the buyer of the compounding floor rate option through its trade side. |
-| 42439 | [LegPaymentStreamCompoundingFloorRateSellSide](/fix/fields/tags-42400-42599#tag-42439) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the seller of the floor rate option through its trade side. |
-| 42440 | [LegPaymentStreamCompoundingInitialRate](/fix/fields/tags-42400-42599#tag-42440) | Percentage | Optional | The initial compounding floating rate reset agreed between the principal parties involved in the trade. It should only be included when the rate is not equal to… |
-| 42441 | [LegPaymentStreamCompoundingFinalRateRoundingDirection](/fix/fields/tags-42400-42599#tag-42441) | RoundingDirectionCodeSet | Optional | Specifies the rounding direction for the compounding floating rate. |
-| 42442 | [LegPaymentStreamCompoundingFinalRatePrecision](/fix/fields/tags-42400-42599#tag-42442) | int | Optional | Specifies the compounding floating rate rounding precision in terms of a number of decimal places. Note how a percentage rate rounding of 5 decimal places is… |
-| 42443 | [LegPaymentStreamCompoundingAveragingMethod](/fix/fields/tags-42400-42599#tag-42443) | PaymentStreamAveragingMethodCodeSet | Optional | Specifies the averaging method when compounding floating rate averaging is applicable (e.g. weighted or unweighted). |
-| 42444 | [LegPaymentStreamCompoundingNegativeRateTreatment](/fix/fields/tags-42400-42599#tag-42444) | PaymentStreamNegativeRateTreatmentCodeSet | Optional | Specifies the method for calculating payment obligations when a compounding floating rate is negative (either due to a quoted negative floating rate or by… |
+| 42427 | [LegPaymentStreamCompoundingRateIndex](/fix/fields/tags-42400-42599#tag-42427-legpaymentstreamcompoundingrateindex) | String | Optional | The payment stream's compounding floating rate index. |
+| 42428 | [LegPaymentStreamCompoundingRateIndexCurvePeriod](/fix/fields/tags-42400-42599#tag-42428-legpaymentstreamcompoundingrateindexcurveperiod) | int | Optional | Conditionally required if LegPaymentStreamCompoundingRateIndexCurveUnit(42429) is specified. |
+| 42429 | [LegPaymentStreamCompoundingRateIndexCurveUnit](/fix/fields/tags-42400-42599#tag-42429-legpaymentstreamcompoundingrateindexcurveunit) | PaymentStreamRateIndexCurveUnitCodeSet | Optional | Conditionally required if LegPaymentStreamCompoundingRateIndexCurvePeriod(42428) is specified. |
+| 42430 | [LegPaymentStreamCompoundingRateMultiplier](/fix/fields/tags-42400-42599#tag-42430-legpaymentstreamcompoundingratemultiplier) | float | Optional | A rate multiplier to apply to the compounding floating rate. The multiplier can be less than or greater than 1 (one). This should only be included if the… |
+| 42431 | [LegPaymentStreamCompoundingRateSpread](/fix/fields/tags-42400-42599#tag-42431-legpaymentstreamcompoundingratespread) | PriceOffset | Optional | The basis points spread from the index specified in LegPaymentStreamCompoundingRateIndex(42427). |
+| 42432 | [LegPaymentStreamCompoundingRateSpreadPositionType](/fix/fields/tags-42400-42599#tag-42432-legpaymentstreamcompoundingratespreadpositiontype) | PaymentStreamRateSpreadPositionTypeCodeSet | Optional | Identifies whether the rate spread is applied to a long or short position. |
+| 42433 | [LegPaymentStreamCompoundingRateTreatment](/fix/fields/tags-42400-42599#tag-42433-legpaymentstreamcompoundingratetreatment) | PaymentStreamRateTreatmentCodeSet | Optional | Specifies the yield calculation treatment for the index. |
+| 42434 | [LegPaymentStreamCompoundingCapRate](/fix/fields/tags-42400-42599#tag-42434-legpaymentstreamcompoundingcaprate) | Percentage | Optional | The cap rate, if any, which applies to the compounding floating rate. It is only required where the compounding floating rate on a swap stream is capped at a… |
+| 42435 | [LegPaymentStreamCompoundingCapRateBuySide](/fix/fields/tags-42400-42599#tag-42435-legpaymentstreamcompoundingcapratebuyside) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the buyer of the compounding cap rate option through its trade side. |
+| 42436 | [LegPaymentStreamCompoundingCapRateSellSide](/fix/fields/tags-42400-42599#tag-42436-legpaymentstreamcompoundingcapratesellside) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the seller of the compounding cap rate option through its trade side. |
+| 42437 | [LegPaymentStreamCompoundingFloorRate](/fix/fields/tags-42400-42599#tag-42437-legpaymentstreamcompoundingfloorrate) | Percentage | Optional | The floor rate, if any, which applies to the compounding floating rate. The floor rate (strike) is only required where the compounding floating rate on a swap… |
+| 42438 | [LegPaymentStreamCompoundingFloorRateBuySide](/fix/fields/tags-42400-42599#tag-42438-legpaymentstreamcompoundingfloorratebuyside) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the buyer of the compounding floor rate option through its trade side. |
+| 42439 | [LegPaymentStreamCompoundingFloorRateSellSide](/fix/fields/tags-42400-42599#tag-42439-legpaymentstreamcompoundingfloorratesellside) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the seller of the floor rate option through its trade side. |
+| 42440 | [LegPaymentStreamCompoundingInitialRate](/fix/fields/tags-42400-42599#tag-42440-legpaymentstreamcompoundinginitialrate) | Percentage | Optional | The initial compounding floating rate reset agreed between the principal parties involved in the trade. It should only be included when the rate is not equal to… |
+| 42441 | [LegPaymentStreamCompoundingFinalRateRoundingDirection](/fix/fields/tags-42400-42599#tag-42441-legpaymentstreamcompoundingfinalrateroundingdirection) | RoundingDirectionCodeSet | Optional | Specifies the rounding direction for the compounding floating rate. |
+| 42442 | [LegPaymentStreamCompoundingFinalRatePrecision](/fix/fields/tags-42400-42599#tag-42442-legpaymentstreamcompoundingfinalrateprecision) | int | Optional | Specifies the compounding floating rate rounding precision in terms of a number of decimal places. Note how a percentage rate rounding of 5 decimal places is… |
+| 42443 | [LegPaymentStreamCompoundingAveragingMethod](/fix/fields/tags-42400-42599#tag-42443-legpaymentstreamcompoundingaveragingmethod) | PaymentStreamAveragingMethodCodeSet | Optional | Specifies the averaging method when compounding floating rate averaging is applicable (e.g. weighted or unweighted). |
+| 42444 | [LegPaymentStreamCompoundingNegativeRateTreatment](/fix/fields/tags-42400-42599#tag-42444-legpaymentstreamcompoundingnegativeratetreatment) | PaymentStreamNegativeRateTreatmentCodeSet | Optional | Specifies the method for calculating payment obligations when a compounding floating rate is negative (either due to a quoted negative floating rate or by… |
 
 </StickyTable>
 

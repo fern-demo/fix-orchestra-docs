@@ -2,9 +2,15 @@
 title: "InstrmtStrkPxGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 428</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoStrikes (428)](/fix/fields/tags-400-599#tag-428).
+<llms-only>
+Repeating group · NumInGroup 428 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoStrikes (428)](/fix/fields/tags-400-599#tag-428-nostrikes).
 
 ## Members
 
@@ -14,15 +20,15 @@ Each repetition starts with the first member listed. The count of repetitions is
 |---|---|---|---|---|
 | | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
-| 140 | [PrevClosePx](/fix/fields/tags-0-199#tag-140) | Price | Optional | Useful for verifying security identification |
-| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | Can use client order identifier or the symbol and side to uniquely identify the stock in the list. |
-| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
-| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | Optional | Side of order (see Volume : "Glossary" for value definitions) |
-| 44 | [Price](/fix/fields/tags-0-199#tag-44) | Price | Optional | Price per unit of quantity (e.g. per share) |
-| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 140 | [PrevClosePx](/fix/fields/tags-0-199#tag-140-prevclosepx) | Price | Optional | Useful for verifying security identification |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11-clordid) | String | Optional | Can use client order identifier or the symbol and side to uniquely identify the stock in the list. |
+| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526-secondaryclordid) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54-side) | SideCodeSet | Optional | Side of order (see Volume : "Glossary" for value definitions) |
+| 44 | [Price](/fix/fields/tags-0-199#tag-44-price) | Price | Optional | Price per unit of quantity (e.g. per share) |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15-currency) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 
 </StickyTable>
 

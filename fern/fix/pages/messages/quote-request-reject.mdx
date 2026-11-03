@@ -3,7 +3,13 @@ title: "QuoteRequestReject"
 subtitle: "The Quote Request Reject message is used to reject Quote Request messages for all quoting models."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType AG</Badge> <Badge intent="note" minimal>Quotation Negotiation</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType AG · Quotation Negotiation · Pre Trade · Added FIX.4.3
+</llms-only>
 
 ## Message structure
 
@@ -12,17 +18,17 @@ subtitle: "The Quote Request Reject message is used to reject Quote Request mess
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 131 | [QuoteReqID](/fix/fields/tags-0-199#tag-131) | String | **Required** | Unique identifier for a QuoteRequest(35=R). |
-| 644 | [RFQReqID](/fix/fields/tags-600-799#tag-644) | String | Optional | For tradeable quote model - used to indicate to which RFQ Request this Quote Request is in response. |
-| 658 | [QuoteRequestRejectReason](/fix/fields/tags-600-799#tag-658) | QuoteRequestRejectReasonCodeSet | **Required** | Reason Quote was rejected |
-| 1171 | [PrivateQuote](/fix/fields/tags-1000-1199#tag-1171) | PrivateQuoteCodeSet | Optional | Used to indicate whether a private negotiation is requested or if the response should be public. Only relevant in markets supporting both Private and Public… |
-| 1172 | [RespondentType](/fix/fields/tags-1000-1199#tag-1172) | RespondentTypeCodeSet | Optional | Specifies the type of respondents requested. |
-| 1091 | [PreTradeAnonymity](/fix/fields/tags-1000-1199#tag-1091) | Boolean | Optional | Allows trader to explicitly request anonymity or disclosure in pre-trade market data feeds. Anonymity is relevant in markets where counterparties are regularly… |
+| 131 | [QuoteReqID](/fix/fields/tags-0-199#tag-131-quotereqid) | String | **Required** | Unique identifier for a QuoteRequest(35=R). |
+| 644 | [RFQReqID](/fix/fields/tags-600-799#tag-644-rfqreqid) | String | Optional | For tradeable quote model - used to indicate to which RFQ Request this Quote Request is in response. |
+| 658 | [QuoteRequestRejectReason](/fix/fields/tags-600-799#tag-658-quoterequestrejectreason) | QuoteRequestRejectReasonCodeSet | **Required** | Reason Quote was rejected |
+| 1171 | [PrivateQuote](/fix/fields/tags-1000-1199#tag-1171-privatequote) | PrivateQuoteCodeSet | Optional | Used to indicate whether a private negotiation is requested or if the response should be public. Only relevant in markets supporting both Private and Public… |
+| 1172 | [RespondentType](/fix/fields/tags-1000-1199#tag-1172-respondenttype) | RespondentTypeCodeSet | Optional | Specifies the type of respondents requested. |
+| 1091 | [PreTradeAnonymity](/fix/fields/tags-1000-1199#tag-1091-pretradeanonymity) | Boolean | Optional | Allows trader to explicitly request anonymity or disclosure in pre-trade market data feeds. Anonymity is relevant in markets where counterparties are regularly… |
 | 1116 | [RootParties](/fix/groups/root-parties) | Repeating group | Optional | The RootParties component block is a version of the Parties component block used to provide root information regarding the owning and entering parties of a… |
 | 146 | [QuotReqRjctGrp](/fix/groups/quot-req-rjct-grp) | Repeating group | **Required** |  |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

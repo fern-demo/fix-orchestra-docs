@@ -2,7 +2,13 @@
 title: "DerivativeInstrument"
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0
+</llms-only>
 
 ## Members
 
@@ -10,70 +16,70 @@ title: "DerivativeInstrument"
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1214 | [DerivativeSymbol](/fix/fields/tags-1200-1399#tag-1214) | String | Optional | Common, "human understood" representation of the security. SecurityID value can be specified if no symbol exists (e.g. non-exchange traded Collective Investment… |
-| 1215 | [DerivativeSymbolSfx](/fix/fields/tags-1200-1399#tag-1215) | SymbolSfxCodeSet | Optional | Used in Fixed Income with a value of "WI" to indicate "When Issued" for a security to be reissued under an old CUSIP or ISIN or with a value of "CD" to indicate… |
-| 1216 | [DerivativeSecurityID](/fix/fields/tags-1200-1399#tag-1216) | String | Optional | Takes precedence in identifying security to counterparty over SecurityAltID block. Requires SecurityIDSource if specified. |
-| 1217 | [DerivativeSecurityIDSource](/fix/fields/tags-1200-1399#tag-1217) | SecurityIDSourceCodeSet | Optional | Required if SecurityID is specified. |
+| 1214 | [DerivativeSymbol](/fix/fields/tags-1200-1399#tag-1214-derivativesymbol) | String | Optional | Common, "human understood" representation of the security. SecurityID value can be specified if no symbol exists (e.g. non-exchange traded Collective Investment… |
+| 1215 | [DerivativeSymbolSfx](/fix/fields/tags-1200-1399#tag-1215-derivativesymbolsfx) | SymbolSfxCodeSet | Optional | Used in Fixed Income with a value of "WI" to indicate "When Issued" for a security to be reissued under an old CUSIP or ISIN or with a value of "CD" to indicate… |
+| 1216 | [DerivativeSecurityID](/fix/fields/tags-1200-1399#tag-1216-derivativesecurityid) | String | Optional | Takes precedence in identifying security to counterparty over SecurityAltID block. Requires SecurityIDSource if specified. |
+| 1217 | [DerivativeSecurityIDSource](/fix/fields/tags-1200-1399#tag-1217-derivativesecurityidsource) | SecurityIDSourceCodeSet | Optional | Required if SecurityID is specified. |
 | 1218 | [DerivativeSecurityAltIDGrp](/fix/groups/derivative-security-alt-id-grp) | Repeating group | Optional |  |
-| 1246 | [DerivativeProduct](/fix/fields/tags-1200-1399#tag-1246) | ProductCodeSet | Optional | Indicates the type of product the security is associated with (high-level category) |
-| 1228 | [DerivativeProductComplex](/fix/fields/tags-1200-1399#tag-1228) | String | Optional | Identifies an entire suite of products for a given market. In Futures this may be "interest rates", "agricultural", "equity indexes", etc |
-| 1243 | [DerivFlexProductEligibilityIndicator](/fix/fields/tags-1200-1399#tag-1243) | Boolean | Optional | Used to indicate if a product or group of product supports the creation of flexible securities |
-| 1247 | [DerivativeSecurityGroup](/fix/fields/tags-1200-1399#tag-1247) | String | Optional | An exchange specific name assigned to a group of related securities which may be concurrently affected by market events and actions. |
-| 1248 | [DerivativeCFICode](/fix/fields/tags-1200-1399#tag-1248) | String | Optional | Indicates the type of security using ISO 10962 standard, Classification of Financial Instruments (CFI code) values. It is recommended that CFICode be used… |
-| 2892 | [DerivativeUPICode](/fix/fields/tags-2800-2999#tag-2892) | String | Optional | Uniquely identifies the product of a derivative instrument using ISO 4914. See UPICode(2891) for further detail. |
-| 1249 | [DerivativeSecurityType](/fix/fields/tags-1200-1399#tag-1249) | SecurityTypeCodeSet | Optional | It is recommended that CFICode be used instead of SecurityType for non-Fixed Income instruments. Required for Fixed Income. Refer to Volume 7 - Fixed Income… |
-| 1250 | [DerivativeSecuritySubType](/fix/fields/tags-1200-1399#tag-1250) | String | Optional | Sub-type qualification/identification of the SecurityType (e.g. for SecurityType=MLEG). If specified, SecurityType is required. |
-| 1251 | [DerivativeMaturityMonthYear](/fix/fields/tags-1200-1399#tag-1251) | MonthYear | Optional | Specifies the month and year of maturity. Applicable for standardized derivatives which are typically only referenced by month and year (e.g. S and P futures).… |
-| 1252 | [DerivativeMaturityDate](/fix/fields/tags-1200-1399#tag-1252) | LocalMktDate | Optional | Specifies date of maturity (a full date). Note that standardized derivatives which are typically only referenced by month and year (e.g. S and P futures).may… |
-| 1253 | [DerivativeMaturityTime](/fix/fields/tags-1200-1399#tag-1253) | TZTimeOnly | Optional |  |
-| 1254 | [DerivativeSettleOnOpenFlag](/fix/fields/tags-1200-1399#tag-1254) | String | Optional | Indicator to determine if Instrument is Settle on Open. |
-| 1255 | [DerivativeInstrmtAssignmentMethod](/fix/fields/tags-1200-1399#tag-1255) | InstrmtAssignmentMethodCodeSet | Optional |  |
-| 1256 | [DerivativeSecurityStatus](/fix/fields/tags-1200-1399#tag-1256) | SecurityStatusCodeSet | Optional | Gives the current state of the instrument |
-| 1276 | [DerivativeIssueDate](/fix/fields/tags-1200-1399#tag-1276) | LocalMktDate | Optional | Date instrument was issued. For Fixed Income IOIs for new issues, specifies the issue date. |
-| 1257 | [DerivativeInstrRegistry](/fix/fields/tags-1200-1399#tag-1257) | String | Optional | The location at which records of ownership are maintained for this instrument, and at which ownership changes must be recorded. Can be used in conjunction with… |
-| 1258 | [DerivativeCountryOfIssue](/fix/fields/tags-1200-1399#tag-1258) | Country | Optional | ISO Country code of instrument issue (e.g. the country portion typically used in ISIN). Can be used in conjunction with non-ISIN SecurityID (e.g. CUSIP for… |
-| 1259 | [DerivativeStateOrProvinceOfIssue](/fix/fields/tags-1200-1399#tag-1259) | String | Optional | A two-character state or province abbreviation. |
-| 1260 | [DerivativeLocaleOfIssue](/fix/fields/tags-1200-1399#tag-1260) | String | Optional | The three-character IATA code for a locale (e.g. airport code for Municipal Bonds). |
-| 1261 | [DerivativeStrikePrice](/fix/fields/tags-1200-1399#tag-1261) | Price | Optional | Used for derivatives, such as options and covered warrants |
-| 1262 | [DerivativeStrikeCurrency](/fix/fields/tags-1200-1399#tag-1262) | Currency | Optional | Used for derivatives |
-| 1263 | [DerivativeStrikeMultiplier](/fix/fields/tags-1200-1399#tag-1263) | float | Optional | Used for derivatives. Multiplier applied to the strike price for the purpose of calculating the settlement value. |
-| 1264 | [DerivativeStrikeValue](/fix/fields/tags-1200-1399#tag-1264) | float | Optional | Used for derivatives. The number of shares/units for the financial instrument involved in the option trade. |
-| 1265 | [DerivativeOptAttribute](/fix/fields/tags-1200-1399#tag-1265) | char | Optional | Used for derivatives, such as options and covered warrants to indicate a versioning of the contract when required due to corporate actions to the underlying.… |
-| 1266 | [DerivativeContractMultiplier](/fix/fields/tags-1200-1399#tag-1266) | float | Optional | For Fixed Income, Convertible Bonds, Derivatives, etc. Note: If used, quantities should be expressed in the "nominal" (e.g. contracts vs. shares) amount. |
-| 1438 | [DerivativeContractMultiplierUnit](/fix/fields/tags-1400-1599#tag-1438) | ContractMultiplierUnitCodeSet | Optional | Indicates the type of multiplier being applied to the contract. Can be optionally used to further define what unit DerivativeContractMultiplier(tag 1266)is… |
-| 1442 | [DerivativeFlowScheduleType](/fix/fields/tags-1400-1599#tag-1442) | FlowScheduleTypeCodeSet | Optional | The industry standard flow schedule by which electricity or natural gas is traded. Schedules exist by regions and on-peak and off-peak status, such as "Western… |
-| 1267 | [DerivativeMinPriceIncrement](/fix/fields/tags-1200-1399#tag-1267) | float | Optional | Minimum price increment for the instrument. Could also be used to represent tick value. |
-| 1268 | [DerivativeMinPriceIncrementAmount](/fix/fields/tags-1200-1399#tag-1268) | Amt | Optional | Minimum price increment amount associated with the MinPriceIncrement \[969\]. For listed derivatives, the value can be calculated by multiplying MinPriceIncrement… |
-| 1269 | [DerivativeUnitOfMeasure](/fix/fields/tags-1200-1399#tag-1269) | UnitOfMeasureCodeSet | Optional |  |
-| 1270 | [DerivativeUnitOfMeasureQty](/fix/fields/tags-1200-1399#tag-1270) | Qty | Optional |  |
-| 1722 | [DerivativeUnitOfMeasureCurrency](/fix/fields/tags-1600-1799#tag-1722) | Currency | Optional | Indicates the currency of the unit of measure. Conditionally required when DerivativeUnitOfMeasure(1269) = Ccy |
-| 1315 | [DerivativePriceUnitOfMeasure](/fix/fields/tags-1200-1399#tag-1315) | UnitOfMeasureCodeSet | Optional | Refer to definition for PriceUnitOfMeasure(1191) |
-| 1316 | [DerivativePriceUnitOfMeasureQty](/fix/fields/tags-1200-1399#tag-1316) | Qty | Optional | Refer to definition of PriceUnitOfMeasureQty(1192) |
-| 1723 | [DerivativePriceUnitOfMeasureCurrency](/fix/fields/tags-1600-1799#tag-1723) | Currency | Optional | Indicates the currency of the price unit of measure. Conditionally required when DerivativePriceUnitOfMeasure(1315) = Ccy |
-| 1317 | [DerivativeSettlMethod](/fix/fields/tags-1200-1399#tag-1317) | SettlMethodCodeSet | Optional | Settlement method for a contract. Can be used as an alternative to CFI Code value |
-| 1318 | [DerivativePriceQuoteMethod](/fix/fields/tags-1200-1399#tag-1318) | PriceQuoteMethodCodeSet | Optional | Method for price quotation |
-| 1319 | [DerivativeValuationMethod](/fix/fields/tags-1200-1399#tag-1319) | ValuationMethodCodeSet | Optional | For futures, indicates type of valuation method applied |
-| 1576 | [DerivativePriceQuoteCurrency](/fix/fields/tags-1400-1599#tag-1576) | Currency | Optional | Default currency in which the price is quoted. Defined at the instrument level. Used in place of Currency (tag 15) to express the currency of a product when the… |
-| 1320 | [DerivativeListMethod](/fix/fields/tags-1200-1399#tag-1320) | ListMethodCodeSet | Optional | Indicates whether strikes are pre-listed only or can also be defined via user request |
-| 1321 | [DerivativeCapPrice](/fix/fields/tags-1200-1399#tag-1321) | Price | Optional | Used to express the ceiling price of a capped call |
-| 1322 | [DerivativeFloorPrice](/fix/fields/tags-1200-1399#tag-1322) | Price | Optional | Used to express the floor price of a capped put |
-| 1323 | [DerivativePutOrCall](/fix/fields/tags-1200-1399#tag-1323) | PutOrCallCodeSet | Optional | Indicates whether an option contract is a put, call, chooser or undetermined. |
-| 2684 | [DerivativeInTheMoneyCondition](/fix/fields/tags-2600-2799#tag-2684) | InTheMoneyConditionCodeSet | Optional | Used to express in-the-moneyness behavior in general terms for the option without the use of DerivativeStrikePrice(1261) and DerivativePutOrCall(1323). |
-| 2688 | [DerivativeContraryInstructionEligibilityIndicator](/fix/fields/tags-2600-2799#tag-2688) | Boolean | Optional | Identifies whether the option instrument is eligible for contrary instructions at the time of exercise. The contrariness of an instruction will be determined in… |
-| 1299 | [DerivativeExerciseStyle](/fix/fields/tags-1200-1399#tag-1299) | ExerciseStyleCodeSet | Optional | Type of exercise of a derivatives security |
-| 1225 | [DerivativeOptPayAmount](/fix/fields/tags-1200-1399#tag-1225) | Amt | Optional | Cash amount indicating the pay out associated with an option. For binary options this is a fixed amount |
-| 1271 | [DerivativeTimeUnit](/fix/fields/tags-1200-1399#tag-1271) | TimeUnitCodeSet | Optional | Used to indicate a time unit for the contract (e.g., days, weeks, months, etc.) |
-| 1272 | [DerivativeSecurityExchange](/fix/fields/tags-1200-1399#tag-1272) | Exchange | Optional | Can be used to identify the security. |
-| 1273 | [DerivativePositionLimit](/fix/fields/tags-1200-1399#tag-1273) | int | Optional | Position Limit for the instrument. |
-| 1274 | [DerivativeNTPositionLimit](/fix/fields/tags-1200-1399#tag-1274) | int | Optional | Near-term Position Limit for the instrument. |
-| 1275 | [DerivativeIssuer](/fix/fields/tags-1200-1399#tag-1275) | String | Optional |  |
-| 1277 | [DerivativeEncodedIssuerLen](/fix/fields/tags-1200-1399#tag-1277) | Length | Optional | Must be set if EncodedIssuer field is specified and must immediately precede it. |
-| 1278 | [DerivativeEncodedIssuer](/fix/fields/tags-1200-1399#tag-1278) | data | Optional | Encoded (non-ASCII characters) representation of the Issuer field in the encoded format specified via the MessageEncoding field. |
-| 1279 | [DerivativeSecurityDesc](/fix/fields/tags-1200-1399#tag-1279) | String | Optional |  |
-| 1280 | [DerivativeEncodedSecurityDescLen](/fix/fields/tags-1200-1399#tag-1280) | Length | Optional | Must be set if EncodedSecurityDesc field is specified and must immediately precede it. |
-| 1281 | [DerivativeEncodedSecurityDesc](/fix/fields/tags-1200-1399#tag-1281) | data | Optional | Encoded (non-ASCII characters) representation of the SecurityDesc field in the encoded format specified via the MessageEncoding field. |
+| 1246 | [DerivativeProduct](/fix/fields/tags-1200-1399#tag-1246-derivativeproduct) | ProductCodeSet | Optional | Indicates the type of product the security is associated with (high-level category) |
+| 1228 | [DerivativeProductComplex](/fix/fields/tags-1200-1399#tag-1228-derivativeproductcomplex) | String | Optional | Identifies an entire suite of products for a given market. In Futures this may be "interest rates", "agricultural", "equity indexes", etc |
+| 1243 | [DerivFlexProductEligibilityIndicator](/fix/fields/tags-1200-1399#tag-1243-derivflexproducteligibilityindicator) | Boolean | Optional | Used to indicate if a product or group of product supports the creation of flexible securities |
+| 1247 | [DerivativeSecurityGroup](/fix/fields/tags-1200-1399#tag-1247-derivativesecuritygroup) | String | Optional | An exchange specific name assigned to a group of related securities which may be concurrently affected by market events and actions. |
+| 1248 | [DerivativeCFICode](/fix/fields/tags-1200-1399#tag-1248-derivativecficode) | String | Optional | Indicates the type of security using ISO 10962 standard, Classification of Financial Instruments (CFI code) values. It is recommended that CFICode be used… |
+| 2892 | [DerivativeUPICode](/fix/fields/tags-2800-2999#tag-2892-derivativeupicode) | String | Optional | Uniquely identifies the product of a derivative instrument using ISO 4914. See UPICode(2891) for further detail. |
+| 1249 | [DerivativeSecurityType](/fix/fields/tags-1200-1399#tag-1249-derivativesecuritytype) | SecurityTypeCodeSet | Optional | It is recommended that CFICode be used instead of SecurityType for non-Fixed Income instruments. Required for Fixed Income. Refer to Volume 7 - Fixed Income… |
+| 1250 | [DerivativeSecuritySubType](/fix/fields/tags-1200-1399#tag-1250-derivativesecuritysubtype) | String | Optional | Sub-type qualification/identification of the SecurityType (e.g. for SecurityType=MLEG). If specified, SecurityType is required. |
+| 1251 | [DerivativeMaturityMonthYear](/fix/fields/tags-1200-1399#tag-1251-derivativematuritymonthyear) | MonthYear | Optional | Specifies the month and year of maturity. Applicable for standardized derivatives which are typically only referenced by month and year (e.g. S and P futures).… |
+| 1252 | [DerivativeMaturityDate](/fix/fields/tags-1200-1399#tag-1252-derivativematuritydate) | LocalMktDate | Optional | Specifies date of maturity (a full date). Note that standardized derivatives which are typically only referenced by month and year (e.g. S and P futures).may… |
+| 1253 | [DerivativeMaturityTime](/fix/fields/tags-1200-1399#tag-1253-derivativematuritytime) | TZTimeOnly | Optional |  |
+| 1254 | [DerivativeSettleOnOpenFlag](/fix/fields/tags-1200-1399#tag-1254-derivativesettleonopenflag) | String | Optional | Indicator to determine if Instrument is Settle on Open. |
+| 1255 | [DerivativeInstrmtAssignmentMethod](/fix/fields/tags-1200-1399#tag-1255-derivativeinstrmtassignmentmethod) | InstrmtAssignmentMethodCodeSet | Optional |  |
+| 1256 | [DerivativeSecurityStatus](/fix/fields/tags-1200-1399#tag-1256-derivativesecuritystatus) | SecurityStatusCodeSet | Optional | Gives the current state of the instrument |
+| 1276 | [DerivativeIssueDate](/fix/fields/tags-1200-1399#tag-1276-derivativeissuedate) | LocalMktDate | Optional | Date instrument was issued. For Fixed Income IOIs for new issues, specifies the issue date. |
+| 1257 | [DerivativeInstrRegistry](/fix/fields/tags-1200-1399#tag-1257-derivativeinstrregistry) | String | Optional | The location at which records of ownership are maintained for this instrument, and at which ownership changes must be recorded. Can be used in conjunction with… |
+| 1258 | [DerivativeCountryOfIssue](/fix/fields/tags-1200-1399#tag-1258-derivativecountryofissue) | Country | Optional | ISO Country code of instrument issue (e.g. the country portion typically used in ISIN). Can be used in conjunction with non-ISIN SecurityID (e.g. CUSIP for… |
+| 1259 | [DerivativeStateOrProvinceOfIssue](/fix/fields/tags-1200-1399#tag-1259-derivativestateorprovinceofissue) | String | Optional | A two-character state or province abbreviation. |
+| 1260 | [DerivativeLocaleOfIssue](/fix/fields/tags-1200-1399#tag-1260-derivativelocaleofissue) | String | Optional | The three-character IATA code for a locale (e.g. airport code for Municipal Bonds). |
+| 1261 | [DerivativeStrikePrice](/fix/fields/tags-1200-1399#tag-1261-derivativestrikeprice) | Price | Optional | Used for derivatives, such as options and covered warrants |
+| 1262 | [DerivativeStrikeCurrency](/fix/fields/tags-1200-1399#tag-1262-derivativestrikecurrency) | Currency | Optional | Used for derivatives |
+| 1263 | [DerivativeStrikeMultiplier](/fix/fields/tags-1200-1399#tag-1263-derivativestrikemultiplier) | float | Optional | Used for derivatives. Multiplier applied to the strike price for the purpose of calculating the settlement value. |
+| 1264 | [DerivativeStrikeValue](/fix/fields/tags-1200-1399#tag-1264-derivativestrikevalue) | float | Optional | Used for derivatives. The number of shares/units for the financial instrument involved in the option trade. |
+| 1265 | [DerivativeOptAttribute](/fix/fields/tags-1200-1399#tag-1265-derivativeoptattribute) | char | Optional | Used for derivatives, such as options and covered warrants to indicate a versioning of the contract when required due to corporate actions to the underlying.… |
+| 1266 | [DerivativeContractMultiplier](/fix/fields/tags-1200-1399#tag-1266-derivativecontractmultiplier) | float | Optional | For Fixed Income, Convertible Bonds, Derivatives, etc. Note: If used, quantities should be expressed in the "nominal" (e.g. contracts vs. shares) amount. |
+| 1438 | [DerivativeContractMultiplierUnit](/fix/fields/tags-1400-1599#tag-1438-derivativecontractmultiplierunit) | ContractMultiplierUnitCodeSet | Optional | Indicates the type of multiplier being applied to the contract. Can be optionally used to further define what unit DerivativeContractMultiplier(tag 1266)is… |
+| 1442 | [DerivativeFlowScheduleType](/fix/fields/tags-1400-1599#tag-1442-derivativeflowscheduletype) | FlowScheduleTypeCodeSet | Optional | The industry standard flow schedule by which electricity or natural gas is traded. Schedules exist by regions and on-peak and off-peak status, such as "Western… |
+| 1267 | [DerivativeMinPriceIncrement](/fix/fields/tags-1200-1399#tag-1267-derivativeminpriceincrement) | float | Optional | Minimum price increment for the instrument. Could also be used to represent tick value. |
+| 1268 | [DerivativeMinPriceIncrementAmount](/fix/fields/tags-1200-1399#tag-1268-derivativeminpriceincrementamount) | Amt | Optional | Minimum price increment amount associated with the MinPriceIncrement \[969\]. For listed derivatives, the value can be calculated by multiplying MinPriceIncrement… |
+| 1269 | [DerivativeUnitOfMeasure](/fix/fields/tags-1200-1399#tag-1269-derivativeunitofmeasure) | UnitOfMeasureCodeSet | Optional |  |
+| 1270 | [DerivativeUnitOfMeasureQty](/fix/fields/tags-1200-1399#tag-1270-derivativeunitofmeasureqty) | Qty | Optional |  |
+| 1722 | [DerivativeUnitOfMeasureCurrency](/fix/fields/tags-1600-1799#tag-1722-derivativeunitofmeasurecurrency) | Currency | Optional | Indicates the currency of the unit of measure. Conditionally required when DerivativeUnitOfMeasure(1269) = Ccy |
+| 1315 | [DerivativePriceUnitOfMeasure](/fix/fields/tags-1200-1399#tag-1315-derivativepriceunitofmeasure) | UnitOfMeasureCodeSet | Optional | Refer to definition for PriceUnitOfMeasure(1191) |
+| 1316 | [DerivativePriceUnitOfMeasureQty](/fix/fields/tags-1200-1399#tag-1316-derivativepriceunitofmeasureqty) | Qty | Optional | Refer to definition of PriceUnitOfMeasureQty(1192) |
+| 1723 | [DerivativePriceUnitOfMeasureCurrency](/fix/fields/tags-1600-1799#tag-1723-derivativepriceunitofmeasurecurrency) | Currency | Optional | Indicates the currency of the price unit of measure. Conditionally required when DerivativePriceUnitOfMeasure(1315) = Ccy |
+| 1317 | [DerivativeSettlMethod](/fix/fields/tags-1200-1399#tag-1317-derivativesettlmethod) | SettlMethodCodeSet | Optional | Settlement method for a contract. Can be used as an alternative to CFI Code value |
+| 1318 | [DerivativePriceQuoteMethod](/fix/fields/tags-1200-1399#tag-1318-derivativepricequotemethod) | PriceQuoteMethodCodeSet | Optional | Method for price quotation |
+| 1319 | [DerivativeValuationMethod](/fix/fields/tags-1200-1399#tag-1319-derivativevaluationmethod) | ValuationMethodCodeSet | Optional | For futures, indicates type of valuation method applied |
+| 1576 | [DerivativePriceQuoteCurrency](/fix/fields/tags-1400-1599#tag-1576-derivativepricequotecurrency) | Currency | Optional | Default currency in which the price is quoted. Defined at the instrument level. Used in place of Currency (tag 15) to express the currency of a product when the… |
+| 1320 | [DerivativeListMethod](/fix/fields/tags-1200-1399#tag-1320-derivativelistmethod) | ListMethodCodeSet | Optional | Indicates whether strikes are pre-listed only or can also be defined via user request |
+| 1321 | [DerivativeCapPrice](/fix/fields/tags-1200-1399#tag-1321-derivativecapprice) | Price | Optional | Used to express the ceiling price of a capped call |
+| 1322 | [DerivativeFloorPrice](/fix/fields/tags-1200-1399#tag-1322-derivativefloorprice) | Price | Optional | Used to express the floor price of a capped put |
+| 1323 | [DerivativePutOrCall](/fix/fields/tags-1200-1399#tag-1323-derivativeputorcall) | PutOrCallCodeSet | Optional | Indicates whether an option contract is a put, call, chooser or undetermined. |
+| 2684 | [DerivativeInTheMoneyCondition](/fix/fields/tags-2600-2799#tag-2684-derivativeinthemoneycondition) | InTheMoneyConditionCodeSet | Optional | Used to express in-the-moneyness behavior in general terms for the option without the use of DerivativeStrikePrice(1261) and DerivativePutOrCall(1323). |
+| 2688 | [DerivativeContraryInstructionEligibilityIndicator](/fix/fields/tags-2600-2799#tag-2688-derivativecontraryinstructioneligibilityindicator) | Boolean | Optional | Identifies whether the option instrument is eligible for contrary instructions at the time of exercise. The contrariness of an instruction will be determined in… |
+| 1299 | [DerivativeExerciseStyle](/fix/fields/tags-1200-1399#tag-1299-derivativeexercisestyle) | ExerciseStyleCodeSet | Optional | Type of exercise of a derivatives security |
+| 1225 | [DerivativeOptPayAmount](/fix/fields/tags-1200-1399#tag-1225-derivativeoptpayamount) | Amt | Optional | Cash amount indicating the pay out associated with an option. For binary options this is a fixed amount |
+| 1271 | [DerivativeTimeUnit](/fix/fields/tags-1200-1399#tag-1271-derivativetimeunit) | TimeUnitCodeSet | Optional | Used to indicate a time unit for the contract (e.g., days, weeks, months, etc.) |
+| 1272 | [DerivativeSecurityExchange](/fix/fields/tags-1200-1399#tag-1272-derivativesecurityexchange) | Exchange | Optional | Can be used to identify the security. |
+| 1273 | [DerivativePositionLimit](/fix/fields/tags-1200-1399#tag-1273-derivativepositionlimit) | int | Optional | Position Limit for the instrument. |
+| 1274 | [DerivativeNTPositionLimit](/fix/fields/tags-1200-1399#tag-1274-derivativentpositionlimit) | int | Optional | Near-term Position Limit for the instrument. |
+| 1275 | [DerivativeIssuer](/fix/fields/tags-1200-1399#tag-1275-derivativeissuer) | String | Optional |  |
+| 1277 | [DerivativeEncodedIssuerLen](/fix/fields/tags-1200-1399#tag-1277-derivativeencodedissuerlen) | Length | Optional | Must be set if EncodedIssuer field is specified and must immediately precede it. |
+| 1278 | [DerivativeEncodedIssuer](/fix/fields/tags-1200-1399#tag-1278-derivativeencodedissuer) | data | Optional | Encoded (non-ASCII characters) representation of the Issuer field in the encoded format specified via the MessageEncoding field. |
+| 1279 | [DerivativeSecurityDesc](/fix/fields/tags-1200-1399#tag-1279-derivativesecuritydesc) | String | Optional |  |
+| 1280 | [DerivativeEncodedSecurityDescLen](/fix/fields/tags-1200-1399#tag-1280-derivativeencodedsecuritydesclen) | Length | Optional | Must be set if EncodedSecurityDesc field is specified and must immediately precede it. |
+| 1281 | [DerivativeEncodedSecurityDesc](/fix/fields/tags-1200-1399#tag-1281-derivativeencodedsecuritydesc) | data | Optional | Encoded (non-ASCII characters) representation of the SecurityDesc field in the encoded format specified via the MessageEncoding field. |
 | | [DerivativeSecurityXML](/fix/components/derivative-security-xml) | Component | Optional |  |
-| 1285 | [DerivativeContractSettlMonth](/fix/fields/tags-1200-1399#tag-1285) | MonthYear | Optional | Must be present for MBS or TBA |
+| 1285 | [DerivativeContractSettlMonth](/fix/fields/tags-1200-1399#tag-1285-derivativecontractsettlmonth) | MonthYear | Optional | Must be present for MBS or TBA |
 | 1286 | [DerivativeEventsGrp](/fix/groups/derivative-events-grp) | Repeating group | Optional |  |
 | 1292 | [DerivativeInstrumentParties](/fix/groups/derivative-instrument-parties) | Repeating group | Optional |  |
 

@@ -3,7 +3,13 @@ title: "AssignmentReport"
 subtitle: "Assignment Reports are sent from a clearing house to counterparties, such as a clearing firm as a result of the assignment process."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType AW</Badge> <Badge intent="note" minimal>Position Maintenance</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType AW · Position Maintenance · Post Trade · Added FIX.4.4
+</llms-only>
 
 ## Message structure
 
@@ -13,36 +19,36 @@ subtitle: "Assignment Reports are sent from a clearing house to counterparties, 
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
 | | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and… |
-| 833 | [AsgnRptID](/fix/fields/tags-800-999#tag-833) | String | **Required** | Unique identifier for the Assignment report |
-| 710 | [PosReqID](/fix/fields/tags-600-799#tag-710) | String | Optional | If specified,the identifier of the RequestForPositions(MsgType=AN) to which this message is sent in response. |
-| 832 | [TotNumAssignmentReports](/fix/fields/tags-800-999#tag-832) | int | Optional | Total Number of Assignment Reports being returned to a firm |
-| 912 | [LastRptRequested](/fix/fields/tags-800-999#tag-912) | LastRptRequestedCodeSet | Optional | Indicates whether this message is the last report message in response to a request message, e.g. OrderMassStatusRequest(35=AF),… |
+| 833 | [AsgnRptID](/fix/fields/tags-800-999#tag-833-asgnrptid) | String | **Required** | Unique identifier for the Assignment report |
+| 710 | [PosReqID](/fix/fields/tags-600-799#tag-710-posreqid) | String | Optional | If specified,the identifier of the RequestForPositions(MsgType=AN) to which this message is sent in response. |
+| 832 | [TotNumAssignmentReports](/fix/fields/tags-800-999#tag-832-totnumassignmentreports) | int | Optional | Total Number of Assignment Reports being returned to a firm |
+| 912 | [LastRptRequested](/fix/fields/tags-800-999#tag-912-lastrptrequested) | LastRptRequestedCodeSet | Optional | Indicates whether this message is the last report message in response to a request message, e.g. OrderMassStatusRequest(35=AF),… |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | **Required** | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
-| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Customer Account |
-| 581 | [AccountType](/fix/fields/tags-400-599#tag-581) | AccountTypeCodeSet | Optional | Type of account associated with the order (Origin) |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1-account) | String | Optional | Customer Account |
+| 581 | [AccountType](/fix/fields/tags-400-599#tag-581-accounttype) | AccountTypeCodeSet | Optional | Type of account associated with the order (Origin) |
 | | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
-| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15-currency) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
 | 702 | [PositionQty](/fix/groups/position-qty) | Repeating group | Optional | The PositionQty component block specifies the various types of position quantity in the position life-cycle including start-of-day, intraday, trade,… |
 | 753 | [PositionAmountData](/fix/groups/position-amount-data) | Repeating group | Optional | The PositionAmountData component block is used to report netted amounts associated with position quantities. In the listed derivatives market the amount is… |
-| 834 | [ThresholdAmount](/fix/fields/tags-800-999#tag-834) | PriceOffset | Optional | Amount that a position has to be in the money before it is exercised. |
-| 730 | [SettlPrice](/fix/fields/tags-600-799#tag-730) | Price | Optional | Settlement Price of Option |
-| 731 | [SettlPriceType](/fix/fields/tags-600-799#tag-731) | SettlPriceTypeCodeSet | Optional | Values = Final, Theoretical |
-| 732 | [UnderlyingSettlPrice](/fix/fields/tags-600-799#tag-732) | Price | Optional | Settlement Price of Underlying |
-| 734 | [PriorSettlPrice](/fix/fields/tags-600-799#tag-734) | Price | Optional | Previous settlement price |
-| 1595 | [PositionContingentPrice](/fix/fields/tags-1400-1599#tag-1595) | Price | Optional | Risk adjusted price used to calculate variation margin on a position. |
-| 432 | [ExpireDate](/fix/fields/tags-400-599#tag-432) | LocalMktDate | Optional | Expiration Date of Option |
-| 744 | [AssignmentMethod](/fix/fields/tags-600-799#tag-744) | AssignmentMethodCodeSet | Optional | Method under which assignment was conducted |
-| 745 | [AssignmentUnit](/fix/fields/tags-600-799#tag-745) | Qty | Optional | Quantity Increment used in performing assignment |
-| 746 | [OpenInterest](/fix/fields/tags-600-799#tag-746) | Amt | Optional | Open interest that was eligible for assignment |
-| 747 | [ExerciseMethod](/fix/fields/tags-600-799#tag-747) | ExerciseMethodCodeSet | Optional | Exercise Method used to in performing assignment Values = Automatic, Manual |
-| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716) | SettlSessIDCodeSet | Optional | Identifies a specific settlement session |
-| 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717) | String | Optional | SubID value associated with SettlSessID(716) |
-| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | **Required** | Business date of assignment |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 834 | [ThresholdAmount](/fix/fields/tags-800-999#tag-834-thresholdamount) | PriceOffset | Optional | Amount that a position has to be in the money before it is exercised. |
+| 730 | [SettlPrice](/fix/fields/tags-600-799#tag-730-settlprice) | Price | Optional | Settlement Price of Option |
+| 731 | [SettlPriceType](/fix/fields/tags-600-799#tag-731-settlpricetype) | SettlPriceTypeCodeSet | Optional | Values = Final, Theoretical |
+| 732 | [UnderlyingSettlPrice](/fix/fields/tags-600-799#tag-732-underlyingsettlprice) | Price | Optional | Settlement Price of Underlying |
+| 734 | [PriorSettlPrice](/fix/fields/tags-600-799#tag-734-priorsettlprice) | Price | Optional | Previous settlement price |
+| 1595 | [PositionContingentPrice](/fix/fields/tags-1400-1599#tag-1595-positioncontingentprice) | Price | Optional | Risk adjusted price used to calculate variation margin on a position. |
+| 432 | [ExpireDate](/fix/fields/tags-400-599#tag-432-expiredate) | LocalMktDate | Optional | Expiration Date of Option |
+| 744 | [AssignmentMethod](/fix/fields/tags-600-799#tag-744-assignmentmethod) | AssignmentMethodCodeSet | Optional | Method under which assignment was conducted |
+| 745 | [AssignmentUnit](/fix/fields/tags-600-799#tag-745-assignmentunit) | Qty | Optional | Quantity Increment used in performing assignment |
+| 746 | [OpenInterest](/fix/fields/tags-600-799#tag-746-openinterest) | Amt | Optional | Open interest that was eligible for assignment |
+| 747 | [ExerciseMethod](/fix/fields/tags-600-799#tag-747-exercisemethod) | ExerciseMethodCodeSet | Optional | Exercise Method used to in performing assignment Values = Automatic, Manual |
+| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716-settlsessid) | SettlSessIDCodeSet | Optional | Identifies a specific settlement session |
+| 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717-settlsesssubid) | String | Optional | SubID value associated with SettlSessID(716) |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715-clearingbusinessdate) | LocalMktDate | **Required** | Business date of assignment |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

@@ -3,9 +3,15 @@ title: "RiskLimitTypesGrp"
 subtitle: "Repeating group of risk limit types and values."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1529</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoRiskLimitTypes (1529)](/fix/fields/tags-1400-1599#tag-1529).
+<llms-only>
+Repeating group · NumInGroup 1529 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRiskLimitTypes (1529)](/fix/fields/tags-1400-1599#tag-1529-norisklimittypes).
 
 ## Members
 
@@ -13,15 +19,15 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1530 | [RiskLimitType](/fix/fields/tags-1400-1599#tag-1530) | RiskLimitTypeCodeSet | Optional | Required if NoRiskLimitTypes(1529) &gt; 0. |
-| 1531 | [RiskLimitAmount](/fix/fields/tags-1400-1599#tag-1531) | Amt | Optional | Specifies the risk limit amount. |
-| 1767 | [RiskLimitAction](/fix/fields/tags-1600-1799#tag-1767) | RiskLimitActionCodeSet | Optional | Identifies the action to take or risk model to assume should risk limit be exceeded or breached for the specified party. |
-| 1766 | [RiskLimitUtilizationAmount](/fix/fields/tags-1600-1799#tag-1766) | Amt | Optional | Not applicable in a request. |
-| 1765 | [RiskLimitUtilizationPercent](/fix/fields/tags-1600-1799#tag-1765) | Percentage | Optional | Not applicable in a request. |
-| 1532 | [RiskLimitCurrency](/fix/fields/tags-1400-1599#tag-1532) | Currency | Optional | Used to specify the currency of the risk limit amount. |
-| 1533 | [RiskLimitPlatform](/fix/fields/tags-1400-1599#tag-1533) | String | Optional | The area to which risk limit is applicable. This can be a trading platform or an offering. |
-| 2336 | [RiskLimitVelocityPeriod](/fix/fields/tags-2200-2399#tag-2336) | int | Optional | Conditionally required when RiskLimitType(1530) = 10 (Clip size) |
-| 2337 | [RiskLimitVelocityUnit](/fix/fields/tags-2200-2399#tag-2337) | TimeUnitCodeSet | Optional | Unit of time in which RiskLimitVelocityPeriod(2336) is expressed. |
+| 1530 | [RiskLimitType](/fix/fields/tags-1400-1599#tag-1530-risklimittype) | RiskLimitTypeCodeSet | Optional | Required if NoRiskLimitTypes(1529) &gt; 0. |
+| 1531 | [RiskLimitAmount](/fix/fields/tags-1400-1599#tag-1531-risklimitamount) | Amt | Optional | Specifies the risk limit amount. |
+| 1767 | [RiskLimitAction](/fix/fields/tags-1600-1799#tag-1767-risklimitaction) | RiskLimitActionCodeSet | Optional | Identifies the action to take or risk model to assume should risk limit be exceeded or breached for the specified party. |
+| 1766 | [RiskLimitUtilizationAmount](/fix/fields/tags-1600-1799#tag-1766-risklimitutilizationamount) | Amt | Optional | Not applicable in a request. |
+| 1765 | [RiskLimitUtilizationPercent](/fix/fields/tags-1600-1799#tag-1765-risklimitutilizationpercent) | Percentage | Optional | Not applicable in a request. |
+| 1532 | [RiskLimitCurrency](/fix/fields/tags-1400-1599#tag-1532-risklimitcurrency) | Currency | Optional | Used to specify the currency of the risk limit amount. |
+| 1533 | [RiskLimitPlatform](/fix/fields/tags-1400-1599#tag-1533-risklimitplatform) | String | Optional | The area to which risk limit is applicable. This can be a trading platform or an offering. |
+| 2336 | [RiskLimitVelocityPeriod](/fix/fields/tags-2200-2399#tag-2336-risklimitvelocityperiod) | int | Optional | Conditionally required when RiskLimitType(1530) = 10 (Clip size) |
+| 2337 | [RiskLimitVelocityUnit](/fix/fields/tags-2200-2399#tag-2337-risklimitvelocityunit) | TimeUnitCodeSet | Optional | Unit of time in which RiskLimitVelocityPeriod(2336) is expressed. |
 | 1559 | [RiskWarningLevelGrp](/fix/groups/risk-warning-level-grp) | Repeating group | Optional | Risk warning levels. |
 
 </StickyTable>

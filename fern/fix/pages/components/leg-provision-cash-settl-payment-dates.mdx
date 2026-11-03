@@ -3,7 +3,13 @@ title: "LegProvisionCashSettlPaymentDates"
 subtitle: "The LegProvisionCashSettlPaymentDates component is a sub-component within the LegProvisionGrp component used to report the cash settlement payment dates defined in the provision."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,14 +17,14 @@ subtitle: "The LegProvisionCashSettlPaymentDates component is a sub-component wi
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40516 | [LegProvisionCashSettlPaymentDateBusinessDayConvention](/fix/fields/tags-40400-40599#tag-40516) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
+| 40516 | [LegProvisionCashSettlPaymentDateBusinessDayConvention](/fix/fields/tags-40400-40599#tag-40516-legprovisioncashsettlpaymentdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
 | 40934 | [LegProvisionCashSettlPaymentDateBusinessCenterGrp](/fix/groups/leg-provision-cash-settl-payment-date-business-center-grp) | Repeating group | Optional | LegProvisionCashSettlPaymentDateBusinessCenterGrp is a repeating subcomponent within the LegProvisionCashSettlPaymentDates component. It is used to specify the… |
-| 40518 | [LegProvisionCashSettlPaymentDateRelativeTo](/fix/fields/tags-40400-40599#tag-40518) | int | Optional | Specifies the anchor date when the cash settlement payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date… |
-| 40519 | [LegProvisionCashSettlPaymentDateOffsetPeriod](/fix/fields/tags-40400-40599#tag-40519) | int | Optional | Conditionally required when LegProvisionCashSettlPaymentDateOffsetUnit(40520) is specified. |
-| 40520 | [LegProvisionCashSettlPaymentDateOffsetUnit](/fix/fields/tags-40400-40599#tag-40520) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegProvisionCashSettlPaymentDateOffsetPeriod(40519) is specified. |
-| 40521 | [LegProvisionCashSettlPaymentDateOffsetDayType](/fix/fields/tags-40400-40599#tag-40521) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the provision's relative cash settlement payment date offset. |
-| 40522 | [LegProvisionCashSettlPaymentDateRangeFirst](/fix/fields/tags-40400-40599#tag-40522) | LocalMktDate | Optional | The first date in range when a settlement date range is provided. |
-| 40523 | [LegProvisionCashSettlPaymentDateRangeLast](/fix/fields/tags-40400-40599#tag-40523) | LocalMktDate | Optional | The last date in range when a settlement date range is provided. |
+| 40518 | [LegProvisionCashSettlPaymentDateRelativeTo](/fix/fields/tags-40400-40599#tag-40518-legprovisioncashsettlpaymentdaterelativeto) | int | Optional | Specifies the anchor date when the cash settlement payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date… |
+| 40519 | [LegProvisionCashSettlPaymentDateOffsetPeriod](/fix/fields/tags-40400-40599#tag-40519-legprovisioncashsettlpaymentdateoffsetperiod) | int | Optional | Conditionally required when LegProvisionCashSettlPaymentDateOffsetUnit(40520) is specified. |
+| 40520 | [LegProvisionCashSettlPaymentDateOffsetUnit](/fix/fields/tags-40400-40599#tag-40520-legprovisioncashsettlpaymentdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegProvisionCashSettlPaymentDateOffsetPeriod(40519) is specified. |
+| 40521 | [LegProvisionCashSettlPaymentDateOffsetDayType](/fix/fields/tags-40400-40599#tag-40521-legprovisioncashsettlpaymentdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the provision's relative cash settlement payment date offset. |
+| 40522 | [LegProvisionCashSettlPaymentDateRangeFirst](/fix/fields/tags-40400-40599#tag-40522-legprovisioncashsettlpaymentdaterangefirst) | LocalMktDate | Optional | The first date in range when a settlement date range is provided. |
+| 40523 | [LegProvisionCashSettlPaymentDateRangeLast](/fix/fields/tags-40400-40599#tag-40523-legprovisioncashsettlpaymentdaterangelast) | LocalMktDate | Optional | The last date in range when a settlement date range is provided. |
 | 40473 | [LegProvisionCashSettlPaymentFixedDateGrp](/fix/groups/leg-provision-cash-settl-payment-fixed-date-grp) | Repeating group | Optional | The ProvisionCashSettlPaymentFixedDateGrp is a repeating component within the ProvisionCashSettlPaymentDates component used to report fixed cash settlement… |
 
 </StickyTable>

@@ -3,9 +3,15 @@ title: "AllocGrp"
 subtitle: "This repeating group is optionally used for messages with AllocStatus(87) = 2 (account level reject), AllocStatus(87) = 0 (accepted), to provide details of the individual accounts that were accepted or rejected. In the case of a reject, the…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 78</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoAllocs (78)](/fix/fields/tags-0-199#tag-78).
+<llms-only>
+Repeating group · NumInGroup 78 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoAllocs (78)](/fix/fields/tags-0-199#tag-78-noallocs).
 
 ## Members
 
@@ -13,61 +19,61 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 79 | [AllocAccount](/fix/fields/tags-0-199#tag-79) | String | Optional | May specify the broker of credit if ProcessCode(81) is step-out or soft-dollar step-out and Institution does not wish to disclose individual account breakdowns… |
-| 661 | [AllocAcctIDSource](/fix/fields/tags-600-799#tag-661) | AcctIDSourceCodeSet | Optional | Used to identify the source of the AllocAccount (79) code. See AcctIDSource (660) for valid values. |
-| 573 | [MatchStatus](/fix/fields/tags-400-599#tag-573) | MatchStatusCodeSet | Optional | The status of this trade with respect to matching or comparison. |
-| 366 | [AllocPrice](/fix/fields/tags-200-399#tag-366) | Price | Optional | Used when performing "executed price" vs. "average price" allocations (e.g. Japan). AllocAccount(79) plus AllocPrice(366) form a unique Allocs entry. Used in… |
-| 80 | [AllocQty](/fix/fields/tags-0-199#tag-80) | Qty | Optional | Conditionally required except when for AllocTransType="Cancel", or when AllocType= "Ready-To-Book" or "Warehouse instruction". |
-| 2515 | [AllocCalculatedCcyQty](/fix/fields/tags-2400-2599#tag-2515) | Qty | Optional | Used for the calculated quantity of the other side of the currency trade applicable to the allocation instance. |
-| 1752 | [CustodialLotID](/fix/fields/tags-1600-1799#tag-1752) | String | Optional | Only used for specific lot trades. |
-| 1753 | [VersusPurchaseDate](/fix/fields/tags-1600-1799#tag-1753) | LocalMktDate | Optional | Only used for specific lot trades. If this field is used, either VersusPurchasePrice(1754) or CurrentCostBasis(1755) should be specified. |
-| 1754 | [VersusPurchasePrice](/fix/fields/tags-1600-1799#tag-1754) | Price | Optional | Only used for specific lot trades. If this field is used, VersusPurchaseDate(1753) should be specified. |
-| 1755 | [CurrentCostBasis](/fix/fields/tags-1600-1799#tag-1755) | Amt | Optional | Only used for specific lot trades. If this field is used, VersusPurchaseDate(1753) should be specified |
-| 467 | [IndividualAllocID](/fix/fields/tags-400-599#tag-467) | String | Optional | Unique identifier for a specific NoAllocs (78) repeating group instance (e.g. for an AllocAccount). |
-| 1729 | [FirmMnemonic](/fix/fields/tags-1600-1799#tag-1729) | String | Optional | Allocation identifier assigned by the Firm submitting the allocation for an individual allocation instruction (as opposed to the overall message level… |
-| 1593 | [ParentAllocID](/fix/fields/tags-1400-1599#tag-1593) | String | Optional | Contains the IndividualAllocId (tag 467) value of the allocation that is being offset as a result of a new allocation. This would be an optional field that… |
-| 2727 | [AllocLegRefID](/fix/fields/tags-2600-2799#tag-2727) | String | Optional | The field may not be used in any message where there are no legs. |
+| 79 | [AllocAccount](/fix/fields/tags-0-199#tag-79-allocaccount) | String | Optional | May specify the broker of credit if ProcessCode(81) is step-out or soft-dollar step-out and Institution does not wish to disclose individual account breakdowns… |
+| 661 | [AllocAcctIDSource](/fix/fields/tags-600-799#tag-661-allocacctidsource) | AcctIDSourceCodeSet | Optional | Used to identify the source of the AllocAccount (79) code. See AcctIDSource (660) for valid values. |
+| 573 | [MatchStatus](/fix/fields/tags-400-599#tag-573-matchstatus) | MatchStatusCodeSet | Optional | The status of this trade with respect to matching or comparison. |
+| 366 | [AllocPrice](/fix/fields/tags-200-399#tag-366-allocprice) | Price | Optional | Used when performing "executed price" vs. "average price" allocations (e.g. Japan). AllocAccount(79) plus AllocPrice(366) form a unique Allocs entry. Used in… |
+| 80 | [AllocQty](/fix/fields/tags-0-199#tag-80-allocqty) | Qty | Optional | Conditionally required except when for AllocTransType="Cancel", or when AllocType= "Ready-To-Book" or "Warehouse instruction". |
+| 2515 | [AllocCalculatedCcyQty](/fix/fields/tags-2400-2599#tag-2515-alloccalculatedccyqty) | Qty | Optional | Used for the calculated quantity of the other side of the currency trade applicable to the allocation instance. |
+| 1752 | [CustodialLotID](/fix/fields/tags-1600-1799#tag-1752-custodiallotid) | String | Optional | Only used for specific lot trades. |
+| 1753 | [VersusPurchaseDate](/fix/fields/tags-1600-1799#tag-1753-versuspurchasedate) | LocalMktDate | Optional | Only used for specific lot trades. If this field is used, either VersusPurchasePrice(1754) or CurrentCostBasis(1755) should be specified. |
+| 1754 | [VersusPurchasePrice](/fix/fields/tags-1600-1799#tag-1754-versuspurchaseprice) | Price | Optional | Only used for specific lot trades. If this field is used, VersusPurchaseDate(1753) should be specified. |
+| 1755 | [CurrentCostBasis](/fix/fields/tags-1600-1799#tag-1755-currentcostbasis) | Amt | Optional | Only used for specific lot trades. If this field is used, VersusPurchaseDate(1753) should be specified |
+| 467 | [IndividualAllocID](/fix/fields/tags-400-599#tag-467-individualallocid) | String | Optional | Unique identifier for a specific NoAllocs (78) repeating group instance (e.g. for an AllocAccount). |
+| 1729 | [FirmMnemonic](/fix/fields/tags-1600-1799#tag-1729-firmmnemonic) | String | Optional | Allocation identifier assigned by the Firm submitting the allocation for an individual allocation instruction (as opposed to the overall message level… |
+| 1593 | [ParentAllocID](/fix/fields/tags-1400-1599#tag-1593-parentallocid) | String | Optional | Contains the IndividualAllocId (tag 467) value of the allocation that is being offset as a result of a new allocation. This would be an optional field that… |
+| 2727 | [AllocLegRefID](/fix/fields/tags-2600-2799#tag-2727-alloclegrefid) | String | Optional | The field may not be used in any message where there are no legs. |
 | 1908 | [AllocRegulatoryTradeIDGrp](/fix/groups/alloc-regulatory-trade-id-grp) | Repeating group | Optional | The AllocRegulatoryTradeIDGrp is a repeating component within the TrdAllocGrp component used to report the source, value and relationship of multiple trade… |
-| 81 | [ProcessCode](/fix/fields/tags-0-199#tag-81) | ProcessCodeCodeSet | Optional | Processing code for sub-account. Absence of this field in AllocAccount (79) / AllocPrice (366) /AllocQty (80) / ProcessCode instance indicates regular trade. |
-| 989 | [SecondaryIndividualAllocID](/fix/fields/tags-800-999#tag-989) | String | Optional | Can be used by an intermediary to specify an allocation ID assigned by the intermediary's system. |
-| 1002 | [AllocMethod](/fix/fields/tags-1000-1199#tag-1002) | AllocMethodCodeSet | Optional | Specifies the method under which a trade quantity was allocated. |
-| 1735 | [AllocationRollupInstruction](/fix/fields/tags-1600-1799#tag-1735) | AllocationRollupInstructionCodeSet | Optional | An indicator to override the normal procedure to roll up allocations for the same Carry Firm. |
-| 993 | [AllocCustomerCapacity](/fix/fields/tags-800-999#tag-993) | String | Optional | Can be used for granular reporting of separate allocation detail within a single trade report or allocation message. |
-| 1047 | [AllocPositionEffect](/fix/fields/tags-1000-1199#tag-1047) | AllocPositionEffectCodeSet | Optional | Indicates whether the resulting position after a trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held… |
-| 992 | [IndividualAllocType](/fix/fields/tags-800-999#tag-992) | IndividualAllocTypeCodeSet | Optional | Identifies whether the allocation is to be sub-allocated or allocated to a third party |
+| 81 | [ProcessCode](/fix/fields/tags-0-199#tag-81-processcode) | ProcessCodeCodeSet | Optional | Processing code for sub-account. Absence of this field in AllocAccount (79) / AllocPrice (366) /AllocQty (80) / ProcessCode instance indicates regular trade. |
+| 989 | [SecondaryIndividualAllocID](/fix/fields/tags-800-999#tag-989-secondaryindividualallocid) | String | Optional | Can be used by an intermediary to specify an allocation ID assigned by the intermediary's system. |
+| 1002 | [AllocMethod](/fix/fields/tags-1000-1199#tag-1002-allocmethod) | AllocMethodCodeSet | Optional | Specifies the method under which a trade quantity was allocated. |
+| 1735 | [AllocationRollupInstruction](/fix/fields/tags-1600-1799#tag-1735-allocationrollupinstruction) | AllocationRollupInstructionCodeSet | Optional | An indicator to override the normal procedure to roll up allocations for the same Carry Firm. |
+| 993 | [AllocCustomerCapacity](/fix/fields/tags-800-999#tag-993-alloccustomercapacity) | String | Optional | Can be used for granular reporting of separate allocation detail within a single trade report or allocation message. |
+| 1047 | [AllocPositionEffect](/fix/fields/tags-1000-1199#tag-1047-allocpositioneffect) | AllocPositionEffectCodeSet | Optional | Indicates whether the resulting position after a trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held… |
+| 992 | [IndividualAllocType](/fix/fields/tags-800-999#tag-992-individualalloctype) | IndividualAllocTypeCodeSet | Optional | Identifies whether the allocation is to be sub-allocated or allocated to a third party |
 | 539 | [NestedParties](/fix/groups/nested-parties) | Repeating group | Optional | The NestedParties component block is identical to the Parties Block. It is used in other component blocks and repeating groups when nesting will take place… |
-| 208 | [NotifyBrokerOfCredit](/fix/fields/tags-200-399#tag-208) | NotifyBrokerOfCreditCodeSet | Optional | Indicates whether or not details should be communicated to BrokerOfCredit (i.e. step-in broker). |
-| 209 | [AllocHandlInst](/fix/fields/tags-200-399#tag-209) | AllocHandlInstCodeSet | Optional | Indicates how the receiver (i.e. third party) of allocation information should handle/process the account details. |
-| 161 | [AllocText](/fix/fields/tags-0-199#tag-161) | String | Optional | Free format text field related to this AllocAccount |
-| 360 | [EncodedAllocTextLen](/fix/fields/tags-200-399#tag-360) | Length | Optional | Must be set if EncodedAllocText field is specified and must immediately precede it. |
-| 361 | [EncodedAllocText](/fix/fields/tags-200-399#tag-361) | data | Optional | Encoded (non-ASCII characters) representation of the AllocText field in the encoded format specified via the MessageEncoding field. |
-| 1732 | [FirmAllocText](/fix/fields/tags-1600-1799#tag-1732) | String | Optional | Firm reference information, usually internal information, that is part of the initial message. The information would not be carried forward (e.g to Take-up… |
-| 1733 | [EncodedFirmAllocTextLen](/fix/fields/tags-1600-1799#tag-1733) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedFirmAllocText(1734) field. |
-| 1734 | [EncodedFirmAllocText](/fix/fields/tags-1600-1799#tag-1734) | data | Optional | Encoded (non-ASCII characters) representation of the FirmAllocText(1732) field in the encoded format specified via the MessageEncoding(347) field. If used, the… |
+| 208 | [NotifyBrokerOfCredit](/fix/fields/tags-200-399#tag-208-notifybrokerofcredit) | NotifyBrokerOfCreditCodeSet | Optional | Indicates whether or not details should be communicated to BrokerOfCredit (i.e. step-in broker). |
+| 209 | [AllocHandlInst](/fix/fields/tags-200-399#tag-209-allochandlinst) | AllocHandlInstCodeSet | Optional | Indicates how the receiver (i.e. third party) of allocation information should handle/process the account details. |
+| 161 | [AllocText](/fix/fields/tags-0-199#tag-161-alloctext) | String | Optional | Free format text field related to this AllocAccount |
+| 360 | [EncodedAllocTextLen](/fix/fields/tags-200-399#tag-360-encodedalloctextlen) | Length | Optional | Must be set if EncodedAllocText field is specified and must immediately precede it. |
+| 361 | [EncodedAllocText](/fix/fields/tags-200-399#tag-361-encodedalloctext) | data | Optional | Encoded (non-ASCII characters) representation of the AllocText field in the encoded format specified via the MessageEncoding field. |
+| 1732 | [FirmAllocText](/fix/fields/tags-1600-1799#tag-1732-firmalloctext) | String | Optional | Firm reference information, usually internal information, that is part of the initial message. The information would not be carried forward (e.g to Take-up… |
+| 1733 | [EncodedFirmAllocTextLen](/fix/fields/tags-1600-1799#tag-1733-encodedfirmalloctextlen) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedFirmAllocText(1734) field. |
+| 1734 | [EncodedFirmAllocText](/fix/fields/tags-1600-1799#tag-1734-encodedfirmalloctext) | data | Optional | Encoded (non-ASCII characters) representation of the FirmAllocText(1732) field in the encoded format specified via the MessageEncoding(347) field. If used, the… |
 | | [CommissionData](/fix/components/commission-data) | Component | Optional | The CommissionData component block is used to carry commission information such as the type of commission and the rate. Use the CommissionDataGrp component as… |
 | 2653 | [AllocCommissionDataGrp](/fix/groups/alloc-commission-data-grp) | Repeating group | Optional | The AllocCommissionDataGrp component block is used to carry commission information such as the type of commission and the rate at the allocation level. It… |
-| 153 | [AllocAvgPx](/fix/fields/tags-0-199#tag-153) | Price | Optional | AvgPx for this AllocAccount. For F/X orders, should be the "all-in" rate (spot rate adjusted for forward points) for this allocation, expressed in terms of… |
-| 154 | [AllocNetMoney](/fix/fields/tags-0-199#tag-154) | Amt | Optional | NetMoney for this AllocAccount ((AllocQty \* AllocAvgPx) - Commission - sum of MiscFeeAmt + AccruedInterestAmt) if a Sell. ((AllocQty \* AllocAvgPx) + Commission… |
-| 119 | [SettlCurrAmt](/fix/fields/tags-0-199#tag-119) | Amt | Optional | Replaced by AllocSettlCurrAmt |
-| 2300 | [AllocGrossTradeAmt](/fix/fields/tags-2200-2399#tag-2300) | Amt | Optional | Total amount traded for this account (i.e. quantity \* price) expressed in units of currency. |
-| 737 | [AllocSettlCurrAmt](/fix/fields/tags-600-799#tag-737) | Amt | Optional | AllocNetMoney in AllocSettlCurrency for this AllocAccount if AllocSettlCurrency is different from "overall" Currency |
-| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120) | Currency | Optional | Replaced by AllocSettlCurrency SettlCurrency for this AllocAccount if different from "overall" Currency. Required if SettlCurrAmt is specified. |
-| 736 | [AllocSettlCurrency](/fix/fields/tags-600-799#tag-736) | Currency | Optional | AllocSettlCurrency for this AllocAccount if different from "overall" Currency. Required if AllocSettlCurrAmt is specified. Required for NDFs. |
-| 155 | [SettlCurrFxRate](/fix/fields/tags-0-199#tag-155) | float | Optional | Foreign exchange rate used to compute AllocSettlCurrAmt from Currency to AllocSettlCurrency |
-| 156 | [SettlCurrFxRateCalc](/fix/fields/tags-0-199#tag-156) | SettlCurrFxRateCalcCodeSet | Optional | Specifies whether the SettlCurrFxRate should be multiplied or divided |
-| 742 | [AllocAccruedInterestAmt](/fix/fields/tags-600-799#tag-742) | Amt | Optional | Applicable for Convertible Bonds and fixed income |
-| 741 | [AllocInterestAtMaturity](/fix/fields/tags-600-799#tag-741) | Amt | Optional | Applicable for securities that pay interest in lump-sum at maturity |
+| 153 | [AllocAvgPx](/fix/fields/tags-0-199#tag-153-allocavgpx) | Price | Optional | AvgPx for this AllocAccount. For F/X orders, should be the "all-in" rate (spot rate adjusted for forward points) for this allocation, expressed in terms of… |
+| 154 | [AllocNetMoney](/fix/fields/tags-0-199#tag-154-allocnetmoney) | Amt | Optional | NetMoney for this AllocAccount ((AllocQty \* AllocAvgPx) - Commission - sum of MiscFeeAmt + AccruedInterestAmt) if a Sell. ((AllocQty \* AllocAvgPx) + Commission… |
+| 119 | [SettlCurrAmt](/fix/fields/tags-0-199#tag-119-settlcurramt) | Amt | Optional | Replaced by AllocSettlCurrAmt |
+| 2300 | [AllocGrossTradeAmt](/fix/fields/tags-2200-2399#tag-2300-allocgrosstradeamt) | Amt | Optional | Total amount traded for this account (i.e. quantity \* price) expressed in units of currency. |
+| 737 | [AllocSettlCurrAmt](/fix/fields/tags-600-799#tag-737-allocsettlcurramt) | Amt | Optional | AllocNetMoney in AllocSettlCurrency for this AllocAccount if AllocSettlCurrency is different from "overall" Currency |
+| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120-settlcurrency) | Currency | Optional | Replaced by AllocSettlCurrency SettlCurrency for this AllocAccount if different from "overall" Currency. Required if SettlCurrAmt is specified. |
+| 736 | [AllocSettlCurrency](/fix/fields/tags-600-799#tag-736-allocsettlcurrency) | Currency | Optional | AllocSettlCurrency for this AllocAccount if different from "overall" Currency. Required if AllocSettlCurrAmt is specified. Required for NDFs. |
+| 155 | [SettlCurrFxRate](/fix/fields/tags-0-199#tag-155-settlcurrfxrate) | float | Optional | Foreign exchange rate used to compute AllocSettlCurrAmt from Currency to AllocSettlCurrency |
+| 156 | [SettlCurrFxRateCalc](/fix/fields/tags-0-199#tag-156-settlcurrfxratecalc) | SettlCurrFxRateCalcCodeSet | Optional | Specifies whether the SettlCurrFxRate should be multiplied or divided |
+| 742 | [AllocAccruedInterestAmt](/fix/fields/tags-600-799#tag-742-allocaccruedinterestamt) | Amt | Optional | Applicable for Convertible Bonds and fixed income |
+| 741 | [AllocInterestAtMaturity](/fix/fields/tags-600-799#tag-741-allocinterestatmaturity) | Amt | Optional | Applicable for securities that pay interest in lump-sum at maturity |
 | 136 | [MiscFeesGrp](/fix/groups/misc-fees-grp) | Repeating group | Optional | The MiscFeesGrp component is used to provide details of trade and transaction fees other than commissions, e.g. regulatory, exchange, taxes, levies, markup,… |
 | 576 | [ClrInstGrp](/fix/groups/clr-inst-grp) | Repeating group | Optional |  |
-| 635 | [ClearingFeeIndicator](/fix/fields/tags-600-799#tag-635) | ClearingFeeIndicatorCodeSet | Optional | Indicates type of fee being assessed of the customer for trade executions at an exchange. Applicable for futures markets only at this time. (Values source CBOT,… |
-| 780 | [AllocSettlInstType](/fix/fields/tags-600-799#tag-780) | AllocSettlInstTypeCodeSet | Optional | Used to indicate whether settlement instructions are provided on this message, and if not, how they are to be derived. Absence of this field implies use of… |
+| 635 | [ClearingFeeIndicator](/fix/fields/tags-600-799#tag-635-clearingfeeindicator) | ClearingFeeIndicatorCodeSet | Optional | Indicates type of fee being assessed of the customer for trade executions at an exchange. Applicable for futures markets only at this time. (Values source CBOT,… |
+| 780 | [AllocSettlInstType](/fix/fields/tags-600-799#tag-780-allocsettlinsttype) | AllocSettlInstTypeCodeSet | Optional | Used to indicate whether settlement instructions are provided on this message, and if not, how they are to be derived. Absence of this field implies use of… |
 | | [SettlInstructionsData](/fix/components/settl-instructions-data) | Component | Optional | The SettlInstructionsData component block is used to convey key information regarding standing settlement and delivery instructions. It also provides a… |
-| 2392 | [AllocRefRiskLimitCheckID](/fix/fields/tags-2200-2399#tag-2392) | String | Optional | Conditionally required when AllocRefRiskLimitCheckIDType(2393) is specified. |
-| 2393 | [AllocRefRiskLimitCheckIDType](/fix/fields/tags-2200-2399#tag-2393) | RefRiskLimitCheckIDTypeCodeSet | Optional | Conditionally required when AllocRefRiskLimitCheckID(2392) is specified. |
-| 2483 | [AllocRiskLimitCheckStatus](/fix/fields/tags-2400-2599#tag-2483) | RiskLimitCheckStatusCodeSet | Optional | Indicates the status of the risk limit check performed on a trade for this allocation instance. |
-| 2761 | [AllocGroupAmount](/fix/fields/tags-2600-2799#tag-2761) | Amt | Optional | Indicates the notional units or amount being allocated. |
-| 2770 | [AllocAvgPxGroupID](/fix/fields/tags-2600-2799#tag-2770) | String | Optional | Used by submitting firm to group trades being sub-allocated into an average price group. The trades in the average price group will be used to calculate an… |
-| 2769 | [AllocAvgPxIndicator](/fix/fields/tags-2600-2799#tag-2769) | AvgPxIndicatorCodeSet | Optional | Average pricing indicator at the allocation level. |
+| 2392 | [AllocRefRiskLimitCheckID](/fix/fields/tags-2200-2399#tag-2392-allocrefrisklimitcheckid) | String | Optional | Conditionally required when AllocRefRiskLimitCheckIDType(2393) is specified. |
+| 2393 | [AllocRefRiskLimitCheckIDType](/fix/fields/tags-2200-2399#tag-2393-allocrefrisklimitcheckidtype) | RefRiskLimitCheckIDTypeCodeSet | Optional | Conditionally required when AllocRefRiskLimitCheckID(2392) is specified. |
+| 2483 | [AllocRiskLimitCheckStatus](/fix/fields/tags-2400-2599#tag-2483-allocrisklimitcheckstatus) | RiskLimitCheckStatusCodeSet | Optional | Indicates the status of the risk limit check performed on a trade for this allocation instance. |
+| 2761 | [AllocGroupAmount](/fix/fields/tags-2600-2799#tag-2761-allocgroupamount) | Amt | Optional | Indicates the notional units or amount being allocated. |
+| 2770 | [AllocAvgPxGroupID](/fix/fields/tags-2600-2799#tag-2770-allocavgpxgroupid) | String | Optional | Used by submitting firm to group trades being sub-allocated into an average price group. The trades in the average price group will be used to calculate an… |
+| 2769 | [AllocAvgPxIndicator](/fix/fields/tags-2600-2799#tag-2769-allocavgpxindicator) | AvgPxIndicatorCodeSet | Optional | Average pricing indicator at the allocation level. |
 | 1844 | [TradeAllocAmtGrp](/fix/groups/trade-alloc-amt-grp) | Repeating group | Optional | The TradeAllocAmtGrp component is used to communicate the monetary amounts associated with allocated positions. This is the per-allocation portion of the… |
 
 </StickyTable>

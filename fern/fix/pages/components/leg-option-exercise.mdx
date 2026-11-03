@@ -3,7 +3,13 @@ title: "LegOptionExercise"
 subtitle: "The LegOptionExercise component is a subcomponent of the InstrumentLeg component used to specify option exercise provisions. Its purpose is to identify the opportunities and conditions for exercise, e.g. the schedule of dates on which…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,17 +17,17 @@ subtitle: "The LegOptionExercise component is a subcomponent of the InstrumentLe
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41481 | [LegExerciseDesc](/fix/fields/tags-41400-41599#tag-41481) | String | Optional | A description of the option exercise. |
-| 41482 | [EncodedLegExerciseDescLen](/fix/fields/tags-41400-41599#tag-41482) | Length | Optional | Must be set if EncodedLegExerciseDesc (41483) field is specified and must immediately precede it. |
-| 41483 | [EncodedLegExerciseDesc](/fix/fields/tags-41400-41599#tag-41483) | data | Optional | Encoded (non-ASCII characters) representation of the LegExerciseDesc(41481) field in the encoded format specified via the MessageEncoding(347) field. |
-| 41484 | [LegAutomaticExerciseIndicator](/fix/fields/tags-41400-41599#tag-41484) | Boolean | Optional | Indicates (when 'Y') that exercise is automatic when the strike price is crossed or the underlying trade is in the money. |
-| 41485 | [LegAutomaticExerciseThresholdRate](/fix/fields/tags-41400-41599#tag-41485) | float | Optional | The threshold rate for triggering automatic exercise. |
-| 41486 | [LegExerciseConfirmationMethod](/fix/fields/tags-41400-41599#tag-41486) | ExerciseConfirmationMethodCodeSet | Optional | Indicates whether follow-up confirmation of exercise (written or electronic) is required following telephonic notice by the buyer to the seller or seller's… |
-| 41487 | [LegManualNoticeBusinessCenter](/fix/fields/tags-41400-41599#tag-41487) | String | Optional | Identifies the business center used for adjusting the time for manual exercise notice. See http://www.fpml.org/coding-scheme/business-center for standard… |
-| 41488 | [LegFallbackExerciseIndicator](/fix/fields/tags-41400-41599#tag-41488) | Boolean | Optional | Indicates whether the notional amount of the underlying swap, not previously exercised under the option, will be automatically exercised at the expiration time… |
-| 41489 | [LegLimitRightToConfirmIndicator](/fix/fields/tags-41400-41599#tag-41489) | Boolean | Optional | Indicates whether the Seller may request the Buyer to confirm its intent to exercise if not done on or before the expiration time on the expiration date. If… |
-| 41490 | [LegExerciseSplitTicketIndicator](/fix/fields/tags-41400-41599#tag-41490) | Boolean | Optional | Indicates in physical settlement of bond and convertible bond options whether the party required to deliver the bonds will divide those to be delivered as… |
-| 42391 | [LegSettlMethodElectingPartySide](/fix/fields/tags-42200-42399#tag-42391) | PaymentPaySideCodeSet | Optional | Side value of the party electing the settlement method. |
+| 41481 | [LegExerciseDesc](/fix/fields/tags-41400-41599#tag-41481-legexercisedesc) | String | Optional | A description of the option exercise. |
+| 41482 | [EncodedLegExerciseDescLen](/fix/fields/tags-41400-41599#tag-41482-encodedlegexercisedesclen) | Length | Optional | Must be set if EncodedLegExerciseDesc (41483) field is specified and must immediately precede it. |
+| 41483 | [EncodedLegExerciseDesc](/fix/fields/tags-41400-41599#tag-41483-encodedlegexercisedesc) | data | Optional | Encoded (non-ASCII characters) representation of the LegExerciseDesc(41481) field in the encoded format specified via the MessageEncoding(347) field. |
+| 41484 | [LegAutomaticExerciseIndicator](/fix/fields/tags-41400-41599#tag-41484-legautomaticexerciseindicator) | Boolean | Optional | Indicates (when 'Y') that exercise is automatic when the strike price is crossed or the underlying trade is in the money. |
+| 41485 | [LegAutomaticExerciseThresholdRate](/fix/fields/tags-41400-41599#tag-41485-legautomaticexercisethresholdrate) | float | Optional | The threshold rate for triggering automatic exercise. |
+| 41486 | [LegExerciseConfirmationMethod](/fix/fields/tags-41400-41599#tag-41486-legexerciseconfirmationmethod) | ExerciseConfirmationMethodCodeSet | Optional | Indicates whether follow-up confirmation of exercise (written or electronic) is required following telephonic notice by the buyer to the seller or seller's… |
+| 41487 | [LegManualNoticeBusinessCenter](/fix/fields/tags-41400-41599#tag-41487-legmanualnoticebusinesscenter) | String | Optional | Identifies the business center used for adjusting the time for manual exercise notice. See http://www.fpml.org/coding-scheme/business-center for standard… |
+| 41488 | [LegFallbackExerciseIndicator](/fix/fields/tags-41400-41599#tag-41488-legfallbackexerciseindicator) | Boolean | Optional | Indicates whether the notional amount of the underlying swap, not previously exercised under the option, will be automatically exercised at the expiration time… |
+| 41489 | [LegLimitRightToConfirmIndicator](/fix/fields/tags-41400-41599#tag-41489-leglimitrighttoconfirmindicator) | Boolean | Optional | Indicates whether the Seller may request the Buyer to confirm its intent to exercise if not done on or before the expiration time on the expiration date. If… |
+| 41490 | [LegExerciseSplitTicketIndicator](/fix/fields/tags-41400-41599#tag-41490-legexercisesplitticketindicator) | Boolean | Optional | Indicates in physical settlement of bond and convertible bond options whether the party required to deliver the bonds will divide those to be delivered as… |
+| 42391 | [LegSettlMethodElectingPartySide](/fix/fields/tags-42200-42399#tag-42391-legsettlmethodelectingpartyside) | PaymentPaySideCodeSet | Optional | Side value of the party electing the settlement method. |
 | | [LegSettlMethodElectionDate](/fix/components/leg-settl-method-election-date) | Component | Optional | The LegSettlMethodElectionDate component is a subcomponent within the LegOptionExercise component used to report the settlement method election date. |
 | | [LegOptionExerciseDates](/fix/components/leg-option-exercise-dates) | Component | Optional | The LegOptionExerciseDates component is a subcomponent of the LegOptionExercise component used to specify option exercise dates. |
 | | [LegOptionExerciseExpiration](/fix/components/leg-option-exercise-expiration) | Component | Optional | The LegOptionExerciseExpiration component is a subcomponent of the LegOptionExercise component used to specify option exercise expiration dates and times. The… |

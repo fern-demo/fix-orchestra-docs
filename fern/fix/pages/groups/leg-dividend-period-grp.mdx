@@ -3,9 +3,15 @@ title: "LegDividendPeriodGrp"
 subtitle: "LegDividendPeriodGrp is a repeating subcomponent within the LegDividendConditions component. It is used to specify the valuation and payments dates of the dividend leg of a dividend swap."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42366</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegDividendPeriods (42366)](/fix/fields/tags-42200-42399#tag-42366).
+<llms-only>
+Repeating group · NumInGroup 42366 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegDividendPeriods (42366)](/fix/fields/tags-42200-42399#tag-42366-nolegdividendperiods).
 
 ## Members
 
@@ -13,26 +19,26 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42367 | [LegDividendPeriodSequence](/fix/fields/tags-42200-42399#tag-42367) | int | Optional | Required if NoLegDividendPeriods(42366) &gt; 0. |
-| 42368 | [LegDividendPeriodStartDateUnadjusted](/fix/fields/tags-42200-42399#tag-42368) | LocalMktDate | Optional | The unadjusted date on which the dividend period will begin. |
-| 42369 | [LegDividendPeriodEndDateUnadjusted](/fix/fields/tags-42200-42399#tag-42369) | LocalMktDate | Optional | The unadjusted date on which the dividend period will end. |
-| 42370 | [LegDividendPeriodUnderlierRefID](/fix/fields/tags-42200-42399#tag-42370) | String | Optional | When specified, this overrides LegDividendUnderlierRefID(42340). The specified value would be specific to this dividend period instance. |
-| 42371 | [LegDividendPeriodStrikePrice](/fix/fields/tags-42200-42399#tag-42371) | Price | Optional | Specifies the fixed strike price of the dividend period. |
-| 42372 | [LegDividendPeriodBusinessDayConvention](/fix/fields/tags-42200-42399#tag-42372) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
+| 42367 | [LegDividendPeriodSequence](/fix/fields/tags-42200-42399#tag-42367-legdividendperiodsequence) | int | Optional | Required if NoLegDividendPeriods(42366) &gt; 0. |
+| 42368 | [LegDividendPeriodStartDateUnadjusted](/fix/fields/tags-42200-42399#tag-42368-legdividendperiodstartdateunadjusted) | LocalMktDate | Optional | The unadjusted date on which the dividend period will begin. |
+| 42369 | [LegDividendPeriodEndDateUnadjusted](/fix/fields/tags-42200-42399#tag-42369-legdividendperiodenddateunadjusted) | LocalMktDate | Optional | The unadjusted date on which the dividend period will end. |
+| 42370 | [LegDividendPeriodUnderlierRefID](/fix/fields/tags-42200-42399#tag-42370-legdividendperiodunderlierrefid) | String | Optional | When specified, this overrides LegDividendUnderlierRefID(42340). The specified value would be specific to this dividend period instance. |
+| 42371 | [LegDividendPeriodStrikePrice](/fix/fields/tags-42200-42399#tag-42371-legdividendperiodstrikeprice) | Price | Optional | Specifies the fixed strike price of the dividend period. |
+| 42372 | [LegDividendPeriodBusinessDayConvention](/fix/fields/tags-42200-42399#tag-42372-legdividendperiodbusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
 | 42386 | [LegDividendPeriodBusinessCenterGrp](/fix/groups/leg-dividend-period-business-center-grp) | Repeating group | Optional | LegDividendPeriodBusinessCenterGrp is a repeating subcomponent within the LegDividendPeriodGrp component. It is used to specify the set of business centers… |
-| 42373 | [LegDividendPeriodValuationDateUnadjusted](/fix/fields/tags-42200-42399#tag-42373) | LocalMktDate | Optional | The unadjusted dividend period valuation date. |
-| 42374 | [LegDividendPeriodValuationDateRelativeTo](/fix/fields/tags-42200-42399#tag-42374) | int | Optional | Specifies the anchor date when the dividend period valuation date is relative to an anchor date. See… |
-| 42375 | [LegDividendPeriodValuationDateOffsetPeriod](/fix/fields/tags-42200-42399#tag-42375) | int | Optional | Conditionally required when LegDividendPeriodValuationDateOffsetUnit(42376) is specified. |
-| 42376 | [LegDividendPeriodValuationDateOffsetUnit](/fix/fields/tags-42200-42399#tag-42376) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegDividendPeriodValuationDateOffsetPeriod(42375) is specified. |
-| 42377 | [LegDividendPeriodValuationDateOffsetDayType](/fix/fields/tags-42200-42399#tag-42377) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative dividend period valuation date offset. |
-| 42378 | [LegDividendPeriodValuationDateAdjusted](/fix/fields/tags-42200-42399#tag-42378) | LocalMktDate | Optional | The adjusted dividend period valuation date. |
-| 42379 | [LegDividendPeriodPaymentDateUnadjusted](/fix/fields/tags-42200-42399#tag-42379) | LocalMktDate | Optional | The unadjusted dividend period payment date. |
-| 42380 | [LegDividendPeriodPaymentDateRelativeTo](/fix/fields/tags-42200-42399#tag-42380) | int | Optional | Specifies the anchor date when the dividend period payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date… |
-| 42381 | [LegDividendPeriodPaymentDateOffsetPeriod](/fix/fields/tags-42200-42399#tag-42381) | int | Optional | Conditionally required when LegDividendPeriodPaymentDateOffsetUnit(42382) is specified. |
-| 42382 | [LegDividendPeriodPaymentDateOffsetUnit](/fix/fields/tags-42200-42399#tag-42382) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegDividendPeriodPaymentDateOffsetPeriod(42381) is specified. |
-| 42383 | [LegDividendPeriodPaymentDateOffsetDayType](/fix/fields/tags-42200-42399#tag-42383) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative dividend period payment date offset. |
-| 42384 | [LegDividendPeriodPaymentDateAdjusted](/fix/fields/tags-42200-42399#tag-42384) | LocalMktDate | Optional | The adjusted dividend period payment date. |
-| 42385 | [LegDividendPeriodXID](/fix/fields/tags-42200-42399#tag-42385) | XID | Optional | Identifier for linking this stream dividend period to an underlier through an instance of RelatedInstrumentGrp. |
+| 42373 | [LegDividendPeriodValuationDateUnadjusted](/fix/fields/tags-42200-42399#tag-42373-legdividendperiodvaluationdateunadjusted) | LocalMktDate | Optional | The unadjusted dividend period valuation date. |
+| 42374 | [LegDividendPeriodValuationDateRelativeTo](/fix/fields/tags-42200-42399#tag-42374-legdividendperiodvaluationdaterelativeto) | int | Optional | Specifies the anchor date when the dividend period valuation date is relative to an anchor date. See… |
+| 42375 | [LegDividendPeriodValuationDateOffsetPeriod](/fix/fields/tags-42200-42399#tag-42375-legdividendperiodvaluationdateoffsetperiod) | int | Optional | Conditionally required when LegDividendPeriodValuationDateOffsetUnit(42376) is specified. |
+| 42376 | [LegDividendPeriodValuationDateOffsetUnit](/fix/fields/tags-42200-42399#tag-42376-legdividendperiodvaluationdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegDividendPeriodValuationDateOffsetPeriod(42375) is specified. |
+| 42377 | [LegDividendPeriodValuationDateOffsetDayType](/fix/fields/tags-42200-42399#tag-42377-legdividendperiodvaluationdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative dividend period valuation date offset. |
+| 42378 | [LegDividendPeriodValuationDateAdjusted](/fix/fields/tags-42200-42399#tag-42378-legdividendperiodvaluationdateadjusted) | LocalMktDate | Optional | The adjusted dividend period valuation date. |
+| 42379 | [LegDividendPeriodPaymentDateUnadjusted](/fix/fields/tags-42200-42399#tag-42379-legdividendperiodpaymentdateunadjusted) | LocalMktDate | Optional | The unadjusted dividend period payment date. |
+| 42380 | [LegDividendPeriodPaymentDateRelativeTo](/fix/fields/tags-42200-42399#tag-42380-legdividendperiodpaymentdaterelativeto) | int | Optional | Specifies the anchor date when the dividend period payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date… |
+| 42381 | [LegDividendPeriodPaymentDateOffsetPeriod](/fix/fields/tags-42200-42399#tag-42381-legdividendperiodpaymentdateoffsetperiod) | int | Optional | Conditionally required when LegDividendPeriodPaymentDateOffsetUnit(42382) is specified. |
+| 42382 | [LegDividendPeriodPaymentDateOffsetUnit](/fix/fields/tags-42200-42399#tag-42382-legdividendperiodpaymentdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegDividendPeriodPaymentDateOffsetPeriod(42381) is specified. |
+| 42383 | [LegDividendPeriodPaymentDateOffsetDayType](/fix/fields/tags-42200-42399#tag-42383-legdividendperiodpaymentdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative dividend period payment date offset. |
+| 42384 | [LegDividendPeriodPaymentDateAdjusted](/fix/fields/tags-42200-42399#tag-42384-legdividendperiodpaymentdateadjusted) | LocalMktDate | Optional | The adjusted dividend period payment date. |
+| 42385 | [LegDividendPeriodXID](/fix/fields/tags-42200-42399#tag-42385-legdividendperiodxid) | XID | Optional | Identifier for linking this stream dividend period to an underlier through an instance of RelatedInstrumentGrp. |
 
 </StickyTable>
 

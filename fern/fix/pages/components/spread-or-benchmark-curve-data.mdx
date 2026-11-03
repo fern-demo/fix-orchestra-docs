@@ -3,7 +3,13 @@ title: "SpreadOrBenchmarkCurveData"
 subtitle: "The SpreadOrBenchmarkCurveData component block is primarily used for Fixed Income to convey spread to a benchmark security or curve."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.4.3
+</llms-only>
 
 ## Members
 
@@ -11,14 +17,14 @@ subtitle: "The SpreadOrBenchmarkCurveData component block is primarily used for 
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 218 | [Spread](/fix/fields/tags-200-399#tag-218) | PriceOffset | Optional | For Fixed Income |
-| 220 | [BenchmarkCurveCurrency](/fix/fields/tags-200-399#tag-220) | Currency | Optional | Identifies currency used for benchmark curve. See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values. (Note tag # was reserved in… |
-| 221 | [BenchmarkCurveName](/fix/fields/tags-200-399#tag-221) | BenchmarkCurveNameCodeSet | Optional | Name of benchmark curve. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
-| 222 | [BenchmarkCurvePoint](/fix/fields/tags-200-399#tag-222) | String | Optional | Point on benchmark curve. Free form values: e.g. "Y", "7Y", "INTERPOLATED". Sample values: M = combination of a number between 1-12 and a "M" for month Y =… |
-| 662 | [BenchmarkPrice](/fix/fields/tags-600-799#tag-662) | Price | Optional | Specifies the price of the benchmark. |
-| 663 | [BenchmarkPriceType](/fix/fields/tags-600-799#tag-663) | PriceTypeCodeSet | Optional | Must be present if BenchmarkPrice is used. |
-| 699 | [BenchmarkSecurityID](/fix/fields/tags-600-799#tag-699) | String | Optional | The identifier of the benchmark security, e.g. Treasury against Corporate bond. |
-| 761 | [BenchmarkSecurityIDSource](/fix/fields/tags-600-799#tag-761) | SecurityIDSourceCodeSet | Optional | Source of BenchmarkSecurityID. If not specified, then ID Source is understood to be the same as that in the Instrument block. |
+| 218 | [Spread](/fix/fields/tags-200-399#tag-218-spread) | PriceOffset | Optional | For Fixed Income |
+| 220 | [BenchmarkCurveCurrency](/fix/fields/tags-200-399#tag-220-benchmarkcurvecurrency) | Currency | Optional | Identifies currency used for benchmark curve. See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values. (Note tag # was reserved in… |
+| 221 | [BenchmarkCurveName](/fix/fields/tags-200-399#tag-221-benchmarkcurvename) | BenchmarkCurveNameCodeSet | Optional | Name of benchmark curve. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
+| 222 | [BenchmarkCurvePoint](/fix/fields/tags-200-399#tag-222-benchmarkcurvepoint) | String | Optional | Point on benchmark curve. Free form values: e.g. "Y", "7Y", "INTERPOLATED". Sample values: M = combination of a number between 1-12 and a "M" for month Y =… |
+| 662 | [BenchmarkPrice](/fix/fields/tags-600-799#tag-662-benchmarkprice) | Price | Optional | Specifies the price of the benchmark. |
+| 663 | [BenchmarkPriceType](/fix/fields/tags-600-799#tag-663-benchmarkpricetype) | PriceTypeCodeSet | Optional | Must be present if BenchmarkPrice is used. |
+| 699 | [BenchmarkSecurityID](/fix/fields/tags-600-799#tag-699-benchmarksecurityid) | String | Optional | The identifier of the benchmark security, e.g. Treasury against Corporate bond. |
+| 761 | [BenchmarkSecurityIDSource](/fix/fields/tags-600-799#tag-761-benchmarksecurityidsource) | SecurityIDSourceCodeSet | Optional | Source of BenchmarkSecurityID. If not specified, then ID Source is understood to be the same as that in the Instrument block. |
 
 </StickyTable>
 

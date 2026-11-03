@@ -3,9 +3,15 @@ title: "UnderlyingPhysicalSettlTermGrp"
 subtitle: "The UnderlyingPhysicalSettlTermGrp is a repeating component within the UnderlyingInstrument component used to report physical settlement terms."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42060</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingPhysicalSettlTerms (42060)](/fix/fields/tags-42000-42199#tag-42060).
+<llms-only>
+Repeating group · NumInGroup 42060 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingPhysicalSettlTerms (42060)](/fix/fields/tags-42000-42199#tag-42060-nounderlyingphysicalsettlterms).
 
 ## Members
 
@@ -14,10 +20,10 @@ Each repetition starts with the first member listed. The count of repetitions is
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | 42065 | [UnderlyingPhysicalSettlDeliverableObligationGrp](/fix/groups/underlying-physical-settl-deliverable-obligation-grp) | Repeating group | Optional | The UnderlyingPhysicalSettlDeliverableObligationGrp is a repeating component within the UnderlyingPhysicalSettlTermGrp component used to report CDS physical… |
-| 42061 | [UnderlyingPhysicalSettlCurrency](/fix/fields/tags-42000-42199#tag-42061) | Currency | Optional | Currency of physical settlement. Uses ISO 4217 currency codes. |
-| 42062 | [UnderlyingPhysicalSettlBusinessDays](/fix/fields/tags-42000-42199#tag-42062) | int | Optional | A number of business days. Its precise meaning is dependent on the context in which this element is used. |
-| 42063 | [UnderlyingPhysicalSettlMaximumBusinessDays](/fix/fields/tags-42000-42199#tag-42063) | int | Optional | A maximum number of business days. Its precise meaning is dependent on the context in which this element is used. Intended to be used to limit a particular ISDA… |
-| 42064 | [UnderlyingPhysicalSettlTermXID](/fix/fields/tags-42000-42199#tag-42064) | XID | Optional | A named string value referenced by UnderlyingSettlementTermXIDRef(41315). |
+| 42061 | [UnderlyingPhysicalSettlCurrency](/fix/fields/tags-42000-42199#tag-42061-underlyingphysicalsettlcurrency) | Currency | Optional | Currency of physical settlement. Uses ISO 4217 currency codes. |
+| 42062 | [UnderlyingPhysicalSettlBusinessDays](/fix/fields/tags-42000-42199#tag-42062-underlyingphysicalsettlbusinessdays) | int | Optional | A number of business days. Its precise meaning is dependent on the context in which this element is used. |
+| 42063 | [UnderlyingPhysicalSettlMaximumBusinessDays](/fix/fields/tags-42000-42199#tag-42063-underlyingphysicalsettlmaximumbusinessdays) | int | Optional | A maximum number of business days. Its precise meaning is dependent on the context in which this element is used. Intended to be used to limit a particular ISDA… |
+| 42064 | [UnderlyingPhysicalSettlTermXID](/fix/fields/tags-42000-42199#tag-42064-underlyingphysicalsettltermxid) | XID | Optional | A named string value referenced by UnderlyingSettlementTermXIDRef(41315). |
 
 </StickyTable>
 

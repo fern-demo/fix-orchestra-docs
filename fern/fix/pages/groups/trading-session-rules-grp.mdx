@@ -2,9 +2,15 @@
 title: "TradingSessionRulesGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1309</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoTradingSessionRules (1309)](/fix/fields/tags-1200-1399#tag-1309).
+<llms-only>
+Repeating group · NumInGroup 1309 · Added FIX.5.0
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoTradingSessionRules (1309)](/fix/fields/tags-1200-1399#tag-1309-notradingsessionrules).
 
 ## Members
 
@@ -12,8 +18,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for the trading session Must be provided if NoTradingSessions &gt; 0 Set to \[N/A\] if values are not specific to trading session |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Identifier for the trading session Set to \[N/A\] if values are not specific to trading session sub id |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336-tradingsessionid) | TradingSessionIDCodeSet | Optional | Identifier for the trading session Must be provided if NoTradingSessions &gt; 0 Set to \[N/A\] if values are not specific to trading session |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625-tradingsessionsubid) | TradingSessionSubIDCodeSet | Optional | Identifier for the trading session Set to \[N/A\] if values are not specific to trading session sub id |
 | | [TradingSessionRules](/fix/components/trading-session-rules) | Component | Optional |  |
 
 </StickyTable>

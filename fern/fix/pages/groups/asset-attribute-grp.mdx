@@ -3,9 +3,15 @@ title: "AssetAttributeGrp"
 subtitle: "The AssetAttributeGrp is a repeating subcomponent of the Instrument component used to detail attributes of the instrument asset."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2304</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoAssetAttributes (2304)](/fix/fields/tags-2200-2399#tag-2304).
+<llms-only>
+Repeating group · NumInGroup 2304 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoAssetAttributes (2304)](/fix/fields/tags-2200-2399#tag-2304-noassetattributes).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2305 | [AssetAttributeType](/fix/fields/tags-2200-2399#tag-2305) | String | Optional | Required if NoAssetAttributes(2304) &gt; 0. |
-| 2306 | [AssetAttributeValue](/fix/fields/tags-2200-2399#tag-2306) | String | Optional | Specifies the value of the asset attribute. |
-| 2307 | [AssetAttributeLimit](/fix/fields/tags-2200-2399#tag-2307) | String | Optional | Limit or lower acceptable value of the attribute. |
+| 2305 | [AssetAttributeType](/fix/fields/tags-2200-2399#tag-2305-assetattributetype) | String | Optional | Required if NoAssetAttributes(2304) &gt; 0. |
+| 2306 | [AssetAttributeValue](/fix/fields/tags-2200-2399#tag-2306-assetattributevalue) | String | Optional | Specifies the value of the asset attribute. |
+| 2307 | [AssetAttributeLimit](/fix/fields/tags-2200-2399#tag-2307-assetattributelimit) | String | Optional | Limit or lower acceptable value of the attribute. |
 
 </StickyTable>
 

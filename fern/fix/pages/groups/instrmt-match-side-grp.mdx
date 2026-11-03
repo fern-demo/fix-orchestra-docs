@@ -3,11 +3,17 @@ title: "InstrmtMatchSideGrp"
 subtitle: "The InstrmtMatchSideGrp component is used to convey all trades for a given match event reported by instrument and trade side."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1889</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Repeating group · NumInGroup 1889 · Added FIX.5.0SP2
+</llms-only>
 
 Each trade match report can contain any number of trades for any number of instruments. This component contains all instruments together with all of the trade sides (possibly more than two) that occurred for each instrument within the same match event.
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoInstrmtMatchSides (1889)](/fix/fields/tags-1800-1999#tag-1889).
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoInstrmtMatchSides (1889)](/fix/fields/tags-1800-1999#tag-1889-noinstrmtmatchsides).
 
 ## Members
 
@@ -18,15 +24,15 @@ Each repetition starts with the first member listed. The count of repetitions is
 | | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
-| 1891 | [TrdMatchSubID](/fix/fields/tags-1800-1999#tag-1891) | String | Optional | Used to identify each price level, step or clip within a match event. |
-| 53 | [Quantity](/fix/fields/tags-0-199#tag-53) | Qty | Optional | Total quantity for this instrument in this match event. This is the cumulative sum of LastQty(32) for all match steps for this instrument. |
-| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
-| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120) | Currency | Optional | Currency code of settlement denomination. |
-| 854 | [QtyType](/fix/fields/tags-800-999#tag-854) | QtyTypeCodeSet | Optional | Type of quantity specified in quantity field. ContractMultiplier (tag 231) is required when QtyType = 1 (Contracts). UnitOfMeasure (tag 996) and TimeUnit (tag… |
-| 32 | [LastQty](/fix/fields/tags-0-199#tag-32) | Qty | Optional | Required if NoInstrmtMatchSides(1889) &gt; 0. Trade quantity for this instrument within this match step. The value is the greater of the sum of SideLastQty(1009)… |
-| 423 | [PriceType](/fix/fields/tags-400-599#tag-423) | PriceTypeCodeSet | Optional | Code to represent the price type. |
-| 31 | [LastPx](/fix/fields/tags-0-199#tag-31) | Price | Optional | Required if NoInstrmtMatchSides(1889) &gt; 0. |
-| 30 | [LastMkt](/fix/fields/tags-0-199#tag-30) | Exchange | Optional | Market of execution for last fill, or an indication of the market where an order was routed Valid values: See "Appendix 6-C" |
+| 1891 | [TrdMatchSubID](/fix/fields/tags-1800-1999#tag-1891-trdmatchsubid) | String | Optional | Used to identify each price level, step or clip within a match event. |
+| 53 | [Quantity](/fix/fields/tags-0-199#tag-53-quantity) | Qty | Optional | Total quantity for this instrument in this match event. This is the cumulative sum of LastQty(32) for all match steps for this instrument. |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15-currency) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
+| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120-settlcurrency) | Currency | Optional | Currency code of settlement denomination. |
+| 854 | [QtyType](/fix/fields/tags-800-999#tag-854-qtytype) | QtyTypeCodeSet | Optional | Type of quantity specified in quantity field. ContractMultiplier (tag 231) is required when QtyType = 1 (Contracts). UnitOfMeasure (tag 996) and TimeUnit (tag… |
+| 32 | [LastQty](/fix/fields/tags-0-199#tag-32-lastqty) | Qty | Optional | Required if NoInstrmtMatchSides(1889) &gt; 0. Trade quantity for this instrument within this match step. The value is the greater of the sum of SideLastQty(1009)… |
+| 423 | [PriceType](/fix/fields/tags-400-599#tag-423-pricetype) | PriceTypeCodeSet | Optional | Code to represent the price type. |
+| 31 | [LastPx](/fix/fields/tags-0-199#tag-31-lastpx) | Price | Optional | Required if NoInstrmtMatchSides(1889) &gt; 0. |
+| 30 | [LastMkt](/fix/fields/tags-0-199#tag-30-lastmkt) | Exchange | Optional | Market of execution for last fill, or an indication of the market where an order was routed Valid values: See "Appendix 6-C" |
 | 1890 | [TrdMatchSideGrp](/fix/groups/trd-match-side-grp) | Repeating group | Optional | The TrdMatchSideGrp component conveys all trade sides for a single instance of the InstrmtMatchSideGrp component. |
 
 </StickyTable>

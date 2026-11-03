@@ -2,7 +2,13 @@
 title: "TradeReportOrderDetail"
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Trade Capture</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Trade Capture · Added FIX.5.0SP1
+</llms-only>
 
 ## Members
 
@@ -10,43 +16,43 @@ title: "TradeReportOrderDetail"
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | Optional | Unique identifier for Order as assigned by sell-side (broker, exchange, ECN). Uniqueness must be guaranteed within a single trading day. Firms which accept… |
-| 198 | [SecondaryOrderID](/fix/fields/tags-0-199#tag-198) | String | Optional | Assigned by the party which accepts the order. Can be used to provide the OrderID (37) used by an exchange or executing system. |
-| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | In the case of quotes can be mapped to QuoteMsgID(1166) of a single Quote(MsgType=S) or QuoteID(117) of a MassQuote(MsgType=i). |
-| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526) | String | Optional | In the case of quotes can be mapped to QuoteID(117) of a single Quote(MsgType=S) or QuoteEntryID(299) of a MassQuote(MsgType=i). |
-| 66 | [ListID](/fix/fields/tags-0-199#tag-66) | String | Optional | Unique identifier for list as assigned by institution, used to associate multiple individual orders. Uniqueness must be guaranteed within a single trading day.… |
-| 1080 | [RefOrderID](/fix/fields/tags-1000-1199#tag-1080) | String | Optional | Some hosts assign an order a new order id under special circumstances. The RefOrdID field will connect the same underlying order across changing OrderIDs. |
-| 1081 | [RefOrderIDSource](/fix/fields/tags-1000-1199#tag-1081) | RefOrderIDSourceCodeSet | Optional | Used to specify the source for the identifier in RefOrderID(1080). This can be an identifier provided in order depth market data when hitting (taking) a… |
-| 1431 | [RefOrdIDReason](/fix/fields/tags-1400-1599#tag-1431) | RefOrdIDReasonCodeSet | Optional | The reason for updating the RefOrdID |
+| 37 | [OrderID](/fix/fields/tags-0-199#tag-37-orderid) | String | Optional | Unique identifier for Order as assigned by sell-side (broker, exchange, ECN). Uniqueness must be guaranteed within a single trading day. Firms which accept… |
+| 198 | [SecondaryOrderID](/fix/fields/tags-0-199#tag-198-secondaryorderid) | String | Optional | Assigned by the party which accepts the order. Can be used to provide the OrderID (37) used by an exchange or executing system. |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11-clordid) | String | Optional | In the case of quotes can be mapped to QuoteMsgID(1166) of a single Quote(MsgType=S) or QuoteID(117) of a MassQuote(MsgType=i). |
+| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526-secondaryclordid) | String | Optional | In the case of quotes can be mapped to QuoteID(117) of a single Quote(MsgType=S) or QuoteEntryID(299) of a MassQuote(MsgType=i). |
+| 66 | [ListID](/fix/fields/tags-0-199#tag-66-listid) | String | Optional | Unique identifier for list as assigned by institution, used to associate multiple individual orders. Uniqueness must be guaranteed within a single trading day.… |
+| 1080 | [RefOrderID](/fix/fields/tags-1000-1199#tag-1080-reforderid) | String | Optional | Some hosts assign an order a new order id under special circumstances. The RefOrdID field will connect the same underlying order across changing OrderIDs. |
+| 1081 | [RefOrderIDSource](/fix/fields/tags-1000-1199#tag-1081-reforderidsource) | RefOrderIDSourceCodeSet | Optional | Used to specify the source for the identifier in RefOrderID(1080). This can be an identifier provided in order depth market data when hitting (taking) a… |
+| 1431 | [RefOrdIDReason](/fix/fields/tags-1400-1599#tag-1431-refordidreason) | RefOrdIDReasonCodeSet | Optional | The reason for updating the RefOrdID |
 | 73 | [RelatedOrderGrp](/fix/groups/related-order-grp) | Repeating group | Optional | This component is used to identify orders that are related to the order identified outside of this component for a business purpose. For example, the bundling… |
-| 1091 | [PreTradeAnonymity](/fix/fields/tags-1000-1199#tag-1091) | Boolean | Optional | Allows trader to explicitly request anonymity or disclosure in pre-trade market data feeds. Anonymity is relevant in markets where counterparties are regularly… |
-| 40 | [OrdType](/fix/fields/tags-0-199#tag-40) | OrdTypeCodeSet | Optional | Order type from the order associated with the trade |
-| 44 | [Price](/fix/fields/tags-0-199#tag-44) | Price | Optional | Order price at time of trade |
-| 99 | [StopPx](/fix/fields/tags-0-199#tag-99) | Price | Optional | Stop/Limit order price |
-| 18 | [ExecInst](/fix/fields/tags-0-199#tag-18) | ExecInstCodeSet | Optional | Execution Instruction from the order associated with the trade |
-| 39 | [OrdStatus](/fix/fields/tags-0-199#tag-39) | OrdStatusCodeSet | Optional | Status of order as of this trade report |
+| 1091 | [PreTradeAnonymity](/fix/fields/tags-1000-1199#tag-1091-pretradeanonymity) | Boolean | Optional | Allows trader to explicitly request anonymity or disclosure in pre-trade market data feeds. Anonymity is relevant in markets where counterparties are regularly… |
+| 40 | [OrdType](/fix/fields/tags-0-199#tag-40-ordtype) | OrdTypeCodeSet | Optional | Order type from the order associated with the trade |
+| 44 | [Price](/fix/fields/tags-0-199#tag-44-price) | Price | Optional | Order price at time of trade |
+| 99 | [StopPx](/fix/fields/tags-0-199#tag-99-stoppx) | Price | Optional | Stop/Limit order price |
+| 18 | [ExecInst](/fix/fields/tags-0-199#tag-18-execinst) | ExecInstCodeSet | Optional | Execution Instruction from the order associated with the trade |
+| 39 | [OrdStatus](/fix/fields/tags-0-199#tag-39-ordstatus) | OrdStatusCodeSet | Optional | Status of order as of this trade report |
 | | [OrderQtyData](/fix/components/order-qty-data) | Component | Optional | The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is… |
-| 151 | [LeavesQty](/fix/fields/tags-0-199#tag-151) | Qty | Optional | Quantity open for further execution. If the OrdStatus (39) is Canceled, DoneForTheDay, Expired, Calculated, or Rejected (in which case the order is no longer… |
-| 14 | [CumQty](/fix/fields/tags-0-199#tag-14) | Qty | Optional | Total quantity (e.g. number of shares) filled. (Prior to FIX 4.2 this field was of type int) |
-| 59 | [TimeInForce](/fix/fields/tags-0-199#tag-59) | TimeInForceCodeSet | Optional | Specifies how long the order remains in effect. Absence of this field is interpreted as DAY. NOTE not applicable to CIV Orders. |
-| 126 | [ExpireTime](/fix/fields/tags-0-199#tag-126) | UTCTimestamp | Optional | The order expiration date/time in UTC |
+| 151 | [LeavesQty](/fix/fields/tags-0-199#tag-151-leavesqty) | Qty | Optional | Quantity open for further execution. If the OrdStatus (39) is Canceled, DoneForTheDay, Expired, Calculated, or Rejected (in which case the order is no longer… |
+| 14 | [CumQty](/fix/fields/tags-0-199#tag-14-cumqty) | Qty | Optional | Total quantity (e.g. number of shares) filled. (Prior to FIX 4.2 this field was of type int) |
+| 59 | [TimeInForce](/fix/fields/tags-0-199#tag-59-timeinforce) | TimeInForceCodeSet | Optional | Specifies how long the order remains in effect. Absence of this field is interpreted as DAY. NOTE not applicable to CIV Orders. |
+| 126 | [ExpireTime](/fix/fields/tags-0-199#tag-126-expiretime) | UTCTimestamp | Optional | The order expiration date/time in UTC |
 | 1624 | [MatchingInstructions](/fix/groups/matching-instructions) | Repeating group | Optional |  |
-| 2362 | [SelfMatchPreventionID](/fix/fields/tags-2200-2399#tag-2362) | String | Optional | May be used as an alternative to MatchingInstructions when the identifier does not appear in another field. |
-| 1629 | [ExposureDuration](/fix/fields/tags-1600-1799#tag-1629) | int | Optional | The (minimum or suggested) period of time a quoted price is to be tradable before it becomes indicative. (i.e. quoted price becomes off-the-wire). |
-| 1916 | [ExposureDurationUnit](/fix/fields/tags-1800-1999#tag-1916) | OrderDelayUnitCodeSet | Optional | Time unit in which the ExposureDuration(1629) is expressed. |
+| 2362 | [SelfMatchPreventionID](/fix/fields/tags-2200-2399#tag-2362-selfmatchpreventionid) | String | Optional | May be used as an alternative to MatchingInstructions when the identifier does not appear in another field. |
+| 1629 | [ExposureDuration](/fix/fields/tags-1600-1799#tag-1629-exposureduration) | int | Optional | The (minimum or suggested) period of time a quoted price is to be tradable before it becomes indicative. (i.e. quoted price becomes off-the-wire). |
+| 1916 | [ExposureDurationUnit](/fix/fields/tags-1800-1999#tag-1916-exposuredurationunit) | OrderDelayUnitCodeSet | Optional | Time unit in which the ExposureDuration(1629) is expressed. |
 | | [DisplayInstruction](/fix/components/display-instruction) | Component | Optional | The DisplayInstruction component block is used to convey instructions on how a reserved order is to be handled in terms of when and how much of the order… |
-| 528 | [OrderCapacity](/fix/fields/tags-400-599#tag-528) | OrderCapacityCodeSet | Optional | Designates the capacity of the firm placing the order. (as of FIX 4.3, this field replaced Rule80A (tag 47) --used in conjunction with OrderRestrictions (529)… |
-| 529 | [OrderRestrictions](/fix/fields/tags-400-599#tag-529) | OrderRestrictionsCodeSet | Optional | Restrictions associated with an order. If more than one restriction is applicable to an order, this field can contain multiple instructions separated by space. |
-| 775 | [BookingType](/fix/fields/tags-600-799#tag-775) | BookingTypeCodeSet | Optional | Method for booking out this order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an OTC derivative (e.g. CFD or… |
-| 1432 | [OrigCustOrderCapacity](/fix/fields/tags-1400-1599#tag-1432) | OrigCustOrderCapacityCodeSet | Optional | The customer capacity for this trade at the time of the order/execution. Primarily used by futures exchanges to indicate the CTICode (customer type indicator)… |
-| 1724 | [OrderOrigination](/fix/fields/tags-1600-1799#tag-1724) | OrderOriginationCodeSet | Optional | Identifies the origin of the order. |
+| 528 | [OrderCapacity](/fix/fields/tags-400-599#tag-528-ordercapacity) | OrderCapacityCodeSet | Optional | Designates the capacity of the firm placing the order. (as of FIX 4.3, this field replaced Rule80A (tag 47) --used in conjunction with OrderRestrictions (529)… |
+| 529 | [OrderRestrictions](/fix/fields/tags-400-599#tag-529-orderrestrictions) | OrderRestrictionsCodeSet | Optional | Restrictions associated with an order. If more than one restriction is applicable to an order, this field can contain multiple instructions separated by space. |
+| 775 | [BookingType](/fix/fields/tags-600-799#tag-775-bookingtype) | BookingTypeCodeSet | Optional | Method for booking out this order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an OTC derivative (e.g. CFD or… |
+| 1432 | [OrigCustOrderCapacity](/fix/fields/tags-1400-1599#tag-1432-origcustordercapacity) | OrigCustOrderCapacityCodeSet | Optional | The customer capacity for this trade at the time of the order/execution. Primarily used by futures exchanges to indicate the CTICode (customer type indicator)… |
+| 1724 | [OrderOrigination](/fix/fields/tags-1600-1799#tag-1724-orderorigination) | OrderOriginationCodeSet | Optional | Identifies the origin of the order. |
 | 2593 | [OrderAttributeGrp](/fix/groups/order-attribute-grp) | Repeating group | Optional | The OrderAttributeGrp component provides additional attributes about the order. Attributes included in this component are primarily "indicators" that may be… |
-| 2704 | [ExDestinationType](/fix/fields/tags-2600-2799#tag-2704) | ExDestinationTypeCodeSet | Optional | Identifies the type of execution destination for the order. |
-| 821 | [OrderInputDevice](/fix/fields/tags-800-999#tag-821) | String | Optional | Specific device number, terminal number or station where order was entered |
-| 1093 | [LotType](/fix/fields/tags-1000-1199#tag-1093) | LotTypeCodeSet | Optional | Defines the lot type assigned to the order. |
-| 483 | [TransBkdTime](/fix/fields/tags-400-599#tag-483) | UTCTimestamp | Optional | For CIV A date and time stamp to indicate the time a CIV order was booked by the fund manager. For derivatives a date and time stamp to indicate when this order… |
-| 586 | [OrigOrdModTime](/fix/fields/tags-400-599#tag-586) | UTCTimestamp | Optional | The most recent (or current) modification TransactTime (tag 60) reported on an Execution Report for the order. The OrigOrdModTime is provided as an optional… |
-| 2766 | [OrderPercentOfTotalVolume](/fix/fields/tags-2600-2799#tag-2766) | Percentage | Optional | For Percent-of-volume (POV) average pricing this is the target percentage this order quantity represents of the total trading volume of an instrument during the… |
+| 2704 | [ExDestinationType](/fix/fields/tags-2600-2799#tag-2704-exdestinationtype) | ExDestinationTypeCodeSet | Optional | Identifies the type of execution destination for the order. |
+| 821 | [OrderInputDevice](/fix/fields/tags-800-999#tag-821-orderinputdevice) | String | Optional | Specific device number, terminal number or station where order was entered |
+| 1093 | [LotType](/fix/fields/tags-1000-1199#tag-1093-lottype) | LotTypeCodeSet | Optional | Defines the lot type assigned to the order. |
+| 483 | [TransBkdTime](/fix/fields/tags-400-599#tag-483-transbkdtime) | UTCTimestamp | Optional | For CIV A date and time stamp to indicate the time a CIV order was booked by the fund manager. For derivatives a date and time stamp to indicate when this order… |
+| 586 | [OrigOrdModTime](/fix/fields/tags-400-599#tag-586-origordmodtime) | UTCTimestamp | Optional | The most recent (or current) modification TransactTime (tag 60) reported on an Execution Report for the order. The OrigOrdModTime is provided as an optional… |
+| 2766 | [OrderPercentOfTotalVolume](/fix/fields/tags-2600-2799#tag-2766-orderpercentoftotalvolume) | Percentage | Optional | For Percent-of-volume (POV) average pricing this is the target percentage this order quantity represents of the total trading volume of an instrument during the… |
 
 </StickyTable>
 

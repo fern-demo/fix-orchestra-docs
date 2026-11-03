@@ -3,7 +3,13 @@ title: "PartyRiskLimitsDefinitionRequestAck"
 subtitle: "PartyRiskLimitDefinitionRequestAck is used for accepting (with or without changes) or rejecting the definition of risk limits."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType CT</Badge> <Badge intent="note" minimal>Parties Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType CT · Parties Reference Data · Pre Trade · Added FIX.5.0SP2
+</llms-only>
 
 ## Message structure
 
@@ -12,14 +18,14 @@ subtitle: "PartyRiskLimitDefinitionRequestAck is used for accepting (with or wit
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 1666 | [RiskLimitRequestID](/fix/fields/tags-1600-1799#tag-1666) | String | **Required** | Unique identifier for the PartyRiskLimitsRequest |
-| 1761 | [RiskLimitRequestResult](/fix/fields/tags-1600-1799#tag-1761) | RiskLimitRequestResultCodeSet | Optional | Result of risk limit definition request. |
-| 1762 | [RiskLimitRequestStatus](/fix/fields/tags-1600-1799#tag-1762) | PartyDetailRequestStatusCodeSet | **Required** | Status of risk limit definition request. |
+| 1666 | [RiskLimitRequestID](/fix/fields/tags-1600-1799#tag-1666-risklimitrequestid) | String | **Required** | Unique identifier for the PartyRiskLimitsRequest |
+| 1761 | [RiskLimitRequestResult](/fix/fields/tags-1600-1799#tag-1761-risklimitrequestresult) | RiskLimitRequestResultCodeSet | Optional | Result of risk limit definition request. |
+| 1762 | [RiskLimitRequestStatus](/fix/fields/tags-1600-1799#tag-1762-risklimitrequeststatus) | PartyDetailRequestStatusCodeSet | **Required** | Status of risk limit definition request. |
 | 1657 | [RequestingPartyGrp](/fix/groups/requesting-party-grp) | Repeating group | Optional | Identifies the party making the request. |
 | 1677 | [PartyRiskLimitsAckGrp](/fix/groups/party-risk-limits-ack-grp) | Repeating group | Optional | This new block is a repeating group based on the existing block &lt;PartyRiskLimitsGrp&gt; with an additional field RiskLimitStatus(1763) to accept (with or without… |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

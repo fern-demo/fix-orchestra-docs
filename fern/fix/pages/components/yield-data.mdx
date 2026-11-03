@@ -3,7 +3,13 @@ title: "YieldData"
 subtitle: "The YieldData component block conveys yield information for a given Fixed Income security."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.4.3
+</llms-only>
 
 ## Members
 
@@ -11,12 +17,12 @@ subtitle: "The YieldData component block conveys yield information for a given F
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 235 | [YieldType](/fix/fields/tags-200-399#tag-235) | YieldTypeCodeSet | Optional | Type of yield. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
-| 236 | [Yield](/fix/fields/tags-200-399#tag-236) | Percentage | Optional | Yield percentage. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
-| 701 | [YieldCalcDate](/fix/fields/tags-600-799#tag-701) | LocalMktDate | Optional | Include as needed to clarify yield irregularities associated with date, e.g. when it falls on a non-business day. |
-| 696 | [YieldRedemptionDate](/fix/fields/tags-600-799#tag-696) | LocalMktDate | Optional | Date to which the yield has been calculated (i.e. maturity, par call or current call, pre-refunded date). |
-| 697 | [YieldRedemptionPrice](/fix/fields/tags-600-799#tag-697) | Price | Optional | Price to which the yield has been calculated. |
-| 698 | [YieldRedemptionPriceType](/fix/fields/tags-600-799#tag-698) | PriceTypeCodeSet | Optional | The price type of the YieldRedemptionPrice (697) See PriceType (423) for description and valid values. |
+| 235 | [YieldType](/fix/fields/tags-200-399#tag-235-yieldtype) | YieldTypeCodeSet | Optional | Type of yield. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
+| 236 | [Yield](/fix/fields/tags-200-399#tag-236-yield) | Percentage | Optional | Yield percentage. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
+| 701 | [YieldCalcDate](/fix/fields/tags-600-799#tag-701-yieldcalcdate) | LocalMktDate | Optional | Include as needed to clarify yield irregularities associated with date, e.g. when it falls on a non-business day. |
+| 696 | [YieldRedemptionDate](/fix/fields/tags-600-799#tag-696-yieldredemptiondate) | LocalMktDate | Optional | Date to which the yield has been calculated (i.e. maturity, par call or current call, pre-refunded date). |
+| 697 | [YieldRedemptionPrice](/fix/fields/tags-600-799#tag-697-yieldredemptionprice) | Price | Optional | Price to which the yield has been calculated. |
+| 698 | [YieldRedemptionPriceType](/fix/fields/tags-600-799#tag-698-yieldredemptionpricetype) | PriceTypeCodeSet | Optional | The price type of the YieldRedemptionPrice (697) See PriceType (423) for description and valid values. |
 
 </StickyTable>
 

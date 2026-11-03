@@ -3,7 +3,13 @@ title: "SettlInstructionsData"
 subtitle: "The SettlInstructionsData component block is used to convey key information regarding standing settlement and delivery instructions. It also provides a reference to standing settlement details regarding the source, delivery instructions,…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.4.4
+</llms-only>
 
 ## Members
 
@@ -11,10 +17,10 @@ subtitle: "The SettlInstructionsData component block is used to convey key infor
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 172 | [SettlDeliveryType](/fix/fields/tags-0-199#tag-172) | SettlDeliveryTypeCodeSet | Optional | Required if AllocSettlInstType = 1 or 2 |
-| 169 | [StandInstDbType](/fix/fields/tags-0-199#tag-169) | StandInstDbTypeCodeSet | Optional | Required if AllocSettlInstType = 3 (should not be populated otherwise) |
-| 170 | [StandInstDbName](/fix/fields/tags-0-199#tag-170) | String | Optional | Required if AllocSettlInstType = 3 (should not be populated otherwise) |
-| 171 | [StandInstDbID](/fix/fields/tags-0-199#tag-171) | String | Optional | Identifier used within the StandInstDbType Required if AllocSettlInstType = 3 (should not be populated otherwise) |
+| 172 | [SettlDeliveryType](/fix/fields/tags-0-199#tag-172-settldeliverytype) | SettlDeliveryTypeCodeSet | Optional | Required if AllocSettlInstType = 1 or 2 |
+| 169 | [StandInstDbType](/fix/fields/tags-0-199#tag-169-standinstdbtype) | StandInstDbTypeCodeSet | Optional | Required if AllocSettlInstType = 3 (should not be populated otherwise) |
+| 170 | [StandInstDbName](/fix/fields/tags-0-199#tag-170-standinstdbname) | String | Optional | Required if AllocSettlInstType = 3 (should not be populated otherwise) |
+| 171 | [StandInstDbID](/fix/fields/tags-0-199#tag-171-standinstdbid) | String | Optional | Identifier used within the StandInstDbType Required if AllocSettlInstType = 3 (should not be populated otherwise) |
 | 85 | [DlvyInstGrp](/fix/groups/dlvy-inst-grp) | Repeating group | Optional |  |
 
 </StickyTable>

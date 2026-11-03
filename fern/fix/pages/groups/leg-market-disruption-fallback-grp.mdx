@@ -3,9 +3,15 @@ title: "LegMarketDisruptionFallbackGrp"
 subtitle: "The LegMarketDisruptionFallbackGrp is a repeating subcomponent of the LegMarketDisruption component used to specify the market disruption fallback provisions."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41469</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegMarketDisruptionFallbacks (41469)](/fix/fields/tags-41400-41599#tag-41469).
+<llms-only>
+Repeating group · NumInGroup 41469 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegMarketDisruptionFallbacks (41469)](/fix/fields/tags-41400-41599#tag-41469-nolegmarketdisruptionfallbacks).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41470 | [LegMarketDisruptionFallbackType](/fix/fields/tags-41400-41599#tag-41470) | String | Optional | Required if NoLegMarketDisruptionFallbacks(41469) &gt; 0. The sequence of entries specifies the order in which the fallback provisions should be applied. |
-| 40990 | [LegMarketDisruptionFallbackValue](/fix/fields/tags-40800-40999#tag-40990) | String | Optional | Applicable value for LegMarketDisruptionFallbackType(41470). |
+| 41470 | [LegMarketDisruptionFallbackType](/fix/fields/tags-41400-41599#tag-41470-legmarketdisruptionfallbacktype) | String | Optional | Required if NoLegMarketDisruptionFallbacks(41469) &gt; 0. The sequence of entries specifies the order in which the fallback provisions should be applied. |
+| 40990 | [LegMarketDisruptionFallbackValue](/fix/fields/tags-40800-40999#tag-40990-legmarketdisruptionfallbackvalue) | String | Optional | Applicable value for LegMarketDisruptionFallbackType(41470). |
 
 </StickyTable>
 

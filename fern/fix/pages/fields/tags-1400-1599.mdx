@@ -3,9 +3,15 @@ title: "Tags 1400–1599"
 subtitle: "200 fields"
 ---
 
-## 1400 · EncryptedPasswordMethod [#tag-1400]
+## Tag 1400: EncryptedPasswordMethod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1400</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1400 · int · Added FIX.5.0
+</llms-only>
 
 Enumeration defining the encryption method used to encrypt password fields. At this time there are no encryption methods defined by FPL.
 
@@ -13,9 +19,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [Logon](/fix/messages/logon), [UserRequest](/fix/messages/user-request)
 
-## 1401 · EncryptedPasswordLen [#tag-1401]
+## Tag 1401: EncryptedPasswordLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1401</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1401 · Length · Added FIX.5.0
+</llms-only>
 
 Length of the EncryptedPassword(1402) field
 
@@ -23,9 +35,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [Logon](/fix/messages/logon), [UserRequest](/fix/messages/user-request)
 
-## 1402 · EncryptedPassword [#tag-1402]
+## Tag 1402: EncryptedPassword
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1402</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1402 · data · Added FIX.5.0
+</llms-only>
 
 Encrypted password - encrypted via the method specified in the field EncryptedPasswordMethod(1400)
 
@@ -33,9 +51,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [Logon](/fix/messages/logon), [UserRequest](/fix/messages/user-request)
 
-## 1403 · EncryptedNewPasswordLen [#tag-1403]
+## Tag 1403: EncryptedNewPasswordLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1403</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1403 · Length · Added FIX.5.0
+</llms-only>
 
 Length of the EncryptedNewPassword(1404) field
 
@@ -43,9 +67,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [Logon](/fix/messages/logon), [UserRequest](/fix/messages/user-request)
 
-## 1404 · EncryptedNewPassword [#tag-1404]
+## Tag 1404: EncryptedNewPassword
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1404</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1404 · data · Added FIX.5.0
+</llms-only>
 
 Encrypted new password - encrypted via the method specified in the field EncryptedPasswordMethod(1400)
 
@@ -53,19 +83,31 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [Logon](/fix/messages/logon), [UserRequest](/fix/messages/user-request)
 
-## 1405 · UnderlyingLegMaturityTime [#tag-1405]
+## Tag 1405: UnderlyingLegMaturityTime
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1405</Badge> <Badge intent="note" minimal>TZTimeOnly</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge> <Badge intent="warning">Deprecated FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1405 · TZTimeOnly · Added FIX.5.0 · Deprecated FIX.5.0SP2
+</llms-only>
 
 Time of security's maturity expressed in local time with offset to UTC specified
 
-Type: [TZTimeOnly](/fix/datatypes#tz-time-only)
+Type: [TZTimeOnly](/fix/datatypes#tztimeonly)
 
 Used in: [UnderlyingLegInstrument](/fix/components/underlying-leg-instrument)
 
-## 1406 · RefApplExtID [#tag-1406]
+## Tag 1406: RefApplExtID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1406</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1406 · int · Added FIX.5.0
+</llms-only>
 
 The extension pack number associated with an application message.
 
@@ -73,9 +115,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [BusinessMessageReject](/fix/messages/business-message-reject), [MsgTypeGrp](/fix/groups/msg-type-grp), [Reject](/fix/messages/reject)
 
-## 1407 · DefaultApplExtID [#tag-1407]
+## Tag 1407: DefaultApplExtID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1407</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1407 · int · Added FIX.5.0
+</llms-only>
 
 The extension pack number that is the default for a FIX session.
 
@@ -83,9 +131,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [Logon](/fix/messages/logon)
 
-## 1408 · DefaultCstmApplVerID [#tag-1408]
+## Tag 1408: DefaultCstmApplVerID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1408</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1408 · String · Added FIX.5.0
+</llms-only>
 
 The default custom application version ID that is the default for a session.
 
@@ -93,9 +147,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [Logon](/fix/messages/logon)
 
-## 1409 · SessionStatus [#tag-1409]
+## Tag 1409: SessionStatus
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1409</Badge> <Badge intent="note" minimal>SessionStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1409 · SessionStatusCodeSet · Added FIX.5.0
+</llms-only>
 
 Status of a FIX session
 
@@ -117,17 +177,29 @@ Code set **SessionStatusCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [Logon](/fix/messages/logon), [Logout](/fix/messages/logout)
 
-## 1410 · DefaultVerIndicator [#tag-1410]
+## Tag 1410: DefaultVerIndicator
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1410</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1410 · Boolean · Added FIX.5.0
+</llms-only>
 
 Type: [Boolean](/fix/datatypes#boolean)
 
 Used in: [MsgTypeGrp](/fix/groups/msg-type-grp)
 
-## 1411 · Nested4PartySubIDType [#tag-1411]
+## Tag 1411: Nested4PartySubIDType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1411</Badge> <Badge intent="note" minimal>PartySubIDTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1411 · PartySubIDTypeCodeSet · Added FIX.5.0
+</llms-only>
 
 Refer to definition of PartySubIDType(803)
 
@@ -225,9 +297,15 @@ Code set **PartySubIDTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [NstdPtys4SubGrp](/fix/groups/nstd-ptys4-sub-grp)
 
-## 1412 · Nested4PartySubID [#tag-1412]
+## Tag 1412: Nested4PartySubID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1412</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1412 · String · Added FIX.5.0
+</llms-only>
 
 Refer to definition of PartySubID(523)
 
@@ -235,29 +313,47 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [NstdPtys4SubGrp](/fix/groups/nstd-ptys4-sub-grp)
 
-## 1413 · NoNested4PartySubIDs [#tag-1413]
+## Tag 1413: NoNested4PartySubIDs
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1413</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1413 · NumInGroup · Added FIX.5.0
+</llms-only>
 
 Refer to definition of NoPartySubIDs(802)
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [NstdPtys4SubGrp](/fix/groups/nstd-ptys4-sub-grp)
 
-## 1414 · NoNested4PartyIDs [#tag-1414]
+## Tag 1414: NoNested4PartyIDs
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1414</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1414 · NumInGroup · Added FIX.5.0
+</llms-only>
 
 Refer to definition of NoPartyIDs(453)
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [NestedParties4](/fix/groups/nested-parties4)
 
-## 1415 · Nested4PartyID [#tag-1415]
+## Tag 1415: Nested4PartyID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1415</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1415 · String · Added FIX.5.0
+</llms-only>
 
 Refer to definition of PartyID(448)
 
@@ -265,9 +361,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [NestedParties4](/fix/groups/nested-parties4)
 
-## 1416 · Nested4PartyIDSource [#tag-1416]
+## Tag 1416: Nested4PartyIDSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1416</Badge> <Badge intent="note" minimal>PartyIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1416 · PartyIDSourceCodeSet · Added FIX.5.0
+</llms-only>
 
 Refer to definition of PartyIDSource(447)
 
@@ -308,9 +410,15 @@ Code set **PartyIDSourceCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [NestedParties4](/fix/groups/nested-parties4)
 
-## 1417 · Nested4PartyRole [#tag-1417]
+## Tag 1417: Nested4PartyRole
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1417</Badge> <Badge intent="note" minimal>PartyRoleCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1417 · PartyRoleCodeSet · Added FIX.5.0
+</llms-only>
 
 Refer to definition of PartyRole(452)
 
@@ -446,9 +554,15 @@ Code set **PartyRoleCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [NestedParties4](/fix/groups/nested-parties4)
 
-## 1418 · LegLastQty [#tag-1418]
+## Tag 1418: LegLastQty
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1418</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1418 · Qty · Added FIX.5.0
+</llms-only>
 
 Fill quantity for the leg instrument
 
@@ -456,9 +570,15 @@ Type: [Qty](/fix/datatypes#qty)
 
 Used in: [InstrmtLegExecGrp](/fix/groups/instrmt-leg-exec-grp), [TrdInstrmtLegExecGrp](/fix/groups/trd-instrmt-leg-exec-grp), [TrdInstrmtLegGrp](/fix/groups/trd-instrmt-leg-grp)
 
-## 1419 · UnderlyingExerciseStyle [#tag-1419]
+## Tag 1419: UnderlyingExerciseStyle
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1419</Badge> <Badge intent="note" minimal>ExerciseStyleCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1419 · ExerciseStyleCodeSet · Added FIX.5.0
+</llms-only>
 
 Type of exercise of a derivatives security
 
@@ -473,9 +593,15 @@ Code set **ExerciseStyleCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 1420 · LegExerciseStyle [#tag-1420]
+## Tag 1420: LegExerciseStyle
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1420</Badge> <Badge intent="note" minimal>ExerciseStyleCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1420 · ExerciseStyleCodeSet · Added FIX.5.0
+</llms-only>
 
 Type of exercise of a derivatives security
 
@@ -490,9 +616,15 @@ Code set **ExerciseStyleCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [InstrumentLeg](/fix/components/instrument-leg)
 
-## 1421 · LegPriceUnitOfMeasure [#tag-1421]
+## Tag 1421: LegPriceUnitOfMeasure
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1421</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1421 · UnitOfMeasureCodeSet · Added FIX.5.0
+</llms-only>
 
 Refer to definition for PriceUnitOfMeasure(1191)
 
@@ -583,9 +715,15 @@ Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [InstrumentLeg](/fix/components/instrument-leg)
 
-## 1422 · LegPriceUnitOfMeasureQty [#tag-1422]
+## Tag 1422: LegPriceUnitOfMeasureQty
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1422</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1422 · Qty · Added FIX.5.0
+</llms-only>
 
 Refer to definition of PriceUnitOfMeasureQty(1192)
 
@@ -593,9 +731,15 @@ Type: [Qty](/fix/datatypes#qty)
 
 Used in: [InstrumentLeg](/fix/components/instrument-leg)
 
-## 1423 · UnderlyingUnitOfMeasureQty [#tag-1423]
+## Tag 1423: UnderlyingUnitOfMeasureQty
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1423</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1423 · Qty · Added FIX.5.0
+</llms-only>
 
 Refer to definition of UnitOfMeasureQty(1147)
 
@@ -603,9 +747,15 @@ Type: [Qty](/fix/datatypes#qty)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 1424 · UnderlyingPriceUnitOfMeasure [#tag-1424]
+## Tag 1424: UnderlyingPriceUnitOfMeasure
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1424</Badge> <Badge intent="note" minimal>UnitOfMeasureCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1424 · UnitOfMeasureCodeSet · Added FIX.5.0
+</llms-only>
 
 Refer to definition for PriceUnitOfMeasure(1191)
 
@@ -696,9 +846,15 @@ Code set **UnitOfMeasureCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 1425 · UnderlyingPriceUnitOfMeasureQty [#tag-1425]
+## Tag 1425: UnderlyingPriceUnitOfMeasureQty
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1425</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1425 · Qty · Added FIX.5.0
+</llms-only>
 
 Refer to definition of PriceUnitOfMeasureQty(1192)
 
@@ -706,9 +862,15 @@ Type: [Qty](/fix/datatypes#qty)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 1426 · ApplReportType [#tag-1426]
+## Tag 1426: ApplReportType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1426</Badge> <Badge intent="note" minimal>ApplReportTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1426 · ApplReportTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Type of report
 
@@ -723,9 +885,15 @@ Code set **ApplReportTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ApplicationMessageReport](/fix/messages/application-message-report)
 
-## 1427 · SideExecID [#tag-1427]
+## Tag 1427: SideExecID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1427</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1427 · String · Added FIX.5.0SP1
+</llms-only>
 
 When reporting trades, used to reference the identifier of the execution (ExecID) being reported if different ExecIDs were assigned to each side of the trade.
 
@@ -733,9 +901,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
 
-## 1428 · OrderDelay [#tag-1428]
+## Tag 1428: OrderDelay
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1428</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1428 · int · Added FIX.5.0SP1
+</llms-only>
 
 Time lapsed from order entry until match, based on the unit of time specified in OrderDelayUnit. Default is seconds if OrderDelayUnit is not specified. Value = 0, indicates the aggressor (the initiating side of the trade).
 
@@ -743,9 +917,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
 
-## 1429 · OrderDelayUnit [#tag-1429]
+## Tag 1429: OrderDelayUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1429</Badge> <Badge intent="note" minimal>OrderDelayUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1429 · OrderDelayUnitCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Time unit in which the OrderDelay(1428) is expressed
 
@@ -768,9 +948,15 @@ Code set **OrderDelayUnitCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
 
-## 1430 · VenueType [#tag-1430]
+## Tag 1430: VenueType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1430</Badge> <Badge intent="note" minimal>VenueTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1430 · VenueTypeCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Identifies the type of venue where a trade was executed
 
@@ -794,9 +980,15 @@ Code set **VenueTypeCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [AllocationInstruction](/fix/messages/allocation-instruction), [AllocationReport](/fix/messages/allocation-report), [ExecutionReport](/fix/messages/execution-report), [TradeCaptureReport](/fix/messages/trade-capture-report), [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack), [TradeMatchReport](/fix/messages/trade-match-report)
 
-## 1431 · RefOrdIDReason [#tag-1431]
+## Tag 1431: RefOrdIDReason
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1431</Badge> <Badge intent="note" minimal>RefOrdIDReasonCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1431 · RefOrdIDReasonCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 The reason for updating the RefOrdID
 
@@ -810,9 +1002,15 @@ Code set **RefOrdIDReasonCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [TradeReportOrderDetail](/fix/components/trade-report-order-detail)
 
-## 1432 · OrigCustOrderCapacity [#tag-1432]
+## Tag 1432: OrigCustOrderCapacity
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1432</Badge> <Badge intent="note" minimal>OrigCustOrderCapacityCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1432 · OrigCustOrderCapacityCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 The customer capacity for this trade at the time of the order/execution. Primarily used by futures exchanges to indicate the CTICode (customer type indicator) as required by the US CFTC (Commodity Futures Trading Commission).
 
@@ -827,9 +1025,15 @@ Code set **OrigCustOrderCapacityCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [TradeReportOrderDetail](/fix/components/trade-report-order-detail)
 
-## 1433 · RefApplReqID [#tag-1433]
+## Tag 1433: RefApplReqID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1433</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1433 · String · Added FIX.5.0SP1
+</llms-only>
 
 Used to reference a previously submitted ApplReqID (1346) from within a subsequent ApplicationMessageRequest(MsgType=BW)
 
@@ -837,9 +1041,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [ApplIDRequestAckGrp](/fix/groups/appl-id-request-ack-grp), [ApplIDRequestGrp](/fix/groups/appl-id-request-grp)
 
-## 1434 · ModelType [#tag-1434]
+## Tag 1434: ModelType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1434</Badge> <Badge intent="note" minimal>ModelTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1434 · ModelTypeCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Type of pricing model used
 
@@ -852,9 +1062,15 @@ Code set **ModelTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PositionReport](/fix/messages/position-report)
 
-## 1435 · ContractMultiplierUnit [#tag-1435]
+## Tag 1435: ContractMultiplierUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1435</Badge> <Badge intent="note" minimal>ContractMultiplierUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1435 · ContractMultiplierUnitCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Indicates the type of multiplier being applied to the contract. Can be optionally used to further define what unit ContractMultiplier(tag 231) is expressed in.
 
@@ -868,9 +1084,15 @@ Code set **ContractMultiplierUnitCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1436 · LegContractMultiplierUnit [#tag-1436]
+## Tag 1436: LegContractMultiplierUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1436</Badge> <Badge intent="note" minimal>ContractMultiplierUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1436 · ContractMultiplierUnitCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 "Indicates the type of multiplier being applied to the contract. Can be optionally used to further define what unit LegContractMultiplier(tag 614) is expressed in.
 
@@ -884,9 +1106,15 @@ Code set **ContractMultiplierUnitCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [InstrumentLeg](/fix/components/instrument-leg)
 
-## 1437 · UnderlyingContractMultiplierUnit [#tag-1437]
+## Tag 1437: UnderlyingContractMultiplierUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1437</Badge> <Badge intent="note" minimal>ContractMultiplierUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1437 · ContractMultiplierUnitCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Indicates the type of multiplier being applied to the contract.
 
@@ -902,9 +1130,15 @@ Code set **ContractMultiplierUnitCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 1438 · DerivativeContractMultiplierUnit [#tag-1438]
+## Tag 1438: DerivativeContractMultiplierUnit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1438</Badge> <Badge intent="note" minimal>ContractMultiplierUnitCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1438 · ContractMultiplierUnitCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Indicates the type of multiplier being applied to the contract. Can be optionally used to further define what unit DerivativeContractMultiplier(tag 1266)is expressed in.
 
@@ -918,9 +1152,15 @@ Code set **ContractMultiplierUnitCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [DerivativeInstrument](/fix/components/derivative-instrument)
 
-## 1439 · FlowScheduleType [#tag-1439]
+## Tag 1439: FlowScheduleType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1439</Badge> <Badge intent="note" minimal>FlowScheduleTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1439 · FlowScheduleTypeCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 The industry standard flow schedule by which electricity or natural gas is traded. Schedules may exist by regions and on-peak and off-peak status, such as "Western Peak".
 
@@ -942,9 +1182,15 @@ Code set **FlowScheduleTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1440 · LegFlowScheduleType [#tag-1440]
+## Tag 1440: LegFlowScheduleType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1440</Badge> <Badge intent="note" minimal>FlowScheduleTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1440 · FlowScheduleTypeCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 The industry standard flow schedule by which electricity or natural gas is traded. Schedules exist by regions and on-peak and off-peak status, such as "Western Peak".
 
@@ -966,9 +1212,15 @@ Code set **FlowScheduleTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [InstrumentLeg](/fix/components/instrument-leg)
 
-## 1441 · UnderlyingFlowScheduleType [#tag-1441]
+## Tag 1441: UnderlyingFlowScheduleType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1441</Badge> <Badge intent="note" minimal>FlowScheduleTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1441 · FlowScheduleTypeCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 The industry standard flow schedule by which electricity or natural gas is traded. Schedules exist by regions and on-peak and off-peak status, such as "Western Peak".
 
@@ -990,9 +1242,15 @@ Code set **FlowScheduleTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 1442 · DerivativeFlowScheduleType [#tag-1442]
+## Tag 1442: DerivativeFlowScheduleType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1442</Badge> <Badge intent="note" minimal>FlowScheduleTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1442 · FlowScheduleTypeCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 The industry standard flow schedule by which electricity or natural gas is traded. Schedules exist by regions and on-peak and off-peak status, such as "Western Peak".
 
@@ -1014,9 +1272,15 @@ Code set **FlowScheduleTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [DerivativeInstrument](/fix/components/derivative-instrument)
 
-## 1443 · FillLiquidityInd [#tag-1443]
+## Tag 1443: FillLiquidityInd
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1443</Badge> <Badge intent="note" minimal>LastLiquidityIndCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1443 · LastLiquidityIndCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Indicator to identify whether this fill was a result of a liquidity provider providing or liquidity taker taking the liquidity. Applicable only for OrdStatus of Partial or Filled
 
@@ -1037,9 +1301,15 @@ Code set **LastLiquidityIndCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [FillsGrp](/fix/groups/fills-grp)
 
-## 1444 · SideLiquidityInd [#tag-1444]
+## Tag 1444: SideLiquidityInd
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1444</Badge> <Badge intent="note" minimal>LastLiquidityIndCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1444 · LastLiquidityIndCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Indicator to identify whether this fill was a result of a liquidity provider providing or liquidity taker taking the liquidity. Applicable only for OrdStatus of Partial or Filled.
 
@@ -1060,19 +1330,31 @@ Code set **LastLiquidityIndCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp)
 
-## 1445 · NoRateSources [#tag-1445]
+## Tag 1445: NoRateSources
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1445</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1445 · NumInGroup · Added FIX.5.0SP1
+</llms-only>
 
 Number of rate sources being specified.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [RateSource](/fix/groups/rate-source)
 
-## 1446 · RateSource [#tag-1446]
+## Tag 1446: RateSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1446</Badge> <Badge intent="note" minimal>RateSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1446 · RateSourceCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Identifies the source of rate information. For FX, the reference source to be used for the FX spot rate.
 
@@ -1088,9 +1370,15 @@ Code set **RateSourceCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [RateSource](/fix/groups/rate-source)
 
-## 1447 · RateSourceType [#tag-1447]
+## Tag 1447: RateSourceType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1447</Badge> <Badge intent="note" minimal>RateSourceTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1447 · RateSourceTypeCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Indicates whether the rate source specified is a primary or secondary source.
 
@@ -1103,9 +1391,15 @@ Code set **RateSourceTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [RateSource](/fix/groups/rate-source)
 
-## 1448 · ReferencePage [#tag-1448]
+## Tag 1448: ReferencePage
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1448</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1448 · String · Added FIX.5.0SP1
+</llms-only>
 
 Identifies the reference "page" from the rate source. For FX, the reference page to the spot rate to be used for the reference FX spot rate. When RateSource(1446) = 3 (ISDA Settlement Rate Option) this contains the value from the scheme that reflects the terms of the Annex A to the ISDA 1998 FX and Currency Option Definitions. See: http://www.fpml.org/coding-scheme/settlement-rate-option
 
@@ -1113,9 +1407,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [RateSource](/fix/groups/rate-source)
 
-## 1449 · RestructuringType [#tag-1449]
+## Tag 1449: RestructuringType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1449</Badge> <Badge intent="note" minimal>RestructuringTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1449 · RestructuringTypeCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 A category of CDS credit event in which the underlying bond experiences a restructuring. Used to define a CDS instrument.
 
@@ -1130,9 +1430,15 @@ Code set **RestructuringTypeCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1450 · Seniority [#tag-1450]
+## Tag 1450: Seniority
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1450</Badge> <Badge intent="note" minimal>SeniorityCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1450 · SeniorityCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Specifies which issue (underlying bond) will receive payment priority in the event of a default. Used to define a CDS instrument.
 
@@ -1151,9 +1457,15 @@ Code set **SeniorityCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1451 · NotionalPercentageOutstanding [#tag-1451]
+## Tag 1451: NotionalPercentageOutstanding
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1451</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1451 · Percentage · Added FIX.5.0SP1
+</llms-only>
 
 Indicates the notional percentage of the deal that is still outstanding based on the remaining components of the index. Used to calculate the true value of a CDS trade or position.
 
@@ -1161,9 +1473,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1452 · OriginalNotionalPercentageOutstanding [#tag-1452]
+## Tag 1452: OriginalNotionalPercentageOutstanding
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1452</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1452 · Percentage · Added FIX.5.0SP1
+</llms-only>
 
 Used to reflect the Original value prior to the application of a credit event. See NotionalPercentageOutstanding(1451).
 
@@ -1171,9 +1489,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1453 · UnderlyingRestructuringType [#tag-1453]
+## Tag 1453: UnderlyingRestructuringType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1453</Badge> <Badge intent="note" minimal>RestructuringTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1453 · RestructuringTypeCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 See RestructuringType(1449)
 
@@ -1188,9 +1512,15 @@ Code set **RestructuringTypeCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 1454 · UnderlyingSeniority [#tag-1454]
+## Tag 1454: UnderlyingSeniority
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1454</Badge> <Badge intent="note" minimal>SeniorityCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1454 · SeniorityCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 See Seniority(1450)
 
@@ -1207,9 +1537,15 @@ Code set **SeniorityCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 1455 · UnderlyingNotionalPercentageOutstanding [#tag-1455]
+## Tag 1455: UnderlyingNotionalPercentageOutstanding
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1455</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1455 · Percentage · Added FIX.5.0SP1
+</llms-only>
 
 See NotionalPercentageOutstanding(1451)
 
@@ -1217,9 +1553,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 1456 · UnderlyingOriginalNotionalPercentageOutstanding [#tag-1456]
+## Tag 1456: UnderlyingOriginalNotionalPercentageOutstanding
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1456</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1456 · Percentage · Added FIX.5.0SP1
+</llms-only>
 
 See OriginalNotionalPercentageOutstanding(1452)
 
@@ -1227,9 +1569,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 1457 · AttachmentPoint [#tag-1457]
+## Tag 1457: AttachmentPoint
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1457</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1457 · Percentage · Added FIX.5.0SP1
+</llms-only>
 
 Lower bound percentage of the loss that the tranche can endure.
 
@@ -1237,9 +1585,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1458 · DetachmentPoint [#tag-1458]
+## Tag 1458: DetachmentPoint
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1458</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1458 · Percentage · Added FIX.5.0SP1
+</llms-only>
 
 Upper bound percentage of the loss the tranche can endure.
 
@@ -1247,9 +1601,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1459 · UnderlyingAttachmentPoint [#tag-1459]
+## Tag 1459: UnderlyingAttachmentPoint
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1459</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1459 · Percentage · Added FIX.5.0SP1
+</llms-only>
 
 See AttachmentPoint(1457).
 
@@ -1257,9 +1617,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 1460 · UnderlyingDetachmentPoint [#tag-1460]
+## Tag 1460: UnderlyingDetachmentPoint
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1460</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1460 · Percentage · Added FIX.5.0SP1
+</llms-only>
 
 See DetachmentPoint(1458).
 
@@ -1267,19 +1633,31 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 1461 · NoTargetPartyIDs [#tag-1461]
+## Tag 1461: NoTargetPartyIDs
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1461</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1461 · NumInGroup · Added FIX.5.0SP1
+</llms-only>
 
 Identifies the number of target parties identified in a mass action.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [TargetParties](/fix/groups/target-parties)
 
-## 1462 · TargetPartyID [#tag-1462]
+## Tag 1462: TargetPartyID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1462</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1462 · String · Added FIX.5.0SP1
+</llms-only>
 
 PartyID value within an target party repeating group.
 
@@ -1287,9 +1665,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [TargetParties](/fix/groups/target-parties)
 
-## 1463 · TargetPartyIDSource [#tag-1463]
+## Tag 1463: TargetPartyIDSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1463</Badge> <Badge intent="note" minimal>PartyIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1463 · PartyIDSourceCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 PartyIDSource value within an target party repeating group. Same values as PartyIDSource (447)
 
@@ -1330,9 +1714,15 @@ Code set **PartyIDSourceCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [TargetParties](/fix/groups/target-parties)
 
-## 1464 · TargetPartyRole [#tag-1464]
+## Tag 1464: TargetPartyRole
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1464</Badge> <Badge intent="note" minimal>PartyRoleCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1464 · PartyRoleCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 PartyRole value within an target party repeating group. Same values as PartyRole (452)
 
@@ -1468,9 +1858,15 @@ Code set **PartyRoleCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [TargetParties](/fix/groups/target-parties)
 
-## 1465 · SecurityListID [#tag-1465]
+## Tag 1465: SecurityListID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1465</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1465 · String · Added FIX.5.0SP1
+</llms-only>
 
 Specifies an identifier for a Security List
 
@@ -1478,9 +1874,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [MarketDataStatisticsReport](/fix/messages/market-data-statistics-report), [MarketDataStatisticsRequest](/fix/messages/market-data-statistics-request), [SecurityList](/fix/messages/security-list), [SecurityListRequest](/fix/messages/security-list-request), [SecurityListUpdateReport](/fix/messages/security-list-update-report), [SecurityMassStatus](/fix/messages/security-mass-status), [SecurityMassStatusRequest](/fix/messages/security-mass-status-request)
 
-## 1466 · SecurityListRefID [#tag-1466]
+## Tag 1466: SecurityListRefID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1466</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1466 · String · Added FIX.5.0SP1
+</llms-only>
 
 Specifies a reference from one Security List to another. Used to support a hierarchy of Security Lists.
 
@@ -1488,9 +1890,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [SecurityList](/fix/messages/security-list), [SecurityListUpdateReport](/fix/messages/security-list-update-report)
 
-## 1467 · SecurityListDesc [#tag-1467]
+## Tag 1467: SecurityListDesc
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1467</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1467 · String · Added FIX.5.0SP1
+</llms-only>
 
 Specifies a description or name of a Security List.
 
@@ -1498,9 +1906,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [SecurityList](/fix/messages/security-list), [SecurityListUpdateReport](/fix/messages/security-list-update-report)
 
-## 1468 · EncodedSecurityListDescLen [#tag-1468]
+## Tag 1468: EncodedSecurityListDescLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1468</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1468 · Length · Added FIX.5.0SP1
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedSecurityListDesc (tbd) field.
 
@@ -1508,9 +1922,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [SecurityList](/fix/messages/security-list), [SecurityListUpdateReport](/fix/messages/security-list-update-report)
 
-## 1469 · EncodedSecurityListDesc [#tag-1469]
+## Tag 1469: EncodedSecurityListDesc
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1469</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1469 · data · Added FIX.5.0SP1
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the SecurityListDesc (1467) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the SecurityListDesc field.
 
@@ -1518,9 +1938,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [SecurityList](/fix/messages/security-list), [SecurityListUpdateReport](/fix/messages/security-list-update-report)
 
-## 1470 · SecurityListType [#tag-1470]
+## Tag 1470: SecurityListType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1470</Badge> <Badge intent="note" minimal>SecurityListTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1470 · SecurityListTypeCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Specifies a type of Security List.
 
@@ -1535,9 +1961,15 @@ Code set **SecurityListTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [SecurityList](/fix/messages/security-list), [SecurityListRequest](/fix/messages/security-list-request), [SecurityListUpdateReport](/fix/messages/security-list-update-report)
 
-## 1471 · SecurityListTypeSource [#tag-1471]
+## Tag 1471: SecurityListTypeSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1471</Badge> <Badge intent="note" minimal>SecurityListTypeSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1471 · SecurityListTypeSourceCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Specifies a specific source for a SecurityListType. Relevant when a certain type can be provided from various sources.
 
@@ -1551,9 +1983,15 @@ Code set **SecurityListTypeSourceCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [SecurityList](/fix/messages/security-list), [SecurityListRequest](/fix/messages/security-list-request), [SecurityListUpdateReport](/fix/messages/security-list-update-report)
 
-## 1472 · NewsID [#tag-1472]
+## Tag 1472: NewsID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1472</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1472 · String · Added FIX.5.0SP1
+</llms-only>
 
 Unique identifier for a News message
 
@@ -1561,9 +1999,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [News](/fix/messages/news)
 
-## 1473 · NewsCategory [#tag-1473]
+## Tag 1473: NewsCategory
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1473</Badge> <Badge intent="note" minimal>NewsCategoryCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1473 · NewsCategoryCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Category of news mesage.
 
@@ -1579,9 +2023,15 @@ Code set **NewsCategoryCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [News](/fix/messages/news)
 
-## 1474 · LanguageCode [#tag-1474]
+## Tag 1474: LanguageCode
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1474</Badge> <Badge intent="note" minimal>Language</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1474 · Language · Added FIX.5.0SP1
+</llms-only>
 
 The national language in which the news item is provided.
 
@@ -1589,19 +2039,31 @@ Type: [Language](/fix/datatypes#language)
 
 Used in: [News](/fix/messages/news)
 
-## 1475 · NoNewsRefIDs [#tag-1475]
+## Tag 1475: NoNewsRefIDs
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1475</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1475 · NumInGroup · Added FIX.5.0SP1
+</llms-only>
 
 Number of News reference items
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [NewsRefGrp](/fix/groups/news-ref-grp)
 
-## 1476 · NewsRefID [#tag-1476]
+## Tag 1476: NewsRefID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1476</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1476 · String · Added FIX.5.0SP1
+</llms-only>
 
 Reference to another News message identified by NewsID(1474).
 
@@ -1609,9 +2071,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [NewsRefGrp](/fix/groups/news-ref-grp)
 
-## 1477 · NewsRefType [#tag-1477]
+## Tag 1477: NewsRefType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1477</Badge> <Badge intent="note" minimal>NewsRefTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1477 · NewsRefTypeCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Type of reference to another News(35=B) message item.
 
@@ -1626,9 +2094,15 @@ Code set **NewsRefTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [NewsRefGrp](/fix/groups/news-ref-grp)
 
-## 1478 · StrikePriceDeterminationMethod [#tag-1478]
+## Tag 1478: StrikePriceDeterminationMethod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1478</Badge> <Badge intent="note" minimal>StrikePriceDeterminationMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1478 · StrikePriceDeterminationMethodCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Specifies how the strike price is determined at the point of option exercise. The strike may be fixed throughout the life of the option, set at expiration to the value of the underlying, set to the average value of the underlying , or set to the optimal value of the underlying.
 
@@ -1643,9 +2117,15 @@ Code set **StrikePriceDeterminationMethodCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1479 · StrikePriceBoundaryMethod [#tag-1479]
+## Tag 1479: StrikePriceBoundaryMethod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1479</Badge> <Badge intent="note" minimal>StrikePriceBoundaryMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1479 · StrikePriceBoundaryMethodCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Specifies the boundary condition to be used for the strike price relative to the underlying price at the point of option exercise.
 
@@ -1661,9 +2141,15 @@ Code set **StrikePriceBoundaryMethodCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1480 · StrikePriceBoundaryPrecision [#tag-1480]
+## Tag 1480: StrikePriceBoundaryPrecision
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1480</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1480 · Percentage · Added FIX.5.0SP1
+</llms-only>
 
 Used in combination with StrikePriceBoundaryMethod to specify the percentage of the strike price in relation to the underlying price. The percentage is generally 100 or greater for puts and 100 or less for calls.
 
@@ -1671,9 +2157,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1481 · UnderlyingPriceDeterminationMethod [#tag-1481]
+## Tag 1481: UnderlyingPriceDeterminationMethod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1481</Badge> <Badge intent="note" minimal>UnderlyingPriceDeterminationMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1481 · UnderlyingPriceDeterminationMethodCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Specifies how the underlying price is determined at the point of option exercise. The underlying price may be set to the current settlement price, set to a special reference, set to the optimal value of the underlying during the defined period ("Look-back") or set to the average value of the underlying during the defined period ("Asian option").
 
@@ -1688,9 +2180,15 @@ Code set **UnderlyingPriceDeterminationMethodCodeSet** ([int](/fix/datatypes#int
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1482 · OptPayoutType [#tag-1482]
+## Tag 1482: OptPayoutType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1482</Badge> <Badge intent="note" minimal>OptPayoutTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1482 · OptPayoutTypeCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Indicates the type of valuation method or payout trigger for an in-the-money option.
 
@@ -1710,19 +2208,31 @@ Code set **OptPayoutTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1483 · NoComplexEvents [#tag-1483]
+## Tag 1483: NoComplexEvents
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1483</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1483 · NumInGroup · Added FIX.5.0SP1
+</llms-only>
 
 Number of complex event occurrences.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ComplexEvents](/fix/groups/complex-events)
 
-## 1484 · ComplexEventType [#tag-1484]
+## Tag 1484: ComplexEventType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1484</Badge> <Badge intent="note" minimal>ComplexEventTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1484 · ComplexEventTypeCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Identifies the type of complex event.
 
@@ -1756,9 +2266,15 @@ Code set **ComplexEventTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ComplexEvents](/fix/groups/complex-events)
 
-## 1485 · ComplexOptPayoutAmount [#tag-1485]
+## Tag 1485: ComplexOptPayoutAmount
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1485</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1485 · Amt · Added FIX.5.0SP1
+</llms-only>
 
 Cash amount indicating the pay out associated with an event. For binary options this is a fixed amount.
 
@@ -1766,9 +2282,15 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [ComplexEvents](/fix/groups/complex-events)
 
-## 1486 · ComplexEventPrice [#tag-1486]
+## Tag 1486: ComplexEventPrice
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1486</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1486 · Price · Added FIX.5.0SP1
+</llms-only>
 
 Specifies the price at which the complex event takes effect. Impact of the event price is determined by the ComplexEventType(1484).
 
@@ -1776,9 +2298,15 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [ComplexEvents](/fix/groups/complex-events)
 
-## 1487 · ComplexEventPriceBoundaryMethod [#tag-1487]
+## Tag 1487: ComplexEventPriceBoundaryMethod
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1487</Badge> <Badge intent="note" minimal>ComplexEventPriceBoundaryMethodCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1487 · ComplexEventPriceBoundaryMethodCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Specifies the boundary condition to be used for the event price relative to the underlying price at the point the complex event outcome takes effect as determined by the ComplexEventPriceTimeType.
 
@@ -1794,9 +2322,15 @@ Code set **ComplexEventPriceBoundaryMethodCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ComplexEvents](/fix/groups/complex-events)
 
-## 1488 · ComplexEventPriceBoundaryPrecision [#tag-1488]
+## Tag 1488: ComplexEventPriceBoundaryPrecision
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1488</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1488 · Percentage · Added FIX.5.0SP1
+</llms-only>
 
 Used in combination with ComplexEventPriceBoundaryMethod to specify the percentage of the strike price in relation to the underlying price. The percentage is generally 100 or greater for puts and 100 or less for calls.
 
@@ -1804,9 +2338,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [ComplexEvents](/fix/groups/complex-events)
 
-## 1489 · ComplexEventPriceTimeType [#tag-1489]
+## Tag 1489: ComplexEventPriceTimeType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1489</Badge> <Badge intent="note" minimal>ComplexEventPriceTimeTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1489 · ComplexEventPriceTimeTypeCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Specifies when the complex event outcome takes effect. The outcome of a complex event is a payout or barrier action as specified by the ComplexEventType(1484).
 
@@ -1825,9 +2365,15 @@ Code set **ComplexEventPriceTimeTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ComplexEvents](/fix/groups/complex-events)
 
-## 1490 · ComplexEventCondition [#tag-1490]
+## Tag 1490: ComplexEventCondition
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1490</Badge> <Badge intent="note" minimal>ComplexEventConditionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1490 · ComplexEventConditionCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Specifies the condition between complex events when more than one event is specified. Multiple barrier events would use an "or" condition since only one can be effective at a given time. A set of digital range events would use an "and" condition since both conditions must be in effect for a payout to result.
 
@@ -1840,69 +2386,111 @@ Code set **ComplexEventConditionCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ComplexEvents](/fix/groups/complex-events)
 
-## 1491 · NoComplexEventDates [#tag-1491]
+## Tag 1491: NoComplexEventDates
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1491</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1491 · NumInGroup · Added FIX.5.0SP1
+</llms-only>
 
 Number of complex event date occurrences for a given complex event.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ComplexEventDates](/fix/groups/complex-event-dates)
 
-## 1492 · ComplexEventStartDate [#tag-1492]
+## Tag 1492: ComplexEventStartDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1492</Badge> <Badge intent="note" minimal>UTCDateOnly</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1492 · UTCDateOnly · Added FIX.5.0SP1
+</llms-only>
 
 Specifies the start date of the date range on which a complex event is effective. The start date will be set equal to the end date for single day events such as Bermuda options ComplexEventStartDate must always be less than or equal to ComplexEventEndDate.
 
-Type: [UTCDateOnly](/fix/datatypes#utc-date-only)
+Type: [UTCDateOnly](/fix/datatypes#utcdateonly)
 
 Used in: [ComplexEventDates](/fix/groups/complex-event-dates)
 
-## 1493 · ComplexEventEndDate [#tag-1493]
+## Tag 1493: ComplexEventEndDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1493</Badge> <Badge intent="note" minimal>UTCDateOnly</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1493 · UTCDateOnly · Added FIX.5.0SP1
+</llms-only>
 
 Specifies the end date of the date range on which a complex event is effective. The start date will be set equal to the end date for single day events such as Bermuda options ComplexEventEndDate must always be greater than or equal to ComplexEventStartDate.
 
-Type: [UTCDateOnly](/fix/datatypes#utc-date-only)
+Type: [UTCDateOnly](/fix/datatypes#utcdateonly)
 
 Used in: [ComplexEventDates](/fix/groups/complex-event-dates)
 
-## 1494 · NoComplexEventTimes [#tag-1494]
+## Tag 1494: NoComplexEventTimes
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1494</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1494 · NumInGroup · Added FIX.5.0SP1
+</llms-only>
 
 Number of complex event time occurrences for a given complex event date The default in case of an absence of time fields is 00:00:00-23:59:59.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [ComplexEventTimes](/fix/groups/complex-event-times)
 
-## 1495 · ComplexEventStartTime [#tag-1495]
+## Tag 1495: ComplexEventStartTime
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1495</Badge> <Badge intent="note" minimal>UTCTimeOnly</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1495 · UTCTimeOnly · Added FIX.5.0SP1
+</llms-only>
 
 Specifies the start time of the time range on which a complex event date is effective. ComplexEventStartTime must always be less than or equal to ComplexEventEndTime.
 
-Type: [UTCTimeOnly](/fix/datatypes#utc-time-only)
+Type: [UTCTimeOnly](/fix/datatypes#utctimeonly)
 
 Used in: [ComplexEventTimes](/fix/groups/complex-event-times)
 
-## 1496 · ComplexEventEndTime [#tag-1496]
+## Tag 1496: ComplexEventEndTime
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1496</Badge> <Badge intent="note" minimal>UTCTimeOnly</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1496 · UTCTimeOnly · Added FIX.5.0SP1
+</llms-only>
 
 Specifies the end time of the time range on which a complex event date is effective. ComplexEventEndTime must always be greater than or equal to ComplexEventStartTime.
 
-Type: [UTCTimeOnly](/fix/datatypes#utc-time-only)
+Type: [UTCTimeOnly](/fix/datatypes#utctimeonly)
 
 Used in: [ComplexEventTimes](/fix/groups/complex-event-times)
 
-## 1497 · StreamAsgnReqID [#tag-1497]
+## Tag 1497: StreamAsgnReqID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1497</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1497 · String · Added FIX.5.0SP1
+</llms-only>
 
 Unique identifier for the stream assignment request provided by the requester.
 
@@ -1910,9 +2498,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [StreamAssignmentReport](/fix/messages/stream-assignment-report), [StreamAssignmentRequest](/fix/messages/stream-assignment-request)
 
-## 1498 · StreamAsgnReqType [#tag-1498]
+## Tag 1498: StreamAsgnReqType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1498</Badge> <Badge intent="note" minimal>StreamAsgnReqTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1498 · StreamAsgnReqTypeCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Type of stream assignment request.
 
@@ -1925,19 +2519,31 @@ Code set **StreamAsgnReqTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [StreamAssignmentReport](/fix/messages/stream-assignment-report), [StreamAssignmentRequest](/fix/messages/stream-assignment-request)
 
-## 1499 · NoAsgnReqs [#tag-1499]
+## Tag 1499: NoAsgnReqs
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1499</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1499 · NumInGroup · Added FIX.5.0SP1
+</llms-only>
 
 Number of assignment requests.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [StrmAsgnReqGrp](/fix/groups/strm-asgn-req-grp), [StrmAsgnRptGrp](/fix/groups/strm-asgn-rpt-grp)
 
-## 1500 · MDStreamID [#tag-1500]
+## Tag 1500: MDStreamID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1500</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1500 · String · Added FIX.5.0SP1
+</llms-only>
 
 The identifier or name of the price stream.
 
@@ -1945,9 +2551,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrmtMDReqGrp](/fix/groups/instrmt-md-req-grp), [MDIncGrp](/fix/groups/md-inc-grp), [MarketDataSnapshotFullRefresh](/fix/messages/market-data-snapshot-full-refresh), [StrmAsgnReqInstrmtGrp](/fix/groups/strm-asgn-req-instrmt-grp), [StrmAsgnRptInstrmtGrp](/fix/groups/strm-asgn-rpt-instrmt-grp)
 
-## 1501 · StreamAsgnRptID [#tag-1501]
+## Tag 1501: StreamAsgnRptID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1501</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1501 · String · Added FIX.5.0SP1
+</llms-only>
 
 Unique identifier of the stream assignment report provided by the respondent.
 
@@ -1955,9 +2567,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [StreamAssignmentReport](/fix/messages/stream-assignment-report), [StreamAssignmentReportACK](/fix/messages/stream-assignment-report-ack)
 
-## 1502 · StreamAsgnRejReason [#tag-1502]
+## Tag 1502: StreamAsgnRejReason
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1502</Badge> <Badge intent="note" minimal>StreamAsgnRejReasonCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1502 · StreamAsgnRejReasonCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Reason code for stream assignment request reject.
 
@@ -1973,9 +2591,15 @@ Code set **StreamAsgnRejReasonCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [StreamAssignmentReportACK](/fix/messages/stream-assignment-report-ack), [StrmAsgnRptInstrmtGrp](/fix/groups/strm-asgn-rpt-instrmt-grp)
 
-## 1503 · StreamAsgnAckType [#tag-1503]
+## Tag 1503: StreamAsgnAckType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1503</Badge> <Badge intent="note" minimal>StreamAsgnAckTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1503 · StreamAsgnAckTypeCodeSet · Added FIX.5.0SP1
+</llms-only>
 
 Type of acknowledgement.
 
@@ -1988,19 +2612,31 @@ Code set **StreamAsgnAckTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [StreamAssignmentReportACK](/fix/messages/stream-assignment-report-ack)
 
-## 1504 · RelSymTransactTime [#tag-1504]
+## Tag 1504: RelSymTransactTime
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1504</Badge> <Badge intent="note" minimal>UTCTimestamp</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1504 · UTCTimestamp · Added FIX.5.0SP1
+</llms-only>
 
 See TransactTime(60)
 
-Type: [UTCTimestamp](/fix/datatypes#utc-timestamp)
+Type: [UTCTimestamp](/fix/datatypes#utctimestamp)
 
 Used in: [RelSymDerivSecGrp](/fix/groups/rel-sym-deriv-sec-grp), [RelSymDerivSecUpdGrp](/fix/groups/rel-sym-deriv-sec-upd-grp), [SecListGrp](/fix/groups/sec-list-grp), [SecLstUpdRelSymGrp](/fix/groups/sec-lst-upd-rel-sym-grp)
 
-## 1505 · PartyDetailsListRequestID [#tag-1505]
+## Tag 1505: PartyDetailsListRequestID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1505</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1505 · String · Added FIX.5.0SP2
+</llms-only>
 
 Unique identifier for PartyDetailsListRequest.
 
@@ -2008,9 +2644,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PartyDetailsDefinitionRequest](/fix/messages/party-details-definition-request), [PartyDetailsDefinitionRequestAck](/fix/messages/party-details-definition-request-ack), [PartyDetailsListReport](/fix/messages/party-details-list-report), [PartyDetailsListRequest](/fix/messages/party-details-list-request), [PartyDetailsListUpdateReport](/fix/messages/party-details-list-update-report)
 
-## 1506 · SideTradeID [#tag-1506]
+## Tag 1506: SideTradeID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1506</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1506 · String · Added FIX.5.0SP2
+</llms-only>
 
 Used to represent the trade ID for each side of the trade assigned by an intermediary.
 
@@ -2018,9 +2660,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
 
-## 1507 · SideOrigTradeID [#tag-1507]
+## Tag 1507: SideOrigTradeID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1507</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1507 · String · Added FIX.5.0SP2
+</llms-only>
 
 Used to capture the original trade id for each side of a trade undergoing novation to a standardized model.
 
@@ -2028,19 +2676,31 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [TrdCapRptAckSideGrp](/fix/groups/trd-cap-rpt-ack-side-grp), [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp)
 
-## 1508 · NoRequestedPartyRoles [#tag-1508]
+## Tag 1508: NoRequestedPartyRoles
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1508</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1508 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of requested party roles.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [RequestedPartyRoleGrp](/fix/groups/requested-party-role-grp)
 
-## 1509 · RequestedPartyRole [#tag-1509]
+## Tag 1509: RequestedPartyRole
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1509</Badge> <Badge intent="note" minimal>PartyRoleCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1509 · PartyRoleCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the type or role of party that has been requested.
 
@@ -2176,9 +2836,15 @@ Code set **PartyRoleCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [RequestedPartyRoleGrp](/fix/groups/requested-party-role-grp)
 
-## 1510 · PartyDetailsListReportID [#tag-1510]
+## Tag 1510: PartyDetailsListReportID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1510</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1510 · String · Added FIX.5.0SP2
+</llms-only>
 
 Identifier for the PartyDetailsListReport and the PartyDetailsListUpdateReport.
 
@@ -2186,9 +2852,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PartyDetailsListReport](/fix/messages/party-details-list-report), [PartyDetailsListUpdateReport](/fix/messages/party-details-list-update-report)
 
-## 1511 · RequestResult [#tag-1511]
+## Tag 1511: RequestResult
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1511</Badge> <Badge intent="note" minimal>RequestResultCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1511 · RequestResultCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Result of a request as identified by the appropriate request ID field
 
@@ -2206,9 +2878,15 @@ Code set **RequestResultCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PartyDetailsListReport](/fix/messages/party-details-list-report), [PartyEntitlementsReport](/fix/messages/party-entitlements-report), [PartyRiskLimitsReport](/fix/messages/party-risk-limits-report)
 
-## 1512 · TotNoParties [#tag-1512]
+## Tag 1512: TotNoParties
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1512</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1512 · int · Added FIX.5.0SP2
+</llms-only>
 
 Total number of PartyListGrp returned.
 
@@ -2216,9 +2894,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PartyDetailsListReport](/fix/messages/party-details-list-report), [PartyDetailsListUpdateReport](/fix/messages/party-details-list-update-report), [PartyEntitlementsReport](/fix/messages/party-entitlements-report), [PartyEntitlementsUpdateReport](/fix/messages/party-entitlements-update-report), [PartyRiskLimitsReport](/fix/messages/party-risk-limits-report), [PartyRiskLimitsUpdateReport](/fix/messages/party-risk-limits-update-report)
 
-## 1513 · DocumentationText [#tag-1513]
+## Tag 1513: DocumentationText
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1513</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1513 · String · Added FIX.5.0SP2
+</llms-only>
 
 A sentence or phrase pertenant to the trade, not a reference to an external document. E.g. "To be registered with the U.S. Environmental Protection Agency, Acid Rain Division, SO2 Allowance Tracking System"
 
@@ -2226,19 +2910,31 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [FinancingDetails](/fix/components/financing-details)
 
-## 1514 · NoPartyRelationships [#tag-1514]
+## Tag 1514: NoPartyRelationships
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1514</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1514 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of party relationships.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PartyRelationshipGrp](/fix/groups/party-relationship-grp)
 
-## 1515 · PartyRelationship [#tag-1515]
+## Tag 1515: PartyRelationship
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1515</Badge> <Badge intent="note" minimal>PartyRelationshipCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1515 · PartyRelationshipCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Used to specify the type of the party relationship.
 
@@ -2288,19 +2984,31 @@ Code set **PartyRelationshipCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PartyRelationshipGrp](/fix/groups/party-relationship-grp)
 
-## 1516 · NoPartyDetailAltID [#tag-1516]
+## Tag 1516: NoPartyDetailAltID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1516</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1516 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of party alternative identifiers.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PartyDetailAltIDGrp](/fix/groups/party-detail-alt-id-grp)
 
-## 1517 · PartyDetailAltID [#tag-1517]
+## Tag 1517: PartyDetailAltID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1517</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1517 · String · Added FIX.5.0SP2
+</llms-only>
 
 An alternate party identifier for the party specified in PartyDetailID(1691)
 
@@ -2308,9 +3016,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PartyDetailAltIDGrp](/fix/groups/party-detail-alt-id-grp)
 
-## 1518 · PartyDetailAltIDSource [#tag-1518]
+## Tag 1518: PartyDetailAltIDSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1518</Badge> <Badge intent="note" minimal>PartyIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1518 · PartyIDSourceCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the source of the PartyDetailAltID(1517) value.
 
@@ -2351,19 +3065,31 @@ Code set **PartyIDSourceCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [PartyDetailAltIDGrp](/fix/groups/party-detail-alt-id-grp)
 
-## 1519 · NoPartyDetailAltSubIDs [#tag-1519]
+## Tag 1519: NoPartyDetailAltSubIDs
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1519</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1519 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of party detail alternate sub-identifiers.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [PartyDetailAltSubGrp](/fix/groups/party-detail-alt-sub-grp)
 
-## 1520 · PartyDetailAltSubID [#tag-1520]
+## Tag 1520: PartyDetailAltSubID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1520</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1520 · String · Added FIX.5.0SP2
+</llms-only>
 
 Sub-identifier for the party specified in PartyDetailAltID(1517).
 
@@ -2371,9 +3097,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PartyDetailAltSubGrp](/fix/groups/party-detail-alt-sub-grp)
 
-## 1521 · PartyDetailAltSubIDType [#tag-1521]
+## Tag 1521: PartyDetailAltSubIDType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1521</Badge> <Badge intent="note" minimal>PartySubIDTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1521 · PartySubIDTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Type of PartyDetailAltSubID(1520) value.
 
@@ -2471,19 +3203,31 @@ Code set **PartySubIDTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PartyDetailAltSubGrp](/fix/groups/party-detail-alt-sub-grp)
 
-## 1522 · DifferentialPrice [#tag-1522]
+## Tag 1522: DifferentialPrice
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1522</Badge> <Badge intent="note" minimal>PriceOffset</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1522 · PriceOffset · Added FIX.5.0SP2
+</llms-only>
 
 Used to specify the differential price when reporting the individual leg of a spread trade. Both leg price and differential price may be provided on such a report. Note that MultiLegReportingType(442) will be set to 2 (Individual leg of a multi-leg security) in this case. Also used in pricing Trade at Settlement (TAS) and Trade At Marker (TAM) contracts for which the value is the negotiated currency offset either at settlement (TAS) or at time specified in the product definition (TAM). The final contract price is specified in LastPx(31).
 
-Type: [PriceOffset](/fix/datatypes#price-offset)
+Type: [PriceOffset](/fix/datatypes#priceoffset)
 
 Used in: [TradeCaptureReport](/fix/messages/trade-capture-report)
 
-## 1523 · TrdAckStatus [#tag-1523]
+## Tag 1523: TrdAckStatus
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1523</Badge> <Badge intent="note" minimal>TrdAckStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1523 · TrdAckStatusCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Used to indicate the status of the trade submission (not the trade report)
 
@@ -2497,9 +3241,15 @@ Code set **TrdAckStatusCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [TradeCaptureReportAck](/fix/messages/trade-capture-report-ack)
 
-## 1524 · PriceQuoteCurrency [#tag-1524]
+## Tag 1524: PriceQuoteCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1524</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1524 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 Default currency in which the price is quoted. Defined at the instrument level. Used in place of Currency (tag 15) to express the currency of a product when the former is implemented as the FX dealt currency.
 
@@ -2507,9 +3257,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1525 · EncodedDocumentationTextLen [#tag-1525]
+## Tag 1525: EncodedDocumentationTextLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1525</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1525 · Length · Added FIX.5.0SP2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedDocumentationText(1527) field.
 
@@ -2517,9 +3273,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [FinancingDetails](/fix/components/financing-details)
 
-## 1526 · UnderlyingPriceQuoteCurrency [#tag-1526]
+## Tag 1526: UnderlyingPriceQuoteCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1526</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1526 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 Default currency in which the price is quoted. Defined at the instrument level. Used in place of Currency (tag 15) to express the currency of a product when the former is implemented as the FX dealt currency.
 
@@ -2527,9 +3289,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 1527 · EncodedDocumentationText [#tag-1527]
+## Tag 1527: EncodedDocumentationText
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1527</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1527 · data · Added FIX.5.0SP2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the DocumentationText(1513) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the DocumentationText(1513) field.
 
@@ -2537,9 +3305,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [FinancingDetails](/fix/components/financing-details)
 
-## 1528 · LegPriceQuoteCurrency [#tag-1528]
+## Tag 1528: LegPriceQuoteCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1528</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1528 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 Default currency in which the price is quoted. Defined at the instrument level. Used in place of Currency (tag 15) to express the currency of a product when the former is implemented as the FX dealt currency.
 
@@ -2547,19 +3321,31 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [InstrumentLeg](/fix/components/instrument-leg)
 
-## 1529 · NoRiskLimitTypes [#tag-1529]
+## Tag 1529: NoRiskLimitTypes
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1529</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1529 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of risk limits with associated warning levels.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [RiskLimitTypesGrp](/fix/groups/risk-limit-types-grp)
 
-## 1530 · RiskLimitType [#tag-1530]
+## Tag 1530: RiskLimitType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1530</Badge> <Badge intent="note" minimal>RiskLimitTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1530 · RiskLimitTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Used to specify the type of risk limit amount or position limit quantity or margin requirement amounts.
 
@@ -2588,9 +3374,15 @@ Code set **RiskLimitTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [RequestedRiskLimitTypesGrp](/fix/groups/requested-risk-limit-types-grp), [RiskLimitTypesGrp](/fix/groups/risk-limit-types-grp)
 
-## 1531 · RiskLimitAmount [#tag-1531]
+## Tag 1531: RiskLimitAmount
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1531</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1531 · Amt · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the risk limit amount.
 
@@ -2598,9 +3390,15 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [RiskLimitTypesGrp](/fix/groups/risk-limit-types-grp)
 
-## 1532 · RiskLimitCurrency [#tag-1532]
+## Tag 1532: RiskLimitCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1532</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1532 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 Used to specify the currency of the risk limit amount.
 
@@ -2608,9 +3406,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [RiskLimitTypesGrp](/fix/groups/risk-limit-types-grp)
 
-## 1533 · RiskLimitPlatform [#tag-1533]
+## Tag 1533: RiskLimitPlatform
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1533</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1533 · String · Added FIX.5.0SP2
+</llms-only>
 
 The area to which risk limit is applicable. This can be a trading platform or an offering.
 
@@ -2618,19 +3422,31 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PartyRiskLimitsRequest](/fix/messages/party-risk-limits-request), [RiskLimitTypesGrp](/fix/groups/risk-limit-types-grp)
 
-## 1534 · NoRiskInstrumentScopes [#tag-1534]
+## Tag 1534: NoRiskInstrumentScopes
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1534</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1534 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of risk instrument scopes.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [RiskInstrumentScopeGrp](/fix/groups/risk-instrument-scope-grp)
 
-## 1535 · InstrumentScopeOperator [#tag-1535]
+## Tag 1535: InstrumentScopeOperator
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1535</Badge> <Badge intent="note" minimal>InstrumentScopeOperatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1535 · InstrumentScopeOperatorCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Operator to perform on the instrument(s) specified
 
@@ -2643,9 +3459,15 @@ Code set **InstrumentScopeOperatorCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [InstrumentScopeGrp](/fix/groups/instrument-scope-grp), [RiskInstrumentScopeGrp](/fix/groups/risk-instrument-scope-grp)
 
-## 1536 · InstrumentScopeSymbol [#tag-1536]
+## Tag 1536: InstrumentScopeSymbol
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1536</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1536 · String · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified symbol. See Symbol(55) field for description.
 
@@ -2653,9 +3475,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1537 · InstrumentScopeSymbolSfx [#tag-1537]
+## Tag 1537: InstrumentScopeSymbolSfx
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1537</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1537 · String · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified symbol suffix. See SymbolSfx(65) field for description.
 
@@ -2663,9 +3491,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1538 · InstrumentScopeSecurityID [#tag-1538]
+## Tag 1538: InstrumentScopeSecurityID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1538</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1538 · String · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified security identifier. See SecurityID(48) field for description.
 
@@ -2673,9 +3507,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1539 · InstrumentScopeSecurityIDSource [#tag-1539]
+## Tag 1539: InstrumentScopeSecurityIDSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1539</Badge> <Badge intent="note" minimal>SecurityIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1539 · SecurityIDSourceCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified security identifier source. See SecurityIDSource(22) field for description.
 
@@ -2718,19 +3558,31 @@ Code set **SecurityIDSourceCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1540 · NoInstrumentScopeSecurityAltID [#tag-1540]
+## Tag 1540: NoInstrumentScopeSecurityAltID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1540</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1540 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of alternate security identifier for the specified InstrumentScopeSecurityID(1538).
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [InstrumentScopeSecurityAltIDGrp](/fix/groups/instrument-scope-security-alt-id-grp)
 
-## 1541 · InstrumentScopeSecurityAltID [#tag-1541]
+## Tag 1541: InstrumentScopeSecurityAltID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1541</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1541 · String · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified security alternate identifier. See SecurityAltID(455) field for description.
 
@@ -2738,9 +3590,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentScopeSecurityAltIDGrp](/fix/groups/instrument-scope-security-alt-id-grp)
 
-## 1542 · InstrumentScopeSecurityAltIDSource [#tag-1542]
+## Tag 1542: InstrumentScopeSecurityAltIDSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1542</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1542 · String · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified security alternate identifier source. See SecurityAltIDSource(456) field for description.
 
@@ -2748,9 +3606,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentScopeSecurityAltIDGrp](/fix/groups/instrument-scope-security-alt-id-grp)
 
-## 1543 · InstrumentScopeProduct [#tag-1543]
+## Tag 1543: InstrumentScopeProduct
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1543</Badge> <Badge intent="note" minimal>ProductCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1543 · ProductCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified instrument product category. See Product (460) field for description.
 
@@ -2774,9 +3638,15 @@ Code set **ProductCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1544 · InstrumentScopeProductComplex [#tag-1544]
+## Tag 1544: InstrumentScopeProductComplex
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1544</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1544 · String · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified product complex. See ProductComplex(1227) field for description.
 
@@ -2784,9 +3654,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1545 · InstrumentScopeSecurityGroup [#tag-1545]
+## Tag 1545: InstrumentScopeSecurityGroup
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1545</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1545 · String · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified security group. See SecurityGroup(1151) field for description.
 
@@ -2794,9 +3670,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1546 · InstrumentScopeCFICode [#tag-1546]
+## Tag 1546: InstrumentScopeCFICode
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1546</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1546 · String · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified CFICode. See CFICode(461) field for description.
 
@@ -2804,9 +3686,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1547 · InstrumentScopeSecurityType [#tag-1547]
+## Tag 1547: InstrumentScopeSecurityType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1547</Badge> <Badge intent="note" minimal>SecurityTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1547 · SecurityTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified security type. See SecurityType(167) field for description).
 
@@ -2971,9 +3859,15 @@ Code set **SecurityTypeCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1548 · InstrumentScopeSecuritySubType [#tag-1548]
+## Tag 1548: InstrumentScopeSecuritySubType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1548</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1548 · String · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified security sub-type. See SecuritySubType(762) field for description.
 
@@ -2981,29 +3875,47 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1549 · InstrumentScopeMaturityMonthYear [#tag-1549]
+## Tag 1549: InstrumentScopeMaturityMonthYear
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1549</Badge> <Badge intent="note" minimal>MonthYear</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1549 · MonthYear · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified maturity month and year. See MaturityMonthYear(200) field for description.
 
-Type: [MonthYear](/fix/datatypes#month-year)
+Type: [MonthYear](/fix/datatypes#monthyear)
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1550 · InstrumentScopeMaturityTime [#tag-1550]
+## Tag 1550: InstrumentScopeMaturityTime
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1550</Badge> <Badge intent="note" minimal>TZTimeOnly</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1550 · TZTimeOnly · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified maturity time. See MaturityTime(1079) field for description.
 
-Type: [TZTimeOnly](/fix/datatypes#tz-time-only)
+Type: [TZTimeOnly](/fix/datatypes#tztimeonly)
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1551 · InstrumentScopeRestructuringType [#tag-1551]
+## Tag 1551: InstrumentScopeRestructuringType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1551</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1551 · String · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified restructuring type. See RestructuringType(1449) field for description.
 
@@ -3011,9 +3923,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1552 · InstrumentScopeSeniority [#tag-1552]
+## Tag 1552: InstrumentScopeSeniority
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1552</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1552 · String · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified seniority type. See Seniority(1450) field for description.
 
@@ -3021,9 +3939,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1553 · InstrumentScopePutOrCall [#tag-1553]
+## Tag 1553: InstrumentScopePutOrCall
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1553</Badge> <Badge intent="note" minimal>PutOrCallCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1553 · PutOrCallCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to puts or calls. See PutOrCall(201) field for description.
 
@@ -3038,9 +3962,15 @@ Code set **PutOrCallCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1554 · InstrumentScopeFlexibleIndicator [#tag-1554]
+## Tag 1554: InstrumentScopeFlexibleIndicator
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1554</Badge> <Badge intent="note" minimal>Boolean</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1554 · Boolean · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to securities that can be defined using flexible terms or not. See FlexibleIndicator(1244) field for description.
 
@@ -3048,9 +3978,15 @@ Type: [Boolean](/fix/datatypes#boolean)
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1555 · InstrumentScopeCouponRate [#tag-1555]
+## Tag 1555: InstrumentScopeCouponRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1555</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1555 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified coupon rate. See CouponRate(223) field for description.
 
@@ -3058,9 +3994,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1556 · InstrumentScopeSecurityDesc [#tag-1556]
+## Tag 1556: InstrumentScopeSecurityDesc
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1556</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1556 · String · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified security description. See SecurityDesc(107) field for description.
 
@@ -3068,9 +4010,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1557 · InstrumentScopeSettlType [#tag-1557]
+## Tag 1557: InstrumentScopeSettlType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1557</Badge> <Badge intent="note" minimal>SettlTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1557 · SettlTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Used to limit instrument scope to specified settlement type. See SettlType(63) field for description.
 
@@ -3093,9 +4041,15 @@ Code set **SettlTypeCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 1558 · RiskInstrumentMultiplier [#tag-1558]
+## Tag 1558: RiskInstrumentMultiplier
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1558</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1558 · float · Added FIX.5.0SP2
+</llms-only>
 
 Multiplier applied to the transaction amount for comparison with risk limits. Default if not specified is 1.0.
 
@@ -3103,19 +4057,31 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [RiskInstrumentScopeGrp](/fix/groups/risk-instrument-scope-grp)
 
-## 1559 · NoRiskWarningLevels [#tag-1559]
+## Tag 1559: NoRiskWarningLevels
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1559</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1559 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of risk warning levels.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [RiskWarningLevelGrp](/fix/groups/risk-warning-level-grp)
 
-## 1560 · RiskWarningLevelPercent [#tag-1560]
+## Tag 1560: RiskWarningLevelPercent
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1560</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1560 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 Percent of risk limit at which a warning is issued.
 
@@ -3123,9 +4089,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [RiskWarningLevelGrp](/fix/groups/risk-warning-level-grp)
 
-## 1561 · RiskWarningLevelName [#tag-1561]
+## Tag 1561: RiskWarningLevelName
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1561</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1561 · String · Added FIX.5.0SP2
+</llms-only>
 
 Name or error message associated with the risk warning level.
 
@@ -3133,19 +4105,31 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [RiskWarningLevelGrp](/fix/groups/risk-warning-level-grp)
 
-## 1562 · NoRelatedPartyDetailID [#tag-1562]
+## Tag 1562: NoRelatedPartyDetailID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1562</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1562 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of related party detail identifiers.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [RelatedPartyDetailGrp](/fix/groups/related-party-detail-grp)
 
-## 1563 · RelatedPartyDetailID [#tag-1563]
+## Tag 1563: RelatedPartyDetailID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1563</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1563 · String · Added FIX.5.0SP2
+</llms-only>
 
 Party identifier for the party related to the party specified in PartyDetailID(1691).
 
@@ -3153,9 +4137,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [RelatedPartyDetailGrp](/fix/groups/related-party-detail-grp)
 
-## 1564 · RelatedPartyDetailIDSource [#tag-1564]
+## Tag 1564: RelatedPartyDetailIDSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1564</Badge> <Badge intent="note" minimal>PartyIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1564 · PartyIDSourceCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the source of the RelatedPartyDetailID(1563).
 
@@ -3196,9 +4186,15 @@ Code set **PartyIDSourceCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [RelatedPartyDetailGrp](/fix/groups/related-party-detail-grp)
 
-## 1565 · RelatedPartyDetailRole [#tag-1565]
+## Tag 1565: RelatedPartyDetailRole
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1565</Badge> <Badge intent="note" minimal>PartyRoleCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1565 · PartyRoleCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the type or role of the RelatedPartyDetailID(1563) specified.
 
@@ -3334,19 +4330,31 @@ Code set **PartyRoleCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [RelatedPartyDetailGrp](/fix/groups/related-party-detail-grp)
 
-## 1566 · NoRelatedPartyDetailSubIDs [#tag-1566]
+## Tag 1566: NoRelatedPartyDetailSubIDs
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1566</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1566 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of related party detail sub-identifiers.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [RelatedPartyDetailSubGrp](/fix/groups/related-party-detail-sub-grp)
 
-## 1567 · RelatedPartyDetailSubID [#tag-1567]
+## Tag 1567: RelatedPartyDetailSubID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1567</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1567 · String · Added FIX.5.0SP2
+</llms-only>
 
 Sub-identifier for the party specified in RelatedPartyID(1563).
 
@@ -3354,9 +4362,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [RelatedPartyDetailSubGrp](/fix/groups/related-party-detail-sub-grp)
 
-## 1568 · RelatedPartyDetailSubIDType [#tag-1568]
+## Tag 1568: RelatedPartyDetailSubIDType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1568</Badge> <Badge intent="note" minimal>PartySubIDTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1568 · PartySubIDTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Type of RelatedPartyDetailSubID(1567) value.
 
@@ -3454,19 +4468,31 @@ Code set **PartySubIDTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [RelatedPartyDetailSubGrp](/fix/groups/related-party-detail-sub-grp)
 
-## 1569 · NoRelatedPartyDetailAltID [#tag-1569]
+## Tag 1569: NoRelatedPartyDetailAltID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1569</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1569 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of related party detail alternate identifiers.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [RelatedPartyDetailAltIDGrp](/fix/groups/related-party-detail-alt-id-grp)
 
-## 1570 · RelatedPartyDetailAltID [#tag-1570]
+## Tag 1570: RelatedPartyDetailAltID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1570</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1570 · String · Added FIX.5.0SP2
+</llms-only>
 
 An alternate party identifier for the party specified in RelatedPartyID(1563).
 
@@ -3474,9 +4500,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [RelatedPartyDetailAltIDGrp](/fix/groups/related-party-detail-alt-id-grp)
 
-## 1571 · RelatedPartyDetailAltIDSource [#tag-1571]
+## Tag 1571: RelatedPartyDetailAltIDSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1571</Badge> <Badge intent="note" minimal>PartyIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1571 · PartyIDSourceCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the source of the RelatedPartyDetailAltID(1570) value.
 
@@ -3517,19 +4549,31 @@ Code set **PartyIDSourceCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [RelatedPartyDetailAltIDGrp](/fix/groups/related-party-detail-alt-id-grp)
 
-## 1572 · NoRelatedPartyDetailAltSubIDs [#tag-1572]
+## Tag 1572: NoRelatedPartyDetailAltSubIDs
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1572</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1572 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of related party detail alternate sub-identifiers.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [RelatedPartyDetailAltSubGrp](/fix/groups/related-party-detail-alt-sub-grp)
 
-## 1573 · RelatedPartyDetailAltSubID [#tag-1573]
+## Tag 1573: RelatedPartyDetailAltSubID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1573</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1573 · String · Added FIX.5.0SP2
+</llms-only>
 
 Sub-identifier for the party specified in RelatedPartyDetailAltID(1570).
 
@@ -3537,9 +4581,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [RelatedPartyDetailAltSubGrp](/fix/groups/related-party-detail-alt-sub-grp)
 
-## 1574 · RelatedPartyDetailAltSubIDType [#tag-1574]
+## Tag 1574: RelatedPartyDetailAltSubIDType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1574</Badge> <Badge intent="note" minimal>PartySubIDTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1574 · PartySubIDTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Type of RelatedPartyDetailAltSubID(1573) value.
 
@@ -3637,9 +4687,15 @@ Code set **PartySubIDTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [RelatedPartyDetailAltSubGrp](/fix/groups/related-party-detail-alt-sub-grp)
 
-## 1575 · SwapSubClass [#tag-1575]
+## Tag 1575: SwapSubClass
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1575</Badge> <Badge intent="note" minimal>SwapSubClassCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1575 · SwapSubClassCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 The sub-classification or notional schedule type of the swap.
 
@@ -3655,9 +4711,15 @@ Code set **SwapSubClassCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1576 · DerivativePriceQuoteCurrency [#tag-1576]
+## Tag 1576: DerivativePriceQuoteCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1576</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1576 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 Default currency in which the price is quoted. Defined at the instrument level. Used in place of Currency (tag 15) to express the currency of a product when the former is implemented as the FX dealt currency.
 
@@ -3665,9 +4727,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [DerivativeInstrument](/fix/components/derivative-instrument)
 
-## 1577 · SettlRateIndex [#tag-1577]
+## Tag 1577: SettlRateIndex
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1577</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1577 · String · Added FIX.5.0SP2
+</llms-only>
 
 In an outright or forward commodity trade that is cash settled this is the index used to determine the cash payment.
 
@@ -3675,9 +4743,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1578 · EncodedEventTextLen [#tag-1578]
+## Tag 1578: EncodedEventTextLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1578</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1578 · Length · Added FIX.5.0SP2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedEventText(868) fied.
 
@@ -3685,9 +4759,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [EvntGrp](/fix/groups/evnt-grp)
 
-## 1579 · EncodedEventText [#tag-1579]
+## Tag 1579: EncodedEventText
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1579</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1579 · data · Added FIX.5.0SP2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the EventText(868) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the EventText(868) field.
 
@@ -3695,9 +4775,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [EvntGrp](/fix/groups/evnt-grp)
 
-## 1580 · SettlRateIndexLocation [#tag-1580]
+## Tag 1580: SettlRateIndexLocation
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1580</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1580 · String · Added FIX.5.0SP2
+</llms-only>
 
 This is an optional qualifying attribute of SettlRateIndex(1577) such as the delivery zone for an electricity contract.
 
@@ -3705,9 +4791,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1581 · OptionExpirationDesc [#tag-1581]
+## Tag 1581: OptionExpirationDesc
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1581</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1581 · String · Added FIX.5.0SP2
+</llms-only>
 
 Description of the option expiration.
 
@@ -3715,19 +4807,31 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 1582 · NoSecurityClassifications [#tag-1582]
+## Tag 1582: NoSecurityClassifications
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1582</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1582 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of Security Classifications.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [SecurityClassificationGrp](/fix/groups/security-classification-grp)
 
-## 1583 · SecurityClassificationReason [#tag-1583]
+## Tag 1583: SecurityClassificationReason
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1583</Badge> <Badge intent="note" minimal>SecurityClassificationReasonCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1583 · SecurityClassificationReasonCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Allows classification of instruments according to a set of high level reasons. Classification reasons describe the classes in which the instrument participates.
 
@@ -3746,9 +4850,15 @@ Code set **SecurityClassificationReasonCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [SecurityClassificationGrp](/fix/groups/security-classification-grp)
 
-## 1584 · SecurityClassificationValue [#tag-1584]
+## Tag 1584: SecurityClassificationValue
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1584</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1584 · String · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the product classification value which further details the manner in which the instrument participates in the class.
 
@@ -3756,9 +4866,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [SecurityClassificationGrp](/fix/groups/security-classification-grp)
 
-## 1585 · PosAmtReason [#tag-1585]
+## Tag 1585: PosAmtReason
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1585</Badge> <Badge intent="note" minimal>PosAmtReasonCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1585 · PosAmtReasonCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the reason for an amount type when reported on a position. Useful when multiple instances of the same amount type are reported.
 
@@ -3776,19 +4892,31 @@ Code set **PosAmtReasonCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PositionAmountData](/fix/groups/position-amount-data)
 
-## 1586 · NoLegPosAmt [#tag-1586]
+## Tag 1586: NoLegPosAmt
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1586</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1586 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of TrdInstrmtLegPosAmt values.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [LegPositionAmountData](/fix/groups/leg-position-amount-data)
 
-## 1587 · LegPosAmt [#tag-1587]
+## Tag 1587: LegPosAmt
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1587</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1587 · Amt · Added FIX.5.0SP2
+</llms-only>
 
 Leg position amount.
 
@@ -3796,9 +4924,15 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [LegPositionAmountData](/fix/groups/leg-position-amount-data)
 
-## 1588 · LegPosAmtType [#tag-1588]
+## Tag 1588: LegPosAmtType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1588</Badge> <Badge intent="note" minimal>PosAmtTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1588 · PosAmtTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Type of leg position amount.
 
@@ -3844,9 +4978,15 @@ Code set **PosAmtTypeCodeSet** ([String](/fix/datatypes#string))
 
 Used in: [LegPositionAmountData](/fix/groups/leg-position-amount-data)
 
-## 1589 · LegPosCurrency [#tag-1589]
+## Tag 1589: LegPosCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1589</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1589 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 Leg position currency.
 
@@ -3854,9 +4994,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [LegPositionAmountData](/fix/groups/leg-position-amount-data)
 
-## 1590 · LegPosAmtReason [#tag-1590]
+## Tag 1590: LegPosAmtReason
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1590</Badge> <Badge intent="note" minimal>PosAmtReasonCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1590 · PosAmtReasonCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the reason for an amount type when reported on a position. Useful when multiple instances of the same amount type are reported.
 
@@ -3874,9 +5020,15 @@ Code set **PosAmtReasonCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [LegPositionAmountData](/fix/groups/leg-position-amount-data)
 
-## 1591 · LegQtyType [#tag-1591]
+## Tag 1591: LegQtyType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1591</Badge> <Badge intent="note" minimal>QtyTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1591 · QtyTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Type of quantity specified in LegQty field. LegContractMultiplier (614) is required when LegQtyType = 1 (Contracts). LegUnitOfMeasure (tag 999) and LegTimeUnit (tag 1001) are required when LegQtyType = 2 (Units of Measure per Time Unit). LegQtyType can be different for each leg.
 
@@ -3890,9 +5042,15 @@ Code set **QtyTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [TrdInstrmtLegExecGrp](/fix/groups/trd-instrmt-leg-exec-grp), [TrdInstrmtLegGrp](/fix/groups/trd-instrmt-leg-grp)
 
-## 1592 · DiscountFactor [#tag-1592]
+## Tag 1592: DiscountFactor
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1592</Badge> <Badge intent="note" minimal>float</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1592 · float · Added FIX.5.0SP2
+</llms-only>
 
 Used to calculate the present value of an amount to be paid in the future.
 
@@ -3900,9 +5058,15 @@ Type: [float](/fix/datatypes#float)
 
 Used in: [ClearingPriceParametersGrp](/fix/groups/clearing-price-parameters-grp), [MDFullGrp](/fix/groups/md-full-grp), [MDIncGrp](/fix/groups/md-inc-grp), [PositionMaintenanceReport](/fix/messages/position-maintenance-report), [PositionReport](/fix/messages/position-report)
 
-## 1593 · ParentAllocID [#tag-1593]
+## Tag 1593: ParentAllocID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1593</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1593 · String · Added FIX.5.0SP2
+</llms-only>
 
 Contains the IndividualAllocId (tag 467) value of the allocation that is being offset as a result of a new allocation. This would be an optional field that would only be populated in the case of an allocation of an allocation (as well as any subsequent allocations). This wouldn’t be populated for an initial allocation since an allocation id is not supplied on default (initial) allocations.
 
@@ -3910,9 +5074,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [AllocAckGrp](/fix/groups/alloc-ack-grp), [AllocGrp](/fix/groups/alloc-grp), [TrdAllocGrp](/fix/groups/trd-alloc-grp)
 
-## 1594 · LegSecurityGroup [#tag-1594]
+## Tag 1594: LegSecurityGroup
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1594</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1594 · String · Added FIX.5.0SP2
+</llms-only>
 
 Represents the product group of a leg.This is useful in conveying multi-leg instruments where the legs may participate in separate security groups.
 
@@ -3920,9 +5090,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentLeg](/fix/components/instrument-leg)
 
-## 1595 · PositionContingentPrice [#tag-1595]
+## Tag 1595: PositionContingentPrice
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1595</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1595 · Price · Added FIX.5.0SP2
+</llms-only>
 
 Risk adjusted price used to calculate variation margin on a position.
 
@@ -3930,9 +5106,15 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [AssignmentReport](/fix/messages/assignment-report), [PositionReport](/fix/messages/position-report)
 
-## 1596 · ClearingTradePrice [#tag-1596]
+## Tag 1596: ClearingTradePrice
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1596</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1596 · Price · Added FIX.5.0SP2
+</llms-only>
 
 Alternate clearing price
 
@@ -3940,9 +5122,15 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [PositionTransferInstruction](/fix/messages/position-transfer-instruction), [PositionTransferReport](/fix/messages/position-transfer-report), [TradeCaptureReport](/fix/messages/trade-capture-report)
 
-## 1597 · SideClearingTradePrice [#tag-1597]
+## Tag 1597: SideClearingTradePrice
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1597</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1597 · Price · Added FIX.5.0SP2
+</llms-only>
 
 Alternate clearing price for the side being reported.
 
@@ -3950,9 +5138,15 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
 
-## 1598 · SideClearingTradePriceType [#tag-1598]
+## Tag 1598: SideClearingTradePriceType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1598</Badge> <Badge intent="note" minimal>SideClearingTradePriceTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1598 · SideClearingTradePriceTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Indicates to recipient whether trade is clearing at execution prices LastPx(tag 31) or alternate clearing prices SideClearingTradePrice(tag 1597).
 
@@ -3965,9 +5159,15 @@ Code set **SideClearingTradePriceTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [TrdCapRptSideGrp](/fix/groups/trd-cap-rpt-side-grp), [TrdMatchSideGrp](/fix/groups/trd-match-side-grp)
 
-## 1599 · SidePriceDifferential [#tag-1599]
+## Tag 1599: SidePriceDifferential
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 1599</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 1599 · Price · Added FIX.5.0SP2
+</llms-only>
 
 Price Differential between the front and back leg of a spread or complex instrument.
 

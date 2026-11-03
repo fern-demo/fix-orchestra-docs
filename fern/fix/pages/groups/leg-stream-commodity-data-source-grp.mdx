@@ -3,9 +3,15 @@ title: "LegStreamCommodityDataSourceGrp"
 subtitle: "LegStreamCommodityDataSourceGrp is a subcomponent of the LegStreamCommodity component used to specify sources of data, e.g. weather stations. The order of entry determines priority – first is the main source, second is fallback, third is…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41677</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegStreamCommodityDataSources (41677)](/fix/fields/tags-41600-41799#tag-41677).
+<llms-only>
+Repeating group · NumInGroup 41677 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegStreamCommodityDataSources (41677)](/fix/fields/tags-41600-41799#tag-41677-nolegstreamcommoditydatasources).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41678 | [LegStreamCommodityDataSourceID](/fix/fields/tags-41600-41799#tag-41678) | String | Optional | Required if NoLegStreamCommodityDataSources(41677) &gt; 0. |
-| 41679 | [LegStreamCommodityDataSourceIDType](/fix/fields/tags-41600-41799#tag-41679) | StreamCommodityDataSourceIDTypeCodeSet | Optional | Required if NoLegStreamCommodityDataSources(41677) &gt; 0. |
+| 41678 | [LegStreamCommodityDataSourceID](/fix/fields/tags-41600-41799#tag-41678-legstreamcommoditydatasourceid) | String | Optional | Required if NoLegStreamCommodityDataSources(41677) &gt; 0. |
+| 41679 | [LegStreamCommodityDataSourceIDType](/fix/fields/tags-41600-41799#tag-41679-legstreamcommoditydatasourceidtype) | StreamCommodityDataSourceIDTypeCodeSet | Optional | Required if NoLegStreamCommodityDataSources(41677) &gt; 0. |
 
 </StickyTable>
 

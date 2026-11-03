@@ -3,9 +3,15 @@ title: "LegSecondaryAssetGrp"
 subtitle: "LegSecondaryAssetGrp is a repeating subcomponent of the InstrumentLeg component used to specify secondary assets of a multi-asset swap."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2076</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegSecondaryAssetClasses (2076)](/fix/fields/tags-2000-2199#tag-2076).
+<llms-only>
+Repeating group · NumInGroup 2076 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegSecondaryAssetClasses (2076)](/fix/fields/tags-2000-2199#tag-2076-nolegsecondaryassetclasses).
 
 ## Members
 
@@ -13,10 +19,10 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2077 | [LegSecondaryAssetClass](/fix/fields/tags-2000-2199#tag-2077) | AssetClassCodeSet | Optional | Required if NoLegSecondaryAssetClasses(2076) &gt; 0. |
-| 2078 | [LegSecondaryAssetSubClass](/fix/fields/tags-2000-2199#tag-2078) | AssetSubClassCodeSet | Optional | Required if LegSecondaryAssetType(2079) is specified. |
-| 2079 | [LegSecondaryAssetType](/fix/fields/tags-2000-2199#tag-2079) | String | Optional | Required if LegSecondaryAssetSubType(2743) is specified. |
-| 2743 | [LegSecondaryAssetSubType](/fix/fields/tags-2600-2799#tag-2743) | String | Optional | Used to provide a more specific description of the asset specified in LegSecondaryAssetType(2079). See https://www.fixtrading.org/codelists/AssetSubType for… |
+| 2077 | [LegSecondaryAssetClass](/fix/fields/tags-2000-2199#tag-2077-legsecondaryassetclass) | AssetClassCodeSet | Optional | Required if NoLegSecondaryAssetClasses(2076) &gt; 0. |
+| 2078 | [LegSecondaryAssetSubClass](/fix/fields/tags-2000-2199#tag-2078-legsecondaryassetsubclass) | AssetSubClassCodeSet | Optional | Required if LegSecondaryAssetType(2079) is specified. |
+| 2079 | [LegSecondaryAssetType](/fix/fields/tags-2000-2199#tag-2079-legsecondaryassettype) | String | Optional | Required if LegSecondaryAssetSubType(2743) is specified. |
+| 2743 | [LegSecondaryAssetSubType](/fix/fields/tags-2600-2799#tag-2743-legsecondaryassetsubtype) | String | Optional | Used to provide a more specific description of the asset specified in LegSecondaryAssetType(2079). See https://www.fixtrading.org/codelists/AssetSubType for… |
 
 </StickyTable>
 

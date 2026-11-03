@@ -3,9 +3,15 @@ title: "StreamCommoditySettlPeriodGrp"
 subtitle: "The StreamCommoditySettlPeriodGrp is a repeating subcomponent of the StreamCommodity component used to define the settlement period details associated with the commodity contract."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41289</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoStreamCommoditySettlPeriods (41289)](/fix/fields/tags-41200-41399#tag-41289).
+<llms-only>
+Repeating group · NumInGroup 41289 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoStreamCommoditySettlPeriods (41289)](/fix/fields/tags-41200-41399#tag-41289-nostreamcommoditysettlperiods).
 
 ## Members
 
@@ -13,20 +19,20 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41290 | [StreamCommoditySettlCountry](/fix/fields/tags-41200-41399#tag-41290) | Country | Optional | Required if NoStreamCommoditySettlPeriods(41289) &gt; 0. |
-| 41291 | [StreamCommoditySettlTimeZone](/fix/fields/tags-41200-41399#tag-41291) | String | Optional | Commodity delivery timezone specified as "prevailing" rather than "standard" or "daylight". See… |
-| 41292 | [StreamCommoditySettlFlowType](/fix/fields/tags-41200-41399#tag-41292) | DeliveryScheduleSettlFlowTypeCodeSet | Optional | Specifies the commodity delivery flow type. |
-| 41293 | [StreamCommoditySettlPeriodNotional](/fix/fields/tags-41200-41399#tag-41293) | Qty | Optional | Specifies the delivery quantity associated with this settlement period. |
-| 41294 | [StreamCommoditySettlPeriodNotionalUnitOfMeasure](/fix/fields/tags-41200-41399#tag-41294) | UnitOfMeasureCodeSet | Optional | Specifies the unit of measure (UOM) of the delivery quantity associated with this settlement period. |
-| 41295 | [StreamCommoditySettlPeriodFrequencyPeriod](/fix/fields/tags-41200-41399#tag-41295) | int | Optional | Conditionally required when StreamCommoditySettlFrequencyUnit(41296) is specified. |
-| 41296 | [StreamCommoditySettlPeriodFrequencyUnit](/fix/fields/tags-41200-41399#tag-41296) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when StreamCommoditySettlFrequencyPeriod(41295) is specified. |
-| 41297 | [StreamCommoditySettlPeriodPrice](/fix/fields/tags-41200-41399#tag-41297) | Price | Optional | The settlement period price. |
-| 41298 | [StreamCommoditySettlPeriodPriceUnitOfMeasure](/fix/fields/tags-41200-41399#tag-41298) | UnitOfMeasureCodeSet | Optional | Specifies the settlement period price unit of measure (UOM). |
-| 41299 | [StreamCommoditySettlPeriodPriceCurrency](/fix/fields/tags-41200-41399#tag-41299) | Currency | Optional | The currency of the settlement period price. Uses ISO 4217 currency codes. |
-| 41300 | [StreamCommoditySettlHolidaysProcessingInstruction](/fix/fields/tags-41200-41399#tag-41300) | DeliveryScheduleSettlHolidaysProcessingInstructionCodeSet | Optional | Indicates whether holidays are included in the settlement periods. Required for electricity contracts. |
+| 41290 | [StreamCommoditySettlCountry](/fix/fields/tags-41200-41399#tag-41290-streamcommoditysettlcountry) | Country | Optional | Required if NoStreamCommoditySettlPeriods(41289) &gt; 0. |
+| 41291 | [StreamCommoditySettlTimeZone](/fix/fields/tags-41200-41399#tag-41291-streamcommoditysettltimezone) | String | Optional | Commodity delivery timezone specified as "prevailing" rather than "standard" or "daylight". See… |
+| 41292 | [StreamCommoditySettlFlowType](/fix/fields/tags-41200-41399#tag-41292-streamcommoditysettlflowtype) | DeliveryScheduleSettlFlowTypeCodeSet | Optional | Specifies the commodity delivery flow type. |
+| 41293 | [StreamCommoditySettlPeriodNotional](/fix/fields/tags-41200-41399#tag-41293-streamcommoditysettlperiodnotional) | Qty | Optional | Specifies the delivery quantity associated with this settlement period. |
+| 41294 | [StreamCommoditySettlPeriodNotionalUnitOfMeasure](/fix/fields/tags-41200-41399#tag-41294-streamcommoditysettlperiodnotionalunitofmeasure) | UnitOfMeasureCodeSet | Optional | Specifies the unit of measure (UOM) of the delivery quantity associated with this settlement period. |
+| 41295 | [StreamCommoditySettlPeriodFrequencyPeriod](/fix/fields/tags-41200-41399#tag-41295-streamcommoditysettlperiodfrequencyperiod) | int | Optional | Conditionally required when StreamCommoditySettlFrequencyUnit(41296) is specified. |
+| 41296 | [StreamCommoditySettlPeriodFrequencyUnit](/fix/fields/tags-41200-41399#tag-41296-streamcommoditysettlperiodfrequencyunit) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when StreamCommoditySettlFrequencyPeriod(41295) is specified. |
+| 41297 | [StreamCommoditySettlPeriodPrice](/fix/fields/tags-41200-41399#tag-41297-streamcommoditysettlperiodprice) | Price | Optional | The settlement period price. |
+| 41298 | [StreamCommoditySettlPeriodPriceUnitOfMeasure](/fix/fields/tags-41200-41399#tag-41298-streamcommoditysettlperiodpriceunitofmeasure) | UnitOfMeasureCodeSet | Optional | Specifies the settlement period price unit of measure (UOM). |
+| 41299 | [StreamCommoditySettlPeriodPriceCurrency](/fix/fields/tags-41200-41399#tag-41299-streamcommoditysettlperiodpricecurrency) | Currency | Optional | The currency of the settlement period price. Uses ISO 4217 currency codes. |
+| 41300 | [StreamCommoditySettlHolidaysProcessingInstruction](/fix/fields/tags-41200-41399#tag-41300-streamcommoditysettlholidaysprocessinginstruction) | DeliveryScheduleSettlHolidaysProcessingInstructionCodeSet | Optional | Indicates whether holidays are included in the settlement periods. Required for electricity contracts. |
 | 41283 | [StreamCommoditySettlDayGrp](/fix/groups/stream-commodity-settl-day-grp) | Repeating group | Optional | The StreamCommoditySettlDayGrp is a repeating subcomponent of the StreamCommoditySettlPeriodGrp component used to define the settlement days associated with the… |
-| 41301 | [StreamCommoditySettlPeriodXID](/fix/fields/tags-41200-41399#tag-41301) | XID | Optional | Identifier of this settlement period for cross referencing elsewhere in the message. |
-| 41302 | [StreamCommoditySettlPeriodXIDRef](/fix/fields/tags-41200-41399#tag-41302) | XIDREF | Optional | Cross reference to another settlement period for duplicating its properties. |
+| 41301 | [StreamCommoditySettlPeriodXID](/fix/fields/tags-41200-41399#tag-41301-streamcommoditysettlperiodxid) | XID | Optional | Identifier of this settlement period for cross referencing elsewhere in the message. |
+| 41302 | [StreamCommoditySettlPeriodXIDRef](/fix/fields/tags-41200-41399#tag-41302-streamcommoditysettlperiodxidref) | XIDREF | Optional | Cross reference to another settlement period for duplicating its properties. |
 
 </StickyTable>
 

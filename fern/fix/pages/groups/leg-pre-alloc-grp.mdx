@@ -2,9 +2,15 @@
 title: "LegPreAllocGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 670</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegAllocs (670)](/fix/fields/tags-600-799#tag-670).
+<llms-only>
+Repeating group · NumInGroup 670 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegAllocs (670)](/fix/fields/tags-600-799#tag-670-nolegallocs).
 
 ## Members
 
@@ -12,16 +18,16 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 671 | [LegAllocAccount](/fix/fields/tags-600-799#tag-671) | String | Optional | Allocation Account for the leg See AllocAccount (79) for description and valid values. |
-| 672 | [LegIndividualAllocID](/fix/fields/tags-600-799#tag-672) | String | Optional | Reference for the individual allocation ticket See IndividualAllocID (467) for description and valid values. |
+| 671 | [LegAllocAccount](/fix/fields/tags-600-799#tag-671-legallocaccount) | String | Optional | Allocation Account for the leg See AllocAccount (79) for description and valid values. |
+| 672 | [LegIndividualAllocID](/fix/fields/tags-600-799#tag-672-legindividualallocid) | String | Optional | Reference for the individual allocation ticket See IndividualAllocID (467) for description and valid values. |
 | 756 | [NestedParties2](/fix/groups/nested-parties2) | Repeating group | Optional | The NestedParties2 component block is identical to the Parties Block. It is used in other component blocks and repeating groups when nesting will take place… |
-| 673 | [LegAllocQty](/fix/fields/tags-600-799#tag-673) | Qty | Optional | Leg allocation quantity. See AllocQty (80) for description and valid values. |
-| 674 | [LegAllocAcctIDSource](/fix/fields/tags-600-799#tag-674) | String | Optional | The source of the LegAllocAccount (671) See AllocAcctIDSource (661) for description and valid values. |
-| 1367 | [LegAllocSettlCurrency](/fix/fields/tags-1200-1399#tag-1367) | Currency | Optional | Identifies settlement currency for the leg level allocation. |
-| 1756 | [LegCustodialLotID](/fix/fields/tags-1600-1799#tag-1756) | String | Optional | Only used for specific lot trades. |
-| 1757 | [LegVersusPurchaseDate](/fix/fields/tags-1600-1799#tag-1757) | LocalMktDate | Optional | Only used for specific lot trades. If this field is used, either LegVersusPurchasePrice(1758) or LegCurrentCostBasis(1759) should be specified. |
-| 1758 | [LegVersusPurchasePrice](/fix/fields/tags-1600-1799#tag-1758) | Price | Optional | Only used for specific lot trades. If this field is used, LegVersusPurchaseDate(1757) should be specified. |
-| 1759 | [LegCurrentCostBasis](/fix/fields/tags-1600-1799#tag-1759) | Amt | Optional | Only used for specific lot trades. If this field is used, LegVersusPurchaseDate(1757) should be specified |
+| 673 | [LegAllocQty](/fix/fields/tags-600-799#tag-673-legallocqty) | Qty | Optional | Leg allocation quantity. See AllocQty (80) for description and valid values. |
+| 674 | [LegAllocAcctIDSource](/fix/fields/tags-600-799#tag-674-legallocacctidsource) | String | Optional | The source of the LegAllocAccount (671) See AllocAcctIDSource (661) for description and valid values. |
+| 1367 | [LegAllocSettlCurrency](/fix/fields/tags-1200-1399#tag-1367-legallocsettlcurrency) | Currency | Optional | Identifies settlement currency for the leg level allocation. |
+| 1756 | [LegCustodialLotID](/fix/fields/tags-1600-1799#tag-1756-legcustodiallotid) | String | Optional | Only used for specific lot trades. |
+| 1757 | [LegVersusPurchaseDate](/fix/fields/tags-1600-1799#tag-1757-legversuspurchasedate) | LocalMktDate | Optional | Only used for specific lot trades. If this field is used, either LegVersusPurchasePrice(1758) or LegCurrentCostBasis(1759) should be specified. |
+| 1758 | [LegVersusPurchasePrice](/fix/fields/tags-1600-1799#tag-1758-legversuspurchaseprice) | Price | Optional | Only used for specific lot trades. If this field is used, LegVersusPurchaseDate(1757) should be specified. |
+| 1759 | [LegCurrentCostBasis](/fix/fields/tags-1600-1799#tag-1759-legcurrentcostbasis) | Amt | Optional | Only used for specific lot trades. If this field is used, LegVersusPurchaseDate(1757) should be specified |
 
 </StickyTable>
 

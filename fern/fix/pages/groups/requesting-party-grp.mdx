@@ -3,9 +3,15 @@ title: "RequestingPartyGrp"
 subtitle: "Identifies the party making the request."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1657</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoRequestingPartyIDs (1657)](/fix/fields/tags-1600-1799#tag-1657).
+<llms-only>
+Repeating group · NumInGroup 1657 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRequestingPartyIDs (1657)](/fix/fields/tags-1600-1799#tag-1657-norequestingpartyids).
 
 ## Members
 
@@ -13,10 +19,10 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1658 | [RequestingPartyID](/fix/fields/tags-1600-1799#tag-1658) | String | Optional | Required when NoRequestingPartyIDs &gt; 0. |
-| 1659 | [RequestingPartyIDSource](/fix/fields/tags-1600-1799#tag-1659) | PartyIDSourceCodeSet | Optional | Required when NoRequestingPartyIDs &gt; 0. |
-| 1660 | [RequestingPartyRole](/fix/fields/tags-1600-1799#tag-1660) | PartyRoleCodeSet | Optional | Required when NoRequestingPartyIDs &gt; 0. |
-| 2338 | [RequestingPartyRoleQualifier](/fix/fields/tags-2200-2399#tag-2338) | PartyDetailRoleQualifierCodeSet | Optional | Qualifies the value of RequestingPartyRole(1660). |
+| 1658 | [RequestingPartyID](/fix/fields/tags-1600-1799#tag-1658-requestingpartyid) | String | Optional | Required when NoRequestingPartyIDs &gt; 0. |
+| 1659 | [RequestingPartyIDSource](/fix/fields/tags-1600-1799#tag-1659-requestingpartyidsource) | PartyIDSourceCodeSet | Optional | Required when NoRequestingPartyIDs &gt; 0. |
+| 1660 | [RequestingPartyRole](/fix/fields/tags-1600-1799#tag-1660-requestingpartyrole) | PartyRoleCodeSet | Optional | Required when NoRequestingPartyIDs &gt; 0. |
+| 2338 | [RequestingPartyRoleQualifier](/fix/fields/tags-2200-2399#tag-2338-requestingpartyrolequalifier) | PartyDetailRoleQualifierCodeSet | Optional | Qualifies the value of RequestingPartyRole(1660). |
 | 1661 | [RequestingPartySubGrp](/fix/groups/requesting-party-sub-grp) | Repeating group | Optional | Sub identifiers for the requesting party. |
 
 </StickyTable>

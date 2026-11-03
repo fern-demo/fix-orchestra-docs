@@ -3,7 +3,13 @@ title: "UnderlyingProvisionOptionRelevantUnderlyingDate"
 subtitle: "The UnderlyingProvisionOptionRelevantUnderlyingDate is a subcomponent within the UnderlyingProvisionGrp component used to report the option relevant underlying date defined in the provision."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,14 +17,14 @@ subtitle: "The UnderlyingProvisionOptionRelevantUnderlyingDate is a subcomponent
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42142 | [UnderlyingProvisionOptionRelevantUnderlyingDateUnadjusted](/fix/fields/tags-42000-42199#tag-42142) | LocalMktDate | Optional | The unadjusted date on the underlying set by the exercise of an option. What this date is depends on the option (e.g. in a swaption it is the swap effective… |
-| 42143 | [UnderlyingProvisionOptionRelevantUnderlyingDateBusinessDayConvention](/fix/fields/tags-42000-42199#tag-42143) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
+| 42142 | [UnderlyingProvisionOptionRelevantUnderlyingDateUnadjusted](/fix/fields/tags-42000-42199#tag-42142-underlyingprovisionoptionrelevantunderlyingdateunadjusted) | LocalMktDate | Optional | The unadjusted date on the underlying set by the exercise of an option. What this date is depends on the option (e.g. in a swaption it is the swap effective… |
+| 42143 | [UnderlyingProvisionOptionRelevantUnderlyingDateBusinessDayConvention](/fix/fields/tags-42000-42199#tag-42143-underlyingprovisionoptionrelevantunderlyingdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
 | 42188 | [UnderlyingProvisionOptionRelevantUnderlyingDateBusinessCenterGrp](/fix/groups/underlying-provision-option-relevant-underlying-date-business-center-grp) | Repeating group | Optional | UnderlyingProvisionOptionRelevantUnderlyingDateBusinessCenterGrp is a repeating subcomponent within the UnderlyingProvisionOptionRelevantUnderlyingDate… |
-| 42144 | [UnderlyingProvisionOptionRelevantUnderlyingDateRelativeTo](/fix/fields/tags-42000-42199#tag-42144) | int | Optional | Specifies the anchor date when the date relevant to the underlying trade on exercise is relative to an anchor date. See… |
-| 42145 | [UnderlyingProvisionOptionRelevantUnderlyingDateOffsetPeriod](/fix/fields/tags-42000-42199#tag-42145) | int | Optional | Conditionally required when UnderlyingProvisionOptionRelevantUnderlyingDateOffsetUnit(42146) is specified. |
-| 42146 | [UnderlyingProvisionOptionRelevantUnderlyingDateOffsetUnit](/fix/fields/tags-42000-42199#tag-42146) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingProvisionOptionRelevantUnderlyingDateOffsetPeriod(42145) is specified. |
-| 42147 | [UnderlyingProvisionOptionRelevantUnderlyingDateOffsetDayType](/fix/fields/tags-42000-42199#tag-42147) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the provision's relative option relevant underlying date offset. |
-| 42148 | [UnderlyingProvisionOptionRelevantUnderlyingDateAdjusted](/fix/fields/tags-42000-42199#tag-42148) | LocalMktDate | Optional | The adjusted date on the underlying set by the exercise of an option. What this date is depends on the option (e.g. in a swaption it is the swap effective date,… |
+| 42144 | [UnderlyingProvisionOptionRelevantUnderlyingDateRelativeTo](/fix/fields/tags-42000-42199#tag-42144-underlyingprovisionoptionrelevantunderlyingdaterelativeto) | int | Optional | Specifies the anchor date when the date relevant to the underlying trade on exercise is relative to an anchor date. See… |
+| 42145 | [UnderlyingProvisionOptionRelevantUnderlyingDateOffsetPeriod](/fix/fields/tags-42000-42199#tag-42145-underlyingprovisionoptionrelevantunderlyingdateoffsetperiod) | int | Optional | Conditionally required when UnderlyingProvisionOptionRelevantUnderlyingDateOffsetUnit(42146) is specified. |
+| 42146 | [UnderlyingProvisionOptionRelevantUnderlyingDateOffsetUnit](/fix/fields/tags-42000-42199#tag-42146-underlyingprovisionoptionrelevantunderlyingdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingProvisionOptionRelevantUnderlyingDateOffsetPeriod(42145) is specified. |
+| 42147 | [UnderlyingProvisionOptionRelevantUnderlyingDateOffsetDayType](/fix/fields/tags-42000-42199#tag-42147-underlyingprovisionoptionrelevantunderlyingdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the provision's relative option relevant underlying date offset. |
+| 42148 | [UnderlyingProvisionOptionRelevantUnderlyingDateAdjusted](/fix/fields/tags-42000-42199#tag-42148-underlyingprovisionoptionrelevantunderlyingdateadjusted) | LocalMktDate | Optional | The adjusted date on the underlying set by the exercise of an option. What this date is depends on the option (e.g. in a swaption it is the swap effective date,… |
 
 </StickyTable>
 

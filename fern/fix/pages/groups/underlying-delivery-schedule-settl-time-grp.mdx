@@ -3,9 +3,15 @@ title: "UnderlyingDeliveryScheduleSettlTimeGrp"
 subtitle: "The UnderlyingDeliveryScheduleSettlTimeGrp is a repeating subcomponent of the UnderlyingDeliveryScheduleSettlDayGrp component used to detail commodity delivery time periods."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41773</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingDeliveryScheduleSettlTimes (41773)](/fix/fields/tags-41600-41799#tag-41773).
+<llms-only>
+Repeating group · NumInGroup 41773 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingDeliveryScheduleSettlTimes (41773)](/fix/fields/tags-41600-41799#tag-41773-nounderlyingdeliveryschedulesettltimes).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41774 | [UnderlyingDeliveryScheduleSettlStart](/fix/fields/tags-41600-41799#tag-41774) | String | Optional | Required if NoUnderlyingDeliveryScheduleSettlTimes(41773) &gt; 0. |
-| 41775 | [UnderlyingDeliveryScheduleSettlEnd](/fix/fields/tags-41600-41799#tag-41775) | String | Optional | Required if NoUnderlyingDeliveryScheduleSettlTimes(41773) &gt; 0. |
-| 41776 | [UnderlyingDeliveryScheduleSettlTimeType](/fix/fields/tags-41600-41799#tag-41776) | DeliveryScheduleSettlTimeTypeCodeSet | Optional | May be defaulted to market convention or bilaterally agreed if not specified. |
+| 41774 | [UnderlyingDeliveryScheduleSettlStart](/fix/fields/tags-41600-41799#tag-41774-underlyingdeliveryschedulesettlstart) | String | Optional | Required if NoUnderlyingDeliveryScheduleSettlTimes(41773) &gt; 0. |
+| 41775 | [UnderlyingDeliveryScheduleSettlEnd](/fix/fields/tags-41600-41799#tag-41775-underlyingdeliveryschedulesettlend) | String | Optional | Required if NoUnderlyingDeliveryScheduleSettlTimes(41773) &gt; 0. |
+| 41776 | [UnderlyingDeliveryScheduleSettlTimeType](/fix/fields/tags-41600-41799#tag-41776-underlyingdeliveryschedulesettltimetype) | DeliveryScheduleSettlTimeTypeCodeSet | Optional | May be defaulted to market convention or bilaterally agreed if not specified. |
 
 </StickyTable>
 

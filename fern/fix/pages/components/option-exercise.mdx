@@ -3,7 +3,13 @@ title: "OptionExercise"
 subtitle: "The OptionExercise component is a subcomponent of the Instrument component used to specify option exercise provisions. Its purpose is to identify the opportunities and conditions for exercise, e.g. the schedule of dates on which exercise is…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,17 +17,17 @@ subtitle: "The OptionExercise component is a subcomponent of the Instrument comp
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41106 | [ExerciseDesc](/fix/fields/tags-41000-41199#tag-41106) | String | Optional | A description of the option exercise. |
-| 41107 | [EncodedExerciseDescLen](/fix/fields/tags-41000-41199#tag-41107) | Length | Optional | Must be set if EncodedExerciseDesc(41108) field is specified and must immediately precede it. |
-| 41108 | [EncodedExerciseDesc](/fix/fields/tags-41000-41199#tag-41108) | data | Optional | Encoded (non-ASCII characters) representation of the ExerciseDesc(41106) field in the encoded format specified via the MessageEncoding(347) field. |
-| 41109 | [AutomaticExerciseIndicator](/fix/fields/tags-41000-41199#tag-41109) | Boolean | Optional | Indicates (when 'Y') that exercise is automatic when the strike price is crossed or the underlying trade is in the money. |
-| 41110 | [AutomaticExerciseThresholdRate](/fix/fields/tags-41000-41199#tag-41110) | float | Optional | The threshold rate for triggering automatic exercise. |
-| 41111 | [ExerciseConfirmationMethod](/fix/fields/tags-41000-41199#tag-41111) | ExerciseConfirmationMethodCodeSet | Optional | Indicates whether follow-up confirmation of exercise (written or electronic) is required following telephonic notice by the buyer to the seller or seller's… |
-| 41112 | [ManualNoticeBusinessCenter](/fix/fields/tags-41000-41199#tag-41112) | String | Optional | Identifies the business center used for adjusting the time for manual exercise notice. See http://www.fpml.org/coding-scheme/business-center for standard… |
-| 41113 | [FallbackExerciseIndicator](/fix/fields/tags-41000-41199#tag-41113) | Boolean | Optional | Indicates whether the notional amount of the underlying swap, not previously exercised under the option, will be automatically exercised at the expiration time… |
-| 41114 | [LimitedRightToConfirmIndicator](/fix/fields/tags-41000-41199#tag-41114) | Boolean | Optional | Indicates whether the Seller may request the Buyer to confirm its intent to exercise if not done on or before the expiration time on the expiration date. If… |
-| 41115 | [ExerciseSplitTicketIndicator](/fix/fields/tags-41000-41199#tag-41115) | Boolean | Optional | Indicates in physical settlement of bond and convertible bond options whether the party required to deliver the bonds will divide those to be delivered as… |
-| 42590 | [SettlMethodElectingPartySide](/fix/fields/tags-42400-42599#tag-42590) | PaymentPaySideCodeSet | Optional | Side value of the party electing the settlement method. |
+| 41106 | [ExerciseDesc](/fix/fields/tags-41000-41199#tag-41106-exercisedesc) | String | Optional | A description of the option exercise. |
+| 41107 | [EncodedExerciseDescLen](/fix/fields/tags-41000-41199#tag-41107-encodedexercisedesclen) | Length | Optional | Must be set if EncodedExerciseDesc(41108) field is specified and must immediately precede it. |
+| 41108 | [EncodedExerciseDesc](/fix/fields/tags-41000-41199#tag-41108-encodedexercisedesc) | data | Optional | Encoded (non-ASCII characters) representation of the ExerciseDesc(41106) field in the encoded format specified via the MessageEncoding(347) field. |
+| 41109 | [AutomaticExerciseIndicator](/fix/fields/tags-41000-41199#tag-41109-automaticexerciseindicator) | Boolean | Optional | Indicates (when 'Y') that exercise is automatic when the strike price is crossed or the underlying trade is in the money. |
+| 41110 | [AutomaticExerciseThresholdRate](/fix/fields/tags-41000-41199#tag-41110-automaticexercisethresholdrate) | float | Optional | The threshold rate for triggering automatic exercise. |
+| 41111 | [ExerciseConfirmationMethod](/fix/fields/tags-41000-41199#tag-41111-exerciseconfirmationmethod) | ExerciseConfirmationMethodCodeSet | Optional | Indicates whether follow-up confirmation of exercise (written or electronic) is required following telephonic notice by the buyer to the seller or seller's… |
+| 41112 | [ManualNoticeBusinessCenter](/fix/fields/tags-41000-41199#tag-41112-manualnoticebusinesscenter) | String | Optional | Identifies the business center used for adjusting the time for manual exercise notice. See http://www.fpml.org/coding-scheme/business-center for standard… |
+| 41113 | [FallbackExerciseIndicator](/fix/fields/tags-41000-41199#tag-41113-fallbackexerciseindicator) | Boolean | Optional | Indicates whether the notional amount of the underlying swap, not previously exercised under the option, will be automatically exercised at the expiration time… |
+| 41114 | [LimitedRightToConfirmIndicator](/fix/fields/tags-41000-41199#tag-41114-limitedrighttoconfirmindicator) | Boolean | Optional | Indicates whether the Seller may request the Buyer to confirm its intent to exercise if not done on or before the expiration time on the expiration date. If… |
+| 41115 | [ExerciseSplitTicketIndicator](/fix/fields/tags-41000-41199#tag-41115-exercisesplitticketindicator) | Boolean | Optional | Indicates in physical settlement of bond and convertible bond options whether the party required to deliver the bonds will divide those to be delivered as… |
+| 42590 | [SettlMethodElectingPartySide](/fix/fields/tags-42400-42599#tag-42590-settlmethodelectingpartyside) | PaymentPaySideCodeSet | Optional | Side value of the party electing the settlement method. |
 | | [SettlMethodElectionDate](/fix/components/settl-method-election-date) | Component | Optional | The SettlMethodElectionDate component is a subcomponent within the OptionExercise component used to report the settlement method election date. |
 | | [OptionExerciseDates](/fix/components/option-exercise-dates) | Component | Optional | The OptionExerciseDate component is a subcomponent of the OptionExercise component used to specify option exercise dates. |
 | | [OptionExerciseExpiration](/fix/components/option-exercise-expiration) | Component | Optional | The OptionExerciseExpiration component is a subcomponent of the OptionExercise component used to specify option exercise expiration dates and times. The purpose… |

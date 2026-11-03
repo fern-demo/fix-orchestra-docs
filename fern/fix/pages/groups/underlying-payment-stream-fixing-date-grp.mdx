@@ -3,9 +3,15 @@ title: "UnderlyingPaymentStreamFixingDateGrp"
 subtitle: "UnderlyingPaymentStreamFixingDateGrp is a subcomponent of the UnderlyingPaymentStreamResetDates component used to specify predetermined fixing dates."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42955</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingPaymentStreamFixingDates (42955)](/fix/fields/tags-42800-42999#tag-42955).
+<llms-only>
+Repeating group · NumInGroup 42955 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingPaymentStreamFixingDates (42955)](/fix/fields/tags-42800-42999#tag-42955-nounderlyingpaymentstreamfixingdates).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42956 | [UnderlyingPaymentStreamFixingDate](/fix/fields/tags-42800-42999#tag-42956) | LocalMktDate | Optional | Required if NoUnderlyingPaymentStreamFixingDates(42955) &gt; 0. |
-| 42957 | [UnderlyingPaymentStreamFixingDateType](/fix/fields/tags-42800-42999#tag-42957) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date instance but to all subsequent date instances in the group until overridden when a new type is specified. |
+| 42956 | [UnderlyingPaymentStreamFixingDate](/fix/fields/tags-42800-42999#tag-42956-underlyingpaymentstreamfixingdate) | LocalMktDate | Optional | Required if NoUnderlyingPaymentStreamFixingDates(42955) &gt; 0. |
+| 42957 | [UnderlyingPaymentStreamFixingDateType](/fix/fields/tags-42800-42999#tag-42957-underlyingpaymentstreamfixingdatetype) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date instance but to all subsequent date instances in the group until overridden when a new type is specified. |
 
 </StickyTable>
 

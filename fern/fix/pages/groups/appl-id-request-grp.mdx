@@ -2,9 +2,15 @@
 title: "ApplIDRequestGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1351</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoApplIDs (1351)](/fix/fields/tags-1200-1399#tag-1351).
+<llms-only>
+Repeating group · NumInGroup 1351 · Added FIX.5.0
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoApplIDs (1351)](/fix/fields/tags-1200-1399#tag-1351-noapplids).
 
 ## Members
 
@@ -12,10 +18,10 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1355 | [RefApplID](/fix/fields/tags-1200-1399#tag-1355) | String | Optional | Reference to the unique application identifier which corresponds to ApplID(1180) from the Application Sequence Group component |
-| 1433 | [RefApplReqID](/fix/fields/tags-1400-1599#tag-1433) | String | Optional | Used to reference a previously submitted ApplReqID (1346) from within a subsequent ApplicationMessageRequest(MsgType=BW) |
-| 1182 | [ApplBegSeqNum](/fix/fields/tags-1000-1199#tag-1182) | SeqNum | Optional | Message sequence number of first message in range to be resent |
-| 1183 | [ApplEndSeqNum](/fix/fields/tags-1000-1199#tag-1183) | SeqNum | Optional | Message sequence number of last message in range to be resent. If request is for a single message ApplBeginSeqNo = ApplEndSeqNo. If request is for all messages… |
+| 1355 | [RefApplID](/fix/fields/tags-1200-1399#tag-1355-refapplid) | String | Optional | Reference to the unique application identifier which corresponds to ApplID(1180) from the Application Sequence Group component |
+| 1433 | [RefApplReqID](/fix/fields/tags-1400-1599#tag-1433-refapplreqid) | String | Optional | Used to reference a previously submitted ApplReqID (1346) from within a subsequent ApplicationMessageRequest(MsgType=BW) |
+| 1182 | [ApplBegSeqNum](/fix/fields/tags-1000-1199#tag-1182-applbegseqnum) | SeqNum | Optional | Message sequence number of first message in range to be resent |
+| 1183 | [ApplEndSeqNum](/fix/fields/tags-1000-1199#tag-1183-applendseqnum) | SeqNum | Optional | Message sequence number of last message in range to be resent. If request is for a single message ApplBeginSeqNo = ApplEndSeqNo. If request is for all messages… |
 | 539 | [NestedParties](/fix/groups/nested-parties) | Repeating group | Optional | The NestedParties component block is identical to the Parties Block. It is used in other component blocks and repeating groups when nesting will take place… |
 
 </StickyTable>

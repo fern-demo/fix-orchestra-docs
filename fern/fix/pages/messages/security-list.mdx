@@ -3,7 +3,13 @@ title: "SecurityList"
 subtitle: "The Security List message is used to return a list of securities that matches the criteria specified in a Security List Request."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType y</Badge> <Badge intent="note" minimal>Securities Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType y · Securities Reference Data · Pre Trade · Added FIX.4.3
+</llms-only>
 
 ## Message structure
 
@@ -13,24 +19,24 @@ subtitle: "The Security List message is used to return a list of securities that
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
 | | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and… |
-| 964 | [SecurityReportID](/fix/fields/tags-800-999#tag-964) | int | Optional | Identifies a Security List message. |
-| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | Optional | The business date for which the trade is expected to be cleared. |
-| 1465 | [SecurityListID](/fix/fields/tags-1400-1599#tag-1465) | String | Optional | Identifies a specific Security List Entry |
-| 1466 | [SecurityListRefID](/fix/fields/tags-1400-1599#tag-1466) | String | Optional | Provides a reference to another Security List |
-| 1467 | [SecurityListDesc](/fix/fields/tags-1400-1599#tag-1467) | String | Optional | Specifies a description or name of a Security List. |
-| 1468 | [EncodedSecurityListDescLen](/fix/fields/tags-1400-1599#tag-1468) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedSecurityListDesc (tbd) field. |
-| 1469 | [EncodedSecurityListDesc](/fix/fields/tags-1400-1599#tag-1469) | data | Optional | Encoded (non-ASCII characters) representation of the SecurityListDesc (1467) field in the encoded format specified via the MessageEncoding (347) field. If used,… |
-| 1470 | [SecurityListType](/fix/fields/tags-1400-1599#tag-1470) | SecurityListTypeCodeSet | Optional | Identifies a list type |
-| 1471 | [SecurityListTypeSource](/fix/fields/tags-1400-1599#tag-1471) | SecurityListTypeSourceCodeSet | Optional | Identifies the source of a list type |
-| 320 | [SecurityReqID](/fix/fields/tags-200-399#tag-320) | String | Optional | Unique ID of a Security Definition Request. |
-| 322 | [SecurityResponseID](/fix/fields/tags-200-399#tag-322) | String | Optional | Identifier for the Security List message |
-| 560 | [SecurityRequestResult](/fix/fields/tags-400-599#tag-560) | SecurityRequestResultCodeSet | Optional | Result of the Security Request identified by the SecurityReqID |
-| 1607 | [SecurityRejectReason](/fix/fields/tags-1600-1799#tag-1607) | SecurityRejectReasonCodeSet | Optional | Used to specify a rejection reason when SecurityResponseType (323) is equal to 1 (Invalid or unsupported request) or 5 (Request for instrument data not… |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
-| 393 | [TotNoRelatedSym](/fix/fields/tags-200-399#tag-393) | int | Optional | Used to indicate the total number of securities being returned for this request. Used in the event that message fragmentation is required. |
-| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Identifies the market which lists and trades the instrument. |
-| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the segment of the market to which the specify trading rules and listing rules apply. The segment may indicate the venue, whether retail or… |
-| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893) | LastFragmentCodeSet | Optional | Indicates whether this is the last fragment in a sequence of message fragments. Only required where message has been fragmented. |
+| 964 | [SecurityReportID](/fix/fields/tags-800-999#tag-964-securityreportid) | int | Optional | Identifies a Security List message. |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715-clearingbusinessdate) | LocalMktDate | Optional | The business date for which the trade is expected to be cleared. |
+| 1465 | [SecurityListID](/fix/fields/tags-1400-1599#tag-1465-securitylistid) | String | Optional | Identifies a specific Security List Entry |
+| 1466 | [SecurityListRefID](/fix/fields/tags-1400-1599#tag-1466-securitylistrefid) | String | Optional | Provides a reference to another Security List |
+| 1467 | [SecurityListDesc](/fix/fields/tags-1400-1599#tag-1467-securitylistdesc) | String | Optional | Specifies a description or name of a Security List. |
+| 1468 | [EncodedSecurityListDescLen](/fix/fields/tags-1400-1599#tag-1468-encodedsecuritylistdesclen) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedSecurityListDesc (tbd) field. |
+| 1469 | [EncodedSecurityListDesc](/fix/fields/tags-1400-1599#tag-1469-encodedsecuritylistdesc) | data | Optional | Encoded (non-ASCII characters) representation of the SecurityListDesc (1467) field in the encoded format specified via the MessageEncoding (347) field. If used,… |
+| 1470 | [SecurityListType](/fix/fields/tags-1400-1599#tag-1470-securitylisttype) | SecurityListTypeCodeSet | Optional | Identifies a list type |
+| 1471 | [SecurityListTypeSource](/fix/fields/tags-1400-1599#tag-1471-securitylisttypesource) | SecurityListTypeSourceCodeSet | Optional | Identifies the source of a list type |
+| 320 | [SecurityReqID](/fix/fields/tags-200-399#tag-320-securityreqid) | String | Optional | Unique ID of a Security Definition Request. |
+| 322 | [SecurityResponseID](/fix/fields/tags-200-399#tag-322-securityresponseid) | String | Optional | Identifier for the Security List message |
+| 560 | [SecurityRequestResult](/fix/fields/tags-400-599#tag-560-securityrequestresult) | SecurityRequestResultCodeSet | Optional | Result of the Security Request identified by the SecurityReqID |
+| 1607 | [SecurityRejectReason](/fix/fields/tags-1600-1799#tag-1607-securityrejectreason) | SecurityRejectReasonCodeSet | Optional | Used to specify a rejection reason when SecurityResponseType (323) is equal to 1 (Invalid or unsupported request) or 5 (Request for instrument data not… |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 393 | [TotNoRelatedSym](/fix/fields/tags-200-399#tag-393-totnorelatedsym) | int | Optional | Used to indicate the total number of securities being returned for this request. Used in the event that message fragmentation is required. |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301-marketid) | Exchange | Optional | Identifies the market which lists and trades the instrument. |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300-marketsegmentid) | String | Optional | Identifies the segment of the market to which the specify trading rules and listing rules apply. The segment may indicate the venue, whether retail or… |
+| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893-lastfragment) | LastFragmentCodeSet | Optional | Indicates whether this is the last fragment in a sequence of message fragments. Only required where message has been fragmented. |
 | 146 | [SecListGrp](/fix/groups/sec-list-grp) | Repeating group | Optional |  |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 

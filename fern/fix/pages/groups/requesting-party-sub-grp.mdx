@@ -3,9 +3,15 @@ title: "RequestingPartySubGrp"
 subtitle: "Sub identifiers for the requesting party."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1661</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoRequestingPartySubIDs (1661)](/fix/fields/tags-1600-1799#tag-1661).
+<llms-only>
+Repeating group · NumInGroup 1661 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRequestingPartySubIDs (1661)](/fix/fields/tags-1600-1799#tag-1661-norequestingpartysubids).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1662 | [RequestingPartySubID](/fix/fields/tags-1600-1799#tag-1662) | String | Optional | Required when NoRequestingPartySubIDs &gt; 0. |
-| 1663 | [RequestingPartySubIDType](/fix/fields/tags-1600-1799#tag-1663) | PartySubIDTypeCodeSet | Optional | Required when NoRequestingPartySubIDs &gt; 0. |
+| 1662 | [RequestingPartySubID](/fix/fields/tags-1600-1799#tag-1662-requestingpartysubid) | String | Optional | Required when NoRequestingPartySubIDs &gt; 0. |
+| 1663 | [RequestingPartySubIDType](/fix/fields/tags-1600-1799#tag-1663-requestingpartysubidtype) | PartySubIDTypeCodeSet | Optional | Required when NoRequestingPartySubIDs &gt; 0. |
 
 </StickyTable>
 

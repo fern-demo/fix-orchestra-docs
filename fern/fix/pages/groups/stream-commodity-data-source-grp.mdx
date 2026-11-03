@@ -3,9 +3,15 @@ title: "StreamCommodityDataSourceGrp"
 subtitle: "StreamCommodityDataSourceGrp is a subcomponent of the StreamCommodity component used to specify sources of data, e.g. weather stations. The order of entry determines priority – first is the main source, second is fallback, third is second…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41280</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoStreamCommodityDataSources (41280)](/fix/fields/tags-41200-41399#tag-41280).
+<llms-only>
+Repeating group · NumInGroup 41280 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoStreamCommodityDataSources (41280)](/fix/fields/tags-41200-41399#tag-41280-nostreamcommoditydatasources).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41281 | [StreamCommodityDataSourceID](/fix/fields/tags-41200-41399#tag-41281) | String | Optional | Required if NoStreamCommodityDataSources(41280) &gt; 0. |
-| 41282 | [StreamCommodityDataSourceIDType](/fix/fields/tags-41200-41399#tag-41282) | StreamCommodityDataSourceIDTypeCodeSet | Optional | Required if NoStreamCommodityDataSources(41280) &gt; 0. |
+| 41281 | [StreamCommodityDataSourceID](/fix/fields/tags-41200-41399#tag-41281-streamcommoditydatasourceid) | String | Optional | Required if NoStreamCommodityDataSources(41280) &gt; 0. |
+| 41282 | [StreamCommodityDataSourceIDType](/fix/fields/tags-41200-41399#tag-41282-streamcommoditydatasourceidtype) | StreamCommodityDataSourceIDTypeCodeSet | Optional | Required if NoStreamCommodityDataSources(41280) &gt; 0. |
 
 </StickyTable>
 

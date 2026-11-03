@@ -3,9 +3,15 @@ title: "UnderlyingComplexEventTimes"
 subtitle: "The UnderlyingComplexEventTimes is a repeating subcomponent of the UnderlyingComplexEventDates component. It is used to further qualify any dates placed on the event and is used to specify time ranges for which a complex event is effective.…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2056</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingComplexEventTimes (2056)](/fix/fields/tags-2000-2199#tag-2056).
+<llms-only>
+Repeating group · NumInGroup 2056 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingComplexEventTimes (2056)](/fix/fields/tags-2000-2199#tag-2056-nounderlyingcomplexeventtimes).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2057 | [UnderlyingComplexEventStartTime](/fix/fields/tags-2000-2199#tag-2057) | UTCTimeOnly | Optional | Required if NoUnderlyingComplexEventTimes(2056) &gt; 0. |
-| 2058 | [UnderlyingComplexEventEndTime](/fix/fields/tags-2000-2199#tag-2058) | UTCTimeOnly | Optional | Required if NoUnderlyingComplexEventTimes(2056) &gt; 0. |
+| 2057 | [UnderlyingComplexEventStartTime](/fix/fields/tags-2000-2199#tag-2057-underlyingcomplexeventstarttime) | UTCTimeOnly | Optional | Required if NoUnderlyingComplexEventTimes(2056) &gt; 0. |
+| 2058 | [UnderlyingComplexEventEndTime](/fix/fields/tags-2000-2199#tag-2058-underlyingcomplexeventendtime) | UTCTimeOnly | Optional | Required if NoUnderlyingComplexEventTimes(2056) &gt; 0. |
 
 </StickyTable>
 

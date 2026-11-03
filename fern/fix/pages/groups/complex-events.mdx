@@ -3,9 +3,15 @@ title: "ComplexEvents"
 subtitle: "The ComplexEvent Group is a repeating block which allows specifying an unlimited number and types of advanced events, such as observation and pricing over the lifetime of an option, futures, commodities or equity swap contract. Use EvntGrp…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1483</Badge> <Badge intent="success" minimal>Added FIX.5.0SP1</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoComplexEvents (1483)](/fix/fields/tags-1400-1599#tag-1483).
+<llms-only>
+Repeating group · NumInGroup 1483 · Added FIX.5.0SP1
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoComplexEvents (1483)](/fix/fields/tags-1400-1599#tag-1483-nocomplexevents).
 
 ## Members
 
@@ -13,47 +19,47 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1484 | [ComplexEventType](/fix/fields/tags-1400-1599#tag-1484) | ComplexEventTypeCodeSet | Optional | Required if NoComplexEvents(1483) &gt; 0. |
-| 2117 | [ComplexOptPayoutPaySide](/fix/fields/tags-2000-2199#tag-2117) | PaymentPaySideCodeSet | Optional | Trade side of payout payer. |
-| 2118 | [ComplexOptPayoutReceiveSide](/fix/fields/tags-2000-2199#tag-2118) | PaymentPaySideCodeSet | Optional | Trade side of payout receiver. |
-| 2119 | [ComplexOptPayoutUnderlier](/fix/fields/tags-2000-2199#tag-2119) | String | Optional | Reference to the underlier whose payments are being passed through. |
-| 1485 | [ComplexOptPayoutAmount](/fix/fields/tags-1400-1599#tag-1485) | Amt | Optional | Cash amount indicating the pay out associated with an event. For binary options this is a fixed amount. |
-| 2120 | [ComplexOptPayoutPercentage](/fix/fields/tags-2000-2199#tag-2120) | Percentage | Optional | Percentage of observed price for calculating the payout associated with the event. |
-| 2121 | [ComplexOptPayoutTime](/fix/fields/tags-2000-2199#tag-2121) | ComplexOptPayoutTimeCodeSet | Optional | Specifies when the payout is to occur. |
-| 2122 | [ComplexOptPayoutCurrency](/fix/fields/tags-2000-2199#tag-2122) | Currency | Optional | Specifies the currency of the payout amount. Uses ISO 4217 currency codes. |
-| 1486 | [ComplexEventPrice](/fix/fields/tags-1400-1599#tag-1486) | Price | Optional | Specifies the price at which the complex event takes effect. Impact of the event price is determined by the ComplexEventType(1484). |
-| 2123 | [ComplexEventPricePercentage](/fix/fields/tags-2000-2199#tag-2123) | Percentage | Optional | Specifies the price percentage at which the complex event takes effect. Impact of the event price is determined by the ComplexEventType(1484). |
-| 1487 | [ComplexEventPriceBoundaryMethod](/fix/fields/tags-1400-1599#tag-1487) | ComplexEventPriceBoundaryMethodCodeSet | Optional | Specifies the boundary condition to be used for the event price relative to the underlying price at the point the complex event outcome takes effect as… |
-| 1488 | [ComplexEventPriceBoundaryPrecision](/fix/fields/tags-1400-1599#tag-1488) | Percentage | Optional | Used in combination with ComplexEventPriceBoundaryMethod to specify the percentage of the strike price in relation to the underlying price. The percentage is… |
-| 1489 | [ComplexEventPriceTimeType](/fix/fields/tags-1400-1599#tag-1489) | ComplexEventPriceTimeTypeCodeSet | Optional | Specifies when the complex event outcome takes effect. The outcome of a complex event is a payout or barrier action as specified by the ComplexEventType(1484). |
-| 1490 | [ComplexEventCondition](/fix/fields/tags-1400-1599#tag-1490) | ComplexEventConditionCodeSet | Optional | Conditionally required when there are more than one ComplexEvents occurrences. A chain of ComplexEvents must be linked together through use of the… |
+| 1484 | [ComplexEventType](/fix/fields/tags-1400-1599#tag-1484-complexeventtype) | ComplexEventTypeCodeSet | Optional | Required if NoComplexEvents(1483) &gt; 0. |
+| 2117 | [ComplexOptPayoutPaySide](/fix/fields/tags-2000-2199#tag-2117-complexoptpayoutpayside) | PaymentPaySideCodeSet | Optional | Trade side of payout payer. |
+| 2118 | [ComplexOptPayoutReceiveSide](/fix/fields/tags-2000-2199#tag-2118-complexoptpayoutreceiveside) | PaymentPaySideCodeSet | Optional | Trade side of payout receiver. |
+| 2119 | [ComplexOptPayoutUnderlier](/fix/fields/tags-2000-2199#tag-2119-complexoptpayoutunderlier) | String | Optional | Reference to the underlier whose payments are being passed through. |
+| 1485 | [ComplexOptPayoutAmount](/fix/fields/tags-1400-1599#tag-1485-complexoptpayoutamount) | Amt | Optional | Cash amount indicating the pay out associated with an event. For binary options this is a fixed amount. |
+| 2120 | [ComplexOptPayoutPercentage](/fix/fields/tags-2000-2199#tag-2120-complexoptpayoutpercentage) | Percentage | Optional | Percentage of observed price for calculating the payout associated with the event. |
+| 2121 | [ComplexOptPayoutTime](/fix/fields/tags-2000-2199#tag-2121-complexoptpayouttime) | ComplexOptPayoutTimeCodeSet | Optional | Specifies when the payout is to occur. |
+| 2122 | [ComplexOptPayoutCurrency](/fix/fields/tags-2000-2199#tag-2122-complexoptpayoutcurrency) | Currency | Optional | Specifies the currency of the payout amount. Uses ISO 4217 currency codes. |
+| 1486 | [ComplexEventPrice](/fix/fields/tags-1400-1599#tag-1486-complexeventprice) | Price | Optional | Specifies the price at which the complex event takes effect. Impact of the event price is determined by the ComplexEventType(1484). |
+| 2123 | [ComplexEventPricePercentage](/fix/fields/tags-2000-2199#tag-2123-complexeventpricepercentage) | Percentage | Optional | Specifies the price percentage at which the complex event takes effect. Impact of the event price is determined by the ComplexEventType(1484). |
+| 1487 | [ComplexEventPriceBoundaryMethod](/fix/fields/tags-1400-1599#tag-1487-complexeventpriceboundarymethod) | ComplexEventPriceBoundaryMethodCodeSet | Optional | Specifies the boundary condition to be used for the event price relative to the underlying price at the point the complex event outcome takes effect as… |
+| 1488 | [ComplexEventPriceBoundaryPrecision](/fix/fields/tags-1400-1599#tag-1488-complexeventpriceboundaryprecision) | Percentage | Optional | Used in combination with ComplexEventPriceBoundaryMethod to specify the percentage of the strike price in relation to the underlying price. The percentage is… |
+| 1489 | [ComplexEventPriceTimeType](/fix/fields/tags-1400-1599#tag-1489-complexeventpricetimetype) | ComplexEventPriceTimeTypeCodeSet | Optional | Specifies when the complex event outcome takes effect. The outcome of a complex event is a payout or barrier action as specified by the ComplexEventType(1484). |
+| 1490 | [ComplexEventCondition](/fix/fields/tags-1400-1599#tag-1490-complexeventcondition) | ComplexEventConditionCodeSet | Optional | Conditionally required when there are more than one ComplexEvents occurrences. A chain of ComplexEvents must be linked together through use of the… |
 | 1491 | [ComplexEventDates](/fix/groups/complex-event-dates) | Repeating group | Optional | The ComplexEventDate and ComplexEventTime components are used to constrain a complex event to a specific date range or time range. If specified the event is… |
-| 2124 | [ComplexEventCurrencyOne](/fix/fields/tags-2000-2199#tag-2124) | Currency | Optional | Specifies the first or only reference currency of the trade. Uses ISO 4217 currency codes. |
-| 2125 | [ComplexEventCurrencyTwo](/fix/fields/tags-2000-2199#tag-2125) | Currency | Optional | Specifies the second reference currencyof the trade. Uses ISO 4217 currency codes. |
-| 2126 | [ComplexEventQuoteBasis](/fix/fields/tags-2000-2199#tag-2126) | ComplexEventQuoteBasisCodeSet | Optional | For foreign exchange Quanto option feature. |
-| 2127 | [ComplexEventFixedFXRate](/fix/fields/tags-2000-2199#tag-2127) | float | Optional | Specifies the fixed FX rate alternative for FX Quantro options. |
-| 2407 | [ComplexEventSpotRate](/fix/fields/tags-2400-2599#tag-2407) | Price | Optional | FX spot rate. |
-| 2408 | [ComplexEventForwardPoints](/fix/fields/tags-2400-2599#tag-2408) | PriceOffset | Optional | FX forward points added to spot rate. May be a negative value. |
-| 2128 | [ComplexEventDeterminationMethod](/fix/fields/tags-2000-2199#tag-2128) | String | Optional | Specifies the method according to which an amount or a date is determined. See http://www.fpml.org/coding-scheme/determination-method for values. |
-| 2129 | [ComplexEventCalculationAgent](/fix/fields/tags-2000-2199#tag-2129) | ProvisionCalculationAgentCodeSet | Optional | Used to identify the calculation agent. |
-| 2130 | [ComplexEventStrikePrice](/fix/fields/tags-2000-2199#tag-2130) | Price | Optional | Upper strike price for Asian option feature. Strike percentage for a Strike Spread. |
-| 2131 | [ComplexEventStrikeFactor](/fix/fields/tags-2000-2199#tag-2131) | float | Optional | Strike factor for Asian option feature. Upper strike percentage for a Strike Spread. |
-| 2132 | [ComplexEventStrikeNumberOfOptions](/fix/fields/tags-2000-2199#tag-2132) | int | Optional | Upper string number of options for a Strike Spread. |
+| 2124 | [ComplexEventCurrencyOne](/fix/fields/tags-2000-2199#tag-2124-complexeventcurrencyone) | Currency | Optional | Specifies the first or only reference currency of the trade. Uses ISO 4217 currency codes. |
+| 2125 | [ComplexEventCurrencyTwo](/fix/fields/tags-2000-2199#tag-2125-complexeventcurrencytwo) | Currency | Optional | Specifies the second reference currencyof the trade. Uses ISO 4217 currency codes. |
+| 2126 | [ComplexEventQuoteBasis](/fix/fields/tags-2000-2199#tag-2126-complexeventquotebasis) | ComplexEventQuoteBasisCodeSet | Optional | For foreign exchange Quanto option feature. |
+| 2127 | [ComplexEventFixedFXRate](/fix/fields/tags-2000-2199#tag-2127-complexeventfixedfxrate) | float | Optional | Specifies the fixed FX rate alternative for FX Quantro options. |
+| 2407 | [ComplexEventSpotRate](/fix/fields/tags-2400-2599#tag-2407-complexeventspotrate) | Price | Optional | FX spot rate. |
+| 2408 | [ComplexEventForwardPoints](/fix/fields/tags-2400-2599#tag-2408-complexeventforwardpoints) | PriceOffset | Optional | FX forward points added to spot rate. May be a negative value. |
+| 2128 | [ComplexEventDeterminationMethod](/fix/fields/tags-2000-2199#tag-2128-complexeventdeterminationmethod) | String | Optional | Specifies the method according to which an amount or a date is determined. See http://www.fpml.org/coding-scheme/determination-method for values. |
+| 2129 | [ComplexEventCalculationAgent](/fix/fields/tags-2000-2199#tag-2129-complexeventcalculationagent) | ProvisionCalculationAgentCodeSet | Optional | Used to identify the calculation agent. |
+| 2130 | [ComplexEventStrikePrice](/fix/fields/tags-2000-2199#tag-2130-complexeventstrikeprice) | Price | Optional | Upper strike price for Asian option feature. Strike percentage for a Strike Spread. |
+| 2131 | [ComplexEventStrikeFactor](/fix/fields/tags-2000-2199#tag-2131-complexeventstrikefactor) | float | Optional | Strike factor for Asian option feature. Upper strike percentage for a Strike Spread. |
+| 2132 | [ComplexEventStrikeNumberOfOptions](/fix/fields/tags-2000-2199#tag-2132-complexeventstrikenumberofoptions) | int | Optional | Upper string number of options for a Strike Spread. |
 | 41013 | [ComplexEventRateSourceGrp](/fix/groups/complex-event-rate-source-grp) | Repeating group | Optional | The ComplexEventRateSourceGrp is a subcomponent of ComplexEvents for specifying primary and secondary rate sources. |
 | | [ComplexEventRelativeDate](/fix/components/complex-event-relative-date) | Component | Optional | The ComplexEventRelativeDate is a subcomponent of ComplexEvents for specifying the event date and time for an FX or Calendar Spread option or the payout date… |
 | 41010 | [ComplexEventPeriodGrp](/fix/groups/complex-event-period-grp) | Repeating group | Optional | The ComplexEventPeriodGrp is a subcomponent of ComplexEvents for specifying the periods for an Asian, Barrier, Knock or Strike Schedule option feature. |
-| 2133 | [ComplexEventCreditEventsXIDRef](/fix/fields/tags-2000-2199#tag-2133) | XIDREF | Optional | Reference to credit event table elsewhere in the message. |
-| 2134 | [ComplexEventCreditEventNotifyingParty](/fix/fields/tags-2000-2199#tag-2134) | ComplexEventCreditEventNotifyingPartyCodeSet | Optional | The notifying party is the party that notifies the other party when a credit event has occurred by means of a credit event notice. If more than one party is… |
-| 2135 | [ComplexEventCreditEventBusinessCenter](/fix/fields/tags-2000-2199#tag-2135) | String | Optional | The local business center for which the credit event is to be determined. The inclusion of this business center implies that Greenwich Mean Time in Section 3.3… |
-| 2136 | [ComplexEventCreditEventStandardSources](/fix/fields/tags-2000-2199#tag-2136) | Boolean | Optional | When this element is specified and set to 'Y', indicates that ISDA defined Standard Public Sources are applicable. |
-| 2137 | [ComplexEventCreditEventMinimumSources](/fix/fields/tags-2000-2199#tag-2137) | int | Optional | The minimum number of the specified public information sources that must publish information that reasonably confirms that a credit event has occurred. The… |
+| 2133 | [ComplexEventCreditEventsXIDRef](/fix/fields/tags-2000-2199#tag-2133-complexeventcrediteventsxidref) | XIDREF | Optional | Reference to credit event table elsewhere in the message. |
+| 2134 | [ComplexEventCreditEventNotifyingParty](/fix/fields/tags-2000-2199#tag-2134-complexeventcrediteventnotifyingparty) | ComplexEventCreditEventNotifyingPartyCodeSet | Optional | The notifying party is the party that notifies the other party when a credit event has occurred by means of a credit event notice. If more than one party is… |
+| 2135 | [ComplexEventCreditEventBusinessCenter](/fix/fields/tags-2000-2199#tag-2135-complexeventcrediteventbusinesscenter) | String | Optional | The local business center for which the credit event is to be determined. The inclusion of this business center implies that Greenwich Mean Time in Section 3.3… |
+| 2136 | [ComplexEventCreditEventStandardSources](/fix/fields/tags-2000-2199#tag-2136-complexeventcrediteventstandardsources) | Boolean | Optional | When this element is specified and set to 'Y', indicates that ISDA defined Standard Public Sources are applicable. |
+| 2137 | [ComplexEventCreditEventMinimumSources](/fix/fields/tags-2000-2199#tag-2137-complexeventcrediteventminimumsources) | int | Optional | The minimum number of the specified public information sources that must publish information that reasonably confirms that a credit event has occurred. The… |
 | 41029 | [ComplexEventCreditEventSourceGrp](/fix/groups/complex-event-credit-event-source-grp) | Repeating group | Optional | The ComplexEventCreditEventSourceGrp is a repeating subcomponent of the ComplexEvents component used to specify the particular newspapers or electronic news… |
 | 40997 | [ComplexEventCreditEventGrp](/fix/groups/complex-event-credit-event-grp) | Repeating group | Optional | The ComplexEventCreditEventGrp is a repeating component within the ComplexEventGrp component used to report applicable option credit events. |
-| 2597 | [ComplexEventFuturesPriceValuation](/fix/fields/tags-2400-2599#tag-2597) | Boolean | Optional | Indicates whether the official settlement price as announced by the related exchange is applicable, in accordance with the ISDA 2002 definitions. Applicable… |
-| 2598 | [ComplexEventOptionsPriceValuation](/fix/fields/tags-2400-2599#tag-2598) | Boolean | Optional | Indicates whether the official settlement price as announced by the related exchange is applicable, in accordance with the ISDA 2002 definitions. Applicable… |
-| 2599 | [ComplexEventPVFinalPriceElectionFallback](/fix/fields/tags-2400-2599#tag-2599) | ComplexEventPVFinalPriceElectionFallbackCodeSet | Optional | Specifies the fallback provisions for the hedging party in the determination of the final settlement price. |
-| 2138 | [ComplexEventXID](/fix/fields/tags-2000-2199#tag-2138) | XID | Optional | Identifier of this complex event for cross referencing elsewhere in the message. |
-| 2139 | [ComplexEventXIDRef](/fix/fields/tags-2000-2199#tag-2139) | XIDREF | Optional | Reference to a complex event elsewhere in the message. |
+| 2597 | [ComplexEventFuturesPriceValuation](/fix/fields/tags-2400-2599#tag-2597-complexeventfuturespricevaluation) | Boolean | Optional | Indicates whether the official settlement price as announced by the related exchange is applicable, in accordance with the ISDA 2002 definitions. Applicable… |
+| 2598 | [ComplexEventOptionsPriceValuation](/fix/fields/tags-2400-2599#tag-2598-complexeventoptionspricevaluation) | Boolean | Optional | Indicates whether the official settlement price as announced by the related exchange is applicable, in accordance with the ISDA 2002 definitions. Applicable… |
+| 2599 | [ComplexEventPVFinalPriceElectionFallback](/fix/fields/tags-2400-2599#tag-2599-complexeventpvfinalpriceelectionfallback) | ComplexEventPVFinalPriceElectionFallbackCodeSet | Optional | Specifies the fallback provisions for the hedging party in the determination of the final settlement price. |
+| 2138 | [ComplexEventXID](/fix/fields/tags-2000-2199#tag-2138-complexeventxid) | XID | Optional | Identifier of this complex event for cross referencing elsewhere in the message. |
+| 2139 | [ComplexEventXIDRef](/fix/fields/tags-2000-2199#tag-2139-complexeventxidref) | XIDREF | Optional | Reference to a complex event elsewhere in the message. |
 
 </StickyTable>
 

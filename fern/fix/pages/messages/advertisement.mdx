@@ -3,7 +3,13 @@ title: "Advertisement"
 subtitle: "Advertisement messages are used to announce completed transactions. The advertisement message can be transmitted in various transaction types; NEW, CANCEL and REPLACE. All message types other than NEW modify the state of a previously…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType 7</Badge> <Badge intent="note" minimal>Indication</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.2.7</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType 7 · Indication · Pre Trade · Added FIX.2.7
+</llms-only>
 
 ## Message structure
 
@@ -12,29 +18,29 @@ subtitle: "Advertisement messages are used to announce completed transactions. T
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 2 | [AdvId](/fix/fields/tags-0-199#tag-2) | String | **Required** | Unique identifier of advertisement message. (Prior to FIX 4.1 this field was of type int) |
-| 5 | [AdvTransType](/fix/fields/tags-0-199#tag-5) | AdvTransTypeCodeSet | **Required** | Identifies advertisement message transaction type |
-| 3 | [AdvRefID](/fix/fields/tags-0-199#tag-3) | String | Optional | Required for Cancel and Replace AdvTransType messages |
+| 2 | [AdvId](/fix/fields/tags-0-199#tag-2-advid) | String | **Required** | Unique identifier of advertisement message. (Prior to FIX 4.1 this field was of type int) |
+| 5 | [AdvTransType](/fix/fields/tags-0-199#tag-5-advtranstype) | AdvTransTypeCodeSet | **Required** | Identifies advertisement message transaction type |
+| 3 | [AdvRefID](/fix/fields/tags-0-199#tag-3-advrefid) | String | Optional | Required for Cancel and Replace AdvTransType messages |
 | | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | | [InstrumentExtension](/fix/components/instrument-extension) | Component | Optional | The InstrumentExtension component block identifies additional security attributes that are more commonly found for Fixed Income securities. |
 | | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This… |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
 | 1647 | [RelatedInstrumentGrp](/fix/groups/related-instrument-grp) | Repeating group | Optional | The RelatedInstrumentGrp is a repeating component at the same hierarchical level as the Instrument component, describing relationships and linkages between the… |
-| 4 | [AdvSide](/fix/fields/tags-0-199#tag-4) | AdvSideCodeSet | **Required** | Broker's side of advertised trade |
-| 53 | [Quantity](/fix/fields/tags-0-199#tag-53) | Qty | **Required** | Overall/total quantity (e.g. number of shares) (Prior to FIX 4.2 this field was of type int) |
-| 854 | [QtyType](/fix/fields/tags-800-999#tag-854) | QtyTypeCodeSet | Optional | Type of quantity specified in quantity field. ContractMultiplier (tag 231) is required when QtyType = 1 (Contracts). UnitOfMeasure (tag 996) and TimeUnit (tag… |
-| 44 | [Price](/fix/fields/tags-0-199#tag-44) | Price | Optional | Price per unit of quantity (e.g. per share) |
-| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
-| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | Optional | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
-| 149 | [URLLink](/fix/fields/tags-0-199#tag-149) | String | Optional | A URL (Uniform Resource Locator) link to additional information (i.e. http://www.XYZ.com/research.html) |
-| 30 | [LastMkt](/fix/fields/tags-0-199#tag-30) | Exchange | Optional | Market of execution for last fill, or an indication of the market where an order was routed Valid values: See "Appendix 6-C" |
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
+| 4 | [AdvSide](/fix/fields/tags-0-199#tag-4-advside) | AdvSideCodeSet | **Required** | Broker's side of advertised trade |
+| 53 | [Quantity](/fix/fields/tags-0-199#tag-53-quantity) | Qty | **Required** | Overall/total quantity (e.g. number of shares) (Prior to FIX 4.2 this field was of type int) |
+| 854 | [QtyType](/fix/fields/tags-800-999#tag-854-qtytype) | QtyTypeCodeSet | Optional | Type of quantity specified in quantity field. ContractMultiplier (tag 231) is required when QtyType = 1 (Contracts). UnitOfMeasure (tag 996) and TimeUnit (tag… |
+| 44 | [Price](/fix/fields/tags-0-199#tag-44-price) | Price | Optional | Price per unit of quantity (e.g. per share) |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15-currency) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
+| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75-tradedate) | LocalMktDate | Optional | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 149 | [URLLink](/fix/fields/tags-0-199#tag-149-urllink) | String | Optional | A URL (Uniform Resource Locator) link to additional information (i.e. http://www.XYZ.com/research.html) |
+| 30 | [LastMkt](/fix/fields/tags-0-199#tag-30-lastmkt) | Exchange | Optional | Market of execution for last fill, or an indication of the market where an order was routed Valid values: See "Appendix 6-C" |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336-tradingsessionid) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625-tradingsessionsubid) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
 | 215 | [RoutingGrp](/fix/groups/routing-grp) | Repeating group | Optional | The RoutingGrp is used to allow the application message sender to instruct the intermediary distributing the message who to further send the application message… |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 

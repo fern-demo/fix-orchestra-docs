@@ -3,9 +3,15 @@ title: "PartyDetailAckGrp"
 subtitle: "The PartyDetailAckGrp component is used in the PartyDetailsDefinitionRequestAck(35=CY) message to provide the status of each action (add, modify or delete) requested by the PartyDetailsDefinitionRequest(35=CX) message. The…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1676</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoPartyUpdates (1676)](/fix/fields/tags-1600-1799#tag-1676).
+<llms-only>
+Repeating group · NumInGroup 1676 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPartyUpdates (1676)](/fix/fields/tags-1600-1799#tag-1676-nopartyupdates).
 
 ## Members
 
@@ -13,12 +19,12 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1324 | [ListUpdateAction](/fix/fields/tags-1200-1399#tag-1324) | ListUpdateActionCodeSet | Optional | Required if NoPartyUpdates(1676) &gt; 0. |
-| 1879 | [PartyDetailDefinitionStatus](/fix/fields/tags-1800-1999#tag-1879) | PartyDetailDefinitionStatusCodeSet | Optional | Required if NoPartyUpdates(1676) &gt; 0. |
-| 1880 | [PartyDetailDefinitionResult](/fix/fields/tags-1800-1999#tag-1880) | PartyDetailRequestResultCodeSet | Optional | Result of party detail definition for one party. |
-| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328) | String | Optional | Identifies the reason for rejection. |
-| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedRejectText(1665) field. |
-| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. If used, the… |
+| 1324 | [ListUpdateAction](/fix/fields/tags-1200-1399#tag-1324-listupdateaction) | ListUpdateActionCodeSet | Optional | Required if NoPartyUpdates(1676) &gt; 0. |
+| 1879 | [PartyDetailDefinitionStatus](/fix/fields/tags-1800-1999#tag-1879-partydetaildefinitionstatus) | PartyDetailDefinitionStatusCodeSet | Optional | Required if NoPartyUpdates(1676) &gt; 0. |
+| 1880 | [PartyDetailDefinitionResult](/fix/fields/tags-1800-1999#tag-1880-partydetaildefinitionresult) | PartyDetailRequestResultCodeSet | Optional | Result of party detail definition for one party. |
+| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328-rejecttext) | String | Optional | Identifies the reason for rejection. |
+| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664-encodedrejecttextlen) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedRejectText(1665) field. |
+| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665-encodedrejecttext) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. If used, the… |
 | 1671 | [PartyDetailGrp](/fix/groups/party-detail-grp) | Repeating group | Optional | Contains details for a party, including related parties and alternative party identifiers. |
 
 </StickyTable>

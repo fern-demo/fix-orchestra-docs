@@ -3,11 +3,17 @@ title: "DeliveryScheduleGrp"
 subtitle: "The DeliveryScheduleGrp is a repeating subcomponent of the Stream component used to detail step schedules associated with a delivery stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41037</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Repeating group · NumInGroup 41037 · Added FIX.5.0SP2
+</llms-only>
 
 Note: Holiday schedule is standard for the country and time zone and need not be specified.
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoDeliverySchedules (41037)](/fix/fields/tags-41000-41199#tag-41037).
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoDeliverySchedules (41037)](/fix/fields/tags-41000-41199#tag-41037-nodeliveryschedules).
 
 ## Members
 
@@ -15,19 +21,19 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41038 | [DeliveryScheduleType](/fix/fields/tags-41000-41199#tag-41038) | DeliveryScheduleTypeCodeSet | Optional | Required if NoDeliverySchedules(41037) &gt; 0. |
-| 41039 | [DeliveryScheduleXID](/fix/fields/tags-41000-41199#tag-41039) | XID | Optional | Identifier for this instance of delivery schedule for cross referencing elsewhere in the message. |
-| 41040 | [DeliveryScheduleNotional](/fix/fields/tags-41000-41199#tag-41040) | Qty | Optional | Physical delivery quantity. |
-| 41041 | [DeliveryScheduleNotionalUnitOfMeasure](/fix/fields/tags-41000-41199#tag-41041) | UnitOfMeasureCodeSet | Optional | Specifies the delivery quantity unit of measure (UOM). |
-| 41042 | [DeliveryScheduleNotionalCommodityFrequency](/fix/fields/tags-41000-41199#tag-41042) | StreamNotionalCommodityFrequencyCodeSet | Optional | The frequency of notional delivery. |
-| 41043 | [DeliveryScheduleNegativeTolerance](/fix/fields/tags-41000-41199#tag-41043) | float | Optional | Specifies the negative tolerance value. The value may be an absolute quantity or a percentage, as specified in DeliveryScheduleToleranceType(41046). Percentage… |
-| 41044 | [DeliverySchedulePositiveTolerance](/fix/fields/tags-41000-41199#tag-41044) | float | Optional | Specifies the positive tolerance value. The value may be an absolute quantity or a percentage, as specified in DeliveryScheduleToleranceType(41046). Value may… |
-| 41045 | [DeliveryScheduleToleranceUnitOfMeasure](/fix/fields/tags-41000-41199#tag-41045) | UnitOfMeasureCodeSet | Optional | Specifies the tolerance value's unit of measure (UOM). |
-| 41046 | [DeliveryScheduleToleranceType](/fix/fields/tags-41000-41199#tag-41046) | DeliveryScheduleToleranceTypeCodeSet | Optional | Conditionally required when DeliveryScheduleNegativeTolerance(41043) or DeliverySchedulePositiveTolerance(41044) is specified. |
-| 41047 | [DeliveryScheduleSettlCountry](/fix/fields/tags-41000-41199#tag-41047) | Country | Optional | Specifies the country where delivery takes place. Uses ISO 3166 2-character country code. |
-| 41048 | [DeliveryScheduleSettlTimeZone](/fix/fields/tags-41000-41199#tag-41048) | String | Optional | Delivery timezone specified as "prevailing" rather than "standard" or "daylight". See http://www.fixtradingcommunity.org/codelists#Prevailing\_Timezones for code… |
-| 41049 | [DeliveryScheduleSettlFlowType](/fix/fields/tags-41000-41199#tag-41049) | DeliveryScheduleSettlFlowTypeCodeSet | Optional | Specifies the commodity delivery flow type. |
-| 41050 | [DeliveryScheduleSettlHolidaysProcessingInstruction](/fix/fields/tags-41000-41199#tag-41050) | DeliveryScheduleSettlHolidaysProcessingInstructionCodeSet | Optional | Indicates whether holidays are included in the settlement periods. Required for electricity contracts. |
+| 41038 | [DeliveryScheduleType](/fix/fields/tags-41000-41199#tag-41038-deliveryscheduletype) | DeliveryScheduleTypeCodeSet | Optional | Required if NoDeliverySchedules(41037) &gt; 0. |
+| 41039 | [DeliveryScheduleXID](/fix/fields/tags-41000-41199#tag-41039-deliveryschedulexid) | XID | Optional | Identifier for this instance of delivery schedule for cross referencing elsewhere in the message. |
+| 41040 | [DeliveryScheduleNotional](/fix/fields/tags-41000-41199#tag-41040-deliveryschedulenotional) | Qty | Optional | Physical delivery quantity. |
+| 41041 | [DeliveryScheduleNotionalUnitOfMeasure](/fix/fields/tags-41000-41199#tag-41041-deliveryschedulenotionalunitofmeasure) | UnitOfMeasureCodeSet | Optional | Specifies the delivery quantity unit of measure (UOM). |
+| 41042 | [DeliveryScheduleNotionalCommodityFrequency](/fix/fields/tags-41000-41199#tag-41042-deliveryschedulenotionalcommodityfrequency) | StreamNotionalCommodityFrequencyCodeSet | Optional | The frequency of notional delivery. |
+| 41043 | [DeliveryScheduleNegativeTolerance](/fix/fields/tags-41000-41199#tag-41043-deliveryschedulenegativetolerance) | float | Optional | Specifies the negative tolerance value. The value may be an absolute quantity or a percentage, as specified in DeliveryScheduleToleranceType(41046). Percentage… |
+| 41044 | [DeliverySchedulePositiveTolerance](/fix/fields/tags-41000-41199#tag-41044-deliveryschedulepositivetolerance) | float | Optional | Specifies the positive tolerance value. The value may be an absolute quantity or a percentage, as specified in DeliveryScheduleToleranceType(41046). Value may… |
+| 41045 | [DeliveryScheduleToleranceUnitOfMeasure](/fix/fields/tags-41000-41199#tag-41045-deliveryscheduletoleranceunitofmeasure) | UnitOfMeasureCodeSet | Optional | Specifies the tolerance value's unit of measure (UOM). |
+| 41046 | [DeliveryScheduleToleranceType](/fix/fields/tags-41000-41199#tag-41046-deliveryscheduletolerancetype) | DeliveryScheduleToleranceTypeCodeSet | Optional | Conditionally required when DeliveryScheduleNegativeTolerance(41043) or DeliverySchedulePositiveTolerance(41044) is specified. |
+| 41047 | [DeliveryScheduleSettlCountry](/fix/fields/tags-41000-41199#tag-41047-deliveryschedulesettlcountry) | Country | Optional | Specifies the country where delivery takes place. Uses ISO 3166 2-character country code. |
+| 41048 | [DeliveryScheduleSettlTimeZone](/fix/fields/tags-41000-41199#tag-41048-deliveryschedulesettltimezone) | String | Optional | Delivery timezone specified as "prevailing" rather than "standard" or "daylight". See http://www.fixtradingcommunity.org/codelists#Prevailing\_Timezones for code… |
+| 41049 | [DeliveryScheduleSettlFlowType](/fix/fields/tags-41000-41199#tag-41049-deliveryschedulesettlflowtype) | DeliveryScheduleSettlFlowTypeCodeSet | Optional | Specifies the commodity delivery flow type. |
+| 41050 | [DeliveryScheduleSettlHolidaysProcessingInstruction](/fix/fields/tags-41000-41199#tag-41050-deliveryschedulesettlholidaysprocessinginstruction) | DeliveryScheduleSettlHolidaysProcessingInstructionCodeSet | Optional | Indicates whether holidays are included in the settlement periods. Required for electricity contracts. |
 | 41051 | [DeliveryScheduleSettlDayGrp](/fix/groups/delivery-schedule-settl-day-grp) | Repeating group | Optional | The DeliveryScheduleSettlDayGrp is a repeating subcomponent of the DeliveryScheduleGrp component used to detail commodity delivery days. |
 
 </StickyTable>

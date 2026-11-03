@@ -3,7 +3,13 @@ title: "DividendConditions"
 subtitle: "The DividendConditions component is a subcomponent of PaymentStream used to specify the conditions' valuations and dates governing the payment of dividends."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,30 +17,30 @@ subtitle: "The DividendConditions component is a subcomponent of PaymentStream u
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42245 | [DividendReinvestmentIndicator](/fix/fields/tags-42200-42399#tag-42245) | Boolean | Optional | Indicates whether the dividend will be reinvested. |
-| 42246 | [DividendEntitlementEvent](/fix/fields/tags-42200-42399#tag-42246) | DividendEntitlementEventCodeSet | Optional | Defines the contract event which the receiver of the derivative is entitled to the dividend. |
-| 42247 | [DividendAmountType](/fix/fields/tags-42200-42399#tag-42247) | DividendAmountTypeCodeSet | Optional | Indicates how the gross cash dividend amount per share is determined. |
-| 42248 | [DividendUnderlierRefID](/fix/fields/tags-42200-42399#tag-42248) | String | Optional | References the dividend underlier through the instrument's UnderlyingSecurityID(309) which must be fully specified in an instance of the UnderlyingInstrument… |
+| 42245 | [DividendReinvestmentIndicator](/fix/fields/tags-42200-42399#tag-42245-dividendreinvestmentindicator) | Boolean | Optional | Indicates whether the dividend will be reinvested. |
+| 42246 | [DividendEntitlementEvent](/fix/fields/tags-42200-42399#tag-42246-dividendentitlementevent) | DividendEntitlementEventCodeSet | Optional | Defines the contract event which the receiver of the derivative is entitled to the dividend. |
+| 42247 | [DividendAmountType](/fix/fields/tags-42200-42399#tag-42247-dividendamounttype) | DividendAmountTypeCodeSet | Optional | Indicates how the gross cash dividend amount per share is determined. |
+| 42248 | [DividendUnderlierRefID](/fix/fields/tags-42200-42399#tag-42248-dividendunderlierrefid) | String | Optional | References the dividend underlier through the instrument's UnderlyingSecurityID(309) which must be fully specified in an instance of the UnderlyingInstrument… |
 | 42274 | [DividendPeriodGrp](/fix/groups/dividend-period-grp) | Repeating group | Optional | DividendPeriodGrp is a repeating subcomponent within the DividendConditions component. It is used to specify the valuation and payments dates of the dividend… |
-| 42249 | [ExtraordinaryDividendPartySide](/fix/fields/tags-42200-42399#tag-42249) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the party through its side in the trade who makes the determination whether dividends are extraordinary in relation to normal levels. |
-| 42250 | [ExtraordinaryDividendAmountType](/fix/fields/tags-42200-42399#tag-42250) | DividendAmountTypeCodeSet | Optional | Indicates how the extraordinary gross cash dividend per share is determined. |
-| 42251 | [ExtraordinaryDividendCurrency](/fix/fields/tags-42200-42399#tag-42251) | Currency | Optional | The currency in which the excess dividend is denominated. Uses ISO 4217 currency codes. |
-| 42252 | [ExtraordinaryDividendDeterminationMethod](/fix/fields/tags-42200-42399#tag-42252) | String | Optional | Specifies the method in which the excess amount is determined. See http://www.fpml.org/coding-scheme/determination-method for values. |
+| 42249 | [ExtraordinaryDividendPartySide](/fix/fields/tags-42200-42399#tag-42249-extraordinarydividendpartyside) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the party through its side in the trade who makes the determination whether dividends are extraordinary in relation to normal levels. |
+| 42250 | [ExtraordinaryDividendAmountType](/fix/fields/tags-42200-42399#tag-42250-extraordinarydividendamounttype) | DividendAmountTypeCodeSet | Optional | Indicates how the extraordinary gross cash dividend per share is determined. |
+| 42251 | [ExtraordinaryDividendCurrency](/fix/fields/tags-42200-42399#tag-42251-extraordinarydividendcurrency) | Currency | Optional | The currency in which the excess dividend is denominated. Uses ISO 4217 currency codes. |
+| 42252 | [ExtraordinaryDividendDeterminationMethod](/fix/fields/tags-42200-42399#tag-42252-extraordinarydividenddeterminationmethod) | String | Optional | Specifies the method in which the excess amount is determined. See http://www.fpml.org/coding-scheme/determination-method for values. |
 | | [DividendFXTriggerDate](/fix/components/dividend-fx-trigger-date) | Component | Optional | The DividendFXTriggerDate component is a subcomponent of DividendConditions used to report the dividend date when a foreign exchange trade is triggered. |
 | | [DividendAccrualFloatingRate](/fix/components/dividend-accrual-floating-rate) | Component | Optional | The DividendAccrualFloatingRate component is a subcomponent of DividendConditions used to define the dividend accrual floating rate attributes of dividend… |
-| 42253 | [DividendAccrualFixedRate](/fix/fields/tags-42200-42399#tag-42253) | Percentage | Optional | The dividend accrual fixed rate per annum expressed as a decimal. A value of 5% would be represented as "0.05". |
+| 42253 | [DividendAccrualFixedRate](/fix/fields/tags-42200-42399#tag-42253-dividendaccrualfixedrate) | Percentage | Optional | The dividend accrual fixed rate per annum expressed as a decimal. A value of 5% would be represented as "0.05". |
 | | [DividendAccrualPaymentDate](/fix/components/dividend-accrual-payment-date) | Component | Optional | The DividendAccrualPaymentDate component is a subcomponent of DividendConditions used to report the dividend accrual payment date. |
-| 42254 | [DividendCompoundingMethod](/fix/fields/tags-42200-42399#tag-42254) | PaymentStreamCompoundingMethodCodeSet | Optional | The compounding method to be used when more than one dividend period contributes to a single payment. |
-| 42255 | [DividendNumOfIndexUnits](/fix/fields/tags-42200-42399#tag-42255) | int | Optional | The number of index units applicable to dividends. |
-| 42256 | [DividendCashPercentage](/fix/fields/tags-42200-42399#tag-42256) | Percentage | Optional | Declared cash dividend percentage. A value of 5% would be represented as "0.05". |
-| 42257 | [DividendCashEquivalentPercentage](/fix/fields/tags-42200-42399#tag-42257) | Percentage | Optional | Declared cash-equivalent dividend percentage. A value of 5% would be represented as "0.05". |
-| 42258 | [NonCashDividendTreatment](/fix/fields/tags-42200-42399#tag-42258) | NonCashDividendTreatmentCodeSet | Optional | Defines the treatment of non-cash dividends. |
-| 42259 | [DividendComposition](/fix/fields/tags-42200-42399#tag-42259) | DividendCompositionCodeSet | Optional | Defines how the composition of dividends is to be determined. |
-| 42260 | [SpecialDividendsIndicator](/fix/fields/tags-42200-42399#tag-42260) | Boolean | Optional | Indicates whether special dividends are applicable. |
-| 42261 | [MaterialDividendsIndicator](/fix/fields/tags-42200-42399#tag-42261) | Boolean | Optional | Indicates whether material non-cash dividends are applicable. |
-| 42262 | [OptionsExchangeDividendsIndicator](/fix/fields/tags-42200-42399#tag-42262) | Boolean | Optional | Indicates whether option exchange dividends are applicable. |
-| 42263 | [AdditionalDividendsIndicator](/fix/fields/tags-42200-42399#tag-42263) | Boolean | Optional | Indicates whether additional dividends are applicable. |
-| 42264 | [AllDividendsIndicator](/fix/fields/tags-42200-42399#tag-42264) | Boolean | Optional | Represents the European Master Confirmation value of 'All Dividends' which, when applicable, signifies that, for a given Ex-Date, the daily observed share price… |
+| 42254 | [DividendCompoundingMethod](/fix/fields/tags-42200-42399#tag-42254-dividendcompoundingmethod) | PaymentStreamCompoundingMethodCodeSet | Optional | The compounding method to be used when more than one dividend period contributes to a single payment. |
+| 42255 | [DividendNumOfIndexUnits](/fix/fields/tags-42200-42399#tag-42255-dividendnumofindexunits) | int | Optional | The number of index units applicable to dividends. |
+| 42256 | [DividendCashPercentage](/fix/fields/tags-42200-42399#tag-42256-dividendcashpercentage) | Percentage | Optional | Declared cash dividend percentage. A value of 5% would be represented as "0.05". |
+| 42257 | [DividendCashEquivalentPercentage](/fix/fields/tags-42200-42399#tag-42257-dividendcashequivalentpercentage) | Percentage | Optional | Declared cash-equivalent dividend percentage. A value of 5% would be represented as "0.05". |
+| 42258 | [NonCashDividendTreatment](/fix/fields/tags-42200-42399#tag-42258-noncashdividendtreatment) | NonCashDividendTreatmentCodeSet | Optional | Defines the treatment of non-cash dividends. |
+| 42259 | [DividendComposition](/fix/fields/tags-42200-42399#tag-42259-dividendcomposition) | DividendCompositionCodeSet | Optional | Defines how the composition of dividends is to be determined. |
+| 42260 | [SpecialDividendsIndicator](/fix/fields/tags-42200-42399#tag-42260-specialdividendsindicator) | Boolean | Optional | Indicates whether special dividends are applicable. |
+| 42261 | [MaterialDividendsIndicator](/fix/fields/tags-42200-42399#tag-42261-materialdividendsindicator) | Boolean | Optional | Indicates whether material non-cash dividends are applicable. |
+| 42262 | [OptionsExchangeDividendsIndicator](/fix/fields/tags-42200-42399#tag-42262-optionsexchangedividendsindicator) | Boolean | Optional | Indicates whether option exchange dividends are applicable. |
+| 42263 | [AdditionalDividendsIndicator](/fix/fields/tags-42200-42399#tag-42263-additionaldividendsindicator) | Boolean | Optional | Indicates whether additional dividends are applicable. |
+| 42264 | [AllDividendsIndicator](/fix/fields/tags-42200-42399#tag-42264-alldividendsindicator) | Boolean | Optional | Represents the European Master Confirmation value of 'All Dividends' which, when applicable, signifies that, for a given Ex-Date, the daily observed share price… |
 
 </StickyTable>
 

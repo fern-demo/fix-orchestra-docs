@@ -3,7 +3,13 @@ title: "PartyEntitlementsDefinitionRequest"
 subtitle: "The PartyEntitlementsDefinitionRequest(35=DA) is used for defining new entitlements, and modifying or deleting existing entitlements for the specified party(-ies)."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType DA</Badge> <Badge intent="note" minimal>Parties Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType DA · Parties Reference Data · Pre Trade · Added FIX.5.0SP2
+</llms-only>
 
 The PartyEntitlementsDefinitionRequestAck(35=DB) is the response message, used to indicate whether the request was accepted or rejected.
 
@@ -14,12 +20,12 @@ The PartyEntitlementsDefinitionRequestAck(35=DB) is the response message, used t
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 1770 | [EntitlementRequestID](/fix/fields/tags-1600-1799#tag-1770) | String | **Required** | Unique identifier for PartyEntitlementsRequest(35=CU). |
+| 1770 | [EntitlementRequestID](/fix/fields/tags-1600-1799#tag-1770-entitlementrequestid) | String | **Required** | Unique identifier for PartyEntitlementsRequest(35=CU). |
 | 1657 | [RequestingPartyGrp](/fix/groups/requesting-party-grp) | Repeating group | Optional | Identifies the party making the request. |
 | 1772 | [PartyEntitlementUpdateGrp](/fix/groups/party-entitlement-update-grp) | Repeating group | **Required** | The PartyEntitlementUpdateGrp component is used to supply incremental entitlement definitions changes for the party(-ies) specified in the PartyDetailGrp… |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

@@ -2,9 +2,15 @@
 title: "InstrmtLegExecGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 555</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegs (555)](/fix/fields/tags-400-599#tag-555).
+<llms-only>
+Repeating group · NumInGroup 555 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegs (555)](/fix/fields/tags-400-599#tag-555-nolegs).
 
 ## Members
 
@@ -13,33 +19,33 @@ Each repetition starts with the first member listed. The count of repetitions is
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [InstrumentLeg](/fix/components/instrument-leg) | Component | Optional | The InstrumentLeg component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In the case… |
-| 685 | [LegOrderQty](/fix/fields/tags-600-799#tag-685) | Qty | Optional | Quantity ordered for this leg as provided during order entry. |
-| 687 | [LegQty](/fix/fields/tags-600-799#tag-687) | Qty | Optional | The LegQty(687) field is deprecated. The use of LegOrderQty(685) is recommended instead. |
-| 2346 | [LegMidPx](/fix/fields/tags-2200-2399#tag-2346) | Price | Optional | Leg Mid price/rate. For OTC swaps, this is the mid-market mark (for example, as defined by CFTC). For uncleared OTC swaps, LegMidPx(2346) and the MidPx(631)… |
-| 690 | [LegSwapType](/fix/fields/tags-600-799#tag-690) | LegSwapTypeCodeSet | Optional | Instead of LegOrderQty(685) requests that the sellside calculate LegOrderQty(685) based on opposite Leg. |
+| 685 | [LegOrderQty](/fix/fields/tags-600-799#tag-685-legorderqty) | Qty | Optional | Quantity ordered for this leg as provided during order entry. |
+| 687 | [LegQty](/fix/fields/tags-600-799#tag-687-legqty) | Qty | Optional | The LegQty(687) field is deprecated. The use of LegOrderQty(685) is recommended instead. |
+| 2346 | [LegMidPx](/fix/fields/tags-2200-2399#tag-2346-legmidpx) | Price | Optional | Leg Mid price/rate. For OTC swaps, this is the mid-market mark (for example, as defined by CFTC). For uncleared OTC swaps, LegMidPx(2346) and the MidPx(631)… |
+| 690 | [LegSwapType](/fix/fields/tags-600-799#tag-690-legswaptype) | LegSwapTypeCodeSet | Optional | Instead of LegOrderQty(685) requests that the sellside calculate LegOrderQty(685) based on opposite Leg. |
 | 683 | [LegStipulations](/fix/groups/leg-stipulations) | Repeating group | Optional | The LegStipulations component block has the same usage as the Stipulations component block, but for a leg instrument in a multi-legged security. |
-| 1366 | [LegAllocID](/fix/fields/tags-1200-1399#tag-1366) | String | Optional | The AllocID(70) of an individual leg of a multileg order. |
+| 1366 | [LegAllocID](/fix/fields/tags-1200-1399#tag-1366-legallocid) | String | Optional | The AllocID(70) of an individual leg of a multileg order. |
 | 670 | [LegPreAllocGrp](/fix/groups/leg-pre-alloc-grp) | Repeating group | Optional |  |
-| 2680 | [LegAccount](/fix/fields/tags-2600-2799#tag-2680) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
-| 1817 | [LegClearingAccountType](/fix/fields/tags-1800-1999#tag-1817) | ClearingAccountTypeCodeSet | Optional | Provide if different from the value specified for the overall multileg security in ClearingAccountType(1816) in the Instrument component. |
-| 564 | [LegPositionEffect](/fix/fields/tags-400-599#tag-564) | PositionEffectCodeSet | Optional | Provide if different from the value specified for the overall multileg security in PositionEffect(77) in the Instrument component. |
-| 565 | [LegCoveredOrUncovered](/fix/fields/tags-400-599#tag-565) | CoveredOrUncoveredCodeSet | Optional | Provide if different from the value specified for the overall multileg security in CoveredOrUncovered(203) in the Instrument component. |
+| 2680 | [LegAccount](/fix/fields/tags-2600-2799#tag-2680-legaccount) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
+| 1817 | [LegClearingAccountType](/fix/fields/tags-1800-1999#tag-1817-legclearingaccounttype) | ClearingAccountTypeCodeSet | Optional | Provide if different from the value specified for the overall multileg security in ClearingAccountType(1816) in the Instrument component. |
+| 564 | [LegPositionEffect](/fix/fields/tags-400-599#tag-564-legpositioneffect) | PositionEffectCodeSet | Optional | Provide if different from the value specified for the overall multileg security in PositionEffect(77) in the Instrument component. |
+| 565 | [LegCoveredOrUncovered](/fix/fields/tags-400-599#tag-565-legcoveredoruncovered) | CoveredOrUncoveredCodeSet | Optional | Provide if different from the value specified for the overall multileg security in CoveredOrUncovered(203) in the Instrument component. |
 | 948 | [NestedParties3](/fix/groups/nested-parties3) | Repeating group | Optional | The NestedParties3 component block is identical to the Parties Block. It is used in other component blocks and repeating groups when nesting will take place… |
-| 654 | [LegRefID](/fix/fields/tags-600-799#tag-654) | String | Optional | Use of LegRefID(654) in this component is deprecated. Recommend the use of LegID(1788) in the InstrumentLeg component. |
-| 587 | [LegSettlType](/fix/fields/tags-400-599#tag-587) | SettlTypeCodeSet | Optional | Indicates order settlement period. If present, LegSettlDate (588) overrides this field. If both LegSettlType (587) and LegSettDate (588) are omitted, the… |
-| 588 | [LegSettlDate](/fix/fields/tags-400-599#tag-588) | LocalMktDate | Optional | Takes precedence over a calculated LegSettlType(587) when specified regardless of LegSettlType(587) value. Conditionally required when LegSettlType(587) =… |
-| 637 | [LegLastPx](/fix/fields/tags-600-799#tag-637) | Price | Optional | Used to report the execution price assigned to the leg of the multileg instrument. |
-| 675 | [LegSettlCurrency](/fix/fields/tags-600-799#tag-675) | Currency | Optional | Identifies settlement currency for the Leg. See SettlCurrency (20) for description and valid values |
-| 1073 | [LegLastForwardPoints](/fix/fields/tags-1000-1199#tag-1073) | PriceOffset | Optional | The forward points for this leg's fill event. Value can be negative. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199 |
-| 1074 | [LegCalculatedCcyLastQty](/fix/fields/tags-1000-1199#tag-1074) | Qty | Optional | Used for the calculated quantity of the other side of the currency for this leg. Can be derived from LegQty and LegLastPx. |
-| 1075 | [LegGrossTradeAmt](/fix/fields/tags-1000-1199#tag-1075) | Amt | Optional | For FX Futures can be used to express the notional value of a trade when LegLastQty(1418) and other quantity fields are expressed in terms of number of… |
-| 1689 | [LegShortSaleExemptionReason](/fix/fields/tags-1600-1799#tag-1689) | ShortSaleExemptionReasonCodeSet | Optional | Available for optional use when LegSide(624) = 6 (Sell short exempt) in InstrumentLeg component. |
-| 1379 | [LegVolatility](/fix/fields/tags-1200-1399#tag-1379) | float | Optional | Specifies the volatility of an instrument leg. |
-| 1381 | [LegDividendYield](/fix/fields/tags-1200-1399#tag-1381) | Percentage | Optional | Refer to definition for DividendYield(1380). |
-| 1383 | [LegCurrencyRatio](/fix/fields/tags-1200-1399#tag-1383) | float | Optional | Specifies the currency ratio between the currency used for a multileg price and the currency used by the outright book defined by the leg. Example: Multileg… |
-| 1384 | [LegExecInst](/fix/fields/tags-1200-1399#tag-1384) | ExecInstCodeSet | Optional | Refer to ExecInst(18) Same values as ExecInst(18) |
-| 1418 | [LegLastQty](/fix/fields/tags-1400-1599#tag-1418) | Qty | Optional | Quantity executed for this leg. |
-| 2421 | [FillRefID](/fix/fields/tags-2400-2599#tag-2421) | String | Optional | Use to reference the partial execution of a multi-leg order to which this leg execution belongs. |
+| 654 | [LegRefID](/fix/fields/tags-600-799#tag-654-legrefid) | String | Optional | Use of LegRefID(654) in this component is deprecated. Recommend the use of LegID(1788) in the InstrumentLeg component. |
+| 587 | [LegSettlType](/fix/fields/tags-400-599#tag-587-legsettltype) | SettlTypeCodeSet | Optional | Indicates order settlement period. If present, LegSettlDate (588) overrides this field. If both LegSettlType (587) and LegSettDate (588) are omitted, the… |
+| 588 | [LegSettlDate](/fix/fields/tags-400-599#tag-588-legsettldate) | LocalMktDate | Optional | Takes precedence over a calculated LegSettlType(587) when specified regardless of LegSettlType(587) value. Conditionally required when LegSettlType(587) =… |
+| 637 | [LegLastPx](/fix/fields/tags-600-799#tag-637-leglastpx) | Price | Optional | Used to report the execution price assigned to the leg of the multileg instrument. |
+| 675 | [LegSettlCurrency](/fix/fields/tags-600-799#tag-675-legsettlcurrency) | Currency | Optional | Identifies settlement currency for the Leg. See SettlCurrency (20) for description and valid values |
+| 1073 | [LegLastForwardPoints](/fix/fields/tags-1000-1199#tag-1073-leglastforwardpoints) | PriceOffset | Optional | The forward points for this leg's fill event. Value can be negative. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199 |
+| 1074 | [LegCalculatedCcyLastQty](/fix/fields/tags-1000-1199#tag-1074-legcalculatedccylastqty) | Qty | Optional | Used for the calculated quantity of the other side of the currency for this leg. Can be derived from LegQty and LegLastPx. |
+| 1075 | [LegGrossTradeAmt](/fix/fields/tags-1000-1199#tag-1075-leggrosstradeamt) | Amt | Optional | For FX Futures can be used to express the notional value of a trade when LegLastQty(1418) and other quantity fields are expressed in terms of number of… |
+| 1689 | [LegShortSaleExemptionReason](/fix/fields/tags-1600-1799#tag-1689-legshortsaleexemptionreason) | ShortSaleExemptionReasonCodeSet | Optional | Available for optional use when LegSide(624) = 6 (Sell short exempt) in InstrumentLeg component. |
+| 1379 | [LegVolatility](/fix/fields/tags-1200-1399#tag-1379-legvolatility) | float | Optional | Specifies the volatility of an instrument leg. |
+| 1381 | [LegDividendYield](/fix/fields/tags-1200-1399#tag-1381-legdividendyield) | Percentage | Optional | Refer to definition for DividendYield(1380). |
+| 1383 | [LegCurrencyRatio](/fix/fields/tags-1200-1399#tag-1383-legcurrencyratio) | float | Optional | Specifies the currency ratio between the currency used for a multileg price and the currency used by the outright book defined by the leg. Example: Multileg… |
+| 1384 | [LegExecInst](/fix/fields/tags-1200-1399#tag-1384-legexecinst) | ExecInstCodeSet | Optional | Refer to ExecInst(18) Same values as ExecInst(18) |
+| 1418 | [LegLastQty](/fix/fields/tags-1400-1599#tag-1418-leglastqty) | Qty | Optional | Quantity executed for this leg. |
+| 2421 | [FillRefID](/fix/fields/tags-2400-2599#tag-2421-fillrefid) | String | Optional | Use to reference the partial execution of a multi-leg order to which this leg execution belongs. |
 
 </StickyTable>
 

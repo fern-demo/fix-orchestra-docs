@@ -3,7 +3,13 @@ title: "UnderlyingPaymentStubEndDate"
 subtitle: "UnderlyingPaymentStubEndDate is a subcomponent of the UnderlyingPaymentStubGrp component used to specify the end date of the payment stub."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,14 +17,14 @@ subtitle: "UnderlyingPaymentStubEndDate is a subcomponent of the UnderlyingPayme
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42984 | [UnderlyingPaymentStubEndDateUnadjusted](/fix/fields/tags-42800-42999#tag-42984) | LocalMktDate | Optional | The unadjusted stub end date. |
-| 42985 | [UnderlyingPaymentStubEndDateBusinessDayConvention](/fix/fields/tags-42800-42999#tag-42985) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
+| 42984 | [UnderlyingPaymentStubEndDateUnadjusted](/fix/fields/tags-42800-42999#tag-42984-underlyingpaymentstubenddateunadjusted) | LocalMktDate | Optional | The unadjusted stub end date. |
+| 42985 | [UnderlyingPaymentStubEndDateBusinessDayConvention](/fix/fields/tags-42800-42999#tag-42985-underlyingpaymentstubenddatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
 | 42991 | [UnderlyingPaymentStubEndDateBusinessCenterGrp](/fix/groups/underlying-payment-stub-end-date-business-center-grp) | Repeating group | Optional | UnderlyingPaymentStubEndDateBusinessCenterGrp is a repeating subcomponent within the UnderlyingPaymentStubEndDate component. It is used to specify the set of… |
-| 42986 | [UnderlyingPaymentStubEndDateRelativeTo](/fix/fields/tags-42800-42999#tag-42986) | int | Optional | Specifies the anchor date when the stub end date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
-| 42987 | [UnderlyingPaymentStubEndDateOffsetPeriod](/fix/fields/tags-42800-42999#tag-42987) | int | Optional | Conditionally required when UnderlyingPaymentStubEndDateOffsetUnit(42988) is specified. |
-| 42988 | [UnderlyingPaymentStubEndDateOffsetUnit](/fix/fields/tags-42800-42999#tag-42988) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingPaymentStubEndDateOffsetPeriod(42987) is specified. |
-| 42989 | [UnderlyingPaymentStubEndDateOffsetDayType](/fix/fields/tags-42800-42999#tag-42989) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative stub end date offset. |
-| 42990 | [UnderlyingPaymentStubEndDateAdjusted](/fix/fields/tags-42800-42999#tag-42990) | LocalMktDate | Optional | The adjusted stub end date. |
+| 42986 | [UnderlyingPaymentStubEndDateRelativeTo](/fix/fields/tags-42800-42999#tag-42986-underlyingpaymentstubenddaterelativeto) | int | Optional | Specifies the anchor date when the stub end date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 42987 | [UnderlyingPaymentStubEndDateOffsetPeriod](/fix/fields/tags-42800-42999#tag-42987-underlyingpaymentstubenddateoffsetperiod) | int | Optional | Conditionally required when UnderlyingPaymentStubEndDateOffsetUnit(42988) is specified. |
+| 42988 | [UnderlyingPaymentStubEndDateOffsetUnit](/fix/fields/tags-42800-42999#tag-42988-underlyingpaymentstubenddateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingPaymentStubEndDateOffsetPeriod(42987) is specified. |
+| 42989 | [UnderlyingPaymentStubEndDateOffsetDayType](/fix/fields/tags-42800-42999#tag-42989-underlyingpaymentstubenddateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative stub end date offset. |
+| 42990 | [UnderlyingPaymentStubEndDateAdjusted](/fix/fields/tags-42800-42999#tag-42990-underlyingpaymentstubenddateadjusted) | LocalMktDate | Optional | The adjusted stub end date. |
 
 </StickyTable>
 

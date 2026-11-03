@@ -2,9 +2,15 @@
 title: "SideCrossOrdModGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 552</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoSides (552)](/fix/fields/tags-400-599#tag-552).
+<llms-only>
+Repeating group · NumInGroup 552 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoSides (552)](/fix/fields/tags-400-599#tag-552-nosides).
 
 ## Members
 
@@ -12,51 +18,51 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | **Required** | Required if NoSides(552) &gt; 0. |
-| 2102 | [ShortMarkingExemptIndicator](/fix/fields/tags-2000-2199#tag-2102) | Boolean | Optional | Indicates whether the originating account is exempt (Y) from marking orders as short or not (N). This designation may be used on both buy and sell orders. |
-| 41 | [OrigClOrdID](/fix/fields/tags-0-199#tag-41) | String | Optional | Required when referring to orders that were electronically submitted over FIX or otherwise assigned a ClOrdID(11) |
-| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | **Required** | Unique identifier of the order as assigned by institution or by the intermediary with closest association with the investor. |
-| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
-| 583 | [ClOrdLinkID](/fix/fields/tags-400-599#tag-583) | String | Optional | Permits order originators to tie together groups of orders in which trades resulting from orders are associated for a specific purpose, for example the… |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54-side) | SideCodeSet | **Required** | Required if NoSides(552) &gt; 0. |
+| 2102 | [ShortMarkingExemptIndicator](/fix/fields/tags-2000-2199#tag-2102-shortmarkingexemptindicator) | Boolean | Optional | Indicates whether the originating account is exempt (Y) from marking orders as short or not (N). This designation may be used on both buy and sell orders. |
+| 41 | [OrigClOrdID](/fix/fields/tags-0-199#tag-41-origclordid) | String | Optional | Required when referring to orders that were electronically submitted over FIX or otherwise assigned a ClOrdID(11) |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11-clordid) | String | **Required** | Unique identifier of the order as assigned by institution or by the intermediary with closest association with the investor. |
+| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526-secondaryclordid) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
+| 583 | [ClOrdLinkID](/fix/fields/tags-400-599#tag-583-clordlinkid) | String | Optional | Permits order originators to tie together groups of orders in which trades resulting from orders are associated for a specific purpose, for example the… |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
 | 1829 | [SideCrossLegGrp](/fix/groups/side-cross-leg-grp) | Repeating group | Optional | Repeating group that is similar to LegOrdGrp component in order to support leg level information per side of cross orders and is part of SideCrossOrdModGrp… |
-| 1690 | [SideShortSaleExemptionReason](/fix/fields/tags-1600-1799#tag-1690) | ShortSaleExemptionReasonCodeSet | Optional | Available for optional use when Side(54) = 6 (Sell short exempt). |
-| 229 | [TradeOriginationDate](/fix/fields/tags-200-399#tag-229) | LocalMktDate | Optional | Used with Fixed Income for Muncipal New Issue Market. Agreement in principal between counter-parties prior to actual trade date. (Note tag # was reserved in FIX… |
-| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | Optional | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
-| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
-| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
-| 581 | [AccountType](/fix/fields/tags-400-599#tag-581) | AccountTypeCodeSet | Optional | Type of account associated with an order |
-| 589 | [DayBookingInst](/fix/fields/tags-400-599#tag-589) | DayBookingInstCodeSet | Optional | Indicates whether or not automatic booking can occur. |
-| 590 | [BookingUnit](/fix/fields/tags-400-599#tag-590) | BookingUnitCodeSet | Optional | Indicates what constitutes a bookable unit. |
-| 591 | [PreallocMethod](/fix/fields/tags-400-599#tag-591) | PreallocMethodCodeSet | Optional | Indicates the method of preallocation. |
-| 70 | [AllocID](/fix/fields/tags-0-199#tag-70) | String | Optional | Use to assign an identifier to the block of preallocations |
+| 1690 | [SideShortSaleExemptionReason](/fix/fields/tags-1600-1799#tag-1690-sideshortsaleexemptionreason) | ShortSaleExemptionReasonCodeSet | Optional | Available for optional use when Side(54) = 6 (Sell short exempt). |
+| 229 | [TradeOriginationDate](/fix/fields/tags-200-399#tag-229-tradeoriginationdate) | LocalMktDate | Optional | Used with Fixed Income for Muncipal New Issue Market. Agreement in principal between counter-parties prior to actual trade date. (Note tag # was reserved in FIX… |
+| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75-tradedate) | LocalMktDate | Optional | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1-account) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
+| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660-acctidsource) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
+| 581 | [AccountType](/fix/fields/tags-400-599#tag-581-accounttype) | AccountTypeCodeSet | Optional | Type of account associated with an order |
+| 589 | [DayBookingInst](/fix/fields/tags-400-599#tag-589-daybookinginst) | DayBookingInstCodeSet | Optional | Indicates whether or not automatic booking can occur. |
+| 590 | [BookingUnit](/fix/fields/tags-400-599#tag-590-bookingunit) | BookingUnitCodeSet | Optional | Indicates what constitutes a bookable unit. |
+| 591 | [PreallocMethod](/fix/fields/tags-400-599#tag-591-preallocmethod) | PreallocMethodCodeSet | Optional | Indicates the method of preallocation. |
+| 70 | [AllocID](/fix/fields/tags-0-199#tag-70-allocid) | String | Optional | Use to assign an identifier to the block of preallocations |
 | 78 | [PreAllocGrp](/fix/groups/pre-alloc-grp) | Repeating group | Optional |  |
-| 854 | [QtyType](/fix/fields/tags-800-999#tag-854) | QtyTypeCodeSet | Optional | Type of quantity specified in quantity field. ContractMultiplier (tag 231) is required when QtyType = 1 (Contracts). UnitOfMeasure (tag 996) and TimeUnit (tag… |
+| 854 | [QtyType](/fix/fields/tags-800-999#tag-854-qtytype) | QtyTypeCodeSet | Optional | Type of quantity specified in quantity field. ContractMultiplier (tag 231) is required when QtyType = 1 (Contracts). UnitOfMeasure (tag 996) and TimeUnit (tag… |
 | | [OrderQtyData](/fix/components/order-qty-data) | Component | **Required** | The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is… |
 | | [CommissionData](/fix/components/commission-data) | Component | Optional | The CommissionData component block is used to carry commission information such as the type of commission and the rate. Use the CommissionDataGrp component as… |
 | 2639 | [CommissionDataGrp](/fix/groups/commission-data-grp) | Repeating group | Optional | The CommissionDataGrp component block is used to carry commission information such as the type of commission and the rate. It provides an alternative to the… |
-| 528 | [OrderCapacity](/fix/fields/tags-400-599#tag-528) | OrderCapacityCodeSet | Optional | Designates the capacity of the firm placing the order. (as of FIX 4.3, this field replaced Rule80A (tag 47) --used in conjunction with OrderRestrictions (529)… |
-| 529 | [OrderRestrictions](/fix/fields/tags-400-599#tag-529) | OrderRestrictionsCodeSet | Optional | Restrictions associated with an order. If more than one restriction is applicable to an order, this field can contain multiple instructions separated by space. |
-| 1724 | [OrderOrigination](/fix/fields/tags-1600-1799#tag-1724) | OrderOriginationCodeSet | Optional | Identifies the origin of the order. |
-| 1725 | [OriginatingDeptID](/fix/fields/tags-1600-1799#tag-1725) | String | Optional | An identifier representing the department or desk within the firm that originated the order. |
-| 1726 | [ReceivingDeptID](/fix/fields/tags-1600-1799#tag-1726) | String | Optional | An identifier representing the department or desk within the firm that received the order. |
-| 2883 | [RoutingArrangmentIndicator](/fix/fields/tags-2800-2999#tag-2883) | RoutingArrangmentIndicatorCodeSet | Optional | Indicates whether a routing arrangement is in place, e.g. between two brokers. May be used together with OrderOrigination(1724) to further describe the origin… |
-| 1091 | [PreTradeAnonymity](/fix/fields/tags-1000-1199#tag-1091) | Boolean | Optional | Allows trader to explicitly request anonymity or disclosure in pre-trade market data feeds. Anonymity is relevant in markets where counterparties are regularly… |
-| 582 | [CustOrderCapacity](/fix/fields/tags-400-599#tag-582) | CustOrderCapacityCodeSet | Optional | Capacity of customer placing the order. |
-| 121 | [ForexReq](/fix/fields/tags-0-199#tag-121) | ForexReqCodeSet | Optional | Indicates that broker is requested to execute a Forex accommodation trade in conjunction with the security trade. |
-| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120) | Currency | Optional | Conditionally required when ForexReq(121) = "Y". |
-| 775 | [BookingType](/fix/fields/tags-600-799#tag-775) | BookingTypeCodeSet | Optional | Method for booking out this order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an OTC derivative (e.g. CFD or… |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
-| 1816 | [ClearingAccountType](/fix/fields/tags-1800-1999#tag-1816) | ClearingAccountTypeCodeSet | Optional | Designates the account type to be used for the order when submitted to clearing. |
-| 77 | [PositionEffect](/fix/fields/tags-0-199#tag-77) | PositionEffectCodeSet | Optional | For use in derivatives omnibus accounting |
-| 203 | [CoveredOrUncovered](/fix/fields/tags-200-399#tag-203) | CoveredOrUncoveredCodeSet | Optional | For use with derivatives, such as options |
-| 544 | [CashMargin](/fix/fields/tags-400-599#tag-544) | CashMarginCodeSet | Optional | Identifies whether an order is a margin order or a non-margin order. This is primarily used when sending orders to Japanese exchanges to indicate sell margin or… |
-| 635 | [ClearingFeeIndicator](/fix/fields/tags-600-799#tag-635) | ClearingFeeIndicatorCodeSet | Optional | Indicates type of fee being assessed of the customer for trade executions at an exchange. Applicable for futures markets only at this time. (Values source CBOT,… |
-| 377 | [SolicitedFlag](/fix/fields/tags-200-399#tag-377) | SolicitedFlagCodeSet | Optional | Indicates whether or not the order was solicited. |
-| 659 | [SideComplianceID](/fix/fields/tags-600-799#tag-659) | String | Optional | ID within repeating group of sides which is used to represent this transaction for compliance purposes (e.g. OATS reporting). |
-| 962 | [SideTimeInForce](/fix/fields/tags-800-999#tag-962) | UTCTimestamp | Optional | Specifies how long the order as specified in the side stays in effect. Absence of this field indicates Day order. |
+| 528 | [OrderCapacity](/fix/fields/tags-400-599#tag-528-ordercapacity) | OrderCapacityCodeSet | Optional | Designates the capacity of the firm placing the order. (as of FIX 4.3, this field replaced Rule80A (tag 47) --used in conjunction with OrderRestrictions (529)… |
+| 529 | [OrderRestrictions](/fix/fields/tags-400-599#tag-529-orderrestrictions) | OrderRestrictionsCodeSet | Optional | Restrictions associated with an order. If more than one restriction is applicable to an order, this field can contain multiple instructions separated by space. |
+| 1724 | [OrderOrigination](/fix/fields/tags-1600-1799#tag-1724-orderorigination) | OrderOriginationCodeSet | Optional | Identifies the origin of the order. |
+| 1725 | [OriginatingDeptID](/fix/fields/tags-1600-1799#tag-1725-originatingdeptid) | String | Optional | An identifier representing the department or desk within the firm that originated the order. |
+| 1726 | [ReceivingDeptID](/fix/fields/tags-1600-1799#tag-1726-receivingdeptid) | String | Optional | An identifier representing the department or desk within the firm that received the order. |
+| 2883 | [RoutingArrangmentIndicator](/fix/fields/tags-2800-2999#tag-2883-routingarrangmentindicator) | RoutingArrangmentIndicatorCodeSet | Optional | Indicates whether a routing arrangement is in place, e.g. between two brokers. May be used together with OrderOrigination(1724) to further describe the origin… |
+| 1091 | [PreTradeAnonymity](/fix/fields/tags-1000-1199#tag-1091-pretradeanonymity) | Boolean | Optional | Allows trader to explicitly request anonymity or disclosure in pre-trade market data feeds. Anonymity is relevant in markets where counterparties are regularly… |
+| 582 | [CustOrderCapacity](/fix/fields/tags-400-599#tag-582-custordercapacity) | CustOrderCapacityCodeSet | Optional | Capacity of customer placing the order. |
+| 121 | [ForexReq](/fix/fields/tags-0-199#tag-121-forexreq) | ForexReqCodeSet | Optional | Indicates that broker is requested to execute a Forex accommodation trade in conjunction with the security trade. |
+| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120-settlcurrency) | Currency | Optional | Conditionally required when ForexReq(121) = "Y". |
+| 775 | [BookingType](/fix/fields/tags-600-799#tag-775-bookingtype) | BookingTypeCodeSet | Optional | Method for booking out this order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an OTC derivative (e.g. CFD or… |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 1816 | [ClearingAccountType](/fix/fields/tags-1800-1999#tag-1816-clearingaccounttype) | ClearingAccountTypeCodeSet | Optional | Designates the account type to be used for the order when submitted to clearing. |
+| 77 | [PositionEffect](/fix/fields/tags-0-199#tag-77-positioneffect) | PositionEffectCodeSet | Optional | For use in derivatives omnibus accounting |
+| 203 | [CoveredOrUncovered](/fix/fields/tags-200-399#tag-203-coveredoruncovered) | CoveredOrUncoveredCodeSet | Optional | For use with derivatives, such as options |
+| 544 | [CashMargin](/fix/fields/tags-400-599#tag-544-cashmargin) | CashMarginCodeSet | Optional | Identifies whether an order is a margin order or a non-margin order. This is primarily used when sending orders to Japanese exchanges to indicate sell margin or… |
+| 635 | [ClearingFeeIndicator](/fix/fields/tags-600-799#tag-635-clearingfeeindicator) | ClearingFeeIndicatorCodeSet | Optional | Indicates type of fee being assessed of the customer for trade executions at an exchange. Applicable for futures markets only at this time. (Values source CBOT,… |
+| 377 | [SolicitedFlag](/fix/fields/tags-200-399#tag-377-solicitedflag) | SolicitedFlagCodeSet | Optional | Indicates whether or not the order was solicited. |
+| 659 | [SideComplianceID](/fix/fields/tags-600-799#tag-659-sidecomplianceid) | String | Optional | ID within repeating group of sides which is used to represent this transaction for compliance purposes (e.g. OATS reporting). |
+| 962 | [SideTimeInForce](/fix/fields/tags-800-999#tag-962-sidetimeinforce) | UTCTimestamp | Optional | Specifies how long the order as specified in the side stays in effect. Absence of this field indicates Day order. |
 
 </StickyTable>
 

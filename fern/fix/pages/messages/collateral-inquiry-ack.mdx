@@ -3,7 +3,13 @@ title: "CollateralInquiryAck"
 subtitle: "Used to respond to a Collateral Inquiry in the following situations: • When the CollateralInquiry will result in an out of band response (such as a file transfer). • When the inquiry is otherwise valid but no collateral is found to match…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType BG</Badge> <Badge intent="note" minimal>Collateral Management</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType BG · Collateral Management · Post Trade · Added FIX.4.4
+</llms-only>
 
 ## Message structure
 
@@ -12,38 +18,38 @@ subtitle: "Used to respond to a Collateral Inquiry in the following situations: 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 909 | [CollInquiryID](/fix/fields/tags-800-999#tag-909) | String | **Required** | Identifier for the collateral inquiry to which this message is a reply |
-| 945 | [CollInquiryStatus](/fix/fields/tags-800-999#tag-945) | CollInquiryStatusCodeSet | **Required** | Status of the Collateral Inquiry referenced by CollInquiryID |
-| 946 | [CollInquiryResult](/fix/fields/tags-800-999#tag-946) | CollInquiryResultCodeSet | Optional | Result of the Collateral Inquriy referenced by CollInquiryID - specifies any errors or warnings |
+| 909 | [CollInquiryID](/fix/fields/tags-800-999#tag-909-collinquiryid) | String | **Required** | Identifier for the collateral inquiry to which this message is a reply |
+| 945 | [CollInquiryStatus](/fix/fields/tags-800-999#tag-945-collinquirystatus) | CollInquiryStatusCodeSet | **Required** | Status of the Collateral Inquiry referenced by CollInquiryID |
+| 946 | [CollInquiryResult](/fix/fields/tags-800-999#tag-946-collinquiryresult) | CollInquiryResultCodeSet | Optional | Result of the Collateral Inquriy referenced by CollInquiryID - specifies any errors or warnings |
 | 938 | [CollInqQualGrp](/fix/groups/coll-inq-qual-grp) | Repeating group | Optional |  |
-| 911 | [TotNumReports](/fix/fields/tags-800-999#tag-911) | int | Optional | Total number of reports generated in response to this inquiry |
+| 911 | [TotNumReports](/fix/fields/tags-800-999#tag-911-totnumreports) | int | Optional | Total number of reports generated in response to this inquiry |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
-| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Customer Account |
-| 581 | [AccountType](/fix/fields/tags-400-599#tag-581) | AccountTypeCodeSet | Optional | Type of account associated with the order (Origin) |
-| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | Identifier of order for which collateral is required |
-| 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | Optional | Identifier of order for which collateral is required |
-| 198 | [SecondaryOrderID](/fix/fields/tags-0-199#tag-198) | String | Optional | Identifier of order for which collateral is required |
-| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526) | String | Optional | Identifier of order for which collateral is required |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1-account) | String | Optional | Customer Account |
+| 581 | [AccountType](/fix/fields/tags-400-599#tag-581-accounttype) | AccountTypeCodeSet | Optional | Type of account associated with the order (Origin) |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11-clordid) | String | Optional | Identifier of order for which collateral is required |
+| 37 | [OrderID](/fix/fields/tags-0-199#tag-37-orderid) | String | Optional | Identifier of order for which collateral is required |
+| 198 | [SecondaryOrderID](/fix/fields/tags-0-199#tag-198-secondaryorderid) | String | Optional | Identifier of order for which collateral is required |
+| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526-secondaryclordid) | String | Optional | Identifier of order for which collateral is required |
 | 124 | [ExecCollGrp](/fix/groups/exec-coll-grp) | Repeating group | Optional |  |
 | 897 | [TrdCollGrp](/fix/groups/trd-coll-grp) | Repeating group | Optional |  |
 | | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This… |
-| 64 | [SettlDate](/fix/fields/tags-0-199#tag-64) | LocalMktDate | Optional | Specific date of trade settlement (SettlementDate) in YYYYMMDD format. If present, this field overrides SettlType (63). This field is required if the value of… |
-| 53 | [Quantity](/fix/fields/tags-0-199#tag-53) | Qty | Optional | Overall/total quantity (e.g. number of shares) (Prior to FIX 4.2 this field was of type int) |
-| 854 | [QtyType](/fix/fields/tags-800-999#tag-854) | QtyTypeCodeSet | Optional | Type of quantity specified in quantity field. ContractMultiplier (tag 231) is required when QtyType = 1 (Contracts). UnitOfMeasure (tag 996) and TimeUnit (tag… |
-| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
+| 64 | [SettlDate](/fix/fields/tags-0-199#tag-64-settldate) | LocalMktDate | Optional | Specific date of trade settlement (SettlementDate) in YYYYMMDD format. If present, this field overrides SettlType (63). This field is required if the value of… |
+| 53 | [Quantity](/fix/fields/tags-0-199#tag-53-quantity) | Qty | Optional | Overall/total quantity (e.g. number of shares) (Prior to FIX 4.2 this field was of type int) |
+| 854 | [QtyType](/fix/fields/tags-800-999#tag-854-qtytype) | QtyTypeCodeSet | Optional | Type of quantity specified in quantity field. ContractMultiplier (tag 231) is required when QtyType = 1 (Contracts). UnitOfMeasure (tag 996) and TimeUnit (tag… |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15-currency) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Trading Session in which trade occurred |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Trading Session Subid in which trade occurred |
-| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716) | SettlSessIDCodeSet | Optional | Identifies a specific settlement session |
-| 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717) | String | Optional | SubID value associated with SettlSessID(716) |
-| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | Optional | The business date for which the trade is expected to be cleared. |
-| 725 | [ResponseTransportType](/fix/fields/tags-600-799#tag-725) | ResponseTransportTypeCodeSet | Optional | Ability to specify whether the response to the request should be delivered inband or via pre-arranged out-of-band transport. |
-| 726 | [ResponseDestination](/fix/fields/tags-600-799#tag-726) | String | Optional | URI destination name. Used if ResponseTransportType is out-of-band. |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336-tradingsessionid) | TradingSessionIDCodeSet | Optional | Trading Session in which trade occurred |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625-tradingsessionsubid) | TradingSessionSubIDCodeSet | Optional | Trading Session Subid in which trade occurred |
+| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716-settlsessid) | SettlSessIDCodeSet | Optional | Identifies a specific settlement session |
+| 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717-settlsesssubid) | String | Optional | SubID value associated with SettlSessID(716) |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715-clearingbusinessdate) | LocalMktDate | Optional | The business date for which the trade is expected to be cleared. |
+| 725 | [ResponseTransportType](/fix/fields/tags-600-799#tag-725-responsetransporttype) | ResponseTransportTypeCodeSet | Optional | Ability to specify whether the response to the request should be delivered inband or via pre-arranged out-of-band transport. |
+| 726 | [ResponseDestination](/fix/fields/tags-600-799#tag-726-responsedestination) | String | Optional | URI destination name. Used if ResponseTransportType is out-of-band. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

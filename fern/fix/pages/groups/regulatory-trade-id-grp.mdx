@@ -3,9 +3,15 @@ title: "RegulatoryTradeIDGrp"
 subtitle: "The RegulatoryTradeIDGrp is a repeating component within the TradeCaptureReport message used to report the source, value and relationship of multiple identifiers for the same trade or position. This component can be used to meet regulatory…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1907</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoRegulatoryTradeIDs (1907)](/fix/fields/tags-1800-1999#tag-1907).
+<llms-only>
+Repeating group · NumInGroup 1907 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRegulatoryTradeIDs (1907)](/fix/fields/tags-1800-1999#tag-1907-noregulatorytradeids).
 
 ## Members
 
@@ -13,12 +19,12 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1903 | [RegulatoryTradeID](/fix/fields/tags-1800-1999#tag-1903) | String | Optional | Required if NoRegulatoryTradeIDs(1907) &gt; 0. |
-| 1905 | [RegulatoryTradeIDSource](/fix/fields/tags-1800-1999#tag-1905) | String | Optional | Identifies the reporting entity that originated the value in RegulatoryTradeID(1903). The reporting entitiy identifier may be assigned by a regulator. |
-| 1904 | [RegulatoryTradeIDEvent](/fix/fields/tags-1800-1999#tag-1904) | RegulatoryTradeIDEventCodeSet | Optional | Identifies the event which caused origination of the identifier in RegulatoryTradeID(1903). When more than one event is the cause, use the higher enumeration… |
-| 1906 | [RegulatoryTradeIDType](/fix/fields/tags-1800-1999#tag-1906) | RegulatoryTradeIDTypeCodeSet | Optional | Specifies the type of trade identifier provided in RegulatoryTradeID(1903). Contextual hierarchy of events for the same trade or transaction maybe captured… |
-| 2411 | [RegulatoryLegRefID](/fix/fields/tags-2400-2599#tag-2411) | String | Optional | This field may be is used for multi-leg trades sent as a single message to indicate that the entry applies only to a specific leg. |
-| 2397 | [RegulatoryTradeIDScope](/fix/fields/tags-2200-2399#tag-2397) | RegulatoryTradeIDScopeCodeSet | Optional | Specifies the scope to which the RegulatoryTradeID(1903) applies. Used when a trade must be assigned more than one identifier, e.g. one for the clearing member… |
+| 1903 | [RegulatoryTradeID](/fix/fields/tags-1800-1999#tag-1903-regulatorytradeid) | String | Optional | Required if NoRegulatoryTradeIDs(1907) &gt; 0. |
+| 1905 | [RegulatoryTradeIDSource](/fix/fields/tags-1800-1999#tag-1905-regulatorytradeidsource) | String | Optional | Identifies the reporting entity that originated the value in RegulatoryTradeID(1903). The reporting entitiy identifier may be assigned by a regulator. |
+| 1904 | [RegulatoryTradeIDEvent](/fix/fields/tags-1800-1999#tag-1904-regulatorytradeidevent) | RegulatoryTradeIDEventCodeSet | Optional | Identifies the event which caused origination of the identifier in RegulatoryTradeID(1903). When more than one event is the cause, use the higher enumeration… |
+| 1906 | [RegulatoryTradeIDType](/fix/fields/tags-1800-1999#tag-1906-regulatorytradeidtype) | RegulatoryTradeIDTypeCodeSet | Optional | Specifies the type of trade identifier provided in RegulatoryTradeID(1903). Contextual hierarchy of events for the same trade or transaction maybe captured… |
+| 2411 | [RegulatoryLegRefID](/fix/fields/tags-2400-2599#tag-2411-regulatorylegrefid) | String | Optional | This field may be is used for multi-leg trades sent as a single message to indicate that the entry applies only to a specific leg. |
+| 2397 | [RegulatoryTradeIDScope](/fix/fields/tags-2200-2399#tag-2397-regulatorytradeidscope) | RegulatoryTradeIDScopeCodeSet | Optional | Specifies the scope to which the RegulatoryTradeID(1903) applies. Used when a trade must be assigned more than one identifier, e.g. one for the clearing member… |
 
 </StickyTable>
 

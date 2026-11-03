@@ -3,9 +3,15 @@ title: "PaymentStreamCompoundingDateGrp"
 subtitle: "PaymentStreamCompoundingDateGrp is a subcomponent of the PaymentStreamCompoundingDates component used to specify predetermined compounding dates."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42606</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoPaymentStreamCompoundingDates (42606)](/fix/fields/tags-42600-42799#tag-42606).
+<llms-only>
+Repeating group · NumInGroup 42606 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPaymentStreamCompoundingDates (42606)](/fix/fields/tags-42600-42799#tag-42606-nopaymentstreamcompoundingdates).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42607 | [PaymentStreamCompoundingDate](/fix/fields/tags-42600-42799#tag-42607) | LocalMktDate | Optional | Required if NoPaymentStreamCompoundingDates(42606) &gt; 0. |
-| 42608 | [PaymentStreamCompoundingDateType](/fix/fields/tags-42600-42799#tag-42608) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date instance but to all subsequent date instances in the group until overridden when a new type is specified. |
+| 42607 | [PaymentStreamCompoundingDate](/fix/fields/tags-42600-42799#tag-42607-paymentstreamcompoundingdate) | LocalMktDate | Optional | Required if NoPaymentStreamCompoundingDates(42606) &gt; 0. |
+| 42608 | [PaymentStreamCompoundingDateType](/fix/fields/tags-42600-42799#tag-42608-paymentstreamcompoundingdatetype) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date instance but to all subsequent date instances in the group until overridden when a new type is specified. |
 
 </StickyTable>
 

@@ -3,7 +3,13 @@ title: "StreamCalculationPeriodDates"
 subtitle: "StreamCalculationPeriodDates is a subcomponent of the StreamGrp component used to specify the calculation period dates of the stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,24 +17,24 @@ subtitle: "StreamCalculationPeriodDates is a subcomponent of the StreamGrp compo
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41244 | [StreamCalculationPeriodDatesXID](/fix/fields/tags-41200-41399#tag-41244) | XID | Optional | Identifier of this calculation period for cross referencing elsewhere in the message. |
-| 41245 | [StreamCalculationPeriodDatesXIDRef](/fix/fields/tags-41200-41399#tag-41245) | XIDREF | Optional | Cross reference to another calculation period for duplicating its properties. |
-| 40073 | [StreamCalculationPeriodBusinessDayConvention](/fix/fields/tags-40000-40199#tag-40073) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this… |
+| 41244 | [StreamCalculationPeriodDatesXID](/fix/fields/tags-41200-41399#tag-41244-streamcalculationperioddatesxid) | XID | Optional | Identifier of this calculation period for cross referencing elsewhere in the message. |
+| 41245 | [StreamCalculationPeriodDatesXIDRef](/fix/fields/tags-41200-41399#tag-41245-streamcalculationperioddatesxidref) | XIDREF | Optional | Cross reference to another calculation period for duplicating its properties. |
+| 40073 | [StreamCalculationPeriodBusinessDayConvention](/fix/fields/tags-40000-40199#tag-40073-streamcalculationperiodbusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this… |
 | 40958 | [StreamCalculationPeriodBusinessCenterGrp](/fix/groups/stream-calculation-period-business-center-grp) | Repeating group | Optional | StreamCalculationPeriodBusinessCenterGrp is a repeating subcomponent within the StreamCalculationPeriodDates component. It is used to specify the set of… |
 | 41241 | [StreamCalculationPeriodDateGrp](/fix/groups/stream-calculation-period-date-grp) | Repeating group | Optional | The StreamCalculationPeriodDateGrp is a repeating subcomponent of the StreamCalculationPeriodDates component used to detail fixed dates for the swap stream. |
-| 40075 | [StreamFirstPeriodStartDateUnadjusted](/fix/fields/tags-40000-40199#tag-40075) | LocalMktDate | Optional | The unadjusted first calculation period start date if before the effective date. |
-| 40076 | [StreamFirstPeriodStartDateBusinessDayConvention](/fix/fields/tags-40000-40199#tag-40076) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this… |
+| 40075 | [StreamFirstPeriodStartDateUnadjusted](/fix/fields/tags-40000-40199#tag-40075-streamfirstperiodstartdateunadjusted) | LocalMktDate | Optional | The unadjusted first calculation period start date if before the effective date. |
+| 40076 | [StreamFirstPeriodStartDateBusinessDayConvention](/fix/fields/tags-40000-40199#tag-40076-streamfirstperiodstartdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this… |
 | 40959 | [StreamFirstPeriodStartDateBusinessCenterGrp](/fix/groups/stream-first-period-start-date-business-center-grp) | Repeating group | Optional | StreamFirstPeriodStartDateBusinessCenterGrp is a repeating subcomponent within the StreamCalculationPeriodDates component. It is used to specify the set of… |
-| 40078 | [StreamFirstPeriodStartDateAdjusted](/fix/fields/tags-40000-40199#tag-40078) | LocalMktDate | Optional | The adjusted first calculation period start date, if it is before the effective date. |
-| 40079 | [StreamFirstRegularPeriodStartDateUnadjusted](/fix/fields/tags-40000-40199#tag-40079) | LocalMktDate | Optional | The unadjusted first start date of the regular calculation period, if there is an initial stub period. |
-| 40080 | [StreamFirstCompoundingPeriodEndDateUnadjusted](/fix/fields/tags-40000-40199#tag-40080) | LocalMktDate | Optional | The unadjusted end date of the initial compounding period. |
-| 40081 | [StreamLastRegularPeriodEndDateUnadjusted](/fix/fields/tags-40000-40199#tag-40081) | LocalMktDate | Optional | The unadjusted last regular period end date if there is a final stub period. |
-| 40082 | [StreamCalculationFrequencyPeriod](/fix/fields/tags-40000-40199#tag-40082) | int | Optional | Conditionally required when StreamCalculationFrequencyUnit(40083) is specified. |
-| 40083 | [StreamCalculationFrequencyUnit](/fix/fields/tags-40000-40199#tag-40083) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when StreamCalculationFrequencyPeriod(40082) is specified. |
-| 40084 | [StreamCalculationRollConvention](/fix/fields/tags-40000-40199#tag-40084) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the DateAdjustment component in Instrument. The specified values would be specific to this… |
-| 41246 | [StreamCalculationBalanceOfFirstPeriod](/fix/fields/tags-41200-41399#tag-41246) | Boolean | Optional | When specified and set to 'Y', it indicates that the first calculation period should run from the effective date to the end of the calendar period in which the… |
-| 41247 | [StreamCalculationCorrectionPeriod](/fix/fields/tags-41200-41399#tag-41247) | int | Optional | Conditionally required when StreamCalculationCorrectionUnit(41248) is specified. |
-| 41248 | [StreamCalculationCorrectionUnit](/fix/fields/tags-41200-41399#tag-41248) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when StreamCalculationCorrectionPeriod(41247) is specified. |
+| 40078 | [StreamFirstPeriodStartDateAdjusted](/fix/fields/tags-40000-40199#tag-40078-streamfirstperiodstartdateadjusted) | LocalMktDate | Optional | The adjusted first calculation period start date, if it is before the effective date. |
+| 40079 | [StreamFirstRegularPeriodStartDateUnadjusted](/fix/fields/tags-40000-40199#tag-40079-streamfirstregularperiodstartdateunadjusted) | LocalMktDate | Optional | The unadjusted first start date of the regular calculation period, if there is an initial stub period. |
+| 40080 | [StreamFirstCompoundingPeriodEndDateUnadjusted](/fix/fields/tags-40000-40199#tag-40080-streamfirstcompoundingperiodenddateunadjusted) | LocalMktDate | Optional | The unadjusted end date of the initial compounding period. |
+| 40081 | [StreamLastRegularPeriodEndDateUnadjusted](/fix/fields/tags-40000-40199#tag-40081-streamlastregularperiodenddateunadjusted) | LocalMktDate | Optional | The unadjusted last regular period end date if there is a final stub period. |
+| 40082 | [StreamCalculationFrequencyPeriod](/fix/fields/tags-40000-40199#tag-40082-streamcalculationfrequencyperiod) | int | Optional | Conditionally required when StreamCalculationFrequencyUnit(40083) is specified. |
+| 40083 | [StreamCalculationFrequencyUnit](/fix/fields/tags-40000-40199#tag-40083-streamcalculationfrequencyunit) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when StreamCalculationFrequencyPeriod(40082) is specified. |
+| 40084 | [StreamCalculationRollConvention](/fix/fields/tags-40000-40199#tag-40084-streamcalculationrollconvention) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the DateAdjustment component in Instrument. The specified values would be specific to this… |
+| 41246 | [StreamCalculationBalanceOfFirstPeriod](/fix/fields/tags-41200-41399#tag-41246-streamcalculationbalanceoffirstperiod) | Boolean | Optional | When specified and set to 'Y', it indicates that the first calculation period should run from the effective date to the end of the calendar period in which the… |
+| 41247 | [StreamCalculationCorrectionPeriod](/fix/fields/tags-41200-41399#tag-41247-streamcalculationcorrectionperiod) | int | Optional | Conditionally required when StreamCalculationCorrectionUnit(41248) is specified. |
+| 41248 | [StreamCalculationCorrectionUnit](/fix/fields/tags-41200-41399#tag-41248-streamcalculationcorrectionunit) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when StreamCalculationCorrectionPeriod(41247) is specified. |
 
 </StickyTable>
 

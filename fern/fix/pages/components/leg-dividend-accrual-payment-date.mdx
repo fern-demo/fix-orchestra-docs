@@ -3,7 +3,13 @@ title: "LegDividendAccrualPaymentDate"
 subtitle: "The LegDividendAccrualPaymentDate component is a subcomponent of LegDividendConditions used to report the dividend accrual payment date."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,14 +17,14 @@ subtitle: "The LegDividendAccrualPaymentDate component is a subcomponent of LegD
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42330 | [LegDividendAccrualPaymentDateRelativeTo](/fix/fields/tags-42200-42399#tag-42330) | int | Optional | Specifies the anchor date when the accrual payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for… |
-| 42331 | [LegDividendAccrualPaymentDateOffsetPeriod](/fix/fields/tags-42200-42399#tag-42331) | int | Optional | Conditionally required when LegDividendAccrualPaymentDateOffsetUnit(42332) is specified. |
-| 42332 | [LegDividendAccrualPaymentDateOffsetUnit](/fix/fields/tags-42200-42399#tag-42332) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegDividendAccrualPaymentDateOffsetPeriod(42331) is specified. |
-| 42333 | [LegDividendAccrualPaymentDateOffsetDayType](/fix/fields/tags-42200-42399#tag-42333) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative accrual payment date offset. |
-| 42334 | [LegDividendAccrualPaymentDateUnadjusted](/fix/fields/tags-42200-42399#tag-42334) | LocalMktDate | Optional | The unadjusted accrual payment date. |
-| 42335 | [LegDividendAccrualPaymentDateBusinessDayConvention](/fix/fields/tags-42200-42399#tag-42335) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The value would be specific to this… |
+| 42330 | [LegDividendAccrualPaymentDateRelativeTo](/fix/fields/tags-42200-42399#tag-42330-legdividendaccrualpaymentdaterelativeto) | int | Optional | Specifies the anchor date when the accrual payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for… |
+| 42331 | [LegDividendAccrualPaymentDateOffsetPeriod](/fix/fields/tags-42200-42399#tag-42331-legdividendaccrualpaymentdateoffsetperiod) | int | Optional | Conditionally required when LegDividendAccrualPaymentDateOffsetUnit(42332) is specified. |
+| 42332 | [LegDividendAccrualPaymentDateOffsetUnit](/fix/fields/tags-42200-42399#tag-42332-legdividendaccrualpaymentdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegDividendAccrualPaymentDateOffsetPeriod(42331) is specified. |
+| 42333 | [LegDividendAccrualPaymentDateOffsetDayType](/fix/fields/tags-42200-42399#tag-42333-legdividendaccrualpaymentdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative accrual payment date offset. |
+| 42334 | [LegDividendAccrualPaymentDateUnadjusted](/fix/fields/tags-42200-42399#tag-42334-legdividendaccrualpaymentdateunadjusted) | LocalMktDate | Optional | The unadjusted accrual payment date. |
+| 42335 | [LegDividendAccrualPaymentDateBusinessDayConvention](/fix/fields/tags-42200-42399#tag-42335-legdividendaccrualpaymentdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The value would be specific to this… |
 | 42310 | [LegDividendAccrualPaymentDateBusinessCenterGrp](/fix/groups/leg-dividend-accrual-payment-date-business-center-grp) | Repeating group | Optional | LegDividendAccrualPaymentDateBusinessCenterGrp is a repeating subcomponent within the LegDividendAccrualPaymentDate component. It is used to specify the set of… |
-| 42336 | [LegDividendAccrualPaymentDateAdjusted](/fix/fields/tags-42200-42399#tag-42336) | LocalMktDate | Optional | The adjusted accrual payment date. |
+| 42336 | [LegDividendAccrualPaymentDateAdjusted](/fix/fields/tags-42200-42399#tag-42336-legdividendaccrualpaymentdateadjusted) | LocalMktDate | Optional | The adjusted accrual payment date. |
 
 </StickyTable>
 

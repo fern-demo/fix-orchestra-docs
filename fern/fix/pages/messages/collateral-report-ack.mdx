@@ -3,7 +3,13 @@ title: "CollateralReportAck"
 subtitle: "CollateralReportAck(35=DQ) is used as a response to the CollateralReport(35=BA). It can be used to reject a CollateralReport(35=BA) when the content of the report is invalid based on the business rules of the receiver. The message may also…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType DQ</Badge> <Badge intent="note" minimal>Collateral Management</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType DQ · Collateral Management · Post Trade · Added FIX.5.0SP2
+</llms-only>
 
 ## Message structure
 
@@ -12,17 +18,17 @@ subtitle: "CollateralReportAck(35=DQ) is used as a response to the CollateralRep
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 908 | [CollRptID](/fix/fields/tags-800-999#tag-908) | String | **Required** | Identifer of the CollateralReport(35=BA) being acknowledged. |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
-| 2488 | [CollRptStatus](/fix/fields/tags-2400-2599#tag-2488) | CollRptStatusCodeSet | **Required** | The status of the collateral report. |
-| 2487 | [CollRptRejectReason](/fix/fields/tags-2400-2599#tag-2487) | CollRptRejectReasonCodeSet | Optional | Conditionally required when CollRptStatus(2488) = 2 (Rejected). |
-| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328) | String | Optional | Conditionally required when CollRptStatus(2488) = 2 (Rejected). |
-| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664) | Length | Optional | Must be set if EncodedRejectText(1665) field is specified and must immediately precede it. |
-| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. |
+| 908 | [CollRptID](/fix/fields/tags-800-999#tag-908-collrptid) | String | **Required** | Identifer of the CollateralReport(35=BA) being acknowledged. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 2488 | [CollRptStatus](/fix/fields/tags-2400-2599#tag-2488-collrptstatus) | CollRptStatusCodeSet | **Required** | The status of the collateral report. |
+| 2487 | [CollRptRejectReason](/fix/fields/tags-2400-2599#tag-2487-collrptrejectreason) | CollRptRejectReasonCodeSet | Optional | Conditionally required when CollRptStatus(2488) = 2 (Rejected). |
+| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328-rejecttext) | String | Optional | Conditionally required when CollRptStatus(2488) = 2 (Rejected). |
+| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664-encodedrejecttextlen) | Length | Optional | Must be set if EncodedRejectText(1665) field is specified and must immediately precede it. |
+| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665-encodedrejecttext) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

@@ -2,9 +2,15 @@
 title: "RgstDtlsGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 473</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoRegistDtls (473)](/fix/fields/tags-400-599#tag-473).
+<llms-only>
+Repeating group · NumInGroup 473 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRegistDtls (473)](/fix/fields/tags-400-599#tag-473-noregistdtls).
 
 ## Members
 
@@ -12,14 +18,14 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 509 | [RegistDtls](/fix/fields/tags-400-599#tag-509) | String | Optional | Must be first field in the repeating group |
-| 511 | [RegistEmail](/fix/fields/tags-400-599#tag-511) | String | Optional | Email address relating to Registration name and address details |
-| 474 | [MailingDtls](/fix/fields/tags-400-599#tag-474) | String | Optional | Set of Correspondence address details, possibly including phone, fax, etc. |
-| 482 | [MailingInst](/fix/fields/tags-400-599#tag-482) | String | Optional | Free format text to specify mailing instruction requirements, e.g. "no third party mailings". |
+| 509 | [RegistDtls](/fix/fields/tags-400-599#tag-509-registdtls) | String | Optional | Must be first field in the repeating group |
+| 511 | [RegistEmail](/fix/fields/tags-400-599#tag-511-registemail) | String | Optional | Email address relating to Registration name and address details |
+| 474 | [MailingDtls](/fix/fields/tags-400-599#tag-474-mailingdtls) | String | Optional | Set of Correspondence address details, possibly including phone, fax, etc. |
+| 482 | [MailingInst](/fix/fields/tags-400-599#tag-482-mailinginst) | String | Optional | Free format text to specify mailing instruction requirements, e.g. "no third party mailings". |
 | 539 | [NestedParties](/fix/groups/nested-parties) | Repeating group | Optional | The NestedParties component block is identical to the Parties Block. It is used in other component blocks and repeating groups when nesting will take place… |
-| 522 | [OwnerType](/fix/fields/tags-400-599#tag-522) | OwnerTypeCodeSet | Optional | Identifies the type of owner. |
-| 486 | [DateOfBirth](/fix/fields/tags-400-599#tag-486) | LocalMktDate | Optional | The date of birth applicable to the individual, e.g. required to open some types of tax-exempt account. |
-| 475 | [InvestorCountryOfResidence](/fix/fields/tags-400-599#tag-475) | Country | Optional | The ISO 366 Country code (2 character) identifying which country the beneficial investor is resident for tax purposes. |
+| 522 | [OwnerType](/fix/fields/tags-400-599#tag-522-ownertype) | OwnerTypeCodeSet | Optional | Identifies the type of owner. |
+| 486 | [DateOfBirth](/fix/fields/tags-400-599#tag-486-dateofbirth) | LocalMktDate | Optional | The date of birth applicable to the individual, e.g. required to open some types of tax-exempt account. |
+| 475 | [InvestorCountryOfResidence](/fix/fields/tags-400-599#tag-475-investorcountryofresidence) | Country | Optional | The ISO 366 Country code (2 character) identifying which country the beneficial investor is resident for tax purposes. |
 
 </StickyTable>
 

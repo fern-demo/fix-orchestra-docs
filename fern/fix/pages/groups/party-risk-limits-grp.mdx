@@ -3,9 +3,15 @@ title: "PartyRiskLimitsGrp"
 subtitle: "Repeating group of parties (specified using PartyDetails) and the risk limits for the party."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1677</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoPartyRiskLimits (1677)](/fix/fields/tags-1600-1799#tag-1677).
+<llms-only>
+Repeating group · NumInGroup 1677 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPartyRiskLimits (1677)](/fix/fields/tags-1600-1799#tag-1677-nopartyrisklimits).
 
 ## Members
 
@@ -15,9 +21,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 |---|---|---|---|---|
 | 1671 | [PartyDetailGrp](/fix/groups/party-detail-grp) | Repeating group | Optional | Contains details for a party, including related parties and alternative party identifiers. |
 | 1669 | [RiskLimitsGrp](/fix/groups/risk-limits-grp) | Repeating group | Optional | Repeating group of risk limits. |
-| 1670 | [RiskLimitID](/fix/fields/tags-1600-1799#tag-1670) | String | Optional | Unique reference identifier for a specific risk limit defined for the specified party. |
-| 2339 | [RiskLimitCheckModelType](/fix/fields/tags-2200-2399#tag-2339) | RiskLimitCheckModelTypeCodeSet | Optional | Specifies the type of credit limit check model workflow to apply for the specified party |
-| 2355 | [PartyRiskLimitStatus](/fix/fields/tags-2200-2399#tag-2355) | PartyRiskLimitStatusCodeSet | Optional | The status of risk limits for a party. |
+| 1670 | [RiskLimitID](/fix/fields/tags-1600-1799#tag-1670-risklimitid) | String | Optional | Unique reference identifier for a specific risk limit defined for the specified party. |
+| 2339 | [RiskLimitCheckModelType](/fix/fields/tags-2200-2399#tag-2339-risklimitcheckmodeltype) | RiskLimitCheckModelTypeCodeSet | Optional | Specifies the type of credit limit check model workflow to apply for the specified party |
+| 2355 | [PartyRiskLimitStatus](/fix/fields/tags-2200-2399#tag-2355-partyrisklimitstatus) | PartyRiskLimitStatusCodeSet | Optional | The status of risk limits for a party. |
 
 </StickyTable>
 

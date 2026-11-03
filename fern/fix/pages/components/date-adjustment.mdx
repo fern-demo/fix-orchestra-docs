@@ -3,7 +3,13 @@ title: "DateAdjustment"
 subtitle: "DateAdjustment is a subcomponent in the Instrument component. It is used to specify date adjustment parameters and rules. The date adjustments specified here applies to all adjustable dates for the instrument, unless specifically overridden…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,9 +17,9 @@ subtitle: "DateAdjustment is a subcomponent in the Instrument component. It is u
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40921 | [BusinessDayConvention](/fix/fields/tags-40800-40999#tag-40921) | BusinessDayConventionCodeSet | Optional | The business day convention used for adjusting dates. The value defined here applies to all adjustable dates in the instrument unless specifically overridden. |
+| 40921 | [BusinessDayConvention](/fix/fields/tags-40800-40999#tag-40921-businessdayconvention) | BusinessDayConventionCodeSet | Optional | The business day convention used for adjusting dates. The value defined here applies to all adjustable dates in the instrument unless specifically overridden. |
 | 40278 | [BusinessCenterGrp](/fix/groups/business-center-grp) | Repeating group | Optional | BusinessCenterGrp is a repeating subcomponent within the DateAdjustment component. It is used to specify the set of business centers whose calendars drive the… |
-| 40922 | [DateRollConvention](/fix/fields/tags-40800-40999#tag-40922) | DateRollConventionCodeSet | Optional | The convention for determining a sequence of dates. It is used in conjunction with a specified frequency. The value defined here applies to all adjustable dates… |
+| 40922 | [DateRollConvention](/fix/fields/tags-40800-40999#tag-40922-daterollconvention) | DateRollConventionCodeSet | Optional | The convention for determining a sequence of dates. It is used in conjunction with a specified frequency. The value defined here applies to all adjustable dates… |
 
 </StickyTable>
 

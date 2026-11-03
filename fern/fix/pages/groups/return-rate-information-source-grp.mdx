@@ -3,9 +3,15 @@ title: "ReturnRateInformationSourceGrp"
 subtitle: "ReturnRateInformationSourceGrp is a repeating subcomponent within the ReturnRateGrp component. It is used to specify the information sources for equity prices and FX rates for an equity return swap payment stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42761</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoReturnRateInformationSources (42761)](/fix/fields/tags-42600-42799#tag-42761).
+<llms-only>
+Repeating group · NumInGroup 42761 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoReturnRateInformationSources (42761)](/fix/fields/tags-42600-42799#tag-42761-noreturnrateinformationsources).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42762 | [ReturnRateInformationSource](/fix/fields/tags-42600-42799#tag-42762) | RateSourceCodeSet | Optional | Required if NoReturnRateInformationSources(42761) &gt; 0. |
-| 42763 | [ReturnRateReferencePage](/fix/fields/tags-42600-42799#tag-42763) | String | Optional | Identifies the reference "page" from the rate source. For FX, the reference page to the spot rate to be used for the reference FX spot rate. When… |
-| 42764 | [ReturnRateReferencePageHeading](/fix/fields/tags-42600-42799#tag-42764) | String | Optional | Identifies the page heading from the rate source. |
+| 42762 | [ReturnRateInformationSource](/fix/fields/tags-42600-42799#tag-42762-returnrateinformationsource) | RateSourceCodeSet | Optional | Required if NoReturnRateInformationSources(42761) &gt; 0. |
+| 42763 | [ReturnRateReferencePage](/fix/fields/tags-42600-42799#tag-42763-returnratereferencepage) | String | Optional | Identifies the reference "page" from the rate source. For FX, the reference page to the spot rate to be used for the reference FX spot rate. When… |
+| 42764 | [ReturnRateReferencePageHeading](/fix/fields/tags-42600-42799#tag-42764-returnratereferencepageheading) | String | Optional | Identifies the page heading from the rate source. |
 
 </StickyTable>
 

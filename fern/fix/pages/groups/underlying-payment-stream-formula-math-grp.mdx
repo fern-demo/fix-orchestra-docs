@@ -3,9 +3,15 @@ title: "UnderlyingPaymentStreamFormulaMathGrp"
 subtitle: "UnderlyingPaymentStreamFormulaMathGrp is a repeating subcomponent within the UnderlyingPaymentStreamFormula component. It is used to specify the set of formulas, sub-formulas and descriptions from which the rate is derived."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42981</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingPaymentStreamFormulas (42981)](/fix/fields/tags-42800-42999#tag-42981).
+<llms-only>
+Repeating group · NumInGroup 42981 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingPaymentStreamFormulas (42981)](/fix/fields/tags-42800-42999#tag-42981-nounderlyingpaymentstreamformulas).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 43111 | [UnderlyingPaymentStreamFormulaLength](/fix/fields/tags-43000-43199#tag-43111) | Length | Optional | Required if NoUnderlyingPaymentStreamFormulas(42981) &gt; 0 |
-| 42982 | [UnderlyingPaymentStreamFormula](/fix/fields/tags-42800-42999#tag-42982) | XMLData | Optional | Required if NoUnderlyingPaymentStreamFormulas(42981) &gt; 0. |
-| 42983 | [UnderlyingPaymentStreamFormulaDesc](/fix/fields/tags-42800-42999#tag-42983) | String | Optional | A description of the math formula in UnderlyingPaymentStreamFormula(42982). |
+| 43111 | [UnderlyingPaymentStreamFormulaLength](/fix/fields/tags-43000-43199#tag-43111-underlyingpaymentstreamformulalength) | Length | Optional | Required if NoUnderlyingPaymentStreamFormulas(42981) &gt; 0 |
+| 42982 | [UnderlyingPaymentStreamFormula](/fix/fields/tags-42800-42999#tag-42982-underlyingpaymentstreamformula) | XMLData | Optional | Required if NoUnderlyingPaymentStreamFormulas(42981) &gt; 0. |
+| 42983 | [UnderlyingPaymentStreamFormulaDesc](/fix/fields/tags-42800-42999#tag-42983-underlyingpaymentstreamformuladesc) | String | Optional | A description of the math formula in UnderlyingPaymentStreamFormula(42982). |
 
 </StickyTable>
 

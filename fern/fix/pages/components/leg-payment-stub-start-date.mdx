@@ -3,7 +3,13 @@ title: "LegPaymentStubStartDate"
 subtitle: "LegPaymentStubStartDate is a subcomponent of the LegPaymentStubGrp component used to specify the start date of the payment stub."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,14 +17,14 @@ subtitle: "LegPaymentStubStartDate is a subcomponent of the LegPaymentStubGrp co
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42497 | [LegPaymentStubStartDateUnadjusted](/fix/fields/tags-42400-42599#tag-42497) | LocalMktDate | Optional | The unadjusted stub start date. |
-| 42498 | [LegPaymentStubStartDateBusinessDayConvention](/fix/fields/tags-42400-42599#tag-42498) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
+| 42497 | [LegPaymentStubStartDateUnadjusted](/fix/fields/tags-42400-42599#tag-42497-legpaymentstubstartdateunadjusted) | LocalMktDate | Optional | The unadjusted stub start date. |
+| 42498 | [LegPaymentStubStartDateBusinessDayConvention](/fix/fields/tags-42400-42599#tag-42498-legpaymentstubstartdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
 | 42504 | [LegPaymentStubStartDateBusinessCenterGrp](/fix/groups/leg-payment-stub-start-date-business-center-grp) | Repeating group | Optional | LegPaymentStubStartDateBusinessCenterGrp is a repeating subcomponent within the LegPaymentStubStartDate component. It is used to specify the set of business… |
-| 42499 | [LegPaymentStubStartDateRelativeTo](/fix/fields/tags-42400-42599#tag-42499) | int | Optional | Specifies the anchor date when the stub start date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
-| 42500 | [LegPaymentStubStartDateOffsetPeriod](/fix/fields/tags-42400-42599#tag-42500) | int | Optional | Conditionally required when LegPaymentStubStartDateOffsetUnit(42501) is specified. |
-| 42501 | [LegPaymentStubStartDateOffsetUnit](/fix/fields/tags-42400-42599#tag-42501) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentStubStartDateOffsetPeriod(42500) is specified. |
-| 42502 | [LegPaymentStubStartDateOffsetDayType](/fix/fields/tags-42400-42599#tag-42502) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative stub start date offset. |
-| 42503 | [LegPaymentStubStartDateAdjusted](/fix/fields/tags-42400-42599#tag-42503) | LocalMktDate | Optional | The adjusted stub start date. |
+| 42499 | [LegPaymentStubStartDateRelativeTo](/fix/fields/tags-42400-42599#tag-42499-legpaymentstubstartdaterelativeto) | int | Optional | Specifies the anchor date when the stub start date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 42500 | [LegPaymentStubStartDateOffsetPeriod](/fix/fields/tags-42400-42599#tag-42500-legpaymentstubstartdateoffsetperiod) | int | Optional | Conditionally required when LegPaymentStubStartDateOffsetUnit(42501) is specified. |
+| 42501 | [LegPaymentStubStartDateOffsetUnit](/fix/fields/tags-42400-42599#tag-42501-legpaymentstubstartdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentStubStartDateOffsetPeriod(42500) is specified. |
+| 42502 | [LegPaymentStubStartDateOffsetDayType](/fix/fields/tags-42400-42599#tag-42502-legpaymentstubstartdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative stub start date offset. |
+| 42503 | [LegPaymentStubStartDateAdjusted](/fix/fields/tags-42400-42599#tag-42503-legpaymentstubstartdateadjusted) | LocalMktDate | Optional | The adjusted stub start date. |
 
 </StickyTable>
 

@@ -2,9 +2,15 @@
 title: "RelSymDerivSecUpdGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 146</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedSym (146)](/fix/fields/tags-0-199#tag-146).
+<llms-only>
+Repeating group · NumInGroup 146 · Added FIX.5.0
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedSym (146)](/fix/fields/tags-0-199#tag-146-norelatedsym).
 
 ## Members
 
@@ -12,17 +18,17 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1324 | [ListUpdateAction](/fix/fields/tags-1200-1399#tag-1324) | ListUpdateActionCodeSet | Optional | If provided, then Instrument occurrence has explicitly changed |
-| 292 | [CorporateAction](/fix/fields/tags-200-399#tag-292) | CorporateActionCodeSet | Optional | Identifies the type of Corporate Action. |
+| 1324 | [ListUpdateAction](/fix/fields/tags-1200-1399#tag-1324-listupdateaction) | ListUpdateActionCodeSet | Optional | If provided, then Instrument occurrence has explicitly changed |
+| 292 | [CorporateAction](/fix/fields/tags-200-399#tag-292-corporateaction) | CorporateActionCodeSet | Optional | Identifies the type of Corporate Action. |
 | | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | | [InstrumentExtension](/fix/components/instrument-extension) | Component | Optional | The InstrumentExtension component block identifies additional security attributes that are more commonly found for Fixed Income securities. |
 | | [SecondaryPriceLimits](/fix/components/secondary-price-limits) | Component | Optional |  |
-| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15-currency) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
-| 1504 | [RelSymTransactTime](/fix/fields/tags-1400-1599#tag-1504) | UTCTimestamp | Optional | See TransactTime(60) |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Comment, instructions, or other identifying information. |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 1504 | [RelSymTransactTime](/fix/fields/tags-1400-1599#tag-1504-relsymtransacttime) | UTCTimestamp | Optional | See TransactTime(60) |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Comment, instructions, or other identifying information. |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 
 </StickyTable>
 

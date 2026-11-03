@@ -3,7 +3,13 @@ title: "OptionExerciseDates"
 subtitle: "The OptionExerciseDate component is a subcomponent of the OptionExercise component used to specify option exercise dates."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,27 +17,27 @@ subtitle: "The OptionExerciseDate component is a subcomponent of the OptionExerc
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41118 | [OptionExerciseBusinessDayConvention](/fix/fields/tags-41000-41199#tag-41118) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this… |
+| 41118 | [OptionExerciseBusinessDayConvention](/fix/fields/tags-41000-41199#tag-41118-optionexercisebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to this… |
 | 41116 | [OptionExerciseBusinessCenterGrp](/fix/groups/option-exercise-business-center-grp) | Repeating group | Optional | The OptionExerciseBusinessCenterGrp is a repeating subcomponent of the OptionExerciseDates component used to specify the set of business centers whose calendars… |
 | 41137 | [OptionExerciseDateGrp](/fix/groups/option-exercise-date-grp) | Repeating group | Optional | The OptionExerciseDateGrp is a repeating subcomponent of the OptionExerciseDates component used to specify fixed dates for exercise. |
-| 41119 | [OptionExerciseEarliestDateOffsetDayType](/fix/fields/tags-41000-41199#tag-41119) | ComplexEventDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative earliest option exercise date offset. |
-| 41120 | [OptionExerciseEarliestDateOffsetPeriod](/fix/fields/tags-41000-41199#tag-41120) | int | Optional | Conditionally required when OptionExerciseEarliestDateUnit(41121) is specified. |
-| 41121 | [OptionExerciseEarliestDateOffsetUnit](/fix/fields/tags-41000-41199#tag-41121) | ProvisionOptionExerciseEarliestDateOffsetUnitCodeSet | Optional | Conditionally required when OptionExerciseEarliestDatePeriod(41120) is specified. |
-| 41122 | [OptionExerciseFrequencyPeriod](/fix/fields/tags-41000-41199#tag-41122) | int | Optional | Conditionally required when OptionExerciseFrequencyUnit(41123) is specified. |
-| 41123 | [OptionExerciseFrequencyUnit](/fix/fields/tags-41000-41199#tag-41123) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when OptionExerciseFrequencyPeriod(41122) is specified. |
-| 41124 | [OptionExerciseStartDateUnadjusted](/fix/fields/tags-41000-41199#tag-41124) | LocalMktDate | Optional | The unadjusted start date for calculating periodic exercise dates. |
-| 41125 | [OptionExerciseStartDateRelativeTo](/fix/fields/tags-41000-41199#tag-41125) | int | Optional | Specifies the anchor date when the option exercise start date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date… |
-| 41126 | [OptionExerciseStartDateOffsetPeriod](/fix/fields/tags-41000-41199#tag-41126) | int | Optional | Conditionally required when OptionExerciseStartDateOffsetUnit(41127) is specified. |
-| 41127 | [OptionExerciseStartDateOffsetUnit](/fix/fields/tags-41000-41199#tag-41127) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when OptionExerciseStartDateOffsetPeriod(41126) is specified. |
-| 41128 | [OptionExerciseStartDateOffsetDayType](/fix/fields/tags-41000-41199#tag-41128) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative option exercise start date offset. |
-| 41129 | [OptionExerciseStartDateAdjusted](/fix/fields/tags-41000-41199#tag-41129) | LocalMktDate | Optional | The adjusted start date for calculating periodic exercise dates. |
-| 41130 | [OptionExerciseSkip](/fix/fields/tags-41000-41199#tag-41130) | int | Optional | The number of periods in the referenced date schedule that are between each date in the relative date schedule. Thus a skip of 2 would mean that dates are… |
-| 41131 | [OptionExerciseNominationDeadline](/fix/fields/tags-41000-41199#tag-41131) | LocalMktDate | Optional | Last date (adjusted) for establishing the option exercise terms. |
-| 41132 | [OptionExerciseFirstDateUnadjusted](/fix/fields/tags-41000-41199#tag-41132) | LocalMktDate | Optional | The unadjusted first exercise date. |
-| 41133 | [OptionExerciseLastDateUnadjusted](/fix/fields/tags-41000-41199#tag-41133) | LocalMktDate | Optional | The unadjusted last exercise date. |
-| 41134 | [OptionExerciseEarliestTime](/fix/fields/tags-41000-41199#tag-41134) | LocalMktTime | Optional | The earliest time at which notice of exercise can be given by the buyer to the seller (or seller's agent) (i) on the expriation date, in the case of a European… |
-| 41135 | [OptionExerciseLatestTime](/fix/fields/tags-41000-41199#tag-41135) | LocalMktTime | Optional | The latest exercise time. See also OptionExerciseEarliestTime(41134). |
-| 41136 | [OptionExerciseTimeBusinessCenter](/fix/fields/tags-41000-41199#tag-41136) | String | Optional | The business center used to determine the locale for option exercise time, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard… |
+| 41119 | [OptionExerciseEarliestDateOffsetDayType](/fix/fields/tags-41000-41199#tag-41119-optionexerciseearliestdateoffsetdaytype) | ComplexEventDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative earliest option exercise date offset. |
+| 41120 | [OptionExerciseEarliestDateOffsetPeriod](/fix/fields/tags-41000-41199#tag-41120-optionexerciseearliestdateoffsetperiod) | int | Optional | Conditionally required when OptionExerciseEarliestDateUnit(41121) is specified. |
+| 41121 | [OptionExerciseEarliestDateOffsetUnit](/fix/fields/tags-41000-41199#tag-41121-optionexerciseearliestdateoffsetunit) | ProvisionOptionExerciseEarliestDateOffsetUnitCodeSet | Optional | Conditionally required when OptionExerciseEarliestDatePeriod(41120) is specified. |
+| 41122 | [OptionExerciseFrequencyPeriod](/fix/fields/tags-41000-41199#tag-41122-optionexercisefrequencyperiod) | int | Optional | Conditionally required when OptionExerciseFrequencyUnit(41123) is specified. |
+| 41123 | [OptionExerciseFrequencyUnit](/fix/fields/tags-41000-41199#tag-41123-optionexercisefrequencyunit) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when OptionExerciseFrequencyPeriod(41122) is specified. |
+| 41124 | [OptionExerciseStartDateUnadjusted](/fix/fields/tags-41000-41199#tag-41124-optionexercisestartdateunadjusted) | LocalMktDate | Optional | The unadjusted start date for calculating periodic exercise dates. |
+| 41125 | [OptionExerciseStartDateRelativeTo](/fix/fields/tags-41000-41199#tag-41125-optionexercisestartdaterelativeto) | int | Optional | Specifies the anchor date when the option exercise start date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date… |
+| 41126 | [OptionExerciseStartDateOffsetPeriod](/fix/fields/tags-41000-41199#tag-41126-optionexercisestartdateoffsetperiod) | int | Optional | Conditionally required when OptionExerciseStartDateOffsetUnit(41127) is specified. |
+| 41127 | [OptionExerciseStartDateOffsetUnit](/fix/fields/tags-41000-41199#tag-41127-optionexercisestartdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when OptionExerciseStartDateOffsetPeriod(41126) is specified. |
+| 41128 | [OptionExerciseStartDateOffsetDayType](/fix/fields/tags-41000-41199#tag-41128-optionexercisestartdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative option exercise start date offset. |
+| 41129 | [OptionExerciseStartDateAdjusted](/fix/fields/tags-41000-41199#tag-41129-optionexercisestartdateadjusted) | LocalMktDate | Optional | The adjusted start date for calculating periodic exercise dates. |
+| 41130 | [OptionExerciseSkip](/fix/fields/tags-41000-41199#tag-41130-optionexerciseskip) | int | Optional | The number of periods in the referenced date schedule that are between each date in the relative date schedule. Thus a skip of 2 would mean that dates are… |
+| 41131 | [OptionExerciseNominationDeadline](/fix/fields/tags-41000-41199#tag-41131-optionexercisenominationdeadline) | LocalMktDate | Optional | Last date (adjusted) for establishing the option exercise terms. |
+| 41132 | [OptionExerciseFirstDateUnadjusted](/fix/fields/tags-41000-41199#tag-41132-optionexercisefirstdateunadjusted) | LocalMktDate | Optional | The unadjusted first exercise date. |
+| 41133 | [OptionExerciseLastDateUnadjusted](/fix/fields/tags-41000-41199#tag-41133-optionexerciselastdateunadjusted) | LocalMktDate | Optional | The unadjusted last exercise date. |
+| 41134 | [OptionExerciseEarliestTime](/fix/fields/tags-41000-41199#tag-41134-optionexerciseearliesttime) | LocalMktTime | Optional | The earliest time at which notice of exercise can be given by the buyer to the seller (or seller's agent) (i) on the expriation date, in the case of a European… |
+| 41135 | [OptionExerciseLatestTime](/fix/fields/tags-41000-41199#tag-41135-optionexerciselatesttime) | LocalMktTime | Optional | The latest exercise time. See also OptionExerciseEarliestTime(41134). |
+| 41136 | [OptionExerciseTimeBusinessCenter](/fix/fields/tags-41000-41199#tag-41136-optionexercisetimebusinesscenter) | String | Optional | The business center used to determine the locale for option exercise time, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for standard… |
 
 </StickyTable>
 

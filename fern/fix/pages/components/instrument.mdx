@@ -3,7 +3,13 @@ title: "Instrument"
 subtitle: "The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block are considered the static data of a security, data that may be commonly found in…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.4.3
+</llms-only>
 
 ## Members
 
@@ -11,160 +17,160 @@ subtitle: "The Instrument component block contains all the fields commonly used 
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 55 | [Symbol](/fix/fields/tags-0-199#tag-55) | String | Optional | Common, "human understood" representation of the security. SecurityID value can be specified if no symbol exists (e.g. non-exchange traded Collective Investment… |
-| 65 | [SymbolSfx](/fix/fields/tags-0-199#tag-65) | SymbolSfxCodeSet | Optional | Used in Fixed Income with a value of "WI" to indicate "When Issued" for a security to be reissued under an old CUSIP or ISIN or with a value of "CD" to indicate… |
-| 48 | [SecurityID](/fix/fields/tags-0-199#tag-48) | String | Optional | Takes precedence in identifying security to counterparty over SecurityAltID block. Requires SecurityIDSource if specified. |
-| 22 | [SecurityIDSource](/fix/fields/tags-0-199#tag-22) | SecurityIDSourceCodeSet | Optional | Conditionally required when SecurityID(48) is specified. |
+| 55 | [Symbol](/fix/fields/tags-0-199#tag-55-symbol) | String | Optional | Common, "human understood" representation of the security. SecurityID value can be specified if no symbol exists (e.g. non-exchange traded Collective Investment… |
+| 65 | [SymbolSfx](/fix/fields/tags-0-199#tag-65-symbolsfx) | SymbolSfxCodeSet | Optional | Used in Fixed Income with a value of "WI" to indicate "When Issued" for a security to be reissued under an old CUSIP or ISIN or with a value of "CD" to indicate… |
+| 48 | [SecurityID](/fix/fields/tags-0-199#tag-48-securityid) | String | Optional | Takes precedence in identifying security to counterparty over SecurityAltID block. Requires SecurityIDSource if specified. |
+| 22 | [SecurityIDSource](/fix/fields/tags-0-199#tag-22-securityidsource) | SecurityIDSourceCodeSet | Optional | Conditionally required when SecurityID(48) is specified. |
 | 454 | [SecAltIDGrp](/fix/groups/sec-alt-id-grp) | Repeating group | Optional |  |
-| 460 | [Product](/fix/fields/tags-400-599#tag-460) | ProductCodeSet | Optional | Indicates the type of product the security is associated with (high-level category) |
-| 1227 | [ProductComplex](/fix/fields/tags-1200-1399#tag-1227) | String | Optional | Identifies an entire suite of products for a given market. In Futures this may be "interest rates", "agricultural", "equity indexes", etc |
-| 1151 | [SecurityGroup](/fix/fields/tags-1000-1199#tag-1151) | String | Optional | An exchange specific name assigned to a group of related securities which may be concurrently affected by market events and actions. |
-| 461 | [CFICode](/fix/fields/tags-400-599#tag-461) | String | Optional | Indicates the type of security using ISO 10962 standard, Classification of Financial Instruments (CFI code) values. It is recommended that CFICode be used… |
-| 2891 | [UPICode](/fix/fields/tags-2800-2999#tag-2891) | String | Optional | Uniquely identifies the product of a security using ISO 4914 standard, Unique Product Identifier (UPI). The DSB (Derivative Service Bureau Ltd) is acting as… |
-| 167 | [SecurityType](/fix/fields/tags-0-199#tag-167) | SecurityTypeCodeSet | Optional | It is recommended that CFICode be used instead of SecurityType for non-Fixed Income instruments. Required for Fixed Income. Refer to Volume 7 - Fixed Income… |
-| 762 | [SecuritySubType](/fix/fields/tags-600-799#tag-762) | String | Optional | Sub-type qualification/identification of the SecurityType (e.g. for SecurityType="MLEG"). If specified, SecurityType is required. |
-| 200 | [MaturityMonthYear](/fix/fields/tags-200-399#tag-200) | MonthYear | Optional | Specifies the month and year of maturity. Applicable for standardized derivatives which are typically only referenced by month and year (e.g. S&P futures). Note… |
-| 541 | [MaturityDate](/fix/fields/tags-400-599#tag-541) | LocalMktDate | Optional | Specifies date of maturity (a full date). Note that standardized derivatives which are typically only referenced by month and year (e.g. S&amp;P futures).may… |
-| 1079 | [MaturityTime](/fix/fields/tags-1000-1199#tag-1079) | TZTimeOnly | Optional | For NDFs this represents the fixing time of the contract. It is optional to specify the fixing time. |
-| 966 | [SettleOnOpenFlag](/fix/fields/tags-800-999#tag-966) | String | Optional | Indicator to determine if Instrument is Settle on Open. |
-| 1049 | [InstrmtAssignmentMethod](/fix/fields/tags-1000-1199#tag-1049) | InstrmtAssignmentMethodCodeSet | Optional | Method under which assignment was conducted |
-| 965 | [SecurityStatus](/fix/fields/tags-800-999#tag-965) | SecurityStatusCodeSet | Optional | Gives the current state of the instrument |
-| 224 | [CouponPaymentDate](/fix/fields/tags-200-399#tag-224) | LocalMktDate | Optional | Date interest is to be paid. Used in identifying Corporate Bond issues. |
-| 1449 | [RestructuringType](/fix/fields/tags-1400-1599#tag-1449) | RestructuringTypeCodeSet | Optional | A category of CDS credit event in which the underlying bond experiences a restructuring. Used to define a CDS instrument. |
-| 1450 | [Seniority](/fix/fields/tags-1400-1599#tag-1450) | SeniorityCodeSet | Optional | Specifies which issue (underlying bond) will receive payment priority in the event of a default. Used to define a CDS instrument. |
-| 1451 | [NotionalPercentageOutstanding](/fix/fields/tags-1400-1599#tag-1451) | Percentage | Optional | Indicates the notional percentage of the deal that is still outstanding based on the remaining components of the index. Used to calculate the true value of a… |
-| 1452 | [OriginalNotionalPercentageOutstanding](/fix/fields/tags-1400-1599#tag-1452) | Percentage | Optional | Used to reflect the Original value prior to the application of a credit event. See NotionalPercentageOutstanding(1451). |
-| 1457 | [AttachmentPoint](/fix/fields/tags-1400-1599#tag-1457) | Percentage | Optional | Lower bound percentage of the loss that the tranche can endure. |
-| 1458 | [DetachmentPoint](/fix/fields/tags-1400-1599#tag-1458) | Percentage | Optional | Upper bound percentage of the loss the tranche can endure. |
-| 1739 | [ObligationType](/fix/fields/tags-1600-1799#tag-1739) | ObligationTypeCodeSet | Optional | Type of reference obligation for credit derivatives contracts. |
-| 2210 | [AssetGroup](/fix/fields/tags-2200-2399#tag-2210) | AssetGroupCodeSet | Optional | Indicates the broad product or asset classification. May be used to provide grouping for the product taxonomy (Product(460), SecurityType(167), etc.) and/or the… |
-| 1938 | [AssetClass](/fix/fields/tags-1800-1999#tag-1938) | AssetClassCodeSet | Optional | Required if AssetSubClass(1939) is specified. |
-| 1939 | [AssetSubClass](/fix/fields/tags-1800-1999#tag-1939) | AssetSubClassCodeSet | Optional | Required if AssetType(1940) is specified. |
-| 1940 | [AssetType](/fix/fields/tags-1800-1999#tag-1940) | String | Optional | Required if AssetSubType(2735) is specified. |
-| 2735 | [AssetSubType](/fix/fields/tags-2600-2799#tag-2735) | String | Optional | Used to provide a more specific description of the asset specified in AssetType(1940). See https://www.fixtrading.org/codelists/AssetSubType for code list of… |
+| 460 | [Product](/fix/fields/tags-400-599#tag-460-product) | ProductCodeSet | Optional | Indicates the type of product the security is associated with (high-level category) |
+| 1227 | [ProductComplex](/fix/fields/tags-1200-1399#tag-1227-productcomplex) | String | Optional | Identifies an entire suite of products for a given market. In Futures this may be "interest rates", "agricultural", "equity indexes", etc |
+| 1151 | [SecurityGroup](/fix/fields/tags-1000-1199#tag-1151-securitygroup) | String | Optional | An exchange specific name assigned to a group of related securities which may be concurrently affected by market events and actions. |
+| 461 | [CFICode](/fix/fields/tags-400-599#tag-461-cficode) | String | Optional | Indicates the type of security using ISO 10962 standard, Classification of Financial Instruments (CFI code) values. It is recommended that CFICode be used… |
+| 2891 | [UPICode](/fix/fields/tags-2800-2999#tag-2891-upicode) | String | Optional | Uniquely identifies the product of a security using ISO 4914 standard, Unique Product Identifier (UPI). The DSB (Derivative Service Bureau Ltd) is acting as… |
+| 167 | [SecurityType](/fix/fields/tags-0-199#tag-167-securitytype) | SecurityTypeCodeSet | Optional | It is recommended that CFICode be used instead of SecurityType for non-Fixed Income instruments. Required for Fixed Income. Refer to Volume 7 - Fixed Income… |
+| 762 | [SecuritySubType](/fix/fields/tags-600-799#tag-762-securitysubtype) | String | Optional | Sub-type qualification/identification of the SecurityType (e.g. for SecurityType="MLEG"). If specified, SecurityType is required. |
+| 200 | [MaturityMonthYear](/fix/fields/tags-200-399#tag-200-maturitymonthyear) | MonthYear | Optional | Specifies the month and year of maturity. Applicable for standardized derivatives which are typically only referenced by month and year (e.g. S&P futures). Note… |
+| 541 | [MaturityDate](/fix/fields/tags-400-599#tag-541-maturitydate) | LocalMktDate | Optional | Specifies date of maturity (a full date). Note that standardized derivatives which are typically only referenced by month and year (e.g. S&amp;P futures).may… |
+| 1079 | [MaturityTime](/fix/fields/tags-1000-1199#tag-1079-maturitytime) | TZTimeOnly | Optional | For NDFs this represents the fixing time of the contract. It is optional to specify the fixing time. |
+| 966 | [SettleOnOpenFlag](/fix/fields/tags-800-999#tag-966-settleonopenflag) | String | Optional | Indicator to determine if Instrument is Settle on Open. |
+| 1049 | [InstrmtAssignmentMethod](/fix/fields/tags-1000-1199#tag-1049-instrmtassignmentmethod) | InstrmtAssignmentMethodCodeSet | Optional | Method under which assignment was conducted |
+| 965 | [SecurityStatus](/fix/fields/tags-800-999#tag-965-securitystatus) | SecurityStatusCodeSet | Optional | Gives the current state of the instrument |
+| 224 | [CouponPaymentDate](/fix/fields/tags-200-399#tag-224-couponpaymentdate) | LocalMktDate | Optional | Date interest is to be paid. Used in identifying Corporate Bond issues. |
+| 1449 | [RestructuringType](/fix/fields/tags-1400-1599#tag-1449-restructuringtype) | RestructuringTypeCodeSet | Optional | A category of CDS credit event in which the underlying bond experiences a restructuring. Used to define a CDS instrument. |
+| 1450 | [Seniority](/fix/fields/tags-1400-1599#tag-1450-seniority) | SeniorityCodeSet | Optional | Specifies which issue (underlying bond) will receive payment priority in the event of a default. Used to define a CDS instrument. |
+| 1451 | [NotionalPercentageOutstanding](/fix/fields/tags-1400-1599#tag-1451-notionalpercentageoutstanding) | Percentage | Optional | Indicates the notional percentage of the deal that is still outstanding based on the remaining components of the index. Used to calculate the true value of a… |
+| 1452 | [OriginalNotionalPercentageOutstanding](/fix/fields/tags-1400-1599#tag-1452-originalnotionalpercentageoutstanding) | Percentage | Optional | Used to reflect the Original value prior to the application of a credit event. See NotionalPercentageOutstanding(1451). |
+| 1457 | [AttachmentPoint](/fix/fields/tags-1400-1599#tag-1457-attachmentpoint) | Percentage | Optional | Lower bound percentage of the loss that the tranche can endure. |
+| 1458 | [DetachmentPoint](/fix/fields/tags-1400-1599#tag-1458-detachmentpoint) | Percentage | Optional | Upper bound percentage of the loss the tranche can endure. |
+| 1739 | [ObligationType](/fix/fields/tags-1600-1799#tag-1739-obligationtype) | ObligationTypeCodeSet | Optional | Type of reference obligation for credit derivatives contracts. |
+| 2210 | [AssetGroup](/fix/fields/tags-2200-2399#tag-2210-assetgroup) | AssetGroupCodeSet | Optional | Indicates the broad product or asset classification. May be used to provide grouping for the product taxonomy (Product(460), SecurityType(167), etc.) and/or the… |
+| 1938 | [AssetClass](/fix/fields/tags-1800-1999#tag-1938-assetclass) | AssetClassCodeSet | Optional | Required if AssetSubClass(1939) is specified. |
+| 1939 | [AssetSubClass](/fix/fields/tags-1800-1999#tag-1939-assetsubclass) | AssetSubClassCodeSet | Optional | Required if AssetType(1940) is specified. |
+| 1940 | [AssetType](/fix/fields/tags-1800-1999#tag-1940-assettype) | String | Optional | Required if AssetSubType(2735) is specified. |
+| 2735 | [AssetSubType](/fix/fields/tags-2600-2799#tag-2735-assetsubtype) | String | Optional | Used to provide a more specific description of the asset specified in AssetType(1940). See https://www.fixtrading.org/codelists/AssetSubType for code list of… |
 | 1976 | [SecondaryAssetGrp](/fix/groups/secondary-asset-grp) | Repeating group | Optional | SecondaryAssetGrp is a repeating subcomponent of the Instrument component used to specify secondary assets of a multi-asset swap. |
 | 2304 | [AssetAttributeGrp](/fix/groups/asset-attribute-grp) | Repeating group | Optional | The AssetAttributeGrp is a repeating subcomponent of the Instrument component used to detail attributes of the instrument asset. |
-| 1941 | [SwapClass](/fix/fields/tags-1800-1999#tag-1941) | SwapClassCodeSet | Optional | The classification or type of swap. Additional values may be used by mutual agreement of the counterparties. |
-| 1575 | [SwapSubClass](/fix/fields/tags-1400-1599#tag-1575) | SwapSubClassCodeSet | Optional | The sub-classification or notional schedule type of the swap. |
-| 1942 | [NthToDefault](/fix/fields/tags-1800-1999#tag-1942) | int | Optional | Conditionally required when MthToDefault(1943) is specified. |
-| 1943 | [MthToDefault](/fix/fields/tags-1800-1999#tag-1943) | int | Optional | The Mth reference obligation to default in a CDS reference basket. When NthToDefault(1942) and MthToDefault(1943) are represented then the CDS payout occurs… |
-| 1944 | [SettledEntityMatrixSource](/fix/fields/tags-1800-1999#tag-1944) | String | Optional | Relevant settled entity matrix source. |
-| 1945 | [SettledEntityMatrixPublicationDate](/fix/fields/tags-1800-1999#tag-1945) | LocalMktDate | Optional | The publication date of the applicable version of the matrix. If not specified, the Standard Terms Supplement defines rules for which version of the matrix is… |
-| 1946 | [CouponType](/fix/fields/tags-1800-1999#tag-1946) | CouponTypeCodeSet | Optional | Coupon type of the bond. |
-| 1947 | [TotalIssuedAmount](/fix/fields/tags-1800-1999#tag-1947) | Amt | Optional | Specifies the total amount of the issue. Corresponds to the par value multiplied by the number of issued securities. |
-| 1948 | [CouponFrequencyPeriod](/fix/fields/tags-1800-1999#tag-1948) | int | Optional | Conditionally required when CouponFrequencyUnit(1949) is specified. |
-| 1949 | [CouponFrequencyUnit](/fix/fields/tags-1800-1999#tag-1949) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when CouponFrequencyPeriod(1948) is specified. |
-| 1950 | [CouponDayCount](/fix/fields/tags-1800-1999#tag-1950) | CouponDayCountCodeSet | Optional | The day count convention used in interest calculations for a bond or an interest bearing security. Absence of this field for a bond or an interest bearing… |
-| 2879 | [CouponOtherDayCount](/fix/fields/tags-2800-2999#tag-2879) | String | Optional | The industry name of the day count convention not listed in CouponDayCount(1950). |
-| 1951 | [ConvertibleBondEquityID](/fix/fields/tags-1800-1999#tag-1951) | String | Optional | Identifies the equity in which a convertible bond can be converted to. |
-| 1952 | [ConvertibleBondEquityIDSource](/fix/fields/tags-1800-1999#tag-1952) | SecurityIDSourceCodeSet | Optional | Conditionally required when ConvertibleBondEquityID(1951) is specified. |
-| 1953 | [ContractPriceRefMonth](/fix/fields/tags-1800-1999#tag-1953) | MonthYear | Optional | Reference month if there is no applicable MaturityMonthYear(200) value for the contract or security. |
-| 1954 | [LienSeniority](/fix/fields/tags-1800-1999#tag-1954) | LienSeniorityCodeSet | Optional | Indicates the seniority level of the lien in a loan. |
-| 1955 | [LoanFacility](/fix/fields/tags-1800-1999#tag-1955) | LoanFacilityCodeSet | Optional | Specifies the type of loan when the credit default swap's reference obligation is a loan. |
-| 1956 | [ReferenceEntityType](/fix/fields/tags-1800-1999#tag-1956) | ReferenceEntityTypeCodeSet | Optional | Specifies the type of reference entity for first-to-default CDS basket contracts. |
-| 1957 | [IndexSeries](/fix/fields/tags-1800-1999#tag-1957) | int | Optional | The series identifier of a credit default swap index. |
-| 1958 | [IndexAnnexVersion](/fix/fields/tags-1800-1999#tag-1958) | int | Optional | The version of a credit default swap index annex. |
-| 1959 | [IndexAnnexDate](/fix/fields/tags-1800-1999#tag-1959) | LocalMktDate | Optional | The date of a credit default swap index series annex. |
-| 1960 | [IndexAnnexSource](/fix/fields/tags-1800-1999#tag-1960) | String | Optional | The source of a credit default swap series annex. |
-| 1577 | [SettlRateIndex](/fix/fields/tags-1400-1599#tag-1577) | String | Optional | In an outright or forward commodity trade that is cash settled this is the index used to determine the cash payment. |
-| 1580 | [SettlRateIndexLocation](/fix/fields/tags-1400-1599#tag-1580) | String | Optional | This is an optional qualifying attribute of SettlRateIndex(1577) such as the delivery zone for an electricity contract. |
-| 1581 | [OptionExpirationDesc](/fix/fields/tags-1400-1599#tag-1581) | String | Optional | Description of the option expiration. |
-| 1678 | [EncodedOptionExpirationDescLen](/fix/fields/tags-1600-1799#tag-1678) | Length | Optional | Must be set if EncodedOptionExpirationDesc(1697) field is specified and must immediately precede it. |
-| 1697 | [EncodedOptionExpirationDesc](/fix/fields/tags-1600-1799#tag-1697) | data | Optional | Encoded (non-ASCII characters) representation of the OptionExpirationDesc(1581) field in the encoded format specified via the MessageEncoding(347) field. |
-| 225 | [IssueDate](/fix/fields/tags-200-399#tag-225) | LocalMktDate | Optional | Date instrument was issued. For Fixed Income IOIs for new issues, specifies the issue date. |
-| 239 | [RepoCollateralSecurityType](/fix/fields/tags-200-399#tag-239) | String | Optional | Identifies the collateral used in the transaction. Valid values: see SecurityType (167) field (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
-| 226 | [RepurchaseTerm](/fix/fields/tags-200-399#tag-226) | int | Optional | Number of business days before repurchase of a repo. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
-| 227 | [RepurchaseRate](/fix/fields/tags-200-399#tag-227) | Percentage | Optional | Percent of par at which a Repo will be repaid. Represented as a percent, e.g. .9525 represents 95-/4 percent of par. (Note tag # was reserved in FIX 4.1, added… |
-| 228 | [Factor](/fix/fields/tags-200-399#tag-228) | float | Optional | For Fixed Income: Amortization Factor for deriving Current face from Original face for ABS or MBS securities, note the fraction may be greater than, equal to or… |
-| 255 | [CreditRating](/fix/fields/tags-200-399#tag-255) | String | Optional | An evaluation of a company's ability to repay obligations or its likelihood of not defaulting. These evaluation are provided by Credit Rating Agencies, i.e.… |
-| 543 | [InstrRegistry](/fix/fields/tags-400-599#tag-543) | String | Optional | The location at which records of ownership are maintained for this instrument, and at which ownership changes must be recorded. Can be used in conjunction with… |
-| 470 | [CountryOfIssue](/fix/fields/tags-400-599#tag-470) | Country | Optional | ISO Country code of instrument issue (e.g. the country portion typically used in ISIN). Can be used in conjunction with non-ISIN SecurityID (e.g. CUSIP for… |
-| 471 | [StateOrProvinceOfIssue](/fix/fields/tags-400-599#tag-471) | String | Optional | A two-character state or province abbreviation. |
-| 472 | [LocaleOfIssue](/fix/fields/tags-400-599#tag-472) | String | Optional | The three-character IATA code for a locale (e.g. airport code for Municipal Bonds). |
-| 240 | [RedemptionDate](/fix/fields/tags-200-399#tag-240) | LocalMktDate | Optional | Return of investor's principal in a security. Bond redemption can occur before maturity date.(Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to… |
-| 202 | [StrikePrice](/fix/fields/tags-200-399#tag-202) | Price | Optional | Used for derivatives, such as options and covered warrants |
-| 2578 | [OrigStrikePrice](/fix/fields/tags-2400-2599#tag-2578) | Price | Optional | Original exercise price, e.g. after corporate action requiring changes. |
-| 2577 | [StrikePricePrecision](/fix/fields/tags-2400-2599#tag-2577) | int | Optional | Specifies the number of decimal places for exercise price. |
-| 947 | [StrikeCurrency](/fix/fields/tags-800-999#tag-947) | Currency | Optional | Used for derivatives |
-| 967 | [StrikeMultiplier](/fix/fields/tags-800-999#tag-967) | float | Optional | Used for derivatives. Multiplier applied to the strike price for the purpose of calculating the settlement value. |
-| 968 | [StrikeValue](/fix/fields/tags-800-999#tag-968) | float | Optional | Used for derivatives. The number of shares/units for the financial instrument involved in the option trade. |
-| 1698 | [StrikeUnitOfMeasure](/fix/fields/tags-1600-1799#tag-1698) | UnitOfMeasureCodeSet | Optional | Used to express the unit of measure (UOM) of the price if different from the contract. |
-| 1866 | [StrikeIndex](/fix/fields/tags-1800-1999#tag-1866) | String | Optional | Specifies the index used to calculate the strike price. |
-| 2600 | [StrikeIndexCurvePoint](/fix/fields/tags-2600-2799#tag-2600) | String | Optional | The point on the floating rate index curve. Sample values: M = combination of a number between 1-12 and an "M" for month, e.g. 3M Y = combination of number… |
-| 2001 | [StrikeIndexSpread](/fix/fields/tags-2000-2199#tag-2001) | PriceOffset | Optional | Specifies the strike price offset from the named index. |
-| 2601 | [StrikeIndexQuote](/fix/fields/tags-2600-2799#tag-2601) | StrikeIndexQuoteCodeSet | Optional | The quote side from which the index price is to be determined. |
-| 1478 | [StrikePriceDeterminationMethod](/fix/fields/tags-1400-1599#tag-1478) | StrikePriceDeterminationMethodCodeSet | Optional | Specifies how the strike price is determined at the point of option exercise. The strike may be fixed throughout the life of the option, set at expiration to… |
-| 1479 | [StrikePriceBoundaryMethod](/fix/fields/tags-1400-1599#tag-1479) | StrikePriceBoundaryMethodCodeSet | Optional | When specified, PutOrCall(201), StrikePrice(202), and StrikePriceBoundaryPrecision(1480) must also be specified. |
-| 1480 | [StrikePriceBoundaryPrecision](/fix/fields/tags-1400-1599#tag-1480) | Percentage | Optional | Used in combination with StrikePriceBoundaryMethod to specify the percentage of the strike price in relation to the underlying price. The percentage is… |
-| 1481 | [UnderlyingPriceDeterminationMethod](/fix/fields/tags-1400-1599#tag-1481) | UnderlyingPriceDeterminationMethodCodeSet | Optional | Specifies how the underlying price is determined at the point of option exercise. The underlying price may be set to the current settlement price, set to a… |
-| 206 | [OptAttribute](/fix/fields/tags-200-399#tag-206) | char | Optional | Used for derivatives, such as options and covered warrants to indicate a versioning of the contract when required due to corporate actions to the underlying.… |
-| 231 | [ContractMultiplier](/fix/fields/tags-200-399#tag-231) | float | Optional | For Fixed Income, Convertible Bonds, Derivatives, etc. Note: If used, quantities should be expressed in the "nominal" (e.g. contracts vs. shares) amount. |
-| 1435 | [ContractMultiplierUnit](/fix/fields/tags-1400-1599#tag-1435) | ContractMultiplierUnitCodeSet | Optional | Indicates the type of multiplier being applied to the contract. Can be optionally used to further define what unit ContractMultiplier(tag 231) is expressed in. |
-| 2353 | [TradingUnitPeriodMultiplier](/fix/fields/tags-2200-2399#tag-2353) | int | Optional | Indicates the number of contract periods associated with the minimum trading unit for a given contract duration resulting in the number of total traded… |
-| 1439 | [FlowScheduleType](/fix/fields/tags-1400-1599#tag-1439) | FlowScheduleTypeCodeSet | Optional | The industry standard flow schedule by which electricity or natural gas is traded. Schedules may exist by regions and on-peak and off-peak status, such as… |
-| 969 | [MinPriceIncrement](/fix/fields/tags-800-999#tag-969) | float | Optional | Minimum price increment for the instrument. Could also be used to represent tick value. |
-| 1146 | [MinPriceIncrementAmount](/fix/fields/tags-1000-1199#tag-1146) | Amt | Optional | Minimum price increment amount associated with the MinPriceIncrement \[969\]. For listed derivatives, the value can be calculated by multiplying MinPriceIncrement… |
-| 996 | [UnitOfMeasure](/fix/fields/tags-800-999#tag-996) | UnitOfMeasureCodeSet | Optional | 0 |
-| 1147 | [UnitOfMeasureQty](/fix/fields/tags-1000-1199#tag-1147) | Qty | Optional | Used to indicate the quantity of the underlying commodity unit of measure on which the contract is based, such as, 2500 lbs of lean cattle, 1000 barrels of… |
-| 1716 | [UnitOfMeasureCurrency](/fix/fields/tags-1600-1799#tag-1716) | Currency | Optional | Indicates the currency of the unit of measure. Conditionally required when UnitOfMeasure(996) = Ccy |
-| 1191 | [PriceUnitOfMeasure](/fix/fields/tags-1000-1199#tag-1191) | UnitOfMeasureCodeSet | Optional | Used to express the UOM of the price if different from the contract. In futures, this can be different for cross-rate products in which the price is quoted in… |
-| 1192 | [PriceUnitOfMeasureQty](/fix/fields/tags-1000-1199#tag-1192) | Qty | Optional | Used to express the UOM Quantity of the price if different from the contract. In futures, this can be different for physically delivered products in which price… |
-| 1717 | [PriceUnitOfMeasureCurrency](/fix/fields/tags-1600-1799#tag-1717) | Currency | Optional | Indicates the currency of the price unit of measure. Conditionally required when PriceUnitOfMeasure(1191) = Ccy |
-| 1193 | [SettlMethod](/fix/fields/tags-1000-1199#tag-1193) | SettlMethodCodeSet | Optional | Conditionally required if SettlSubMethod(2579) is specified. |
-| 2579 | [SettlSubMethod](/fix/fields/tags-2400-2599#tag-2579) | SettlSubMethodCodeSet | Optional | Specifies a suitable settlement sub-method for a given settlement method. |
-| 1194 | [ExerciseStyle](/fix/fields/tags-1000-1199#tag-1194) | ExerciseStyleCodeSet | Optional | Type of exercise of a derivatives security |
-| 1482 | [OptPayoutType](/fix/fields/tags-1400-1599#tag-1482) | OptPayoutTypeCodeSet | Optional | Indicates the type of valuation method or payout trigger for an in-the-money option. |
-| 1195 | [OptPayoutAmount](/fix/fields/tags-1000-1199#tag-1195) | Amt | Optional | Conditionally required if OptPayoutType(1482) = 3 (Binary). |
-| 2753 | [ReturnTrigger](/fix/fields/tags-2600-2799#tag-2753) | ReturnTriggerCodeSet | Optional | Indicates the type of return or payout trigger for the swap or forward. |
-| 1196 | [PriceQuoteMethod](/fix/fields/tags-1000-1199#tag-1196) | PriceQuoteMethodCodeSet | Optional | Method for price quotation |
-| 1197 | [ValuationMethod](/fix/fields/tags-1000-1199#tag-1197) | ValuationMethodCodeSet | Optional | Indicates type of valuation method used. |
-| 2002 | [ValuationSource](/fix/fields/tags-2000-2199#tag-2002) | String | Optional | Specifies the source of trade valuation data. |
-| 2140 | [ValuationReferenceModel](/fix/fields/tags-2000-2199#tag-2140) | String | Optional | Specifies the methodology and/or assumptions used to generate the trade value. |
-| 1524 | [PriceQuoteCurrency](/fix/fields/tags-1400-1599#tag-1524) | Currency | Optional | Default currency in which the price is quoted. Defined at the instrument level. Used in place of Currency (tag 15) to express the currency of a product when the… |
-| 1198 | [ListMethod](/fix/fields/tags-1000-1199#tag-1198) | ListMethodCodeSet | Optional | Indicates whether the instruments are pre-listed only or can also be defined via user request |
-| 1199 | [CapPrice](/fix/fields/tags-1000-1199#tag-1199) | Price | Optional | Used to express the ceiling price of a capped call |
-| 1200 | [FloorPrice](/fix/fields/tags-1200-1399#tag-1200) | Price | Optional | Used to express the floor price of a capped put |
-| 201 | [PutOrCall](/fix/fields/tags-200-399#tag-201) | PutOrCallCodeSet | Optional | Used to express option right |
-| 2681 | [InTheMoneyCondition](/fix/fields/tags-2600-2799#tag-2681) | InTheMoneyConditionCodeSet | Optional | Used to express in-the-moneyness behavior in general terms for the option without the use of StrikePrice(202) and PutOrCall(201). |
-| 2685 | [ContraryInstructionEligibilityIndicator](/fix/fields/tags-2600-2799#tag-2685) | Boolean | Optional | Identifies whether the option instrument is eligible for contrary instructions at the time of exercise. The contrariness of an instruction will be determined in… |
-| 1244 | [FlexibleIndicator](/fix/fields/tags-1200-1399#tag-1244) | Boolean | Optional | Used to indicate if a security has been defined as flexible according to "non-standard" means. Analog to CFICode Standard/Non-standard indicator |
-| 1242 | [FlexProductEligibilityIndicator](/fix/fields/tags-1200-1399#tag-1242) | Boolean | Optional | Used to indicate if a product or group of product supports the creation of flexible securities |
-| 2575 | [BlockTradeEligibilityIndicator](/fix/fields/tags-2400-2599#tag-2575) | Boolean | Optional | Indicates if a given instrument is eligible for block trading. |
-| 2574 | [LowExercisePriceOptionIndicator](/fix/fields/tags-2400-2599#tag-2574) | Boolean | Optional | Indicates if a given option instrument permits low exercise prices (LEPO). |
-| 997 | [TimeUnit](/fix/fields/tags-800-999#tag-997) | TimeUnitCodeSet | Optional | Used to indicate a time unit for the contract (e.g., days, weeks, months, etc.) |
-| 223 | [CouponRate](/fix/fields/tags-200-399#tag-223) | Percentage | Optional | For Fixed Income. |
-| 207 | [SecurityExchange](/fix/fields/tags-200-399#tag-207) | Exchange | Optional | Can be used to identify the security. |
-| 970 | [PositionLimit](/fix/fields/tags-800-999#tag-970) | int | Optional | Position Limit for the instrument. |
-| 971 | [NTPositionLimit](/fix/fields/tags-800-999#tag-971) | int | Optional | Near-term Position Limit for the instrument. |
-| 106 | [Issuer](/fix/fields/tags-0-199#tag-106) | String | Optional | Name of security issuer (e.g. International Business Machines, GNMA). see also Volume 7: "PRODUCT: FIXED INCOME - Euro Issuer Values" |
-| 348 | [EncodedIssuerLen](/fix/fields/tags-200-399#tag-348) | Length | Optional | Must be set if EncodedIssuer(349) field is specified and must immediately precede it. |
-| 349 | [EncodedIssuer](/fix/fields/tags-200-399#tag-349) | data | Optional | Encoded (non-ASCII characters) representation of the Issuer(106) field in the encoded format specified via the MessageEncoding(347) field. |
-| 2737 | [FinancialInstrumentShortName](/fix/fields/tags-2600-2799#tag-2737) | String | Optional | Short name of the financial instrument. Uses ISO 18774 (FINS) values. |
-| 2714 | [FinancialInstrumentFullName](/fix/fields/tags-2600-2799#tag-2714) | String | Optional | The full normative name of the financial instrument. |
-| 2715 | [EncodedFinancialInstrumentFullNameLen](/fix/fields/tags-2600-2799#tag-2715) | Length | Optional | Must be set if EncodedFinancialInstrumentFullName(2716) field is specified and must immediately precede it. |
-| 2716 | [EncodedFinancialInstrumentFullName](/fix/fields/tags-2600-2799#tag-2716) | data | Optional | Encoded (non-ASCII characters) representation of the FinancialInstrumentFullName(2714) field in the encoded format specified via the MessageEncoding(347) field. |
-| 107 | [SecurityDesc](/fix/fields/tags-0-199#tag-107) | String | Optional | Can be used by the venue or one of the trading parties to provide a non-normative textual description for the financial instrument. |
-| 350 | [EncodedSecurityDescLen](/fix/fields/tags-200-399#tag-350) | Length | Optional | Must be set if EncodedSecurityDesc(351) field is specified and must immediately precede it. |
-| 351 | [EncodedSecurityDesc](/fix/fields/tags-200-399#tag-351) | data | Optional | Encoded (non-ASCII characters) representation of the SecurityDesc(107) field in the encoded format specified via the MessageEncoding(347) field. |
+| 1941 | [SwapClass](/fix/fields/tags-1800-1999#tag-1941-swapclass) | SwapClassCodeSet | Optional | The classification or type of swap. Additional values may be used by mutual agreement of the counterparties. |
+| 1575 | [SwapSubClass](/fix/fields/tags-1400-1599#tag-1575-swapsubclass) | SwapSubClassCodeSet | Optional | The sub-classification or notional schedule type of the swap. |
+| 1942 | [NthToDefault](/fix/fields/tags-1800-1999#tag-1942-nthtodefault) | int | Optional | Conditionally required when MthToDefault(1943) is specified. |
+| 1943 | [MthToDefault](/fix/fields/tags-1800-1999#tag-1943-mthtodefault) | int | Optional | The Mth reference obligation to default in a CDS reference basket. When NthToDefault(1942) and MthToDefault(1943) are represented then the CDS payout occurs… |
+| 1944 | [SettledEntityMatrixSource](/fix/fields/tags-1800-1999#tag-1944-settledentitymatrixsource) | String | Optional | Relevant settled entity matrix source. |
+| 1945 | [SettledEntityMatrixPublicationDate](/fix/fields/tags-1800-1999#tag-1945-settledentitymatrixpublicationdate) | LocalMktDate | Optional | The publication date of the applicable version of the matrix. If not specified, the Standard Terms Supplement defines rules for which version of the matrix is… |
+| 1946 | [CouponType](/fix/fields/tags-1800-1999#tag-1946-coupontype) | CouponTypeCodeSet | Optional | Coupon type of the bond. |
+| 1947 | [TotalIssuedAmount](/fix/fields/tags-1800-1999#tag-1947-totalissuedamount) | Amt | Optional | Specifies the total amount of the issue. Corresponds to the par value multiplied by the number of issued securities. |
+| 1948 | [CouponFrequencyPeriod](/fix/fields/tags-1800-1999#tag-1948-couponfrequencyperiod) | int | Optional | Conditionally required when CouponFrequencyUnit(1949) is specified. |
+| 1949 | [CouponFrequencyUnit](/fix/fields/tags-1800-1999#tag-1949-couponfrequencyunit) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when CouponFrequencyPeriod(1948) is specified. |
+| 1950 | [CouponDayCount](/fix/fields/tags-1800-1999#tag-1950-coupondaycount) | CouponDayCountCodeSet | Optional | The day count convention used in interest calculations for a bond or an interest bearing security. Absence of this field for a bond or an interest bearing… |
+| 2879 | [CouponOtherDayCount](/fix/fields/tags-2800-2999#tag-2879-couponotherdaycount) | String | Optional | The industry name of the day count convention not listed in CouponDayCount(1950). |
+| 1951 | [ConvertibleBondEquityID](/fix/fields/tags-1800-1999#tag-1951-convertiblebondequityid) | String | Optional | Identifies the equity in which a convertible bond can be converted to. |
+| 1952 | [ConvertibleBondEquityIDSource](/fix/fields/tags-1800-1999#tag-1952-convertiblebondequityidsource) | SecurityIDSourceCodeSet | Optional | Conditionally required when ConvertibleBondEquityID(1951) is specified. |
+| 1953 | [ContractPriceRefMonth](/fix/fields/tags-1800-1999#tag-1953-contractpricerefmonth) | MonthYear | Optional | Reference month if there is no applicable MaturityMonthYear(200) value for the contract or security. |
+| 1954 | [LienSeniority](/fix/fields/tags-1800-1999#tag-1954-lienseniority) | LienSeniorityCodeSet | Optional | Indicates the seniority level of the lien in a loan. |
+| 1955 | [LoanFacility](/fix/fields/tags-1800-1999#tag-1955-loanfacility) | LoanFacilityCodeSet | Optional | Specifies the type of loan when the credit default swap's reference obligation is a loan. |
+| 1956 | [ReferenceEntityType](/fix/fields/tags-1800-1999#tag-1956-referenceentitytype) | ReferenceEntityTypeCodeSet | Optional | Specifies the type of reference entity for first-to-default CDS basket contracts. |
+| 1957 | [IndexSeries](/fix/fields/tags-1800-1999#tag-1957-indexseries) | int | Optional | The series identifier of a credit default swap index. |
+| 1958 | [IndexAnnexVersion](/fix/fields/tags-1800-1999#tag-1958-indexannexversion) | int | Optional | The version of a credit default swap index annex. |
+| 1959 | [IndexAnnexDate](/fix/fields/tags-1800-1999#tag-1959-indexannexdate) | LocalMktDate | Optional | The date of a credit default swap index series annex. |
+| 1960 | [IndexAnnexSource](/fix/fields/tags-1800-1999#tag-1960-indexannexsource) | String | Optional | The source of a credit default swap series annex. |
+| 1577 | [SettlRateIndex](/fix/fields/tags-1400-1599#tag-1577-settlrateindex) | String | Optional | In an outright or forward commodity trade that is cash settled this is the index used to determine the cash payment. |
+| 1580 | [SettlRateIndexLocation](/fix/fields/tags-1400-1599#tag-1580-settlrateindexlocation) | String | Optional | This is an optional qualifying attribute of SettlRateIndex(1577) such as the delivery zone for an electricity contract. |
+| 1581 | [OptionExpirationDesc](/fix/fields/tags-1400-1599#tag-1581-optionexpirationdesc) | String | Optional | Description of the option expiration. |
+| 1678 | [EncodedOptionExpirationDescLen](/fix/fields/tags-1600-1799#tag-1678-encodedoptionexpirationdesclen) | Length | Optional | Must be set if EncodedOptionExpirationDesc(1697) field is specified and must immediately precede it. |
+| 1697 | [EncodedOptionExpirationDesc](/fix/fields/tags-1600-1799#tag-1697-encodedoptionexpirationdesc) | data | Optional | Encoded (non-ASCII characters) representation of the OptionExpirationDesc(1581) field in the encoded format specified via the MessageEncoding(347) field. |
+| 225 | [IssueDate](/fix/fields/tags-200-399#tag-225-issuedate) | LocalMktDate | Optional | Date instrument was issued. For Fixed Income IOIs for new issues, specifies the issue date. |
+| 239 | [RepoCollateralSecurityType](/fix/fields/tags-200-399#tag-239-repocollateralsecuritytype) | String | Optional | Identifies the collateral used in the transaction. Valid values: see SecurityType (167) field (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
+| 226 | [RepurchaseTerm](/fix/fields/tags-200-399#tag-226-repurchaseterm) | int | Optional | Number of business days before repurchase of a repo. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
+| 227 | [RepurchaseRate](/fix/fields/tags-200-399#tag-227-repurchaserate) | Percentage | Optional | Percent of par at which a Repo will be repaid. Represented as a percent, e.g. .9525 represents 95-/4 percent of par. (Note tag # was reserved in FIX 4.1, added… |
+| 228 | [Factor](/fix/fields/tags-200-399#tag-228-factor) | float | Optional | For Fixed Income: Amortization Factor for deriving Current face from Original face for ABS or MBS securities, note the fraction may be greater than, equal to or… |
+| 255 | [CreditRating](/fix/fields/tags-200-399#tag-255-creditrating) | String | Optional | An evaluation of a company's ability to repay obligations or its likelihood of not defaulting. These evaluation are provided by Credit Rating Agencies, i.e.… |
+| 543 | [InstrRegistry](/fix/fields/tags-400-599#tag-543-instrregistry) | String | Optional | The location at which records of ownership are maintained for this instrument, and at which ownership changes must be recorded. Can be used in conjunction with… |
+| 470 | [CountryOfIssue](/fix/fields/tags-400-599#tag-470-countryofissue) | Country | Optional | ISO Country code of instrument issue (e.g. the country portion typically used in ISIN). Can be used in conjunction with non-ISIN SecurityID (e.g. CUSIP for… |
+| 471 | [StateOrProvinceOfIssue](/fix/fields/tags-400-599#tag-471-stateorprovinceofissue) | String | Optional | A two-character state or province abbreviation. |
+| 472 | [LocaleOfIssue](/fix/fields/tags-400-599#tag-472-localeofissue) | String | Optional | The three-character IATA code for a locale (e.g. airport code for Municipal Bonds). |
+| 240 | [RedemptionDate](/fix/fields/tags-200-399#tag-240-redemptiondate) | LocalMktDate | Optional | Return of investor's principal in a security. Bond redemption can occur before maturity date.(Note tag # was reserved in FIX 4.1, added in FIX 4.3) (prior to… |
+| 202 | [StrikePrice](/fix/fields/tags-200-399#tag-202-strikeprice) | Price | Optional | Used for derivatives, such as options and covered warrants |
+| 2578 | [OrigStrikePrice](/fix/fields/tags-2400-2599#tag-2578-origstrikeprice) | Price | Optional | Original exercise price, e.g. after corporate action requiring changes. |
+| 2577 | [StrikePricePrecision](/fix/fields/tags-2400-2599#tag-2577-strikepriceprecision) | int | Optional | Specifies the number of decimal places for exercise price. |
+| 947 | [StrikeCurrency](/fix/fields/tags-800-999#tag-947-strikecurrency) | Currency | Optional | Used for derivatives |
+| 967 | [StrikeMultiplier](/fix/fields/tags-800-999#tag-967-strikemultiplier) | float | Optional | Used for derivatives. Multiplier applied to the strike price for the purpose of calculating the settlement value. |
+| 968 | [StrikeValue](/fix/fields/tags-800-999#tag-968-strikevalue) | float | Optional | Used for derivatives. The number of shares/units for the financial instrument involved in the option trade. |
+| 1698 | [StrikeUnitOfMeasure](/fix/fields/tags-1600-1799#tag-1698-strikeunitofmeasure) | UnitOfMeasureCodeSet | Optional | Used to express the unit of measure (UOM) of the price if different from the contract. |
+| 1866 | [StrikeIndex](/fix/fields/tags-1800-1999#tag-1866-strikeindex) | String | Optional | Specifies the index used to calculate the strike price. |
+| 2600 | [StrikeIndexCurvePoint](/fix/fields/tags-2600-2799#tag-2600-strikeindexcurvepoint) | String | Optional | The point on the floating rate index curve. Sample values: M = combination of a number between 1-12 and an "M" for month, e.g. 3M Y = combination of number… |
+| 2001 | [StrikeIndexSpread](/fix/fields/tags-2000-2199#tag-2001-strikeindexspread) | PriceOffset | Optional | Specifies the strike price offset from the named index. |
+| 2601 | [StrikeIndexQuote](/fix/fields/tags-2600-2799#tag-2601-strikeindexquote) | StrikeIndexQuoteCodeSet | Optional | The quote side from which the index price is to be determined. |
+| 1478 | [StrikePriceDeterminationMethod](/fix/fields/tags-1400-1599#tag-1478-strikepricedeterminationmethod) | StrikePriceDeterminationMethodCodeSet | Optional | Specifies how the strike price is determined at the point of option exercise. The strike may be fixed throughout the life of the option, set at expiration to… |
+| 1479 | [StrikePriceBoundaryMethod](/fix/fields/tags-1400-1599#tag-1479-strikepriceboundarymethod) | StrikePriceBoundaryMethodCodeSet | Optional | When specified, PutOrCall(201), StrikePrice(202), and StrikePriceBoundaryPrecision(1480) must also be specified. |
+| 1480 | [StrikePriceBoundaryPrecision](/fix/fields/tags-1400-1599#tag-1480-strikepriceboundaryprecision) | Percentage | Optional | Used in combination with StrikePriceBoundaryMethod to specify the percentage of the strike price in relation to the underlying price. The percentage is… |
+| 1481 | [UnderlyingPriceDeterminationMethod](/fix/fields/tags-1400-1599#tag-1481-underlyingpricedeterminationmethod) | UnderlyingPriceDeterminationMethodCodeSet | Optional | Specifies how the underlying price is determined at the point of option exercise. The underlying price may be set to the current settlement price, set to a… |
+| 206 | [OptAttribute](/fix/fields/tags-200-399#tag-206-optattribute) | char | Optional | Used for derivatives, such as options and covered warrants to indicate a versioning of the contract when required due to corporate actions to the underlying.… |
+| 231 | [ContractMultiplier](/fix/fields/tags-200-399#tag-231-contractmultiplier) | float | Optional | For Fixed Income, Convertible Bonds, Derivatives, etc. Note: If used, quantities should be expressed in the "nominal" (e.g. contracts vs. shares) amount. |
+| 1435 | [ContractMultiplierUnit](/fix/fields/tags-1400-1599#tag-1435-contractmultiplierunit) | ContractMultiplierUnitCodeSet | Optional | Indicates the type of multiplier being applied to the contract. Can be optionally used to further define what unit ContractMultiplier(tag 231) is expressed in. |
+| 2353 | [TradingUnitPeriodMultiplier](/fix/fields/tags-2200-2399#tag-2353-tradingunitperiodmultiplier) | int | Optional | Indicates the number of contract periods associated with the minimum trading unit for a given contract duration resulting in the number of total traded… |
+| 1439 | [FlowScheduleType](/fix/fields/tags-1400-1599#tag-1439-flowscheduletype) | FlowScheduleTypeCodeSet | Optional | The industry standard flow schedule by which electricity or natural gas is traded. Schedules may exist by regions and on-peak and off-peak status, such as… |
+| 969 | [MinPriceIncrement](/fix/fields/tags-800-999#tag-969-minpriceincrement) | float | Optional | Minimum price increment for the instrument. Could also be used to represent tick value. |
+| 1146 | [MinPriceIncrementAmount](/fix/fields/tags-1000-1199#tag-1146-minpriceincrementamount) | Amt | Optional | Minimum price increment amount associated with the MinPriceIncrement \[969\]. For listed derivatives, the value can be calculated by multiplying MinPriceIncrement… |
+| 996 | [UnitOfMeasure](/fix/fields/tags-800-999#tag-996-unitofmeasure) | UnitOfMeasureCodeSet | Optional | 0 |
+| 1147 | [UnitOfMeasureQty](/fix/fields/tags-1000-1199#tag-1147-unitofmeasureqty) | Qty | Optional | Used to indicate the quantity of the underlying commodity unit of measure on which the contract is based, such as, 2500 lbs of lean cattle, 1000 barrels of… |
+| 1716 | [UnitOfMeasureCurrency](/fix/fields/tags-1600-1799#tag-1716-unitofmeasurecurrency) | Currency | Optional | Indicates the currency of the unit of measure. Conditionally required when UnitOfMeasure(996) = Ccy |
+| 1191 | [PriceUnitOfMeasure](/fix/fields/tags-1000-1199#tag-1191-priceunitofmeasure) | UnitOfMeasureCodeSet | Optional | Used to express the UOM of the price if different from the contract. In futures, this can be different for cross-rate products in which the price is quoted in… |
+| 1192 | [PriceUnitOfMeasureQty](/fix/fields/tags-1000-1199#tag-1192-priceunitofmeasureqty) | Qty | Optional | Used to express the UOM Quantity of the price if different from the contract. In futures, this can be different for physically delivered products in which price… |
+| 1717 | [PriceUnitOfMeasureCurrency](/fix/fields/tags-1600-1799#tag-1717-priceunitofmeasurecurrency) | Currency | Optional | Indicates the currency of the price unit of measure. Conditionally required when PriceUnitOfMeasure(1191) = Ccy |
+| 1193 | [SettlMethod](/fix/fields/tags-1000-1199#tag-1193-settlmethod) | SettlMethodCodeSet | Optional | Conditionally required if SettlSubMethod(2579) is specified. |
+| 2579 | [SettlSubMethod](/fix/fields/tags-2400-2599#tag-2579-settlsubmethod) | SettlSubMethodCodeSet | Optional | Specifies a suitable settlement sub-method for a given settlement method. |
+| 1194 | [ExerciseStyle](/fix/fields/tags-1000-1199#tag-1194-exercisestyle) | ExerciseStyleCodeSet | Optional | Type of exercise of a derivatives security |
+| 1482 | [OptPayoutType](/fix/fields/tags-1400-1599#tag-1482-optpayouttype) | OptPayoutTypeCodeSet | Optional | Indicates the type of valuation method or payout trigger for an in-the-money option. |
+| 1195 | [OptPayoutAmount](/fix/fields/tags-1000-1199#tag-1195-optpayoutamount) | Amt | Optional | Conditionally required if OptPayoutType(1482) = 3 (Binary). |
+| 2753 | [ReturnTrigger](/fix/fields/tags-2600-2799#tag-2753-returntrigger) | ReturnTriggerCodeSet | Optional | Indicates the type of return or payout trigger for the swap or forward. |
+| 1196 | [PriceQuoteMethod](/fix/fields/tags-1000-1199#tag-1196-pricequotemethod) | PriceQuoteMethodCodeSet | Optional | Method for price quotation |
+| 1197 | [ValuationMethod](/fix/fields/tags-1000-1199#tag-1197-valuationmethod) | ValuationMethodCodeSet | Optional | Indicates type of valuation method used. |
+| 2002 | [ValuationSource](/fix/fields/tags-2000-2199#tag-2002-valuationsource) | String | Optional | Specifies the source of trade valuation data. |
+| 2140 | [ValuationReferenceModel](/fix/fields/tags-2000-2199#tag-2140-valuationreferencemodel) | String | Optional | Specifies the methodology and/or assumptions used to generate the trade value. |
+| 1524 | [PriceQuoteCurrency](/fix/fields/tags-1400-1599#tag-1524-pricequotecurrency) | Currency | Optional | Default currency in which the price is quoted. Defined at the instrument level. Used in place of Currency (tag 15) to express the currency of a product when the… |
+| 1198 | [ListMethod](/fix/fields/tags-1000-1199#tag-1198-listmethod) | ListMethodCodeSet | Optional | Indicates whether the instruments are pre-listed only or can also be defined via user request |
+| 1199 | [CapPrice](/fix/fields/tags-1000-1199#tag-1199-capprice) | Price | Optional | Used to express the ceiling price of a capped call |
+| 1200 | [FloorPrice](/fix/fields/tags-1200-1399#tag-1200-floorprice) | Price | Optional | Used to express the floor price of a capped put |
+| 201 | [PutOrCall](/fix/fields/tags-200-399#tag-201-putorcall) | PutOrCallCodeSet | Optional | Used to express option right |
+| 2681 | [InTheMoneyCondition](/fix/fields/tags-2600-2799#tag-2681-inthemoneycondition) | InTheMoneyConditionCodeSet | Optional | Used to express in-the-moneyness behavior in general terms for the option without the use of StrikePrice(202) and PutOrCall(201). |
+| 2685 | [ContraryInstructionEligibilityIndicator](/fix/fields/tags-2600-2799#tag-2685-contraryinstructioneligibilityindicator) | Boolean | Optional | Identifies whether the option instrument is eligible for contrary instructions at the time of exercise. The contrariness of an instruction will be determined in… |
+| 1244 | [FlexibleIndicator](/fix/fields/tags-1200-1399#tag-1244-flexibleindicator) | Boolean | Optional | Used to indicate if a security has been defined as flexible according to "non-standard" means. Analog to CFICode Standard/Non-standard indicator |
+| 1242 | [FlexProductEligibilityIndicator](/fix/fields/tags-1200-1399#tag-1242-flexproducteligibilityindicator) | Boolean | Optional | Used to indicate if a product or group of product supports the creation of flexible securities |
+| 2575 | [BlockTradeEligibilityIndicator](/fix/fields/tags-2400-2599#tag-2575-blocktradeeligibilityindicator) | Boolean | Optional | Indicates if a given instrument is eligible for block trading. |
+| 2574 | [LowExercisePriceOptionIndicator](/fix/fields/tags-2400-2599#tag-2574-lowexercisepriceoptionindicator) | Boolean | Optional | Indicates if a given option instrument permits low exercise prices (LEPO). |
+| 997 | [TimeUnit](/fix/fields/tags-800-999#tag-997-timeunit) | TimeUnitCodeSet | Optional | Used to indicate a time unit for the contract (e.g., days, weeks, months, etc.) |
+| 223 | [CouponRate](/fix/fields/tags-200-399#tag-223-couponrate) | Percentage | Optional | For Fixed Income. |
+| 207 | [SecurityExchange](/fix/fields/tags-200-399#tag-207-securityexchange) | Exchange | Optional | Can be used to identify the security. |
+| 970 | [PositionLimit](/fix/fields/tags-800-999#tag-970-positionlimit) | int | Optional | Position Limit for the instrument. |
+| 971 | [NTPositionLimit](/fix/fields/tags-800-999#tag-971-ntpositionlimit) | int | Optional | Near-term Position Limit for the instrument. |
+| 106 | [Issuer](/fix/fields/tags-0-199#tag-106-issuer) | String | Optional | Name of security issuer (e.g. International Business Machines, GNMA). see also Volume 7: "PRODUCT: FIXED INCOME - Euro Issuer Values" |
+| 348 | [EncodedIssuerLen](/fix/fields/tags-200-399#tag-348-encodedissuerlen) | Length | Optional | Must be set if EncodedIssuer(349) field is specified and must immediately precede it. |
+| 349 | [EncodedIssuer](/fix/fields/tags-200-399#tag-349-encodedissuer) | data | Optional | Encoded (non-ASCII characters) representation of the Issuer(106) field in the encoded format specified via the MessageEncoding(347) field. |
+| 2737 | [FinancialInstrumentShortName](/fix/fields/tags-2600-2799#tag-2737-financialinstrumentshortname) | String | Optional | Short name of the financial instrument. Uses ISO 18774 (FINS) values. |
+| 2714 | [FinancialInstrumentFullName](/fix/fields/tags-2600-2799#tag-2714-financialinstrumentfullname) | String | Optional | The full normative name of the financial instrument. |
+| 2715 | [EncodedFinancialInstrumentFullNameLen](/fix/fields/tags-2600-2799#tag-2715-encodedfinancialinstrumentfullnamelen) | Length | Optional | Must be set if EncodedFinancialInstrumentFullName(2716) field is specified and must immediately precede it. |
+| 2716 | [EncodedFinancialInstrumentFullName](/fix/fields/tags-2600-2799#tag-2716-encodedfinancialinstrumentfullname) | data | Optional | Encoded (non-ASCII characters) representation of the FinancialInstrumentFullName(2714) field in the encoded format specified via the MessageEncoding(347) field. |
+| 107 | [SecurityDesc](/fix/fields/tags-0-199#tag-107-securitydesc) | String | Optional | Can be used by the venue or one of the trading parties to provide a non-normative textual description for the financial instrument. |
+| 350 | [EncodedSecurityDescLen](/fix/fields/tags-200-399#tag-350-encodedsecuritydesclen) | Length | Optional | Must be set if EncodedSecurityDesc(351) field is specified and must immediately precede it. |
+| 351 | [EncodedSecurityDesc](/fix/fields/tags-200-399#tag-351-encodedsecuritydesc) | data | Optional | Encoded (non-ASCII characters) representation of the SecurityDesc(107) field in the encoded format specified via the MessageEncoding(347) field. |
 | | [SecurityXML](/fix/components/security-xml) | Component | Optional | The SecurityXML component is used to provide a definition in an XML format for the instrument. |
-| 691 | [Pool](/fix/fields/tags-600-799#tag-691) | String | Optional | Identifies MBS / ABS pool |
-| 667 | [ContractSettlMonth](/fix/fields/tags-600-799#tag-667) | MonthYear | Optional | Must be present for MBS/TBA |
-| 875 | [CPProgram](/fix/fields/tags-800-999#tag-875) | CPProgramCodeSet | Optional | The program under which a commercial paper is issued |
-| 876 | [CPRegType](/fix/fields/tags-800-999#tag-876) | String | Optional | The registration type of a commercial paper issuance |
+| 691 | [Pool](/fix/fields/tags-600-799#tag-691-pool) | String | Optional | Identifies MBS / ABS pool |
+| 667 | [ContractSettlMonth](/fix/fields/tags-600-799#tag-667-contractsettlmonth) | MonthYear | Optional | Must be present for MBS/TBA |
+| 875 | [CPProgram](/fix/fields/tags-800-999#tag-875-cpprogram) | CPProgramCodeSet | Optional | The program under which a commercial paper is issued |
+| 876 | [CPRegType](/fix/fields/tags-800-999#tag-876-cpregtype) | String | Optional | The registration type of a commercial paper issuance |
 | 864 | [EvntGrp](/fix/groups/evnt-grp) | Repeating group | Optional | The EvntGrp is a repeating subcomponent of the Instrument component used to specify straightforward events associated with the instrument. Examples include put… |
-| 873 | [DatedDate](/fix/fields/tags-800-999#tag-873) | LocalMktDate | Optional | If different from IssueDate |
-| 874 | [InterestAccrualDate](/fix/fields/tags-800-999#tag-874) | LocalMktDate | Optional | If different from IssueDate and DatedDate |
+| 873 | [DatedDate](/fix/fields/tags-800-999#tag-873-dateddate) | LocalMktDate | Optional | If different from IssueDate |
+| 874 | [InterestAccrualDate](/fix/fields/tags-800-999#tag-874-interestaccrualdate) | LocalMktDate | Optional | If different from IssueDate and DatedDate |
 | 1018 | [InstrumentParties](/fix/groups/instrument-parties) | Repeating group | Optional | The use of this component block is restricted to instrument definition only and is not permitted to contain transactional information. Only a specified subset… |
-| 1687 | [ShortSaleRestriction](/fix/fields/tags-1600-1799#tag-1687) | ShortSaleRestrictionCodeSet | Optional | Indicates whether a restriction applies to short selling a security. |
+| 1687 | [ShortSaleRestriction](/fix/fields/tags-1600-1799#tag-1687-shortsalerestriction) | ShortSaleRestrictionCodeSet | Optional | Indicates whether a restriction applies to short selling a security. |
 | 1483 | [ComplexEvents](/fix/groups/complex-events) | Repeating group | Optional | The ComplexEvent Group is a repeating block which allows specifying an unlimited number and types of advanced events, such as observation and pricing over the… |
-| 1787 | [RefTickTableID](/fix/fields/tags-1600-1799#tag-1787) | int | Optional | Spread table code referred by the security or symbol. |
-| 2141 | [StrategyType](/fix/fields/tags-2000-2199#tag-2141) | StrategyTypeCodeSet | Optional | Specifies the type of trade strategy. |
-| 2142 | [CommonPricingIndicator](/fix/fields/tags-2000-2199#tag-2142) | Boolean | Optional | When this element is specified and set to 'Y', it indicates that common pricing applies. Common pricing may be relevant for a transaction that references more… |
-| 2143 | [SettlDisruptionProvision](/fix/fields/tags-2000-2199#tag-2143) | SettlDisruptionProvisionCodeSet | Optional | Specifies the consequences of bullion settlement disruption events. |
-| 2752 | [DeliveryRouteOrCharter](/fix/fields/tags-2600-2799#tag-2752) | String | Optional | Specific delivery route or time charter average. Applicable to commodity freight contracts. |
-| 2144 | [InstrumentRoundingDirection](/fix/fields/tags-2000-2199#tag-2144) | RoundingDirectionCodeSet | Optional | Specifies the rounding direction if not overridden elsewhere. |
-| 2145 | [InstrumentRoundingPrecision](/fix/fields/tags-2000-2199#tag-2145) | int | Optional | Specifies the rounding precision in terms of a number of decimal places. Note how a percentage rate rounding of 5 decimal places is expressed as a rounding… |
-| 2576 | [InstrumentPricePrecision](/fix/fields/tags-2400-2599#tag-2576) | int | Optional | Specifies the number of decimal places for instrument prices. |
+| 1787 | [RefTickTableID](/fix/fields/tags-1600-1799#tag-1787-refticktableid) | int | Optional | Spread table code referred by the security or symbol. |
+| 2141 | [StrategyType](/fix/fields/tags-2000-2199#tag-2141-strategytype) | StrategyTypeCodeSet | Optional | Specifies the type of trade strategy. |
+| 2142 | [CommonPricingIndicator](/fix/fields/tags-2000-2199#tag-2142-commonpricingindicator) | Boolean | Optional | When this element is specified and set to 'Y', it indicates that common pricing applies. Common pricing may be relevant for a transaction that references more… |
+| 2143 | [SettlDisruptionProvision](/fix/fields/tags-2000-2199#tag-2143-settldisruptionprovision) | SettlDisruptionProvisionCodeSet | Optional | Specifies the consequences of bullion settlement disruption events. |
+| 2752 | [DeliveryRouteOrCharter](/fix/fields/tags-2600-2799#tag-2752-deliveryrouteorcharter) | String | Optional | Specific delivery route or time charter average. Applicable to commodity freight contracts. |
+| 2144 | [InstrumentRoundingDirection](/fix/fields/tags-2000-2199#tag-2144-instrumentroundingdirection) | RoundingDirectionCodeSet | Optional | Specifies the rounding direction if not overridden elsewhere. |
+| 2145 | [InstrumentRoundingPrecision](/fix/fields/tags-2000-2199#tag-2145-instrumentroundingprecision) | int | Optional | Specifies the rounding precision in terms of a number of decimal places. Note how a percentage rate rounding of 5 decimal places is expressed as a rounding… |
+| 2576 | [InstrumentPricePrecision](/fix/fields/tags-2400-2599#tag-2576-instrumentpriceprecision) | int | Optional | Specifies the number of decimal places for instrument prices. |
 | | [DateAdjustment](/fix/components/date-adjustment) | Component | Optional | DateAdjustment is a subcomponent in the Instrument component. It is used to specify date adjustment parameters and rules. The date adjustments specified here… |
 | | [PricingDateTime](/fix/components/pricing-date-time) | Component | Optional | The PricingDateTime component is a subcomponent of Instrument used to specify an adjusted or unadjusted pricing or fixing date and optionally the time, e.g. for… |
 | | [MarketDisruption](/fix/components/market-disruption) | Component | Optional | The MarketDisruption component is a subcomponent of the Instrument used to specify the market disruption provisions of the swap. |
@@ -176,8 +182,8 @@ subtitle: "The Instrument component block contains all the fields commonly used 
 | 40022 | [CashSettlTermGrp](/fix/groups/cash-settl-term-grp) | Repeating group | Optional | The CashSettlTermGrp is a repeating component within the Instrument component used to report cash settlement terms referenced from UnderlyingInstruments. |
 | 40204 | [PhysicalSettlTermGrp](/fix/groups/physical-settl-term-grp) | Repeating group | Optional | The PhysicalSettlTermGrp is a repeating component within the Instrument component used to report physical settlement terms referenced from UnderlyingInstrument… |
 | 42296 | [ExtraordinaryEventGrp](/fix/groups/extraordinary-event-grp) | Repeating group | Optional | The ExtraordinaryEventGrp is a repeating component within the Instrument component. It is used to report extraordinary and disruptive events applicable to the… |
-| 2602 | [ExtraordinaryEventAdjustmentMethod](/fix/fields/tags-2600-2799#tag-2602) | ExtraordinaryEventAdjustmentMethodCodeSet | Optional | Defines how adjustments will be made to the contract should one or more of the extraordinary events occur. |
-| 2603 | [ExchangeLookAlike](/fix/fields/tags-2600-2799#tag-2603) | Boolean | Optional | For a share option trade, indicates whether the instrument is to be treated as an 'exchange look-alike'. |
+| 2602 | [ExtraordinaryEventAdjustmentMethod](/fix/fields/tags-2600-2799#tag-2602-extraordinaryeventadjustmentmethod) | ExtraordinaryEventAdjustmentMethodCodeSet | Optional | Defines how adjustments will be made to the contract should one or more of the extraordinary events occur. |
+| 2603 | [ExchangeLookAlike](/fix/fields/tags-2600-2799#tag-2603-exchangelookalike) | Boolean | Optional | For a share option trade, indicates whether the instrument is to be treated as an 'exchange look-alike'. |
 
 </StickyTable>
 

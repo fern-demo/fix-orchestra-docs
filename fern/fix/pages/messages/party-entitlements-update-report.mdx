@@ -3,7 +3,13 @@ title: "PartyEntitlementsUpdateReport"
 subtitle: "The PartyEntitlementsUpdateReport(35=CZ) is used to convey incremental changes to party entitlements. It is similar to the PartyEntitlementsReport(35=CV). This message uses the PartyEntitlementsUpdateGrp component which includes the ability…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType CZ</Badge> <Badge intent="note" minimal>Parties Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType CZ · Parties Reference Data · Pre Trade · Added FIX.5.0SP2
+</llms-only>
 
 ## Message structure
 
@@ -13,16 +19,16 @@ subtitle: "The PartyEntitlementsUpdateReport(35=CZ) is used to convey incrementa
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
 | | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and… |
-| 1771 | [EntitlementReportID](/fix/fields/tags-1600-1799#tag-1771) | String | **Required** | Identifier for the PartyEntitlementsReport(35=CV). |
-| 1770 | [EntitlementRequestID](/fix/fields/tags-1600-1799#tag-1770) | String | Optional | Conditionally required when responding to a PartyEntitlementsRequest(35=CU) message. |
-| 1512 | [TotNoParties](/fix/fields/tags-1400-1599#tag-1512) | int | Optional | Total number of PartyListGrp returned. |
-| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893) | LastFragmentCodeSet | Optional | Indicates whether this message is the last in a sequence of messages for those messages that support fragmentation, such as Allocation Instruction, Mass Quote,… |
+| 1771 | [EntitlementReportID](/fix/fields/tags-1600-1799#tag-1771-entitlementreportid) | String | **Required** | Identifier for the PartyEntitlementsReport(35=CV). |
+| 1770 | [EntitlementRequestID](/fix/fields/tags-1600-1799#tag-1770-entitlementrequestid) | String | Optional | Conditionally required when responding to a PartyEntitlementsRequest(35=CU) message. |
+| 1512 | [TotNoParties](/fix/fields/tags-1400-1599#tag-1512-totnoparties) | int | Optional | Total number of PartyListGrp returned. |
+| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893-lastfragment) | LastFragmentCodeSet | Optional | Indicates whether this message is the last in a sequence of messages for those messages that support fragmentation, such as Allocation Instruction, Mass Quote,… |
 | 1657 | [RequestingPartyGrp](/fix/groups/requesting-party-grp) | Repeating group | Optional | Identifies the party making the request. |
 | 1772 | [PartyEntitlementUpdateGrp](/fix/groups/party-entitlement-update-grp) | Repeating group | **Required** | The PartyEntitlementUpdateGrp component is used to supply incremental entitlement definitions changes for the party(-ies) specified in the PartyDetailGrp… |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

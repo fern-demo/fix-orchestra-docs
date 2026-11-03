@@ -3,9 +3,15 @@ title: "FinancingContractualDefinitionGrp"
 subtitle: "The FinancingContractualDefinitionGrp is a repeating component within the FinancingDetails component used to report the definitions published by ISDA that define the terms of a derivative trade."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40040</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoContractualDefinitions (40040)](/fix/fields/tags-40000-40199#tag-40040).
+<llms-only>
+Repeating group · NumInGroup 40040 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoContractualDefinitions (40040)](/fix/fields/tags-40000-40199#tag-40040-nocontractualdefinitions).
 
 ## Members
 
@@ -13,7 +19,7 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40041 | [ContractualDefinition](/fix/fields/tags-40000-40199#tag-40041) | String | Optional | Required if NoContractualDefinitions(40040) &gt; 0. |
+| 40041 | [ContractualDefinition](/fix/fields/tags-40000-40199#tag-40041-contractualdefinition) | String | Optional | Required if NoContractualDefinitions(40040) &gt; 0. |
 
 </StickyTable>
 

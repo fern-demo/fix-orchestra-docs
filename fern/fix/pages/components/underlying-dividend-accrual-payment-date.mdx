@@ -3,7 +3,13 @@ title: "UnderlyingDividendAccrualPaymentDate"
 subtitle: "The UnderlyingDividendAccrualPaymentDate component is a subcomponent of UnderlyingDividendConditions used to report the dividend accrual payment date."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,14 +17,14 @@ subtitle: "The UnderlyingDividendAccrualPaymentDate component is a subcomponent 
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42819 | [UnderlyingDividendAccrualPaymentDateRelativeTo](/fix/fields/tags-42800-42999#tag-42819) | int | Optional | Specifies the anchor date when the accrual payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for… |
-| 42820 | [UnderlyingDividendAccrualPaymentDateOffsetPeriod](/fix/fields/tags-42800-42999#tag-42820) | int | Optional | Conditionally required when UnderlyingDividendAccrualPaymentDateOffsetUnit(42821) is specified. |
-| 42821 | [UnderlyingDividendAccrualPaymentDateOffsetUnit](/fix/fields/tags-42800-42999#tag-42821) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingDividendAccrualPaymentDateOffsetPeriod(42820) is specified. |
-| 42822 | [UnderlyingDividendAccrualPaymentDateOffsetDayType](/fix/fields/tags-42800-42999#tag-42822) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative accrual payment date offset. |
-| 42823 | [UnderlyingDividendAccrualPaymentDateUnadjusted](/fix/fields/tags-42800-42999#tag-42823) | LocalMktDate | Optional | The unadjusted accrual payment date. |
-| 42824 | [UnderlyingDividendAccrualPaymentDateBusinessDayConvention](/fix/fields/tags-42800-42999#tag-42824) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The value would be… |
+| 42819 | [UnderlyingDividendAccrualPaymentDateRelativeTo](/fix/fields/tags-42800-42999#tag-42819-underlyingdividendaccrualpaymentdaterelativeto) | int | Optional | Specifies the anchor date when the accrual payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for… |
+| 42820 | [UnderlyingDividendAccrualPaymentDateOffsetPeriod](/fix/fields/tags-42800-42999#tag-42820-underlyingdividendaccrualpaymentdateoffsetperiod) | int | Optional | Conditionally required when UnderlyingDividendAccrualPaymentDateOffsetUnit(42821) is specified. |
+| 42821 | [UnderlyingDividendAccrualPaymentDateOffsetUnit](/fix/fields/tags-42800-42999#tag-42821-underlyingdividendaccrualpaymentdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingDividendAccrualPaymentDateOffsetPeriod(42820) is specified. |
+| 42822 | [UnderlyingDividendAccrualPaymentDateOffsetDayType](/fix/fields/tags-42800-42999#tag-42822-underlyingdividendaccrualpaymentdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative accrual payment date offset. |
+| 42823 | [UnderlyingDividendAccrualPaymentDateUnadjusted](/fix/fields/tags-42800-42999#tag-42823-underlyingdividendaccrualpaymentdateunadjusted) | LocalMktDate | Optional | The unadjusted accrual payment date. |
+| 42824 | [UnderlyingDividendAccrualPaymentDateBusinessDayConvention](/fix/fields/tags-42800-42999#tag-42824-underlyingdividendaccrualpaymentdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The value would be… |
 | 42799 | [UnderlyingDividendAccrualPaymentDateBusinessCenterGrp](/fix/groups/underlying-dividend-accrual-payment-date-business-center-grp) | Repeating group | Optional | UnderlyingDividendAccrualPaymentDateBusinessCenterGrp is a repeating subcomponent within the UnderlyingDividendAccrualPaymentDate component. It is used to… |
-| 42825 | [UnderlyingDividendAccrualPaymentDateAdjusted](/fix/fields/tags-42800-42999#tag-42825) | LocalMktDate | Optional | The adjusted accrual payment date. |
+| 42825 | [UnderlyingDividendAccrualPaymentDateAdjusted](/fix/fields/tags-42800-42999#tag-42825-underlyingdividendaccrualpaymentdateadjusted) | LocalMktDate | Optional | The adjusted accrual payment date. |
 
 </StickyTable>
 

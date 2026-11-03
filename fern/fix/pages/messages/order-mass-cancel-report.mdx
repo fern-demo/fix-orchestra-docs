@@ -3,7 +3,13 @@ title: "OrderMassCancelReport"
 subtitle: "The Order Mass Cancel Report is used to acknowledge an Order Mass Cancel Request. Note that each affected order that is canceled is acknowledged with a separate Execution Report or Order Cancel Reject message."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType r</Badge> <Badge intent="note" minimal>Order Mass Handling</Badge> <Badge intent="tip" minimal>Trade</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType r · Order Mass Handling · Trade · Added FIX.4.3
+</llms-only>
 
 ## Message structure
 
@@ -12,30 +18,30 @@ subtitle: "The Order Mass Cancel Report is used to acknowledge an Order Mass Can
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | ClOrdID provided on the Order Mass Cancel Request. Unavailable in case of an unsolicited report, such as after a trading halt or a corporate action requiring… |
-| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
-| 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | **Required** | Unique Identifier for the Order Mass Cancel Request assigned by the recipient of the Order Mass Cancel Request. |
-| 1369 | [MassActionReportID](/fix/fields/tags-1200-1399#tag-1369) | String | **Required** | Unique Identifier for the Order Mass Cancel Report assigned by the recipient of the Order Mass Cancel Request |
-| 198 | [SecondaryOrderID](/fix/fields/tags-0-199#tag-198) | String | Optional | Secondary Order ID assigned by the recipient of the Order Mass Cancel Request. |
-| 530 | [MassCancelRequestType](/fix/fields/tags-400-599#tag-530) | MassCancelRequestTypeCodeSet | **Required** | Order Mass Cancel Request Type accepted by the system |
-| 531 | [MassCancelResponse](/fix/fields/tags-400-599#tag-531) | MassCancelResponseCodeSet | **Required** | Indicates the action taken by the counterparty order handling system as a result of the Cancel Request 0 - Indicates Order Mass Cancel Request was rejected. |
-| 532 | [MassCancelRejectReason](/fix/fields/tags-400-599#tag-532) | MassCancelRejectReasonCodeSet | Optional | Indicates why Order Mass Cancel Request was rejected Required if MassCancelResponse = 0 |
-| 533 | [TotalAffectedOrders](/fix/fields/tags-400-599#tag-533) | int | Optional | Optional field used to indicate the total number of orders affected by the Order Mass Cancel Request |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11-clordid) | String | Optional | ClOrdID provided on the Order Mass Cancel Request. Unavailable in case of an unsolicited report, such as after a trading halt or a corporate action requiring… |
+| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526-secondaryclordid) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
+| 37 | [OrderID](/fix/fields/tags-0-199#tag-37-orderid) | String | **Required** | Unique Identifier for the Order Mass Cancel Request assigned by the recipient of the Order Mass Cancel Request. |
+| 1369 | [MassActionReportID](/fix/fields/tags-1200-1399#tag-1369-massactionreportid) | String | **Required** | Unique Identifier for the Order Mass Cancel Report assigned by the recipient of the Order Mass Cancel Request |
+| 198 | [SecondaryOrderID](/fix/fields/tags-0-199#tag-198-secondaryorderid) | String | Optional | Secondary Order ID assigned by the recipient of the Order Mass Cancel Request. |
+| 530 | [MassCancelRequestType](/fix/fields/tags-400-599#tag-530-masscancelrequesttype) | MassCancelRequestTypeCodeSet | **Required** | Order Mass Cancel Request Type accepted by the system |
+| 531 | [MassCancelResponse](/fix/fields/tags-400-599#tag-531-masscancelresponse) | MassCancelResponseCodeSet | **Required** | Indicates the action taken by the counterparty order handling system as a result of the Cancel Request 0 - Indicates Order Mass Cancel Request was rejected. |
+| 532 | [MassCancelRejectReason](/fix/fields/tags-400-599#tag-532-masscancelrejectreason) | MassCancelRejectReasonCodeSet | Optional | Indicates why Order Mass Cancel Request was rejected Required if MassCancelResponse = 0 |
+| 533 | [TotalAffectedOrders](/fix/fields/tags-400-599#tag-533-totalaffectedorders) | int | Optional | Optional field used to indicate the total number of orders affected by the Order Mass Cancel Request |
 | 534 | [AffectedOrdGrp](/fix/groups/affected-ord-grp) | Repeating group | Optional |  |
 | 1370 | [NotAffectedOrdGrp](/fix/groups/not-affected-ord-grp) | Repeating group | Optional |  |
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Trading Session in which orders are to be canceled |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336-tradingsessionid) | TradingSessionIDCodeSet | Optional | Trading Session in which orders are to be canceled |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625-tradingsessionsubid) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
 | 1461 | [TargetParties](/fix/groups/target-parties) | Repeating group | Optional |  |
 | | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | | [UnderlyingInstrument](/fix/components/underlying-instrument) | Component | Optional | The UnderlyingInstrument component block, like the Instrument component block, contains all the fields commonly used to describe a security or instrument. In… |
-| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Identifies the market |
-| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
-| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | Optional | Side of the market specified on the Order Mass Cancel Request |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Time this report was initiated/released by the sells-side (broker, exchange, ECN) or sell-side executing system. |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301-marketid) | Exchange | Optional | Identifies the market |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300-marketsegmentid) | String | Optional | Identifies the market segment |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54-side) | SideCodeSet | Optional | Side of the market specified on the Order Mass Cancel Request |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Time this report was initiated/released by the sells-side (broker, exchange, ECN) or sell-side executing system. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

@@ -3,9 +3,15 @@ title: "UnderlyingStreamCommoditySettlTimeGrp"
 subtitle: "The UnderlyingStreamCommoditySettlTimeGrp is a repeating subcomponent of the UnderlyingStreamCommoditySettlDayGrp component used to define the settlement time periods associated with the commodity contract."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41999</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingStreamCommoditySettlTimes (41999)](/fix/fields/tags-41800-41999#tag-41999).
+<llms-only>
+Repeating group · NumInGroup 41999 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingStreamCommoditySettlTimes (41999)](/fix/fields/tags-41800-41999#tag-41999-nounderlyingstreamcommoditysettltimes).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42000 | [UnderlyingStreamCommoditySettlStart](/fix/fields/tags-42000-42199#tag-42000) | String | Optional | Required if NoUnderlyingStreamCommoditySettlTimes(41999) &gt; 0. |
-| 42001 | [UnderlyingStreamCommoditySettlEnd](/fix/fields/tags-42000-42199#tag-42001) | String | Optional | Required if NoUnderlyingStreamCommoditySettlTimes(41999) &gt; 0. |
-| 41936 | [UnderlyingStreamCommoditySettlTimeType](/fix/fields/tags-41800-41999#tag-41936) | DeliveryScheduleSettlTimeTypeCodeSet | Optional | May be defaulted to market convention or bilaterally agreed if not specified. |
+| 42000 | [UnderlyingStreamCommoditySettlStart](/fix/fields/tags-42000-42199#tag-42000-underlyingstreamcommoditysettlstart) | String | Optional | Required if NoUnderlyingStreamCommoditySettlTimes(41999) &gt; 0. |
+| 42001 | [UnderlyingStreamCommoditySettlEnd](/fix/fields/tags-42000-42199#tag-42001-underlyingstreamcommoditysettlend) | String | Optional | Required if NoUnderlyingStreamCommoditySettlTimes(41999) &gt; 0. |
+| 41936 | [UnderlyingStreamCommoditySettlTimeType](/fix/fields/tags-41800-41999#tag-41936-underlyingstreamcommoditysettltimetype) | DeliveryScheduleSettlTimeTypeCodeSet | Optional | May be defaulted to market convention or bilaterally agreed if not specified. |
 
 </StickyTable>
 

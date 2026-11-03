@@ -3,11 +3,17 @@ title: "LegPaymentStreamNonDeliverableFixingDateGrp"
 subtitle: "LegPaymentStreamNonDeliverableFixingDate is a subcomponent of the LegPaymentStreamNonDeliverableSettlTerms component used to specify predetermined fixing dates."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40367</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Repeating group · NumInGroup 40367 · Added FIX.5.0SP2
+</llms-only>
 
 For the purpose of optimization, the LegNonDeliverableFixingDateType(40369) field may optionally be omitted after the first instance provided the instance(s) which immediately follow is of the same date type. When the next instance requires a different date type from the prior instance, the LegNonDeliverableFixingDateType(40369) is required to specify the date type.
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegNonDeliverableFixingDates (40367)](/fix/fields/tags-40200-40399#tag-40367).
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegNonDeliverableFixingDates (40367)](/fix/fields/tags-40200-40399#tag-40367-nolegnondeliverablefixingdates).
 
 ## Members
 
@@ -15,8 +21,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40368 | [LegNonDeliverableFixingDate](/fix/fields/tags-40200-40399#tag-40368) | LocalMktDate | Optional | Required if NoLegNonDeliverableFixingDates(40367) &gt; 0. |
-| 40369 | [LegNonDeliverableFixingDateType](/fix/fields/tags-40200-40399#tag-40369) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
+| 40368 | [LegNonDeliverableFixingDate](/fix/fields/tags-40200-40399#tag-40368-legnondeliverablefixingdate) | LocalMktDate | Optional | Required if NoLegNonDeliverableFixingDates(40367) &gt; 0. |
+| 40369 | [LegNonDeliverableFixingDateType](/fix/fields/tags-40200-40399#tag-40369-legnondeliverablefixingdatetype) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
 
 </StickyTable>
 

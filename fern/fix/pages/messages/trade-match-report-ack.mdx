@@ -3,7 +3,13 @@ title: "TradeMatchReportAck"
 subtitle: "The TradeMatchReportAck(35=DD) is used to respond to theTradeMatchReport(35=DC) message. It may be used to report on the status of the request (e.g. accepting the request or rejecting the request)."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType DD</Badge> <Badge intent="note" minimal>Trade Capture</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType DD · Trade Capture · Post Trade · Added FIX.5.0SP2
+</llms-only>
 
 ## Message structure
 
@@ -13,15 +19,15 @@ subtitle: "The TradeMatchReportAck(35=DD) is used to respond to theTradeMatchRep
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
 | | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and… |
-| 880 | [TrdMatchID](/fix/fields/tags-800-999#tag-880) | String | **Required** | Identifier of the TradeMatchReport(35=DC) being acknowledged. |
-| 1896 | [TradeMatchAckStatus](/fix/fields/tags-1800-1999#tag-1896) | TradeMatchAckStatusCodeSet | **Required** | Used to indicate the status of the trade match report submission. |
-| 1897 | [TradeMatchRejectReason](/fix/fields/tags-1800-1999#tag-1897) | TradeMatchRejectReasonCodeSet | Optional | Conditionally required when TradeMatchAckStatus(1896) = Rejected(2). |
-| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328) | String | Optional | Identifies the reason for rejection. |
-| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedRejectText(1665) field. |
-| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. If used, the… |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
+| 880 | [TrdMatchID](/fix/fields/tags-800-999#tag-880-trdmatchid) | String | **Required** | Identifier of the TradeMatchReport(35=DC) being acknowledged. |
+| 1896 | [TradeMatchAckStatus](/fix/fields/tags-1800-1999#tag-1896-tradematchackstatus) | TradeMatchAckStatusCodeSet | **Required** | Used to indicate the status of the trade match report submission. |
+| 1897 | [TradeMatchRejectReason](/fix/fields/tags-1800-1999#tag-1897-tradematchrejectreason) | TradeMatchRejectReasonCodeSet | Optional | Conditionally required when TradeMatchAckStatus(1896) = Rejected(2). |
+| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328-rejecttext) | String | Optional | Identifies the reason for rejection. |
+| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664-encodedrejecttextlen) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedRejectText(1665) field. |
+| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665-encodedrejecttext) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. If used, the… |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

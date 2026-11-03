@@ -3,9 +3,15 @@ title: "UnderlyingAssetAttributeGrp"
 subtitle: "The UnderlyingAssetAttributeGrp is a repeating subcomponent of the UnderlyingInstrument component used to detail attributes of the instrument asset."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2312</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingAssetAttributes (2312)](/fix/fields/tags-2200-2399#tag-2312).
+<llms-only>
+Repeating group · NumInGroup 2312 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingAssetAttributes (2312)](/fix/fields/tags-2200-2399#tag-2312-nounderlyingassetattributes).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2313 | [UnderlyingAssetAttributeType](/fix/fields/tags-2200-2399#tag-2313) | String | Optional | Required if NoUnderlyingAssetAttributes(2312) &gt; 0. |
-| 2314 | [UnderlyingAssetAttributeValue](/fix/fields/tags-2200-2399#tag-2314) | String | Optional | Specifies the value of the attribute. |
-| 2315 | [UnderlyingAssetAttributeLimit](/fix/fields/tags-2200-2399#tag-2315) | String | Optional | Limit or lower acceptable value of the attribute. |
+| 2313 | [UnderlyingAssetAttributeType](/fix/fields/tags-2200-2399#tag-2313-underlyingassetattributetype) | String | Optional | Required if NoUnderlyingAssetAttributes(2312) &gt; 0. |
+| 2314 | [UnderlyingAssetAttributeValue](/fix/fields/tags-2200-2399#tag-2314-underlyingassetattributevalue) | String | Optional | Specifies the value of the attribute. |
+| 2315 | [UnderlyingAssetAttributeLimit](/fix/fields/tags-2200-2399#tag-2315-underlyingassetattributelimit) | String | Optional | Limit or lower acceptable value of the attribute. |
 
 </StickyTable>
 

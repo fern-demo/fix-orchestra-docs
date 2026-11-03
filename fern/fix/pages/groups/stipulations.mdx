@@ -3,9 +3,15 @@ title: "Stipulations"
 subtitle: "The Stipulations component block is used in Fixed Income to provide additional information on a given security. These additional information are usually not considered static data information."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 232</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoStipulations (232)](/fix/fields/tags-200-399#tag-232).
+<llms-only>
+Repeating group · NumInGroup 232 · Added FIX.4.3
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoStipulations (232)](/fix/fields/tags-200-399#tag-232-nostipulations).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 233 | [StipulationType](/fix/fields/tags-200-399#tag-233) | StipulationTypeCodeSet | Optional | Required if NoStipulations &gt;0 |
-| 234 | [StipulationValue](/fix/fields/tags-200-399#tag-234) | String | Optional | For Fixed Income. Value of stipulation. The expression can be an absolute single value or a combination of values and logical operators: &lt; value &gt; value &lt;=… |
+| 233 | [StipulationType](/fix/fields/tags-200-399#tag-233-stipulationtype) | StipulationTypeCodeSet | Optional | Required if NoStipulations &gt;0 |
+| 234 | [StipulationValue](/fix/fields/tags-200-399#tag-234-stipulationvalue) | String | Optional | For Fixed Income. Value of stipulation. The expression can be an absolute single value or a combination of values and logical operators: &lt; value &gt; value &lt;=… |
 
 </StickyTable>
 

@@ -3,7 +3,13 @@ title: "ExecutionAck"
 subtitle: "The Execution Report Acknowledgement message is an optional message that provides dual functionality to notify a trading partner that an electronically received execution has either been accepted or rejected (DK'd)."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType BN</Badge> <Badge intent="note" minimal>Single General Order Handling</Badge> <Badge intent="tip" minimal>Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType BN · Single General Order Handling · Trade · Added FIX.4.4
+</llms-only>
 
 ## Message structure
 
@@ -12,28 +18,28 @@ subtitle: "The Execution Report Acknowledgement message is an optional message t
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | **Required** | Unique identifier for Order as assigned by sell-side (broker, exchange, ECN). Uniqueness must be guaranteed within a single trading day. Firms which accept… |
-| 198 | [SecondaryOrderID](/fix/fields/tags-0-199#tag-198) | String | Optional | Assigned by the party which accepts the order. Can be used to provide the OrderID (37) used by an exchange or executing system. |
-| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | Conditionally required if the Execution Report message contains a ClOrdID. |
-| 1036 | [ExecAckStatus](/fix/fields/tags-1000-1199#tag-1036) | ExecAckStatusCodeSet | **Required** | Indicates the status of the execution acknowledgement. The "received, not yet processed" is an optional intermediary status that can be used to notify the… |
-| 17 | [ExecID](/fix/fields/tags-0-199#tag-17) | String | **Required** | The ExecID of the Execution Report being acknowledged. |
-| 127 | [DKReason](/fix/fields/tags-0-199#tag-127) | DKReasonCodeSet | Optional | Conditionally required when ExecAckStatus = 2 (Don't know / Rejected). |
+| 37 | [OrderID](/fix/fields/tags-0-199#tag-37-orderid) | String | **Required** | Unique identifier for Order as assigned by sell-side (broker, exchange, ECN). Uniqueness must be guaranteed within a single trading day. Firms which accept… |
+| 198 | [SecondaryOrderID](/fix/fields/tags-0-199#tag-198-secondaryorderid) | String | Optional | Assigned by the party which accepts the order. Can be used to provide the OrderID (37) used by an exchange or executing system. |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11-clordid) | String | Optional | Conditionally required if the Execution Report message contains a ClOrdID. |
+| 1036 | [ExecAckStatus](/fix/fields/tags-1000-1199#tag-1036-execackstatus) | ExecAckStatusCodeSet | **Required** | Indicates the status of the execution acknowledgement. The "received, not yet processed" is an optional intermediary status that can be used to notify the… |
+| 17 | [ExecID](/fix/fields/tags-0-199#tag-17-execid) | String | **Required** | The ExecID of the Execution Report being acknowledged. |
+| 127 | [DKReason](/fix/fields/tags-0-199#tag-127-dkreason) | DKReasonCodeSet | Optional | Conditionally required when ExecAckStatus = 2 (Don't know / Rejected). |
 | | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
-| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | **Required** | Side of order (see Volume : "Glossary" for value definitions) |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54-side) | SideCodeSet | **Required** | Side of order (see Volume : "Glossary" for value definitions) |
 | | [OrderQtyData](/fix/components/order-qty-data) | Component | Optional | The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is… |
-| 32 | [LastQty](/fix/fields/tags-0-199#tag-32) | Qty | Optional | Conditionally required if specified on the Execution Report |
-| 31 | [LastPx](/fix/fields/tags-0-199#tag-31) | Price | Optional | Conditionally Required if specified on the Execution Report |
-| 423 | [PriceType](/fix/fields/tags-400-599#tag-423) | PriceTypeCodeSet | Optional | Conditionally required if specified on the Execution Report |
+| 32 | [LastQty](/fix/fields/tags-0-199#tag-32-lastqty) | Qty | Optional | Conditionally required if specified on the Execution Report |
+| 31 | [LastPx](/fix/fields/tags-0-199#tag-31-lastpx) | Price | Optional | Conditionally Required if specified on the Execution Report |
+| 423 | [PriceType](/fix/fields/tags-400-599#tag-423-pricetype) | PriceTypeCodeSet | Optional | Conditionally required if specified on the Execution Report |
 | 2709 | [PriceQualifierGrp](/fix/groups/price-qualifier-grp) | Repeating group | Optional | The PriceQualifierGrp component clarifies the composition of the price when standard market practice for the security calls for a price that is atypical when… |
-| 669 | [LastParPx](/fix/fields/tags-600-799#tag-669) | Price | Optional | Conditionally required if specified on the Execution Report |
-| 14 | [CumQty](/fix/fields/tags-0-199#tag-14) | Qty | Optional | Conditionally required if specified on the Execution Report |
-| 6 | [AvgPx](/fix/fields/tags-0-199#tag-6) | Price | Optional | Conditionally required if specified on the Execution Report |
+| 669 | [LastParPx](/fix/fields/tags-600-799#tag-669-lastparpx) | Price | Optional | Conditionally required if specified on the Execution Report |
+| 14 | [CumQty](/fix/fields/tags-0-199#tag-14-cumqty) | Qty | Optional | Conditionally required if specified on the Execution Report |
+| 6 | [AvgPx](/fix/fields/tags-0-199#tag-6-avgpx) | Price | Optional | Conditionally required if specified on the Execution Report |
 | 1907 | [RegulatoryTradeIDGrp](/fix/groups/regulatory-trade-id-grp) | Repeating group | Optional | The RegulatoryTradeIDGrp is a repeating component within the TradeCaptureReport message used to report the source, value and relationship of multiple… |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Conditionally required if DKReason = "other" |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Conditionally required if DKReason = "other" |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

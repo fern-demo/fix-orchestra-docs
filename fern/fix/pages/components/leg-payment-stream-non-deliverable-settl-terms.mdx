@@ -3,7 +3,13 @@ title: "LegPaymentStreamNonDeliverableSettlTerms"
 subtitle: "LegPaymentStreamNonDeliverableSettl is a subcomponent of the LegPaymentStream component used to specify the non-deliverable settlement terms of the payment stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,13 +17,13 @@ subtitle: "LegPaymentStreamNonDeliverableSettl is a subcomponent of the LegPayme
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40359 | [LegPaymentStreamNonDeliverableRefCurrency](/fix/fields/tags-40200-40399#tag-40359) | Currency | Optional | Non-deliverable settlement reference currency. Uses ISO 4217 currency codes. |
-| 40360 | [LegPaymentStreamNonDeliverableFixingDatesBusinessDayConvention](/fix/fields/tags-40200-40399#tag-40360) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
+| 40359 | [LegPaymentStreamNonDeliverableRefCurrency](/fix/fields/tags-40200-40399#tag-40359-legpaymentstreamnondeliverablerefcurrency) | Currency | Optional | Non-deliverable settlement reference currency. Uses ISO 4217 currency codes. |
+| 40360 | [LegPaymentStreamNonDeliverableFixingDatesBusinessDayConvention](/fix/fields/tags-40200-40399#tag-40360-legpaymentstreamnondeliverablefixingdatesbusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
 | 40929 | [LegPaymentStreamNonDeliverableFixingDatesBusinessCenterGrp](/fix/groups/leg-payment-stream-non-deliverable-fixing-dates-business-center-grp) | Repeating group | Optional | LegPaymentStreamNonDeliverableFixingDatesBusinessCenterGrp is a repeating subcomponent within the LegPaymentStreamNonDeliverableSettlTerms component. It is used… |
-| 40362 | [LegPaymentStreamNonDeliverableFixingDatesRelativeTo](/fix/fields/tags-40200-40399#tag-40362) | int | Optional | Specifies the anchor date when the non-deliverable fixing dates are relative to an anchor date. See… |
-| 40363 | [LegPaymentStreamNonDeliverableFixingDatesOffsetPeriod](/fix/fields/tags-40200-40399#tag-40363) | int | Optional | Conditionally required when LegPaymentStreamNonDeliverableFixingDateOffsetUnit(40364) is specified. |
-| 40364 | [LegPaymentStreamNonDeliverableFixingDatesOffsetUnit](/fix/fields/tags-40200-40399#tag-40364) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentStreamNonDeliverableFixingDateOffsetPeriod(40363) is specified. |
-| 40365 | [LegPaymentStreamNonDeliverableFixingDatesOffsetDayType](/fix/fields/tags-40200-40399#tag-40365) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative non-deliverable fixing date offset. |
+| 40362 | [LegPaymentStreamNonDeliverableFixingDatesRelativeTo](/fix/fields/tags-40200-40399#tag-40362-legpaymentstreamnondeliverablefixingdatesrelativeto) | int | Optional | Specifies the anchor date when the non-deliverable fixing dates are relative to an anchor date. See… |
+| 40363 | [LegPaymentStreamNonDeliverableFixingDatesOffsetPeriod](/fix/fields/tags-40200-40399#tag-40363-legpaymentstreamnondeliverablefixingdatesoffsetperiod) | int | Optional | Conditionally required when LegPaymentStreamNonDeliverableFixingDateOffsetUnit(40364) is specified. |
+| 40364 | [LegPaymentStreamNonDeliverableFixingDatesOffsetUnit](/fix/fields/tags-40200-40399#tag-40364-legpaymentstreamnondeliverablefixingdatesoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentStreamNonDeliverableFixingDateOffsetPeriod(40363) is specified. |
+| 40365 | [LegPaymentStreamNonDeliverableFixingDatesOffsetDayType](/fix/fields/tags-40200-40399#tag-40365-legpaymentstreamnondeliverablefixingdatesoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative non-deliverable fixing date offset. |
 | | [LegPaymentStreamNonDeliverableSettlRateSource](/fix/components/leg-payment-stream-non-deliverable-settl-rate-source) | Component | Optional | LegPaymentStreamNonDeliverableSettlRateSource is a subcomponent of the LegPaymentStreamNonDeliverableSettlTerms component used to specify the rate source in the… |
 | 40367 | [LegPaymentStreamNonDeliverableFixingDateGrp](/fix/groups/leg-payment-stream-non-deliverable-fixing-date-grp) | Repeating group | Optional | LegPaymentStreamNonDeliverableFixingDate is a subcomponent of the LegPaymentStreamNonDeliverableSettlTerms component used to specify predetermined fixing dates. |
 | 40902 | [LegSettlRateDisruptionFallbackGrp](/fix/groups/leg-settl-rate-disruption-fallback-grp) | Repeating group | Optional | The LegSettlRateDisruptionsFallbackGrp is a repeating subcomponent of the LegPaymentStreamNonDeliverableSettlTerms component used to specify the method,… |

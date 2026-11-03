@@ -3,7 +3,13 @@ title: "PositionReport"
 subtitle: "The Position Report message is returned by the holder of a position in response to a Request for Position message. The purpose of the message is to report all aspects of a position and may be provided on a standing basis to report end of…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType AP</Badge> <Badge intent="note" minimal>Position Maintenance</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType AP · Position Maintenance · Post Trade · Added FIX.4.4
+</llms-only>
 
 ## Message structure
 
@@ -13,81 +19,81 @@ subtitle: "The Position Report message is returned by the holder of a position i
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
 | | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and… |
-| 721 | [PosMaintRptID](/fix/fields/tags-600-799#tag-721) | String | **Required** | Unique identifier for this position report |
-| 2618 | [PositionID](/fix/fields/tags-2600-2799#tag-2618) | String | Optional | Unique identifier for this position entity. |
-| 710 | [PosReqID](/fix/fields/tags-600-799#tag-710) | String | Optional | Unique identifier for the Request for Positions associated with this report This field should not be provided if the report was sent unsolicited. |
-| 724 | [PosReqType](/fix/fields/tags-600-799#tag-724) | PosReqTypeCodeSet | Optional | Will be 7=Net Position if the report contains net position information for margin requirements. |
-| 2364 | [PosReportAction](/fix/fields/tags-2200-2399#tag-2364) | PosMaintActionCodeSet | Optional | Indicates action that triggered the Position Report. |
-| 1635 | [MarginReqmtInqID](/fix/fields/tags-1600-1799#tag-1635) | String | Optional | Unique identifier for the inquiry associated with this report. This field should not be provided if the report was sent unsolicited. |
-| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263) | SubscriptionRequestTypeCodeSet | Optional | Used to subscribe / unsubscribe for trade capture reports If the field is absent, the value 0 will be the default |
-| 727 | [TotalNumPosReports](/fix/fields/tags-600-799#tag-727) | int | Optional | Total number of Position Reports being returned |
-| 911 | [TotNumReports](/fix/fields/tags-800-999#tag-911) | int | Optional | Total number of reports returned in response to a request. |
-| 912 | [LastRptRequested](/fix/fields/tags-800-999#tag-912) | LastRptRequestedCodeSet | Optional | Indicates whether this message is the last report message in response to a request message, e.g. OrderMassStatusRequest(35=AF),… |
-| 728 | [PosReqResult](/fix/fields/tags-600-799#tag-728) | PosReqResultCodeSet | Optional | Result of a Request for Position |
-| 325 | [UnsolicitedIndicator](/fix/fields/tags-200-399#tag-325) | UnsolicitedIndicatorCodeSet | Optional | Set to 'Y' if message is sent as a result of a subscription request or out of band configuration as opposed to a Position Request. |
-| 1934 | [RegulatoryReportType](/fix/fields/tags-1800-1999#tag-1934) | RegulatoryReportTypeCodeSet | Optional | Type of regulatory report. |
-| 2869 | [RegulatoryReportTypeBusinessDate](/fix/fields/tags-2800-2999#tag-2869) | LocalMktDate | Optional | May be used when the business event date differs from when the regulatory report is actually being submitted (typically specified in TrdRegTimestamps… |
+| 721 | [PosMaintRptID](/fix/fields/tags-600-799#tag-721-posmaintrptid) | String | **Required** | Unique identifier for this position report |
+| 2618 | [PositionID](/fix/fields/tags-2600-2799#tag-2618-positionid) | String | Optional | Unique identifier for this position entity. |
+| 710 | [PosReqID](/fix/fields/tags-600-799#tag-710-posreqid) | String | Optional | Unique identifier for the Request for Positions associated with this report This field should not be provided if the report was sent unsolicited. |
+| 724 | [PosReqType](/fix/fields/tags-600-799#tag-724-posreqtype) | PosReqTypeCodeSet | Optional | Will be 7=Net Position if the report contains net position information for margin requirements. |
+| 2364 | [PosReportAction](/fix/fields/tags-2200-2399#tag-2364-posreportaction) | PosMaintActionCodeSet | Optional | Indicates action that triggered the Position Report. |
+| 1635 | [MarginReqmtInqID](/fix/fields/tags-1600-1799#tag-1635-marginreqmtinqid) | String | Optional | Unique identifier for the inquiry associated with this report. This field should not be provided if the report was sent unsolicited. |
+| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263-subscriptionrequesttype) | SubscriptionRequestTypeCodeSet | Optional | Used to subscribe / unsubscribe for trade capture reports If the field is absent, the value 0 will be the default |
+| 727 | [TotalNumPosReports](/fix/fields/tags-600-799#tag-727-totalnumposreports) | int | Optional | Total number of Position Reports being returned |
+| 911 | [TotNumReports](/fix/fields/tags-800-999#tag-911-totnumreports) | int | Optional | Total number of reports returned in response to a request. |
+| 912 | [LastRptRequested](/fix/fields/tags-800-999#tag-912-lastrptrequested) | LastRptRequestedCodeSet | Optional | Indicates whether this message is the last report message in response to a request message, e.g. OrderMassStatusRequest(35=AF),… |
+| 728 | [PosReqResult](/fix/fields/tags-600-799#tag-728-posreqresult) | PosReqResultCodeSet | Optional | Result of a Request for Position |
+| 325 | [UnsolicitedIndicator](/fix/fields/tags-200-399#tag-325-unsolicitedindicator) | UnsolicitedIndicatorCodeSet | Optional | Set to 'Y' if message is sent as a result of a subscription request or out of band configuration as opposed to a Position Request. |
+| 1934 | [RegulatoryReportType](/fix/fields/tags-1800-1999#tag-1934-regulatoryreporttype) | RegulatoryReportTypeCodeSet | Optional | Type of regulatory report. |
+| 2869 | [RegulatoryReportTypeBusinessDate](/fix/fields/tags-2800-2999#tag-2869-regulatoryreporttypebusinessdate) | LocalMktDate | Optional | May be used when the business event date differs from when the regulatory report is actually being submitted (typically specified in TrdRegTimestamps… |
 | 2871 | [TransactionAttributeGrp](/fix/groups/transaction-attribute-grp) | Repeating group | Optional | The TransactionAttributeGrp component block is a repeating group that may be used to provide additional transaction attributes for the trade and other… |
 | 768 | [TrdRegTimestamps](/fix/groups/trd-reg-timestamps) | Repeating group | Optional | The TrdRegTimestamps component block is used to express timestamps for an order or trade that are required by regulatory agencies These timesteamps are used to… |
-| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | **Required** | The Clearing Business Date referred to by this maintenance request |
-| 2084 | [PreviousClearingBusinessDate](/fix/fields/tags-2000-2199#tag-2084) | LocalMktDate | Optional | The business date previous to the clearing business date referred to by this maintenance request. |
-| 2870 | [ClearingPortfolioID](/fix/fields/tags-2800-2999#tag-2870) | String | Optional | When the transaction is cleared and included in a portfolio of transactions this identifies the portfolio by its unique identifier. |
-| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716) | SettlSessIDCodeSet | Optional | Identifies a specific settlement session |
-| 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717) | String | Optional | SubID value associated with SettlSessID(716) |
-| 423 | [PriceType](/fix/fields/tags-400-599#tag-423) | PriceTypeCodeSet | Optional | Code to represent the price type. |
-| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120) | Currency | Optional | Currency code of settlement denomination. |
-| 1011 | [MessageEventSource](/fix/fields/tags-1000-1199#tag-1011) | String | Optional | Used to identify the event or source which gave rise to a message |
-| 1832 | [ClearedIndicator](/fix/fields/tags-1800-1999#tag-1832) | ClearedIndicatorCodeSet | Optional | Indicates whether the trade or position being reported was cleared through a clearing organization. |
-| 1833 | [ContractRefPosType](/fix/fields/tags-1800-1999#tag-1833) | ContractRefPosTypeCodeSet | Optional | Additional information related to the pricing of a commodity swaps position, specifically an indicator referring to the position type. |
-| 1834 | [PositionCapacity](/fix/fields/tags-1800-1999#tag-1834) | PositionCapacityCodeSet | Optional | Used to describe the ownership of the position. |
-| 2101 | [TerminatedIndicator](/fix/fields/tags-2000-2199#tag-2101) | Boolean | Optional | Indicates if the position has been terminated. |
-| 2878 | [TerminationDate](/fix/fields/tags-2800-2999#tag-2878) | LocalMktDate | Optional | The date of a contract's early termination or other post-trade event when the event is prior to the contract natural end or maturity not defined as part of the… |
-| 2373 | [IntraFirmTradeIndicator](/fix/fields/tags-2200-2399#tag-2373) | Boolean | Optional | Indicates whether the trade or position was entered into as an intra-group transaction, i.e. between two units of the same parent entity having majority… |
-| 1937 | [TradeContinuation](/fix/fields/tags-1800-1999#tag-1937) | TradeContinuationCodeSet | Optional | Specifies the post-execution trade continuation or lifecycle event. Additional values may be used by mutual agreement of the counterparties. |
-| 2374 | [TradeContinuationText](/fix/fields/tags-2200-2399#tag-2374) | String | Optional | Free form text to specify additional trade continuation information or data. |
-| 2372 | [EncodedTradeContinuationTextLen](/fix/fields/tags-2200-2399#tag-2372) | Length | Optional | Must be set if EncodedTradeContinuationText(2371) field is specified and must immediately precede it. |
-| 2371 | [EncodedTradeContinuationText](/fix/fields/tags-2200-2399#tag-2371) | data | Optional | Encoded (non-ASCII characters) representation of the TradeContinuationText(2374) field in the encoded format specified via the MessageEncoding(347) field. |
-| 1936 | [TradeCollateralization](/fix/fields/tags-1800-1999#tag-1936) | TradeCollateralizationCodeSet | Optional | Specifies how the trade is collateralized. |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715-clearingbusinessdate) | LocalMktDate | **Required** | The Clearing Business Date referred to by this maintenance request |
+| 2084 | [PreviousClearingBusinessDate](/fix/fields/tags-2000-2199#tag-2084-previousclearingbusinessdate) | LocalMktDate | Optional | The business date previous to the clearing business date referred to by this maintenance request. |
+| 2870 | [ClearingPortfolioID](/fix/fields/tags-2800-2999#tag-2870-clearingportfolioid) | String | Optional | When the transaction is cleared and included in a portfolio of transactions this identifies the portfolio by its unique identifier. |
+| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716-settlsessid) | SettlSessIDCodeSet | Optional | Identifies a specific settlement session |
+| 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717-settlsesssubid) | String | Optional | SubID value associated with SettlSessID(716) |
+| 423 | [PriceType](/fix/fields/tags-400-599#tag-423-pricetype) | PriceTypeCodeSet | Optional | Code to represent the price type. |
+| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120-settlcurrency) | Currency | Optional | Currency code of settlement denomination. |
+| 1011 | [MessageEventSource](/fix/fields/tags-1000-1199#tag-1011-messageeventsource) | String | Optional | Used to identify the event or source which gave rise to a message |
+| 1832 | [ClearedIndicator](/fix/fields/tags-1800-1999#tag-1832-clearedindicator) | ClearedIndicatorCodeSet | Optional | Indicates whether the trade or position being reported was cleared through a clearing organization. |
+| 1833 | [ContractRefPosType](/fix/fields/tags-1800-1999#tag-1833-contractrefpostype) | ContractRefPosTypeCodeSet | Optional | Additional information related to the pricing of a commodity swaps position, specifically an indicator referring to the position type. |
+| 1834 | [PositionCapacity](/fix/fields/tags-1800-1999#tag-1834-positioncapacity) | PositionCapacityCodeSet | Optional | Used to describe the ownership of the position. |
+| 2101 | [TerminatedIndicator](/fix/fields/tags-2000-2199#tag-2101-terminatedindicator) | Boolean | Optional | Indicates if the position has been terminated. |
+| 2878 | [TerminationDate](/fix/fields/tags-2800-2999#tag-2878-terminationdate) | LocalMktDate | Optional | The date of a contract's early termination or other post-trade event when the event is prior to the contract natural end or maturity not defined as part of the… |
+| 2373 | [IntraFirmTradeIndicator](/fix/fields/tags-2200-2399#tag-2373-intrafirmtradeindicator) | Boolean | Optional | Indicates whether the trade or position was entered into as an intra-group transaction, i.e. between two units of the same parent entity having majority… |
+| 1937 | [TradeContinuation](/fix/fields/tags-1800-1999#tag-1937-tradecontinuation) | TradeContinuationCodeSet | Optional | Specifies the post-execution trade continuation or lifecycle event. Additional values may be used by mutual agreement of the counterparties. |
+| 2374 | [TradeContinuationText](/fix/fields/tags-2200-2399#tag-2374-tradecontinuationtext) | String | Optional | Free form text to specify additional trade continuation information or data. |
+| 2372 | [EncodedTradeContinuationTextLen](/fix/fields/tags-2200-2399#tag-2372-encodedtradecontinuationtextlen) | Length | Optional | Must be set if EncodedTradeContinuationText(2371) field is specified and must immediately precede it. |
+| 2371 | [EncodedTradeContinuationText](/fix/fields/tags-2200-2399#tag-2371-encodedtradecontinuationtext) | data | Optional | Encoded (non-ASCII characters) representation of the TradeContinuationText(2374) field in the encoded format specified via the MessageEncoding(347) field. |
+| 1936 | [TradeCollateralization](/fix/fields/tags-1800-1999#tag-1936-tradecollateralization) | TradeCollateralizationCodeSet | Optional | Specifies how the trade is collateralized. |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | **Required** | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
-| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Account may also be specified through via Parties Block using Party Role 27 which signifies Account |
-| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
-| 581 | [AccountType](/fix/fields/tags-400-599#tag-581) | AccountTypeCodeSet | Optional | Type of account associated with the order (Origin). Account may also be specified through via Parties Block using Party Role 27 which signifies Account |
-| 2375 | [TaxonomyType](/fix/fields/tags-2200-2399#tag-2375) | TaxonomyTypeCodeSet | Optional | The type of identification taxonomy used to identify the security. |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1-account) | String | Optional | Account may also be specified through via Parties Block using Party Role 27 which signifies Account |
+| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660-acctidsource) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
+| 581 | [AccountType](/fix/fields/tags-400-599#tag-581-accounttype) | AccountTypeCodeSet | Optional | Type of account associated with the order (Origin). Account may also be specified through via Parties Block using Party Role 27 which signifies Account |
+| 2375 | [TaxonomyType](/fix/fields/tags-2200-2399#tag-2375-taxonomytype) | TaxonomyTypeCodeSet | Optional | The type of identification taxonomy used to identify the security. |
 | | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This… |
-| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
-| 64 | [SettlDate](/fix/fields/tags-0-199#tag-64) | LocalMktDate | Optional | Position Settlement Date |
-| 730 | [SettlPrice](/fix/fields/tags-600-799#tag-730) | Price | Optional | Settlement price |
-| 2366 | [SettlPriceFxRateCalc](/fix/fields/tags-2200-2399#tag-2366) | SettlCurrFxRateCalcCodeSet | Optional | Expresses whether to multiply or divide SettlPrice(730) to arrive at the amount reported in PosAmt(708). |
-| 2365 | [SettlForwardPoints](/fix/fields/tags-2200-2399#tag-2365) | PriceOffset | Optional | FX forward points added to SettlPrice(730). The value is expressed in decimal form and may be a negative. |
-| 1886 | [SettlPriceUnitOfMeasure](/fix/fields/tags-1800-1999#tag-1886) | UnitOfMeasureCodeSet | Optional | Used to express the unit of measure of the settlement price if different from the contract. |
-| 1887 | [SettlPriceUnitOfMeasureCurrency](/fix/fields/tags-1800-1999#tag-1887) | Currency | Optional | Indicates the currency of the settlement price unit of measure if expressed in another currency than the base currency. Conditionally required when… |
-| 731 | [SettlPriceType](/fix/fields/tags-600-799#tag-731) | SettlPriceTypeCodeSet | Optional | Values = Final, Theoretical |
-| 734 | [PriorSettlPrice](/fix/fields/tags-600-799#tag-734) | Price | Optional | Previous settlement price |
-| 1595 | [PositionContingentPrice](/fix/fields/tags-1400-1599#tag-1595) | Price | Optional | Risk adjusted price used to calculate variation margin on a position. |
-| 1592 | [DiscountFactor](/fix/fields/tags-1400-1599#tag-1592) | float | Optional | For a forward position this is an appropriate value to discount the mark to market amount from the contract’s maturity date back to present value. |
-| 2085 | [ValuationDate](/fix/fields/tags-2000-2199#tag-2085) | LocalMktDate | Optional | Valuation date of the position(s) in this report |
-| 2086 | [ValuationTime](/fix/fields/tags-2000-2199#tag-2086) | LocalMktTime | Optional | Valuation time of the position(s) in this report |
-| 2087 | [ValuationBusinessCenter](/fix/fields/tags-2000-2199#tag-2087) | String | Optional | Business center of ValuationDate(2085) and ValuationTime(2086). Single value only. |
-| 573 | [MatchStatus](/fix/fields/tags-400-599#tag-573) | MatchStatusCodeSet | Optional | Used to indicate if a Position Report is matched or unmatched |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15-currency) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
+| 64 | [SettlDate](/fix/fields/tags-0-199#tag-64-settldate) | LocalMktDate | Optional | Position Settlement Date |
+| 730 | [SettlPrice](/fix/fields/tags-600-799#tag-730-settlprice) | Price | Optional | Settlement price |
+| 2366 | [SettlPriceFxRateCalc](/fix/fields/tags-2200-2399#tag-2366-settlpricefxratecalc) | SettlCurrFxRateCalcCodeSet | Optional | Expresses whether to multiply or divide SettlPrice(730) to arrive at the amount reported in PosAmt(708). |
+| 2365 | [SettlForwardPoints](/fix/fields/tags-2200-2399#tag-2365-settlforwardpoints) | PriceOffset | Optional | FX forward points added to SettlPrice(730). The value is expressed in decimal form and may be a negative. |
+| 1886 | [SettlPriceUnitOfMeasure](/fix/fields/tags-1800-1999#tag-1886-settlpriceunitofmeasure) | UnitOfMeasureCodeSet | Optional | Used to express the unit of measure of the settlement price if different from the contract. |
+| 1887 | [SettlPriceUnitOfMeasureCurrency](/fix/fields/tags-1800-1999#tag-1887-settlpriceunitofmeasurecurrency) | Currency | Optional | Indicates the currency of the settlement price unit of measure if expressed in another currency than the base currency. Conditionally required when… |
+| 731 | [SettlPriceType](/fix/fields/tags-600-799#tag-731-settlpricetype) | SettlPriceTypeCodeSet | Optional | Values = Final, Theoretical |
+| 734 | [PriorSettlPrice](/fix/fields/tags-600-799#tag-734-priorsettlprice) | Price | Optional | Previous settlement price |
+| 1595 | [PositionContingentPrice](/fix/fields/tags-1400-1599#tag-1595-positioncontingentprice) | Price | Optional | Risk adjusted price used to calculate variation margin on a position. |
+| 1592 | [DiscountFactor](/fix/fields/tags-1400-1599#tag-1592-discountfactor) | float | Optional | For a forward position this is an appropriate value to discount the mark to market amount from the contract’s maturity date back to present value. |
+| 2085 | [ValuationDate](/fix/fields/tags-2000-2199#tag-2085-valuationdate) | LocalMktDate | Optional | Valuation date of the position(s) in this report |
+| 2086 | [ValuationTime](/fix/fields/tags-2000-2199#tag-2086-valuationtime) | LocalMktTime | Optional | Valuation time of the position(s) in this report |
+| 2087 | [ValuationBusinessCenter](/fix/fields/tags-2000-2199#tag-2087-valuationbusinesscenter) | String | Optional | Business center of ValuationDate(2085) and ValuationTime(2086). Single value only. |
+| 573 | [MatchStatus](/fix/fields/tags-400-599#tag-573-matchstatus) | MatchStatusCodeSet | Optional | Used to indicate if a Position Report is matched or unmatched |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
 | 1647 | [RelatedInstrumentGrp](/fix/groups/related-instrument-grp) | Repeating group | Optional | The RelatedInstrumentGrp is a repeating component at the same hierarchical level as the Instrument component, describing relationships and linkages between the… |
 | 1703 | [CollateralAmountGrp](/fix/groups/collateral-amount-grp) | Repeating group | Optional | The Collateral Amount Group component block is a repeating group that provides the current value of the collateral type on deposit. The currency of the… |
-| 2868 | [CollateralizationValueDate](/fix/fields/tags-2800-2999#tag-2868) | LocalMktDate | Optional | Date when the collateral is to be assessed or assigned. |
+| 2868 | [CollateralizationValueDate](/fix/fields/tags-2800-2999#tag-2868-collateralizationvaluedate) | LocalMktDate | Optional | Date when the collateral is to be assessed or assigned. |
 | 711 | [PosUndInstrmtGrp](/fix/groups/pos-und-instrmt-grp) | Repeating group | Optional |  |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
 | 702 | [PositionQty](/fix/groups/position-qty) | Repeating group | Optional | The PositionQty component block specifies the various types of position quantity in the position life-cycle including start-of-day, intraday, trade,… |
 | 753 | [PositionAmountData](/fix/groups/position-amount-data) | Repeating group | Optional | The PositionAmountData component block is used to report netted amounts associated with position quantities. In the listed derivatives market the amount is… |
 | 1907 | [RegulatoryTradeIDGrp](/fix/groups/regulatory-trade-id-grp) | Repeating group | Optional | The RegulatoryTradeIDGrp is a repeating component within the TradeCaptureReport message used to report the source, value and relationship of multiple… |
 | 40212 | [PaymentGrp](/fix/groups/payment-grp) | Repeating group | Optional | The PaymentGrp is a repeating component used to report additional payments or bullet payments. |
-| 506 | [RegistStatus](/fix/fields/tags-400-599#tag-506) | RegistStatusCodeSet | Optional | RegNonRegInd |
-| 743 | [DeliveryDate](/fix/fields/tags-600-799#tag-743) | LocalMktDate | Optional | Date of delivery. |
-| 1434 | [ModelType](/fix/fields/tags-1400-1599#tag-1434) | ModelTypeCodeSet | Optional | Type of pricing model used |
-| 811 | [PriceDelta](/fix/fields/tags-800-999#tag-811) | float | Optional | The rate of change in the price of a derivative with respect to the movement in the price of the underlying instrument(s) upon which the derivative instrument… |
+| 506 | [RegistStatus](/fix/fields/tags-400-599#tag-506-registstatus) | RegistStatusCodeSet | Optional | RegNonRegInd |
+| 743 | [DeliveryDate](/fix/fields/tags-600-799#tag-743-deliverydate) | LocalMktDate | Optional | Date of delivery. |
+| 1434 | [ModelType](/fix/fields/tags-1400-1599#tag-1434-modeltype) | ModelTypeCodeSet | Optional | Type of pricing model used |
+| 811 | [PriceDelta](/fix/fields/tags-800-999#tag-811-pricedelta) | float | Optional | The rate of change in the price of a derivative with respect to the movement in the price of the underlying instrument(s) upon which the derivative instrument… |
 | 1855 | [RelatedTradeGrp](/fix/groups/related-trade-grp) | Repeating group | Optional | This component is used to identify trades that are related to each other for a business purpose, such as netting of forwards. This component should not be used… |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

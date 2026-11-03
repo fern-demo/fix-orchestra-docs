@@ -3,53 +3,53 @@ title: "Datatypes"
 subtitle: "Datatypes used by FIX fields"
 ---
 
-## int [#int]
+## int
 
 Sequence of digits without commas or decimals and optional sign character (ASCII characters "-" and "0" - "9" ). The sign character utilizes one byte (i.e. positive int is "99999" while negative int is "-99999"). Note that int values may contain leading zeros (e.g. "00023" = "23").
 
 723 in field 21 would be mapped int as |21=723|. -723 in field 12 would be mapped int as |12=-723|.
 
-## Length [#length]
+## Length
 
 Base type: [int](/fix/datatypes#int)
 
 int field representing the length in bytes. Value must be positive.
 
-## TagNum [#tag-num]
+## TagNum
 
 Base type: [int](/fix/datatypes#int)
 
 int field representing a field's tag number when using FIX "Tag=Value" syntax. Value must be positive and may not contain leading zeros.
 
-## SeqNum [#seq-num]
+## SeqNum
 
 Base type: [int](/fix/datatypes#int)
 
 int field representing a message sequence number. Value must be positive.
 
-## NumInGroup [#num-in-group]
+## NumInGroup
 
 Base type: [int](/fix/datatypes#int)
 
 int field representing the number of entries in a repeating group. Value must be positive.
 
-## DayOfMonth [#day-of-month]
+## DayOfMonth
 
 Base type: [int](/fix/datatypes#int)
 
 int field representing a day during a particular monthy (values 1 to 31).
 
-## float [#float]
+## float
 
 Sequence of digits with optional decimal point and sign character (ASCII characters "-", "0" - "9" and "."); the absence of the decimal point within the string will be interpreted as the float representation of an integer value. All float fields must accommodate up to fifteen significant digits. The number of decimal places used should be a factor of business/market needs and mutual agreement between counterparties. Note that float values may contain leading zeros (e.g. "00023.23" = "23.23") and may contain or omit trailing zeros after the decimal point (e.g. "23.0" = "23.0000" = "23" = "23."). Note that fields which are derived from float may contain negative values unless explicitly specified otherwise.
 
-## Qty [#qty]
+## Qty
 
 Base type: [float](/fix/datatypes#float)
 
 float field capable of storing either a whole number (no decimal places) of "shares" (securities denominated in whole units) or a decimal value containing decimal places for non-share quantity asset classes (securities denominated in fractional units).
 
-## Price [#price]
+## Price
 
 Base type: [float](/fix/datatypes#float)
 
@@ -57,13 +57,13 @@ float field representing a price. Note the number of decimal places may vary. Fo
 
 Strk="47.50"
 
-## PriceOffset [#price-offset]
+## PriceOffset
 
 Base type: [float](/fix/datatypes#float)
 
 float field representing a price offset, which can be mathematically added to a "Price". Note the number of decimal places may vary and some fields such as LastForwardPoints may be negative.
 
-## Amt [#amt]
+## Amt
 
 Base type: [float](/fix/datatypes#float)
 
@@ -71,45 +71,45 @@ float field typically representing a Price times a Qty
 
 Amt="6847.00"
 
-## Percentage [#percentage]
+## Percentage
 
 Base type: [float](/fix/datatypes#float)
 
 float field representing a percentage (e.g. 0.05 represents 5% and 0.9525 represents 95.25%). Note the number of decimal places may vary.
 
-## char [#char]
+## char
 
 Single character value, can include any alphanumeric character or punctuation except the delimiter. All char fields are case sensitive (i.e. m != M).
 
-## Boolean [#boolean]
+## Boolean
 
 Base type: [char](/fix/datatypes#char)
 
 char field containing one of two values: 'Y' = True/Yes 'N' = False/No
 
-## String [#string]
+## String
 
 Alpha-numeric free format strings, can include any character or punctuation except the delimiter. All String fields are case sensitive (i.e. morstatt != Morstatt).
 
-## MultipleCharValue [#multiple-char-value]
+## MultipleCharValue
 
 Base type: [String](/fix/datatypes#string)
 
 string field containing one or more space delimited single character values (e.g. |18=2 A F| ).
 
-## MultipleStringValue [#multiple-string-value]
+## MultipleStringValue
 
 Base type: [String](/fix/datatypes#string)
 
 string field containing one or more space delimited multiple character values (e.g. |277=AV AN A| ).
 
-## Country [#country]
+## Country
 
 Base type: [String](/fix/datatypes#string)
 
 string field representing a country using ISO 3166 Country code (2 character) values (see Appendix 6-B).
 
-## Currency [#currency]
+## Currency
 
 Base type: [String](/fix/datatypes#string)
 
@@ -117,13 +117,13 @@ string field representing a currency type using ISO 4217 Currency code (3 charac
 
 StrkCcy="USD"
 
-## Exchange [#exchange]
+## Exchange
 
 Base type: [String](/fix/datatypes#string)
 
 string field representing a market or exchange using ISO 10383 Market Identifier Code (MIC) values (see"Appendix 6-C).
 
-## MonthYear [#month-year]
+## MonthYear
 
 Base type: [String](/fix/datatypes#string)
 
@@ -131,7 +131,7 @@ string field representing month of a year. An optional day of the month can be a
 
 MonthYear="200303", MonthYear="20030320", MonthYear="200303w2"
 
-## UTCTimestamp [#utc-timestamp]
+## UTCTimestamp
 
 Base type: [String](/fix/datatypes#string)
 
@@ -139,7 +139,7 @@ string field representing time/date combination represented in UTC (Universal Ti
 
 TransactTime(60)="20011217-09:30:47.123" millisecond TransactTime(60)="20011217-09:30:47.123456" microseconds TransactTime(60)="20011217-09:30:47.123456789" nanoseconds TransactTime(60)="20011217-09:30:47.123456789123" picoseconds
 
-## UTCTimeOnly [#utc-time-only]
+## UTCTimeOnly
 
 Base type: [String](/fix/datatypes#string)
 
@@ -147,7 +147,7 @@ string field representing time-only represented in UTC (Universal Time Coordinat
 
 MDEntryTime(273)="13:20:00.123"milliseconds MDEntryTime(273)="13:20:00.123456" microseconds MDEntryTime(273)="13:20:00.123456789" nanoseconds MDEntryTime(273)="13:20:00.123456789123" picoseconds
 
-## UTCDateOnly [#utc-date-only]
+## UTCDateOnly
 
 Base type: [String](/fix/datatypes#string)
 
@@ -155,7 +155,7 @@ string field representing Date represented in UTC (Universal Time Coordinated, a
 
 MDEntryDate="20030910"
 
-## LocalMktDate [#local-mkt-date]
+## LocalMktDate
 
 Base type: [String](/fix/datatypes#string)
 
@@ -163,7 +163,7 @@ string field representing a Date of Local Market (as opposed to UTC) in YYYYMMDD
 
 MaturityDate(541)="20150724"
 
-## TZTimeOnly [#tz-time-only]
+## TZTimeOnly
 
 Base type: [String](/fix/datatypes#string)
 
@@ -171,7 +171,7 @@ string field representing the time represented based on ISO 8601. This is the ti
 
 "07:39Z" is 07:39 UTC "02:39-05" is five hours behind UTC, thus Eastern Time "15:39+08" is eight hours ahead of UTC, Hong Kong/Singapore time "13:09+05:30" is 5.5 hours ahead of UTC, India time
 
-## TZTimestamp [#tz-timestamp]
+## TZTimestamp
 
 Base type: [String](/fix/datatypes#string)
 
@@ -179,47 +179,47 @@ string field representing a time/date combination representing local time with a
 
 "20060901-07:39Z" is 07:39 UTC on 1st of September 2006 "20060901-02:39-05" is five hours behind UTC, thus Eastern Time on 1st of September 2006 "20060901-15:39+08" is eight hours ahead of UTC, Hong Kong/Singapore time on 1st of September 2006 "20060901-13:09+05:30" is 5.5 hours ahead of UTC, India time on 1st of September 2006 Using decimal seconds: "20060901-13:09.123+05:30" milliseconds "20060901-13:09.123456+05:30" microseconds "20060901-13:09.123456789+05:30" nanoseconds "20060901-13:09.123456789123+05:30" picoseconds "20060901-13:09.123456789Z" nanoseconds UTC timezone
 
-## data [#data]
+## data
 
 Base type: [String](/fix/datatypes#string)
 
 string field containing raw data with no format or content restrictions. Data fields are always immediately preceded by a length field. The length field should specify the number of bytes of the value of the data field (up to but not including the terminating SOH). Caution: the value of one of these fields may contain the delimiter (SOH) character. Note that the value specified for this field should be followed by the delimiter (SOH) character as all fields are terminated with an "SOH".
 
-## Pattern [#pattern]
+## Pattern
 
 Used to build on and provide some restrictions on what is allowed as valid values in fields that uses a base FIX data type and a pattern data type. The universe of allowable valid values for the field would then be the union of the base set of valid values and what is defined by the pattern data type. The pattern data type used by the field will retain its base FIX data type (e.g. String, int, char).
 
-## Tenor [#tenor]
+## Tenor
 
 Base type: [Pattern](/fix/datatypes#pattern)
 
 used to allow the expression of FX standard tenors in addition to the base valid enumerations defined for the field that uses this pattern data type. This pattern data type is defined as follows: Dx = tenor expression for "days", e.g. "D5", where "x" is any integer &gt; 0 Mx = tenor expression for "months", e.g. "M3", where "x" is any integer &gt; 0 Wx = tenor expression for "weeks", e.g. "W13", where "x" is any integer &gt; 0 Yx = tenor expression for "years", e.g. "Y1", where "x" is any integer &gt; 0
 
-## Reserved100Plus [#reserved100-plus]
+## Reserved100Plus
 
 Base type: [Pattern](/fix/datatypes#pattern)
 
 Values "100" and above are reserved for bilaterally agreed upon user defined enumerations.
 
-## Reserved1000Plus [#reserved1000-plus]
+## Reserved1000Plus
 
 Base type: [Pattern](/fix/datatypes#pattern)
 
 Values "1000" and above are reserved for bilaterally agreed upon user defined enumerations.
 
-## Reserved4000Plus [#reserved4000-plus]
+## Reserved4000Plus
 
 Base type: [Pattern](/fix/datatypes#pattern)
 
 Values "4000" and above are reserved for bilaterally agreed upon user defined enumerations.
 
-## XMLData [#xml-data]
+## XMLData
 
 Base type: [String](/fix/datatypes#string)
 
 Contains an XML document raw data with no format or content restrictions. XMLData fields are always immediately preceded by a length field. The length field should specify the number of bytes of the value of the data field (up to but not including the terminating SOH).
 
-## Language [#language]
+## Language
 
 Base type: [String](/fix/datatypes#string)
 
@@ -227,7 +227,7 @@ Identifier for a national language - uses ISO 639-1 standard
 
 en (English), es (spanish), etc.
 
-## LocalMktTime [#local-mkt-time]
+## LocalMktTime
 
 Base type: [String](/fix/datatypes#string)
 
@@ -235,13 +235,13 @@ string field representing the time local to a particular market center. Used whe
 
 Example: 07:00:00
 
-## XID [#xid]
+## XID
 
 Base type: [String](/fix/datatypes#string)
 
 The purpose of the XID datatype is to define a unique identifier that is global to a FIX message. An identifier defined using this datatype uniquely identifies its containing element, whatever its type and name is. The constraint added by this datatype is that the values of all the fields that have an ID datatype in a FIX message must be unique.
 
-## XIDREF [#xidref]
+## XIDREF
 
 Base type: [String](/fix/datatypes#string)
 

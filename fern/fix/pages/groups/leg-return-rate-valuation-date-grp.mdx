@@ -3,9 +3,15 @@ title: "LegReturnRateValuationDateGrp"
 subtitle: "LegReturnRateValuationDateGrp is a repeating subcomponent within the LegReturnRateDateGrp component. It is used to specify the fixed valuation dates for an equity return swap payment stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42571</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegReturnRateValuationDates (42571)](/fix/fields/tags-42400-42599#tag-42571).
+<llms-only>
+Repeating group · NumInGroup 42571 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegReturnRateValuationDates (42571)](/fix/fields/tags-42400-42599#tag-42571-nolegreturnratevaluationdates).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42572 | [LegReturnRateValuationDate](/fix/fields/tags-42400-42599#tag-42572) | LocalMktDate | Optional | Required if NoLegReturnRateValuationDates(42571) &gt; 0. |
-| 42573 | [LegReturnRateValuationDateType](/fix/fields/tags-42400-42599#tag-42573) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date instance but to all subsequent date instances in the group until overridden when a new type is specified. |
+| 42572 | [LegReturnRateValuationDate](/fix/fields/tags-42400-42599#tag-42572-legreturnratevaluationdate) | LocalMktDate | Optional | Required if NoLegReturnRateValuationDates(42571) &gt; 0. |
+| 42573 | [LegReturnRateValuationDateType](/fix/fields/tags-42400-42599#tag-42573-legreturnratevaluationdatetype) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date instance but to all subsequent date instances in the group until overridden when a new type is specified. |
 
 </StickyTable>
 

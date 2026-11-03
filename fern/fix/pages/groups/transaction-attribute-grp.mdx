@@ -3,9 +3,15 @@ title: "TransactionAttributeGrp"
 subtitle: "The TransactionAttributeGrp component block is a repeating group that may be used to provide additional transaction attributes for the trade and other post-trade events."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2871</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoTransactionAttributes (2871)](/fix/fields/tags-2800-2999#tag-2871).
+<llms-only>
+Repeating group · NumInGroup 2871 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoTransactionAttributes (2871)](/fix/fields/tags-2800-2999#tag-2871-notransactionattributes).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2872 | [TransactionAttributeType](/fix/fields/tags-2800-2999#tag-2872) | TransactionAttributeTypeCodeSet | Optional | Required if NoTransactionAttributes(2871) &gt; 0. |
-| 2873 | [TransactionAttributeValue](/fix/fields/tags-2800-2999#tag-2873) | String | Optional | Value associated with the specificed TransactionAttributeType(2872). |
+| 2872 | [TransactionAttributeType](/fix/fields/tags-2800-2999#tag-2872-transactionattributetype) | TransactionAttributeTypeCodeSet | Optional | Required if NoTransactionAttributes(2871) &gt; 0. |
+| 2873 | [TransactionAttributeValue](/fix/fields/tags-2800-2999#tag-2873-transactionattributevalue) | String | Optional | Value associated with the specificed TransactionAttributeType(2872). |
 
 </StickyTable>
 

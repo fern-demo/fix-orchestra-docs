@@ -3,11 +3,17 @@ title: "TrdRegPublicationGrp"
 subtitle: "The TrdRegPublicationGrp component is used to express trade publication reasons that are required by regulatory agencies. Reasons may include deferrals, exemptions, waivers, etc."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2668</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Repeating group · NumInGroup 2668 · Added FIX.5.0SP2
+</llms-only>
 
 Under the MiFID II regulation, this is used for indicating the reduction of pre- ("waivers") or post-trade transparency. In cases where a trade has been made outside an open order book venue or publication of trade data has been deferred, pertinent reason indicators are set in the TrdRegPublicationReason(2670) to further qualify the TrdRegPublicationType(2669).
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoTrdRegPublications (2668)](/fix/fields/tags-2600-2799#tag-2668).
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoTrdRegPublications (2668)](/fix/fields/tags-2600-2799#tag-2668-notrdregpublications).
 
 ## Members
 
@@ -15,8 +21,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2669 | [TrdRegPublicationType](/fix/fields/tags-2600-2799#tag-2669) | TrdRegPublicationTypeCodeSet | Optional | Required if NoTrdRegPublications(2668) &gt; 0. |
-| 2670 | [TrdRegPublicationReason](/fix/fields/tags-2600-2799#tag-2670) | TrdRegPublicationReasonCodeSet | Optional | Additional reason for trade publication type specified in TrdRegPublicationType(2669). Reasons may be specific to regulatory trade publication rules. |
+| 2669 | [TrdRegPublicationType](/fix/fields/tags-2600-2799#tag-2669-trdregpublicationtype) | TrdRegPublicationTypeCodeSet | Optional | Required if NoTrdRegPublications(2668) &gt; 0. |
+| 2670 | [TrdRegPublicationReason](/fix/fields/tags-2600-2799#tag-2670-trdregpublicationreason) | TrdRegPublicationReasonCodeSet | Optional | Additional reason for trade publication type specified in TrdRegPublicationType(2669). Reasons may be specific to regulatory trade publication rules. |
 
 </StickyTable>
 

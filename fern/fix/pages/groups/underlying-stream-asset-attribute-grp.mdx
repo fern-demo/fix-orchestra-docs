@@ -3,9 +3,15 @@ title: "UnderlyingStreamAssetAttributeGrp"
 subtitle: "The UnderlyingStreamAssetAttributeGrp is a repeating subcomponent of the UnderlyingStreamCommodity component used to detail commodity attributes, quality standards and reject limits."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41800</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingStreamAssetAttributes (41800)](/fix/fields/tags-41800-41999#tag-41800).
+<llms-only>
+Repeating group · NumInGroup 41800 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingStreamAssetAttributes (41800)](/fix/fields/tags-41800-41999#tag-41800-nounderlyingstreamassetattributes).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41801 | [UnderlyingStreamAssetAttributeType](/fix/fields/tags-41800-41999#tag-41801) | String | Optional | Required if NoUnderlyingStreamAssetAttributes(41800) &gt; 0. |
-| 41802 | [UnderlyingStreamAssetAttributeValue](/fix/fields/tags-41800-41999#tag-41802) | String | Optional | Specifies the value of the attribute. |
-| 41803 | [UnderlyingStreamAssetAttributeLimit](/fix/fields/tags-41800-41999#tag-41803) | String | Optional | The limit or lower acceptable value of the attribute. |
+| 41801 | [UnderlyingStreamAssetAttributeType](/fix/fields/tags-41800-41999#tag-41801-underlyingstreamassetattributetype) | String | Optional | Required if NoUnderlyingStreamAssetAttributes(41800) &gt; 0. |
+| 41802 | [UnderlyingStreamAssetAttributeValue](/fix/fields/tags-41800-41999#tag-41802-underlyingstreamassetattributevalue) | String | Optional | Specifies the value of the attribute. |
+| 41803 | [UnderlyingStreamAssetAttributeLimit](/fix/fields/tags-41800-41999#tag-41803-underlyingstreamassetattributelimit) | String | Optional | The limit or lower acceptable value of the attribute. |
 
 </StickyTable>
 

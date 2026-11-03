@@ -3,9 +3,15 @@ title: "RelatedOrderGrp"
 subtitle: "This component is used to identify orders that are related to the order identified outside of this component for a business purpose. For example, the bundling of multiple orders into a single order. This component should not be used in lieu…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 73</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoOrders (73)](/fix/fields/tags-0-199#tag-73).
+<llms-only>
+Repeating group · NumInGroup 73 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoOrders (73)](/fix/fields/tags-0-199#tag-73-noorders).
 
 ## Members
 
@@ -13,12 +19,12 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2887 | [RelatedOrderID](/fix/fields/tags-2800-2999#tag-2887) | String | Optional | Required if NoOrders(73) &gt; 0. |
-| 2888 | [RelatedOrderIDSource](/fix/fields/tags-2800-2999#tag-2888) | RelatedOrderIDSourceCodeSet | Optional | The same value must be used for all orders having the same OrderRelationship(2890) value. |
-| 2836 | [RelatedOrderTime](/fix/fields/tags-2800-2999#tag-2836) | UTCTimestamp | Optional | Timestamp for the assignment of a (unique) identifier to an order. |
-| 2889 | [RelatedOrderQty](/fix/fields/tags-2800-2999#tag-2889) | Qty | Optional | Quantity of the related order which can be less than its total quantity. For example, when only parts of an order contribute to an aggregated order. |
-| 2890 | [OrderRelationship](/fix/fields/tags-2800-2999#tag-2890) | OrderRelationshipCodeSet | Optional | May be used to explicitly express the type of relationship or to provide orders having different relationships. |
-| 2835 | [OrderOriginationFirmID](/fix/fields/tags-2800-2999#tag-2835) | String | Optional | May be used when aggregating orders that were originally submitted by different firms, e.g. due to a merger or acquisition. |
+| 2887 | [RelatedOrderID](/fix/fields/tags-2800-2999#tag-2887-relatedorderid) | String | Optional | Required if NoOrders(73) &gt; 0. |
+| 2888 | [RelatedOrderIDSource](/fix/fields/tags-2800-2999#tag-2888-relatedorderidsource) | RelatedOrderIDSourceCodeSet | Optional | The same value must be used for all orders having the same OrderRelationship(2890) value. |
+| 2836 | [RelatedOrderTime](/fix/fields/tags-2800-2999#tag-2836-relatedordertime) | UTCTimestamp | Optional | Timestamp for the assignment of a (unique) identifier to an order. |
+| 2889 | [RelatedOrderQty](/fix/fields/tags-2800-2999#tag-2889-relatedorderqty) | Qty | Optional | Quantity of the related order which can be less than its total quantity. For example, when only parts of an order contribute to an aggregated order. |
+| 2890 | [OrderRelationship](/fix/fields/tags-2800-2999#tag-2890-orderrelationship) | OrderRelationshipCodeSet | Optional | May be used to explicitly express the type of relationship or to provide orders having different relationships. |
+| 2835 | [OrderOriginationFirmID](/fix/fields/tags-2800-2999#tag-2835-orderoriginationfirmid) | String | Optional | May be used when aggregating orders that were originally submitted by different firms, e.g. due to a merger or acquisition. |
 
 </StickyTable>
 

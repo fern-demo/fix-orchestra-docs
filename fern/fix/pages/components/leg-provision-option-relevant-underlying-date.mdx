@@ -3,7 +3,13 @@ title: "LegProvisionOptionRelevantUnderlyingDate"
 subtitle: "The LegProvisionOptionRelevantUnderlyingDate is a subcomponent within the LegProvisionGrp component used to report the option relevant underlyingdate defined in the provision."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,14 +17,14 @@ subtitle: "The LegProvisionOptionRelevantUnderlyingDate is a subcomponent within
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40508 | [LegProvisionOptionRelevantUnderlyingDateUnadjusted](/fix/fields/tags-40400-40599#tag-40508) | LocalMktDate | Optional | The unadjusted date on the underlying set by the exercise of an option. What this date is depends on the option (e.g. in a swaption it is the swap effective… |
-| 40509 | [LegProvisionOptionRelevantUnderlyingDateBusinessDayConvention](/fix/fields/tags-40400-40599#tag-40509) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
+| 40508 | [LegProvisionOptionRelevantUnderlyingDateUnadjusted](/fix/fields/tags-40400-40599#tag-40508-legprovisionoptionrelevantunderlyingdateunadjusted) | LocalMktDate | Optional | The unadjusted date on the underlying set by the exercise of an option. What this date is depends on the option (e.g. in a swaption it is the swap effective… |
+| 40509 | [LegProvisionOptionRelevantUnderlyingDateBusinessDayConvention](/fix/fields/tags-40400-40599#tag-40509-legprovisionoptionrelevantunderlyingdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
 | 40938 | [LegProvisionOptionRelevantUnderlyingDateBusinessCenterGrp](/fix/groups/leg-provision-option-relevant-underlying-date-business-center-grp) | Repeating group | Optional | LegProvisionOptionRelevantUnderlyingDateBusinessCenterGrp is a repeating subcomponent within the LegProvisionOptionRelevantUnderlyingDate component. It is used… |
-| 40511 | [LegProvisionOptionRelevantUnderlyingDateRelativeTo](/fix/fields/tags-40400-40599#tag-40511) | int | Optional | Specifies the anchor date when the date relevant to the underlying trade on exercise is relative to an anchor date. See… |
-| 40512 | [LegProvisionOptionRelevantUnderlyingDateOffsetPeriod](/fix/fields/tags-40400-40599#tag-40512) | int | Optional | Conditionally required when LegProvisionOptionRelevantUnderlyingDateOffsetUnit(40513) is specified. |
-| 40513 | [LegProvisionOptionRelevantUnderlyingDateOffsetUnit](/fix/fields/tags-40400-40599#tag-40513) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegProvisionOptionRelevantUnderlyingDateOffsetPeriod(40512) is specified. |
-| 40514 | [LegProvisionOptionRelevantUnderlyingDateOffsetDayType](/fix/fields/tags-40400-40599#tag-40514) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the provision's relative option relevant underlying date offset. |
-| 40515 | [LegProvisionOptionRelevantUnderlyingDateAdjusted](/fix/fields/tags-40400-40599#tag-40515) | LocalMktDate | Optional | The adjusted date on the underlying set by the exercise of an option. What this date is depends on the option (e.g. in a swaption it is the swap effective date,… |
+| 40511 | [LegProvisionOptionRelevantUnderlyingDateRelativeTo](/fix/fields/tags-40400-40599#tag-40511-legprovisionoptionrelevantunderlyingdaterelativeto) | int | Optional | Specifies the anchor date when the date relevant to the underlying trade on exercise is relative to an anchor date. See… |
+| 40512 | [LegProvisionOptionRelevantUnderlyingDateOffsetPeriod](/fix/fields/tags-40400-40599#tag-40512-legprovisionoptionrelevantunderlyingdateoffsetperiod) | int | Optional | Conditionally required when LegProvisionOptionRelevantUnderlyingDateOffsetUnit(40513) is specified. |
+| 40513 | [LegProvisionOptionRelevantUnderlyingDateOffsetUnit](/fix/fields/tags-40400-40599#tag-40513-legprovisionoptionrelevantunderlyingdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegProvisionOptionRelevantUnderlyingDateOffsetPeriod(40512) is specified. |
+| 40514 | [LegProvisionOptionRelevantUnderlyingDateOffsetDayType](/fix/fields/tags-40400-40599#tag-40514-legprovisionoptionrelevantunderlyingdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the provision's relative option relevant underlying date offset. |
+| 40515 | [LegProvisionOptionRelevantUnderlyingDateAdjusted](/fix/fields/tags-40400-40599#tag-40515-legprovisionoptionrelevantunderlyingdateadjusted) | LocalMktDate | Optional | The adjusted date on the underlying set by the exercise of an option. What this date is depends on the option (e.g. in a swaption it is the swap effective date,… |
 
 </StickyTable>
 

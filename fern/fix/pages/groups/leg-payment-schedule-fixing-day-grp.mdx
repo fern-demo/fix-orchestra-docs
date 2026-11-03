@@ -3,11 +3,17 @@ title: "LegPaymentScheduleFixingDayGrp"
 subtitle: "The LegPaymentScheduleFixingDayGrp is a repeating subcomponent of the LegPaymentScheduleGrp component used to detail periodic fixing days."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41530</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Repeating group · NumInGroup 41530 · Added FIX.5.0SP2
+</llms-only>
 
 If the fixing days are not specified, then every day of the week will be a fixing day.
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentScheduleFixingDays (41530)](/fix/fields/tags-41400-41599#tag-41530).
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentScheduleFixingDays (41530)](/fix/fields/tags-41400-41599#tag-41530-nolegpaymentschedulefixingdays).
 
 ## Members
 
@@ -15,8 +21,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41531 | [LegPaymentScheduleFixingDayOfWeek](/fix/fields/tags-41400-41599#tag-41531) | PaymentStreamPricingDayOfWeekCodeSet | Optional | Required if NoLegPaymentScheduleFixingDays(41530) &gt; 0. |
-| 41532 | [LegPaymentScheduleFixingDayNumber](/fix/fields/tags-41400-41599#tag-41532) | int | Optional | The occurrence of the day of week on which fixing takes place. |
+| 41531 | [LegPaymentScheduleFixingDayOfWeek](/fix/fields/tags-41400-41599#tag-41531-legpaymentschedulefixingdayofweek) | PaymentStreamPricingDayOfWeekCodeSet | Optional | Required if NoLegPaymentScheduleFixingDays(41530) &gt; 0. |
+| 41532 | [LegPaymentScheduleFixingDayNumber](/fix/fields/tags-41400-41599#tag-41532-legpaymentschedulefixingdaynumber) | int | Optional | The occurrence of the day of week on which fixing takes place. |
 
 </StickyTable>
 

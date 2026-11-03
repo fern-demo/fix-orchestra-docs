@@ -3,7 +3,13 @@ title: "UnderlyingProvisionCashSettlPaymentDates"
 subtitle: "The UnderlyingProvisionCashSettlPaymentDates component is a sub-component within the UnderlyingProvisionGrp component used to report the cash settlement payment dates defined in the provision."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,14 +17,14 @@ subtitle: "The UnderlyingProvisionCashSettlPaymentDates component is a sub-compo
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42092 | [UnderlyingProvisionCashSettlPaymentDateBusinessDayConvention](/fix/fields/tags-42000-42199#tag-42092) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the busienss day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
+| 42092 | [UnderlyingProvisionCashSettlPaymentDateBusinessDayConvention](/fix/fields/tags-42000-42199#tag-42092-underlyingprovisioncashsettlpaymentdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the busienss day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
 | 42180 | [UnderlyingProvisionCashSettlPaymentDateBusinessCenterGrp](/fix/groups/underlying-provision-cash-settl-payment-date-business-center-grp) | Repeating group | Optional | UnderlyingProvisionCashSettlPaymentDateBusinessCenterGrp is a repeating subcomponent within the UnderlyingProvisionCashSettlPaymentDates component. It is used… |
-| 42093 | [UnderlyingProvisionCashSettlPaymentDateRelativeTo](/fix/fields/tags-42000-42199#tag-42093) | int | Optional | Specifies the anchor date when the cash settlement payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date… |
-| 42094 | [UnderlyingProvisionCashSettlPaymentDateOffsetPeriod](/fix/fields/tags-42000-42199#tag-42094) | int | Optional | Conditionally required when UnderlyingProvisionCashSettlPaymentDateOffsetUnit(42095) is specified. |
-| 42095 | [UnderlyingProvisionCashSettlPaymentDateOffsetUnit](/fix/fields/tags-42000-42199#tag-42095) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingProvisionCashSettlPaymentDateOffsetPeriod(42094) is specified. |
-| 42096 | [UnderlyingProvisionCashSettlPaymentDateOffsetDayType](/fix/fields/tags-42000-42199#tag-42096) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the provision's relative cash settlement payment date offset. |
-| 42097 | [UnderlyingProvisionCashSettlPaymentDateRangeFirst](/fix/fields/tags-42000-42199#tag-42097) | LocalMktDate | Optional | First date in range when a settlement date range is provided. |
-| 42098 | [UnderlyingProvisionCashSettlPaymentDateRangeLast](/fix/fields/tags-42000-42199#tag-42098) | LocalMktDate | Optional | Last date in range when a settlement date range is provided. |
+| 42093 | [UnderlyingProvisionCashSettlPaymentDateRelativeTo](/fix/fields/tags-42000-42199#tag-42093-underlyingprovisioncashsettlpaymentdaterelativeto) | int | Optional | Specifies the anchor date when the cash settlement payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date… |
+| 42094 | [UnderlyingProvisionCashSettlPaymentDateOffsetPeriod](/fix/fields/tags-42000-42199#tag-42094-underlyingprovisioncashsettlpaymentdateoffsetperiod) | int | Optional | Conditionally required when UnderlyingProvisionCashSettlPaymentDateOffsetUnit(42095) is specified. |
+| 42095 | [UnderlyingProvisionCashSettlPaymentDateOffsetUnit](/fix/fields/tags-42000-42199#tag-42095-underlyingprovisioncashsettlpaymentdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingProvisionCashSettlPaymentDateOffsetPeriod(42094) is specified. |
+| 42096 | [UnderlyingProvisionCashSettlPaymentDateOffsetDayType](/fix/fields/tags-42000-42199#tag-42096-underlyingprovisioncashsettlpaymentdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the provision's relative cash settlement payment date offset. |
+| 42097 | [UnderlyingProvisionCashSettlPaymentDateRangeFirst](/fix/fields/tags-42000-42199#tag-42097-underlyingprovisioncashsettlpaymentdaterangefirst) | LocalMktDate | Optional | First date in range when a settlement date range is provided. |
+| 42098 | [UnderlyingProvisionCashSettlPaymentDateRangeLast](/fix/fields/tags-42000-42199#tag-42098-underlyingprovisioncashsettlpaymentdaterangelast) | LocalMktDate | Optional | Last date in range when a settlement date range is provided. |
 | 42099 | [UnderlyingProvisionCashSettlPaymentFixedDateGrp](/fix/groups/underlying-provision-cash-settl-payment-fixed-date-grp) | Repeating group | Optional | The UnderlyingProvisionCashSettlPaymentFixedDateGrp is a repeating component within the UnderlyingProvisionCashSettlPaymentDates component used to report fixed… |
 
 </StickyTable>

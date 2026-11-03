@@ -3,7 +3,13 @@ title: "LegOptionExerciseExpiration"
 subtitle: "The LegOptionExerciseExpiration component is a subcomponent of the LegOptionExercise component used to specify option exercise expiration dates and times. The purpose of LegOptionExercise is to identify the scheduled opportunities for…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,18 +17,18 @@ subtitle: "The LegOptionExerciseExpiration component is a subcomponent of the Le
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41517 | [LegOptionExerciseExpirationDateBusinessDayConvention](/fix/fields/tags-41400-41599#tag-41517) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified values would be specific… |
+| 41517 | [LegOptionExerciseExpirationDateBusinessDayConvention](/fix/fields/tags-41400-41599#tag-41517-legoptionexerciseexpirationdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified values would be specific… |
 | 41515 | [LegOptionExerciseExpirationDateBusinessCenterGrp](/fix/groups/leg-option-exercise-expiration-date-business-center-grp) | Repeating group | Optional | LegOptionExerciseExpirationDateBusinessCenterGrp is a repeating subcomponent of the LegOptionExerciseExpiration component used to specify the set of business… |
 | 41527 | [LegOptionExerciseExpirationDateGrp](/fix/groups/leg-option-exercise-expiration-date-grp) | Repeating group | Optional | The LegOptionExerciseExpirationDateGrp is a repeating subcomponent of the LegOptionExerciseExpiration component used to specify fixed dates for expiration. |
-| 41518 | [LegOptionExerciseExpirationDateRelativeTo](/fix/fields/tags-41400-41599#tag-41518) | int | Optional | Specifies the anchor date when the option exercise expiration date is relative to an anchor date. See… |
-| 41519 | [LegOptionExerciseExpirationDateOffsetPeriod](/fix/fields/tags-41400-41599#tag-41519) | int | Optional | Conditionally required when LegOptionExerciseExpirationDateOffsetUnit(41520) is specified. |
-| 41520 | [LegOptionExerciseExpirationDateOffsetUnit](/fix/fields/tags-41400-41599#tag-41520) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegOptionExerciseExpirationDateOffsetPeriod(41519) is specified. |
-| 41521 | [LegOptionExerciseExpirationFrequencyPeriod](/fix/fields/tags-41400-41599#tag-41521) | int | Optional | Conditionally required when LegOptionExerciseExpirationFrequencyUnit(41522) is specified. |
-| 41522 | [LegOptionExerciseExpirationFrequencyUnit](/fix/fields/tags-41400-41599#tag-41522) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when LegOptionExerciseExpirationFrequencyPeriod(41521) is specified. |
-| 41523 | [LegOptionExerciseExpirationRollConvention](/fix/fields/tags-41400-41599#tag-41523) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the LegDateAdjustment component in InstrumentLeg. The specified values would be specific to… |
-| 41524 | [LegOptionExerciseExpirationDateOffsetDayType](/fix/fields/tags-41400-41599#tag-41524) | ComplexEventDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative option exercise expiration date offset. |
-| 41525 | [LegOptionExerciseExpirationTime](/fix/fields/tags-41400-41599#tag-41525) | LocalMktTime | Optional | The option exercise expiration time. |
-| 41526 | [LegOptionExerciseExpirationTimeBusinessCenter](/fix/fields/tags-41400-41599#tag-41526) | String | Optional | The business center used to determine the locale for option exercise expiration time, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for… |
+| 41518 | [LegOptionExerciseExpirationDateRelativeTo](/fix/fields/tags-41400-41599#tag-41518-legoptionexerciseexpirationdaterelativeto) | int | Optional | Specifies the anchor date when the option exercise expiration date is relative to an anchor date. See… |
+| 41519 | [LegOptionExerciseExpirationDateOffsetPeriod](/fix/fields/tags-41400-41599#tag-41519-legoptionexerciseexpirationdateoffsetperiod) | int | Optional | Conditionally required when LegOptionExerciseExpirationDateOffsetUnit(41520) is specified. |
+| 41520 | [LegOptionExerciseExpirationDateOffsetUnit](/fix/fields/tags-41400-41599#tag-41520-legoptionexerciseexpirationdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegOptionExerciseExpirationDateOffsetPeriod(41519) is specified. |
+| 41521 | [LegOptionExerciseExpirationFrequencyPeriod](/fix/fields/tags-41400-41599#tag-41521-legoptionexerciseexpirationfrequencyperiod) | int | Optional | Conditionally required when LegOptionExerciseExpirationFrequencyUnit(41522) is specified. |
+| 41522 | [LegOptionExerciseExpirationFrequencyUnit](/fix/fields/tags-41400-41599#tag-41522-legoptionexerciseexpirationfrequencyunit) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when LegOptionExerciseExpirationFrequencyPeriod(41521) is specified. |
+| 41523 | [LegOptionExerciseExpirationRollConvention](/fix/fields/tags-41400-41599#tag-41523-legoptionexerciseexpirationrollconvention) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the LegDateAdjustment component in InstrumentLeg. The specified values would be specific to… |
+| 41524 | [LegOptionExerciseExpirationDateOffsetDayType](/fix/fields/tags-41400-41599#tag-41524-legoptionexerciseexpirationdateoffsetdaytype) | ComplexEventDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative option exercise expiration date offset. |
+| 41525 | [LegOptionExerciseExpirationTime](/fix/fields/tags-41400-41599#tag-41525-legoptionexerciseexpirationtime) | LocalMktTime | Optional | The option exercise expiration time. |
+| 41526 | [LegOptionExerciseExpirationTimeBusinessCenter](/fix/fields/tags-41400-41599#tag-41526-legoptionexerciseexpirationtimebusinesscenter) | String | Optional | The business center used to determine the locale for option exercise expiration time, e.g. "GBLO". See http://www.fpml.org/coding-scheme/business-center for… |
 
 </StickyTable>
 

@@ -3,7 +3,13 @@ title: "CrossOrderCancelReplaceRequest"
 subtitle: "Used to modify a cross order previously submitted using the New Order - Cross message. See Order Cancel Replace Request for details concerning message usage."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType t</Badge> <Badge intent="note" minimal>Cross Orders</Badge> <Badge intent="tip" minimal>Trade</Badge> <Badge intent="success" minimal>Added FIX.4.3</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType t · Cross Orders · Trade · Added FIX.4.3
+</llms-only>
 
 ## Message structure
 
@@ -12,70 +18,70 @@ subtitle: "Used to modify a cross order previously submitted using the New Order
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | Optional | Unique identifier of most recent order as assigned by sell-side (broker, exchange, ECN). |
-| 2422 | [OrderRequestID](/fix/fields/tags-2400-2599#tag-2422) | int | Optional | Required if provided on the order being replaced (or cancelled). Echo back the value provided by the requester. |
-| 548 | [CrossID](/fix/fields/tags-400-599#tag-548) | String | **Required** | CrossID for the replacement order |
-| 551 | [OrigCrossID](/fix/fields/tags-400-599#tag-551) | String | **Required** | Must match the CrossID of the previous cross order. Same order chaining mechanism as ClOrdID/OrigClOrdID with single order Cancel/Replace. |
-| 961 | [HostCrossID](/fix/fields/tags-800-999#tag-961) | String | Optional | Host assigned entity ID that can be used to reference all components of a cross; sides + strategy + legs |
-| 549 | [CrossType](/fix/fields/tags-400-599#tag-549) | CrossTypeCodeSet | **Required** | Type of cross being submitted to a market |
-| 550 | [CrossPrioritization](/fix/fields/tags-400-599#tag-550) | CrossPrioritizationCodeSet | **Required** | Indicates if one side or the other of a cross order should be prioritized. The definition of prioritization is left to the market. In some markets… |
+| 37 | [OrderID](/fix/fields/tags-0-199#tag-37-orderid) | String | Optional | Unique identifier of most recent order as assigned by sell-side (broker, exchange, ECN). |
+| 2422 | [OrderRequestID](/fix/fields/tags-2400-2599#tag-2422-orderrequestid) | int | Optional | Required if provided on the order being replaced (or cancelled). Echo back the value provided by the requester. |
+| 548 | [CrossID](/fix/fields/tags-400-599#tag-548-crossid) | String | **Required** | CrossID for the replacement order |
+| 551 | [OrigCrossID](/fix/fields/tags-400-599#tag-551-origcrossid) | String | **Required** | Must match the CrossID of the previous cross order. Same order chaining mechanism as ClOrdID/OrigClOrdID with single order Cancel/Replace. |
+| 961 | [HostCrossID](/fix/fields/tags-800-999#tag-961-hostcrossid) | String | Optional | Host assigned entity ID that can be used to reference all components of a cross; sides + strategy + legs |
+| 549 | [CrossType](/fix/fields/tags-400-599#tag-549-crosstype) | CrossTypeCodeSet | **Required** | Type of cross being submitted to a market |
+| 550 | [CrossPrioritization](/fix/fields/tags-400-599#tag-550-crossprioritization) | CrossPrioritizationCodeSet | **Required** | Indicates if one side or the other of a cross order should be prioritized. The definition of prioritization is left to the market. In some markets… |
 | 1116 | [RootParties](/fix/groups/root-parties) | Repeating group | Optional | The RootParties component block is a version of the Parties component block used to provide root information regarding the owning and entering parties of a… |
 | 552 | [SideCrossOrdModGrp](/fix/groups/side-cross-ord-mod-grp) | Repeating group | **Required** |  |
 | | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
-| 63 | [SettlType](/fix/fields/tags-0-199#tag-63) | SettlTypeCodeSet | Optional | Indicates order settlement period. If present, SettlDate (64) overrides this field. If both SettlType (63) and SettDate (64) are omitted, the default for… |
-| 64 | [SettlDate](/fix/fields/tags-0-199#tag-64) | LocalMktDate | Optional | Takes precedence over SettlType value and conditionally required/omitted for specific SettlType values. |
-| 21 | [HandlInst](/fix/fields/tags-0-199#tag-21) | HandlInstCodeSet | Optional | Instructions for order handling on Broker trading floor |
-| 18 | [ExecInst](/fix/fields/tags-0-199#tag-18) | ExecInstCodeSet | Optional | Can contain multiple instructions, space delimited. If OrdType=P, exactly one of the following values (ExecInst = L, R, M, P, O, T, or W) must be specified. |
-| 110 | [MinQty](/fix/fields/tags-0-199#tag-110) | Qty | Optional | Minimum quantity of an order to be executed. (Prior to FIX 4.2 this field was of type int) |
-| 1822 | [MinQtyMethod](/fix/fields/tags-1800-1999#tag-1822) | MinQtyMethodCodeSet | Optional | Indicates how the minimum quantity should be applied when executing the order. |
-| 1089 | [MatchIncrement](/fix/fields/tags-1000-1199#tag-1089) | Qty | Optional | Allows orders to specify a minimum quantity that applies to every execution (one execution could be for multiple counter-orders). The order may still fill… |
-| 1090 | [MaxPriceLevels](/fix/fields/tags-1000-1199#tag-1090) | int | Optional | Allows an order to specify a maximum number of price levels to trade through. Only valid for aggressive orders and during continuous (autoexecution) trading… |
+| 63 | [SettlType](/fix/fields/tags-0-199#tag-63-settltype) | SettlTypeCodeSet | Optional | Indicates order settlement period. If present, SettlDate (64) overrides this field. If both SettlType (63) and SettDate (64) are omitted, the default for… |
+| 64 | [SettlDate](/fix/fields/tags-0-199#tag-64-settldate) | LocalMktDate | Optional | Takes precedence over SettlType value and conditionally required/omitted for specific SettlType values. |
+| 21 | [HandlInst](/fix/fields/tags-0-199#tag-21-handlinst) | HandlInstCodeSet | Optional | Instructions for order handling on Broker trading floor |
+| 18 | [ExecInst](/fix/fields/tags-0-199#tag-18-execinst) | ExecInstCodeSet | Optional | Can contain multiple instructions, space delimited. If OrdType=P, exactly one of the following values (ExecInst = L, R, M, P, O, T, or W) must be specified. |
+| 110 | [MinQty](/fix/fields/tags-0-199#tag-110-minqty) | Qty | Optional | Minimum quantity of an order to be executed. (Prior to FIX 4.2 this field was of type int) |
+| 1822 | [MinQtyMethod](/fix/fields/tags-1800-1999#tag-1822-minqtymethod) | MinQtyMethodCodeSet | Optional | Indicates how the minimum quantity should be applied when executing the order. |
+| 1089 | [MatchIncrement](/fix/fields/tags-1000-1199#tag-1089-matchincrement) | Qty | Optional | Allows orders to specify a minimum quantity that applies to every execution (one execution could be for multiple counter-orders). The order may still fill… |
+| 1090 | [MaxPriceLevels](/fix/fields/tags-1000-1199#tag-1090-maxpricelevels) | int | Optional | Allows an order to specify a maximum number of price levels to trade through. Only valid for aggressive orders and during continuous (autoexecution) trading… |
 | | [DisplayInstruction](/fix/components/display-instruction) | Component | Optional | The DisplayInstruction component block is used to convey instructions on how a reserved order is to be handled in terms of when and how much of the order… |
-| 111 | [MaxFloor](/fix/fields/tags-0-199#tag-111) | Qty | Optional | The quantity to be displayed . Required for reserve orders. On orders specifies the qty to be displayed, on execution reports the currently displayed quantity. |
-| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
-| 100 | [ExDestination](/fix/fields/tags-0-199#tag-100) | Exchange | Optional | Execution destination as defined by institution when order is entered. Valid values: See "Appendix 6-C" |
-| 1133 | [ExDestinationIDSource](/fix/fields/tags-1000-1199#tag-1133) | ExDestinationIDSourceCodeSet | Optional | The ID source of ExDestination |
+| 111 | [MaxFloor](/fix/fields/tags-0-199#tag-111-maxfloor) | Qty | Optional | The quantity to be displayed . Required for reserve orders. On orders specifies the qty to be displayed, on execution reports the currently displayed quantity. |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300-marketsegmentid) | String | Optional | Identifies the market segment |
+| 100 | [ExDestination](/fix/fields/tags-0-199#tag-100-exdestination) | Exchange | Optional | Execution destination as defined by institution when order is entered. Valid values: See "Appendix 6-C" |
+| 1133 | [ExDestinationIDSource](/fix/fields/tags-1000-1199#tag-1133-exdestinationidsource) | ExDestinationIDSourceCodeSet | Optional | The ID source of ExDestination |
 | 386 | [TrdgSesGrp](/fix/groups/trdg-ses-grp) | Repeating group | Optional |  |
-| 81 | [ProcessCode](/fix/fields/tags-0-199#tag-81) | ProcessCodeCodeSet | Optional | Used to identify soft trades at order entry. |
-| 140 | [PrevClosePx](/fix/fields/tags-0-199#tag-140) | Price | Optional | Useful for verifying security identification |
-| 114 | [LocateReqd](/fix/fields/tags-0-199#tag-114) | LocateReqdCodeSet | Optional | Required for short sell orders |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | **Required** | Time this order request was initiated/released by the trader, trading system, or intermediary. |
-| 483 | [TransBkdTime](/fix/fields/tags-400-599#tag-483) | UTCTimestamp | Optional | A date and time stamp to indicate when this order was booked with the agent prior to submission to the VMU |
+| 81 | [ProcessCode](/fix/fields/tags-0-199#tag-81-processcode) | ProcessCodeCodeSet | Optional | Used to identify soft trades at order entry. |
+| 140 | [PrevClosePx](/fix/fields/tags-0-199#tag-140-prevclosepx) | Price | Optional | Useful for verifying security identification |
+| 114 | [LocateReqd](/fix/fields/tags-0-199#tag-114-locatereqd) | LocateReqdCodeSet | Optional | Required for short sell orders |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | **Required** | Time this order request was initiated/released by the trader, trading system, or intermediary. |
+| 483 | [TransBkdTime](/fix/fields/tags-400-599#tag-483-transbkdtime) | UTCTimestamp | Optional | A date and time stamp to indicate when this order was booked with the agent prior to submission to the VMU |
 | 232 | [Stipulations](/fix/groups/stipulations) | Repeating group | Optional | The Stipulations component block is used in Fixed Income to provide additional information on a given security. These additional information are usually not… |
-| 40 | [OrdType](/fix/fields/tags-0-199#tag-40) | OrdTypeCodeSet | **Required** | Order type. \*\*\* SOME VALUES ARE NO LONGER USED - See "Deprecated (Phased-out) Features and Supported Approach" \*\*\* (see Volume : "Glossary" for value… |
-| 423 | [PriceType](/fix/fields/tags-400-599#tag-423) | PriceTypeCodeSet | Optional | Code to represent the price type. |
-| 44 | [Price](/fix/fields/tags-0-199#tag-44) | Price | Optional | Required for limit OrdTypes. For F/X orders, should be the "all-in" rate (spot rate adjusted for forward points). Can be used to specify a limit price for a… |
-| 1092 | [PriceProtectionScope](/fix/fields/tags-1000-1199#tag-1092) | PriceProtectionScopeCodeSet | Optional | Defines the type of price protection the customer requires on their order. |
-| 99 | [StopPx](/fix/fields/tags-0-199#tag-99) | Price | Optional | Required for OrdType = "Stop" or OrdType = "Stop limit". |
+| 40 | [OrdType](/fix/fields/tags-0-199#tag-40-ordtype) | OrdTypeCodeSet | **Required** | Order type. \*\*\* SOME VALUES ARE NO LONGER USED - See "Deprecated (Phased-out) Features and Supported Approach" \*\*\* (see Volume : "Glossary" for value… |
+| 423 | [PriceType](/fix/fields/tags-400-599#tag-423-pricetype) | PriceTypeCodeSet | Optional | Code to represent the price type. |
+| 44 | [Price](/fix/fields/tags-0-199#tag-44-price) | Price | Optional | Required for limit OrdTypes. For F/X orders, should be the "all-in" rate (spot rate adjusted for forward points). Can be used to specify a limit price for a… |
+| 1092 | [PriceProtectionScope](/fix/fields/tags-1000-1199#tag-1092-priceprotectionscope) | PriceProtectionScopeCodeSet | Optional | Defines the type of price protection the customer requires on their order. |
+| 99 | [StopPx](/fix/fields/tags-0-199#tag-99-stoppx) | Price | Optional | Required for OrdType = "Stop" or OrdType = "Stop limit". |
 | | [TriggeringInstruction](/fix/components/triggering-instruction) | Component | Optional | The TriggeringInstruction component block specifies the conditions under which an order will be triggered by related market events as well as the behavior of… |
 | | [SpreadOrBenchmarkCurveData](/fix/components/spread-or-benchmark-curve-data) | Component | Optional | The SpreadOrBenchmarkCurveData component block is primarily used for Fixed Income to convey spread to a benchmark security or curve. |
 | | [YieldData](/fix/components/yield-data) | Component | Optional | The YieldData component block conveys yield information for a given Fixed Income security. |
-| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
-| 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
-| 23 | [IOIID](/fix/fields/tags-0-199#tag-23) | String | Optional | Required for Previously Indicated Orders (OrdType=E) |
-| 117 | [QuoteID](/fix/fields/tags-0-199#tag-117) | String | Optional | Required for Previously Quoted Orders (OrdType=D) |
-| 59 | [TimeInForce](/fix/fields/tags-0-199#tag-59) | TimeInForceCodeSet | Optional | Absence of this field indicates Day order |
-| 168 | [EffectiveTime](/fix/fields/tags-0-199#tag-168) | UTCTimestamp | Optional | Can specify the time at which the order should be considered valid |
-| 432 | [ExpireDate](/fix/fields/tags-400-599#tag-432) | LocalMktDate | Optional | Conditionally required if TimeInForce = GTD and ExpireTime is not specified. |
-| 126 | [ExpireTime](/fix/fields/tags-0-199#tag-126) | UTCTimestamp | Optional | Conditionally required if TimeInForce = GTD and ExpireDate is not specified. |
-| 427 | [GTBookingInst](/fix/fields/tags-400-599#tag-427) | GTBookingInstCodeSet | Optional | States whether executions are booked out or accumulated on a partially filled GT order |
-| 1629 | [ExposureDuration](/fix/fields/tags-1600-1799#tag-1629) | int | Optional | Conditionally required when TimeInForce(59)=10 (Good for Time) |
-| 1916 | [ExposureDurationUnit](/fix/fields/tags-1800-1999#tag-1916) | OrderDelayUnitCodeSet | Optional | Time unit in which the ExposureDuration(1629) is expressed. |
-| 1815 | [TradingCapacity](/fix/fields/tags-1800-1999#tag-1815) | TradingCapacityCodeSet | Optional | Designates the capacity in which the order is submitted for trading by the market participant. |
-| 210 | [MaxShow](/fix/fields/tags-200-399#tag-210) | Qty | Optional | Maximum quantity (e.g. number of shares) within an order to be shown to other customers (i.e. sent via an IOI). (Prior to FIX 4.2 this field was of type int) |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15-currency) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
+| 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376-complianceid) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
+| 23 | [IOIID](/fix/fields/tags-0-199#tag-23-ioiid) | String | Optional | Required for Previously Indicated Orders (OrdType=E) |
+| 117 | [QuoteID](/fix/fields/tags-0-199#tag-117-quoteid) | String | Optional | Required for Previously Quoted Orders (OrdType=D) |
+| 59 | [TimeInForce](/fix/fields/tags-0-199#tag-59-timeinforce) | TimeInForceCodeSet | Optional | Absence of this field indicates Day order |
+| 168 | [EffectiveTime](/fix/fields/tags-0-199#tag-168-effectivetime) | UTCTimestamp | Optional | Can specify the time at which the order should be considered valid |
+| 432 | [ExpireDate](/fix/fields/tags-400-599#tag-432-expiredate) | LocalMktDate | Optional | Conditionally required if TimeInForce = GTD and ExpireTime is not specified. |
+| 126 | [ExpireTime](/fix/fields/tags-0-199#tag-126-expiretime) | UTCTimestamp | Optional | Conditionally required if TimeInForce = GTD and ExpireDate is not specified. |
+| 427 | [GTBookingInst](/fix/fields/tags-400-599#tag-427-gtbookinginst) | GTBookingInstCodeSet | Optional | States whether executions are booked out or accumulated on a partially filled GT order |
+| 1629 | [ExposureDuration](/fix/fields/tags-1600-1799#tag-1629-exposureduration) | int | Optional | Conditionally required when TimeInForce(59)=10 (Good for Time) |
+| 1916 | [ExposureDurationUnit](/fix/fields/tags-1800-1999#tag-1916-exposuredurationunit) | OrderDelayUnitCodeSet | Optional | Time unit in which the ExposureDuration(1629) is expressed. |
+| 1815 | [TradingCapacity](/fix/fields/tags-1800-1999#tag-1815-tradingcapacity) | TradingCapacityCodeSet | Optional | Designates the capacity in which the order is submitted for trading by the market participant. |
+| 210 | [MaxShow](/fix/fields/tags-200-399#tag-210-maxshow) | Qty | Optional | Maximum quantity (e.g. number of shares) within an order to be shown to other customers (i.e. sent via an IOI). (Prior to FIX 4.2 this field was of type int) |
 | | [PegInstructions](/fix/components/peg-instructions) | Component | Optional | The Peg Instructions component block is used to tie the price of a security to a market event such as opening price, mid-price, best price. The Peg Instructions… |
 | | [DiscretionInstructions](/fix/components/discretion-instructions) | Component | Optional | The presence of DiscretionInstructions component block on an order indicates that the trader wishes to display one price but will accept trades at another… |
-| 847 | [TargetStrategy](/fix/fields/tags-800-999#tag-847) | TargetStrategyCodeSet | Optional | The target strategy of the order |
+| 847 | [TargetStrategy](/fix/fields/tags-800-999#tag-847-targetstrategy) | TargetStrategyCodeSet | Optional | The target strategy of the order |
 | 957 | [StrategyParametersGrp](/fix/groups/strategy-parameters-grp) | Repeating group | Optional |  |
-| 848 | [TargetStrategyParameters](/fix/fields/tags-800-999#tag-848) | String | Optional | For further specification of the TargetStrategy |
-| 849 | [ParticipationRate](/fix/fields/tags-800-999#tag-849) | Percentage | Optional | Mandatory for a TargetStrategy=Participate order and specifies the target particpation rate. For other order types optionally specifies a volume limit (i.e. do… |
-| 480 | [CancellationRights](/fix/fields/tags-400-599#tag-480) | CancellationRightsCodeSet | Optional | For CIV - Optional |
-| 481 | [MoneyLaunderingStatus](/fix/fields/tags-400-599#tag-481) | MoneyLaunderingStatusCodeSet | Optional | A one character code identifying Money laundering status. |
-| 513 | [RegistID](/fix/fields/tags-400-599#tag-513) | String | Optional | Reference to Registration Instructions message for this Order. |
-| 494 | [Designation](/fix/fields/tags-400-599#tag-494) | String | Optional | Supplementary registration information for this Order |
-| 1685 | [ThrottleInst](/fix/fields/tags-1600-1799#tag-1685) | ThrottleInstCodeSet | Optional | Describes action recipient should take if a throttle limit were exceeded. |
+| 848 | [TargetStrategyParameters](/fix/fields/tags-800-999#tag-848-targetstrategyparameters) | String | Optional | For further specification of the TargetStrategy |
+| 849 | [ParticipationRate](/fix/fields/tags-800-999#tag-849-participationrate) | Percentage | Optional | Mandatory for a TargetStrategy=Participate order and specifies the target particpation rate. For other order types optionally specifies a volume limit (i.e. do… |
+| 480 | [CancellationRights](/fix/fields/tags-400-599#tag-480-cancellationrights) | CancellationRightsCodeSet | Optional | For CIV - Optional |
+| 481 | [MoneyLaunderingStatus](/fix/fields/tags-400-599#tag-481-moneylaunderingstatus) | MoneyLaunderingStatusCodeSet | Optional | A one character code identifying Money laundering status. |
+| 513 | [RegistID](/fix/fields/tags-400-599#tag-513-registid) | String | Optional | Reference to Registration Instructions message for this Order. |
+| 494 | [Designation](/fix/fields/tags-400-599#tag-494-designation) | String | Optional | Supplementary registration information for this Order |
+| 1685 | [ThrottleInst](/fix/fields/tags-1600-1799#tag-1685-throttleinst) | ThrottleInstCodeSet | Optional | Describes action recipient should take if a throttle limit were exceeded. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

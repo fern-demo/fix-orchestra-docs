@@ -2,9 +2,15 @@
 title: "QuotReqGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 146</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedSym (146)](/fix/fields/tags-0-199#tag-146).
+<llms-only>
+Repeating group · NumInGroup 146 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedSym (146)](/fix/fields/tags-0-199#tag-146-norelatedsym).
 
 ## Members
 
@@ -15,58 +21,58 @@ Each repetition starts with the first member listed. The count of repetitions is
 | | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This… |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
-| 140 | [PrevClosePx](/fix/fields/tags-0-199#tag-140) | Price | Optional | Useful for verifying security identification |
-| 303 | [QuoteRequestType](/fix/fields/tags-200-399#tag-303) | QuoteRequestTypeCodeSet | Optional | Indicates the type of Quote Request (e.g. Manual vs. Automatic) being generated. |
-| 117 | [QuoteID](/fix/fields/tags-0-199#tag-117) | String | Optional | Can be used when QuoteRequestType(303) = 3(Confirm Quote). |
-| 1751 | [SecondaryQuoteID](/fix/fields/tags-1600-1799#tag-1751) | String | Optional | Can be used when QuoteRequestType(303) = 3(Confirm Quote). |
-| 537 | [QuoteType](/fix/fields/tags-400-599#tag-537) | QuoteTypeCodeSet | Optional | Type of quote being requested from counterparty or market (e.g. Indicative, Firm, or Restricted Tradeable) Valid values used by FX in the request: 0 =… |
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
-| 229 | [TradeOriginationDate](/fix/fields/tags-200-399#tag-229) | LocalMktDate | Optional | Used with Fixed Income for Muncipal New Issue Market. Agreement in principal between counter-parties prior to actual trade date. (Note tag # was reserved in FIX… |
-| 1913 | [NumOfCompetitors](/fix/fields/tags-1800-1999#tag-1913) | int | Optional | The number of competing Respondents (e.g. dealers) to receive a quote request (either via the QuoteRequest(35=R) or via other means). |
-| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | Optional | If OrdType = "Forex - Swap", should be the side of the future portion of a F/X swap. The absence of a side implies that a two-sided quote is being requested.… |
-| 854 | [QtyType](/fix/fields/tags-800-999#tag-854) | QtyTypeCodeSet | Optional | Type of quantity specified in a quantity field. For FX, if used, should be "0". |
+| 140 | [PrevClosePx](/fix/fields/tags-0-199#tag-140-prevclosepx) | Price | Optional | Useful for verifying security identification |
+| 303 | [QuoteRequestType](/fix/fields/tags-200-399#tag-303-quoterequesttype) | QuoteRequestTypeCodeSet | Optional | Indicates the type of Quote Request (e.g. Manual vs. Automatic) being generated. |
+| 117 | [QuoteID](/fix/fields/tags-0-199#tag-117-quoteid) | String | Optional | Can be used when QuoteRequestType(303) = 3(Confirm Quote). |
+| 1751 | [SecondaryQuoteID](/fix/fields/tags-1600-1799#tag-1751-secondaryquoteid) | String | Optional | Can be used when QuoteRequestType(303) = 3(Confirm Quote). |
+| 537 | [QuoteType](/fix/fields/tags-400-599#tag-537-quotetype) | QuoteTypeCodeSet | Optional | Type of quote being requested from counterparty or market (e.g. Indicative, Firm, or Restricted Tradeable) Valid values used by FX in the request: 0 =… |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336-tradingsessionid) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625-tradingsessionsubid) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
+| 229 | [TradeOriginationDate](/fix/fields/tags-200-399#tag-229-tradeoriginationdate) | LocalMktDate | Optional | Used with Fixed Income for Muncipal New Issue Market. Agreement in principal between counter-parties prior to actual trade date. (Note tag # was reserved in FIX… |
+| 1913 | [NumOfCompetitors](/fix/fields/tags-1800-1999#tag-1913-numofcompetitors) | int | Optional | The number of competing Respondents (e.g. dealers) to receive a quote request (either via the QuoteRequest(35=R) or via other means). |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54-side) | SideCodeSet | Optional | If OrdType = "Forex - Swap", should be the side of the future portion of a F/X swap. The absence of a side implies that a two-sided quote is being requested.… |
+| 854 | [QtyType](/fix/fields/tags-800-999#tag-854-qtytype) | QtyTypeCodeSet | Optional | Type of quantity specified in a quantity field. For FX, if used, should be "0". |
 | | [OrderQtyData](/fix/components/order-qty-data) | Component | Optional | The OrderQtyData component block contains the fields commonly used for indicating the amount or quantity of an order. Note that when this component block is… |
-| 110 | [MinQty](/fix/fields/tags-0-199#tag-110) | Qty | Optional | Minimum quantity of an order to be executed. (Prior to FIX 4.2 this field was of type int) |
-| 63 | [SettlType](/fix/fields/tags-0-199#tag-63) | SettlTypeCodeSet | Optional | For NDFs either SettlType (specifying the tenor) or SettlDate must be specified. |
-| 64 | [SettlDate](/fix/fields/tags-0-199#tag-64) | LocalMktDate | Optional | Can be used (e.g. with forex quotes) to specify the desired "value date". For NDFs either SettlType (specifying the tenor) or SettlDate must be specified. |
-| 193 | [SettlDate2](/fix/fields/tags-0-199#tag-193) | LocalMktDate | Optional | Can be used with OrdType = "Forex - Swap" to specify the "value date" for the future portion of a F/X swap. |
-| 192 | [OrderQty2](/fix/fields/tags-0-199#tag-192) | Qty | Optional | Can be used with OrdType = "Forex - Swap" to specify the order quantity for the future portion of a F/X swap. |
-| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Can be used to specify the desired currency of the quoted price. May differ from the 'normal' trading currency of the instrument being quote requested. |
-| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120) | Currency | Optional | Required for NDFs to specify the settlement currency (fixing currency). |
+| 110 | [MinQty](/fix/fields/tags-0-199#tag-110-minqty) | Qty | Optional | Minimum quantity of an order to be executed. (Prior to FIX 4.2 this field was of type int) |
+| 63 | [SettlType](/fix/fields/tags-0-199#tag-63-settltype) | SettlTypeCodeSet | Optional | For NDFs either SettlType (specifying the tenor) or SettlDate must be specified. |
+| 64 | [SettlDate](/fix/fields/tags-0-199#tag-64-settldate) | LocalMktDate | Optional | Can be used (e.g. with forex quotes) to specify the desired "value date". For NDFs either SettlType (specifying the tenor) or SettlDate must be specified. |
+| 193 | [SettlDate2](/fix/fields/tags-0-199#tag-193-settldate2) | LocalMktDate | Optional | Can be used with OrdType = "Forex - Swap" to specify the "value date" for the future portion of a F/X swap. |
+| 192 | [OrderQty2](/fix/fields/tags-0-199#tag-192-orderqty2) | Qty | Optional | Can be used with OrdType = "Forex - Swap" to specify the order quantity for the future portion of a F/X swap. |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15-currency) | Currency | Optional | Can be used to specify the desired currency of the quoted price. May differ from the 'normal' trading currency of the instrument being quote requested. |
+| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120-settlcurrency) | Currency | Optional | Required for NDFs to specify the settlement currency (fixing currency). |
 | 1445 | [RateSource](/fix/groups/rate-source) | Repeating group | Optional |  |
 | 232 | [Stipulations](/fix/groups/stipulations) | Repeating group | Optional | The Stipulations component block is used in Fixed Income to provide additional information on a given security. These additional information are usually not… |
-| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
-| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
-| 581 | [AccountType](/fix/fields/tags-400-599#tag-581) | AccountTypeCodeSet | Optional | Type of account associated with an order |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1-account) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
+| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660-acctidsource) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
+| 581 | [AccountType](/fix/fields/tags-400-599#tag-581-accounttype) | AccountTypeCodeSet | Optional | Type of account associated with an order |
 | 555 | [QuotReqLegsGrp](/fix/groups/quot-req-legs-grp) | Repeating group | Optional |  |
 | 735 | [QuotQualGrp](/fix/groups/quot-qual-grp) | Repeating group | Optional |  |
-| 828 | [TrdType](/fix/fields/tags-800-999#tag-828) | TrdTypeCodeSet | Optional | May be used by SEFs (Swap Execution Facilities) to indicate a block swap transaction. |
-| 2347 | [RegulatoryTransactionType](/fix/fields/tags-2200-2399#tag-2347) | RegulatoryTransactionTypeCodeSet | Optional | Specifies the regulatory mandate or rule that the transaction complies with. |
+| 828 | [TrdType](/fix/fields/tags-800-999#tag-828-trdtype) | TrdTypeCodeSet | Optional | May be used by SEFs (Swap Execution Facilities) to indicate a block swap transaction. |
+| 2347 | [RegulatoryTransactionType](/fix/fields/tags-2200-2399#tag-2347-regulatorytransactiontype) | RegulatoryTransactionTypeCodeSet | Optional | Specifies the regulatory mandate or rule that the transaction complies with. |
 | 1907 | [RegulatoryTradeIDGrp](/fix/groups/regulatory-trade-id-grp) | Repeating group | Optional | The RegulatoryTradeIDGrp is a repeating component within the TradeCaptureReport message used to report the source, value and relationship of multiple… |
-| 2115 | [NegotiationMethod](/fix/fields/tags-2000-2199#tag-2115) | NegotiationMethodCodeSet | Optional | Specifies the negotiation method to be used. |
-| 692 | [QuotePriceType](/fix/fields/tags-600-799#tag-692) | QuotePriceTypeCodeSet | Optional | Initiator can specify the price type the quote needs to be quoted at. If not specified, the Respondent has option to specify how quote is quoted. |
+| 2115 | [NegotiationMethod](/fix/fields/tags-2000-2199#tag-2115-negotiationmethod) | NegotiationMethodCodeSet | Optional | Specifies the negotiation method to be used. |
+| 692 | [QuotePriceType](/fix/fields/tags-600-799#tag-692-quotepricetype) | QuotePriceTypeCodeSet | Optional | Initiator can specify the price type the quote needs to be quoted at. If not specified, the Respondent has option to specify how quote is quoted. |
 | 2709 | [PriceQualifierGrp](/fix/groups/price-qualifier-grp) | Repeating group | Optional | The PriceQualifierGrp component clarifies the composition of the price when standard market practice for the security calls for a price that is atypical when… |
-| 40 | [OrdType](/fix/fields/tags-0-199#tag-40) | OrdTypeCodeSet | Optional | Can be used to specify the type of order the quote request is for |
-| 62 | [ValidUntilTime](/fix/fields/tags-0-199#tag-62) | UTCTimestamp | Optional | Used by the quote initiator to indicate the period of time the resulting Quote must be valid until |
-| 126 | [ExpireTime](/fix/fields/tags-0-199#tag-126) | UTCTimestamp | Optional | The time when the request for quote or negotiation dialog will expire. |
-| 1914 | [ResponseTime](/fix/fields/tags-1800-1999#tag-1914) | UTCTimestamp | Optional | The time by which a meaningful response should arrive back (always expressed in UTC (Universal Time Coordinated, also known as "GMT"). |
-| 1915 | [QuoteDisplayTime](/fix/fields/tags-1800-1999#tag-1915) | UTCTimestamp | Optional | Time by which the quote will be displayed. |
-| 1629 | [ExposureDuration](/fix/fields/tags-1600-1799#tag-1629) | int | Optional | The (minimum or suggested) period of time a quote price is tradable before it becomes indicative (i.e. off-the-wire). |
-| 1916 | [ExposureDurationUnit](/fix/fields/tags-1800-1999#tag-1916) | OrderDelayUnitCodeSet | Optional | Time unit in which the ExposureDuration(1629) is expressed. |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Time transaction was entered |
+| 40 | [OrdType](/fix/fields/tags-0-199#tag-40-ordtype) | OrdTypeCodeSet | Optional | Can be used to specify the type of order the quote request is for |
+| 62 | [ValidUntilTime](/fix/fields/tags-0-199#tag-62-validuntiltime) | UTCTimestamp | Optional | Used by the quote initiator to indicate the period of time the resulting Quote must be valid until |
+| 126 | [ExpireTime](/fix/fields/tags-0-199#tag-126-expiretime) | UTCTimestamp | Optional | The time when the request for quote or negotiation dialog will expire. |
+| 1914 | [ResponseTime](/fix/fields/tags-1800-1999#tag-1914-responsetime) | UTCTimestamp | Optional | The time by which a meaningful response should arrive back (always expressed in UTC (Universal Time Coordinated, also known as "GMT"). |
+| 1915 | [QuoteDisplayTime](/fix/fields/tags-1800-1999#tag-1915-quotedisplaytime) | UTCTimestamp | Optional | Time by which the quote will be displayed. |
+| 1629 | [ExposureDuration](/fix/fields/tags-1600-1799#tag-1629-exposureduration) | int | Optional | The (minimum or suggested) period of time a quote price is tradable before it becomes indicative (i.e. off-the-wire). |
+| 1916 | [ExposureDurationUnit](/fix/fields/tags-1800-1999#tag-1916-exposuredurationunit) | OrderDelayUnitCodeSet | Optional | Time unit in which the ExposureDuration(1629) is expressed. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Time transaction was entered |
 | | [SpreadOrBenchmarkCurveData](/fix/components/spread-or-benchmark-curve-data) | Component | Optional | The SpreadOrBenchmarkCurveData component block is primarily used for Fixed Income to convey spread to a benchmark security or curve. |
-| 423 | [PriceType](/fix/fields/tags-400-599#tag-423) | PriceTypeCodeSet | Optional | Code to represent the price type. |
-| 44 | [Price](/fix/fields/tags-0-199#tag-44) | Price | Optional | Quoted or target price |
-| 631 | [MidPx](/fix/fields/tags-600-799#tag-631) | Price | Optional | For OTC swaps, may be used to provide the estimated mid-market-mark. |
-| 640 | [Price2](/fix/fields/tags-600-799#tag-640) | Price | Optional | Can be used with OrdType = "Forex - Swap" to specify the Quoted or target price for the future portion of a F/X swap. |
+| 423 | [PriceType](/fix/fields/tags-400-599#tag-423-pricetype) | PriceTypeCodeSet | Optional | Code to represent the price type. |
+| 44 | [Price](/fix/fields/tags-0-199#tag-44-price) | Price | Optional | Quoted or target price |
+| 631 | [MidPx](/fix/fields/tags-600-799#tag-631-midpx) | Price | Optional | For OTC swaps, may be used to provide the estimated mid-market-mark. |
+| 640 | [Price2](/fix/fields/tags-600-799#tag-640-price2) | Price | Optional | Can be used with OrdType = "Forex - Swap" to specify the Quoted or target price for the future portion of a F/X swap. |
 | | [YieldData](/fix/components/yield-data) | Component | Optional | The YieldData component block conveys yield information for a given Fixed Income security. |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
-| 1937 | [TradeContinuation](/fix/fields/tags-1800-1999#tag-1937) | TradeContinuationCodeSet | Optional | Maybe used to indicate quote/negotiation is for the specified post-execution trade continuation or lifecycle event. |
-| 2374 | [TradeContinuationText](/fix/fields/tags-2200-2399#tag-2374) | String | Optional | Free form text to specify additional trade continuation information or data. |
-| 2372 | [EncodedTradeContinuationTextLen](/fix/fields/tags-2200-2399#tag-2372) | Length | Optional | Must be set if EncodedTradeContinuationText(2371) field is specified and must immediately precede it. |
-| 2371 | [EncodedTradeContinuationText](/fix/fields/tags-2200-2399#tag-2371) | data | Optional | Encoded (non-ASCII characters) representation of the TradeContinuationText(2374) field in the encoded format specified via the MessageEncoding(347) field. |
-| 443 | [StrikeTime](/fix/fields/tags-400-599#tag-443) | UTCTimestamp | Optional | Conditionally required when QuoteQual(695) = d (Deferred spot) is specified. |
+| 1937 | [TradeContinuation](/fix/fields/tags-1800-1999#tag-1937-tradecontinuation) | TradeContinuationCodeSet | Optional | Maybe used to indicate quote/negotiation is for the specified post-execution trade continuation or lifecycle event. |
+| 2374 | [TradeContinuationText](/fix/fields/tags-2200-2399#tag-2374-tradecontinuationtext) | String | Optional | Free form text to specify additional trade continuation information or data. |
+| 2372 | [EncodedTradeContinuationTextLen](/fix/fields/tags-2200-2399#tag-2372-encodedtradecontinuationtextlen) | Length | Optional | Must be set if EncodedTradeContinuationText(2371) field is specified and must immediately precede it. |
+| 2371 | [EncodedTradeContinuationText](/fix/fields/tags-2200-2399#tag-2371-encodedtradecontinuationtext) | data | Optional | Encoded (non-ASCII characters) representation of the TradeContinuationText(2374) field in the encoded format specified via the MessageEncoding(347) field. |
+| 443 | [StrikeTime](/fix/fields/tags-400-599#tag-443-striketime) | UTCTimestamp | Optional | Conditionally required when QuoteQual(695) = d (Deferred spot) is specified. |
 
 </StickyTable>
 

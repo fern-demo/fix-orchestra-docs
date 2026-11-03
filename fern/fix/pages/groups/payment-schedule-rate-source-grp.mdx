@@ -3,9 +3,15 @@ title: "PaymentScheduleRateSourceGrp"
 subtitle: "PaymentScheduleRateSourceGrp is a repeating component within the PaymentScheduleGrp component used to identify primary and secondary rate sources."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40868</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoPaymentScheduleRateSources (40868)](/fix/fields/tags-40800-40999#tag-40868).
+<llms-only>
+Repeating group · NumInGroup 40868 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPaymentScheduleRateSources (40868)](/fix/fields/tags-40800-40999#tag-40868-nopaymentscheduleratesources).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40869 | [PaymentScheduleRateSource](/fix/fields/tags-40800-40999#tag-40869) | RateSourceCodeSet | Optional | Required if NoPaymentScheduleRateSources(40868) &gt; 0. |
-| 40870 | [PaymentScheduleRateSourceType](/fix/fields/tags-40800-40999#tag-40870) | RateSourceTypeCodeSet | Optional | Required if NoPaymentScheduleRateSources(40868) &gt; 0. |
-| 40871 | [PaymentScheduleReferencePage](/fix/fields/tags-40800-40999#tag-40871) | String | Optional | Conditionally required when PaymentScheduleRateSource(40869) = 99 (Other) |
+| 40869 | [PaymentScheduleRateSource](/fix/fields/tags-40800-40999#tag-40869-paymentscheduleratesource) | RateSourceCodeSet | Optional | Required if NoPaymentScheduleRateSources(40868) &gt; 0. |
+| 40870 | [PaymentScheduleRateSourceType](/fix/fields/tags-40800-40999#tag-40870-paymentscheduleratesourcetype) | RateSourceTypeCodeSet | Optional | Required if NoPaymentScheduleRateSources(40868) &gt; 0. |
+| 40871 | [PaymentScheduleReferencePage](/fix/fields/tags-40800-40999#tag-40871-paymentschedulereferencepage) | String | Optional | Conditionally required when PaymentScheduleRateSource(40869) = 99 (Other) |
 
 </StickyTable>
 

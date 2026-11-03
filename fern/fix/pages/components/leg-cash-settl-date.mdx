@@ -3,7 +3,13 @@ title: "LegCashSettlDate"
 subtitle: "The LegCashSettlDate component is a subcomponent within the LegCashSettlTermGrp component used to report the cash settlement date defined in the settlement provision."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,14 +17,14 @@ subtitle: "The LegCashSettlDate component is a subcomponent within the LegCashSe
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42299 | [LegCashSettlDateUnadjusted](/fix/fields/tags-42200-42399#tag-42299) | LocalMktDate | Optional | The unadjusted cash settlement date. |
-| 42300 | [LegCashSettlDateBusinessDayConvention](/fix/fields/tags-42200-42399#tag-42300) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in the Instrument component. The specified value would be… |
+| 42299 | [LegCashSettlDateUnadjusted](/fix/fields/tags-42200-42399#tag-42299-legcashsettldateunadjusted) | LocalMktDate | Optional | The unadjusted cash settlement date. |
+| 42300 | [LegCashSettlDateBusinessDayConvention](/fix/fields/tags-42200-42399#tag-42300-legcashsettldatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in the Instrument component. The specified value would be… |
 | 42306 | [LegCashSettlDateBusinessCenterGrp](/fix/groups/leg-cash-settl-date-business-center-grp) | Repeating group | Optional | LegCashSettlDateBusinessCenterGrp is a repeating subcomponent within the LegCashSettlDate component. It is used to specify the set of business centers whose… |
-| 42301 | [LegCashSettlDateRelativeTo](/fix/fields/tags-42200-42399#tag-42301) | int | Optional | Specifies the anchor date when the cash settlement date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for… |
-| 42302 | [LegCashSettlDateOffsetPeriod](/fix/fields/tags-42200-42399#tag-42302) | int | Optional | Conditionally required when LegCashSettlDateOffsetUnit(42303) is specified. |
-| 42303 | [LegCashSettlDateOffsetUnit](/fix/fields/tags-42200-42399#tag-42303) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegCashSettlDateOffsetPeriod(42302) is specified. |
-| 42304 | [LegCashSettlDateOffsetDayType](/fix/fields/tags-42200-42399#tag-42304) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative cash settlement date offset. |
-| 42305 | [LegCashSettlDateAdjusted](/fix/fields/tags-42200-42399#tag-42305) | LocalMktDate | Optional | The adjusted cash settlement date. |
+| 42301 | [LegCashSettlDateRelativeTo](/fix/fields/tags-42200-42399#tag-42301-legcashsettldaterelativeto) | int | Optional | Specifies the anchor date when the cash settlement date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for… |
+| 42302 | [LegCashSettlDateOffsetPeriod](/fix/fields/tags-42200-42399#tag-42302-legcashsettldateoffsetperiod) | int | Optional | Conditionally required when LegCashSettlDateOffsetUnit(42303) is specified. |
+| 42303 | [LegCashSettlDateOffsetUnit](/fix/fields/tags-42200-42399#tag-42303-legcashsettldateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegCashSettlDateOffsetPeriod(42302) is specified. |
+| 42304 | [LegCashSettlDateOffsetDayType](/fix/fields/tags-42200-42399#tag-42304-legcashsettldateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative cash settlement date offset. |
+| 42305 | [LegCashSettlDateAdjusted](/fix/fields/tags-42200-42399#tag-42305-legcashsettldateadjusted) | LocalMktDate | Optional | The adjusted cash settlement date. |
 
 </StickyTable>
 

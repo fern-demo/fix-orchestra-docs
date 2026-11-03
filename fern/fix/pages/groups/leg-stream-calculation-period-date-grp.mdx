@@ -3,9 +3,15 @@ title: "LegStreamCalculationPeriodDateGrp"
 subtitle: "The LegStreamCalculationPeriodDateGrp is a repeating subcomponent of the LegStreamCalculationPeriodDates component used to detail fixed dates for the swap stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41638</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegStreamCalculationPeriodDates (41638)](/fix/fields/tags-41600-41799#tag-41638).
+<llms-only>
+Repeating group · NumInGroup 41638 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegStreamCalculationPeriodDates (41638)](/fix/fields/tags-41600-41799#tag-41638-nolegstreamcalculationperioddates).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41639 | [LegStreamCalculationPeriodDate](/fix/fields/tags-41600-41799#tag-41639) | LocalMktDate | Optional | Required if NoLegStreamCalculationPeriodDates(41638) &gt; 0. |
-| 41640 | [LegStreamCalculationPeriodDateType](/fix/fields/tags-41600-41799#tag-41640) | OptionExerciseDateTypeCodeSet | Optional | Specifies the type of fixed calculation period date. When specified it applies not only to the current date but to all subsequent dates in the group until… |
+| 41639 | [LegStreamCalculationPeriodDate](/fix/fields/tags-41600-41799#tag-41639-legstreamcalculationperioddate) | LocalMktDate | Optional | Required if NoLegStreamCalculationPeriodDates(41638) &gt; 0. |
+| 41640 | [LegStreamCalculationPeriodDateType](/fix/fields/tags-41600-41799#tag-41640-legstreamcalculationperioddatetype) | OptionExerciseDateTypeCodeSet | Optional | Specifies the type of fixed calculation period date. When specified it applies not only to the current date but to all subsequent dates in the group until… |
 
 </StickyTable>
 

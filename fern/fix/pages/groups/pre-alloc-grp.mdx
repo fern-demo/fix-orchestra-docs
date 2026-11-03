@@ -2,9 +2,15 @@
 title: "PreAllocGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 78</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoAllocs (78)](/fix/fields/tags-0-199#tag-78).
+<llms-only>
+Repeating group · NumInGroup 78 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoAllocs (78)](/fix/fields/tags-0-199#tag-78-noallocs).
 
 ## Members
 
@@ -12,18 +18,18 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 79 | [AllocAccount](/fix/fields/tags-0-199#tag-79) | String | Optional | Required if NoAllocs &gt; 0. Must be first field in repeating group. |
-| 661 | [AllocAcctIDSource](/fix/fields/tags-600-799#tag-661) | AcctIDSourceCodeSet | Optional | Used to identify the source of the AllocAccount (79) code. See AcctIDSource (660) for valid values. |
-| 736 | [AllocSettlCurrency](/fix/fields/tags-600-799#tag-736) | Currency | Optional | Currency code of settlement denomination for a specific AllocAccount (79). |
-| 467 | [IndividualAllocID](/fix/fields/tags-400-599#tag-467) | String | Optional | Unique identifier for a specific NoAllocs (78) repeating group instance (e.g. for an AllocAccount). |
-| 2727 | [AllocLegRefID](/fix/fields/tags-2600-2799#tag-2727) | String | Optional | The field may not be used in NewOrderSingle(35=D), OrderCancelReplaceRequest(35=G), NewOrderList(35=E) or any other message where there are no legs. |
+| 79 | [AllocAccount](/fix/fields/tags-0-199#tag-79-allocaccount) | String | Optional | Required if NoAllocs &gt; 0. Must be first field in repeating group. |
+| 661 | [AllocAcctIDSource](/fix/fields/tags-600-799#tag-661-allocacctidsource) | AcctIDSourceCodeSet | Optional | Used to identify the source of the AllocAccount (79) code. See AcctIDSource (660) for valid values. |
+| 736 | [AllocSettlCurrency](/fix/fields/tags-600-799#tag-736-allocsettlcurrency) | Currency | Optional | Currency code of settlement denomination for a specific AllocAccount (79). |
+| 467 | [IndividualAllocID](/fix/fields/tags-400-599#tag-467-individualallocid) | String | Optional | Unique identifier for a specific NoAllocs (78) repeating group instance (e.g. for an AllocAccount). |
+| 2727 | [AllocLegRefID](/fix/fields/tags-2600-2799#tag-2727-alloclegrefid) | String | Optional | The field may not be used in NewOrderSingle(35=D), OrderCancelReplaceRequest(35=G), NewOrderList(35=E) or any other message where there are no legs. |
 | 539 | [NestedParties](/fix/groups/nested-parties) | Repeating group | Optional | The NestedParties component block is identical to the Parties Block. It is used in other component blocks and repeating groups when nesting will take place… |
-| 209 | [AllocHandlInst](/fix/fields/tags-200-399#tag-209) | AllocHandlInstCodeSet | Optional | Indicates how the receiver (i.e. third party) of allocation information should handle/process the account details. |
-| 80 | [AllocQty](/fix/fields/tags-0-199#tag-80) | Qty | Optional | Quantity to be allocated to specific sub-account (Prior to FIX 4.2 this field was of type int) |
-| 1752 | [CustodialLotID](/fix/fields/tags-1600-1799#tag-1752) | String | Optional | Only used for specific lot trades. |
-| 1753 | [VersusPurchaseDate](/fix/fields/tags-1600-1799#tag-1753) | LocalMktDate | Optional | Only used for specific lot trades. If this field is used, either VersusPurchasePrice(1754) or CurrentCostBasis(1755) should be specified. |
-| 1754 | [VersusPurchasePrice](/fix/fields/tags-1600-1799#tag-1754) | Price | Optional | Only used for specific lot trades. If this field is used, VersusPurchaseDate(1753) should be specified. |
-| 1755 | [CurrentCostBasis](/fix/fields/tags-1600-1799#tag-1755) | Amt | Optional | Only used for specific lot trades. If this field is used, VersusPurchaseDate(1753) should be specified |
+| 209 | [AllocHandlInst](/fix/fields/tags-200-399#tag-209-allochandlinst) | AllocHandlInstCodeSet | Optional | Indicates how the receiver (i.e. third party) of allocation information should handle/process the account details. |
+| 80 | [AllocQty](/fix/fields/tags-0-199#tag-80-allocqty) | Qty | Optional | Quantity to be allocated to specific sub-account (Prior to FIX 4.2 this field was of type int) |
+| 1752 | [CustodialLotID](/fix/fields/tags-1600-1799#tag-1752-custodiallotid) | String | Optional | Only used for specific lot trades. |
+| 1753 | [VersusPurchaseDate](/fix/fields/tags-1600-1799#tag-1753-versuspurchasedate) | LocalMktDate | Optional | Only used for specific lot trades. If this field is used, either VersusPurchasePrice(1754) or CurrentCostBasis(1755) should be specified. |
+| 1754 | [VersusPurchasePrice](/fix/fields/tags-1600-1799#tag-1754-versuspurchaseprice) | Price | Optional | Only used for specific lot trades. If this field is used, VersusPurchaseDate(1753) should be specified. |
+| 1755 | [CurrentCostBasis](/fix/fields/tags-1600-1799#tag-1755-currentcostbasis) | Amt | Optional | Only used for specific lot trades. If this field is used, VersusPurchaseDate(1753) should be specified |
 
 </StickyTable>
 

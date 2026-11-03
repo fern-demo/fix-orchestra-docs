@@ -3,7 +3,13 @@ title: "LegDividendFXTriggerDate"
 subtitle: "The LegDividendFXTriggerDate component is a subcomponent of LegDividendConditions used to report the dividend date when a foreign exchange trade is triggered."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,14 +17,14 @@ subtitle: "The LegDividendFXTriggerDate component is a subcomponent of LegDivide
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42357 | [LegDividendFXTriggerDateRelativeTo](/fix/fields/tags-42200-42399#tag-42357) | int | Optional | Specifies the anchor date when the FX trigger date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
-| 42358 | [LegDividendFXTriggerDateOffsetPeriod](/fix/fields/tags-42200-42399#tag-42358) | int | Optional | Conditionally required when LegDividendFXTriggerDateOffsetUnit(42359) is specified. |
-| 42359 | [LegDividendFXTriggerDateOffsetUnit](/fix/fields/tags-42200-42399#tag-42359) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegDividendFXTriggerDateOffsetPeriod(42358) is specified. |
-| 42360 | [LegDividendFXTriggerDateOffsetDayType](/fix/fields/tags-42200-42399#tag-42360) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative FX trigger date offset. |
-| 42361 | [LegDividendFXTriggerDateUnadjusted](/fix/fields/tags-42200-42399#tag-42361) | LocalMktDate | Optional | The unadjusted FX trigger date. |
-| 42362 | [LegDividendFXTriggerDateBusinessDayConvention](/fix/fields/tags-42200-42399#tag-42362) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The value would be specific to this… |
+| 42357 | [LegDividendFXTriggerDateRelativeTo](/fix/fields/tags-42200-42399#tag-42357-legdividendfxtriggerdaterelativeto) | int | Optional | Specifies the anchor date when the FX trigger date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 42358 | [LegDividendFXTriggerDateOffsetPeriod](/fix/fields/tags-42200-42399#tag-42358-legdividendfxtriggerdateoffsetperiod) | int | Optional | Conditionally required when LegDividendFXTriggerDateOffsetUnit(42359) is specified. |
+| 42359 | [LegDividendFXTriggerDateOffsetUnit](/fix/fields/tags-42200-42399#tag-42359-legdividendfxtriggerdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegDividendFXTriggerDateOffsetPeriod(42358) is specified. |
+| 42360 | [LegDividendFXTriggerDateOffsetDayType](/fix/fields/tags-42200-42399#tag-42360-legdividendfxtriggerdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative FX trigger date offset. |
+| 42361 | [LegDividendFXTriggerDateUnadjusted](/fix/fields/tags-42200-42399#tag-42361-legdividendfxtriggerdateunadjusted) | LocalMktDate | Optional | The unadjusted FX trigger date. |
+| 42362 | [LegDividendFXTriggerDateBusinessDayConvention](/fix/fields/tags-42200-42399#tag-42362-legdividendfxtriggerdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The value would be specific to this… |
 | 42364 | [LegDividendFXTriggerDateBusinessCenterGrp](/fix/groups/leg-dividend-fx-trigger-date-business-center-grp) | Repeating group | Optional | LegDividendFXTriggerDateBusinessCenterGrp is a repeating subcomponent within the LegDividendFXTriggerDate component. It is used to specify the set of business… |
-| 42363 | [LegDividendFXTriggerDateAdjusted](/fix/fields/tags-42200-42399#tag-42363) | LocalMktDate | Optional | The adjusted FX trigger date. |
+| 42363 | [LegDividendFXTriggerDateAdjusted](/fix/fields/tags-42200-42399#tag-42363-legdividendfxtriggerdateadjusted) | LocalMktDate | Optional | The adjusted FX trigger date. |
 
 </StickyTable>
 

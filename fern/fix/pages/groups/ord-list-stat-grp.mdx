@@ -2,9 +2,15 @@
 title: "OrdListStatGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 73</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoOrders (73)](/fix/fields/tags-0-199#tag-73).
+<llms-only>
+Repeating group · NumInGroup 73 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoOrders (73)](/fix/fields/tags-0-199#tag-73-noorders).
 
 ## Members
 
@@ -12,19 +18,19 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | Required when referring to orders that were electronically submitted over FIX or otherwise assigned a ClOrdID. |
-| 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | Optional | Unique identifier for Order as assigned by sell-side (broker, exchange, ECN). Uniqueness must be guaranteed within a single trading day. Firms which accept… |
-| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
-| 14 | [CumQty](/fix/fields/tags-0-199#tag-14) | Qty | **Required** | Total quantity (e.g. number of shares) filled. (Prior to FIX 4.2 this field was of type int) |
-| 39 | [OrdStatus](/fix/fields/tags-0-199#tag-39) | OrdStatusCodeSet | **Required** | Identifies current status of order. \*\*\* SOME VALUES HAVE BEEN REPLACED - See "Replaced Features and Supported Approach" \*\*\* (see Volume : "Glossary" for value… |
-| 636 | [WorkingIndicator](/fix/fields/tags-600-799#tag-636) | WorkingIndicatorCodeSet | Optional | For optional use with OrdStatus = 0 (New) |
-| 151 | [LeavesQty](/fix/fields/tags-0-199#tag-151) | Qty | **Required** | Quantity open for further execution. LeavesQty = OrderQty - CumQty. |
-| 84 | [CxlQty](/fix/fields/tags-0-199#tag-84) | Qty | **Required** | Total quantity canceled for this order. (Prior to FIX 4.2 this field was of type int) |
-| 6 | [AvgPx](/fix/fields/tags-0-199#tag-6) | Price | **Required** | Calculated average price of all fills on this order. For Fixed Income trades AvgPx is always expressed as percent-of-par, regardless of the PriceType (423) of… |
-| 103 | [OrdRejReason](/fix/fields/tags-0-199#tag-103) | OrdRejReasonCodeSet | Optional | Used if the order is rejected |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11-clordid) | String | Optional | Required when referring to orders that were electronically submitted over FIX or otherwise assigned a ClOrdID. |
+| 37 | [OrderID](/fix/fields/tags-0-199#tag-37-orderid) | String | Optional | Unique identifier for Order as assigned by sell-side (broker, exchange, ECN). Uniqueness must be guaranteed within a single trading day. Firms which accept… |
+| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526-secondaryclordid) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
+| 14 | [CumQty](/fix/fields/tags-0-199#tag-14-cumqty) | Qty | **Required** | Total quantity (e.g. number of shares) filled. (Prior to FIX 4.2 this field was of type int) |
+| 39 | [OrdStatus](/fix/fields/tags-0-199#tag-39-ordstatus) | OrdStatusCodeSet | **Required** | Identifies current status of order. \*\*\* SOME VALUES HAVE BEEN REPLACED - See "Replaced Features and Supported Approach" \*\*\* (see Volume : "Glossary" for value… |
+| 636 | [WorkingIndicator](/fix/fields/tags-600-799#tag-636-workingindicator) | WorkingIndicatorCodeSet | Optional | For optional use with OrdStatus = 0 (New) |
+| 151 | [LeavesQty](/fix/fields/tags-0-199#tag-151-leavesqty) | Qty | **Required** | Quantity open for further execution. LeavesQty = OrderQty - CumQty. |
+| 84 | [CxlQty](/fix/fields/tags-0-199#tag-84-cxlqty) | Qty | **Required** | Total quantity canceled for this order. (Prior to FIX 4.2 this field was of type int) |
+| 6 | [AvgPx](/fix/fields/tags-0-199#tag-6-avgpx) | Price | **Required** | Calculated average price of all fills on this order. For Fixed Income trades AvgPx is always expressed as percent-of-par, regardless of the PriceType (423) of… |
+| 103 | [OrdRejReason](/fix/fields/tags-0-199#tag-103-ordrejreason) | OrdRejReasonCodeSet | Optional | Used if the order is rejected |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 
 </StickyTable>
 

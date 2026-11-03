@@ -3,9 +3,15 @@ title: "InstrumentScopeGrp"
 subtitle: "Repeating group of InstrumentScope Components. Used to specify the instruments to which a request applies."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1656</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoInstrumentScopes (1656)](/fix/fields/tags-1600-1799#tag-1656).
+<llms-only>
+Repeating group · NumInGroup 1656 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoInstrumentScopes (1656)](/fix/fields/tags-1600-1799#tag-1656-noinstrumentscopes).
 
 ## Members
 
@@ -13,7 +19,7 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1535 | [InstrumentScopeOperator](/fix/fields/tags-1400-1599#tag-1535) | InstrumentScopeOperatorCodeSet | Optional | Required when NoInstrumentScopes &gt; 0. |
+| 1535 | [InstrumentScopeOperator](/fix/fields/tags-1400-1599#tag-1535-instrumentscopeoperator) | InstrumentScopeOperatorCodeSet | Optional | Required when NoInstrumentScopes &gt; 0. |
 | | [InstrumentScope](/fix/components/instrument-scope) | Component | Optional | Used to specify the instrument |
 
 </StickyTable>

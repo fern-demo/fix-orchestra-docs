@@ -3,11 +3,17 @@ title: "LegEvntGrp"
 subtitle: "The LegEvntGrp is a repeating subcomponent of the InstrumentLeg component used to specify straightforward events associated with the instrument. Examples include put and call dates for bonds and options; first exercise date for options;…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2059</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Repeating group · NumInGroup 2059 · Added FIX.5.0SP2
+</llms-only>
 
 The LegEvntGrp contains three different methods to express a "time" associated with the event using the LegEventDate(2061) and LegEventTime(2062) pair of fields or the LegEventTimeUnit(2063) and LegEventTimePeriod(2064) pair of fields or LegEventMonthYear(2341). The LegEventDate(2061), and optional LegEventTime(2062), may be used to express an exact date and optional time for the event. The LegEventTimeUnit(2063) and LegEventTimePeriod(2064) may be used to express a time period associated with the event, e.g. 3-month, 4-years, 2-weeks. The LegEventMonthYear(2341), and optional LegEventTime(2062), may be used to express the event as a month of year, with optional day of month or week of month. Either LegEventDate(2061) or LegEventMonthYear(2341), and the optional LegEventTime(2062), must be specified or LegEventTimeUnit(2063) and LegEventTimePeriod(2064) must be specified. The LegEventMonthYear(2341) may be used instead of LegEventDate(2061) when month-year, with optional day of month or week of month, is required instead of a date.
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegEvents (2059)](/fix/fields/tags-2000-2199#tag-2059).
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegEvents (2059)](/fix/fields/tags-2000-2199#tag-2059-nolegevents).
 
 ## Members
 
@@ -15,16 +21,16 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2060 | [LegEventType](/fix/fields/tags-2000-2199#tag-2060) | EventTypeCodeSet | Optional | Required if NoLegEvents(2059) &gt; 0. |
-| 2061 | [LegEventDate](/fix/fields/tags-2000-2199#tag-2061) | LocalMktDate | Optional | Conditionally required when LegEventTime(2062) is specified. |
-| 2062 | [LegEventTime](/fix/fields/tags-2000-2199#tag-2062) | UTCTimestamp | Optional | Specific time of event. To be used in combination with LegEventDate(2061). |
-| 2063 | [LegEventTimeUnit](/fix/fields/tags-2000-2199#tag-2063) | EventTimeUnitCodeSet | Optional | Conditionally required when LegEventTimePeriod(2064) is specified. |
-| 2064 | [LegEventTimePeriod](/fix/fields/tags-2000-2199#tag-2064) | int | Optional | Conditionally required when LegEventTimeUnit(2063) is specified. |
-| 2341 | [LegEventMonthYear](/fix/fields/tags-2200-2399#tag-2341) | MonthYear | Optional | Used with derivatives when an event is express as a month-year with optional day or month or week of month. Format: YYYYMM (e.g. 199903) YYYYMMDD (e.g.… |
-| 2065 | [LegEventPx](/fix/fields/tags-2000-2199#tag-2065) | Price | Optional | Predetermined price of issue at event, if applicable. |
-| 2066 | [LegEventText](/fix/fields/tags-2000-2199#tag-2066) | String | Optional | Free form text to specify additional information or enumeration description when a standard value does not apply. |
-| 2074 | [EncodedLegEventTextLen](/fix/fields/tags-2000-2199#tag-2074) | Length | Optional | Must be set if EncodedLegEventText(2075) field is specified and must immediately precede it. |
-| 2075 | [EncodedLegEventText](/fix/fields/tags-2000-2199#tag-2075) | data | Optional | Encoded (non-ASCII characters) representation of the LegEventText(2066) field in the encoded format specified via the MessageEncoding(347) field. |
+| 2060 | [LegEventType](/fix/fields/tags-2000-2199#tag-2060-legeventtype) | EventTypeCodeSet | Optional | Required if NoLegEvents(2059) &gt; 0. |
+| 2061 | [LegEventDate](/fix/fields/tags-2000-2199#tag-2061-legeventdate) | LocalMktDate | Optional | Conditionally required when LegEventTime(2062) is specified. |
+| 2062 | [LegEventTime](/fix/fields/tags-2000-2199#tag-2062-legeventtime) | UTCTimestamp | Optional | Specific time of event. To be used in combination with LegEventDate(2061). |
+| 2063 | [LegEventTimeUnit](/fix/fields/tags-2000-2199#tag-2063-legeventtimeunit) | EventTimeUnitCodeSet | Optional | Conditionally required when LegEventTimePeriod(2064) is specified. |
+| 2064 | [LegEventTimePeriod](/fix/fields/tags-2000-2199#tag-2064-legeventtimeperiod) | int | Optional | Conditionally required when LegEventTimeUnit(2063) is specified. |
+| 2341 | [LegEventMonthYear](/fix/fields/tags-2200-2399#tag-2341-legeventmonthyear) | MonthYear | Optional | Used with derivatives when an event is express as a month-year with optional day or month or week of month. Format: YYYYMM (e.g. 199903) YYYYMMDD (e.g.… |
+| 2065 | [LegEventPx](/fix/fields/tags-2000-2199#tag-2065-legeventpx) | Price | Optional | Predetermined price of issue at event, if applicable. |
+| 2066 | [LegEventText](/fix/fields/tags-2000-2199#tag-2066-legeventtext) | String | Optional | Free form text to specify additional information or enumeration description when a standard value does not apply. |
+| 2074 | [EncodedLegEventTextLen](/fix/fields/tags-2000-2199#tag-2074-encodedlegeventtextlen) | Length | Optional | Must be set if EncodedLegEventText(2075) field is specified and must immediately precede it. |
+| 2075 | [EncodedLegEventText](/fix/fields/tags-2000-2199#tag-2075-encodedlegeventtext) | data | Optional | Encoded (non-ASCII characters) representation of the LegEventText(2066) field in the encoded format specified via the MessageEncoding(347) field. |
 
 </StickyTable>
 

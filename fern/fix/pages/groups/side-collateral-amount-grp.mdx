@@ -3,9 +3,15 @@ title: "SideCollateralAmountGrp"
 subtitle: "The SideCollateralAmountGrp component block is a repeating group that provides the current value of the collateral type on deposit for a side of the trade report. The currency of the collateral value may be optionally included."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2691</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoSideCollateralAmounts (2691)](/fix/fields/tags-2600-2799#tag-2691).
+<llms-only>
+Repeating group · NumInGroup 2691 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoSideCollateralAmounts (2691)](/fix/fields/tags-2600-2799#tag-2691-nosidecollateralamounts).
 
 ## Members
 
@@ -13,21 +19,21 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2702 | [SideCurrentCollateralAmount](/fix/fields/tags-2600-2799#tag-2702) | Amt | Optional | Required if NoSideCollateralAmounts(2691) &gt; 0. |
-| 2695 | [SideCollateralCurrency](/fix/fields/tags-2600-2799#tag-2695) | Currency | Optional | Can be used to specify the currency of SideCollateralAmount(2702) if Currency(15) is not specified or is not the same. |
-| 2694 | [SideCollateralAmountType](/fix/fields/tags-2600-2799#tag-2694) | CollateralAmountTypeCodeSet | Optional | The type of value in CurrentCollateralAmount(1704). |
-| 2696 | [SideCollateralFXRate](/fix/fields/tags-2600-2799#tag-2696) | float | Optional | Foreign exchange rate used to compute the SideCurrentCollateralAmount(2702) from the SideCollateralCurrency(2695) and the Currency(15). |
-| 2697 | [SideCollateralFXRateCalc](/fix/fields/tags-2600-2799#tag-2697) | UnderlyingFXRateCalcCodeSet | Optional | Specifies whether or not SideCollateralFXRate(2696) should be multiplied or divided. |
-| 2701 | [SideCollateralType](/fix/fields/tags-2600-2799#tag-2701) | String | Optional | Type of collateral on deposit being reported. |
-| 2693 | [SideCollateralAmountMarketSegmentID](/fix/fields/tags-2600-2799#tag-2693) | String | Optional | Market segment associated with the collateral amount. |
-| 2692 | [SideCollateralAmountMarketID](/fix/fields/tags-2600-2799#tag-2692) | String | Optional | Market associated with the collateral amount. |
-| 2703 | [SideHaircutIndicator](/fix/fields/tags-2600-2799#tag-2703) | Boolean | Optional | Indicates, if "Y", that a stated valuation includes a haircut, e.g. that the stated value reflects the subtraction of the haircut. Note that a value of "N" does… |
-| 2700 | [SideCollateralPortfolioID](/fix/fields/tags-2600-2799#tag-2700) | String | Optional | Identifier of the collateral portfolio when reporting on a portfolio basis. |
-| 2699 | [SideCollateralPercentOverage](/fix/fields/tags-2600-2799#tag-2699) | Percentage | Optional | Percentage of over-collateralization particularly when SideCollateralAmountType(2694) = 4 (Additional collateral value). |
-| 2698 | [SideCollateralMarketPrice](/fix/fields/tags-2600-2799#tag-2698) | Price | Optional | Market price of the collateral, either from market sources or pre-agreed by the counterparties. |
-| 2862 | [SideCollateralReinvestmentRate](/fix/fields/tags-2800-2999#tag-2862) | Percentage | Optional | When multiple instances of the SideCollateralReinvestmentGrp component are present this field specifies the average reinvestment rate. |
+| 2702 | [SideCurrentCollateralAmount](/fix/fields/tags-2600-2799#tag-2702-sidecurrentcollateralamount) | Amt | Optional | Required if NoSideCollateralAmounts(2691) &gt; 0. |
+| 2695 | [SideCollateralCurrency](/fix/fields/tags-2600-2799#tag-2695-sidecollateralcurrency) | Currency | Optional | Can be used to specify the currency of SideCollateralAmount(2702) if Currency(15) is not specified or is not the same. |
+| 2694 | [SideCollateralAmountType](/fix/fields/tags-2600-2799#tag-2694-sidecollateralamounttype) | CollateralAmountTypeCodeSet | Optional | The type of value in CurrentCollateralAmount(1704). |
+| 2696 | [SideCollateralFXRate](/fix/fields/tags-2600-2799#tag-2696-sidecollateralfxrate) | float | Optional | Foreign exchange rate used to compute the SideCurrentCollateralAmount(2702) from the SideCollateralCurrency(2695) and the Currency(15). |
+| 2697 | [SideCollateralFXRateCalc](/fix/fields/tags-2600-2799#tag-2697-sidecollateralfxratecalc) | UnderlyingFXRateCalcCodeSet | Optional | Specifies whether or not SideCollateralFXRate(2696) should be multiplied or divided. |
+| 2701 | [SideCollateralType](/fix/fields/tags-2600-2799#tag-2701-sidecollateraltype) | String | Optional | Type of collateral on deposit being reported. |
+| 2693 | [SideCollateralAmountMarketSegmentID](/fix/fields/tags-2600-2799#tag-2693-sidecollateralamountmarketsegmentid) | String | Optional | Market segment associated with the collateral amount. |
+| 2692 | [SideCollateralAmountMarketID](/fix/fields/tags-2600-2799#tag-2692-sidecollateralamountmarketid) | String | Optional | Market associated with the collateral amount. |
+| 2703 | [SideHaircutIndicator](/fix/fields/tags-2600-2799#tag-2703-sidehaircutindicator) | Boolean | Optional | Indicates, if "Y", that a stated valuation includes a haircut, e.g. that the stated value reflects the subtraction of the haircut. Note that a value of "N" does… |
+| 2700 | [SideCollateralPortfolioID](/fix/fields/tags-2600-2799#tag-2700-sidecollateralportfolioid) | String | Optional | Identifier of the collateral portfolio when reporting on a portfolio basis. |
+| 2699 | [SideCollateralPercentOverage](/fix/fields/tags-2600-2799#tag-2699-sidecollateralpercentoverage) | Percentage | Optional | Percentage of over-collateralization particularly when SideCollateralAmountType(2694) = 4 (Additional collateral value). |
+| 2698 | [SideCollateralMarketPrice](/fix/fields/tags-2600-2799#tag-2698-sidecollateralmarketprice) | Price | Optional | Market price of the collateral, either from market sources or pre-agreed by the counterparties. |
+| 2862 | [SideCollateralReinvestmentRate](/fix/fields/tags-2800-2999#tag-2862-sidecollateralreinvestmentrate) | Percentage | Optional | When multiple instances of the SideCollateralReinvestmentGrp component are present this field specifies the average reinvestment rate. |
 | 2864 | [SideCollateralReinvestmentGrp](/fix/groups/side-collateral-reinvestment-grp) | Repeating group | Optional | The SideCollateralReinvestmentGrp component block is a repeating group that may be used to provide a breakdown of the cash collateral's reinvestment types and… |
-| 2863 | [SideUnderlyingRefID](/fix/fields/tags-2800-2999#tag-2863) | String | Optional | May be used to indicate that this entry applies to the underlying collateral instrument being referenced by the value in UnderlyingID(2874). |
+| 2863 | [SideUnderlyingRefID](/fix/fields/tags-2800-2999#tag-2863-sideunderlyingrefid) | String | Optional | May be used to indicate that this entry applies to the underlying collateral instrument being referenced by the value in UnderlyingID(2874). |
 
 </StickyTable>
 

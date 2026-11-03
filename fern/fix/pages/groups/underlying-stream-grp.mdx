@@ -3,11 +3,17 @@ title: "UnderlyingStreamGrp"
 subtitle: "The UnderlyingStreamGrp is a repeating subcomponent of the UnderlyingInstrument component used to detail the swap streams associated with the instrument."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40540</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Repeating group · NumInGroup 40540 · Added FIX.5.0SP2
+</llms-only>
 
 A swap will ordinarily have one or two payment streams. Each one may contain an UnderlyingStreamDesc(40542) with a descriptive string such as "Float" or "Fixed". However the choice of description should have no effect on the stream's purpose. UnderlyingStreamPaySide(40543) and UnderlyingStreamReceiveSide(40544) link the appropriate swap parties to their role in the stream. In pre-trade messages the side value (e.g. Side(54) field) of the request or order should be "1" (Buy) or "2" (Sell), and UnderlyingStreamPaySide(40543) and UnderlyingStreamReceiveSide(40544) should be set to the same side value indicating the aggressor's desired role. On fills and post-trade messages, the executing firm takes the opposite side and indicates its role by setting UnderlyingStreamPaySide(40543) and UnderlyingStreamReceiveSide(40544) to the opposite side of the aggressor's role.
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingStreams (40540)](/fix/fields/tags-40400-40599#tag-40540).
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingStreams (40540)](/fix/fields/tags-40400-40599#tag-40540-nounderlyingstreams).
 
 ## Members
 
@@ -15,24 +21,24 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40541 | [UnderlyingStreamType](/fix/fields/tags-40400-40599#tag-40541) | StreamTypeCodeSet | Optional | Required if NoUnderlyingStreams(40540) &gt; 0. |
-| 42016 | [UnderlyingStreamXID](/fix/fields/tags-42000-42199#tag-42016) | XID | Optional | Identifier of this UnderlyingStream for cross referencing elsewhere in the message. |
-| 40542 | [UnderlyingStreamDesc](/fix/fields/tags-40400-40599#tag-40542) | String | Optional | A short descriptive name given to payment stream. Eg. CDS, Fixed, Float, Float2, GBP. The description has no intrinsic meaning but should be arbitrarily chosen… |
-| 43083 | [UnderlyingStreamVersion](/fix/fields/tags-43000-43199#tag-43083) | String | Optional | The stream version identifier when there have been modifications to the contract over time. Helps signal when there are embedded changes. |
-| 43084 | [UnderlyingStreamVersionEffectiveDate](/fix/fields/tags-43000-43199#tag-43084) | LocalMktDate | Optional | The effective date of the UnderlyingStreamVersion(43083). |
-| 40543 | [UnderlyingStreamPaySide](/fix/fields/tags-40400-40599#tag-40543) | PaymentPaySideCodeSet | Optional | The side of the party paying the stream. |
-| 40544 | [UnderlyingStreamReceiveSide](/fix/fields/tags-40400-40599#tag-40544) | PaymentPaySideCodeSet | Optional | The side of the party receiving the stream. |
-| 42018 | [UnderlyingStreamNotionalXIDRef](/fix/fields/tags-42000-42199#tag-42018) | XIDREF | Optional | Cross reference to another UnderlyingStream notional for duplicating its properties. |
-| 40545 | [UnderlyingStreamNotional](/fix/fields/tags-40400-40599#tag-40545) | Amt | Optional | Notional, or initial notional value for the payment stream. Use SwapSchedule for steps. |
-| 40546 | [UnderlyingStreamCurrency](/fix/fields/tags-40400-40599#tag-40546) | Currency | Optional | Specifies the currency the UnderlyingStreamNotional(40545) is denominated in. Uses ISO 4217 currency codes. |
-| 43085 | [UnderlyingStreamNotionalDeterminationMethod](/fix/fields/tags-43000-43199#tag-43085) | String | Optional | Specifies the method for determining the floating notional value for equity swaps. See http://www.fpml.org/coding-scheme/determination-method for values. |
-| 43086 | [UnderlyingStreamNotionalAdjustments](/fix/fields/tags-43000-43199#tag-43086) | StreamNotionalAdjustmentsCodeSet | Optional | For equity swaps this specifies the conditions that govern the adjustment to the number of units of the swap. |
-| 42019 | [UnderlyingStreamNotionalFrequencyPeriod](/fix/fields/tags-42000-42199#tag-42019) | int | Optional | Conditionally required when UnderlyingStreamNotionalFrequencyUnit(42020) is specified. |
-| 42020 | [UnderlyingStreamNotionalFrequencyUnit](/fix/fields/tags-42000-42199#tag-42020) | TimeUnitCodeSet | Optional | Conditionally required when UnderlyingStreamNotionalFrequencyPeriod(42019) is specified. |
-| 42021 | [UnderlyingStreamNotionalCommodityFrequency](/fix/fields/tags-42000-42199#tag-42021) | StreamNotionalCommodityFrequencyCodeSet | Optional | The commodity's notional or quantity delivery frequency. |
-| 42022 | [UnderlyingStreamNotionalUnitOfMeasure](/fix/fields/tags-42000-42199#tag-42022) | UnitOfMeasureCodeSet | Optional | Specifies the delivery quantity unit of measure (UOM). |
-| 42023 | [UnderlyingStreamTotalNotional](/fix/fields/tags-42000-42199#tag-42023) | Qty | Optional | Specifies the total notional or delivery quantity over the term of the contract. |
-| 42024 | [UnderlyingStreamTotalNotionalUnitOfMeasure](/fix/fields/tags-42000-42199#tag-42024) | UnitOfMeasureCodeSet | Optional | Specifies the unit of measure (UOM) for the total notional or delivery quantity over the term of the contract. |
+| 40541 | [UnderlyingStreamType](/fix/fields/tags-40400-40599#tag-40541-underlyingstreamtype) | StreamTypeCodeSet | Optional | Required if NoUnderlyingStreams(40540) &gt; 0. |
+| 42016 | [UnderlyingStreamXID](/fix/fields/tags-42000-42199#tag-42016-underlyingstreamxid) | XID | Optional | Identifier of this UnderlyingStream for cross referencing elsewhere in the message. |
+| 40542 | [UnderlyingStreamDesc](/fix/fields/tags-40400-40599#tag-40542-underlyingstreamdesc) | String | Optional | A short descriptive name given to payment stream. Eg. CDS, Fixed, Float, Float2, GBP. The description has no intrinsic meaning but should be arbitrarily chosen… |
+| 43083 | [UnderlyingStreamVersion](/fix/fields/tags-43000-43199#tag-43083-underlyingstreamversion) | String | Optional | The stream version identifier when there have been modifications to the contract over time. Helps signal when there are embedded changes. |
+| 43084 | [UnderlyingStreamVersionEffectiveDate](/fix/fields/tags-43000-43199#tag-43084-underlyingstreamversioneffectivedate) | LocalMktDate | Optional | The effective date of the UnderlyingStreamVersion(43083). |
+| 40543 | [UnderlyingStreamPaySide](/fix/fields/tags-40400-40599#tag-40543-underlyingstreampayside) | PaymentPaySideCodeSet | Optional | The side of the party paying the stream. |
+| 40544 | [UnderlyingStreamReceiveSide](/fix/fields/tags-40400-40599#tag-40544-underlyingstreamreceiveside) | PaymentPaySideCodeSet | Optional | The side of the party receiving the stream. |
+| 42018 | [UnderlyingStreamNotionalXIDRef](/fix/fields/tags-42000-42199#tag-42018-underlyingstreamnotionalxidref) | XIDREF | Optional | Cross reference to another UnderlyingStream notional for duplicating its properties. |
+| 40545 | [UnderlyingStreamNotional](/fix/fields/tags-40400-40599#tag-40545-underlyingstreamnotional) | Amt | Optional | Notional, or initial notional value for the payment stream. Use SwapSchedule for steps. |
+| 40546 | [UnderlyingStreamCurrency](/fix/fields/tags-40400-40599#tag-40546-underlyingstreamcurrency) | Currency | Optional | Specifies the currency the UnderlyingStreamNotional(40545) is denominated in. Uses ISO 4217 currency codes. |
+| 43085 | [UnderlyingStreamNotionalDeterminationMethod](/fix/fields/tags-43000-43199#tag-43085-underlyingstreamnotionaldeterminationmethod) | String | Optional | Specifies the method for determining the floating notional value for equity swaps. See http://www.fpml.org/coding-scheme/determination-method for values. |
+| 43086 | [UnderlyingStreamNotionalAdjustments](/fix/fields/tags-43000-43199#tag-43086-underlyingstreamnotionaladjustments) | StreamNotionalAdjustmentsCodeSet | Optional | For equity swaps this specifies the conditions that govern the adjustment to the number of units of the swap. |
+| 42019 | [UnderlyingStreamNotionalFrequencyPeriod](/fix/fields/tags-42000-42199#tag-42019-underlyingstreamnotionalfrequencyperiod) | int | Optional | Conditionally required when UnderlyingStreamNotionalFrequencyUnit(42020) is specified. |
+| 42020 | [UnderlyingStreamNotionalFrequencyUnit](/fix/fields/tags-42000-42199#tag-42020-underlyingstreamnotionalfrequencyunit) | TimeUnitCodeSet | Optional | Conditionally required when UnderlyingStreamNotionalFrequencyPeriod(42019) is specified. |
+| 42021 | [UnderlyingStreamNotionalCommodityFrequency](/fix/fields/tags-42000-42199#tag-42021-underlyingstreamnotionalcommodityfrequency) | StreamNotionalCommodityFrequencyCodeSet | Optional | The commodity's notional or quantity delivery frequency. |
+| 42022 | [UnderlyingStreamNotionalUnitOfMeasure](/fix/fields/tags-42000-42199#tag-42022-underlyingstreamnotionalunitofmeasure) | UnitOfMeasureCodeSet | Optional | Specifies the delivery quantity unit of measure (UOM). |
+| 42023 | [UnderlyingStreamTotalNotional](/fix/fields/tags-42000-42199#tag-42023-underlyingstreamtotalnotional) | Qty | Optional | Specifies the total notional or delivery quantity over the term of the contract. |
+| 42024 | [UnderlyingStreamTotalNotionalUnitOfMeasure](/fix/fields/tags-42000-42199#tag-42024-underlyingstreamtotalnotionalunitofmeasure) | UnitOfMeasureCodeSet | Optional | Specifies the unit of measure (UOM) for the total notional or delivery quantity over the term of the contract. |
 | | [UnderlyingStreamCommodity](/fix/components/underlying-stream-commodity) | Component | Optional | UnderlyingStreamCommodity is a subcomponent of the UnderlyingStream component used to identify and describe the underlying commodity. |
 | | [UnderlyingStreamEffectiveDate](/fix/components/underlying-stream-effective-date) | Component | Optional | UnderlyingStreamEffectivedDate is a subcomponent of the UnderlyingStreamGrp component used to specify the effective date of the stream. |
 | | [UnderlyingStreamTerminationDate](/fix/components/underlying-stream-termination-date) | Component | Optional | UnderlyingStreamTerminationDate is a subcomponent of the UnderlyingStreamGrp component used to specify the termination date of the stream. |
@@ -42,9 +48,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 | 40708 | [UnderlyingPaymentStubGrp](/fix/groups/underlying-payment-stub-grp) | Repeating group | Optional | The UnderlyingPaymentStubGrp is a repeating subcomponent of the UnderlyingPaymentStream component used to specify front and back stubs in the payment stream. |
 | | [UnderlyingDeliveryStream](/fix/components/underlying-delivery-stream) | Component | Optional | The UnderlyingDeliveryStream component is a subcomponent of the UnderlyingStream used to detail the attributes of a physical delivery stream in a swap. |
 | 41756 | [UnderlyingDeliveryScheduleGrp](/fix/groups/underlying-delivery-schedule-grp) | Repeating group | Optional | The UnderlyingDeliveryScheduleGrp is a repeating subcomponent of the UnderlyingStream component used to detail step schedules associated with a delivery stream. |
-| 40547 | [UnderlyingStreamText](/fix/fields/tags-40400-40599#tag-40547) | String | Optional | Free form text to specify additional information or enumeration description when a standard value does not apply. |
-| 40988 | [EncodedUnderlyingStreamTextLen](/fix/fields/tags-40800-40999#tag-40988) | Length | Optional | Must be set if EncodedUnderlyingStreamText(40989) field is specified and must immediately precede it. |
-| 40989 | [EncodedUnderlyingStreamText](/fix/fields/tags-40800-40999#tag-40989) | data | Optional | Encoded (non-ASCII characters) representation of the UnderlyingStreamText(40547) field in the encoded format specified via the MessageEncoding(347) field. |
+| 40547 | [UnderlyingStreamText](/fix/fields/tags-40400-40599#tag-40547-underlyingstreamtext) | String | Optional | Free form text to specify additional information or enumeration description when a standard value does not apply. |
+| 40988 | [EncodedUnderlyingStreamTextLen](/fix/fields/tags-40800-40999#tag-40988-encodedunderlyingstreamtextlen) | Length | Optional | Must be set if EncodedUnderlyingStreamText(40989) field is specified and must immediately precede it. |
+| 40989 | [EncodedUnderlyingStreamText](/fix/fields/tags-40800-40999#tag-40989-encodedunderlyingstreamtext) | data | Optional | Encoded (non-ASCII characters) representation of the UnderlyingStreamText(40547) field in the encoded format specified via the MessageEncoding(347) field. |
 
 </StickyTable>
 

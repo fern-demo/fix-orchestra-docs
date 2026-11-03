@@ -3,7 +3,13 @@ title: "MarketDefinitionRequest"
 subtitle: "The Market Definition Request message is used to request for market structure information from the Respondent that receives this request."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType BT</Badge> <Badge intent="note" minimal>Market Structure Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType BT · Market Structure Reference Data · Pre Trade · Added FIX.5.0
+</llms-only>
 
 ## Message structure
 
@@ -12,11 +18,11 @@ subtitle: "The Market Definition Request message is used to request for market s
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 1393 | [MarketReqID](/fix/fields/tags-1200-1399#tag-1393) | String | **Required** | Must be unique, or the ID of previous Market Segment Request to disable if SubscriptionRequestType = Disable previous Snapshot + Updates Request(2). |
-| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263) | SubscriptionRequestTypeCodeSet | **Required** | Subscription Request Type |
-| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Conditionally required if MarketSegmentID(1300) is specified on the request |
-| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
-| 1325 | [ParentMktSegmID](/fix/fields/tags-1200-1399#tag-1325) | String | Optional | Specifies that the Market Segment is a sub segment of the Market Segment defined in this field. |
+| 1393 | [MarketReqID](/fix/fields/tags-1200-1399#tag-1393-marketreqid) | String | **Required** | Must be unique, or the ID of previous Market Segment Request to disable if SubscriptionRequestType = Disable previous Snapshot + Updates Request(2). |
+| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263-subscriptionrequesttype) | SubscriptionRequestTypeCodeSet | **Required** | Subscription Request Type |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301-marketid) | Exchange | Optional | Conditionally required if MarketSegmentID(1300) is specified on the request |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300-marketsegmentid) | String | Optional | Identifies the market segment |
+| 1325 | [ParentMktSegmID](/fix/fields/tags-1200-1399#tag-1325-parentmktsegmid) | String | Optional | Specifies that the Market Segment is a sub segment of the Market Segment defined in this field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

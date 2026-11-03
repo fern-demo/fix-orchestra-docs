@@ -3,7 +3,13 @@ title: "SettlementInstructions"
 subtitle: "The Settlement Instructions message provides the broker’s, the institution’s, or the intermediary’s instructions for trade settlement. This message has been designed so that it can be sent from the broker to the institution, from the…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType T</Badge> <Badge intent="note" minimal>Settlement Instruction</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.4.1</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType T · Settlement Instruction · Post Trade · Added FIX.4.1
+</llms-only>
 
 ## Message structure
 
@@ -12,15 +18,15 @@ subtitle: "The Settlement Instructions message provides the broker’s, the inst
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 777 | [SettlInstMsgID](/fix/fields/tags-600-799#tag-777) | String | **Required** | Unique identifier for this message |
-| 791 | [SettlInstReqID](/fix/fields/tags-600-799#tag-791) | String | Optional | Only used when this message is used to respond to a settlement instruction request (to which this ID refers) |
-| 160 | [SettlInstMode](/fix/fields/tags-0-199#tag-160) | SettlInstModeCodeSet | **Required** | 1=Standing Instructions, 2=Specific Allocation Account Overriding, 3=Specific Allocation Account Standing , 4=Specific Order, 5=Reject SSI request |
-| 792 | [SettlInstReqRejCode](/fix/fields/tags-600-799#tag-792) | SettlInstReqRejCodeCodeSet | Optional | Required for SettlInstMode = 5. Used to provide reason for rejecting a Settlement Instruction Request message. |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Can be used to provide any additional rejection text where rejecting a Settlement Instruction Request message. |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
-| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | Required for SettlInstMode(160) = 4 and when referring to orders that where electronically submitted over FIX or otherwise assigned a ClOrdID. |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | **Required** | Date/time this message was generated |
+| 777 | [SettlInstMsgID](/fix/fields/tags-600-799#tag-777-settlinstmsgid) | String | **Required** | Unique identifier for this message |
+| 791 | [SettlInstReqID](/fix/fields/tags-600-799#tag-791-settlinstreqid) | String | Optional | Only used when this message is used to respond to a settlement instruction request (to which this ID refers) |
+| 160 | [SettlInstMode](/fix/fields/tags-0-199#tag-160-settlinstmode) | SettlInstModeCodeSet | **Required** | 1=Standing Instructions, 2=Specific Allocation Account Overriding, 3=Specific Allocation Account Standing , 4=Specific Order, 5=Reject SSI request |
+| 792 | [SettlInstReqRejCode](/fix/fields/tags-600-799#tag-792-settlinstreqrejcode) | SettlInstReqRejCodeCodeSet | Optional | Required for SettlInstMode = 5. Used to provide reason for rejecting a Settlement Instruction Request message. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Can be used to provide any additional rejection text where rejecting a Settlement Instruction Request message. |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11-clordid) | String | Optional | Required for SettlInstMode(160) = 4 and when referring to orders that where electronically submitted over FIX or otherwise assigned a ClOrdID. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | **Required** | Date/time this message was generated |
 | 778 | [SettlInstGrp](/fix/groups/settl-inst-grp) | Repeating group | Optional |  |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 

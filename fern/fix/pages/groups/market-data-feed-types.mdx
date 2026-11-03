@@ -3,9 +3,15 @@ title: "MarketDataFeedTypes"
 subtitle: "The MarketDataFeedTypes component is used to specify the different available feed types and sub-types, and additional market data feed related attributes, such as the market depth of the specified feed type."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1141</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoMDFeedTypes (1141)](/fix/fields/tags-1000-1199#tag-1141).
+<llms-only>
+Repeating group · NumInGroup 1141 · Added FIX.5.0
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoMDFeedTypes (1141)](/fix/fields/tags-1000-1199#tag-1141-nomdfeedtypes).
 
 ## Members
 
@@ -13,17 +19,17 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1022 | [MDFeedType](/fix/fields/tags-1000-1199#tag-1022) | String | Optional | Required if NoMDFeedTypes(1141) &gt; 0. |
-| 1683 | [MDSubFeedType](/fix/fields/tags-1600-1799#tag-1683) | String | Optional | Describes a sub-class for a given class of service defined by MDFeedType (1022) |
-| 264 | [MarketDepth](/fix/fields/tags-200-399#tag-264) | int | Optional | Specifies the depth of book (or levels of market depth) for the feed type. |
-| 2563 | [MarketDepthTimeInterval](/fix/fields/tags-2400-2599#tag-2563) | int | Optional | Conditionally required when MarketDepthTimeIntervalUnit(2564) is specified. |
-| 2564 | [MarketDepthTimeIntervalUnit](/fix/fields/tags-2400-2599#tag-2564) | OrderDelayUnitCodeSet | Optional | Conditionally required when MarketDataTimeInterval(2563) is specified. |
-| 2565 | [MDRecoveryTimeInterval](/fix/fields/tags-2400-2599#tag-2565) | int | Optional | Conditionally required when MDRecoveryTimeIntervalUnit(2566) is specified. |
-| 2566 | [MDRecoveryTimeIntervalUnit](/fix/fields/tags-2400-2599#tag-2566) | OrderDelayUnitCodeSet | Optional | Conditionally required when MDRecoveryTimeInterval(2565) is specified. |
-| 1021 | [MDBookType](/fix/fields/tags-1000-1199#tag-1021) | MDBookTypeCodeSet | Optional | Describes the type of book for which the feed is intended. Used when multiple feeds are provided over the same connection |
-| 1173 | [MDSubBookType](/fix/fields/tags-1000-1199#tag-1173) | int | Optional | Describes a class of sub book, e.g. for the separation of various lot types. The Sub Book Type indicates that the following Market Data Entries belong to a… |
-| 2567 | [PrimaryServiceLocationID](/fix/fields/tags-2400-2599#tag-2567) | String | Optional | Primary service location identifier. |
-| 2568 | [SecondaryServiceLocationID](/fix/fields/tags-2400-2599#tag-2568) | String | Optional | Secondary or alternate service location identifier. |
+| 1022 | [MDFeedType](/fix/fields/tags-1000-1199#tag-1022-mdfeedtype) | String | Optional | Required if NoMDFeedTypes(1141) &gt; 0. |
+| 1683 | [MDSubFeedType](/fix/fields/tags-1600-1799#tag-1683-mdsubfeedtype) | String | Optional | Describes a sub-class for a given class of service defined by MDFeedType (1022) |
+| 264 | [MarketDepth](/fix/fields/tags-200-399#tag-264-marketdepth) | int | Optional | Specifies the depth of book (or levels of market depth) for the feed type. |
+| 2563 | [MarketDepthTimeInterval](/fix/fields/tags-2400-2599#tag-2563-marketdepthtimeinterval) | int | Optional | Conditionally required when MarketDepthTimeIntervalUnit(2564) is specified. |
+| 2564 | [MarketDepthTimeIntervalUnit](/fix/fields/tags-2400-2599#tag-2564-marketdepthtimeintervalunit) | OrderDelayUnitCodeSet | Optional | Conditionally required when MarketDataTimeInterval(2563) is specified. |
+| 2565 | [MDRecoveryTimeInterval](/fix/fields/tags-2400-2599#tag-2565-mdrecoverytimeinterval) | int | Optional | Conditionally required when MDRecoveryTimeIntervalUnit(2566) is specified. |
+| 2566 | [MDRecoveryTimeIntervalUnit](/fix/fields/tags-2400-2599#tag-2566-mdrecoverytimeintervalunit) | OrderDelayUnitCodeSet | Optional | Conditionally required when MDRecoveryTimeInterval(2565) is specified. |
+| 1021 | [MDBookType](/fix/fields/tags-1000-1199#tag-1021-mdbooktype) | MDBookTypeCodeSet | Optional | Describes the type of book for which the feed is intended. Used when multiple feeds are provided over the same connection |
+| 1173 | [MDSubBookType](/fix/fields/tags-1000-1199#tag-1173-mdsubbooktype) | int | Optional | Describes a class of sub book, e.g. for the separation of various lot types. The Sub Book Type indicates that the following Market Data Entries belong to a… |
+| 2567 | [PrimaryServiceLocationID](/fix/fields/tags-2400-2599#tag-2567-primaryservicelocationid) | String | Optional | Primary service location identifier. |
+| 2568 | [SecondaryServiceLocationID](/fix/fields/tags-2400-2599#tag-2568-secondaryservicelocationid) | String | Optional | Secondary or alternate service location identifier. |
 
 </StickyTable>
 

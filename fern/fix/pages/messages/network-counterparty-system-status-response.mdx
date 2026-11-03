@@ -3,7 +3,13 @@ title: "NetworkCounterpartySystemStatusResponse"
 subtitle: "This message is sent in response to a Network (Counterparty System) Status Request Message."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType BD</Badge> <Badge intent="note" minimal>Network</Badge> <Badge intent="tip" minimal>Infrastructure</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType BD · Network · Infrastructure · Added FIX.4.4
+</llms-only>
 
 ## Message structure
 
@@ -12,10 +18,10 @@ subtitle: "This message is sent in response to a Network (Counterparty System) S
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 937 | [NetworkStatusResponseType](/fix/fields/tags-800-999#tag-937) | NetworkStatusResponseTypeCodeSet | **Required** | Indicates the type of Network Response Message. |
-| 933 | [NetworkRequestID](/fix/fields/tags-800-999#tag-933) | String | Optional | Unique identifier for a network resquest. |
-| 932 | [NetworkResponseID](/fix/fields/tags-800-999#tag-932) | String | **Required** | Unique identifier for a network response. |
-| 934 | [LastNetworkResponseID](/fix/fields/tags-800-999#tag-934) | String | Optional | Required when NetworkStatusResponseType=2 |
+| 937 | [NetworkStatusResponseType](/fix/fields/tags-800-999#tag-937-networkstatusresponsetype) | NetworkStatusResponseTypeCodeSet | **Required** | Indicates the type of Network Response Message. |
+| 933 | [NetworkRequestID](/fix/fields/tags-800-999#tag-933-networkrequestid) | String | Optional | Unique identifier for a network resquest. |
+| 932 | [NetworkResponseID](/fix/fields/tags-800-999#tag-932-networkresponseid) | String | **Required** | Unique identifier for a network response. |
+| 934 | [LastNetworkResponseID](/fix/fields/tags-800-999#tag-934-lastnetworkresponseid) | String | Optional | Required when NetworkStatusResponseType=2 |
 | 936 | [CompIDStatGrp](/fix/groups/comp-id-stat-grp) | Repeating group | **Required** |  |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 

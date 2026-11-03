@@ -3,9 +3,15 @@ title: "UnderlyingComplexEventScheduleGrp"
 subtitle: "UnderlyingComplexEventScheduleGrp is a subcomponent of UnderlyingComplexEventPeriodGrp for specifying a periodic schedule for an Asian, Barrier or Strike Schedule option feature."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41750</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingComplexEventSchedules (41750)](/fix/fields/tags-41600-41799#tag-41750).
+<llms-only>
+Repeating group · NumInGroup 41750 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingComplexEventSchedules (41750)](/fix/fields/tags-41600-41799#tag-41750-nounderlyingcomplexeventschedules).
 
 ## Members
 
@@ -13,11 +19,11 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41751 | [UnderlyingComplexEventScheduleStartDate](/fix/fields/tags-41600-41799#tag-41751) | LocalMktDate | Optional | Required if NoUnderlyingComplexEventSchedules(41750) &gt; 0. |
-| 41752 | [UnderlyingComplexEventScheduleEndDate](/fix/fields/tags-41600-41799#tag-41752) | LocalMktDate | Optional | The end date of the schedule. |
-| 41753 | [UnderlyingComplexEventScheduleFrequencyPeriod](/fix/fields/tags-41600-41799#tag-41753) | int | Optional | Conditionally required when UnderlyingComplexEventScheduleFrequencyUnit(41754) is specified. |
-| 41754 | [UnderlyingComplexEventScheduleFrequencyUnit](/fix/fields/tags-41600-41799#tag-41754) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when UnderlyingComplexEventScheduleFrequencyPeriod(41753) is specified. |
-| 41755 | [UnderlyingComplexEventScheduleRollConvention](/fix/fields/tags-41600-41799#tag-41755) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified values would be… |
+| 41751 | [UnderlyingComplexEventScheduleStartDate](/fix/fields/tags-41600-41799#tag-41751-underlyingcomplexeventschedulestartdate) | LocalMktDate | Optional | Required if NoUnderlyingComplexEventSchedules(41750) &gt; 0. |
+| 41752 | [UnderlyingComplexEventScheduleEndDate](/fix/fields/tags-41600-41799#tag-41752-underlyingcomplexeventscheduleenddate) | LocalMktDate | Optional | The end date of the schedule. |
+| 41753 | [UnderlyingComplexEventScheduleFrequencyPeriod](/fix/fields/tags-41600-41799#tag-41753-underlyingcomplexeventschedulefrequencyperiod) | int | Optional | Conditionally required when UnderlyingComplexEventScheduleFrequencyUnit(41754) is specified. |
+| 41754 | [UnderlyingComplexEventScheduleFrequencyUnit](/fix/fields/tags-41600-41799#tag-41754-underlyingcomplexeventschedulefrequencyunit) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when UnderlyingComplexEventScheduleFrequencyPeriod(41753) is specified. |
+| 41755 | [UnderlyingComplexEventScheduleRollConvention](/fix/fields/tags-41600-41799#tag-41755-underlyingcomplexeventschedulerollconvention) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified values would be… |
 
 </StickyTable>
 

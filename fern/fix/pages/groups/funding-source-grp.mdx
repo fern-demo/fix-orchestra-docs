@@ -3,9 +3,15 @@ title: "FundingSourceGrp"
 subtitle: "This component is used to specify the funding source(s) used to finance a margin loan or collateralized loan."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2849</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoFundingSources (2849)](/fix/fields/tags-2800-2999#tag-2849).
+<llms-only>
+Repeating group · NumInGroup 2849 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoFundingSources (2849)](/fix/fields/tags-2800-2999#tag-2849-nofundingsources).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2846 | [FundingSource](/fix/fields/tags-2800-2999#tag-2846) | FundingSourceCodeSet | Optional | Required if NoFundingSources(2849) &gt; 0. |
-| 2848 | [FundingSourceMarketValue](/fix/fields/tags-2800-2999#tag-2848) | Amt | Optional | Market value of the funding source. |
-| 2847 | [FundingSourceCurrency](/fix/fields/tags-2800-2999#tag-2847) | Currency | Optional | Currency denomination of the market value of the funding source. Uses ISO 4217 currency codes. |
+| 2846 | [FundingSource](/fix/fields/tags-2800-2999#tag-2846-fundingsource) | FundingSourceCodeSet | Optional | Required if NoFundingSources(2849) &gt; 0. |
+| 2848 | [FundingSourceMarketValue](/fix/fields/tags-2800-2999#tag-2848-fundingsourcemarketvalue) | Amt | Optional | Market value of the funding source. |
+| 2847 | [FundingSourceCurrency](/fix/fields/tags-2800-2999#tag-2847-fundingsourcecurrency) | Currency | Optional | Currency denomination of the market value of the funding source. Uses ISO 4217 currency codes. |
 
 </StickyTable>
 

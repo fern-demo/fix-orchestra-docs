@@ -3,7 +3,13 @@ title: "LegDividendAccrualFloatingRate"
 subtitle: "The LegDividendAccrualFloatingRate component is a subcomponent of LegDividendConditions used to define the dividend accrual floating rate attributes of dividend payment conditions."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,24 +17,24 @@ subtitle: "The LegDividendAccrualFloatingRate component is a subcomponent of Leg
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42312 | [LegDividendFloatingRateIndex](/fix/fields/tags-42200-42399#tag-42312) | String | Optional | The dividend accrual floating rate index. |
-| 42313 | [LegDividendFloatingRateIndexCurvePeriod](/fix/fields/tags-42200-42399#tag-42313) | int | Optional | Conditionally required when LegDividendFloatingRateIndexCurveUnit(42314) is specified. |
-| 42314 | [LegDividendFloatingRateIndexCurveUnit](/fix/fields/tags-42200-42399#tag-42314) | PaymentStreamRateIndexCurveUnitCodeSet | Optional | Conditionally required when LegDividendFloatingRateIndexCurvePeriod(42313) is specified. |
-| 42315 | [LegDividendFloatingRateMultiplier](/fix/fields/tags-42200-42399#tag-42315) | float | Optional | A rate multiplier to apply to the floating rate. The multiplier can be less than or greater than 1 (one). This should only be included if the multiplier is not… |
-| 42316 | [LegDividendFloatingRateSpread](/fix/fields/tags-42200-42399#tag-42316) | PriceOffset | Optional | The basis points spread from the index specified in LegDividendFloatingRateIndex(42312). |
-| 42317 | [LegDividendFloatingRateSpreadPositionType](/fix/fields/tags-42200-42399#tag-42317) | PaymentStreamRateSpreadPositionTypeCodeSet | Optional | Identifies whether the rate spread is applied to a long or short position. |
-| 42318 | [LegDividendFloatingRateTreatment](/fix/fields/tags-42200-42399#tag-42318) | PaymentStreamRateTreatmentCodeSet | Optional | Specifies the yield calculation treatment for the index. |
-| 42319 | [LegDividendCapRate](/fix/fields/tags-42200-42399#tag-42319) | Percentage | Optional | The cap rate, if any, which applies to the floating rate. It is only required where the floating rate is capped at a certain level. The cap rate is assumed to… |
-| 42320 | [LegDividendCapRateBuySide](/fix/fields/tags-42200-42399#tag-42320) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the buyer of the cap rate option through its trade side. |
-| 42321 | [LegDividendCapRateSellSide](/fix/fields/tags-42200-42399#tag-42321) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the seller of the cap rate option through its trade side. |
-| 42322 | [LegDividendFloorRate](/fix/fields/tags-42200-42399#tag-42322) | Percentage | Optional | The floor rate, if any, which applies to the floating rate. The floor rate (strike) is only required where the floating rate is floored at a certain strike… |
-| 42323 | [LegDividendFloorRateBuySide](/fix/fields/tags-42200-42399#tag-42323) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the buyer of the floor rate option through its trade side. |
-| 42324 | [LegDividendFloorRateSellSide](/fix/fields/tags-42200-42399#tag-42324) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the seller of the floor rate option through its trade side. |
-| 42325 | [LegDividendInitialRate](/fix/fields/tags-42200-42399#tag-42325) | Percentage | Optional | The initial floating rate reset agreed between the principal parties involved in the trade. This is assumed to be the first required reset rate for the first… |
-| 42326 | [LegDividendFinalRateRoundingDirection](/fix/fields/tags-42200-42399#tag-42326) | RoundingDirectionCodeSet | Optional | Specifies the rounding direction of the final rate. |
-| 42327 | [LegDividendFinalRatePrecision](/fix/fields/tags-42200-42399#tag-42327) | int | Optional | Specifies the rounding precision of the final rate in terms of a number of decimal places. Note how a percentage rate rounding of 5 decimal places is expressed… |
-| 42328 | [LegDividendAveragingMethod](/fix/fields/tags-42200-42399#tag-42328) | PaymentStreamAveragingMethodCodeSet | Optional | When averaging is applicable, used to specify whether a weighted or unweighted average method of calculation is to be used. |
-| 42329 | [LegDividendNegativeRateTreatment](/fix/fields/tags-42200-42399#tag-42329) | PaymentStreamNegativeRateTreatmentCodeSet | Optional | The specification of any provisions for calculating payment obligations when a floating rate is negative (either due to a quoted negative floating rate or by… |
+| 42312 | [LegDividendFloatingRateIndex](/fix/fields/tags-42200-42399#tag-42312-legdividendfloatingrateindex) | String | Optional | The dividend accrual floating rate index. |
+| 42313 | [LegDividendFloatingRateIndexCurvePeriod](/fix/fields/tags-42200-42399#tag-42313-legdividendfloatingrateindexcurveperiod) | int | Optional | Conditionally required when LegDividendFloatingRateIndexCurveUnit(42314) is specified. |
+| 42314 | [LegDividendFloatingRateIndexCurveUnit](/fix/fields/tags-42200-42399#tag-42314-legdividendfloatingrateindexcurveunit) | PaymentStreamRateIndexCurveUnitCodeSet | Optional | Conditionally required when LegDividendFloatingRateIndexCurvePeriod(42313) is specified. |
+| 42315 | [LegDividendFloatingRateMultiplier](/fix/fields/tags-42200-42399#tag-42315-legdividendfloatingratemultiplier) | float | Optional | A rate multiplier to apply to the floating rate. The multiplier can be less than or greater than 1 (one). This should only be included if the multiplier is not… |
+| 42316 | [LegDividendFloatingRateSpread](/fix/fields/tags-42200-42399#tag-42316-legdividendfloatingratespread) | PriceOffset | Optional | The basis points spread from the index specified in LegDividendFloatingRateIndex(42312). |
+| 42317 | [LegDividendFloatingRateSpreadPositionType](/fix/fields/tags-42200-42399#tag-42317-legdividendfloatingratespreadpositiontype) | PaymentStreamRateSpreadPositionTypeCodeSet | Optional | Identifies whether the rate spread is applied to a long or short position. |
+| 42318 | [LegDividendFloatingRateTreatment](/fix/fields/tags-42200-42399#tag-42318-legdividendfloatingratetreatment) | PaymentStreamRateTreatmentCodeSet | Optional | Specifies the yield calculation treatment for the index. |
+| 42319 | [LegDividendCapRate](/fix/fields/tags-42200-42399#tag-42319-legdividendcaprate) | Percentage | Optional | The cap rate, if any, which applies to the floating rate. It is only required where the floating rate is capped at a certain level. The cap rate is assumed to… |
+| 42320 | [LegDividendCapRateBuySide](/fix/fields/tags-42200-42399#tag-42320-legdividendcapratebuyside) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the buyer of the cap rate option through its trade side. |
+| 42321 | [LegDividendCapRateSellSide](/fix/fields/tags-42200-42399#tag-42321-legdividendcapratesellside) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the seller of the cap rate option through its trade side. |
+| 42322 | [LegDividendFloorRate](/fix/fields/tags-42200-42399#tag-42322-legdividendfloorrate) | Percentage | Optional | The floor rate, if any, which applies to the floating rate. The floor rate (strike) is only required where the floating rate is floored at a certain strike… |
+| 42323 | [LegDividendFloorRateBuySide](/fix/fields/tags-42200-42399#tag-42323-legdividendfloorratebuyside) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the buyer of the floor rate option through its trade side. |
+| 42324 | [LegDividendFloorRateSellSide](/fix/fields/tags-42200-42399#tag-42324-legdividendfloorratesellside) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the seller of the floor rate option through its trade side. |
+| 42325 | [LegDividendInitialRate](/fix/fields/tags-42200-42399#tag-42325-legdividendinitialrate) | Percentage | Optional | The initial floating rate reset agreed between the principal parties involved in the trade. This is assumed to be the first required reset rate for the first… |
+| 42326 | [LegDividendFinalRateRoundingDirection](/fix/fields/tags-42200-42399#tag-42326-legdividendfinalrateroundingdirection) | RoundingDirectionCodeSet | Optional | Specifies the rounding direction of the final rate. |
+| 42327 | [LegDividendFinalRatePrecision](/fix/fields/tags-42200-42399#tag-42327-legdividendfinalrateprecision) | int | Optional | Specifies the rounding precision of the final rate in terms of a number of decimal places. Note how a percentage rate rounding of 5 decimal places is expressed… |
+| 42328 | [LegDividendAveragingMethod](/fix/fields/tags-42200-42399#tag-42328-legdividendaveragingmethod) | PaymentStreamAveragingMethodCodeSet | Optional | When averaging is applicable, used to specify whether a weighted or unweighted average method of calculation is to be used. |
+| 42329 | [LegDividendNegativeRateTreatment](/fix/fields/tags-42200-42399#tag-42329-legdividendnegativeratetreatment) | PaymentStreamNegativeRateTreatmentCodeSet | Optional | The specification of any provisions for calculating payment obligations when a floating rate is negative (either due to a quoted negative floating rate or by… |
 
 </StickyTable>
 

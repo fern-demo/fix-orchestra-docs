@@ -3,9 +3,15 @@ title: "DisclosureInstructionGrp"
 subtitle: "Repeating group of instructions, each of which relates to one or more elements of an order. The instruction itself conveys whether the information should be disclosed, e.g. in market data, or not."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1812</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoDisclosureInstructions (1812)](/fix/fields/tags-1800-1999#tag-1812).
+<llms-only>
+Repeating group · NumInGroup 1812 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoDisclosureInstructions (1812)](/fix/fields/tags-1800-1999#tag-1812-nodisclosureinstructions).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1813 | [DisclosureType](/fix/fields/tags-1800-1999#tag-1813) | DisclosureTypeCodeSet | Optional | Required when NoDisclosureInstructions(1812) &gt; 0. |
-| 1814 | [DisclosureInstruction](/fix/fields/tags-1800-1999#tag-1814) | DisclosureInstructionCodeSet | Optional | Instruction to disclose information or to use default value of the receiver. |
+| 1813 | [DisclosureType](/fix/fields/tags-1800-1999#tag-1813-disclosuretype) | DisclosureTypeCodeSet | Optional | Required when NoDisclosureInstructions(1812) &gt; 0. |
+| 1814 | [DisclosureInstruction](/fix/fields/tags-1800-1999#tag-1814-disclosureinstruction) | DisclosureInstructionCodeSet | Optional | Instruction to disclose information or to use default value of the receiver. |
 
 </StickyTable>
 

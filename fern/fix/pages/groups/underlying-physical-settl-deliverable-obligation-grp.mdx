@@ -3,9 +3,15 @@ title: "UnderlyingPhysicalSettlDeliverableObligationGrp"
 subtitle: "The UnderlyingPhysicalSettlDeliverableObligationGrp is a repeating component within the UnderlyingPhysicalSettlTermGrp component used to report CDS physical settlement delivery obligations."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42065</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingPhysicalSettlDeliverableObligations (42065)](/fix/fields/tags-42000-42199#tag-42065).
+<llms-only>
+Repeating group · NumInGroup 42065 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingPhysicalSettlDeliverableObligations (42065)](/fix/fields/tags-42000-42199#tag-42065-nounderlyingphysicalsettldeliverableobligations).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42066 | [UnderlyingPhysicalSettlDeliverableObligationType](/fix/fields/tags-42000-42199#tag-42066) | String | Optional | Required if NoUnderlyingPhysicalSettlDeliverableObligations(42065) &gt; 0. |
-| 42067 | [UnderlyingPhysicalSettlDeliverableObligationValue](/fix/fields/tags-42000-42199#tag-42067) | String | Optional | Physical settlement delivery obligation value appropriate to UnderlyingPhysicalSettlDeliverableObligationType(42066). See… |
+| 42066 | [UnderlyingPhysicalSettlDeliverableObligationType](/fix/fields/tags-42000-42199#tag-42066-underlyingphysicalsettldeliverableobligationtype) | String | Optional | Required if NoUnderlyingPhysicalSettlDeliverableObligations(42065) &gt; 0. |
+| 42067 | [UnderlyingPhysicalSettlDeliverableObligationValue](/fix/fields/tags-42000-42199#tag-42067-underlyingphysicalsettldeliverableobligationvalue) | String | Optional | Physical settlement delivery obligation value appropriate to UnderlyingPhysicalSettlDeliverableObligationType(42066). See… |
 
 </StickyTable>
 

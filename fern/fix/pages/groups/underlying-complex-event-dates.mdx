@@ -3,9 +3,15 @@ title: "UnderlyingComplexEventDates"
 subtitle: "The UnderlyingComplexEventDates and subcomponent UnderlyingComplexEventTimes components are used to constrain a complex event to a specific date range, and optional time range. If specified the event is only effective on or within the…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2053</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingComplexEventDates (2053)](/fix/fields/tags-2000-2199#tag-2053).
+<llms-only>
+Repeating group · NumInGroup 2053 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingComplexEventDates (2053)](/fix/fields/tags-2000-2199#tag-2053-nounderlyingcomplexeventdates).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2054 | [UnderlyingComplexEventStartDate](/fix/fields/tags-2000-2199#tag-2054) | UTCDateOnly | Optional | Required if NoUnderlyingComplexEventDates(2054) &gt; 0. |
-| 2055 | [UnderlyingComplexEventEndDate](/fix/fields/tags-2000-2199#tag-2055) | UTCDateOnly | Optional | Required if NoUnderlyingComplexEventDates(2054) &gt; 0. |
+| 2054 | [UnderlyingComplexEventStartDate](/fix/fields/tags-2000-2199#tag-2054-underlyingcomplexeventstartdate) | UTCDateOnly | Optional | Required if NoUnderlyingComplexEventDates(2054) &gt; 0. |
+| 2055 | [UnderlyingComplexEventEndDate](/fix/fields/tags-2000-2199#tag-2055-underlyingcomplexeventenddate) | UTCDateOnly | Optional | Required if NoUnderlyingComplexEventDates(2054) &gt; 0. |
 | 2056 | [UnderlyingComplexEventTimes](/fix/groups/underlying-complex-event-times) | Repeating group | Optional | The UnderlyingComplexEventTimes is a repeating subcomponent of the UnderlyingComplexEventDates component. It is used to further qualify any dates placed on the… |
 
 </StickyTable>

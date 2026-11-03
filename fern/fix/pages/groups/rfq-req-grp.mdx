@@ -2,9 +2,15 @@
 title: "RFQReqGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 146</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedSym (146)](/fix/fields/tags-0-199#tag-146).
+<llms-only>
+Repeating group · NumInGroup 146 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedSym (146)](/fix/fields/tags-0-199#tag-146-norelatedsym).
 
 ## Members
 
@@ -15,11 +21,11 @@ Each repetition starts with the first member listed. The count of repetitions is
 | | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
-| 140 | [PrevClosePx](/fix/fields/tags-0-199#tag-140) | Price | Optional | Useful for verifying security identification |
-| 303 | [QuoteRequestType](/fix/fields/tags-200-399#tag-303) | QuoteRequestTypeCodeSet | Optional | Indicates the type of Quote Request (e.g. Manual vs. Automatic) being generated. |
-| 537 | [QuoteType](/fix/fields/tags-400-599#tag-537) | QuoteTypeCodeSet | Optional | Type of quote being requested from counterparty or market (e.g. Indicative, Firm, or Restricted Tradeable) |
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
+| 140 | [PrevClosePx](/fix/fields/tags-0-199#tag-140-prevclosepx) | Price | Optional | Useful for verifying security identification |
+| 303 | [QuoteRequestType](/fix/fields/tags-200-399#tag-303-quoterequesttype) | QuoteRequestTypeCodeSet | Optional | Indicates the type of Quote Request (e.g. Manual vs. Automatic) being generated. |
+| 537 | [QuoteType](/fix/fields/tags-400-599#tag-537-quotetype) | QuoteTypeCodeSet | Optional | Type of quote being requested from counterparty or market (e.g. Indicative, Firm, or Restricted Tradeable) |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336-tradingsessionid) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625-tradingsessionsubid) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
 
 </StickyTable>
 

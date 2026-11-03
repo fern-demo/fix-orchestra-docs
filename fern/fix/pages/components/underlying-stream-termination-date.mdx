@@ -3,7 +3,13 @@ title: "UnderlyingStreamTerminationDate"
 subtitle: "UnderlyingStreamTerminationDate is a subcomponent of the UnderlyingStreamGrp component used to specify the termination date of the stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,14 +17,14 @@ subtitle: "UnderlyingStreamTerminationDate is a subcomponent of the UnderlyingSt
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40548 | [UnderlyingStreamTerminationDateUnadjusted](/fix/fields/tags-40400-40599#tag-40548) | LocalMktDate | Optional | The unadjusted termination date. |
-| 40549 | [UnderlyingStreamTerminationDateBusinessDayConvention](/fix/fields/tags-40400-40599#tag-40549) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
+| 40548 | [UnderlyingStreamTerminationDateUnadjusted](/fix/fields/tags-40400-40599#tag-40548-underlyingstreamterminationdateunadjusted) | LocalMktDate | Optional | The unadjusted termination date. |
+| 40549 | [UnderlyingStreamTerminationDateBusinessDayConvention](/fix/fields/tags-40400-40599#tag-40549-underlyingstreamterminationdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
 | 40976 | [UnderlyingStreamTerminationDateBusinessCenterGrp](/fix/groups/underlying-stream-termination-date-business-center-grp) | Repeating group | Optional | UnderlyingStreamTerminationDateBusinessCenterGrp is a repeating subcomponent within the UnderlyingStreamTerminationDate component. It is used to specify the set… |
-| 40551 | [UnderlyingStreamTerminationDateRelativeTo](/fix/fields/tags-40400-40599#tag-40551) | int | Optional | Specifies the anchor date when the termination date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
-| 40552 | [UnderlyingStreamTerminationDateOffsetPeriod](/fix/fields/tags-40400-40599#tag-40552) | int | Optional | Conditionally required when UnderlyingStreamTerminationDateOffsetUnit(40553) is specified. |
-| 40553 | [UnderlyingStreamTerminationDateOffsetUnit](/fix/fields/tags-40400-40599#tag-40553) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingPaymentTerminationDateOffsetPeriod(40552) is specified. |
-| 40554 | [UnderlyingStreamTerminationDateOffsetDayType](/fix/fields/tags-40400-40599#tag-40554) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative termination date offset. |
-| 40555 | [UnderlyingStreamTerminationDateAdjusted](/fix/fields/tags-40400-40599#tag-40555) | LocalMktDate | Optional | The adjusted termination date. |
+| 40551 | [UnderlyingStreamTerminationDateRelativeTo](/fix/fields/tags-40400-40599#tag-40551-underlyingstreamterminationdaterelativeto) | int | Optional | Specifies the anchor date when the termination date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 40552 | [UnderlyingStreamTerminationDateOffsetPeriod](/fix/fields/tags-40400-40599#tag-40552-underlyingstreamterminationdateoffsetperiod) | int | Optional | Conditionally required when UnderlyingStreamTerminationDateOffsetUnit(40553) is specified. |
+| 40553 | [UnderlyingStreamTerminationDateOffsetUnit](/fix/fields/tags-40400-40599#tag-40553-underlyingstreamterminationdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingPaymentTerminationDateOffsetPeriod(40552) is specified. |
+| 40554 | [UnderlyingStreamTerminationDateOffsetDayType](/fix/fields/tags-40400-40599#tag-40554-underlyingstreamterminationdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative termination date offset. |
+| 40555 | [UnderlyingStreamTerminationDateAdjusted](/fix/fields/tags-40400-40599#tag-40555-underlyingstreamterminationdateadjusted) | LocalMktDate | Optional | The adjusted termination date. |
 
 </StickyTable>
 

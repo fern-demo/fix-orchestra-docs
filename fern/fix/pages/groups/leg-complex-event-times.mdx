@@ -3,9 +3,15 @@ title: "LegComplexEventTimes"
 subtitle: "The LegComplexEventTimes is a repeating subcomponent of the LegComplexEventDates component. It is used to further qualify any dates placed on the event and is used to specify time ranges for which a complex event is effective. It is always…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2253</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegComplexEventTimes (2253)](/fix/fields/tags-2200-2399#tag-2253).
+<llms-only>
+Repeating group · NumInGroup 2253 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegComplexEventTimes (2253)](/fix/fields/tags-2200-2399#tag-2253-nolegcomplexeventtimes).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2204 | [LegComplexEventStartTime](/fix/fields/tags-2200-2399#tag-2204) | UTCTimeOnly | Optional | Required if NoLegComplexEventTimes(2253) &gt; 0. |
-| 2247 | [LegComplexEventEndTime](/fix/fields/tags-2200-2399#tag-2247) | UTCTimeOnly | Optional | Required if NoLegComplexEventTimes(2253) &gt; 0. |
+| 2204 | [LegComplexEventStartTime](/fix/fields/tags-2200-2399#tag-2204-legcomplexeventstarttime) | UTCTimeOnly | Optional | Required if NoLegComplexEventTimes(2253) &gt; 0. |
+| 2247 | [LegComplexEventEndTime](/fix/fields/tags-2200-2399#tag-2247-legcomplexeventendtime) | UTCTimeOnly | Optional | Required if NoLegComplexEventTimes(2253) &gt; 0. |
 
 </StickyTable>
 

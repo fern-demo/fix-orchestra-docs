@@ -3,9 +3,15 @@ title: "TradePriceConditionGrp"
 subtitle: "Price conditions associated with a trade that impact trade price."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1838</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoTradePriceConditions (1838)](/fix/fields/tags-1800-1999#tag-1838).
+<llms-only>
+Repeating group · NumInGroup 1838 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoTradePriceConditions (1838)](/fix/fields/tags-1800-1999#tag-1838-notradepriceconditions).
 
 ## Members
 
@@ -13,7 +19,7 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1839 | [TradePriceCondition](/fix/fields/tags-1800-1999#tag-1839) | TradePriceConditionCodeSet | Optional | Required if NoTradePriceConditions(1838) &gt; 0. |
+| 1839 | [TradePriceCondition](/fix/fields/tags-1800-1999#tag-1839-tradepricecondition) | TradePriceConditionCodeSet | Optional | Required if NoTradePriceConditions(1838) &gt; 0. |
 
 </StickyTable>
 

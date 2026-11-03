@@ -3,9 +3,15 @@ title: "RelatedMarketSegmentGrp"
 subtitle: "This component is used to identify market segments that are related to each other for a business purpose. This component should not be used in lieu of available explicit FIX fields that denote specific relationships (e.g.…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2545</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedMarketSegments (2545)](/fix/fields/tags-2400-2599#tag-2545).
+<llms-only>
+Repeating group · NumInGroup 2545 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRelatedMarketSegments (2545)](/fix/fields/tags-2400-2599#tag-2545-norelatedmarketsegments).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2546 | [RelatedMarketSegmentID](/fix/fields/tags-2400-2599#tag-2546) | String | Optional | Required if NoRelatedMarketSegments (2545) &gt; 0. |
-| 2547 | [MarketSegmentRelationship](/fix/fields/tags-2400-2599#tag-2547) | MarketSegmentRelationshipCodeSet | Optional | Type of relationship between two or more market segments. |
+| 2546 | [RelatedMarketSegmentID](/fix/fields/tags-2400-2599#tag-2546-relatedmarketsegmentid) | String | Optional | Required if NoRelatedMarketSegments (2545) &gt; 0. |
+| 2547 | [MarketSegmentRelationship](/fix/fields/tags-2400-2599#tag-2547-marketsegmentrelationship) | MarketSegmentRelationshipCodeSet | Optional | Type of relationship between two or more market segments. |
 
 </StickyTable>
 

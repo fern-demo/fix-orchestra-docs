@@ -3,9 +3,15 @@ title: "LegPaymentScheduleRateSourceGrp"
 subtitle: "LegPaymentScheduleRateSourceGrp is a repeating component within the LegPaymentScheduleGrp component used to identify primary and secondary rate sources."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40414</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentScheduleRateSources (40414)](/fix/fields/tags-40400-40599#tag-40414).
+<llms-only>
+Repeating group · NumInGroup 40414 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentScheduleRateSources (40414)](/fix/fields/tags-40400-40599#tag-40414-nolegpaymentscheduleratesources).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40415 | [LegPaymentScheduleRateSource](/fix/fields/tags-40400-40599#tag-40415) | RateSourceCodeSet | Optional | Required if NoLegPaymentScheduleRateSources(40414) &gt; 0. |
-| 40416 | [LegPaymentScheduleRateSourceType](/fix/fields/tags-40400-40599#tag-40416) | RateSourceTypeCodeSet | Optional | Required if NoLegPaymentScheduleRateSources(40414) &gt; 0. |
-| 40417 | [LegPaymentScheduleReferencePage](/fix/fields/tags-40400-40599#tag-40417) | String | Optional | Conditionally required when LegPaymentScheduleRateSource(40415) = 99 (Other). |
+| 40415 | [LegPaymentScheduleRateSource](/fix/fields/tags-40400-40599#tag-40415-legpaymentscheduleratesource) | RateSourceCodeSet | Optional | Required if NoLegPaymentScheduleRateSources(40414) &gt; 0. |
+| 40416 | [LegPaymentScheduleRateSourceType](/fix/fields/tags-40400-40599#tag-40416-legpaymentscheduleratesourcetype) | RateSourceTypeCodeSet | Optional | Required if NoLegPaymentScheduleRateSources(40414) &gt; 0. |
+| 40417 | [LegPaymentScheduleReferencePage](/fix/fields/tags-40400-40599#tag-40417-legpaymentschedulereferencepage) | String | Optional | Conditionally required when LegPaymentScheduleRateSource(40415) = 99 (Other). |
 
 </StickyTable>
 

@@ -3,9 +3,15 @@ title: "LegProtectionTermGrp"
 subtitle: "The LegProtectionTermGrp is a repeating component within the InstrumentLeg component used to report protection term details."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41616</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegProtectionTerms (41616)](/fix/fields/tags-41600-41799#tag-41616).
+<llms-only>
+Repeating group · NumInGroup 41616 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegProtectionTerms (41616)](/fix/fields/tags-41600-41799#tag-41616-nolegprotectionterms).
 
 ## Members
 
@@ -13,17 +19,17 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41618 | [LegProtectionTermNotional](/fix/fields/tags-41600-41799#tag-41618) | Amt | Optional | Required if NoLegProtectionTerms(41616) &gt; 0. |
-| 41619 | [LegProtectionTermCurrency](/fix/fields/tags-41600-41799#tag-41619) | Currency | Optional | The currency of LegProtectionTermNotional(41618). Uses ISO 4217 currency codes. |
-| 41620 | [LegProtectionTermSellerNotifies](/fix/fields/tags-41600-41799#tag-41620) | Boolean | Optional | The notifying party is the party that notifies the other party when a credit event has occurred by means of a credit event notice. If more than one party is… |
-| 41621 | [LegProtectionTermBuyerNotifies](/fix/fields/tags-41600-41799#tag-41621) | Boolean | Optional | The notifying party is the party that notifies the other party when a credit event has occurred by means of a credit event notice. If more than one party is… |
-| 41622 | [LegProtectionTermEventBusinessCenter](/fix/fields/tags-41600-41799#tag-41622) | String | Optional | When used, the business center indicates the local time of the business center that replaces the Greenwich Mean Time in Section 3.3 of the 2003 ISDA Credit… |
-| 41623 | [LegProtectionTermStandardSources](/fix/fields/tags-41600-41799#tag-41623) | Boolean | Optional | Indicates whether ISDA defined Standard Public Sources are applicable (LegProtectionTermStandardSources(41623)=Y) or not. |
-| 41624 | [LegProtectionTermEventMinimumSources](/fix/fields/tags-41600-41799#tag-41624) | int | Optional | The minimum number of the specified public information sources that must publish information that reasonably confirms that a credit event has occurred. The… |
+| 41618 | [LegProtectionTermNotional](/fix/fields/tags-41600-41799#tag-41618-legprotectiontermnotional) | Amt | Optional | Required if NoLegProtectionTerms(41616) &gt; 0. |
+| 41619 | [LegProtectionTermCurrency](/fix/fields/tags-41600-41799#tag-41619-legprotectiontermcurrency) | Currency | Optional | The currency of LegProtectionTermNotional(41618). Uses ISO 4217 currency codes. |
+| 41620 | [LegProtectionTermSellerNotifies](/fix/fields/tags-41600-41799#tag-41620-legprotectiontermsellernotifies) | Boolean | Optional | The notifying party is the party that notifies the other party when a credit event has occurred by means of a credit event notice. If more than one party is… |
+| 41621 | [LegProtectionTermBuyerNotifies](/fix/fields/tags-41600-41799#tag-41621-legprotectiontermbuyernotifies) | Boolean | Optional | The notifying party is the party that notifies the other party when a credit event has occurred by means of a credit event notice. If more than one party is… |
+| 41622 | [LegProtectionTermEventBusinessCenter](/fix/fields/tags-41600-41799#tag-41622-legprotectiontermeventbusinesscenter) | String | Optional | When used, the business center indicates the local time of the business center that replaces the Greenwich Mean Time in Section 3.3 of the 2003 ISDA Credit… |
+| 41623 | [LegProtectionTermStandardSources](/fix/fields/tags-41600-41799#tag-41623-legprotectiontermstandardsources) | Boolean | Optional | Indicates whether ISDA defined Standard Public Sources are applicable (LegProtectionTermStandardSources(41623)=Y) or not. |
+| 41624 | [LegProtectionTermEventMinimumSources](/fix/fields/tags-41600-41799#tag-41624-legprotectiontermeventminimumsources) | int | Optional | The minimum number of the specified public information sources that must publish information that reasonably confirms that a credit event has occurred. The… |
 | 41614 | [LegProtectionTermEventNewsSourceGrp](/fix/groups/leg-protection-term-event-news-source-grp) | Repeating group | Optional | LegProtectionTermEventNewsSourceGrp is a repeating subcomponent of the LegProtectionTermGrp component used to specify the particular newspapers or electronic… |
 | 41625 | [LegProtectionTermEventGrp](/fix/groups/leg-protection-term-event-grp) | Repeating group | Optional | The LegProtectionTermEventGrp is a repeating component within the LegProtectionTermGrp component used to report applicable CDS credit events. |
 | 41635 | [LegProtectionTermObligationGrp](/fix/groups/leg-protection-term-obligation-grp) | Repeating group | Optional | The LegProtectionTermObligationGrp is a repeating component within the LegProtectionTermGrp component used to report applicable credit default swap (CDS)… |
-| 41617 | [LegProtectionTermXID](/fix/fields/tags-41600-41799#tag-41617) | XID | Optional | A named string value referenced from UnderlyingLegProtectionTermXIDRef(41314). |
+| 41617 | [LegProtectionTermXID](/fix/fields/tags-41600-41799#tag-41617-legprotectiontermxid) | XID | Optional | A named string value referenced from UnderlyingLegProtectionTermXIDRef(41314). |
 
 </StickyTable>
 

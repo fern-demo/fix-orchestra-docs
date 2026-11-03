@@ -3,7 +3,13 @@ title: "ConfirmationRequest"
 subtitle: "The Confirmation Request message is used to request a Confirmation message."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType BH</Badge> <Badge intent="note" minimal>Confirmation</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType BH · Confirmation · Post Trade · Added FIX.4.4
+</llms-only>
 
 ## Message structure
 
@@ -12,19 +18,19 @@ subtitle: "The Confirmation Request message is used to request a Confirmation me
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 859 | [ConfirmReqID](/fix/fields/tags-800-999#tag-859) | String | **Required** | Unique identifier for this message |
-| 773 | [ConfirmType](/fix/fields/tags-600-799#tag-773) | ConfirmTypeCodeSet | **Required** | Denotes whether this message is being used to request a confirmation or a trade status message |
+| 859 | [ConfirmReqID](/fix/fields/tags-800-999#tag-859-confirmreqid) | String | **Required** | Unique identifier for this message |
+| 773 | [ConfirmType](/fix/fields/tags-600-799#tag-773-confirmtype) | ConfirmTypeCodeSet | **Required** | Denotes whether this message is being used to request a confirmation or a trade status message |
 | 73 | [OrdAllocGrp](/fix/groups/ord-alloc-grp) | Repeating group | Optional |  |
-| 70 | [AllocID](/fix/fields/tags-0-199#tag-70) | String | Optional | Used to refer to an earlier Allocation Instruction. |
-| 793 | [SecondaryAllocID](/fix/fields/tags-600-799#tag-793) | String | Optional | Used to refer to an earlier Allocation Instruction via its secondary identifier |
-| 467 | [IndividualAllocID](/fix/fields/tags-400-599#tag-467) | String | Optional | Used to refer to an allocation account within an earlier Allocation Instruction. |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | **Required** | Represents the time this message was generated |
-| 79 | [AllocAccount](/fix/fields/tags-0-199#tag-79) | String | Optional | Account number for the trade being confirmed by this message |
-| 661 | [AllocAcctIDSource](/fix/fields/tags-600-799#tag-661) | AcctIDSourceCodeSet | Optional | Used to identify the source of the AllocAccount (79) code. See AcctIDSource (660) for valid values. |
-| 798 | [AllocAccountType](/fix/fields/tags-600-799#tag-798) | AllocAccountTypeCodeSet | Optional | Type of account associated with a confirmation or other trade-level message |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
+| 70 | [AllocID](/fix/fields/tags-0-199#tag-70-allocid) | String | Optional | Used to refer to an earlier Allocation Instruction. |
+| 793 | [SecondaryAllocID](/fix/fields/tags-600-799#tag-793-secondaryallocid) | String | Optional | Used to refer to an earlier Allocation Instruction via its secondary identifier |
+| 467 | [IndividualAllocID](/fix/fields/tags-400-599#tag-467-individualallocid) | String | Optional | Used to refer to an allocation account within an earlier Allocation Instruction. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | **Required** | Represents the time this message was generated |
+| 79 | [AllocAccount](/fix/fields/tags-0-199#tag-79-allocaccount) | String | Optional | Account number for the trade being confirmed by this message |
+| 661 | [AllocAcctIDSource](/fix/fields/tags-600-799#tag-661-allocacctidsource) | AcctIDSourceCodeSet | Optional | Used to identify the source of the AllocAccount (79) code. See AcctIDSource (660) for valid values. |
+| 798 | [AllocAccountType](/fix/fields/tags-600-799#tag-798-allocaccounttype) | AllocAccountTypeCodeSet | Optional | Type of account associated with a confirmation or other trade-level message |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Byte length of encoded (non-ASCII characters) EncodedText (355) field. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text (58) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII… |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

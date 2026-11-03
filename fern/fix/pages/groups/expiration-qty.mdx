@@ -3,9 +3,15 @@ title: "ExpirationQty"
 subtitle: "The ExpirationQty component block identified the expiration quantities and type of expiration."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 981</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoExpiration (981)](/fix/fields/tags-800-999#tag-981).
+<llms-only>
+Repeating group · NumInGroup 981 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoExpiration (981)](/fix/fields/tags-800-999#tag-981-noexpiration).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 982 | [ExpirationQtyType](/fix/fields/tags-800-999#tag-982) | ExpirationQtyTypeCodeSet | Optional | Required if NoExpiration &gt; 1 |
-| 983 | [ExpQty](/fix/fields/tags-800-999#tag-983) | Qty | Optional | Expiration Quantity associated with the Expiration Type |
+| 982 | [ExpirationQtyType](/fix/fields/tags-800-999#tag-982-expirationqtytype) | ExpirationQtyTypeCodeSet | Optional | Required if NoExpiration &gt; 1 |
+| 983 | [ExpQty](/fix/fields/tags-800-999#tag-983-expqty) | Qty | Optional | Expiration Quantity associated with the Expiration Type |
 
 </StickyTable>
 

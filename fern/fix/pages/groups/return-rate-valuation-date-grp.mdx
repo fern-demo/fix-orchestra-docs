@@ -3,9 +3,15 @@ title: "ReturnRateValuationDateGrp"
 subtitle: "ReturnRateValuationDateGrp is a repeating subcomponent within the ReturnRateDateGrp component. It is used to specify the fixed valuation dates for an equity return swap payment stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42772</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoReturnRateValuationDates (42772)](/fix/fields/tags-42600-42799#tag-42772).
+<llms-only>
+Repeating group · NumInGroup 42772 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoReturnRateValuationDates (42772)](/fix/fields/tags-42600-42799#tag-42772-noreturnratevaluationdates).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42773 | [ReturnRateValuationDate](/fix/fields/tags-42600-42799#tag-42773) | LocalMktDate | Optional | Required if NoReturnRateValuationDates(42772) &gt; 0. |
-| 42774 | [ReturnRateValuationDateType](/fix/fields/tags-42600-42799#tag-42774) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date instance but to all subsequent date instances in the group until overridden when a new type is specified. |
+| 42773 | [ReturnRateValuationDate](/fix/fields/tags-42600-42799#tag-42773-returnratevaluationdate) | LocalMktDate | Optional | Required if NoReturnRateValuationDates(42772) &gt; 0. |
+| 42774 | [ReturnRateValuationDateType](/fix/fields/tags-42600-42799#tag-42774-returnratevaluationdatetype) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date instance but to all subsequent date instances in the group until overridden when a new type is specified. |
 
 </StickyTable>
 

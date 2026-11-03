@@ -3,9 +3,15 @@ title: "LegPaymentStreamPricingDateGrp"
 subtitle: "The LegPaymentStreamPricingDateGrp is a repeating subcomponent of the LegPaymentStreamFloatingRate component used to detail fixed pricing dates."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41593</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentStreamPricingDates (41593)](/fix/fields/tags-41400-41599#tag-41593).
+<llms-only>
+Repeating group · NumInGroup 41593 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentStreamPricingDates (41593)](/fix/fields/tags-41400-41599#tag-41593-nolegpaymentstreampricingdates).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41594 | [LegPaymentStreamPricingDate](/fix/fields/tags-41400-41599#tag-41594) | LocalMktDate | Optional | Required if NoPaymentStreamPricingDates(41593) &gt; 0. |
-| 41595 | [LegPaymentStreamPricingDateType](/fix/fields/tags-41400-41599#tag-41595) | OptionExerciseDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
+| 41594 | [LegPaymentStreamPricingDate](/fix/fields/tags-41400-41599#tag-41594-legpaymentstreampricingdate) | LocalMktDate | Optional | Required if NoPaymentStreamPricingDates(41593) &gt; 0. |
+| 41595 | [LegPaymentStreamPricingDateType](/fix/fields/tags-41400-41599#tag-41595-legpaymentstreampricingdatetype) | OptionExerciseDateTypeCodeSet | Optional | When specified it applies not only to the current date but to all subsequent dates in the group until overridden with a new type. |
 
 </StickyTable>
 

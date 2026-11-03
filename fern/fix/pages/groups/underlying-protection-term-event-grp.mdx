@@ -3,9 +3,15 @@ title: "UnderlyingProtectionTermEventGrp"
 subtitle: "The UnderlyingProtectionTermEventGrp is a repeating component within the UnderlyingProtectionTermGrp component used to report applicable CDS credit events."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42077</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingProtectionTermEvents (42077)](/fix/fields/tags-42000-42199#tag-42077).
+<llms-only>
+Repeating group · NumInGroup 42077 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingProtectionTermEvents (42077)](/fix/fields/tags-42000-42199#tag-42077-nounderlyingprotectiontermevents).
 
 ## Members
 
@@ -13,13 +19,13 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42078 | [UnderlyingProtectionTermEventType](/fix/fields/tags-42000-42199#tag-42078) | String | Optional | Required if NoUnderlyingProtectionTermEvents (42078) &gt; 0. |
-| 42079 | [UnderlyingProtectionTermEventValue](/fix/fields/tags-42000-42199#tag-42079) | String | Optional | Protection term event value appropriate to UnderlyingProtectionTermEventType(42078). See… |
-| 42080 | [UnderlyingProtectionTermEventCurrency](/fix/fields/tags-42000-42199#tag-42080) | Currency | Optional | Applicable currency if UnderlyingProtectionTermEventValue(42079) is an amount. Uses ISO 4217 currency codes. |
-| 42081 | [UnderlyingProtectionTermEventPeriod](/fix/fields/tags-42000-42199#tag-42081) | int | Optional | Conditionally required when UnderlyingProtectionTermEventUnit(42082) is specified. |
-| 42082 | [UnderlyingProtectionTermEventUnit](/fix/fields/tags-42000-42199#tag-42082) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when UnderlyingProtectionTermEventPeriod(42081) is specified. |
-| 42083 | [UnderlyingProtectionTermEventDayType](/fix/fields/tags-42000-42199#tag-42083) | PaymentStreamInflationLagDayTypeCodeSet | Optional | Day type for events that specify a period and unit. |
-| 42084 | [UnderlyingProtectionTermEventRateSource](/fix/fields/tags-42000-42199#tag-42084) | String | Optional | Rate source for events that specify a rate source, e.g. Floating rate interest shortfall. |
+| 42078 | [UnderlyingProtectionTermEventType](/fix/fields/tags-42000-42199#tag-42078-underlyingprotectiontermeventtype) | String | Optional | Required if NoUnderlyingProtectionTermEvents (42078) &gt; 0. |
+| 42079 | [UnderlyingProtectionTermEventValue](/fix/fields/tags-42000-42199#tag-42079-underlyingprotectiontermeventvalue) | String | Optional | Protection term event value appropriate to UnderlyingProtectionTermEventType(42078). See… |
+| 42080 | [UnderlyingProtectionTermEventCurrency](/fix/fields/tags-42000-42199#tag-42080-underlyingprotectiontermeventcurrency) | Currency | Optional | Applicable currency if UnderlyingProtectionTermEventValue(42079) is an amount. Uses ISO 4217 currency codes. |
+| 42081 | [UnderlyingProtectionTermEventPeriod](/fix/fields/tags-42000-42199#tag-42081-underlyingprotectiontermeventperiod) | int | Optional | Conditionally required when UnderlyingProtectionTermEventUnit(42082) is specified. |
+| 42082 | [UnderlyingProtectionTermEventUnit](/fix/fields/tags-42000-42199#tag-42082-underlyingprotectiontermeventunit) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when UnderlyingProtectionTermEventPeriod(42081) is specified. |
+| 42083 | [UnderlyingProtectionTermEventDayType](/fix/fields/tags-42000-42199#tag-42083-underlyingprotectiontermeventdaytype) | PaymentStreamInflationLagDayTypeCodeSet | Optional | Day type for events that specify a period and unit. |
+| 42084 | [UnderlyingProtectionTermEventRateSource](/fix/fields/tags-42000-42199#tag-42084-underlyingprotectiontermeventratesource) | String | Optional | Rate source for events that specify a rate source, e.g. Floating rate interest shortfall. |
 | 42085 | [UnderlyingProtectionTermEventQualifierGrp](/fix/groups/underlying-protection-term-event-qualifier-grp) | Repeating group | Optional | The UnderlyingProtectionTermEventQualifierGrp is a repeating component within the UnderlyingProtectionTermEventGrp component used to specify qualifying… |
 
 </StickyTable>

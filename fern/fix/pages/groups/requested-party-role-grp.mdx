@@ -3,9 +3,15 @@ title: "RequestedPartyRoleGrp"
 subtitle: "Used to specify one or more PartyRoles as part of a request."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1508</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoRequestedPartyRoles (1508)](/fix/fields/tags-1400-1599#tag-1508).
+<llms-only>
+Repeating group · NumInGroup 1508 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoRequestedPartyRoles (1508)](/fix/fields/tags-1400-1599#tag-1508-norequestedpartyroles).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1509 | [RequestedPartyRole](/fix/fields/tags-1400-1599#tag-1509) | PartyRoleCodeSet | Optional | Identifies the type of party role requested. Required if NoRequestedPartyRoles &gt; 0. |
-| 2386 | [RequestedPartyRoleQualifier](/fix/fields/tags-2200-2399#tag-2386) | PartyDetailRoleQualifierCodeSet | Optional | Used to further qualify the value of RequestedPartyRole(1509). |
+| 1509 | [RequestedPartyRole](/fix/fields/tags-1400-1599#tag-1509-requestedpartyrole) | PartyRoleCodeSet | Optional | Identifies the type of party role requested. Required if NoRequestedPartyRoles &gt; 0. |
+| 2386 | [RequestedPartyRoleQualifier](/fix/fields/tags-2200-2399#tag-2386-requestedpartyrolequalifier) | PartyDetailRoleQualifierCodeSet | Optional | Used to further qualify the value of RequestedPartyRole(1509). |
 
 </StickyTable>
 

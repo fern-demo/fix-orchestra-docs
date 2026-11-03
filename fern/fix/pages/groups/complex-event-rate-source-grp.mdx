@@ -3,9 +3,15 @@ title: "ComplexEventRateSourceGrp"
 subtitle: "The ComplexEventRateSourceGrp is a subcomponent of ComplexEvents for specifying primary and secondary rate sources."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41013</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoComplexEventRateSources (41013)](/fix/fields/tags-41000-41199#tag-41013).
+<llms-only>
+Repeating group · NumInGroup 41013 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoComplexEventRateSources (41013)](/fix/fields/tags-41000-41199#tag-41013-nocomplexeventratesources).
 
 ## Members
 
@@ -13,10 +19,10 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41014 | [ComplexEventRateSource](/fix/fields/tags-41000-41199#tag-41014) | RateSourceCodeSet | Optional | Required if NoComplexEventRateSources(41013) &gt; 0. |
-| 41015 | [ComplexEventRateSourceType](/fix/fields/tags-41000-41199#tag-41015) | RateSourceTypeCodeSet | Optional | Required if NoComplexEventRateSources(41013) &gt; 0. |
-| 41016 | [ComplexEventReferencePage](/fix/fields/tags-41000-41199#tag-41016) | String | Optional | Conditionally required when ComplexEventRateSource(41014) = 99 (Other). |
-| 41017 | [ComplexEventReferencePageHeading](/fix/fields/tags-41000-41199#tag-41017) | String | Optional | Identifies the reference page heading from the rate source. |
+| 41014 | [ComplexEventRateSource](/fix/fields/tags-41000-41199#tag-41014-complexeventratesource) | RateSourceCodeSet | Optional | Required if NoComplexEventRateSources(41013) &gt; 0. |
+| 41015 | [ComplexEventRateSourceType](/fix/fields/tags-41000-41199#tag-41015-complexeventratesourcetype) | RateSourceTypeCodeSet | Optional | Required if NoComplexEventRateSources(41013) &gt; 0. |
+| 41016 | [ComplexEventReferencePage](/fix/fields/tags-41000-41199#tag-41016-complexeventreferencepage) | String | Optional | Conditionally required when ComplexEventRateSource(41014) = 99 (Other). |
+| 41017 | [ComplexEventReferencePageHeading](/fix/fields/tags-41000-41199#tag-41017-complexeventreferencepageheading) | String | Optional | Identifies the reference page heading from the rate source. |
 
 </StickyTable>
 

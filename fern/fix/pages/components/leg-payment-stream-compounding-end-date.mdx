@@ -3,7 +3,13 @@ title: "LegPaymentStreamCompoundingEndDate"
 subtitle: "LegPaymentStreamCompoundingEndDate is a subcomponent of the LegPaymentStreamCompoundingDates component used to specify the end date for compounding."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,12 +17,12 @@ subtitle: "LegPaymentStreamCompoundingEndDate is a subcomponent of the LegPaymen
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42421 | [LegPaymentStreamCompoundingEndDateUnadjusted](/fix/fields/tags-42400-42599#tag-42421) | LocalMktDate | Optional | The unadjusted compounding end date. |
-| 42422 | [LegPaymentStreamCompoundingEndDateRelativeTo](/fix/fields/tags-42400-42599#tag-42422) | int | Optional | Specifies the anchor date when the compounding end date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for… |
-| 42423 | [LegPaymentStreamCompoundingEndDateOffsetPeriod](/fix/fields/tags-42400-42599#tag-42423) | int | Optional | Conditionally required when LegPaymentStreamCompoundingEndDateOffsetUnit(42424) is specified. |
-| 42424 | [LegPaymentStreamCompoundingEndDateOffsetUnit](/fix/fields/tags-42400-42599#tag-42424) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentStreamCompoundingEndDateOffsetPeriod(42423) is specified. |
-| 42425 | [LegPaymentStreamCompoundingEndDateOffsetDayType](/fix/fields/tags-42400-42599#tag-42425) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative compounding end date offset. |
-| 42426 | [LegPaymentStreamCompoundingEndDateAdjusted](/fix/fields/tags-42400-42599#tag-42426) | LocalMktDate | Optional | The adjusted compounding end date. |
+| 42421 | [LegPaymentStreamCompoundingEndDateUnadjusted](/fix/fields/tags-42400-42599#tag-42421-legpaymentstreamcompoundingenddateunadjusted) | LocalMktDate | Optional | The unadjusted compounding end date. |
+| 42422 | [LegPaymentStreamCompoundingEndDateRelativeTo](/fix/fields/tags-42400-42599#tag-42422-legpaymentstreamcompoundingenddaterelativeto) | int | Optional | Specifies the anchor date when the compounding end date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for… |
+| 42423 | [LegPaymentStreamCompoundingEndDateOffsetPeriod](/fix/fields/tags-42400-42599#tag-42423-legpaymentstreamcompoundingenddateoffsetperiod) | int | Optional | Conditionally required when LegPaymentStreamCompoundingEndDateOffsetUnit(42424) is specified. |
+| 42424 | [LegPaymentStreamCompoundingEndDateOffsetUnit](/fix/fields/tags-42400-42599#tag-42424-legpaymentstreamcompoundingenddateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentStreamCompoundingEndDateOffsetPeriod(42423) is specified. |
+| 42425 | [LegPaymentStreamCompoundingEndDateOffsetDayType](/fix/fields/tags-42400-42599#tag-42425-legpaymentstreamcompoundingenddateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative compounding end date offset. |
+| 42426 | [LegPaymentStreamCompoundingEndDateAdjusted](/fix/fields/tags-42400-42599#tag-42426-legpaymentstreamcompoundingenddateadjusted) | LocalMktDate | Optional | The adjusted compounding end date. |
 
 </StickyTable>
 

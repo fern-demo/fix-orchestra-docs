@@ -2,9 +2,15 @@
 title: "CompIDStatGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 936</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoCompIDs (936)](/fix/fields/tags-800-999#tag-936).
+<llms-only>
+Repeating group · NumInGroup 936 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoCompIDs (936)](/fix/fields/tags-800-999#tag-936-nocompids).
 
 ## Members
 
@@ -12,12 +18,12 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 930 | [RefCompID](/fix/fields/tags-800-999#tag-930) | String | **Required** | CompID that status is being report for. Required if NoCompIDs &gt; 0, |
-| 931 | [RefSubID](/fix/fields/tags-800-999#tag-931) | String | Optional | SubID that status is being report for. |
-| 283 | [LocationID](/fix/fields/tags-200-399#tag-283) | String | Optional | LocationID that status is being report for. |
-| 284 | [DeskID](/fix/fields/tags-200-399#tag-284) | String | Optional | DeskID that status is being report for. |
-| 928 | [StatusValue](/fix/fields/tags-800-999#tag-928) | StatusValueCodeSet | **Required** | Indicates the status of a network connection |
-| 929 | [StatusText](/fix/fields/tags-800-999#tag-929) | String | Optional | Additional Information, i.e. "National Holiday" |
+| 930 | [RefCompID](/fix/fields/tags-800-999#tag-930-refcompid) | String | **Required** | CompID that status is being report for. Required if NoCompIDs &gt; 0, |
+| 931 | [RefSubID](/fix/fields/tags-800-999#tag-931-refsubid) | String | Optional | SubID that status is being report for. |
+| 283 | [LocationID](/fix/fields/tags-200-399#tag-283-locationid) | String | Optional | LocationID that status is being report for. |
+| 284 | [DeskID](/fix/fields/tags-200-399#tag-284-deskid) | String | Optional | DeskID that status is being report for. |
+| 928 | [StatusValue](/fix/fields/tags-800-999#tag-928-statusvalue) | StatusValueCodeSet | **Required** | Indicates the status of a network connection |
+| 929 | [StatusText](/fix/fields/tags-800-999#tag-929-statustext) | String | Optional | Additional Information, i.e. "National Holiday" |
 
 </StickyTable>
 

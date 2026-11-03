@@ -3,9 +3,15 @@ title: "SecondaryAssetGrp"
 subtitle: "SecondaryAssetGrp is a repeating subcomponent of the Instrument component used to specify secondary assets of a multi-asset swap."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1976</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoSecondaryAssetClasses (1976)](/fix/fields/tags-1800-1999#tag-1976).
+<llms-only>
+Repeating group · NumInGroup 1976 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoSecondaryAssetClasses (1976)](/fix/fields/tags-1800-1999#tag-1976-nosecondaryassetclasses).
 
 ## Members
 
@@ -13,10 +19,10 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1977 | [SecondaryAssetClass](/fix/fields/tags-1800-1999#tag-1977) | AssetClassCodeSet | Optional | Required if NoSecondaryAssetClasses(1976) &gt; 0. |
-| 1978 | [SecondaryAssetSubClass](/fix/fields/tags-1800-1999#tag-1978) | AssetSubClassCodeSet | Optional | Required if SecondaryAssetType(1979) is specified. |
-| 1979 | [SecondaryAssetType](/fix/fields/tags-1800-1999#tag-1979) | String | Optional | Required if SecondaryAssetSubType(2741) is specified. |
-| 2741 | [SecondaryAssetSubType](/fix/fields/tags-2600-2799#tag-2741) | String | Optional | Used to provide a more specific description of the asset specified in SecondaryAssetType(1979). See https://www.fixtrading.org/codelists/AssetSubType for code… |
+| 1977 | [SecondaryAssetClass](/fix/fields/tags-1800-1999#tag-1977-secondaryassetclass) | AssetClassCodeSet | Optional | Required if NoSecondaryAssetClasses(1976) &gt; 0. |
+| 1978 | [SecondaryAssetSubClass](/fix/fields/tags-1800-1999#tag-1978-secondaryassetsubclass) | AssetSubClassCodeSet | Optional | Required if SecondaryAssetType(1979) is specified. |
+| 1979 | [SecondaryAssetType](/fix/fields/tags-1800-1999#tag-1979-secondaryassettype) | String | Optional | Required if SecondaryAssetSubType(2741) is specified. |
+| 2741 | [SecondaryAssetSubType](/fix/fields/tags-2600-2799#tag-2741-secondaryassetsubtype) | String | Optional | Used to provide a more specific description of the asset specified in SecondaryAssetType(1979). See https://www.fixtrading.org/codelists/AssetSubType for code… |
 
 </StickyTable>
 

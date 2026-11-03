@@ -3,7 +3,13 @@ title: "UnderlyingStreamEffectiveDate"
 subtitle: "UnderlyingStreamEffectivedDate is a subcomponent of the UnderlyingStreamGrp component used to specify the effective date of the stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,14 +17,14 @@ subtitle: "UnderlyingStreamEffectivedDate is a subcomponent of the UnderlyingStr
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40057 | [UnderlyingStreamEffectiveDateUnadjusted](/fix/fields/tags-40000-40199#tag-40057) | LocalMktDate | Optional | The unadjusted effective date. |
-| 40058 | [UnderlyingStreamEffectiveDateBusinessDayConvention](/fix/fields/tags-40000-40199#tag-40058) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
+| 40057 | [UnderlyingStreamEffectiveDateUnadjusted](/fix/fields/tags-40000-40199#tag-40057-underlyingstreameffectivedateunadjusted) | LocalMktDate | Optional | The unadjusted effective date. |
+| 40058 | [UnderlyingStreamEffectiveDateBusinessDayConvention](/fix/fields/tags-40000-40199#tag-40058-underlyingstreameffectivedatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
 | 40975 | [UnderlyingStreamEffectiveDateBusinessCenterGrp](/fix/groups/underlying-stream-effective-date-business-center-grp) | Repeating group | Optional | UnderlyingStreamEffectiveDateBusinessCenterGrp is a repeating subcomponent within the UnderlyingStreamEffectiveDate component. It is used to specify the set of… |
-| 40060 | [UnderlyingStreamEffectiveDateRelativeTo](/fix/fields/tags-40000-40199#tag-40060) | int | Optional | Specifies the anchor date when the effective date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
-| 40061 | [UnderlyingStreamEffectiveDateOffsetPeriod](/fix/fields/tags-40000-40199#tag-40061) | int | Optional | Conditionally required when UnderlyingStreamEffectiveDateOffsetUnit(40062) is specified. |
-| 40062 | [UnderlyingStreamEffectiveDateOffsetUnit](/fix/fields/tags-40000-40199#tag-40062) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingStreamEffectiveDateOffsetPeriod(40061) is specified. |
-| 40063 | [UnderlyingStreamEffectiveDateOffsetDayType](/fix/fields/tags-40000-40199#tag-40063) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative effective date offset. |
-| 40064 | [UnderlyingStreamEffectiveDateAdjusted](/fix/fields/tags-40000-40199#tag-40064) | LocalMktDate | Optional | The adjusted effective date. |
+| 40060 | [UnderlyingStreamEffectiveDateRelativeTo](/fix/fields/tags-40000-40199#tag-40060-underlyingstreameffectivedaterelativeto) | int | Optional | Specifies the anchor date when the effective date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 40061 | [UnderlyingStreamEffectiveDateOffsetPeriod](/fix/fields/tags-40000-40199#tag-40061-underlyingstreameffectivedateoffsetperiod) | int | Optional | Conditionally required when UnderlyingStreamEffectiveDateOffsetUnit(40062) is specified. |
+| 40062 | [UnderlyingStreamEffectiveDateOffsetUnit](/fix/fields/tags-40000-40199#tag-40062-underlyingstreameffectivedateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingStreamEffectiveDateOffsetPeriod(40061) is specified. |
+| 40063 | [UnderlyingStreamEffectiveDateOffsetDayType](/fix/fields/tags-40000-40199#tag-40063-underlyingstreameffectivedateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative effective date offset. |
+| 40064 | [UnderlyingStreamEffectiveDateAdjusted](/fix/fields/tags-40000-40199#tag-40064-underlyingstreameffectivedateadjusted) | LocalMktDate | Optional | The adjusted effective date. |
 
 </StickyTable>
 

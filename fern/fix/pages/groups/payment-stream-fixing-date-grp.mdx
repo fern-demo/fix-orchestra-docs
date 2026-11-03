@@ -3,9 +3,15 @@ title: "PaymentStreamFixingDateGrp"
 subtitle: "PaymentStreamFixingDateGrp is a subcomponent of the PaymentStreamResetDates component used to specify predetermined fixing dates."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42660</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoPaymentStreamFixingDates (42660)](/fix/fields/tags-42600-42799#tag-42660).
+<llms-only>
+Repeating group · NumInGroup 42660 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPaymentStreamFixingDates (42660)](/fix/fields/tags-42600-42799#tag-42660-nopaymentstreamfixingdates).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42661 | [PaymentStreamFixingDate](/fix/fields/tags-42600-42799#tag-42661) | LocalMktDate | Optional | Required if NoPaymentStreamFixingDates(42660) &gt; 0. |
-| 42662 | [PaymentStreamFixingDateType](/fix/fields/tags-42600-42799#tag-42662) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date instance but to all subsequent date instances in the group until overridden when a new type is specified. |
+| 42661 | [PaymentStreamFixingDate](/fix/fields/tags-42600-42799#tag-42661-paymentstreamfixingdate) | LocalMktDate | Optional | Required if NoPaymentStreamFixingDates(42660) &gt; 0. |
+| 42662 | [PaymentStreamFixingDateType](/fix/fields/tags-42600-42799#tag-42662-paymentstreamfixingdatetype) | NonDeliverableFixingDateTypeCodeSet | Optional | When specified it applies not only to the current date instance but to all subsequent date instances in the group until overridden when a new type is specified. |
 
 </StickyTable>
 

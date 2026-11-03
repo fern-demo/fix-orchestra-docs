@@ -3,7 +3,13 @@ title: "DividendAccrualPaymentDate"
 subtitle: "The DividendAccrualPaymentDate component is a subcomponent of DividendConditions used to report the dividend accrual payment date."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,14 +17,14 @@ subtitle: "The DividendAccrualPaymentDate component is a subcomponent of Dividen
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42238 | [DividendAccrualPaymentDateRelativeTo](/fix/fields/tags-42200-42399#tag-42238) | int | Optional | Specifies the anchor date when the accrual payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for… |
-| 42239 | [DividendAccrualPaymentDateOffsetPeriod](/fix/fields/tags-42200-42399#tag-42239) | int | Optional | Conditionally required when DividendAccrualPaymentDateOffsetUnit(42240) is specified. |
-| 42240 | [DividendAccrualPaymentDateOffsetUnit](/fix/fields/tags-42200-42399#tag-42240) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when DividendAccrualPaymentDateOffsetPeriod(42239) is specified. |
-| 42241 | [DividendAccrualPaymentDateOffsetDayType](/fix/fields/tags-42200-42399#tag-42241) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative accrual payment date offset. |
-| 42242 | [DividendAccrualPaymentDateUnadjusted](/fix/fields/tags-42200-42399#tag-42242) | LocalMktDate | Optional | The unadjusted accrual payment date. |
-| 42243 | [DividendAccrualPaymeentDateBusinessDayConvention](/fix/fields/tags-42200-42399#tag-42243) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The value would be specific to this instance… |
+| 42238 | [DividendAccrualPaymentDateRelativeTo](/fix/fields/tags-42200-42399#tag-42238-dividendaccrualpaymentdaterelativeto) | int | Optional | Specifies the anchor date when the accrual payment date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for… |
+| 42239 | [DividendAccrualPaymentDateOffsetPeriod](/fix/fields/tags-42200-42399#tag-42239-dividendaccrualpaymentdateoffsetperiod) | int | Optional | Conditionally required when DividendAccrualPaymentDateOffsetUnit(42240) is specified. |
+| 42240 | [DividendAccrualPaymentDateOffsetUnit](/fix/fields/tags-42200-42399#tag-42240-dividendaccrualpaymentdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when DividendAccrualPaymentDateOffsetPeriod(42239) is specified. |
+| 42241 | [DividendAccrualPaymentDateOffsetDayType](/fix/fields/tags-42200-42399#tag-42241-dividendaccrualpaymentdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative accrual payment date offset. |
+| 42242 | [DividendAccrualPaymentDateUnadjusted](/fix/fields/tags-42200-42399#tag-42242-dividendaccrualpaymentdateunadjusted) | LocalMktDate | Optional | The unadjusted accrual payment date. |
+| 42243 | [DividendAccrualPaymeentDateBusinessDayConvention](/fix/fields/tags-42200-42399#tag-42243-dividendaccrualpaymeentdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The value would be specific to this instance… |
 | 42236 | [DividendAccrualPaymentDateBusinessCenterGrp](/fix/groups/dividend-accrual-payment-date-business-center-grp) | Repeating group | Optional | DividendAccrualPaymentDateBusinessCenterGrp is a repeating subcomponent within the DividendAccrualPaymentDate component. It is used to specify the set of… |
-| 42244 | [DividendAccrualPaymentDateAdjusted](/fix/fields/tags-42200-42399#tag-42244) | LocalMktDate | Optional | The adjusted accrual payment date. |
+| 42244 | [DividendAccrualPaymentDateAdjusted](/fix/fields/tags-42200-42399#tag-42244-dividendaccrualpaymentdateadjusted) | LocalMktDate | Optional | The adjusted accrual payment date. |
 
 </StickyTable>
 

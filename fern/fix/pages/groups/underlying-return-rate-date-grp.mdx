@@ -3,9 +3,15 @@ title: "UnderlyingReturnRateDateGrp"
 subtitle: "UnderlyingReturnRateDateGrp is a repeating subcomponent within the UnderlyingReturnRateGrp component. It is used to specify the equity and dividend valuation dates for an equity return swap payment stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 43008</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingReturnRateDates (43008)](/fix/fields/tags-43000-43199#tag-43008).
+<llms-only>
+Repeating group · NumInGroup 43008 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingReturnRateDates (43008)](/fix/fields/tags-43000-43199#tag-43008-nounderlyingreturnratedates).
 
 ## Members
 
@@ -13,28 +19,28 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 43009 | [UnderlyingReturnRateDateMode](/fix/fields/tags-43000-43199#tag-43009) | ReturnRateDateModeCodeSet | Optional | Required if NoUnderlyingReturnRateDates(43008) &gt; 0. |
+| 43009 | [UnderlyingReturnRateDateMode](/fix/fields/tags-43000-43199#tag-43009-underlyingreturnratedatemode) | ReturnRateDateModeCodeSet | Optional | Required if NoUnderlyingReturnRateDates(43008) &gt; 0. |
 | 43071 | [UnderlyingReturnRateValuationDateGrp](/fix/groups/underlying-return-rate-valuation-date-grp) | Repeating group | Optional | UnderlyingReturnRateValuationDateGrp is a repeating subcomponent within the UnderlyingReturnRateDateGrp component. It is used to specify the fixed valuation… |
-| 43010 | [UnderlyingReturnRateValuationDateRelativeTo](/fix/fields/tags-43000-43199#tag-43010) | int | Optional | Specifies the anchor date when the return rate valuation dates are relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date… |
-| 43011 | [UnderlyingReturnRateValuationDateOffsetPeriod](/fix/fields/tags-43000-43199#tag-43011) | int | Optional | Conditionally required when UnderlyingReturnRateValuationDateOffsetUnit(43012) is specified. |
-| 43012 | [UnderlyingReturnRateValuationDateOffsetUnit](/fix/fields/tags-43000-43199#tag-43012) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingReturnRateValuationDateOffsetPeriod(43011) is specified. |
-| 43013 | [UnderlyingReturnRateValuationDateOffsetDayType](/fix/fields/tags-43000-43199#tag-43013) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative return rate valuation date offset. |
-| 43014 | [UnderlyingReturnRateValuationStartDateUnadjusted](/fix/fields/tags-43000-43199#tag-43014) | LocalMktDate | Optional | The unadjusted start date for return rate valuation. This can be used to restrict the range of dates when they are relative. |
-| 43015 | [UnderlyingReturnRateValuationStartDateRelativeTo](/fix/fields/tags-43000-43199#tag-43015) | int | Optional | Specifies the anchor date when the return rate valuation start date is relative to an anchor date. See… |
-| 43016 | [UnderlyingReturnRateValuationStartDateOffsetPeriod](/fix/fields/tags-43000-43199#tag-43016) | int | Optional | Conditionally required when UnderlyingReturnRateValuationStartDateOffsetUnit(43017) is specified. |
-| 43017 | [UnderlyingReturnRateValuationStartDateOffsetUnit](/fix/fields/tags-43000-43199#tag-43017) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingReturnRateValuationStartDateOffsetPeriod(43016) is specified. |
-| 43018 | [UnderlyingReturnRateValuationStartDateOffsetDayType](/fix/fields/tags-43000-43199#tag-43018) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative return rate valuation start date offset. |
-| 43019 | [UnderlyingReturnRateValuationStartDateAdjusted](/fix/fields/tags-43000-43199#tag-43019) | LocalMktDate | Optional | The adjusted start date for return rate valuation. This can be used to restrict the range of dates when they are relative. |
-| 43020 | [UnderlyingReturnRateValuationEndDateUnadjusted](/fix/fields/tags-43000-43199#tag-43020) | LocalMktDate | Optional | The unadjusted end date for return rate valuation. This can be used to restrict the range of dates when they are relative. |
-| 43021 | [UnderlyingReturnRateValuationEndDateRelativeTo](/fix/fields/tags-43000-43199#tag-43021) | int | Optional | Specifies the anchor date when the return rate valuation end date is relative to an anchor date. See… |
-| 43022 | [UnderlyingReturnRateValuationEndDateOffsetPeriod](/fix/fields/tags-43000-43199#tag-43022) | int | Optional | Conditionally required when UnderlyingReturnRateValuationEndDateOffsetUnit(43023) is specified. |
-| 43023 | [UnderlyingReturnRateValuationEndDateOffsetUnit](/fix/fields/tags-43000-43199#tag-43023) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingReturnRateValuationEndDateOffsetPeriod(43022) is specified. |
-| 43024 | [UnderlyingReturnRateValuationEndDateOffsetDayType](/fix/fields/tags-43000-43199#tag-43024) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative return rate valuation end date offset. |
-| 43025 | [UnderlyingReturnRateValuationEndDateAdjusted](/fix/fields/tags-43000-43199#tag-43025) | LocalMktDate | Optional | The adjusted end date for return rate valuation. This can be used to restrict the range of dates when they are relative. |
-| 43026 | [UnderlyingReturnRateValuationFrequencyPeriod](/fix/fields/tags-43000-43199#tag-43026) | int | Optional | Conditionally required when UnderlyingReturnRateValuationFrequencyUnit(43027) is specified. |
-| 43027 | [UnderlyingReturnRateValuationFrequencyUnit](/fix/fields/tags-43000-43199#tag-43027) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when UnderlyingReturnRateValuationFrequencyPeriod(43026) is specified. |
-| 43028 | [UnderlyingReturnRateValuationFrequencyRollConvention](/fix/fields/tags-43000-43199#tag-43028) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified values would be… |
-| 43029 | [UnderlyingReturnRateValuationDateBusinessDayConvention](/fix/fields/tags-43000-43199#tag-43029) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
+| 43010 | [UnderlyingReturnRateValuationDateRelativeTo](/fix/fields/tags-43000-43199#tag-43010-underlyingreturnratevaluationdaterelativeto) | int | Optional | Specifies the anchor date when the return rate valuation dates are relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date… |
+| 43011 | [UnderlyingReturnRateValuationDateOffsetPeriod](/fix/fields/tags-43000-43199#tag-43011-underlyingreturnratevaluationdateoffsetperiod) | int | Optional | Conditionally required when UnderlyingReturnRateValuationDateOffsetUnit(43012) is specified. |
+| 43012 | [UnderlyingReturnRateValuationDateOffsetUnit](/fix/fields/tags-43000-43199#tag-43012-underlyingreturnratevaluationdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingReturnRateValuationDateOffsetPeriod(43011) is specified. |
+| 43013 | [UnderlyingReturnRateValuationDateOffsetDayType](/fix/fields/tags-43000-43199#tag-43013-underlyingreturnratevaluationdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative return rate valuation date offset. |
+| 43014 | [UnderlyingReturnRateValuationStartDateUnadjusted](/fix/fields/tags-43000-43199#tag-43014-underlyingreturnratevaluationstartdateunadjusted) | LocalMktDate | Optional | The unadjusted start date for return rate valuation. This can be used to restrict the range of dates when they are relative. |
+| 43015 | [UnderlyingReturnRateValuationStartDateRelativeTo](/fix/fields/tags-43000-43199#tag-43015-underlyingreturnratevaluationstartdaterelativeto) | int | Optional | Specifies the anchor date when the return rate valuation start date is relative to an anchor date. See… |
+| 43016 | [UnderlyingReturnRateValuationStartDateOffsetPeriod](/fix/fields/tags-43000-43199#tag-43016-underlyingreturnratevaluationstartdateoffsetperiod) | int | Optional | Conditionally required when UnderlyingReturnRateValuationStartDateOffsetUnit(43017) is specified. |
+| 43017 | [UnderlyingReturnRateValuationStartDateOffsetUnit](/fix/fields/tags-43000-43199#tag-43017-underlyingreturnratevaluationstartdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingReturnRateValuationStartDateOffsetPeriod(43016) is specified. |
+| 43018 | [UnderlyingReturnRateValuationStartDateOffsetDayType](/fix/fields/tags-43000-43199#tag-43018-underlyingreturnratevaluationstartdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative return rate valuation start date offset. |
+| 43019 | [UnderlyingReturnRateValuationStartDateAdjusted](/fix/fields/tags-43000-43199#tag-43019-underlyingreturnratevaluationstartdateadjusted) | LocalMktDate | Optional | The adjusted start date for return rate valuation. This can be used to restrict the range of dates when they are relative. |
+| 43020 | [UnderlyingReturnRateValuationEndDateUnadjusted](/fix/fields/tags-43000-43199#tag-43020-underlyingreturnratevaluationenddateunadjusted) | LocalMktDate | Optional | The unadjusted end date for return rate valuation. This can be used to restrict the range of dates when they are relative. |
+| 43021 | [UnderlyingReturnRateValuationEndDateRelativeTo](/fix/fields/tags-43000-43199#tag-43021-underlyingreturnratevaluationenddaterelativeto) | int | Optional | Specifies the anchor date when the return rate valuation end date is relative to an anchor date. See… |
+| 43022 | [UnderlyingReturnRateValuationEndDateOffsetPeriod](/fix/fields/tags-43000-43199#tag-43022-underlyingreturnratevaluationenddateoffsetperiod) | int | Optional | Conditionally required when UnderlyingReturnRateValuationEndDateOffsetUnit(43023) is specified. |
+| 43023 | [UnderlyingReturnRateValuationEndDateOffsetUnit](/fix/fields/tags-43000-43199#tag-43023-underlyingreturnratevaluationenddateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when UnderlyingReturnRateValuationEndDateOffsetPeriod(43022) is specified. |
+| 43024 | [UnderlyingReturnRateValuationEndDateOffsetDayType](/fix/fields/tags-43000-43199#tag-43024-underlyingreturnratevaluationenddateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative return rate valuation end date offset. |
+| 43025 | [UnderlyingReturnRateValuationEndDateAdjusted](/fix/fields/tags-43000-43199#tag-43025-underlyingreturnratevaluationenddateadjusted) | LocalMktDate | Optional | The adjusted end date for return rate valuation. This can be used to restrict the range of dates when they are relative. |
+| 43026 | [UnderlyingReturnRateValuationFrequencyPeriod](/fix/fields/tags-43000-43199#tag-43026-underlyingreturnratevaluationfrequencyperiod) | int | Optional | Conditionally required when UnderlyingReturnRateValuationFrequencyUnit(43027) is specified. |
+| 43027 | [UnderlyingReturnRateValuationFrequencyUnit](/fix/fields/tags-43000-43199#tag-43027-underlyingreturnratevaluationfrequencyunit) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when UnderlyingReturnRateValuationFrequencyPeriod(43026) is specified. |
+| 43028 | [UnderlyingReturnRateValuationFrequencyRollConvention](/fix/fields/tags-43000-43199#tag-43028-underlyingreturnratevaluationfrequencyrollconvention) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified values would be… |
+| 43029 | [UnderlyingReturnRateValuationDateBusinessDayConvention](/fix/fields/tags-43000-43199#tag-43029-underlyingreturnratevaluationdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would… |
 | 43069 | [UnderlyingReturnRateValuationDateBusinessCenterGrp](/fix/groups/underlying-return-rate-valuation-date-business-center-grp) | Repeating group | Optional | UnderlyingReturnRateValuationDateBusinessCenterGrp is a repeating subcomponent within the UnderlyingReturnRateValuationDateGrp component. It is used to specify… |
 
 </StickyTable>

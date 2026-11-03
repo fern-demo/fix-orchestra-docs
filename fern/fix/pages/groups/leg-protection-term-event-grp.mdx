@@ -3,9 +3,15 @@ title: "LegProtectionTermEventGrp"
 subtitle: "The LegProtectionTermEventGrp is a repeating component within the LegProtectionTermGrp component used to report applicable CDS credit events."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41625</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegProtectionTermEvents (41625)](/fix/fields/tags-41600-41799#tag-41625).
+<llms-only>
+Repeating group · NumInGroup 41625 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegProtectionTermEvents (41625)](/fix/fields/tags-41600-41799#tag-41625-nolegprotectiontermevents).
 
 ## Members
 
@@ -13,13 +19,13 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41626 | [LegProtectionTermEventType](/fix/fields/tags-41600-41799#tag-41626) | String | Optional | Required if NoLegProtectionTermEvents(41625) &gt; 0. |
-| 41627 | [LegProtectionTermEventValue](/fix/fields/tags-41600-41799#tag-41627) | String | Optional | Specifies the protection term event value appropriate to LegProtectionTermEventType(41626). See… |
-| 41628 | [LegProtectionTermEventCurrency](/fix/fields/tags-41600-41799#tag-41628) | Currency | Optional | Applicable currency if the event value is an amount. Uses ISO 4217 currency codes. |
-| 41629 | [LegProtectionTermEventPeriod](/fix/fields/tags-41600-41799#tag-41629) | int | Optional | Conditionally required when LegProtectionTermEventUnit(41630). |
-| 41630 | [LegProtectionTermEventUnit](/fix/fields/tags-41600-41799#tag-41630) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when LegProtectionTermEventPeriod(41629). |
-| 41631 | [LegProtectionTermEventDayType](/fix/fields/tags-41600-41799#tag-41631) | PaymentStreamInflationLagDayTypeCodeSet | Optional | Specifies the day type for protection term events. |
-| 41632 | [LegProtectionTermEventRateSource](/fix/fields/tags-41600-41799#tag-41632) | String | Optional | Rate source for events that specify a rate source, e.g. floating rate interest shortfall. |
+| 41626 | [LegProtectionTermEventType](/fix/fields/tags-41600-41799#tag-41626-legprotectiontermeventtype) | String | Optional | Required if NoLegProtectionTermEvents(41625) &gt; 0. |
+| 41627 | [LegProtectionTermEventValue](/fix/fields/tags-41600-41799#tag-41627-legprotectiontermeventvalue) | String | Optional | Specifies the protection term event value appropriate to LegProtectionTermEventType(41626). See… |
+| 41628 | [LegProtectionTermEventCurrency](/fix/fields/tags-41600-41799#tag-41628-legprotectiontermeventcurrency) | Currency | Optional | Applicable currency if the event value is an amount. Uses ISO 4217 currency codes. |
+| 41629 | [LegProtectionTermEventPeriod](/fix/fields/tags-41600-41799#tag-41629-legprotectiontermeventperiod) | int | Optional | Conditionally required when LegProtectionTermEventUnit(41630). |
+| 41630 | [LegProtectionTermEventUnit](/fix/fields/tags-41600-41799#tag-41630-legprotectiontermeventunit) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when LegProtectionTermEventPeriod(41629). |
+| 41631 | [LegProtectionTermEventDayType](/fix/fields/tags-41600-41799#tag-41631-legprotectiontermeventdaytype) | PaymentStreamInflationLagDayTypeCodeSet | Optional | Specifies the day type for protection term events. |
+| 41632 | [LegProtectionTermEventRateSource](/fix/fields/tags-41600-41799#tag-41632-legprotectiontermeventratesource) | String | Optional | Rate source for events that specify a rate source, e.g. floating rate interest shortfall. |
 | 41633 | [LegProtectionTermEventQualifierGrp](/fix/groups/leg-protection-term-event-qualifier-grp) | Repeating group | Optional | The LegProtectionTermEventQualifierGrp is a repeating component within the LegProtectionTermEventGrp component used to specify qualifying attributes to the… |
 
 </StickyTable>

@@ -3,7 +3,13 @@ title: "NewOrderList"
 subtitle: "The NewOrderList Message can be used in one of two ways depending on which market conventions are being followed."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType E</Badge> <Badge intent="note" minimal>Program Trading</Badge> <Badge intent="tip" minimal>Trade</Badge> <Badge intent="success" minimal>Added FIX.2.7</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType E · Program Trading · Trade · Added FIX.2.7
+</llms-only>
 
 ## Message structure
 
@@ -12,29 +18,29 @@ subtitle: "The NewOrderList Message can be used in one of two ways depending on 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 66 | [ListID](/fix/fields/tags-0-199#tag-66) | String | **Required** | Must be unique, by customer, for the day |
-| 390 | [BidID](/fix/fields/tags-200-399#tag-390) | String | Optional | Should refer to an earlier program if bidding took place. |
-| 391 | [ClientBidID](/fix/fields/tags-200-399#tag-391) | String | Optional | Unique identifier for a Bid Request as assigned by institution. Uniqueness must be guaranteed within a single trading day. |
-| 414 | [ProgRptReqs](/fix/fields/tags-400-599#tag-414) | ProgRptReqsCodeSet | Optional | Code to identify the desired frequency of progress reports. |
-| 394 | [BidType](/fix/fields/tags-200-399#tag-394) | BidTypeCodeSet | **Required** | e.g. Non Disclosed Model, Disclosed Model, No Bidding Process |
-| 415 | [ProgPeriodInterval](/fix/fields/tags-400-599#tag-415) | int | Optional | Time in minutes between each ListStatus report sent by SellSide. Zero means don't send status. |
-| 480 | [CancellationRights](/fix/fields/tags-400-599#tag-480) | CancellationRightsCodeSet | Optional | For CIV - Optional |
-| 481 | [MoneyLaunderingStatus](/fix/fields/tags-400-599#tag-481) | MoneyLaunderingStatusCodeSet | Optional | A one character code identifying Money laundering status. |
-| 513 | [RegistID](/fix/fields/tags-400-599#tag-513) | String | Optional | Reference to Registration Instructions message applicable to all Orders in this List. |
-| 433 | [ListExecInstType](/fix/fields/tags-400-599#tag-433) | ListExecInstTypeCodeSet | Optional | Controls when execution should begin For CIV Orders indicates order of execution.. |
-| 69 | [ListExecInst](/fix/fields/tags-0-199#tag-69) | String | Optional | Free-form text. |
-| 1385 | [ContingencyType](/fix/fields/tags-1200-1399#tag-1385) | ContingencyTypeCodeSet | Optional | Used for contingency orders. |
-| 352 | [EncodedListExecInstLen](/fix/fields/tags-200-399#tag-352) | Length | Optional | Must be set if EncodedListExecInst field is specified and must immediately precede it. |
-| 353 | [EncodedListExecInst](/fix/fields/tags-200-399#tag-353) | data | Optional | Encoded (non-ASCII characters) representation of the ListExecInst field in the encoded format specified via the MessageEncoding field. |
-| 765 | [AllowableOneSidednessPct](/fix/fields/tags-600-799#tag-765) | Percentage | Optional | The maximum percentage that execution of one side of a program trade can exceed execution of the other. |
-| 766 | [AllowableOneSidednessValue](/fix/fields/tags-600-799#tag-766) | Amt | Optional | The maximum amount that execution of one side of a program trade can exceed execution of the other. |
-| 767 | [AllowableOneSidednessCurr](/fix/fields/tags-600-799#tag-767) | Currency | Optional | The currency that AllowableOneSidedness is expressed in if AllowableOneSidednessValue is used. |
-| 2401 | [ListManualOrderIndicator](/fix/fields/tags-2400-2599#tag-2401) | Boolean | Optional | Indicates if the list of orders was initially received manually (as opposed to electronically) or if it was entered manually (as opposed to entered by automated… |
-| 68 | [TotNoOrders](/fix/fields/tags-0-199#tag-68) | int | **Required** | Used to support fragmentation. Sum of NoOrders across all messages with the same ListID. |
-| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893) | LastFragmentCodeSet | Optional | Indicates whether this is the last fragment in a sequence of message fragments. Only required where message has been fragmented. |
+| 66 | [ListID](/fix/fields/tags-0-199#tag-66-listid) | String | **Required** | Must be unique, by customer, for the day |
+| 390 | [BidID](/fix/fields/tags-200-399#tag-390-bidid) | String | Optional | Should refer to an earlier program if bidding took place. |
+| 391 | [ClientBidID](/fix/fields/tags-200-399#tag-391-clientbidid) | String | Optional | Unique identifier for a Bid Request as assigned by institution. Uniqueness must be guaranteed within a single trading day. |
+| 414 | [ProgRptReqs](/fix/fields/tags-400-599#tag-414-progrptreqs) | ProgRptReqsCodeSet | Optional | Code to identify the desired frequency of progress reports. |
+| 394 | [BidType](/fix/fields/tags-200-399#tag-394-bidtype) | BidTypeCodeSet | **Required** | e.g. Non Disclosed Model, Disclosed Model, No Bidding Process |
+| 415 | [ProgPeriodInterval](/fix/fields/tags-400-599#tag-415-progperiodinterval) | int | Optional | Time in minutes between each ListStatus report sent by SellSide. Zero means don't send status. |
+| 480 | [CancellationRights](/fix/fields/tags-400-599#tag-480-cancellationrights) | CancellationRightsCodeSet | Optional | For CIV - Optional |
+| 481 | [MoneyLaunderingStatus](/fix/fields/tags-400-599#tag-481-moneylaunderingstatus) | MoneyLaunderingStatusCodeSet | Optional | A one character code identifying Money laundering status. |
+| 513 | [RegistID](/fix/fields/tags-400-599#tag-513-registid) | String | Optional | Reference to Registration Instructions message applicable to all Orders in this List. |
+| 433 | [ListExecInstType](/fix/fields/tags-400-599#tag-433-listexecinsttype) | ListExecInstTypeCodeSet | Optional | Controls when execution should begin For CIV Orders indicates order of execution.. |
+| 69 | [ListExecInst](/fix/fields/tags-0-199#tag-69-listexecinst) | String | Optional | Free-form text. |
+| 1385 | [ContingencyType](/fix/fields/tags-1200-1399#tag-1385-contingencytype) | ContingencyTypeCodeSet | Optional | Used for contingency orders. |
+| 352 | [EncodedListExecInstLen](/fix/fields/tags-200-399#tag-352-encodedlistexecinstlen) | Length | Optional | Must be set if EncodedListExecInst field is specified and must immediately precede it. |
+| 353 | [EncodedListExecInst](/fix/fields/tags-200-399#tag-353-encodedlistexecinst) | data | Optional | Encoded (non-ASCII characters) representation of the ListExecInst field in the encoded format specified via the MessageEncoding field. |
+| 765 | [AllowableOneSidednessPct](/fix/fields/tags-600-799#tag-765-allowableonesidednesspct) | Percentage | Optional | The maximum percentage that execution of one side of a program trade can exceed execution of the other. |
+| 766 | [AllowableOneSidednessValue](/fix/fields/tags-600-799#tag-766-allowableonesidednessvalue) | Amt | Optional | The maximum amount that execution of one side of a program trade can exceed execution of the other. |
+| 767 | [AllowableOneSidednessCurr](/fix/fields/tags-600-799#tag-767-allowableonesidednesscurr) | Currency | Optional | The currency that AllowableOneSidedness is expressed in if AllowableOneSidednessValue is used. |
+| 2401 | [ListManualOrderIndicator](/fix/fields/tags-2400-2599#tag-2401-listmanualorderindicator) | Boolean | Optional | Indicates if the list of orders was initially received manually (as opposed to electronically) or if it was entered manually (as opposed to entered by automated… |
+| 68 | [TotNoOrders](/fix/fields/tags-0-199#tag-68-totnoorders) | int | **Required** | Used to support fragmentation. Sum of NoOrders across all messages with the same ListID. |
+| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893-lastfragment) | LastFragmentCodeSet | Optional | Indicates whether this is the last fragment in a sequence of message fragments. Only required where message has been fragmented. |
 | 1116 | [RootParties](/fix/groups/root-parties) | Repeating group | Optional | The RootParties component block is a version of the Parties component block used to provide root information regarding the owning and entering parties of a… |
 | 73 | [ListOrdGrp](/fix/groups/list-ord-grp) | Repeating group | **Required** |  |
-| 1685 | [ThrottleInst](/fix/fields/tags-1600-1799#tag-1685) | ThrottleInstCodeSet | Optional | Describes action recipient should take if a throttle limit were exceeded. |
+| 1685 | [ThrottleInst](/fix/fields/tags-1600-1799#tag-1685-throttleinst) | ThrottleInstCodeSet | Optional | Describes action recipient should take if a throttle limit were exceeded. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

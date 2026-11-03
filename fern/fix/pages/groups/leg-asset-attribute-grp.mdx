@@ -3,9 +3,15 @@ title: "LegAssetAttributeGrp"
 subtitle: "The LegAssetAttributeGrp is a repeating subcomponent of the InstrumentLeg component used to detail attributes of the instrument asset."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2308</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegAssetAttributes (2308)](/fix/fields/tags-2200-2399#tag-2308).
+<llms-only>
+Repeating group · NumInGroup 2308 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegAssetAttributes (2308)](/fix/fields/tags-2200-2399#tag-2308-nolegassetattributes).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2309 | [LegAssetAttributeType](/fix/fields/tags-2200-2399#tag-2309) | String | Optional | Required if NoLegAssetAttributes(2308) &gt; 0. |
-| 2310 | [LegAssetAttributeValue](/fix/fields/tags-2200-2399#tag-2310) | String | Optional | Specifies the value of the attribute. |
-| 2311 | [LegAssetAttributeLimit](/fix/fields/tags-2200-2399#tag-2311) | String | Optional | Limit or lower acceptable value of the attribute. |
+| 2309 | [LegAssetAttributeType](/fix/fields/tags-2200-2399#tag-2309-legassetattributetype) | String | Optional | Required if NoLegAssetAttributes(2308) &gt; 0. |
+| 2310 | [LegAssetAttributeValue](/fix/fields/tags-2200-2399#tag-2310-legassetattributevalue) | String | Optional | Specifies the value of the attribute. |
+| 2311 | [LegAssetAttributeLimit](/fix/fields/tags-2200-2399#tag-2311-legassetattributelimit) | String | Optional | Limit or lower acceptable value of the attribute. |
 
 </StickyTable>
 

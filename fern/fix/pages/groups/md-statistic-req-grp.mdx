@@ -3,9 +3,15 @@ title: "MDStatisticReqGrp"
 subtitle: "This component block is used within the MarketDataStatisticsRequest(35=DO) message to define a set of parameters describing the desired statistics."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2474</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoMDStatistics (2474)](/fix/fields/tags-2400-2599#tag-2474).
+<llms-only>
+Repeating group · NumInGroup 2474 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoMDStatistics (2474)](/fix/fields/tags-2400-2599#tag-2474-nomdstatistics).
 
 ## Members
 
@@ -13,7 +19,7 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2475 | [MDStatisticID](/fix/fields/tags-2400-2599#tag-2475) | String | Optional | Required if NoMDStatistics(2474) &gt; 0. Unique statistics identifier used as a placeholder for a set of parameters. If an ID is not applicable use "\[N/A\]". |
+| 2475 | [MDStatisticID](/fix/fields/tags-2400-2599#tag-2475-mdstatisticid) | String | Optional | Required if NoMDStatistics(2474) &gt; 0. Unique statistics identifier used as a placeholder for a set of parameters. If an ID is not applicable use "\[N/A\]". |
 | | [MDStatisticParameters](/fix/components/md-statistic-parameters) | Component | Optional | This component comprises all parameters that can be used to describe the market data statistics. These can be part of the request as well as the response. All… |
 
 </StickyTable>

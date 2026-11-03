@@ -3,9 +3,15 @@ title: "LegComplexEventScheduleGrp"
 subtitle: "LegComplexEventScheduleGrp is a subcomponent of LegComplexEventPeriodGrp for specifying a periodic schedule for an Asian, Barrier or Strike Schedule option feature."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41400</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegComplexEventSchedules (41400)](/fix/fields/tags-41400-41599#tag-41400).
+<llms-only>
+Repeating group · NumInGroup 41400 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegComplexEventSchedules (41400)](/fix/fields/tags-41400-41599#tag-41400-nolegcomplexeventschedules).
 
 ## Members
 
@@ -13,11 +19,11 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41401 | [LegComplexEventScheduleStartDate](/fix/fields/tags-41400-41599#tag-41401) | LocalMktDate | Optional | Required if NoLegComplexEventScedules(41400) &gt; 0. |
-| 41402 | [LegComplexEventScheduleEndDate](/fix/fields/tags-41400-41599#tag-41402) | LocalMktDate | Optional | The end date of the schedule. |
-| 41403 | [LegComplexEventScheduleFrequencyPeriod](/fix/fields/tags-41400-41599#tag-41403) | int | Optional | Conditionally required when LegComplexEventScheduleFrequencyUnit(41404) is specified. |
-| 41404 | [LegComplexEventScheduleFrequencyUnit](/fix/fields/tags-41400-41599#tag-41404) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when LegComplexEventScheduleFrequencyPeriod(41403) is specified. |
-| 41405 | [LegComplexEventScheduleRollConvention](/fix/fields/tags-41400-41599#tag-41405) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the LegDateAdjustment component in InstrumentLeg. The specified values would be specific to… |
+| 41401 | [LegComplexEventScheduleStartDate](/fix/fields/tags-41400-41599#tag-41401-legcomplexeventschedulestartdate) | LocalMktDate | Optional | Required if NoLegComplexEventScedules(41400) &gt; 0. |
+| 41402 | [LegComplexEventScheduleEndDate](/fix/fields/tags-41400-41599#tag-41402-legcomplexeventscheduleenddate) | LocalMktDate | Optional | The end date of the schedule. |
+| 41403 | [LegComplexEventScheduleFrequencyPeriod](/fix/fields/tags-41400-41599#tag-41403-legcomplexeventschedulefrequencyperiod) | int | Optional | Conditionally required when LegComplexEventScheduleFrequencyUnit(41404) is specified. |
+| 41404 | [LegComplexEventScheduleFrequencyUnit](/fix/fields/tags-41400-41599#tag-41404-legcomplexeventschedulefrequencyunit) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when LegComplexEventScheduleFrequencyPeriod(41403) is specified. |
+| 41405 | [LegComplexEventScheduleRollConvention](/fix/fields/tags-41400-41599#tag-41405-legcomplexeventschedulerollconvention) | DateRollConventionCodeSet | Optional | When specified, this overrides the date roll convention defined in the LegDateAdjustment component in InstrumentLeg. The specified values would be specific to… |
 
 </StickyTable>
 

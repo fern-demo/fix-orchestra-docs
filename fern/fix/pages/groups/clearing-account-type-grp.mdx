@@ -3,11 +3,17 @@ title: "ClearingAccountTypeGrp"
 subtitle: "The ClearingAccountTypeGrp component is used specify the type of clearing account types."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1918</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Repeating group · NumInGroup 1918 · Added FIX.5.0SP2
+</llms-only>
 
 When used within the PriceMovementGrp, the ClearingAccountTypeGrp specifies the type of account the price movement data is applicable for.
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoClearingAccountTypes (1918)](/fix/fields/tags-1800-1999#tag-1918).
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoClearingAccountTypes (1918)](/fix/fields/tags-1800-1999#tag-1918-noclearingaccounttypes).
 
 ## Members
 
@@ -15,7 +21,7 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1816 | [ClearingAccountType](/fix/fields/tags-1800-1999#tag-1816) | ClearingAccountTypeCodeSet | Optional | Required if NoClearingAccountTypes(1918) &gt; 0. |
+| 1816 | [ClearingAccountType](/fix/fields/tags-1800-1999#tag-1816-clearingaccounttype) | ClearingAccountTypeCodeSet | Optional | Required if NoClearingAccountTypes(1918) &gt; 0. |
 
 </StickyTable>
 

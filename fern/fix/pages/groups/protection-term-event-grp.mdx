@@ -3,9 +3,15 @@ title: "ProtectionTermEventGrp"
 subtitle: "The ProtectionTermEventGrp is a repeating component within the ProtectionTermGrp component used to report applicable CDS credit events."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40191</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoProtectionTermEvents (40191)](/fix/fields/tags-40000-40199#tag-40191).
+<llms-only>
+Repeating group · NumInGroup 40191 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoProtectionTermEvents (40191)](/fix/fields/tags-40000-40199#tag-40191-noprotectiontermevents).
 
 ## Members
 
@@ -13,13 +19,13 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40192 | [ProtectionTermEventType](/fix/fields/tags-40000-40199#tag-40192) | String | Optional | Required if NoProtectionTermEvents(40191) &gt; 0. |
-| 40193 | [ProtectionTermEventValue](/fix/fields/tags-40000-40199#tag-40193) | String | Optional | Protection term event value appropriate to ProtectionTermEvenType(40192). See http://www.fixtradingcommunity.org/codelists#Protection\_Term\_Event\_Types for… |
-| 40194 | [ProtectionTermEventCurrency](/fix/fields/tags-40000-40199#tag-40194) | Currency | Optional | Applicable currency if ProtectionTermEventValue(40193) is an amount. Uses ISO 4217 currency codes. |
-| 40195 | [ProtectionTermEventPeriod](/fix/fields/tags-40000-40199#tag-40195) | int | Optional | Conditionally required when ProtectionTermEventUnit(40196) is specified. |
-| 40196 | [ProtectionTermEventUnit](/fix/fields/tags-40000-40199#tag-40196) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when ProtectionTermEventPeriod(40195) is specified. |
-| 40197 | [ProtectionTermEventDayType](/fix/fields/tags-40000-40199#tag-40197) | ProtectionTermEventDayTypeCodeSet | Optional | Day type for events that specify a period and unit. |
-| 40198 | [ProtectionTermEventRateSource](/fix/fields/tags-40000-40199#tag-40198) | String | Optional | Rate source for events that specify a rate source, e.g. Floating rate interest shortfall. |
+| 40192 | [ProtectionTermEventType](/fix/fields/tags-40000-40199#tag-40192-protectiontermeventtype) | String | Optional | Required if NoProtectionTermEvents(40191) &gt; 0. |
+| 40193 | [ProtectionTermEventValue](/fix/fields/tags-40000-40199#tag-40193-protectiontermeventvalue) | String | Optional | Protection term event value appropriate to ProtectionTermEvenType(40192). See http://www.fixtradingcommunity.org/codelists#Protection\_Term\_Event\_Types for… |
+| 40194 | [ProtectionTermEventCurrency](/fix/fields/tags-40000-40199#tag-40194-protectiontermeventcurrency) | Currency | Optional | Applicable currency if ProtectionTermEventValue(40193) is an amount. Uses ISO 4217 currency codes. |
+| 40195 | [ProtectionTermEventPeriod](/fix/fields/tags-40000-40199#tag-40195-protectiontermeventperiod) | int | Optional | Conditionally required when ProtectionTermEventUnit(40196) is specified. |
+| 40196 | [ProtectionTermEventUnit](/fix/fields/tags-40000-40199#tag-40196-protectiontermeventunit) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when ProtectionTermEventPeriod(40195) is specified. |
+| 40197 | [ProtectionTermEventDayType](/fix/fields/tags-40000-40199#tag-40197-protectiontermeventdaytype) | ProtectionTermEventDayTypeCodeSet | Optional | Day type for events that specify a period and unit. |
+| 40198 | [ProtectionTermEventRateSource](/fix/fields/tags-40000-40199#tag-40198-protectiontermeventratesource) | String | Optional | Rate source for events that specify a rate source, e.g. Floating rate interest shortfall. |
 | 40199 | [ProtectionTermEventQualifierGrp](/fix/groups/protection-term-event-qualifier-grp) | Repeating group | Optional | The ProtectionTermEventQualifierGrp is a repeating component within the ProtectionTermEventGrp component used to specify qualifying attributes to the event. |
 
 </StickyTable>

@@ -3,7 +3,13 @@ title: "QuoteRequest"
 subtitle: "In some markets it is the practice to request quotes from brokers prior to placement of an order. The quote request message is used for this purpose. This message is commonly referred to as an Request For Quote (RFQ)"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType R</Badge> <Badge intent="note" minimal>Quotation Negotiation</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.0</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType R · Quotation Negotiation · Pre Trade · Added FIX.4.0
+</llms-only>
 
 ## Message structure
 
@@ -12,24 +18,24 @@ subtitle: "In some markets it is the practice to request quotes from brokers pri
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 131 | [QuoteReqID](/fix/fields/tags-0-199#tag-131) | String | **Required** | Unique identifier for a QuoteRequest(35=R). |
-| 644 | [RFQReqID](/fix/fields/tags-600-799#tag-644) | String | Optional | For tradeable quote model - used to indicate to which RFQ Request this Quote Request is in response. |
-| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | Required only in two party models when QuoteType(537) = '1' (Tradeable) and the OrdType(40) = '2' (Limit). |
-| 775 | [BookingType](/fix/fields/tags-600-799#tag-775) | BookingTypeCodeSet | Optional | Method for booking out this order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an OTC derivative (e.g. CFD or… |
-| 528 | [OrderCapacity](/fix/fields/tags-400-599#tag-528) | OrderCapacityCodeSet | Optional | Designates the capacity of the firm placing the order. (as of FIX 4.3, this field replaced Rule80A (tag 47) --used in conjunction with OrderRestrictions (529)… |
-| 529 | [OrderRestrictions](/fix/fields/tags-400-599#tag-529) | OrderRestrictionsCodeSet | Optional | Restrictions associated with an order. If more than one restriction is applicable to an order, this field can contain multiple instructions separated by space. |
-| 1171 | [PrivateQuote](/fix/fields/tags-1000-1199#tag-1171) | PrivateQuoteCodeSet | Optional | Used to indicate whether a private negotiation is requested or if the response should be public. Only relevant in markets supporting both Private and Public… |
-| 1172 | [RespondentType](/fix/fields/tags-1000-1199#tag-1172) | RespondentTypeCodeSet | Optional | Specifies the type of respondents requested. |
-| 1091 | [PreTradeAnonymity](/fix/fields/tags-1000-1199#tag-1091) | Boolean | Optional | Allows trader to explicitly request anonymity or disclosure in pre-trade market data feeds. Anonymity is relevant in markets where counterparties are regularly… |
+| 131 | [QuoteReqID](/fix/fields/tags-0-199#tag-131-quotereqid) | String | **Required** | Unique identifier for a QuoteRequest(35=R). |
+| 644 | [RFQReqID](/fix/fields/tags-600-799#tag-644-rfqreqid) | String | Optional | For tradeable quote model - used to indicate to which RFQ Request this Quote Request is in response. |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11-clordid) | String | Optional | Required only in two party models when QuoteType(537) = '1' (Tradeable) and the OrdType(40) = '2' (Limit). |
+| 775 | [BookingType](/fix/fields/tags-600-799#tag-775-bookingtype) | BookingTypeCodeSet | Optional | Method for booking out this order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an OTC derivative (e.g. CFD or… |
+| 528 | [OrderCapacity](/fix/fields/tags-400-599#tag-528-ordercapacity) | OrderCapacityCodeSet | Optional | Designates the capacity of the firm placing the order. (as of FIX 4.3, this field replaced Rule80A (tag 47) --used in conjunction with OrderRestrictions (529)… |
+| 529 | [OrderRestrictions](/fix/fields/tags-400-599#tag-529-orderrestrictions) | OrderRestrictionsCodeSet | Optional | Restrictions associated with an order. If more than one restriction is applicable to an order, this field can contain multiple instructions separated by space. |
+| 1171 | [PrivateQuote](/fix/fields/tags-1000-1199#tag-1171-privatequote) | PrivateQuoteCodeSet | Optional | Used to indicate whether a private negotiation is requested or if the response should be public. Only relevant in markets supporting both Private and Public… |
+| 1172 | [RespondentType](/fix/fields/tags-1000-1199#tag-1172-respondenttype) | RespondentTypeCodeSet | Optional | Specifies the type of respondents requested. |
+| 1091 | [PreTradeAnonymity](/fix/fields/tags-1000-1199#tag-1091-pretradeanonymity) | Boolean | Optional | Allows trader to explicitly request anonymity or disclosure in pre-trade market data feeds. Anonymity is relevant in markets where counterparties are regularly… |
 | 1116 | [RootParties](/fix/groups/root-parties) | Repeating group | Optional | The RootParties component block is a version of the Parties component block used to provide root information regarding the owning and entering parties of a… |
 | 146 | [QuotReqGrp](/fix/groups/quot-req-grp) | Repeating group | **Required** |  |
-| 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
-| 2404 | [ComplianceText](/fix/fields/tags-2400-2599#tag-2404) | String | Optional | Free text for compliance information required for regulatory reporting. |
-| 2351 | [EncodedComplianceTextLen](/fix/fields/tags-2200-2399#tag-2351) | Length | Optional | Must be set if EncodedComplianceText(2352) field is specified and must immediately precede it. |
-| 2352 | [EncodedComplianceText](/fix/fields/tags-2200-2399#tag-2352) | data | Optional | Encoded (non-ASCII characters) representation of the ComplianceText(2404) field in the encoded format specified via the MessageEncoding(347) field. |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 376 | [ComplianceID](/fix/fields/tags-200-399#tag-376-complianceid) | String | Optional | ID used to represent this transaction for compliance purposes (e.g. OATS reporting). |
+| 2404 | [ComplianceText](/fix/fields/tags-2400-2599#tag-2404-compliancetext) | String | Optional | Free text for compliance information required for regulatory reporting. |
+| 2351 | [EncodedComplianceTextLen](/fix/fields/tags-2200-2399#tag-2351-encodedcompliancetextlen) | Length | Optional | Must be set if EncodedComplianceText(2352) field is specified and must immediately precede it. |
+| 2352 | [EncodedComplianceText](/fix/fields/tags-2200-2399#tag-2352-encodedcompliancetext) | data | Optional | Encoded (non-ASCII characters) representation of the ComplianceText(2404) field in the encoded format specified via the MessageEncoding(347) field. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

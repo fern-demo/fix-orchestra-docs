@@ -3,9 +3,15 @@ title: "UnderlyingPaymentStubGrp"
 subtitle: "The UnderlyingPaymentStubGrp is a repeating subcomponent of the UnderlyingPaymentStream component used to specify front and back stubs in the payment stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40708</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingPaymentStubs (40708)](/fix/fields/tags-40600-40799#tag-40708).
+<llms-only>
+Repeating group · NumInGroup 40708 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingPaymentStubs (40708)](/fix/fields/tags-40600-40799#tag-40708-nounderlyingpaymentstubs).
 
 ## Members
 
@@ -13,37 +19,37 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40709 | [UnderlyingPaymentStubType](/fix/fields/tags-40600-40799#tag-40709) | PaymentStubTypeCodeSet | Optional | Required if NoUnderlyingPaymentStubs(40708) &gt; 0. |
-| 40710 | [UnderlyingPaymentStubLength](/fix/fields/tags-40600-40799#tag-40710) | PaymentStubLengthCodeSet | Optional | Optional indication whether stub is shorter or longer than the regular swap period. |
+| 40709 | [UnderlyingPaymentStubType](/fix/fields/tags-40600-40799#tag-40709-underlyingpaymentstubtype) | PaymentStubTypeCodeSet | Optional | Required if NoUnderlyingPaymentStubs(40708) &gt; 0. |
+| 40710 | [UnderlyingPaymentStubLength](/fix/fields/tags-40600-40799#tag-40710-underlyingpaymentstublength) | PaymentStubLengthCodeSet | Optional | Optional indication whether stub is shorter or longer than the regular swap period. |
 | | [UnderlyingPaymentStubStartDate](/fix/components/underlying-payment-stub-start-date) | Component | Optional | UnderlyingPaymentStubStartDate is a subcomponent of the UnderlyingPaymentStubGrp component used to specify the start date of the payment stub. |
 | | [UnderlyingPaymentStubEndDate](/fix/components/underlying-payment-stub-end-date) | Component | Optional | UnderlyingPaymentStubEndDate is a subcomponent of the UnderlyingPaymentStubGrp component used to specify the end date of the payment stub. |
-| 40711 | [UnderlyingPaymentStubRate](/fix/fields/tags-40600-40799#tag-40711) | Percentage | Optional | The agreed upon fixed rate for this stub. |
-| 40712 | [UnderlyingPaymentStubFixedAmount](/fix/fields/tags-40600-40799#tag-40712) | Amt | Optional | A fixed payment amount for the stub. |
-| 40713 | [UnderlyingPaymentStubFixedCurrency](/fix/fields/tags-40600-40799#tag-40713) | Currency | Optional | The currency of the fixed payment amount. Uses ISO 4217 currency codes. |
-| 40714 | [UnderlyingPaymentStubIndex](/fix/fields/tags-40600-40799#tag-40714) | String | Optional | The stub floating rate index. |
-| 40715 | [UnderlyingPaymentStubIndexSource](/fix/fields/tags-40600-40799#tag-40715) | PaymentStreamRateIndexSourceCodeSet | Optional | The source for the underlying payment stub floating rate index. |
-| 40716 | [UnderlyingPaymentStubIndexCurvePeriod](/fix/fields/tags-40600-40799#tag-40716) | int | Optional | Conditionally required when UnderlyingPaymentStubIndexCurveUnit(40717) is specified. |
-| 40717 | [UnderlyingPaymentStubIndexCurveUnit](/fix/fields/tags-40600-40799#tag-40717) | PaymentStreamRateIndexCurveUnitCodeSet | Optional | Conditionally required when UnderlyingPaymentStubIndexCurvePeriod(40716) is specified. |
-| 40718 | [UnderlyingPaymentStubIndexRateMultiplier](/fix/fields/tags-40600-40799#tag-40718) | float | Optional | A rate multiplier to apply to the floating rate. The multiplier can be less than or greater than 1 (one). This element should only be included if the multiplier… |
-| 40719 | [UnderlyingPaymentStubIndexRateSpread](/fix/fields/tags-40600-40799#tag-40719) | PriceOffset | Optional | Spread from floating rate index. |
-| 40720 | [UnderlyingPaymentStubIndexRateSpreadPositionType](/fix/fields/tags-40600-40799#tag-40720) | PaymentStreamRateSpreadPositionTypeCodeSet | Optional | Identifies whether the rate spread is applied to a long or short position. |
-| 40721 | [UnderlyingPaymentStubIndexRateTreatment](/fix/fields/tags-40600-40799#tag-40721) | PaymentStreamRateTreatmentCodeSet | Optional | Specifies the yield calculation treatment for the stub index. |
-| 40722 | [UnderlyingPaymentStubIndexCapRate](/fix/fields/tags-40600-40799#tag-40722) | Percentage | Optional | The cap rate, if any, which applies to the floating rate. The cap rate (strike) is only required where the floating rate on a swap stream is capped at a certain… |
-| 40723 | [UnderlyingPaymentStubIndexCapRateBuySide](/fix/fields/tags-40600-40799#tag-40723) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the buyer of the cap rate option through its trade side. |
-| 40724 | [UnderlyingPaymentStubIndexCapRateSellSide](/fix/fields/tags-40600-40799#tag-40724) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the seller of the cap rate option through its trade side. |
-| 40725 | [UnderlyingPaymentStubIndexFloorRate](/fix/fields/tags-40600-40799#tag-40725) | Percentage | Optional | The floor rate, if any, which applies to the floating rate. The floor rate (strike) is only required where the floating rate on a swap stream is floored at a… |
-| 40726 | [UnderlyingPaymentStubIndexFloorRateBuySide](/fix/fields/tags-40600-40799#tag-40726) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the buyer of the floor rate option through its trade side. |
-| 40727 | [UnderlyingPaymentStubIndexFloorRateSellSide](/fix/fields/tags-40600-40799#tag-40727) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the seller of the floor rate option through its trade side. |
-| 40728 | [UnderlyingPaymentStubIndex2](/fix/fields/tags-40600-40799#tag-40728) | String | Optional | The second stub floating rate index. |
-| 40729 | [UnderlyingPaymentStubIndex2Source](/fix/fields/tags-40600-40799#tag-40729) | PaymentStreamRateIndexSourceCodeSet | Optional | The source of the second stub floating rate index. |
-| 40730 | [UnderlyingPaymentStubIndex2CurvePeriod](/fix/fields/tags-40600-40799#tag-40730) | int | Optional | Conditionally required when UnderlyingPaymentStubIndex2CurveUnit(40731) is specified. |
-| 40731 | [UnderlyingPaymentStubIndex2CurveUnit](/fix/fields/tags-40600-40799#tag-40731) | PaymentStreamRateIndexCurveUnitCodeSet | Optional | Conditionally required when UnderlyingPaymentStubIndex2CurvePeriod(40730) is specified. |
-| 40732 | [UnderlyingPaymentStubIndex2RateMultiplier](/fix/fields/tags-40600-40799#tag-40732) | float | Optional | A rate multiplier to apply to the second floating rate. The multiplier can be less than or greater than 1 (one). This element should only be included if the… |
-| 40733 | [UnderlyingPaymentStubIndex2RateSpread](/fix/fields/tags-40600-40799#tag-40733) | PriceOffset | Optional | Spread from the second floating rate index. |
-| 40734 | [UnderlyingPaymentStubIndex2RateSpreadPositionType](/fix/fields/tags-40600-40799#tag-40734) | PaymentStreamRateSpreadPositionTypeCodeSet | Optional | Identifies whether the rate spread is applied to a long or short position. |
-| 40735 | [UnderlyingPaymentStubIndex2RateTreatment](/fix/fields/tags-40600-40799#tag-40735) | PaymentStreamRateTreatmentCodeSet | Optional | Specifies the yield calculation treatment for the second stub index. |
-| 40736 | [UnderlyingPaymentStubIndex2CapRate](/fix/fields/tags-40600-40799#tag-40736) | Percentage | Optional | The cap rate, if any, which applies to the second floating rate. The cap rate (strike) is only required where the floating rate on a swap stream is capped at a… |
-| 40737 | [UnderlyingPaymentStubIndex2FloorRate](/fix/fields/tags-40600-40799#tag-40737) | Percentage | Optional | The floor rate, if any, which applies to the second floating rate. The floor rate (strike) is only required where the floating rate on a swap stream is floored… |
+| 40711 | [UnderlyingPaymentStubRate](/fix/fields/tags-40600-40799#tag-40711-underlyingpaymentstubrate) | Percentage | Optional | The agreed upon fixed rate for this stub. |
+| 40712 | [UnderlyingPaymentStubFixedAmount](/fix/fields/tags-40600-40799#tag-40712-underlyingpaymentstubfixedamount) | Amt | Optional | A fixed payment amount for the stub. |
+| 40713 | [UnderlyingPaymentStubFixedCurrency](/fix/fields/tags-40600-40799#tag-40713-underlyingpaymentstubfixedcurrency) | Currency | Optional | The currency of the fixed payment amount. Uses ISO 4217 currency codes. |
+| 40714 | [UnderlyingPaymentStubIndex](/fix/fields/tags-40600-40799#tag-40714-underlyingpaymentstubindex) | String | Optional | The stub floating rate index. |
+| 40715 | [UnderlyingPaymentStubIndexSource](/fix/fields/tags-40600-40799#tag-40715-underlyingpaymentstubindexsource) | PaymentStreamRateIndexSourceCodeSet | Optional | The source for the underlying payment stub floating rate index. |
+| 40716 | [UnderlyingPaymentStubIndexCurvePeriod](/fix/fields/tags-40600-40799#tag-40716-underlyingpaymentstubindexcurveperiod) | int | Optional | Conditionally required when UnderlyingPaymentStubIndexCurveUnit(40717) is specified. |
+| 40717 | [UnderlyingPaymentStubIndexCurveUnit](/fix/fields/tags-40600-40799#tag-40717-underlyingpaymentstubindexcurveunit) | PaymentStreamRateIndexCurveUnitCodeSet | Optional | Conditionally required when UnderlyingPaymentStubIndexCurvePeriod(40716) is specified. |
+| 40718 | [UnderlyingPaymentStubIndexRateMultiplier](/fix/fields/tags-40600-40799#tag-40718-underlyingpaymentstubindexratemultiplier) | float | Optional | A rate multiplier to apply to the floating rate. The multiplier can be less than or greater than 1 (one). This element should only be included if the multiplier… |
+| 40719 | [UnderlyingPaymentStubIndexRateSpread](/fix/fields/tags-40600-40799#tag-40719-underlyingpaymentstubindexratespread) | PriceOffset | Optional | Spread from floating rate index. |
+| 40720 | [UnderlyingPaymentStubIndexRateSpreadPositionType](/fix/fields/tags-40600-40799#tag-40720-underlyingpaymentstubindexratespreadpositiontype) | PaymentStreamRateSpreadPositionTypeCodeSet | Optional | Identifies whether the rate spread is applied to a long or short position. |
+| 40721 | [UnderlyingPaymentStubIndexRateTreatment](/fix/fields/tags-40600-40799#tag-40721-underlyingpaymentstubindexratetreatment) | PaymentStreamRateTreatmentCodeSet | Optional | Specifies the yield calculation treatment for the stub index. |
+| 40722 | [UnderlyingPaymentStubIndexCapRate](/fix/fields/tags-40600-40799#tag-40722-underlyingpaymentstubindexcaprate) | Percentage | Optional | The cap rate, if any, which applies to the floating rate. The cap rate (strike) is only required where the floating rate on a swap stream is capped at a certain… |
+| 40723 | [UnderlyingPaymentStubIndexCapRateBuySide](/fix/fields/tags-40600-40799#tag-40723-underlyingpaymentstubindexcapratebuyside) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the buyer of the cap rate option through its trade side. |
+| 40724 | [UnderlyingPaymentStubIndexCapRateSellSide](/fix/fields/tags-40600-40799#tag-40724-underlyingpaymentstubindexcapratesellside) | PaymentStreamCapRateBuySideCodeSet | Optional | Reference to the seller of the cap rate option through its trade side. |
+| 40725 | [UnderlyingPaymentStubIndexFloorRate](/fix/fields/tags-40600-40799#tag-40725-underlyingpaymentstubindexfloorrate) | Percentage | Optional | The floor rate, if any, which applies to the floating rate. The floor rate (strike) is only required where the floating rate on a swap stream is floored at a… |
+| 40726 | [UnderlyingPaymentStubIndexFloorRateBuySide](/fix/fields/tags-40600-40799#tag-40726-underlyingpaymentstubindexfloorratebuyside) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the buyer of the floor rate option through its trade side. |
+| 40727 | [UnderlyingPaymentStubIndexFloorRateSellSide](/fix/fields/tags-40600-40799#tag-40727-underlyingpaymentstubindexfloorratesellside) | PaymentStreamFloorRateBuySideCodeSet | Optional | Reference to the seller of the floor rate option through its trade side. |
+| 40728 | [UnderlyingPaymentStubIndex2](/fix/fields/tags-40600-40799#tag-40728-underlyingpaymentstubindex2) | String | Optional | The second stub floating rate index. |
+| 40729 | [UnderlyingPaymentStubIndex2Source](/fix/fields/tags-40600-40799#tag-40729-underlyingpaymentstubindex2source) | PaymentStreamRateIndexSourceCodeSet | Optional | The source of the second stub floating rate index. |
+| 40730 | [UnderlyingPaymentStubIndex2CurvePeriod](/fix/fields/tags-40600-40799#tag-40730-underlyingpaymentstubindex2curveperiod) | int | Optional | Conditionally required when UnderlyingPaymentStubIndex2CurveUnit(40731) is specified. |
+| 40731 | [UnderlyingPaymentStubIndex2CurveUnit](/fix/fields/tags-40600-40799#tag-40731-underlyingpaymentstubindex2curveunit) | PaymentStreamRateIndexCurveUnitCodeSet | Optional | Conditionally required when UnderlyingPaymentStubIndex2CurvePeriod(40730) is specified. |
+| 40732 | [UnderlyingPaymentStubIndex2RateMultiplier](/fix/fields/tags-40600-40799#tag-40732-underlyingpaymentstubindex2ratemultiplier) | float | Optional | A rate multiplier to apply to the second floating rate. The multiplier can be less than or greater than 1 (one). This element should only be included if the… |
+| 40733 | [UnderlyingPaymentStubIndex2RateSpread](/fix/fields/tags-40600-40799#tag-40733-underlyingpaymentstubindex2ratespread) | PriceOffset | Optional | Spread from the second floating rate index. |
+| 40734 | [UnderlyingPaymentStubIndex2RateSpreadPositionType](/fix/fields/tags-40600-40799#tag-40734-underlyingpaymentstubindex2ratespreadpositiontype) | PaymentStreamRateSpreadPositionTypeCodeSet | Optional | Identifies whether the rate spread is applied to a long or short position. |
+| 40735 | [UnderlyingPaymentStubIndex2RateTreatment](/fix/fields/tags-40600-40799#tag-40735-underlyingpaymentstubindex2ratetreatment) | PaymentStreamRateTreatmentCodeSet | Optional | Specifies the yield calculation treatment for the second stub index. |
+| 40736 | [UnderlyingPaymentStubIndex2CapRate](/fix/fields/tags-40600-40799#tag-40736-underlyingpaymentstubindex2caprate) | Percentage | Optional | The cap rate, if any, which applies to the second floating rate. The cap rate (strike) is only required where the floating rate on a swap stream is capped at a… |
+| 40737 | [UnderlyingPaymentStubIndex2FloorRate](/fix/fields/tags-40600-40799#tag-40737-underlyingpaymentstubindex2floorrate) | Percentage | Optional | The floor rate, if any, which applies to the second floating rate. The floor rate (strike) is only required where the floating rate on a swap stream is floored… |
 
 </StickyTable>
 

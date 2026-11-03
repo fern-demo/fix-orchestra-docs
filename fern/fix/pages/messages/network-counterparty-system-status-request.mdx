@@ -3,7 +3,13 @@ title: "NetworkCounterpartySystemStatusRequest"
 subtitle: "This message is send either immediately after logging on to inform a network (counterparty system) of the type of updates required or to at any other time in the FIX conversation to change the nature of the types of status updates required.…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType BC</Badge> <Badge intent="note" minimal>Network</Badge> <Badge intent="tip" minimal>Infrastructure</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType BC · Network · Infrastructure · Added FIX.4.4
+</llms-only>
 
 ## Message structure
 
@@ -12,8 +18,8 @@ subtitle: "This message is send either immediately after logging on to inform a 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 935 | [NetworkRequestType](/fix/fields/tags-800-999#tag-935) | NetworkRequestTypeCodeSet | **Required** | Indicates the type and level of details required for a Network Status Request Message Boolean logic applies EG If you want to subscribe for changes to certain… |
-| 933 | [NetworkRequestID](/fix/fields/tags-800-999#tag-933) | String | **Required** | Unique identifier for a network resquest. |
+| 935 | [NetworkRequestType](/fix/fields/tags-800-999#tag-935-networkrequesttype) | NetworkRequestTypeCodeSet | **Required** | Indicates the type and level of details required for a Network Status Request Message Boolean logic applies EG If you want to subscribe for changes to certain… |
+| 933 | [NetworkRequestID](/fix/fields/tags-800-999#tag-933-networkrequestid) | String | **Required** | Unique identifier for a network resquest. |
 | 936 | [CompIDReqGrp](/fix/groups/comp-id-req-grp) | Repeating group | Optional |  |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 

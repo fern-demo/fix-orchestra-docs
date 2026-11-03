@@ -3,9 +3,15 @@ title: "OrderAggregationGrp"
 subtitle: "Identifies the orders being aggregated together."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 73</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoOrders (73)](/fix/fields/tags-0-199#tag-73).
+<llms-only>
+Repeating group · NumInGroup 73 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoOrders (73)](/fix/fields/tags-0-199#tag-73-noorders).
 
 ## Members
 
@@ -13,10 +19,10 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | Optional | Required if NoOrders(73) &gt; 0. |
-| 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | Optional | Unique identifier for Order as assigned by sell-side (broker, exchange, ECN). Uniqueness must be guaranteed within a single trading day. Firms which accept… |
-| 38 | [OrderQty](/fix/fields/tags-0-199#tag-38) | Qty | Optional | Required if NoOrders(73) &gt; 0. |
-| 799 | [OrderAvgPx](/fix/fields/tags-600-799#tag-799) | Price | Optional | Average price for a specific order |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11-clordid) | String | Optional | Required if NoOrders(73) &gt; 0. |
+| 37 | [OrderID](/fix/fields/tags-0-199#tag-37-orderid) | String | Optional | Unique identifier for Order as assigned by sell-side (broker, exchange, ECN). Uniqueness must be guaranteed within a single trading day. Firms which accept… |
+| 38 | [OrderQty](/fix/fields/tags-0-199#tag-38-orderqty) | Qty | Optional | Required if NoOrders(73) &gt; 0. |
+| 799 | [OrderAvgPx](/fix/fields/tags-600-799#tag-799-orderavgpx) | Price | Optional | Average price for a specific order |
 
 </StickyTable>
 

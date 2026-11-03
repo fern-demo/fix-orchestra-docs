@@ -3,9 +3,15 @@ title: "DeliveryScheduleSettlTimeGrp"
 subtitle: "The DeliveryScheduleSettlTimeGrp is a repeating subcomponent of the DeliveryScheduleSettlDayGrp component used to detail commodity delivery time period."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41054</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoDeliveryScheduleSettlTimes (41054)](/fix/fields/tags-41000-41199#tag-41054).
+<llms-only>
+Repeating group · NumInGroup 41054 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoDeliveryScheduleSettlTimes (41054)](/fix/fields/tags-41000-41199#tag-41054-nodeliveryschedulesettltimes).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41055 | [DeliveryScheduleSettlStart](/fix/fields/tags-41000-41199#tag-41055) | String | Optional | Required if NoDeliveryScheduleSettlTimes(41054) &gt; 0. |
-| 41056 | [DeliveryScheduleSettlEnd](/fix/fields/tags-41000-41199#tag-41056) | String | Optional | Required if NoDeliveryScheduleSettlTimes(41054) &gt; 0. |
-| 41057 | [DeliveryScheduleSettlTimeType](/fix/fields/tags-41000-41199#tag-41057) | DeliveryScheduleSettlTimeTypeCodeSet | Optional | May be defaulted to market convention or bilaterally agreed if not specified. |
+| 41055 | [DeliveryScheduleSettlStart](/fix/fields/tags-41000-41199#tag-41055-deliveryschedulesettlstart) | String | Optional | Required if NoDeliveryScheduleSettlTimes(41054) &gt; 0. |
+| 41056 | [DeliveryScheduleSettlEnd](/fix/fields/tags-41000-41199#tag-41056-deliveryschedulesettlend) | String | Optional | Required if NoDeliveryScheduleSettlTimes(41054) &gt; 0. |
+| 41057 | [DeliveryScheduleSettlTimeType](/fix/fields/tags-41000-41199#tag-41057-deliveryschedulesettltimetype) | DeliveryScheduleSettlTimeTypeCodeSet | Optional | May be defaulted to market convention or bilaterally agreed if not specified. |
 
 </StickyTable>
 

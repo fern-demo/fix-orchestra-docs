@@ -3,7 +3,13 @@ title: "PartyRiskLimitsReportAck"
 subtitle: "PartyRiskLimitsReportAck is an optional message used as a response to the PartyRiskLimitReport(35=CM) or PartyRiskLimitUpdateReport(35=CR) messages to acknowledge or reject those messages."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType DE</Badge> <Badge intent="note" minimal>Parties Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType DE · Parties Reference Data · Pre Trade · Added FIX.5.0SP2
+</llms-only>
 
 ## Message structure
 
@@ -12,18 +18,18 @@ subtitle: "PartyRiskLimitsReportAck is an optional message used as a response to
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 1667 | [RiskLimitReportID](/fix/fields/tags-1600-1799#tag-1667) | String | **Required** | The identifier of the PartyRiskLimitReport(35=CM) or PartyRiskLimitUpdateReport(35=CR) message. |
-| 1666 | [RiskLimitRequestID](/fix/fields/tags-1600-1799#tag-1666) | String | Optional | Unique identifier for the PartyRiskLimitsRequest |
-| 2316 | [RiskLimitReportStatus](/fix/fields/tags-2200-2399#tag-2316) | RiskLimitReportStatusCodeSet | **Required** | Status of risk limit report. |
-| 2317 | [RiskLimitReportRejectReason](/fix/fields/tags-2200-2399#tag-2317) | RiskLimitReportRejectReasonCodeSet | Optional | Conditionally required when RiskLimitReportStatus(2316)=1 (Rejected). |
+| 1667 | [RiskLimitReportID](/fix/fields/tags-1600-1799#tag-1667-risklimitreportid) | String | **Required** | The identifier of the PartyRiskLimitReport(35=CM) or PartyRiskLimitUpdateReport(35=CR) message. |
+| 1666 | [RiskLimitRequestID](/fix/fields/tags-1600-1799#tag-1666-risklimitrequestid) | String | Optional | Unique identifier for the PartyRiskLimitsRequest |
+| 2316 | [RiskLimitReportStatus](/fix/fields/tags-2200-2399#tag-2316-risklimitreportstatus) | RiskLimitReportStatusCodeSet | **Required** | Status of risk limit report. |
+| 2317 | [RiskLimitReportRejectReason](/fix/fields/tags-2200-2399#tag-2317-risklimitreportrejectreason) | RiskLimitReportRejectReasonCodeSet | Optional | Conditionally required when RiskLimitReportStatus(2316)=1 (Rejected). |
 | 1677 | [PartyRiskLimitsUpdateGrp](/fix/groups/party-risk-limits-update-grp) | Repeating group | Optional | This new block is a repeating group based on the existing block &lt;PartyRiskLimitsGrp&gt; with an additional field ListUpdateAction(1324) to support incremental… |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
-| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328) | String | Optional | Identifies the reason for rejection. |
-| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664) | Length | Optional | Must be set if EncodedRejectText(1665) field is specified and must immediately precede it. |
-| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328-rejecttext) | String | Optional | Identifies the reason for rejection. |
+| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664-encodedrejecttextlen) | Length | Optional | Must be set if EncodedRejectText(1665) field is specified and must immediately precede it. |
+| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665-encodedrejecttext) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

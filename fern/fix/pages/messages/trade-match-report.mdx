@@ -3,7 +3,13 @@ title: "TradeMatchReport"
 subtitle: "The TradeMatchReport(35=DC) message is used by exchanges and ECN’s to report matched trades to central counterparties (CCPs) as an atomic event. The message is used to express the one-to-one, one-to-many and many-to-many matches as well as…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType DC</Badge> <Badge intent="note" minimal>Trade Capture</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType DC · Trade Capture · Post Trade · Added FIX.5.0SP2
+</llms-only>
 
 ## Message structure
 
@@ -13,21 +19,21 @@ subtitle: "The TradeMatchReport(35=DC) message is used by exchanges and ECN’s 
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
 | | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and… |
-| 880 | [TrdMatchID](/fix/fields/tags-800-999#tag-880) | String | **Required** | Unique identifier common for all trades included in a match event. |
-| 574 | [MatchType](/fix/fields/tags-400-599#tag-574) | MatchTypeCodeSet | Optional | The point in the matching process at which this trade was matched. |
-| 856 | [TradeReportType](/fix/fields/tags-800-999#tag-856) | TradeReportTypeCodeSet | Optional | Type of Trade Report |
-| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | Optional | The business date for which the trade is expected to be cleared. |
-| 828 | [TrdType](/fix/fields/tags-800-999#tag-828) | TrdTypeCodeSet | Optional | Type of trade assigned to a trade. |
-| 829 | [TrdSubType](/fix/fields/tags-800-999#tag-829) | TrdSubTypeCodeSet | Optional | Further qualification to the trade type |
-| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | Optional | Used when reporting other than current day trades. |
-| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Identifies the market |
-| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Identifies the market segment |
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
-| 1430 | [VenueType](/fix/fields/tags-1400-1599#tag-1430) | VenueTypeCodeSet | Optional | Identifies the type of venue where a trade was executed |
-| 1888 | [TradeMatchTimestamp](/fix/fields/tags-1800-1999#tag-1888) | UTCTimestamp | Optional | Timestamp of the match event. For off-exchange trades the time at which the deal was matched by the exchange. This timestamp will be the same on all the trades… |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Time of the match event or transaction that resulted in this match report. |
-| 442 | [MultiLegReportingType](/fix/fields/tags-400-599#tag-442) | MultiLegReportingTypeCodeSet | Optional | Differentiates match events involving complex instruments (MultiLegReportingType(442)=3(multileg security)) from those only involving simple instruments… |
+| 880 | [TrdMatchID](/fix/fields/tags-800-999#tag-880-trdmatchid) | String | **Required** | Unique identifier common for all trades included in a match event. |
+| 574 | [MatchType](/fix/fields/tags-400-599#tag-574-matchtype) | MatchTypeCodeSet | Optional | The point in the matching process at which this trade was matched. |
+| 856 | [TradeReportType](/fix/fields/tags-800-999#tag-856-tradereporttype) | TradeReportTypeCodeSet | Optional | Type of Trade Report |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715-clearingbusinessdate) | LocalMktDate | Optional | The business date for which the trade is expected to be cleared. |
+| 828 | [TrdType](/fix/fields/tags-800-999#tag-828-trdtype) | TrdTypeCodeSet | Optional | Type of trade assigned to a trade. |
+| 829 | [TrdSubType](/fix/fields/tags-800-999#tag-829-trdsubtype) | TrdSubTypeCodeSet | Optional | Further qualification to the trade type |
+| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75-tradedate) | LocalMktDate | Optional | Used when reporting other than current day trades. |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301-marketid) | Exchange | Optional | Identifies the market |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300-marketsegmentid) | String | Optional | Identifies the market segment |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336-tradingsessionid) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625-tradingsessionsubid) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
+| 1430 | [VenueType](/fix/fields/tags-1400-1599#tag-1430-venuetype) | VenueTypeCodeSet | Optional | Identifies the type of venue where a trade was executed |
+| 1888 | [TradeMatchTimestamp](/fix/fields/tags-1800-1999#tag-1888-tradematchtimestamp) | UTCTimestamp | Optional | Timestamp of the match event. For off-exchange trades the time at which the deal was matched by the exchange. This timestamp will be the same on all the trades… |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Time of the match event or transaction that resulted in this match report. |
+| 442 | [MultiLegReportingType](/fix/fields/tags-400-599#tag-442-multilegreportingtype) | MultiLegReportingTypeCodeSet | Optional | Differentiates match events involving complex instruments (MultiLegReportingType(442)=3(multileg security)) from those only involving simple instruments… |
 | 1889 | [InstrmtMatchSideGrp](/fix/groups/instrmt-match-side-grp) | Repeating group | Optional | The InstrmtMatchSideGrp component is used to convey all trades for a given match event reported by instrument and trade side. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 

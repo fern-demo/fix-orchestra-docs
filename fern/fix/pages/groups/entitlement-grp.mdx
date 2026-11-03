@@ -3,9 +3,15 @@ title: "EntitlementGrp"
 subtitle: "Conveys a list of entitlements for one specific party, or relationship between two parties. Each entitlement may be further limited or clarified using optional fields and components."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1773</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoEntitlements (1773)](/fix/fields/tags-1600-1799#tag-1773).
+<llms-only>
+Repeating group · NumInGroup 1773 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoEntitlements (1773)](/fix/fields/tags-1600-1799#tag-1773-noentitlements).
 
 ## Members
 
@@ -13,16 +19,16 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1774 | [EntitlementIndicator](/fix/fields/tags-1600-1799#tag-1774) | Boolean | Optional | Required if NoEntitlements(1773) &gt; 0. |
-| 1775 | [EntitlementType](/fix/fields/tags-1600-1799#tag-1775) | EntitlementTypeCodeSet | Optional | Absence of this field indicates the meaning of the entitlement is implicit. |
-| 2402 | [EntitlementSubType](/fix/fields/tags-2400-2599#tag-2402) | EntitlementSubTypeCodeSet | Optional | Subtype of an entitlement specified in EntitlementType(1775). |
+| 1774 | [EntitlementIndicator](/fix/fields/tags-1600-1799#tag-1774-entitlementindicator) | Boolean | Optional | Required if NoEntitlements(1773) &gt; 0. |
+| 1775 | [EntitlementType](/fix/fields/tags-1600-1799#tag-1775-entitlementtype) | EntitlementTypeCodeSet | Optional | Absence of this field indicates the meaning of the entitlement is implicit. |
+| 2402 | [EntitlementSubType](/fix/fields/tags-2400-2599#tag-2402-entitlementsubtype) | EntitlementSubTypeCodeSet | Optional | Subtype of an entitlement specified in EntitlementType(1775). |
 | 1777 | [EntitlementAttribGrp](/fix/groups/entitlement-attrib-grp) | Repeating group | Optional | conveys a list of one or more attributes related to an entitlement. An entitlement may contain an EntitlementType, which states what can be done at a gross… |
-| 1776 | [EntitlementID](/fix/fields/tags-1600-1799#tag-1776) | String | Optional | Unique identifier for a specific NoEntitlements(1773) repeating group instance. |
-| 1784 | [EntitlementPlatform](/fix/fields/tags-1600-1799#tag-1784) | String | Optional | The area to which the entitlement is applicable. This can be a trading platform or an offering. |
+| 1776 | [EntitlementID](/fix/fields/tags-1600-1799#tag-1776-entitlementid) | String | Optional | Unique identifier for a specific NoEntitlements(1773) repeating group instance. |
+| 1784 | [EntitlementPlatform](/fix/fields/tags-1600-1799#tag-1784-entitlementplatform) | String | Optional | The area to which the entitlement is applicable. This can be a trading platform or an offering. |
 | 1656 | [InstrumentScopeGrp](/fix/groups/instrument-scope-grp) | Repeating group | Optional | Repeating group of InstrumentScope Components. Used to specify the instruments to which a request applies. |
 | 1310 | [MarketSegmentScopeGrp](/fix/groups/market-segment-scope-grp) | Repeating group | Optional | Conveys a list of markets and, optionally, their market segments. Note that the component MarketSegmentGrp exists, but is not useful for this purpose, as it… |
-| 1782 | [EntitlementStartDate](/fix/fields/tags-1600-1799#tag-1782) | LocalMktDate | Optional | Indicates the starting date of the entitlement. |
-| 1783 | [EntitlementEndDate](/fix/fields/tags-1600-1799#tag-1783) | LocalMktDate | Optional | Indicates the ending date of the entitlement. |
+| 1782 | [EntitlementStartDate](/fix/fields/tags-1600-1799#tag-1782-entitlementstartdate) | LocalMktDate | Optional | Indicates the starting date of the entitlement. |
+| 1783 | [EntitlementEndDate](/fix/fields/tags-1600-1799#tag-1783-entitlementenddate) | LocalMktDate | Optional | Indicates the ending date of the entitlement. |
 
 </StickyTable>
 

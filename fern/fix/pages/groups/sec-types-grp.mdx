@@ -2,9 +2,15 @@
 title: "SecTypesGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 558</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoSecurityTypes (558)](/fix/fields/tags-400-599#tag-558).
+<llms-only>
+Repeating group · NumInGroup 558 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoSecurityTypes (558)](/fix/fields/tags-400-599#tag-558-nosecuritytypes).
 
 ## Members
 
@@ -12,12 +18,12 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 167 | [SecurityType](/fix/fields/tags-0-199#tag-167) | SecurityTypeCodeSet | Optional | Required if NoSecurityTypes &gt; 0 |
-| 762 | [SecuritySubType](/fix/fields/tags-600-799#tag-762) | String | Optional | Sub-type qualification/identification of the SecurityType. As an example for SecurityType(167)="REPO", the SecuritySubType="General Collateral" can be used to… |
-| 460 | [Product](/fix/fields/tags-400-599#tag-460) | ProductCodeSet | Optional | Indicates the type of product the security is associated with. See also the CFICode (461) and SecurityType (167) fields. |
-| 461 | [CFICode](/fix/fields/tags-400-599#tag-461) | String | Optional | Indicates the type of security using ISO 10962 standard, Classification of Financial Instruments (CFI code) values. ISO 10962 is maintained by ANNA (Association… |
-| 2891 | [UPICode](/fix/fields/tags-2800-2999#tag-2891) | String | Optional | Uniquely identifies the product of a security using ISO 4914 standard, Unique Product Identifier (UPI). The DSB (Derivative Service Bureau Ltd) is acting as… |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 167 | [SecurityType](/fix/fields/tags-0-199#tag-167-securitytype) | SecurityTypeCodeSet | Optional | Required if NoSecurityTypes &gt; 0 |
+| 762 | [SecuritySubType](/fix/fields/tags-600-799#tag-762-securitysubtype) | String | Optional | Sub-type qualification/identification of the SecurityType. As an example for SecurityType(167)="REPO", the SecuritySubType="General Collateral" can be used to… |
+| 460 | [Product](/fix/fields/tags-400-599#tag-460-product) | ProductCodeSet | Optional | Indicates the type of product the security is associated with. See also the CFICode (461) and SecurityType (167) fields. |
+| 461 | [CFICode](/fix/fields/tags-400-599#tag-461-cficode) | String | Optional | Indicates the type of security using ISO 10962 standard, Classification of Financial Instruments (CFI code) values. ISO 10962 is maintained by ANNA (Association… |
+| 2891 | [UPICode](/fix/fields/tags-2800-2999#tag-2891-upicode) | String | Optional | Uniquely identifies the product of a security using ISO 4914 standard, Unique Product Identifier (UPI). The DSB (Derivative Service Bureau Ltd) is acting as… |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
 
 </StickyTable>
 

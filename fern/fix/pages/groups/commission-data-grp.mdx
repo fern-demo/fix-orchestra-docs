@@ -3,11 +3,17 @@ title: "CommissionDataGrp"
 subtitle: "The CommissionDataGrp component block is used to carry commission information such as the type of commission and the rate. It provides an alternative to the CommissionData component if multiple commissions or enhanced attributes are needed."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2639</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Repeating group · NumInGroup 2639 · Added FIX.5.0SP2
+</llms-only>
 
 The CommissionLegRefID(2649) field is used to reference the LegID(1788) within the InstrumentLeg component, allowing for specifying instrument leg specific commission values when a multilegged security is fully expressed in the same message. This component is not intended for non-leg instances of the CommissionDataGrp component to represent aggregated values of the leg instances within the component when both leg and non-leg instances are included.
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoCommissions (2639)](/fix/fields/tags-2600-2799#tag-2639).
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoCommissions (2639)](/fix/fields/tags-2600-2799#tag-2639-nocommissions).
 
 ## Members
 
@@ -15,20 +21,20 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2640 | [CommissionAmount](/fix/fields/tags-2600-2799#tag-2640) | Amt | Optional | Required if NoCommissions(2639) &gt; 0. If the commission is based on a percentage of trade quantity or a factor of "unit of measure", CommissionRate(2646) and… |
-| 2641 | [CommissionAmountType](/fix/fields/tags-2600-2799#tag-2641) | CommissionAmountTypeCodeSet | Optional | Required if NoCommissions(2639) &gt; 0. |
-| 2725 | [CommissionAmountSubType](/fix/fields/tags-2600-2799#tag-2725) | CommissionAmountSubTypeCodeSet | Optional | Further sub classification of the CommissionAmountType(2641). |
-| 2642 | [CommissionBasis](/fix/fields/tags-2600-2799#tag-2642) | CommTypeCodeSet | Optional | Required if NoCommissions(2639) &gt; 0. |
-| 2643 | [CommissionCurrency](/fix/fields/tags-2600-2799#tag-2643) | Currency | Optional | Specifies the currency denomination of the commission amount if different from the trade's currency. Uses ISO 4217 currency codes. |
-| 2644 | [CommissionUnitOfMeasure](/fix/fields/tags-2600-2799#tag-2644) | UnitOfMeasureCodeSet | Optional | The commission rate unit of measure. |
-| 2645 | [CommissionUnitOfMeasureCurrency](/fix/fields/tags-2600-2799#tag-2645) | Currency | Optional | Indicates the currency of the unit of measure. Conditionally required when CommissionUnitOfMeasure(2644) = Ccy (Amount of currency). |
-| 2646 | [CommissionRate](/fix/fields/tags-2600-2799#tag-2646) | float | Optional | The commission rate when CommissionAmount(2640) is based on a percentage of quantity, amount per unit or a factor of "unit of measure". If the rate is a… |
-| 2647 | [CommissionSharedIndicator](/fix/fields/tags-2600-2799#tag-2647) | Boolean | Optional | Indicates whether the amount in CommissionAmount(2640) is to be shared with a third party, e.g. as part of a directed brokerage commission sharing arrangement. |
-| 2648 | [CommissionAmountShared](/fix/fields/tags-2600-2799#tag-2648) | Amt | Optional | If specified, CommissionSharedIndicator(2647) must be set to "Y". |
-| 2649 | [CommissionLegRefID](/fix/fields/tags-2600-2799#tag-2649) | String | Optional | This field may be used for multi-leg trades sent as a single message to indicate that the entry applies only to a specific leg. |
-| 2650 | [CommissionDesc](/fix/fields/tags-2600-2799#tag-2650) | String | Optional | Description of the commission. |
-| 2651 | [EncodedCommissionDescLen](/fix/fields/tags-2600-2799#tag-2651) | Length | Optional | Must be set if EncodedCommissionDesc(2652) is specified and must immediately precede it. |
-| 2652 | [EncodedCommissionDesc](/fix/fields/tags-2600-2799#tag-2652) | data | Optional | Encoded (non-ASCII characters) representation of the CommissionDesc(2650) field in the encoded format specified via the MessageEncoding(347) field. |
+| 2640 | [CommissionAmount](/fix/fields/tags-2600-2799#tag-2640-commissionamount) | Amt | Optional | Required if NoCommissions(2639) &gt; 0. If the commission is based on a percentage of trade quantity or a factor of "unit of measure", CommissionRate(2646) and… |
+| 2641 | [CommissionAmountType](/fix/fields/tags-2600-2799#tag-2641-commissionamounttype) | CommissionAmountTypeCodeSet | Optional | Required if NoCommissions(2639) &gt; 0. |
+| 2725 | [CommissionAmountSubType](/fix/fields/tags-2600-2799#tag-2725-commissionamountsubtype) | CommissionAmountSubTypeCodeSet | Optional | Further sub classification of the CommissionAmountType(2641). |
+| 2642 | [CommissionBasis](/fix/fields/tags-2600-2799#tag-2642-commissionbasis) | CommTypeCodeSet | Optional | Required if NoCommissions(2639) &gt; 0. |
+| 2643 | [CommissionCurrency](/fix/fields/tags-2600-2799#tag-2643-commissioncurrency) | Currency | Optional | Specifies the currency denomination of the commission amount if different from the trade's currency. Uses ISO 4217 currency codes. |
+| 2644 | [CommissionUnitOfMeasure](/fix/fields/tags-2600-2799#tag-2644-commissionunitofmeasure) | UnitOfMeasureCodeSet | Optional | The commission rate unit of measure. |
+| 2645 | [CommissionUnitOfMeasureCurrency](/fix/fields/tags-2600-2799#tag-2645-commissionunitofmeasurecurrency) | Currency | Optional | Indicates the currency of the unit of measure. Conditionally required when CommissionUnitOfMeasure(2644) = Ccy (Amount of currency). |
+| 2646 | [CommissionRate](/fix/fields/tags-2600-2799#tag-2646-commissionrate) | float | Optional | The commission rate when CommissionAmount(2640) is based on a percentage of quantity, amount per unit or a factor of "unit of measure". If the rate is a… |
+| 2647 | [CommissionSharedIndicator](/fix/fields/tags-2600-2799#tag-2647-commissionsharedindicator) | Boolean | Optional | Indicates whether the amount in CommissionAmount(2640) is to be shared with a third party, e.g. as part of a directed brokerage commission sharing arrangement. |
+| 2648 | [CommissionAmountShared](/fix/fields/tags-2600-2799#tag-2648-commissionamountshared) | Amt | Optional | If specified, CommissionSharedIndicator(2647) must be set to "Y". |
+| 2649 | [CommissionLegRefID](/fix/fields/tags-2600-2799#tag-2649-commissionlegrefid) | String | Optional | This field may be used for multi-leg trades sent as a single message to indicate that the entry applies only to a specific leg. |
+| 2650 | [CommissionDesc](/fix/fields/tags-2600-2799#tag-2650-commissiondesc) | String | Optional | Description of the commission. |
+| 2651 | [EncodedCommissionDescLen](/fix/fields/tags-2600-2799#tag-2651-encodedcommissiondesclen) | Length | Optional | Must be set if EncodedCommissionDesc(2652) is specified and must immediately precede it. |
+| 2652 | [EncodedCommissionDesc](/fix/fields/tags-2600-2799#tag-2652-encodedcommissiondesc) | data | Optional | Encoded (non-ASCII characters) representation of the CommissionDesc(2650) field in the encoded format specified via the MessageEncoding(347) field. |
 
 </StickyTable>
 

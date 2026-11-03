@@ -3,9 +3,15 @@ title: "PartyDetailAltIDGrp"
 subtitle: "Alternative identifiers for a party."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1516</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoPartyDetailAltID (1516)](/fix/fields/tags-1400-1599#tag-1516).
+<llms-only>
+Repeating group · NumInGroup 1516 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPartyDetailAltID (1516)](/fix/fields/tags-1400-1599#tag-1516-nopartydetailaltid).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 1517 | [PartyDetailAltID](/fix/fields/tags-1400-1599#tag-1517) | String | Optional | Required when NoPartyDetailAltID &gt; 0. |
-| 1518 | [PartyDetailAltIDSource](/fix/fields/tags-1400-1599#tag-1518) | PartyIDSourceCodeSet | Optional | Required when NoPartyDetailAltID &gt; 0. |
+| 1517 | [PartyDetailAltID](/fix/fields/tags-1400-1599#tag-1517-partydetailaltid) | String | Optional | Required when NoPartyDetailAltID &gt; 0. |
+| 1518 | [PartyDetailAltIDSource](/fix/fields/tags-1400-1599#tag-1518-partydetailaltidsource) | PartyIDSourceCodeSet | Optional | Required when NoPartyDetailAltID &gt; 0. |
 | 1519 | [PartyDetailAltSubGrp](/fix/groups/party-detail-alt-sub-grp) | Repeating group | Optional | Alternate sub-identifiers for a party. |
 
 </StickyTable>

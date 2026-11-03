@@ -3,9 +3,15 @@ title: "LegPhysicalSettlTermGrp"
 subtitle: "The LegPhysicalSettlTermGrp is a repeating component within the InstrumentLeg component used to report physical settlement terms."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41599</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPhysicalSettlTerms (41599)](/fix/fields/tags-41400-41599#tag-41599).
+<llms-only>
+Repeating group · NumInGroup 41599 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPhysicalSettlTerms (41599)](/fix/fields/tags-41400-41599#tag-41599-nolegphysicalsettlterms).
 
 ## Members
 
@@ -14,10 +20,10 @@ Each repetition starts with the first member listed. The count of repetitions is
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | 41604 | [LegPhysicalSettlDeliverableObligationGrp](/fix/groups/leg-physical-settl-deliverable-obligation-grp) | Repeating group | Optional | The LegPhysicalSettlDeliverableObligationGrp is a repeating component within the LegPhysicalSettlTermGrp component used to report credit default swap (CDS)… |
-| 41601 | [LegPhysicalSettlCurency](/fix/fields/tags-41600-41799#tag-41601) | Currency | Optional | Specifies the currency of physical settlement. Uses ISO 4217 currency codes. |
-| 41602 | [LegPhysicalSettlBusinessDays](/fix/fields/tags-41600-41799#tag-41602) | int | Optional | The number of business days used in the determination of physical settlement. Its precise meaning is dependant on the context in which this is used. |
-| 41603 | [LegPhysicalSettlMaximumBusinessDays](/fix/fields/tags-41600-41799#tag-41603) | int | Optional | A maximum number of business days. Its precise meaning is dependant on the context in which this element is used. Intended to be used to limit a particular ISDA… |
-| 41600 | [LegPhysicalSettlTermXID](/fix/fields/tags-41600-41799#tag-41600) | XID | Optional | A named string value referenced by UnderlyingSettlTermXIDRef(41315). |
+| 41601 | [LegPhysicalSettlCurency](/fix/fields/tags-41600-41799#tag-41601-legphysicalsettlcurency) | Currency | Optional | Specifies the currency of physical settlement. Uses ISO 4217 currency codes. |
+| 41602 | [LegPhysicalSettlBusinessDays](/fix/fields/tags-41600-41799#tag-41602-legphysicalsettlbusinessdays) | int | Optional | The number of business days used in the determination of physical settlement. Its precise meaning is dependant on the context in which this is used. |
+| 41603 | [LegPhysicalSettlMaximumBusinessDays](/fix/fields/tags-41600-41799#tag-41603-legphysicalsettlmaximumbusinessdays) | int | Optional | A maximum number of business days. Its precise meaning is dependant on the context in which this element is used. Intended to be used to limit a particular ISDA… |
+| 41600 | [LegPhysicalSettlTermXID](/fix/fields/tags-41600-41799#tag-41600-legphysicalsettltermxid) | XID | Optional | A named string value referenced by UnderlyingSettlTermXIDRef(41315). |
 
 </StickyTable>
 

@@ -3,9 +3,15 @@ title: "CollateralReinvestmentGrp"
 subtitle: "The CollateralReinvestmentGrp component block is a repeating group that may be used to provide a breakdown of the cash collateral's reinvestment types and amounts (e.g. CollateralType(1704)=\"CASH\")."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2845</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoCollateralReinvestments (2845)](/fix/fields/tags-2800-2999#tag-2845).
+<llms-only>
+Repeating group · NumInGroup 2845 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoCollateralReinvestments (2845)](/fix/fields/tags-2800-2999#tag-2845-nocollateralreinvestments).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2844 | [CollateralReinvestmentType](/fix/fields/tags-2800-2999#tag-2844) | CollateralReinvestmentTypeCodeSet | Optional | Required if NoCollateralReinvestments(2845) &gt; 0. |
-| 2842 | [CollateralReinvestmentAmount](/fix/fields/tags-2800-2999#tag-2842) | Amt | Optional | The cash amount of the specified re-investment type. |
-| 2843 | [CollateralReinvestmentCurrency](/fix/fields/tags-2800-2999#tag-2843) | Currency | Optional | The currency denomination of the re-invested cash amount. Uses ISO 4217 currency codes. |
+| 2844 | [CollateralReinvestmentType](/fix/fields/tags-2800-2999#tag-2844-collateralreinvestmenttype) | CollateralReinvestmentTypeCodeSet | Optional | Required if NoCollateralReinvestments(2845) &gt; 0. |
+| 2842 | [CollateralReinvestmentAmount](/fix/fields/tags-2800-2999#tag-2842-collateralreinvestmentamount) | Amt | Optional | The cash amount of the specified re-investment type. |
+| 2843 | [CollateralReinvestmentCurrency](/fix/fields/tags-2800-2999#tag-2843-collateralreinvestmentcurrency) | Currency | Optional | The currency denomination of the re-invested cash amount. Uses ISO 4217 currency codes. |
 
 </StickyTable>
 

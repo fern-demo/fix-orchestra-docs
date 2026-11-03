@@ -3,9 +3,15 @@ title: "ProtectionTermObligationGrp"
 subtitle: "The ProtectionTermObligationGrp is a repeating component within the ProtectionTermGrp component used to report applicable CDS obligations."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40201</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoProtectionTermObligations (40201)](/fix/fields/tags-40200-40399#tag-40201).
+<llms-only>
+Repeating group · NumInGroup 40201 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoProtectionTermObligations (40201)](/fix/fields/tags-40200-40399#tag-40201-noprotectiontermobligations).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40202 | [ProtectionTermObligationType](/fix/fields/tags-40200-40399#tag-40202) | String | Optional | Required if NoProtectionTermObligations(40201) &gt; 0. |
-| 40203 | [ProtectionTermObligationValue](/fix/fields/tags-40200-40399#tag-40203) | String | Optional | Protection term obligation value appropriate to ProtectionTermObligationType(40202). See… |
+| 40202 | [ProtectionTermObligationType](/fix/fields/tags-40200-40399#tag-40202-protectiontermobligationtype) | String | Optional | Required if NoProtectionTermObligations(40201) &gt; 0. |
+| 40203 | [ProtectionTermObligationValue](/fix/fields/tags-40200-40399#tag-40203-protectiontermobligationvalue) | String | Optional | Protection term obligation value appropriate to ProtectionTermObligationType(40202). See… |
 
 </StickyTable>
 

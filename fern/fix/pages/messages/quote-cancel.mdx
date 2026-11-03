@@ -3,7 +3,13 @@ title: "QuoteCancel"
 subtitle: "The Quote Cancel message is used by an originator of quotes to cancel quotes. The Quote Cancel message supports cancellation of: • All quotes • Quotes for a specific symbol or security ID • All quotes for a security type • All quotes for an…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType Z</Badge> <Badge intent="note" minimal>Quotation Negotiation</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType Z · Quotation Negotiation · Pre Trade · Added FIX.4.2
+</llms-only>
 
 ## Message structure
 
@@ -12,20 +18,20 @@ subtitle: "The Quote Cancel message is used by an originator of quotes to cancel
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 131 | [QuoteReqID](/fix/fields/tags-0-199#tag-131) | String | Optional | Required when quote is in response to a Quote Request message |
-| 117 | [QuoteID](/fix/fields/tags-0-199#tag-117) | String | Optional | Conditionally required when QuoteCancelType(298) = 5 (Cancel specified single quote) and SecondarlyQuoteID(1751) is not specified. Maps to QuoteID(117) of a… |
-| 1751 | [SecondaryQuoteID](/fix/fields/tags-1600-1799#tag-1751) | String | Optional | Conditionally required when QuoteCancelType(298) = 5 (Cancel specific single quote) and QuoteID(117) is not specified. |
-| 1166 | [QuoteMsgID](/fix/fields/tags-1000-1199#tag-1166) | String | Optional | Optionally used to supply a message identifier for a quote cancel. |
-| 298 | [QuoteCancelType](/fix/fields/tags-200-399#tag-298) | QuoteCancelTypeCodeSet | **Required** | Identifies the type of Quote Cancel request. |
-| 537 | [QuoteType](/fix/fields/tags-400-599#tag-537) | QuoteTypeCodeSet | Optional | Conditionally required when QuoteCancelType(298)=6(Cancel by type of quote). |
-| 301 | [QuoteResponseLevel](/fix/fields/tags-200-399#tag-301) | QuoteResponseLevelCodeSet | Optional | Level of Response requested from receiver of quote messages. |
+| 131 | [QuoteReqID](/fix/fields/tags-0-199#tag-131-quotereqid) | String | Optional | Required when quote is in response to a Quote Request message |
+| 117 | [QuoteID](/fix/fields/tags-0-199#tag-117-quoteid) | String | Optional | Conditionally required when QuoteCancelType(298) = 5 (Cancel specified single quote) and SecondarlyQuoteID(1751) is not specified. Maps to QuoteID(117) of a… |
+| 1751 | [SecondaryQuoteID](/fix/fields/tags-1600-1799#tag-1751-secondaryquoteid) | String | Optional | Conditionally required when QuoteCancelType(298) = 5 (Cancel specific single quote) and QuoteID(117) is not specified. |
+| 1166 | [QuoteMsgID](/fix/fields/tags-1000-1199#tag-1166-quotemsgid) | String | Optional | Optionally used to supply a message identifier for a quote cancel. |
+| 298 | [QuoteCancelType](/fix/fields/tags-200-399#tag-298-quotecanceltype) | QuoteCancelTypeCodeSet | **Required** | Identifies the type of Quote Cancel request. |
+| 537 | [QuoteType](/fix/fields/tags-400-599#tag-537-quotetype) | QuoteTypeCodeSet | Optional | Conditionally required when QuoteCancelType(298)=6(Cancel by type of quote). |
+| 301 | [QuoteResponseLevel](/fix/fields/tags-200-399#tag-301-quoteresponselevel) | QuoteResponseLevelCodeSet | Optional | Level of Response requested from receiver of quote messages. |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
 | 1461 | [TargetParties](/fix/groups/target-parties) | Repeating group | Optional |  |
-| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
-| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
-| 581 | [AccountType](/fix/fields/tags-400-599#tag-581) | AccountTypeCodeSet | Optional | Type of account associated with the order (Origin) |
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1-account) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
+| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660-acctidsource) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
+| 581 | [AccountType](/fix/fields/tags-400-599#tag-581-accounttype) | AccountTypeCodeSet | Optional | Type of account associated with the order (Origin) |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336-tradingsessionid) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625-tradingsessionsubid) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
 | 295 | [QuotCxlEntriesGrp](/fix/groups/quot-cxl-entries-grp) | Repeating group | Optional |  |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 

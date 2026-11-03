@@ -3,9 +3,15 @@ title: "Tags 2800–2896"
 subtitle: "85 fields"
 ---
 
-## 2800 · PayDisputeReason [#tag-2800]
+## Tag 2800: PayDisputeReason
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2800</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2800 · int · Added FIX.5.0SP2
+</llms-only>
 
 Used to provide the reason for disputing a request or report. See https://www.fixtrading.org/packages/PayDisputeReason for the list of applicable values.
 
@@ -13,9 +19,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [PayManagementReport](/fix/messages/pay-management-report), [PayManagementReportAck](/fix/messages/pay-management-report-ack)
 
-## 2801 · EncodedReplaceText [#tag-2801]
+## Tag 2801: EncodedReplaceText
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2801</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2801 · data · Added FIX.5.0SP2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the ReplaceText(2805) field in the encoded format specified via the MessageEncoding(347) field. If used, the ASCII (English) representation should also be specified in the ReplaceText(2805) field.
 
@@ -23,9 +35,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [PayManagementReport](/fix/messages/pay-management-report)
 
-## 2802 · EncodedReplaceTextLen [#tag-2802]
+## Tag 2802: EncodedReplaceTextLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2802</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2802 · Length · Added FIX.5.0SP2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedReplaceText(2801) field.
 
@@ -33,9 +51,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [PayManagementReport](/fix/messages/pay-management-report)
 
-## 2803 · PayReportRefID [#tag-2803]
+## Tag 2803: PayReportRefID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2803</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2803 · String · Added FIX.5.0SP2
+</llms-only>
 
 Reference identifier of the PayManagementReport(35=EA). To be used with PayReportTransType(2804)=1 (Replace).
 
@@ -43,9 +67,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PayManagementReport](/fix/messages/pay-management-report)
 
-## 2804 · PayReportTransType [#tag-2804]
+## Tag 2804: PayReportTransType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2804</Badge> <Badge intent="note" minimal>PayReportTransTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2804 · PayReportTransTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the message transaction type.
 
@@ -59,9 +89,15 @@ Code set **PayReportTransTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PayManagementReport](/fix/messages/pay-management-report)
 
-## 2805 · ReplaceText [#tag-2805]
+## Tag 2805: ReplaceText
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2805</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2805 · String · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the reason for amendment.
 
@@ -69,9 +105,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PayManagementReport](/fix/messages/pay-management-report)
 
-## 2806 · PayReportStatus [#tag-2806]
+## Tag 2806: PayReportStatus
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2806</Badge> <Badge intent="note" minimal>PayReportStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2806 · PayReportStatusCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Identifies status of the payment report.
 
@@ -86,9 +128,15 @@ Code set **PayReportStatusCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PayManagementReportAck](/fix/messages/pay-management-report-ack)
 
-## 2807 · CancelText [#tag-2807]
+## Tag 2807: CancelText
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2807</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2807 · String · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the reason for cancelation.
 
@@ -96,9 +144,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PayManagementRequest](/fix/messages/pay-management-request)
 
-## 2808 · EncodedCancelText [#tag-2808]
+## Tag 2808: EncodedCancelText
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2808</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2808 · data · Added FIX.5.0SP2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the CancelText(2807) field in the encoded format specified via the MessageEncoding(347) field. If used, the ASCII (English) representation should also be specified in the CancelText(2807) field.
 
@@ -106,9 +160,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [PayManagementRequest](/fix/messages/pay-management-request)
 
-## 2809 · EncodedCancelTextLen [#tag-2809]
+## Tag 2809: EncodedCancelTextLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2809</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2809 · Length · Added FIX.5.0SP2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedCancelText(2808) field.
 
@@ -116,9 +176,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [PayManagementRequest](/fix/messages/pay-management-request)
 
-## 2810 · PayRequestRefID [#tag-2810]
+## Tag 2810: PayRequestRefID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2810</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2810 · String · Added FIX.5.0SP2
+</llms-only>
 
 Reference identifier of the PayManagementRequest(35=DY). To be used with PayRequestTransType(2811)=1 (Cancel).
 
@@ -126,9 +192,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PayManagementRequest](/fix/messages/pay-management-request)
 
-## 2811 · PayRequestTransType [#tag-2811]
+## Tag 2811: PayRequestTransType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2811</Badge> <Badge intent="note" minimal>PayRequestTransTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2811 · PayRequestTransTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the message transaction type.
 
@@ -141,9 +213,15 @@ Code set **PayRequestTransTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PayManagementRequest](/fix/messages/pay-management-request)
 
-## 2812 · PayRequestID [#tag-2812]
+## Tag 2812: PayRequestID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2812</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2812 · String · Added FIX.5.0SP2
+</llms-only>
 
 Unique ID of the PayManagementRequest(35=DY) message.
 
@@ -151,9 +229,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PayManagementReport](/fix/messages/pay-management-report), [PayManagementRequest](/fix/messages/pay-management-request), [PayManagementRequestAck](/fix/messages/pay-management-request-ack)
 
-## 2813 · PayRequestStatus [#tag-2813]
+## Tag 2813: PayRequestStatus
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2813</Badge> <Badge intent="note" minimal>PayRequestStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2813 · PayRequestStatusCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Identifies status of the request being responded to.
 
@@ -168,9 +252,15 @@ Code set **PayRequestStatusCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PayManagementReport](/fix/messages/pay-management-report), [PayManagementRequestAck](/fix/messages/pay-management-request-ack)
 
-## 2814 · EncodedPostTradePaymentDesc [#tag-2814]
+## Tag 2814: EncodedPostTradePaymentDesc
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2814</Badge> <Badge intent="note" minimal>data</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2814 · data · Added FIX.5.0SP2
+</llms-only>
 
 Encoded (non-ASCII characters) representation of the PostTradePaymentDesc(2820) field in the encoded format specified via the MessageEncoding(347) field. If used, the ASCII (English) representation should also be specified in the PostTradePaymentDesc(2820) field.
 
@@ -178,9 +268,15 @@ Type: [data](/fix/datatypes#data)
 
 Used in: [PostTradePayment](/fix/components/post-trade-payment)
 
-## 2815 · EncodedPostTradePaymentDescLen [#tag-2815]
+## Tag 2815: EncodedPostTradePaymentDescLen
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2815</Badge> <Badge intent="note" minimal>Length</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2815 · Length · Added FIX.5.0SP2
+</llms-only>
 
 Byte length of encoded (non-ASCII characters) EncodedPostTradePaymentDesc(2814) field.
 
@@ -188,9 +284,15 @@ Type: [Length](/fix/datatypes#length)
 
 Used in: [PostTradePayment](/fix/components/post-trade-payment)
 
-## 2816 · PostTradePaymentAccount [#tag-2816]
+## Tag 2816: PostTradePaymentAccount
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2816</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2816 · String · Added FIX.5.0SP2
+</llms-only>
 
 The cash account on the books of the receiver of the request or the sender of the report to be debited or credited.
 
@@ -198,9 +300,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PostTradePayment](/fix/components/post-trade-payment)
 
-## 2817 · PostTradePaymentAmount [#tag-2817]
+## Tag 2817: PostTradePaymentAmount
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2817</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2817 · Amt · Added FIX.5.0SP2
+</llms-only>
 
 The payment amount for the specified PostTradePaymentType(2824).
 
@@ -208,9 +316,15 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [PostTradePayment](/fix/components/post-trade-payment)
 
-## 2818 · PostTradePaymentCurrency [#tag-2818]
+## Tag 2818: PostTradePaymentCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2818</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2818 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the currency in which PostTradePaymentAmount(2817) is denominated. Uses ISO 4271 currency codes.
 
@@ -218,9 +332,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [PostTradePayment](/fix/components/post-trade-payment)
 
-## 2819 · PostTradePaymentDebitOrCredit [#tag-2819]
+## Tag 2819: PostTradePaymentDebitOrCredit
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2819</Badge> <Badge intent="note" minimal>PostTradePaymentDebitOrCreditCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2819 · PostTradePaymentDebitOrCreditCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Payment side of this individual payment from the requesting firm's perspective.
 
@@ -233,9 +353,15 @@ Code set **PostTradePaymentDebitOrCreditCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PostTradePayment](/fix/components/post-trade-payment)
 
-## 2820 · PostTradePaymentDesc [#tag-2820]
+## Tag 2820: PostTradePaymentDesc
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2820</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2820 · String · Added FIX.5.0SP2
+</llms-only>
 
 A short descriptive name given to the payment, e.g. Premium, Upfront, etc. The description may be used as reference.
 
@@ -243,9 +369,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PostTradePayment](/fix/components/post-trade-payment)
 
-## 2821 · PostTradePaymentID [#tag-2821]
+## Tag 2821: PostTradePaymentID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2821</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2821 · String · Added FIX.5.0SP2
+</llms-only>
 
 The identifier for the individual payment.
 
@@ -253,9 +385,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PostTradePayment](/fix/components/post-trade-payment)
 
-## 2822 · PostTradePaymentLinkID [#tag-2822]
+## Tag 2822: PostTradePaymentLinkID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2822</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2822 · String · Added FIX.5.0SP2
+</llms-only>
 
 Used to link a group of payments together, e.g. cross-currency payments associated with a swap.
 
@@ -263,9 +401,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PostTradePayment](/fix/components/post-trade-payment)
 
-## 2823 · PostTradePaymentStatus [#tag-2823]
+## Tag 2823: PostTradePaymentStatus
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2823</Badge> <Badge intent="note" minimal>PostTradePaymentStatusCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2823 · PostTradePaymentStatusCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Used to indicate the status of a post-trade payment.
 
@@ -281,9 +425,15 @@ Code set **PostTradePaymentStatusCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PostTradePayment](/fix/components/post-trade-payment)
 
-## 2824 · PostTradePaymentType [#tag-2824]
+## Tag 2824: PostTradePaymentType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2824</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2824 · String · Added FIX.5.0SP2
+</llms-only>
 
 Type of post-trade payment. See ISITC "Payments Cash Purpose Codes" for list of payment type codes to use available at https://isitc.org/market-practices/reference-data-and-standards-market-practice and select "ISITC Classification Code List".
 
@@ -291,39 +441,63 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [PostTradePayment](/fix/components/post-trade-payment)
 
-## 2825 · PostTradePaymentCalculationDate [#tag-2825]
+## Tag 2825: PostTradePaymentCalculationDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2825</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2825 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The (actual) date the periodic payments calculations are made.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PostTradePayment](/fix/components/post-trade-payment)
 
-## 2826 · PostTradePaymentValueDate [#tag-2826]
+## Tag 2826: PostTradePaymentValueDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2826</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2826 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The adjusted (for holidays and other non-business days) payment date on which the payment is expected to settle.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PostTradePayment](/fix/components/post-trade-payment)
 
-## 2827 · PostTradePaymentFinalValueDate [#tag-2827]
+## Tag 2827: PostTradePaymentFinalValueDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2827</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2827 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The actual or final payment date on which the payment was made.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PostTradePayment](/fix/components/post-trade-payment)
 
-## 2828 · CurrentDisplayPrice [#tag-2828]
+## Tag 2828: CurrentDisplayPrice
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2828</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2828 · Price · Added FIX.5.0SP2
+</llms-only>
 
 Price at which the order is currently displayed to the market. Can be used on order messages, e.g. NewOrderSingle(35=D), to provide the current displayed price of a parent order when splitting it into smaller child orders.
 
@@ -333,9 +507,15 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [DisplayInstruction](/fix/components/display-instruction)
 
-## 2829 · DuplicateClOrdIDIndicator [#tag-2829]
+## Tag 2829: DuplicateClOrdIDIndicator
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2829</Badge> <Badge intent="note" minimal>DuplicateClOrdIDIndicatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2829 · DuplicateClOrdIDIndicatorCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Used to indicate that a ClOrdID(11) value is an intentional duplicate of a previously sent value. Allows to avoid the rejection of an order with OrdRejReason(103) = 6 (Duplicate Order).
 
@@ -350,9 +530,15 @@ Code set **DuplicateClOrdIDIndicatorCodeSet** ([Boolean](/fix/datatypes#boolean)
 
 Used in: [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request)
 
-## 2830 · EventInitiatorType [#tag-2830]
+## Tag 2830: EventInitiatorType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2830</Badge> <Badge intent="note" minimal>EventInitiatorTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2830 · EventInitiatorTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Indicates the type of entity who initiated an event, e.g. modification or cancellation of an order or quote.
 
@@ -366,9 +552,15 @@ Code set **EventInitiatorTypeCodeSet** ([char](/fix/datatypes#char))
 
 Used in: [ExecutionReport](/fix/messages/execution-report), [QuoteStatusReport](/fix/messages/quote-status-report)
 
-## 2831 · NBBOEntryType [#tag-2831]
+## Tag 2831: NBBOEntryType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2831</Badge> <Badge intent="note" minimal>NBBOEntryTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2831 · NBBOEntryTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Type of NBBO information.
 
@@ -382,9 +574,15 @@ Code set **NBBOEntryTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [TrdRegTimestamps](/fix/groups/trd-reg-timestamps)
 
-## 2832 · NBBOPrice [#tag-2832]
+## Tag 2832: NBBOPrice
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2832</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2832 · Price · Added FIX.5.0SP2
+</llms-only>
 
 Price related to NBBO. NBBOEntryType(2831) may be used to indicate entry type, e.g. bid or offer.
 
@@ -392,9 +590,15 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [TrdRegTimestamps](/fix/groups/trd-reg-timestamps)
 
-## 2833 · NBBOQty [#tag-2833]
+## Tag 2833: NBBOQty
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2833</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2833 · Qty · Added FIX.5.0SP2
+</llms-only>
 
 Quantity related to NBBO. NBBOEntryType(2831) may be used to indicte entry type, e.g. bid or offer.
 
@@ -402,9 +606,15 @@ Type: [Qty](/fix/datatypes#qty)
 
 Used in: [TrdRegTimestamps](/fix/groups/trd-reg-timestamps)
 
-## 2834 · NBBOSource [#tag-2834]
+## Tag 2834: NBBOSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2834</Badge> <Badge intent="note" minimal>NBBOSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2834 · NBBOSourceCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Source of NBBO information.
 
@@ -419,9 +629,15 @@ Code set **NBBOSourceCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [TrdRegTimestamps](/fix/groups/trd-reg-timestamps)
 
-## 2835 · OrderOriginationFirmID [#tag-2835]
+## Tag 2835: OrderOriginationFirmID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2835</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2835 · String · Added FIX.5.0SP2
+</llms-only>
 
 Identifier for the original owner of an order as part of the RelatedOrderGrp component. Use the Parties component with PartyRole(452) = 13 (Order Origination Firm) to identify the original owner of an individual order.
 
@@ -429,19 +645,31 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [RelatedOrderGrp](/fix/groups/related-order-grp)
 
-## 2836 · RelatedOrderTime [#tag-2836]
+## Tag 2836: RelatedOrderTime
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2836</Badge> <Badge intent="note" minimal>UTCTimestamp</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2836 · UTCTimestamp · Added FIX.5.0SP2
+</llms-only>
 
 Timestamp for the assignment of a (unique) identifier to an order.
 
-Type: [UTCTimestamp](/fix/datatypes#utc-timestamp)
+Type: [UTCTimestamp](/fix/datatypes#utctimestamp)
 
 Used in: [RelatedOrderGrp](/fix/groups/related-order-grp)
 
-## 2837 · SingleQuoteIndicator [#tag-2837]
+## Tag 2837: SingleQuoteIndicator
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2837</Badge> <Badge intent="note" minimal>SingleQuoteIndicatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2837 · SingleQuoteIndicatorCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Used to indicate whether the quoting system allows only one quote to be active at a time for the quote issuer or market maker.
 
@@ -454,9 +682,15 @@ Code set **SingleQuoteIndicatorCodeSet** ([Boolean](/fix/datatypes#boolean))
 
 Used in: [Quote](/fix/messages/quote)
 
-## 2838 · CurrentWorkingPrice [#tag-2838]
+## Tag 2838: CurrentWorkingPrice
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2838</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2838 · Price · Added FIX.5.0SP2
+</llms-only>
 
 Current working price of the order relative to the state of the order.
 
@@ -466,9 +700,15 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [ExecutionReport](/fix/messages/execution-report), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request)
 
-## 2839 · TrdRegTimestampManualIndicator [#tag-2839]
+## Tag 2839: TrdRegTimestampManualIndicator
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2839</Badge> <Badge intent="note" minimal>TrdRegTimestampManualIndicatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2839 · TrdRegTimestampManualIndicatorCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Indicates whether a given timestamp was manually captured.
 
@@ -481,9 +721,15 @@ Code set **TrdRegTimestampManualIndicatorCodeSet** ([Boolean](/fix/datatypes#boo
 
 Used in: [TrdRegTimestamps](/fix/groups/trd-reg-timestamps)
 
-## 2840 · CollateralReinvestmentRate [#tag-2840]
+## Tag 2840: CollateralReinvestmentRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2840</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2840 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 Interest rate received for collateral reinvestment.
 
@@ -493,9 +739,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [CollateralAmountGrp](/fix/groups/collateral-amount-grp)
 
-## 2841 · UnderlyingRefID [#tag-2841]
+## Tag 2841: UnderlyingRefID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2841</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2841 · String · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the underlying instrument the entity applies to by referencing the underlying instrument's UnderlyingID(2874).
 
@@ -503,9 +755,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [CollateralAmountGrp](/fix/groups/collateral-amount-grp)
 
-## 2842 · CollateralReinvestmentAmount [#tag-2842]
+## Tag 2842: CollateralReinvestmentAmount
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2842</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2842 · Amt · Added FIX.5.0SP2
+</llms-only>
 
 The cash amount of the specified re-investment type.
 
@@ -513,9 +771,15 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [CollateralReinvestmentGrp](/fix/groups/collateral-reinvestment-grp)
 
-## 2843 · CollateralReinvestmentCurrency [#tag-2843]
+## Tag 2843: CollateralReinvestmentCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2843</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2843 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 The currency denomination of the re-invested cash amount. Uses ISO 4217 currency codes.
 
@@ -523,9 +787,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [CollateralReinvestmentGrp](/fix/groups/collateral-reinvestment-grp)
 
-## 2844 · CollateralReinvestmentType [#tag-2844]
+## Tag 2844: CollateralReinvestmentType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2844</Badge> <Badge intent="note" minimal>CollateralReinvestmentTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2844 · CollateralReinvestmentTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Indicates the type of investment the cash collateral is re-invested in.
 
@@ -541,19 +811,31 @@ Code set **CollateralReinvestmentTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [CollateralReinvestmentGrp](/fix/groups/collateral-reinvestment-grp)
 
-## 2845 · NoCollateralReinvestments [#tag-2845]
+## Tag 2845: NoCollateralReinvestments
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2845</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2845 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of instances of CollateralReinvestmentType(2844) in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [CollateralReinvestmentGrp](/fix/groups/collateral-reinvestment-grp)
 
-## 2846 · FundingSource [#tag-2846]
+## Tag 2846: FundingSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2846</Badge> <Badge intent="note" minimal>FundingSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2846 · FundingSourceCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the funding source used to finance margin or collateralized loan.
 
@@ -571,9 +853,15 @@ Code set **FundingSourceCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [FundingSourceGrp](/fix/groups/funding-source-grp)
 
-## 2847 · FundingSourceCurrency [#tag-2847]
+## Tag 2847: FundingSourceCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2847</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2847 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 Currency denomination of the market value of the funding source. Uses ISO 4217 currency codes.
 
@@ -581,9 +869,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [FundingSourceGrp](/fix/groups/funding-source-grp)
 
-## 2848 · FundingSourceMarketValue [#tag-2848]
+## Tag 2848: FundingSourceMarketValue
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2848</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2848 · Amt · Added FIX.5.0SP2
+</llms-only>
 
 Market value of the funding source.
 
@@ -591,19 +885,31 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [FundingSourceGrp](/fix/groups/funding-source-grp)
 
-## 2849 · NoFundingSources [#tag-2849]
+## Tag 2849: NoFundingSources
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2849</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2849 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of instances of FundingSource(2846) in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [FundingSourceGrp](/fix/groups/funding-source-grp)
 
-## 2851 · MarginDirection [#tag-2851]
+## Tag 2851: MarginDirection
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2851</Badge> <Badge intent="note" minimal>MarginDirectionCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2851 · MarginDirectionCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Indicates whether the margin described is posted or received.
 
@@ -616,9 +922,15 @@ Code set **MarginDirectionCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [MarginAmount](/fix/groups/margin-amount)
 
-## 2862 · SideCollateralReinvestmentRate [#tag-2862]
+## Tag 2862: SideCollateralReinvestmentRate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2862</Badge> <Badge intent="note" minimal>Percentage</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2862 · Percentage · Added FIX.5.0SP2
+</llms-only>
 
 Interest rate received for collateral reinvestment.
 
@@ -628,9 +940,15 @@ Type: [Percentage](/fix/datatypes#percentage)
 
 Used in: [SideCollateralAmountGrp](/fix/groups/side-collateral-amount-grp)
 
-## 2863 · SideUnderlyingRefID [#tag-2863]
+## Tag 2863: SideUnderlyingRefID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2863</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2863 · String · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the underlying instrument the entity applies to by referencing the underlying instrument's UnderlyingID(2874).
 
@@ -638,19 +956,31 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [SideCollateralAmountGrp](/fix/groups/side-collateral-amount-grp)
 
-## 2864 · NoSideCollateralReinvestments [#tag-2864]
+## Tag 2864: NoSideCollateralReinvestments
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2864</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2864 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of instances of SideCollateralReinvestmentType(2867) in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [SideCollateralReinvestmentGrp](/fix/groups/side-collateral-reinvestment-grp)
 
-## 2865 · SideCollateralReinvestmentAmount [#tag-2865]
+## Tag 2865: SideCollateralReinvestmentAmount
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2865</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2865 · Amt · Added FIX.5.0SP2
+</llms-only>
 
 The cash amount of the specified re-investment type.
 
@@ -658,9 +988,15 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [SideCollateralReinvestmentGrp](/fix/groups/side-collateral-reinvestment-grp)
 
-## 2866 · SideCollateralReinvestmentCurrency [#tag-2866]
+## Tag 2866: SideCollateralReinvestmentCurrency
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2866</Badge> <Badge intent="note" minimal>Currency</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2866 · Currency · Added FIX.5.0SP2
+</llms-only>
 
 The currency denomination of the re-invested cash amount. Uses ISO 4217 currency codes.
 
@@ -668,9 +1004,15 @@ Type: [Currency](/fix/datatypes#currency)
 
 Used in: [SideCollateralReinvestmentGrp](/fix/groups/side-collateral-reinvestment-grp)
 
-## 2867 · SideCollateralReinvestmentType [#tag-2867]
+## Tag 2867: SideCollateralReinvestmentType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2867</Badge> <Badge intent="note" minimal>CollateralReinvestmentTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2867 · CollateralReinvestmentTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Indicates the type of investment the cash collateral is re-invested in.
 
@@ -686,31 +1028,49 @@ Code set **CollateralReinvestmentTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [SideCollateralReinvestmentGrp](/fix/groups/side-collateral-reinvestment-grp)
 
-## 2868 · CollateralizationValueDate [#tag-2868]
+## Tag 2868: CollateralizationValueDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2868</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2868 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 Date when the collateral is to be assessed or assigned.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [CollateralReport](/fix/messages/collateral-report), [PositionReport](/fix/messages/position-report), [TradeCaptureReport](/fix/messages/trade-capture-report)
 
-## 2869 · RegulatoryReportTypeBusinessDate [#tag-2869]
+## Tag 2869: RegulatoryReportTypeBusinessDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2869</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2869 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The business date on which the event identified in RegulatoryReportType(1934) took place.
 
 In the context of EU SFTR reports with a RegulatoryReportType(1934) value 7 (Post-trade valuation), 31 (Collateral update) or 32 (Margin update), the business date on which the business event took place, which results in the information contained in the report.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [CollateralReport](/fix/messages/collateral-report), [MarginRequirementReport](/fix/messages/margin-requirement-report), [PositionReport](/fix/messages/position-report), [TradeCaptureReport](/fix/messages/trade-capture-report)
 
-## 2870 · ClearingPortfolioID [#tag-2870]
+## Tag 2870: ClearingPortfolioID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2870</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2870 · String · Added FIX.5.0SP2
+</llms-only>
 
 When the transaction is cleared and included in a portfolio of transactions this identifies the portfolio by its unique identifier.
 
@@ -720,19 +1080,31 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [MarginRequirementReport](/fix/messages/margin-requirement-report), [PositionReport](/fix/messages/position-report), [TradeCaptureReport](/fix/messages/trade-capture-report)
 
-## 2871 · NoTransactionAttributes [#tag-2871]
+## Tag 2871: NoTransactionAttributes
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2871</Badge> <Badge intent="note" minimal>NumInGroup</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2871 · NumInGroup · Added FIX.5.0SP2
+</llms-only>
 
 Number of instances of TransactionAttributeType(2872) in the repeating group.
 
-Type: [NumInGroup](/fix/datatypes#num-in-group)
+Type: [NumInGroup](/fix/datatypes#numingroup)
 
 Used in: [TransactionAttributeGrp](/fix/groups/transaction-attribute-grp)
 
-## 2872 · TransactionAttributeType [#tag-2872]
+## Tag 2872: TransactionAttributeType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2872</Badge> <Badge intent="note" minimal>TransactionAttributeTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2872 · TransactionAttributeTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Type of attribute(s) or characteristic(s) associated with the transaction.
 
@@ -746,9 +1118,15 @@ Code set **TransactionAttributeTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [TransactionAttributeGrp](/fix/groups/transaction-attribute-grp)
 
-## 2873 · TransactionAttributeValue [#tag-2873]
+## Tag 2873: TransactionAttributeValue
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2873</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2873 · String · Added FIX.5.0SP2
+</llms-only>
 
 Value associated with the specificed TransactionAttributeType(2872).
 
@@ -756,9 +1134,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [TransactionAttributeGrp](/fix/groups/transaction-attribute-grp)
 
-## 2874 · UnderlyingID [#tag-2874]
+## Tag 2874: UnderlyingID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2874</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2874 · String · Added FIX.5.0SP2
+</llms-only>
 
 Unique identifier for the underlying instrument within the context of a message.
 
@@ -768,9 +1152,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 2876 · PosAmtPrice [#tag-2876]
+## Tag 2876: PosAmtPrice
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2876</Badge> <Badge intent="note" minimal>Price</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2876 · Price · Added FIX.5.0SP2
+</llms-only>
 
 The price used to calculate the PosAmt(708).
 
@@ -780,9 +1170,15 @@ Type: [Price](/fix/datatypes#price)
 
 Used in: [PositionAmountData](/fix/groups/position-amount-data)
 
-## 2877 · PosAmtPriceType [#tag-2877]
+## Tag 2877: PosAmtPriceType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2877</Badge> <Badge intent="note" minimal>PriceTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2877 · PriceTypeCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Specifies the type of price for PosAmtPrice(2876).
 
@@ -818,19 +1214,31 @@ Code set **PriceTypeCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [PositionAmountData](/fix/groups/position-amount-data)
 
-## 2878 · TerminationDate [#tag-2878]
+## Tag 2878: TerminationDate
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2878</Badge> <Badge intent="note" minimal>LocalMktDate</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2878 · LocalMktDate · Added FIX.5.0SP2
+</llms-only>
 
 The date of a contract's early termination or other post-trade event when the event is prior to the contract natural end or maturity not defined as part of the security's reference data or contractual terms/agreement.
 
-Type: [LocalMktDate](/fix/datatypes#local-mkt-date)
+Type: [LocalMktDate](/fix/datatypes#localmktdate)
 
 Used in: [PositionReport](/fix/messages/position-report), [QuoteResponse](/fix/messages/quote-response), [QuoteStatusReport](/fix/messages/quote-status-report), [TradeCaptureReport](/fix/messages/trade-capture-report)
 
-## 2879 · CouponOtherDayCount [#tag-2879]
+## Tag 2879: CouponOtherDayCount
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2879</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2879 · String · Added FIX.5.0SP2
+</llms-only>
 
 The industry name of the day count convention not listed in CouponDayCount(1950).
 
@@ -838,9 +1246,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [Instrument](/fix/components/instrument)
 
-## 2880 · LegCouponOtherDayCount [#tag-2880]
+## Tag 2880: LegCouponOtherDayCount
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2880</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2880 · String · Added FIX.5.0SP2
+</llms-only>
 
 The industry name of the day count convention not listed in LegCouponDayCount(2165).
 
@@ -848,9 +1262,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentLeg](/fix/components/instrument-leg)
 
-## 2881 · UnderlyingCouponOtherDayCount [#tag-2881]
+## Tag 2881: UnderlyingCouponOtherDayCount
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2881</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2881 · String · Added FIX.5.0SP2
+</llms-only>
 
 The industry name of the day count convention not listed in UnderlyingCouponDayCount(1993).
 
@@ -858,9 +1278,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 2882 · ContraOrderOrigination [#tag-2882]
+## Tag 2882: ContraOrderOrigination
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2882</Badge> <Badge intent="note" minimal>OrderOriginationCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2882 · OrderOriginationCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Identifies the origin of the order from the counterparty of the execution or trade.
 
@@ -878,9 +1304,15 @@ Code set **OrderOriginationCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ExecutionReport](/fix/messages/execution-report), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request)
 
-## 2883 · RoutingArrangmentIndicator [#tag-2883]
+## Tag 2883: RoutingArrangmentIndicator
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2883</Badge> <Badge intent="note" minimal>RoutingArrangmentIndicatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2883 · RoutingArrangmentIndicatorCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Indicates whether a routing arrangement is in place, e.g. between two brokers. May be used together with OrderOrigination(1724) to further describe the origin of an order.
 
@@ -895,9 +1327,15 @@ Code set **RoutingArrangmentIndicatorCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ExecutionReport](/fix/messages/execution-report), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request), [SideCrossOrdModGrp](/fix/groups/side-cross-ord-mod-grp)
 
-## 2884 · ContraRoutingArrangmentIndicator [#tag-2884]
+## Tag 2884: ContraRoutingArrangmentIndicator
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2884</Badge> <Badge intent="note" minimal>RoutingArrangmentIndicatorCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2884 · RoutingArrangmentIndicatorCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Indicates whether a routing arrangement is in place, e.g. between two brokers. May be used together with ContraOrderOrigination(2882) to further describe the origin of an order.
 
@@ -910,9 +1348,15 @@ Code set **RoutingArrangmentIndicatorCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [ExecutionReport](/fix/messages/execution-report), [NewOrderSingle](/fix/messages/new-order-single), [OrderCancelReplaceRequest](/fix/messages/order-cancel-replace-request)
 
-## 2885 · UnderlyingAccruedInterestAmt [#tag-2885]
+## Tag 2885: UnderlyingAccruedInterestAmt
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2885</Badge> <Badge intent="note" minimal>Amt</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2885 · Amt · Added FIX.5.0SP2
+</llms-only>
 
 Amount of accrued interest of underlying security.
 
@@ -920,9 +1364,15 @@ Type: [Amt](/fix/datatypes#amt)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 2886 · UnderlyingNumDaysInterest [#tag-2886]
+## Tag 2886: UnderlyingNumDaysInterest
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2886</Badge> <Badge intent="note" minimal>int</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2886 · int · Added FIX.5.0SP2
+</llms-only>
 
 Number of days of interest for underlying security.
 
@@ -930,9 +1380,15 @@ Type: [int](/fix/datatypes#int)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 2887 · RelatedOrderID [#tag-2887]
+## Tag 2887: RelatedOrderID
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2887</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2887 · String · Added FIX.5.0SP2
+</llms-only>
 
 Identifier of a related order.
 
@@ -940,9 +1396,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [RelatedOrderGrp](/fix/groups/related-order-grp)
 
-## 2888 · RelatedOrderIDSource [#tag-2888]
+## Tag 2888: RelatedOrderIDSource
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2888</Badge> <Badge intent="note" minimal>RelatedOrderIDSourceCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2888 · RelatedOrderIDSourceCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Describes the source of the identifier that RelatedOrderID(2887) represents.
 
@@ -958,9 +1420,15 @@ Code set **RelatedOrderIDSourceCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [RelatedOrderGrp](/fix/groups/related-order-grp)
 
-## 2889 · RelatedOrderQty [#tag-2889]
+## Tag 2889: RelatedOrderQty
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2889</Badge> <Badge intent="note" minimal>Qty</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2889 · Qty · Added FIX.5.0SP2
+</llms-only>
 
 Quantity of the related order which can be less than its total quantity. For example, when only parts of an order contribute to an aggregated order.
 
@@ -968,9 +1436,15 @@ Type: [Qty](/fix/datatypes#qty)
 
 Used in: [RelatedOrderGrp](/fix/groups/related-order-grp)
 
-## 2890 · OrderRelationship [#tag-2890]
+## Tag 2890: OrderRelationship
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2890</Badge> <Badge intent="note" minimal>OrderRelationshipCodeSet</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2890 · OrderRelationshipCodeSet · Added FIX.5.0SP2
+</llms-only>
 
 Describes the type of relationship between the order identified by RelatedOrderID(2887) and the order outside of the RelatedOrderGrp component.
 
@@ -984,9 +1458,15 @@ Code set **OrderRelationshipCodeSet** ([int](/fix/datatypes#int))
 
 Used in: [RelatedOrderGrp](/fix/groups/related-order-grp)
 
-## 2891 · UPICode [#tag-2891]
+## Tag 2891: UPICode
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2891</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.Latest</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2891 · String · Added FIX.Latest
+</llms-only>
 
 Uniquely identifies the product of a security using ISO 4914 standard, Unique Product Identifier (UPI). The DSB (Derivative Service Bureau Ltd) is acting as designated service provider for UPI System.
 
@@ -994,9 +1474,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [Instrument](/fix/components/instrument), [SecTypesGrp](/fix/groups/sec-types-grp), [SettlInstGrp](/fix/groups/settl-inst-grp), [SettlementInstructionRequest](/fix/messages/settlement-instruction-request)
 
-## 2892 · DerivativeUPICode [#tag-2892]
+## Tag 2892: DerivativeUPICode
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2892</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.Latest</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2892 · String · Added FIX.Latest
+</llms-only>
 
 Uniquely identifies the product of a derivative instrument using ISO 4914. See UPICode(2891) for further detail.
 
@@ -1004,9 +1490,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [DerivativeInstrument](/fix/components/derivative-instrument)
 
-## 2893 · LegUPICode [#tag-2893]
+## Tag 2893: LegUPICode
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2893</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.Latest</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2893 · String · Added FIX.Latest
+</llms-only>
 
 Uniquely identifies the product of a leg instrument using ISO 4914. See UPICode(2891) for further detail.
 
@@ -1014,9 +1506,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentLeg](/fix/components/instrument-leg)
 
-## 2894 · UnderlyingUPICode [#tag-2894]
+## Tag 2894: UnderlyingUPICode
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2894</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.Latest</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2894 · String · Added FIX.Latest
+</llms-only>
 
 Uniquely identifies the product of an underlying instrument using ISO 4914. See UPICode(2891) for further detail.
 
@@ -1024,9 +1522,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [UnderlyingInstrument](/fix/components/underlying-instrument)
 
-## 2895 · InstrumentScopeUPICode [#tag-2895]
+## Tag 2895: InstrumentScopeUPICode
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2895</Badge> <Badge intent="note" minimal>String</Badge> <Badge intent="success" minimal>Added FIX.Latest</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2895 · String · Added FIX.Latest
+</llms-only>
 
 Uniquely identifies the product of a security using ISO 4914 as filter criteria. See UPICode(2891) for further detail.
 
@@ -1034,9 +1538,15 @@ Type: [String](/fix/datatypes#string)
 
 Used in: [InstrumentScope](/fix/components/instrument-scope)
 
-## 2896 · TertiaryTrdType [#tag-2896]
+## Tag 2896: TertiaryTrdType
 
+<llms-ignore>
 <Badge intent="info" minimal>Tag 2896</Badge> <Badge intent="note" minimal>TrdTypeCodeSet</Badge> <Badge intent="success" minimal>Added FIX.Latest</Badge>
+</llms-ignore>
+
+<llms-only>
+Tag 2896 · TrdTypeCodeSet · Added FIX.Latest
+</llms-only>
 
 Type of trade assigned to a trade. Used in addition to TrdType(828) and SecondaryTrdType(855). Must not be used when only one additional trade type needs to be assigned.
 

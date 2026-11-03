@@ -3,9 +3,15 @@ title: "UnderlyingProvisionParties"
 subtitle: "UnderlyingProvisionParties is a repeating component within the UnderlyingProvisionGrp component used to report the parties identified in the contract provision."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42173</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingProvisionPartyIDs (42173)](/fix/fields/tags-42000-42199#tag-42173).
+<llms-only>
+Repeating group · NumInGroup 42173 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingProvisionPartyIDs (42173)](/fix/fields/tags-42000-42199#tag-42173-nounderlyingprovisionpartyids).
 
 ## Members
 
@@ -13,10 +19,10 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42174 | [UnderlyingProvisionPartyID](/fix/fields/tags-42000-42199#tag-42174) | String | Optional | Required if NoUnderlyingProvisionPartyIDs(42173) &gt; 0. |
-| 42175 | [UnderlyingProvisionPartyIDSource](/fix/fields/tags-42000-42199#tag-42175) | PartyIDSourceCodeSet | Optional | Required if NoUnderlyingProvisionPartyIDs(42173) &gt; 0. |
-| 42176 | [UnderlyingProvisionPartyRole](/fix/fields/tags-42000-42199#tag-42176) | PartyRoleCodeSet | Optional | Required if NoUnderlyingProvisionPartyIDs(42173) &gt; 0. |
-| 40918 | [UnderlyingProvisionPartyRoleQualifier](/fix/fields/tags-40800-40999#tag-40918) | PartyDetailRoleQualifierCodeSet | Optional | Used to further qualify the value of UnderlyingProvisionPartyRole(42176). |
+| 42174 | [UnderlyingProvisionPartyID](/fix/fields/tags-42000-42199#tag-42174-underlyingprovisionpartyid) | String | Optional | Required if NoUnderlyingProvisionPartyIDs(42173) &gt; 0. |
+| 42175 | [UnderlyingProvisionPartyIDSource](/fix/fields/tags-42000-42199#tag-42175-underlyingprovisionpartyidsource) | PartyIDSourceCodeSet | Optional | Required if NoUnderlyingProvisionPartyIDs(42173) &gt; 0. |
+| 42176 | [UnderlyingProvisionPartyRole](/fix/fields/tags-42000-42199#tag-42176-underlyingprovisionpartyrole) | PartyRoleCodeSet | Optional | Required if NoUnderlyingProvisionPartyIDs(42173) &gt; 0. |
+| 40918 | [UnderlyingProvisionPartyRoleQualifier](/fix/fields/tags-40800-40999#tag-40918-underlyingprovisionpartyrolequalifier) | PartyDetailRoleQualifierCodeSet | Optional | Used to further qualify the value of UnderlyingProvisionPartyRole(42176). |
 | 42177 | [UnderlyingProvisionPtysSubGrp](/fix/groups/underlying-provision-ptys-sub-grp) | Repeating group | Optional | UnderlyingProvisionPtysSubGrp is a repeating component within the UnderlyingProvisionParties component used to extend information to be reported for the party. |
 
 </StickyTable>

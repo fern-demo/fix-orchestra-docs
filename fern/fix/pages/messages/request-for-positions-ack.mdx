@@ -3,7 +3,13 @@ title: "RequestForPositionsAck"
 subtitle: "The Request for Positions Ack message is returned by the holder of the position in response to a Request for Positions message. The purpose of the message is to acknowledge that a request has been received and is being processed."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType AO</Badge> <Badge intent="note" minimal>Position Maintenance</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType AO · Position Maintenance · Post Trade · Added FIX.4.4
+</llms-only>
 
 ## Message structure
 
@@ -12,33 +18,33 @@ subtitle: "The Request for Positions Ack message is returned by the holder of th
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 721 | [PosMaintRptID](/fix/fields/tags-600-799#tag-721) | String | **Required** | Unique identifier for this position report |
-| 710 | [PosReqID](/fix/fields/tags-600-799#tag-710) | String | Optional | Unique identifier for the Request for Position associated with this report This field should not be provided if the report was sent unsolicited. |
-| 727 | [TotalNumPosReports](/fix/fields/tags-600-799#tag-727) | int | Optional | Total number of Position Reports being returned |
-| 911 | [TotNumReports](/fix/fields/tags-800-999#tag-911) | int | Optional | Total number of reports returned in response to a request. |
-| 325 | [UnsolicitedIndicator](/fix/fields/tags-200-399#tag-325) | UnsolicitedIndicatorCodeSet | Optional | Set to 'Y' if message is sent as a result of a subscription request or out of band configuration as opposed to a Position Request. |
-| 728 | [PosReqResult](/fix/fields/tags-600-799#tag-728) | PosReqResultCodeSet | **Required** | Result of Request for Positions. |
-| 729 | [PosReqStatus](/fix/fields/tags-600-799#tag-729) | PosReqStatusCodeSet | **Required** | Status of Request for Positions |
-| 724 | [PosReqType](/fix/fields/tags-600-799#tag-724) | PosReqTypeCodeSet | Optional | Used to specify the type of position request being made. |
-| 573 | [MatchStatus](/fix/fields/tags-400-599#tag-573) | MatchStatusCodeSet | Optional | The status of this trade with respect to matching or comparison. |
-| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | Optional | The business date for which the trade is expected to be cleared. |
-| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263) | SubscriptionRequestTypeCodeSet | Optional | Subscription Request Type |
-| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716) | SettlSessIDCodeSet | Optional | Identifies a specific settlement session |
-| 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717) | String | Optional | SubID value associated with SettlSessID(716) |
-| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120) | Currency | Optional | Currency code of settlement denomination. |
+| 721 | [PosMaintRptID](/fix/fields/tags-600-799#tag-721-posmaintrptid) | String | **Required** | Unique identifier for this position report |
+| 710 | [PosReqID](/fix/fields/tags-600-799#tag-710-posreqid) | String | Optional | Unique identifier for the Request for Position associated with this report This field should not be provided if the report was sent unsolicited. |
+| 727 | [TotalNumPosReports](/fix/fields/tags-600-799#tag-727-totalnumposreports) | int | Optional | Total number of Position Reports being returned |
+| 911 | [TotNumReports](/fix/fields/tags-800-999#tag-911-totnumreports) | int | Optional | Total number of reports returned in response to a request. |
+| 325 | [UnsolicitedIndicator](/fix/fields/tags-200-399#tag-325-unsolicitedindicator) | UnsolicitedIndicatorCodeSet | Optional | Set to 'Y' if message is sent as a result of a subscription request or out of band configuration as opposed to a Position Request. |
+| 728 | [PosReqResult](/fix/fields/tags-600-799#tag-728-posreqresult) | PosReqResultCodeSet | **Required** | Result of Request for Positions. |
+| 729 | [PosReqStatus](/fix/fields/tags-600-799#tag-729-posreqstatus) | PosReqStatusCodeSet | **Required** | Status of Request for Positions |
+| 724 | [PosReqType](/fix/fields/tags-600-799#tag-724-posreqtype) | PosReqTypeCodeSet | Optional | Used to specify the type of position request being made. |
+| 573 | [MatchStatus](/fix/fields/tags-400-599#tag-573-matchstatus) | MatchStatusCodeSet | Optional | The status of this trade with respect to matching or comparison. |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715-clearingbusinessdate) | LocalMktDate | Optional | The business date for which the trade is expected to be cleared. |
+| 263 | [SubscriptionRequestType](/fix/fields/tags-200-399#tag-263-subscriptionrequesttype) | SubscriptionRequestTypeCodeSet | Optional | Subscription Request Type |
+| 716 | [SettlSessID](/fix/fields/tags-600-799#tag-716-settlsessid) | SettlSessIDCodeSet | Optional | Identifies a specific settlement session |
+| 717 | [SettlSessSubID](/fix/fields/tags-600-799#tag-717-settlsesssubid) | String | Optional | SubID value associated with SettlSessID(716) |
+| 120 | [SettlCurrency](/fix/fields/tags-0-199#tag-120-settlcurrency) | Currency | Optional | Currency code of settlement denomination. |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | **Required** | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
-| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
-| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
-| 581 | [AccountType](/fix/fields/tags-400-599#tag-581) | AccountTypeCodeSet | Optional | Type of account associated with the order (Origin) |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1-account) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
+| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660-acctidsource) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
+| 581 | [AccountType](/fix/fields/tags-400-599#tag-581-accounttype) | AccountTypeCodeSet | Optional | Type of account associated with the order (Origin) |
 | | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
-| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15-currency) | Currency | Optional | Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency… |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
-| 725 | [ResponseTransportType](/fix/fields/tags-600-799#tag-725) | ResponseTransportTypeCodeSet | Optional | Ability to specify whether the response to the request should be delivered inband or via pre-arranged out-of-band transport. |
-| 726 | [ResponseDestination](/fix/fields/tags-600-799#tag-726) | String | Optional | URI destination name. Used if ResponseTransportType is out-of-band. |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 725 | [ResponseTransportType](/fix/fields/tags-600-799#tag-725-responsetransporttype) | ResponseTransportTypeCodeSet | Optional | Ability to specify whether the response to the request should be delivered inband or via pre-arranged out-of-band transport. |
+| 726 | [ResponseDestination](/fix/fields/tags-600-799#tag-726-responsedestination) | String | Optional | URI destination name. Used if ResponseTransportType is out-of-band. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

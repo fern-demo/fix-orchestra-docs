@@ -3,9 +3,15 @@ title: "SideCollateralReinvestmentGrp"
 subtitle: "The SideCollateralReinvestmentGrp component block is a repeating group that may be used to provide a breakdown of the cash collateral's reinvestment types and amounts (e.g. SideCollateralType(2701)=\"CASH\")."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2864</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoSideCollateralReinvestments (2864)](/fix/fields/tags-2800-2999#tag-2864).
+<llms-only>
+Repeating group · NumInGroup 2864 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoSideCollateralReinvestments (2864)](/fix/fields/tags-2800-2999#tag-2864-nosidecollateralreinvestments).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2867 | [SideCollateralReinvestmentType](/fix/fields/tags-2800-2999#tag-2867) | CollateralReinvestmentTypeCodeSet | Optional | Required if NoSideCollateralReinvestments(2864) &gt; 0. |
-| 2865 | [SideCollateralReinvestmentAmount](/fix/fields/tags-2800-2999#tag-2865) | Amt | Optional | The cash amount of the specified re-investment type. |
-| 2866 | [SideCollateralReinvestmentCurrency](/fix/fields/tags-2800-2999#tag-2866) | Currency | Optional | The currency denomination of the re-invested cash amount. Uses ISO 4217 currency codes. |
+| 2867 | [SideCollateralReinvestmentType](/fix/fields/tags-2800-2999#tag-2867-sidecollateralreinvestmenttype) | CollateralReinvestmentTypeCodeSet | Optional | Required if NoSideCollateralReinvestments(2864) &gt; 0. |
+| 2865 | [SideCollateralReinvestmentAmount](/fix/fields/tags-2800-2999#tag-2865-sidecollateralreinvestmentamount) | Amt | Optional | The cash amount of the specified re-investment type. |
+| 2866 | [SideCollateralReinvestmentCurrency](/fix/fields/tags-2800-2999#tag-2866-sidecollateralreinvestmentcurrency) | Currency | Optional | The currency denomination of the re-invested cash amount. Uses ISO 4217 currency codes. |
 
 </StickyTable>
 

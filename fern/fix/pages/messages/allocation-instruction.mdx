@@ -3,7 +3,13 @@ title: "AllocationInstruction"
 subtitle: "The Allocation Instruction message provides the ability to specify how an order or set of orders should be subdivided amongst one or more accounts. In versions of FIX prior to version 4.4, this same message was known as the Allocation…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType J</Badge> <Badge intent="note" minimal>Allocation</Badge> <Badge intent="tip" minimal>Post Trade</Badge> <Badge intent="success" minimal>Added FIX.2.7</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType J · Allocation · Post Trade · Added FIX.2.7
+</llms-only>
 
 ## Message structure
 
@@ -12,96 +18,96 @@ subtitle: "The Allocation Instruction message provides the ability to specify ho
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 70 | [AllocID](/fix/fields/tags-0-199#tag-70) | String | **Required** | Unique identifier for this allocation instruction message |
-| 2758 | [AllocRequestID](/fix/fields/tags-2600-2799#tag-2758) | String | Optional | May be used to link to a previously submitted AllocationInstructionAlertRequest(35=DU) message. |
-| 71 | [AllocTransType](/fix/fields/tags-0-199#tag-71) | AllocTransTypeCodeSet | **Required** | i.e. New, Cancel, Replace |
-| 626 | [AllocType](/fix/fields/tags-600-799#tag-626) | AllocTypeCodeSet | **Required** | Specifies the purpose or type of Allocation message |
-| 793 | [SecondaryAllocID](/fix/fields/tags-600-799#tag-793) | String | Optional | Optional second identifier for this allocation instruction (need not be unique) |
-| 72 | [RefAllocID](/fix/fields/tags-0-199#tag-72) | String | Optional | Required for AllocTransType = Replace or Cancel |
-| 796 | [AllocCancReplaceReason](/fix/fields/tags-600-799#tag-796) | AllocCancReplaceReasonCodeSet | Optional | Required for AllocTransType = Replace or Cancel Gives the reason for replacing or cancelling the allocation instruction |
-| 808 | [AllocIntermedReqType](/fix/fields/tags-800-999#tag-808) | AllocIntermedReqTypeCodeSet | Optional | Required if AllocType = 8 (Request to Intermediary) Indicates status that is requested to be transmitted to counterparty by the intermediary (i.e. clearing… |
-| 196 | [AllocLinkID](/fix/fields/tags-0-199#tag-196) | String | Optional | Can be used to link two different Allocation messages (each with unique AllocID) together, i.e. for F/X "Netting" or "Swaps" |
-| 197 | [AllocLinkType](/fix/fields/tags-0-199#tag-197) | AllocLinkTypeCodeSet | Optional | Can be used to link two different Allocation messages and identifies the type of link. Required if AllocLinkID is specified. |
-| 1730 | [AllocGroupID](/fix/fields/tags-1600-1799#tag-1730) | String | Optional | Group identifier assigned by the clearinghouse |
-| 1728 | [FirmGroupID](/fix/fields/tags-1600-1799#tag-1728) | String | Optional | Firm assigned entity identifier for the allocation |
-| 466 | [BookingRefID](/fix/fields/tags-400-599#tag-466) | String | Optional | Can be used with AllocType=" Ready-To-Book " |
-| 857 | [AllocNoOrdersType](/fix/fields/tags-800-999#tag-857) | AllocNoOrdersTypeCodeSet | Optional | Indicates how the orders being booked and allocated by an AllocationInstruction or AllocationReport message are identified, e.g. by explicit definition in the… |
+| 70 | [AllocID](/fix/fields/tags-0-199#tag-70-allocid) | String | **Required** | Unique identifier for this allocation instruction message |
+| 2758 | [AllocRequestID](/fix/fields/tags-2600-2799#tag-2758-allocrequestid) | String | Optional | May be used to link to a previously submitted AllocationInstructionAlertRequest(35=DU) message. |
+| 71 | [AllocTransType](/fix/fields/tags-0-199#tag-71-alloctranstype) | AllocTransTypeCodeSet | **Required** | i.e. New, Cancel, Replace |
+| 626 | [AllocType](/fix/fields/tags-600-799#tag-626-alloctype) | AllocTypeCodeSet | **Required** | Specifies the purpose or type of Allocation message |
+| 793 | [SecondaryAllocID](/fix/fields/tags-600-799#tag-793-secondaryallocid) | String | Optional | Optional second identifier for this allocation instruction (need not be unique) |
+| 72 | [RefAllocID](/fix/fields/tags-0-199#tag-72-refallocid) | String | Optional | Required for AllocTransType = Replace or Cancel |
+| 796 | [AllocCancReplaceReason](/fix/fields/tags-600-799#tag-796-alloccancreplacereason) | AllocCancReplaceReasonCodeSet | Optional | Required for AllocTransType = Replace or Cancel Gives the reason for replacing or cancelling the allocation instruction |
+| 808 | [AllocIntermedReqType](/fix/fields/tags-800-999#tag-808-allocintermedreqtype) | AllocIntermedReqTypeCodeSet | Optional | Required if AllocType = 8 (Request to Intermediary) Indicates status that is requested to be transmitted to counterparty by the intermediary (i.e. clearing… |
+| 196 | [AllocLinkID](/fix/fields/tags-0-199#tag-196-alloclinkid) | String | Optional | Can be used to link two different Allocation messages (each with unique AllocID) together, i.e. for F/X "Netting" or "Swaps" |
+| 197 | [AllocLinkType](/fix/fields/tags-0-199#tag-197-alloclinktype) | AllocLinkTypeCodeSet | Optional | Can be used to link two different Allocation messages and identifies the type of link. Required if AllocLinkID is specified. |
+| 1730 | [AllocGroupID](/fix/fields/tags-1600-1799#tag-1730-allocgroupid) | String | Optional | Group identifier assigned by the clearinghouse |
+| 1728 | [FirmGroupID](/fix/fields/tags-1600-1799#tag-1728-firmgroupid) | String | Optional | Firm assigned entity identifier for the allocation |
+| 466 | [BookingRefID](/fix/fields/tags-400-599#tag-466-bookingrefid) | String | Optional | Can be used with AllocType=" Ready-To-Book " |
+| 857 | [AllocNoOrdersType](/fix/fields/tags-800-999#tag-857-allocnoorderstype) | AllocNoOrdersTypeCodeSet | Optional | Indicates how the orders being booked and allocated by an AllocationInstruction or AllocationReport message are identified, e.g. by explicit definition in the… |
 | 73 | [OrdAllocGrp](/fix/groups/ord-alloc-grp) | Repeating group | Optional |  |
 | 124 | [ExecAllocGrp](/fix/groups/exec-alloc-grp) | Repeating group | Optional |  |
-| 570 | [PreviouslyReported](/fix/fields/tags-400-599#tag-570) | PreviouslyReportedCodeSet | Optional | Indicates if the transaction was previously reported to the counterparty or market. |
-| 700 | [ReversalIndicator](/fix/fields/tags-600-799#tag-700) | Boolean | Optional | Indicates a trade that reverses a previous trade. |
-| 574 | [MatchType](/fix/fields/tags-400-599#tag-574) | MatchTypeCodeSet | Optional | The point in the matching process at which this trade was matched. |
-| 54 | [Side](/fix/fields/tags-0-199#tag-54) | SideCodeSet | **Required** | Side of order (see Volume : "Glossary" for value definitions) |
+| 570 | [PreviouslyReported](/fix/fields/tags-400-599#tag-570-previouslyreported) | PreviouslyReportedCodeSet | Optional | Indicates if the transaction was previously reported to the counterparty or market. |
+| 700 | [ReversalIndicator](/fix/fields/tags-600-799#tag-700-reversalindicator) | Boolean | Optional | Indicates a trade that reverses a previous trade. |
+| 574 | [MatchType](/fix/fields/tags-400-599#tag-574-matchtype) | MatchTypeCodeSet | Optional | The point in the matching process at which this trade was matched. |
+| 54 | [Side](/fix/fields/tags-0-199#tag-54-side) | SideCodeSet | **Required** | Side of order (see Volume : "Glossary" for value definitions) |
 | | [Instrument](/fix/components/instrument) | Component | **Required** | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | | [InstrumentExtension](/fix/components/instrument-extension) | Component | Optional | The InstrumentExtension component block identifies additional security attributes that are more commonly found for Fixed Income securities. |
 | | [FinancingDetails](/fix/components/financing-details) | Component | Optional | Component block is optionally used for financial transaction where legal contracts, master agreements or master confirmations is to be referenced. This… |
 | 711 | [UndInstrmtGrp](/fix/groups/und-instrmt-grp) | Repeating group | Optional |  |
 | 555 | [InstrmtLegGrp](/fix/groups/instrmt-leg-grp) | Repeating group | Optional |  |
-| 53 | [Quantity](/fix/fields/tags-0-199#tag-53) | Qty | **Required** | Total quantity (e.g. number of shares) allocated to all accounts, or that is Ready-To-Book |
-| 854 | [QtyType](/fix/fields/tags-800-999#tag-854) | QtyTypeCodeSet | Optional | Type of quantity specified in quantity field. ContractMultiplier (tag 231) is required when QtyType = 1 (Contracts). UnitOfMeasure (tag 996) and TimeUnit (tag… |
-| 30 | [LastMkt](/fix/fields/tags-0-199#tag-30) | Exchange | Optional | Market of the executions. |
-| 229 | [TradeOriginationDate](/fix/fields/tags-200-399#tag-229) | LocalMktDate | Optional | Used with Fixed Income for Muncipal New Issue Market. Agreement in principal between counter-parties prior to actual trade date. (Note tag # was reserved in FIX… |
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
-| 423 | [PriceType](/fix/fields/tags-400-599#tag-423) | PriceTypeCodeSet | Optional | Code to represent the price type. |
+| 53 | [Quantity](/fix/fields/tags-0-199#tag-53-quantity) | Qty | **Required** | Total quantity (e.g. number of shares) allocated to all accounts, or that is Ready-To-Book |
+| 854 | [QtyType](/fix/fields/tags-800-999#tag-854-qtytype) | QtyTypeCodeSet | Optional | Type of quantity specified in quantity field. ContractMultiplier (tag 231) is required when QtyType = 1 (Contracts). UnitOfMeasure (tag 996) and TimeUnit (tag… |
+| 30 | [LastMkt](/fix/fields/tags-0-199#tag-30-lastmkt) | Exchange | Optional | Market of the executions. |
+| 229 | [TradeOriginationDate](/fix/fields/tags-200-399#tag-229-tradeoriginationdate) | LocalMktDate | Optional | Used with Fixed Income for Muncipal New Issue Market. Agreement in principal between counter-parties prior to actual trade date. (Note tag # was reserved in FIX… |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336-tradingsessionid) | TradingSessionIDCodeSet | Optional | Identifier for a trading session. A trading session spans an extended period of time that can also be expressed informally in terms of the trading day. Usage is… |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625-tradingsessionsubid) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
+| 423 | [PriceType](/fix/fields/tags-400-599#tag-423-pricetype) | PriceTypeCodeSet | Optional | Code to represent the price type. |
 | 2709 | [PriceQualifierGrp](/fix/groups/price-qualifier-grp) | Repeating group | Optional | The PriceQualifierGrp component clarifies the composition of the price when standard market practice for the security calls for a price that is atypical when… |
-| 6 | [AvgPx](/fix/fields/tags-0-199#tag-6) | Price | Optional | For FX orders, should be the "all-in" rate (spot rate adjusted for forward points), expressed in terms of Currency(15). For 3rd party allocations used to convey… |
-| 860 | [AvgParPx](/fix/fields/tags-800-999#tag-860) | Price | Optional | Used to express average price as percent of par (used where AvgPx field is expressed in some other way) |
+| 6 | [AvgPx](/fix/fields/tags-0-199#tag-6-avgpx) | Price | Optional | For FX orders, should be the "all-in" rate (spot rate adjusted for forward points), expressed in terms of Currency(15). For 3rd party allocations used to convey… |
+| 860 | [AvgParPx](/fix/fields/tags-800-999#tag-860-avgparpx) | Price | Optional | Used to express average price as percent of par (used where AvgPx field is expressed in some other way) |
 | | [SpreadOrBenchmarkCurveData](/fix/components/spread-or-benchmark-curve-data) | Component | Optional | The SpreadOrBenchmarkCurveData component block is primarily used for Fixed Income to convey spread to a benchmark security or curve. |
-| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Currency of AvgPx. Should be the currency of the local market or exchange where the trade was conducted. |
-| 74 | [AvgPxPrecision](/fix/fields/tags-0-199#tag-74) | int | Optional | Absence of this field indicates that default precision arranged by the broker/institution is to be used |
-| 2795 | [OffshoreIndicator](/fix/fields/tags-2600-2799#tag-2795) | OffshoreIndicatorCodeSet | Optional | Indicates the type of the currency rate being used. This is relevant for currencies that have offshore rate that different from onshore rate. |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15-currency) | Currency | Optional | Currency of AvgPx. Should be the currency of the local market or exchange where the trade was conducted. |
+| 74 | [AvgPxPrecision](/fix/fields/tags-0-199#tag-74-avgpxprecision) | int | Optional | Absence of this field indicates that default precision arranged by the broker/institution is to be used |
+| 2795 | [OffshoreIndicator](/fix/fields/tags-2600-2799#tag-2795-offshoreindicator) | OffshoreIndicatorCodeSet | Optional | Indicates the type of the currency rate being used. This is relevant for currencies that have offshore rate that different from onshore rate. |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
-| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | **Required** | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Date/time when allocation is generated |
-| 63 | [SettlType](/fix/fields/tags-0-199#tag-63) | SettlTypeCodeSet | Optional | Indicates order settlement period. If present, SettlDate (64) overrides this field. If both SettlType (63) and SettDate (64) are omitted, the default for… |
-| 64 | [SettlDate](/fix/fields/tags-0-199#tag-64) | LocalMktDate | Optional | Takes precedence over SettlType value and conditionally required/omitted for specific SettlType values. Required for NDFs to specify the "value date". |
-| 775 | [BookingType](/fix/fields/tags-600-799#tag-775) | BookingTypeCodeSet | Optional | Method for booking. Used to provide notification that this is to be booked out as an OTC derivative (e.g. CFD or similar). Absence of this field implies regular… |
-| 381 | [GrossTradeAmt](/fix/fields/tags-200-399#tag-381) | Amt | Optional | Expressed in same currency as AvgPx(6). (Quantity(53) \* AvgPx(6) or AvgParPx(860)) or sum of (AllocQty(80) \* AllocAvgPx(153) or AllocPrice(366)). For Fixed… |
-| 238 | [Concession](/fix/fields/tags-200-399#tag-238) | Amt | Optional | Provides the reduction in price for the secondary market in Muncipals. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
-| 237 | [TotalTakedown](/fix/fields/tags-200-399#tag-237) | Amt | Optional | The price at which the securities are distributed to the different members of an underwriting group for the primary market in Municipals, total gross… |
-| 118 | [NetMoney](/fix/fields/tags-0-199#tag-118) | Amt | Optional | Expressed in same currency as AvgPx. Sum of AllocNetMoney. For FX, if specified, expressed in terms of Currency(15). |
-| 77 | [PositionEffect](/fix/fields/tags-0-199#tag-77) | PositionEffectCodeSet | Optional | Indicates whether the resulting position after a trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held… |
-| 754 | [AutoAcceptIndicator](/fix/fields/tags-600-799#tag-754) | Boolean | Optional | Indicates if Allocation has been automatically accepted on behalf of the Take-up Firm by the Clearing House |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
-| 157 | [NumDaysInterest](/fix/fields/tags-0-199#tag-157) | int | Optional | Applicable for Convertible Bonds and fixed income |
-| 158 | [AccruedInterestRate](/fix/fields/tags-0-199#tag-158) | Percentage | Optional | Applicable for Convertible Bonds and fixed income |
-| 159 | [AccruedInterestAmt](/fix/fields/tags-0-199#tag-159) | Amt | Optional | Applicable for Convertible Bonds and fixed income |
-| 540 | [TotalAccruedInterestAmt](/fix/fields/tags-400-599#tag-540) | Amt | Optional | Total Amount of Accrued Interest for convertible bonds and fixed income |
-| 738 | [InterestAtMaturity](/fix/fields/tags-600-799#tag-738) | Amt | Optional | Amount of interest (i.e. lump-sum) at maturity. |
-| 920 | [EndAccruedInterestAmt](/fix/fields/tags-800-999#tag-920) | Amt | Optional | For repurchase agreements the accrued interest on termination. |
-| 921 | [StartCash](/fix/fields/tags-800-999#tag-921) | Amt | Optional | For repurchase agreements the start (dirty) cash consideration |
-| 922 | [EndCash](/fix/fields/tags-800-999#tag-922) | Amt | Optional | For repurchase agreements the end (dirty) cash consideration |
-| 650 | [LegalConfirm](/fix/fields/tags-600-799#tag-650) | LegalConfirmCodeSet | Optional | Indicates that this message is to serve as the final and legal confirmation. |
+| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75-tradedate) | LocalMktDate | **Required** | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Date/time when allocation is generated |
+| 63 | [SettlType](/fix/fields/tags-0-199#tag-63-settltype) | SettlTypeCodeSet | Optional | Indicates order settlement period. If present, SettlDate (64) overrides this field. If both SettlType (63) and SettDate (64) are omitted, the default for… |
+| 64 | [SettlDate](/fix/fields/tags-0-199#tag-64-settldate) | LocalMktDate | Optional | Takes precedence over SettlType value and conditionally required/omitted for specific SettlType values. Required for NDFs to specify the "value date". |
+| 775 | [BookingType](/fix/fields/tags-600-799#tag-775-bookingtype) | BookingTypeCodeSet | Optional | Method for booking. Used to provide notification that this is to be booked out as an OTC derivative (e.g. CFD or similar). Absence of this field implies regular… |
+| 381 | [GrossTradeAmt](/fix/fields/tags-200-399#tag-381-grosstradeamt) | Amt | Optional | Expressed in same currency as AvgPx(6). (Quantity(53) \* AvgPx(6) or AvgParPx(860)) or sum of (AllocQty(80) \* AllocAvgPx(153) or AllocPrice(366)). For Fixed… |
+| 238 | [Concession](/fix/fields/tags-200-399#tag-238-concession) | Amt | Optional | Provides the reduction in price for the secondary market in Muncipals. (Note tag # was reserved in FIX 4.1, added in FIX 4.3) |
+| 237 | [TotalTakedown](/fix/fields/tags-200-399#tag-237-totaltakedown) | Amt | Optional | The price at which the securities are distributed to the different members of an underwriting group for the primary market in Municipals, total gross… |
+| 118 | [NetMoney](/fix/fields/tags-0-199#tag-118-netmoney) | Amt | Optional | Expressed in same currency as AvgPx. Sum of AllocNetMoney. For FX, if specified, expressed in terms of Currency(15). |
+| 77 | [PositionEffect](/fix/fields/tags-0-199#tag-77-positioneffect) | PositionEffectCodeSet | Optional | Indicates whether the resulting position after a trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held… |
+| 754 | [AutoAcceptIndicator](/fix/fields/tags-600-799#tag-754-autoacceptindicator) | Boolean | Optional | Indicates if Allocation has been automatically accepted on behalf of the Take-up Firm by the Clearing House |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 157 | [NumDaysInterest](/fix/fields/tags-0-199#tag-157-numdaysinterest) | int | Optional | Applicable for Convertible Bonds and fixed income |
+| 158 | [AccruedInterestRate](/fix/fields/tags-0-199#tag-158-accruedinterestrate) | Percentage | Optional | Applicable for Convertible Bonds and fixed income |
+| 159 | [AccruedInterestAmt](/fix/fields/tags-0-199#tag-159-accruedinterestamt) | Amt | Optional | Applicable for Convertible Bonds and fixed income |
+| 540 | [TotalAccruedInterestAmt](/fix/fields/tags-400-599#tag-540-totalaccruedinterestamt) | Amt | Optional | Total Amount of Accrued Interest for convertible bonds and fixed income |
+| 738 | [InterestAtMaturity](/fix/fields/tags-600-799#tag-738-interestatmaturity) | Amt | Optional | Amount of interest (i.e. lump-sum) at maturity. |
+| 920 | [EndAccruedInterestAmt](/fix/fields/tags-800-999#tag-920-endaccruedinterestamt) | Amt | Optional | For repurchase agreements the accrued interest on termination. |
+| 921 | [StartCash](/fix/fields/tags-800-999#tag-921-startcash) | Amt | Optional | For repurchase agreements the start (dirty) cash consideration |
+| 922 | [EndCash](/fix/fields/tags-800-999#tag-922-endcash) | Amt | Optional | For repurchase agreements the end (dirty) cash consideration |
+| 650 | [LegalConfirm](/fix/fields/tags-600-799#tag-650-legalconfirm) | LegalConfirmCodeSet | Optional | Indicates that this message is to serve as the final and legal confirmation. |
 | 232 | [Stipulations](/fix/groups/stipulations) | Repeating group | Optional | The Stipulations component block is used in Fixed Income to provide additional information on a given security. These additional information are usually not… |
 | | [YieldData](/fix/components/yield-data) | Component | Optional | The YieldData component block conveys yield information for a given Fixed Income security. |
 | 1907 | [RegulatoryTradeIDGrp](/fix/groups/regulatory-trade-id-grp) | Repeating group | Optional | The RegulatoryTradeIDGrp is a repeating component within the TradeCaptureReport message used to report the source, value and relationship of multiple… |
 | 753 | [PositionAmountData](/fix/groups/position-amount-data) | Repeating group | Optional | The PositionAmountData component block is used to report netted amounts associated with position quantities. In the listed derivatives market the amount is… |
-| 892 | [TotNoAllocs](/fix/fields/tags-800-999#tag-892) | int | Optional | Indicates total number of allocation groups (used to support fragmentation). Must equal the sum of all NoAllocs values across all message fragments making up… |
-| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893) | LastFragmentCodeSet | Optional | Indicates whether this is the last fragment in a sequence of message fragments. Only required where message has been fragmented. |
+| 892 | [TotNoAllocs](/fix/fields/tags-800-999#tag-892-totnoallocs) | int | Optional | Indicates total number of allocation groups (used to support fragmentation). Must equal the sum of all NoAllocs values across all message fragments making up… |
+| 893 | [LastFragment](/fix/fields/tags-800-999#tag-893-lastfragment) | LastFragmentCodeSet | Optional | Indicates whether this is the last fragment in a sequence of message fragments. Only required where message has been fragmented. |
 | 78 | [AllocGrp](/fix/groups/alloc-grp) | Repeating group | Optional | This repeating group is optionally used for messages with AllocStatus(87) = 2 (account level reject), AllocStatus(87) = 0 (accepted), to provide details of the… |
-| 819 | [AvgPxIndicator](/fix/fields/tags-800-999#tag-819) | AvgPxIndicatorCodeSet | Optional | Indicates if an allocation is to be average priced. Is also used to indicate if average price allocation group is complete or incomplete. |
-| 1731 | [AvgPxGroupID](/fix/fields/tags-1600-1799#tag-1731) | String | Optional | Firm designated group identifier for average pricing |
-| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715) | LocalMktDate | Optional | Indicates Clearing Business Date for which transaction will be settled. |
-| 828 | [TrdType](/fix/fields/tags-800-999#tag-828) | TrdTypeCodeSet | Optional | Indicates Trade Type of Allocation. |
-| 829 | [TrdSubType](/fix/fields/tags-800-999#tag-829) | TrdSubTypeCodeSet | Optional | Indicates TradeSubType of Allocation. Necessary for defining groups. |
-| 855 | [SecondaryTrdType](/fix/fields/tags-800-999#tag-855) | TrdTypeCodeSet | Optional | Type of trade assigned to a trade. Used in addition to TrdType(828). Must not be used when only one trade type needs to be assigned. |
-| 1937 | [TradeContinuation](/fix/fields/tags-1800-1999#tag-1937) | TradeContinuationCodeSet | Optional | Specifies the post-execution trade continuation or lifecycle event. Additional values may be used by mutual agreement of the counterparties. |
-| 2374 | [TradeContinuationText](/fix/fields/tags-2200-2399#tag-2374) | String | Optional | Free form text to specify additional trade continuation information or data. |
-| 2372 | [EncodedTradeContinuationTextLen](/fix/fields/tags-2200-2399#tag-2372) | Length | Optional | Must be set if EncodedTradeContinuationText(2371) field is specified and must immediately precede it. |
-| 2371 | [EncodedTradeContinuationText](/fix/fields/tags-2200-2399#tag-2371) | data | Optional | Encoded (non-ASCII characters) representation of the TradeContinuationText(2374) field in the encoded format specified via the MessageEncoding(347) field. |
-| 582 | [CustOrderCapacity](/fix/fields/tags-400-599#tag-582) | CustOrderCapacityCodeSet | Optional | Indicates CTI of original trade marked for allocation. |
-| 578 | [TradeInputSource](/fix/fields/tags-400-599#tag-578) | String | Optional | Indicates input source of original trade marked for allocation. |
-| 442 | [MultiLegReportingType](/fix/fields/tags-400-599#tag-442) | MultiLegReportingTypeCodeSet | Optional | Indicates MultiLegReportType of original trade marked for allocation. |
-| 1011 | [MessageEventSource](/fix/fields/tags-1000-1199#tag-1011) | String | Optional | Used to identify the event or source which gave rise to a message. |
-| 991 | [RndPx](/fix/fields/tags-800-999#tag-991) | Price | Optional | Specifies the rounded price to quoted precision. |
+| 819 | [AvgPxIndicator](/fix/fields/tags-800-999#tag-819-avgpxindicator) | AvgPxIndicatorCodeSet | Optional | Indicates if an allocation is to be average priced. Is also used to indicate if average price allocation group is complete or incomplete. |
+| 1731 | [AvgPxGroupID](/fix/fields/tags-1600-1799#tag-1731-avgpxgroupid) | String | Optional | Firm designated group identifier for average pricing |
+| 715 | [ClearingBusinessDate](/fix/fields/tags-600-799#tag-715-clearingbusinessdate) | LocalMktDate | Optional | Indicates Clearing Business Date for which transaction will be settled. |
+| 828 | [TrdType](/fix/fields/tags-800-999#tag-828-trdtype) | TrdTypeCodeSet | Optional | Indicates Trade Type of Allocation. |
+| 829 | [TrdSubType](/fix/fields/tags-800-999#tag-829-trdsubtype) | TrdSubTypeCodeSet | Optional | Indicates TradeSubType of Allocation. Necessary for defining groups. |
+| 855 | [SecondaryTrdType](/fix/fields/tags-800-999#tag-855-secondarytrdtype) | TrdTypeCodeSet | Optional | Type of trade assigned to a trade. Used in addition to TrdType(828). Must not be used when only one trade type needs to be assigned. |
+| 1937 | [TradeContinuation](/fix/fields/tags-1800-1999#tag-1937-tradecontinuation) | TradeContinuationCodeSet | Optional | Specifies the post-execution trade continuation or lifecycle event. Additional values may be used by mutual agreement of the counterparties. |
+| 2374 | [TradeContinuationText](/fix/fields/tags-2200-2399#tag-2374-tradecontinuationtext) | String | Optional | Free form text to specify additional trade continuation information or data. |
+| 2372 | [EncodedTradeContinuationTextLen](/fix/fields/tags-2200-2399#tag-2372-encodedtradecontinuationtextlen) | Length | Optional | Must be set if EncodedTradeContinuationText(2371) field is specified and must immediately precede it. |
+| 2371 | [EncodedTradeContinuationText](/fix/fields/tags-2200-2399#tag-2371-encodedtradecontinuationtext) | data | Optional | Encoded (non-ASCII characters) representation of the TradeContinuationText(2374) field in the encoded format specified via the MessageEncoding(347) field. |
+| 582 | [CustOrderCapacity](/fix/fields/tags-400-599#tag-582-custordercapacity) | CustOrderCapacityCodeSet | Optional | Indicates CTI of original trade marked for allocation. |
+| 578 | [TradeInputSource](/fix/fields/tags-400-599#tag-578-tradeinputsource) | String | Optional | Indicates input source of original trade marked for allocation. |
+| 442 | [MultiLegReportingType](/fix/fields/tags-400-599#tag-442-multilegreportingtype) | MultiLegReportingTypeCodeSet | Optional | Indicates MultiLegReportType of original trade marked for allocation. |
+| 1011 | [MessageEventSource](/fix/fields/tags-1000-1199#tag-1011-messageeventsource) | String | Optional | Used to identify the event or source which gave rise to a message. |
+| 991 | [RndPx](/fix/fields/tags-800-999#tag-991-rndpx) | Price | Optional | Specifies the rounded price to quoted precision. |
 | 1445 | [RateSource](/fix/groups/rate-source) | Repeating group | Optional |  |
-| 1430 | [VenueType](/fix/fields/tags-1400-1599#tag-1430) | VenueTypeCodeSet | Optional | Used to identify on what kind of venue the trade originated when communicating with a party that may not have access to all trade details, e.g. a clearing… |
-| 2334 | [RefRiskLimitCheckID](/fix/fields/tags-2200-2399#tag-2334) | String | Optional | Conditionally required when RefRiskLimitCheckIDType(2335) is specified. |
-| 2335 | [RefRiskLimitCheckIDType](/fix/fields/tags-2200-2399#tag-2335) | RefRiskLimitCheckIDTypeCodeSet | Optional | Conditionally required when RefRiskLimitCheckID(2334) is specified. |
-| 2343 | [RiskLimitCheckStatus](/fix/fields/tags-2200-2399#tag-2343) | RiskLimitCheckStatusCodeSet | Optional | Indicates the status of the risk limit check performed on a trade. |
+| 1430 | [VenueType](/fix/fields/tags-1400-1599#tag-1430-venuetype) | VenueTypeCodeSet | Optional | Used to identify on what kind of venue the trade originated when communicating with a party that may not have access to all trade details, e.g. a clearing… |
+| 2334 | [RefRiskLimitCheckID](/fix/fields/tags-2200-2399#tag-2334-refrisklimitcheckid) | String | Optional | Conditionally required when RefRiskLimitCheckIDType(2335) is specified. |
+| 2335 | [RefRiskLimitCheckIDType](/fix/fields/tags-2200-2399#tag-2335-refrisklimitcheckidtype) | RefRiskLimitCheckIDTypeCodeSet | Optional | Conditionally required when RefRiskLimitCheckID(2334) is specified. |
+| 2343 | [RiskLimitCheckStatus](/fix/fields/tags-2200-2399#tag-2343-risklimitcheckstatus) | RiskLimitCheckStatusCodeSet | Optional | Indicates the status of the risk limit check performed on a trade. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

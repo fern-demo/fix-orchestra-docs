@@ -3,9 +3,15 @@ title: "LegStreamAssetAttributeGrp"
 subtitle: "The LegStreamAssetAttributeGrp is a repeating subcomponent of the LegStreamCommodity component used to detail commodity attributes, quality standards and reject limits."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41452</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegStreamAssetAttributes (41452)](/fix/fields/tags-41400-41599#tag-41452).
+<llms-only>
+Repeating group · NumInGroup 41452 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegStreamAssetAttributes (41452)](/fix/fields/tags-41400-41599#tag-41452-nolegstreamassetattributes).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41453 | [LegStreamAssetAttributeType](/fix/fields/tags-41400-41599#tag-41453) | String | Optional | Required if NoLegStreamAssetAttributes(41452) &gt; 0. |
-| 41454 | [LegStreamAssetAttributeValue](/fix/fields/tags-41400-41599#tag-41454) | String | Optional | Specifies the value of the attribute. |
-| 41455 | [LegStreamAssetAttributeLimit](/fix/fields/tags-41400-41599#tag-41455) | String | Optional | Limit or lower acceptable value of the attribute. |
+| 41453 | [LegStreamAssetAttributeType](/fix/fields/tags-41400-41599#tag-41453-legstreamassetattributetype) | String | Optional | Required if NoLegStreamAssetAttributes(41452) &gt; 0. |
+| 41454 | [LegStreamAssetAttributeValue](/fix/fields/tags-41400-41599#tag-41454-legstreamassetattributevalue) | String | Optional | Specifies the value of the attribute. |
+| 41455 | [LegStreamAssetAttributeLimit](/fix/fields/tags-41400-41599#tag-41455-legstreamassetattributelimit) | String | Optional | Limit or lower acceptable value of the attribute. |
 
 </StickyTable>
 

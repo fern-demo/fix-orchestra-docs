@@ -3,9 +3,15 @@ title: "UnderlyingSettlRateDisruptionFallbackGrp"
 subtitle: "The UnderlyingSettlRateDisruptionFallbackGrp is a repeating subcomponent of the UnderlyingPaymentStreamNonDeliverableSettlTermGrp component used to specify the method, prioritized by the order it is listed, to get a replacement rate for a…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40659</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingSettlRateFallbacks (40659)](/fix/fields/tags-40600-40799#tag-40659).
+<llms-only>
+Repeating group · NumInGroup 40659 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingSettlRateFallbacks (40659)](/fix/fields/tags-40600-40799#tag-40659-nounderlyingsettlratefallbacks).
 
 ## Members
 
@@ -13,10 +19,10 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40660 | [UnderlyingSettlRatePostponementMaximumDays](/fix/fields/tags-40600-40799#tag-40660) | int | Optional | Required if NoUnderlyingSettlRateFallbacks(40659) &gt; 0. |
+| 40660 | [UnderlyingSettlRatePostponementMaximumDays](/fix/fields/tags-40600-40799#tag-40660-underlyingsettlratepostponementmaximumdays) | int | Optional | Required if NoUnderlyingSettlRateFallbacks(40659) &gt; 0. |
 | | [UnderlyingSettlRateFallbackRateSource](/fix/components/underlying-settl-rate-fallback-rate-source) | Component | Optional | UnderlyingSettlRateFallbackRateSource is a subcomponent of the UnderlyingSettlRateDisruptionFallbackGrp component used to specify the rate source in the event… |
-| 40662 | [UnderlyingSettlRatePostponementSurvey](/fix/fields/tags-40600-40799#tag-40662) | Boolean | Optional | Indicates whether to request a settlement rate quote from the market. |
-| 40663 | [UnderlyingSettlRatePostponementCalculationAgent](/fix/fields/tags-40600-40799#tag-40663) | ProvisionCalculationAgentCodeSet | Optional | Used to identify the settlement rate postponement calculation agent. |
+| 40662 | [UnderlyingSettlRatePostponementSurvey](/fix/fields/tags-40600-40799#tag-40662-underlyingsettlratepostponementsurvey) | Boolean | Optional | Indicates whether to request a settlement rate quote from the market. |
+| 40663 | [UnderlyingSettlRatePostponementCalculationAgent](/fix/fields/tags-40600-40799#tag-40663-underlyingsettlratepostponementcalculationagent) | ProvisionCalculationAgentCodeSet | Optional | Used to identify the settlement rate postponement calculation agent. |
 
 </StickyTable>
 

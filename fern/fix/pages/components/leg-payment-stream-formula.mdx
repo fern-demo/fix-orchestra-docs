@@ -3,7 +3,13 @@ title: "LegPaymentStreamFormula"
 subtitle: "LegPaymentStreamFormula is a subcomponent of the LegPaymentStreamFloatingRate component used to report the parameters for determining the floating rate of the stream e.g. for equity swaps."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,9 +17,9 @@ subtitle: "LegPaymentStreamFormula is a subcomponent of the LegPaymentStreamFloa
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42482 | [LegPaymentStreamFormulaCurrency](/fix/fields/tags-42400-42599#tag-42482) | Currency | Optional | The currency in which the formula amount is denominated. Uses ISO 4217 currency codes. |
-| 42483 | [LegPaymentStreamFormulaCurrencyDeterminationMethod](/fix/fields/tags-42400-42599#tag-42483) | String | Optional | Specifies the method according to which the formula amount currency is determined. See http://www.fpml.org/coding-scheme/determination-method for values. |
-| 42484 | [LegPaymentStreamFormulaReferenceAmount](/fix/fields/tags-42400-42599#tag-42484) | int | Optional | Specifies the reference amount when this term either corresponds to the standard ISDA Definition (either the 2002 Equity Definition for the Equity Amount, or… |
+| 42482 | [LegPaymentStreamFormulaCurrency](/fix/fields/tags-42400-42599#tag-42482-legpaymentstreamformulacurrency) | Currency | Optional | The currency in which the formula amount is denominated. Uses ISO 4217 currency codes. |
+| 42483 | [LegPaymentStreamFormulaCurrencyDeterminationMethod](/fix/fields/tags-42400-42599#tag-42483-legpaymentstreamformulacurrencydeterminationmethod) | String | Optional | Specifies the method according to which the formula amount currency is determined. See http://www.fpml.org/coding-scheme/determination-method for values. |
+| 42484 | [LegPaymentStreamFormulaReferenceAmount](/fix/fields/tags-42400-42599#tag-42484-legpaymentstreamformulareferenceamount) | int | Optional | Specifies the reference amount when this term either corresponds to the standard ISDA Definition (either the 2002 Equity Definition for the Equity Amount, or… |
 | 42485 | [LegPaymentStreamFormulaMathGrp](/fix/groups/leg-payment-stream-formula-math-grp) | Repeating group | Optional | LegPaymentStreamFormulaMathGrp is a repeating subcomponent within the LegPaymentStreamFormula component. It is used to specify the set of formulas, sub-formulas… |
 | | [LegPaymentStreamFormulaImage](/fix/components/leg-payment-stream-formula-image) | Component | Optional | LegPaymentStreamFormulaImage is a subcomponent of the LegPaymentStreamFormula component used to include a base64Binary-encoded image clip of the formula. |
 

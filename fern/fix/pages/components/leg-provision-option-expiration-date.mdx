@@ -3,7 +3,13 @@ title: "LegProvisionOptionExpirationDate"
 subtitle: "The LegProvisionOptionExerciseDate is a subcomponent within the LegProvisionGrp component used to report the option expiration date and times defined in the provision."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.5.0SP2
+</llms-only>
 
 ## Members
 
@@ -11,16 +17,16 @@ subtitle: "The LegProvisionOptionExerciseDate is a subcomponent within the LegPr
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40498 | [LegProvisionOptionExpirationDateUnadjusted](/fix/fields/tags-40400-40599#tag-40498) | LocalMktDate | Optional | The unadjusted last day within an exercise period for an American style option. For a European style option it is the only day within the exercise period. |
-| 40499 | [LegProvisionOptionExpirationDateBusinessDayConvention](/fix/fields/tags-40400-40599#tag-40499) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
+| 40498 | [LegProvisionOptionExpirationDateUnadjusted](/fix/fields/tags-40400-40599#tag-40498-legprovisionoptionexpirationdateunadjusted) | LocalMktDate | Optional | The unadjusted last day within an exercise period for an American style option. For a European style option it is the only day within the exercise period. |
+| 40499 | [LegProvisionOptionExpirationDateBusinessDayConvention](/fix/fields/tags-40400-40599#tag-40499-legprovisionoptionexpirationdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
 | 40937 | [LegProvisionOptionExpirationDateBusinessCenterGrp](/fix/groups/leg-provision-option-expiration-date-business-center-grp) | Repeating group | Optional | LegProvisionOptionExpirationDateBusinessCenterGrp is a repeating subcomponent within the LegProvisionOptionExpirationDate component. It is used to specify the… |
-| 40501 | [LegProvisionOptionExpirationDateRelativeTo](/fix/fields/tags-40400-40599#tag-40501) | int | Optional | Specifies the anchor date when the option expiration date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for… |
-| 40502 | [LegProvisionOptionExpirationDateOffsetPeriod](/fix/fields/tags-40400-40599#tag-40502) | int | Optional | Conditionally required when LegProvisionOptionExpirationDateOffsetUnit(40503) is specified. |
-| 40503 | [LegProvisionOptionExpirationDateOffsetUnit](/fix/fields/tags-40400-40599#tag-40503) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegProvisionOptionExpirationDateOffsetPeriod(40502) is specified. |
-| 40504 | [LegProvisionOptionExpirationDateOffsetDayType](/fix/fields/tags-40400-40599#tag-40504) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the provision's relative option expiration date offset. |
-| 40505 | [LegProvisionOptionExpirationDateAdjusted](/fix/fields/tags-40400-40599#tag-40505) | LocalMktDate | Optional | The adjusted last date within an exercise period for an American style option. For a European style option it is the only date within the exercise period. |
-| 40506 | [LegProvisionOptionExpirationTime](/fix/fields/tags-40400-40599#tag-40506) | LocalMktTime | Optional | The latest time for exercise on the expiration date. |
-| 40507 | [LegProvisionOptionExpirationTimeBusinessCenter](/fix/fields/tags-40400-40599#tag-40507) | String | Optional | Identifies the business center calendar used with the provision's latest exercise time on expiration date. See http://www.fpml.org/coding-scheme/business-center… |
+| 40501 | [LegProvisionOptionExpirationDateRelativeTo](/fix/fields/tags-40400-40599#tag-40501-legprovisionoptionexpirationdaterelativeto) | int | Optional | Specifies the anchor date when the option expiration date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for… |
+| 40502 | [LegProvisionOptionExpirationDateOffsetPeriod](/fix/fields/tags-40400-40599#tag-40502-legprovisionoptionexpirationdateoffsetperiod) | int | Optional | Conditionally required when LegProvisionOptionExpirationDateOffsetUnit(40503) is specified. |
+| 40503 | [LegProvisionOptionExpirationDateOffsetUnit](/fix/fields/tags-40400-40599#tag-40503-legprovisionoptionexpirationdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegProvisionOptionExpirationDateOffsetPeriod(40502) is specified. |
+| 40504 | [LegProvisionOptionExpirationDateOffsetDayType](/fix/fields/tags-40400-40599#tag-40504-legprovisionoptionexpirationdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the provision's relative option expiration date offset. |
+| 40505 | [LegProvisionOptionExpirationDateAdjusted](/fix/fields/tags-40400-40599#tag-40505-legprovisionoptionexpirationdateadjusted) | LocalMktDate | Optional | The adjusted last date within an exercise period for an American style option. For a European style option it is the only date within the exercise period. |
+| 40506 | [LegProvisionOptionExpirationTime](/fix/fields/tags-40400-40599#tag-40506-legprovisionoptionexpirationtime) | LocalMktTime | Optional | The latest time for exercise on the expiration date. |
+| 40507 | [LegProvisionOptionExpirationTimeBusinessCenter](/fix/fields/tags-40400-40599#tag-40507-legprovisionoptionexpirationtimebusinesscenter) | String | Optional | Identifies the business center calendar used with the provision's latest exercise time on expiration date. See http://www.fpml.org/coding-scheme/business-center… |
 
 </StickyTable>
 

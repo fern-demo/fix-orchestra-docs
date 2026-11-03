@@ -3,7 +3,13 @@ title: "BidRequest"
 subtitle: "The BidRequest Message can be used in one of two ways depending on which market conventions are being followed. In the \"Non disclosed\" convention (e.g. US/European model) the BidRequest message can be used to request a bid based on the…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType k</Badge> <Badge intent="note" minimal>Program Trading</Badge> <Badge intent="tip" minimal>Trade</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType k · Program Trading · Trade · Added FIX.4.2
+</llms-only>
 
 ## Message structure
 
@@ -12,35 +18,35 @@ subtitle: "The BidRequest Message can be used in one of two ways depending on wh
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 390 | [BidID](/fix/fields/tags-200-399#tag-390) | String | Optional | Required to relate the bid response |
-| 391 | [ClientBidID](/fix/fields/tags-200-399#tag-391) | String | **Required** | Unique identifier for a Bid Request as assigned by institution. Uniqueness must be guaranteed within a single trading day. |
-| 374 | [BidRequestTransType](/fix/fields/tags-200-399#tag-374) | BidRequestTransTypeCodeSet | **Required** | Identifies the Bid Request message transaction type |
-| 392 | [ListName](/fix/fields/tags-200-399#tag-392) | String | Optional | Descriptive name for list order. |
-| 393 | [TotNoRelatedSym](/fix/fields/tags-200-399#tag-393) | int | **Required** | Total number of securities. (Prior to FIX 4.4 this field was named TotalNumSecurities) |
-| 394 | [BidType](/fix/fields/tags-200-399#tag-394) | BidTypeCodeSet | **Required** | e.g. "Non Disclosed", "Disclosed", No Bidding Process |
-| 395 | [NumTickets](/fix/fields/tags-200-399#tag-395) | int | Optional | Total number of tickets/allocations assuming fully executed |
-| 15 | [Currency](/fix/fields/tags-0-199#tag-15) | Currency | Optional | Used to represent the currency of monetary amounts. |
-| 396 | [SideValue1](/fix/fields/tags-200-399#tag-396) | Amt | Optional | Expressed in Currency |
-| 397 | [SideValue2](/fix/fields/tags-200-399#tag-397) | Amt | Optional | Expressed in Currency |
+| 390 | [BidID](/fix/fields/tags-200-399#tag-390-bidid) | String | Optional | Required to relate the bid response |
+| 391 | [ClientBidID](/fix/fields/tags-200-399#tag-391-clientbidid) | String | **Required** | Unique identifier for a Bid Request as assigned by institution. Uniqueness must be guaranteed within a single trading day. |
+| 374 | [BidRequestTransType](/fix/fields/tags-200-399#tag-374-bidrequesttranstype) | BidRequestTransTypeCodeSet | **Required** | Identifies the Bid Request message transaction type |
+| 392 | [ListName](/fix/fields/tags-200-399#tag-392-listname) | String | Optional | Descriptive name for list order. |
+| 393 | [TotNoRelatedSym](/fix/fields/tags-200-399#tag-393-totnorelatedsym) | int | **Required** | Total number of securities. (Prior to FIX 4.4 this field was named TotalNumSecurities) |
+| 394 | [BidType](/fix/fields/tags-200-399#tag-394-bidtype) | BidTypeCodeSet | **Required** | e.g. "Non Disclosed", "Disclosed", No Bidding Process |
+| 395 | [NumTickets](/fix/fields/tags-200-399#tag-395-numtickets) | int | Optional | Total number of tickets/allocations assuming fully executed |
+| 15 | [Currency](/fix/fields/tags-0-199#tag-15-currency) | Currency | Optional | Used to represent the currency of monetary amounts. |
+| 396 | [SideValue1](/fix/fields/tags-200-399#tag-396-sidevalue1) | Amt | Optional | Expressed in Currency |
+| 397 | [SideValue2](/fix/fields/tags-200-399#tag-397-sidevalue2) | Amt | Optional | Expressed in Currency |
 | 398 | [BidDescReqGrp](/fix/groups/bid-desc-req-grp) | Repeating group | Optional |  |
 | 420 | [BidCompReqGrp](/fix/groups/bid-comp-req-grp) | Repeating group | Optional |  |
-| 409 | [LiquidityIndType](/fix/fields/tags-400-599#tag-409) | LiquidityIndTypeCodeSet | Optional | Code to identify the type of liquidity indicator. |
-| 410 | [WtAverageLiquidity](/fix/fields/tags-400-599#tag-410) | Percentage | Optional | Overall weighted average liquidity expressed as a % of average daily volume |
-| 411 | [ExchangeForPhysical](/fix/fields/tags-400-599#tag-411) | ExchangeForPhysicalCodeSet | Optional | Indicates whether or not to exchange for phsyical. |
-| 412 | [OutMainCntryUIndex](/fix/fields/tags-400-599#tag-412) | Amt | Optional | % value of stocks outside main country in Currency |
-| 413 | [CrossPercent](/fix/fields/tags-400-599#tag-413) | Percentage | Optional | % of program that crosses in Currency |
-| 414 | [ProgRptReqs](/fix/fields/tags-400-599#tag-414) | ProgRptReqsCodeSet | Optional | Code to identify the desired frequency of progress reports. |
-| 415 | [ProgPeriodInterval](/fix/fields/tags-400-599#tag-415) | int | Optional | Time in minutes between each ListStatus report sent by SellSide. Zero means don't send status. |
-| 416 | [IncTaxInd](/fix/fields/tags-400-599#tag-416) | IncTaxIndCodeSet | Optional | Net/Gross |
-| 121 | [ForexReq](/fix/fields/tags-0-199#tag-121) | ForexReqCodeSet | Optional | Is foreign exchange required |
-| 417 | [NumBidders](/fix/fields/tags-400-599#tag-417) | int | Optional | Indicates the total number of bidders on the list |
-| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | Optional | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
-| 418 | [BidTradeType](/fix/fields/tags-400-599#tag-418) | BidTradeTypeCodeSet | **Required** | Code to represent the type of trade. (Prior to FIX 4.4 this field was named "TradeType") |
-| 419 | [BasisPxType](/fix/fields/tags-400-599#tag-419) | BasisPxTypeCodeSet | **Required** | Code to represent the basis price type. |
-| 443 | [StrikeTime](/fix/fields/tags-400-599#tag-443) | UTCTimestamp | Optional | Used when BasisPxType = "C" |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 409 | [LiquidityIndType](/fix/fields/tags-400-599#tag-409-liquidityindtype) | LiquidityIndTypeCodeSet | Optional | Code to identify the type of liquidity indicator. |
+| 410 | [WtAverageLiquidity](/fix/fields/tags-400-599#tag-410-wtaverageliquidity) | Percentage | Optional | Overall weighted average liquidity expressed as a % of average daily volume |
+| 411 | [ExchangeForPhysical](/fix/fields/tags-400-599#tag-411-exchangeforphysical) | ExchangeForPhysicalCodeSet | Optional | Indicates whether or not to exchange for phsyical. |
+| 412 | [OutMainCntryUIndex](/fix/fields/tags-400-599#tag-412-outmaincntryuindex) | Amt | Optional | % value of stocks outside main country in Currency |
+| 413 | [CrossPercent](/fix/fields/tags-400-599#tag-413-crosspercent) | Percentage | Optional | % of program that crosses in Currency |
+| 414 | [ProgRptReqs](/fix/fields/tags-400-599#tag-414-progrptreqs) | ProgRptReqsCodeSet | Optional | Code to identify the desired frequency of progress reports. |
+| 415 | [ProgPeriodInterval](/fix/fields/tags-400-599#tag-415-progperiodinterval) | int | Optional | Time in minutes between each ListStatus report sent by SellSide. Zero means don't send status. |
+| 416 | [IncTaxInd](/fix/fields/tags-400-599#tag-416-inctaxind) | IncTaxIndCodeSet | Optional | Net/Gross |
+| 121 | [ForexReq](/fix/fields/tags-0-199#tag-121-forexreq) | ForexReqCodeSet | Optional | Is foreign exchange required |
+| 417 | [NumBidders](/fix/fields/tags-400-599#tag-417-numbidders) | int | Optional | Indicates the total number of bidders on the list |
+| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75-tradedate) | LocalMktDate | Optional | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
+| 418 | [BidTradeType](/fix/fields/tags-400-599#tag-418-bidtradetype) | BidTradeTypeCodeSet | **Required** | Code to represent the type of trade. (Prior to FIX 4.4 this field was named "TradeType") |
+| 419 | [BasisPxType](/fix/fields/tags-400-599#tag-419-basispxtype) | BasisPxTypeCodeSet | **Required** | Code to represent the basis price type. |
+| 443 | [StrikeTime](/fix/fields/tags-400-599#tag-443-striketime) | UTCTimestamp | Optional | Used when BasisPxType = "C" |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

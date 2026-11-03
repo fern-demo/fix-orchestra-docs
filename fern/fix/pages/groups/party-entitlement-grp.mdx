@@ -3,9 +3,15 @@ title: "PartyEntitlementGrp"
 subtitle: "Conveys a list of parties (optionally including related parties) and the entitlements for each."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 1772</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoPartyEntitlements (1772)](/fix/fields/tags-1600-1799#tag-1772).
+<llms-only>
+Repeating group · NumInGroup 1772 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPartyEntitlements (1772)](/fix/fields/tags-1600-1799#tag-1772-nopartyentitlements).
 
 ## Members
 
@@ -14,7 +20,7 @@ Each repetition starts with the first member listed. The count of repetitions is
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | 1671 | [PartyDetailGrp](/fix/groups/party-detail-grp) | Repeating group | Optional | Contains details for a party, including related parties and alternative party identifiers. |
-| 1883 | [EntitlementStatus](/fix/fields/tags-1800-1999#tag-1883) | EntitlementStatusCodeSet | Optional | Status of entitlement definition for one party. |
+| 1883 | [EntitlementStatus](/fix/fields/tags-1800-1999#tag-1883-entitlementstatus) | EntitlementStatusCodeSet | Optional | Status of entitlement definition for one party. |
 | 1773 | [EntitlementGrp](/fix/groups/entitlement-grp) | Repeating group | Optional | Conveys a list of entitlements for one specific party, or relationship between two parties. Each entitlement may be further limited or clarified using optional… |
 
 </StickyTable>

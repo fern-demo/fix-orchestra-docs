@@ -3,9 +3,15 @@ title: "LegReturnRateFXConversionGrp"
 subtitle: "LegReturnRateFXConversionGrp is a repeating subcomponent within the LegReturnRateGrp component. It is used to specify the FX conversion rates for an equity return swap payment stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42530</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegReturnRateFXConversions (42530)](/fix/fields/tags-42400-42599#tag-42530).
+<llms-only>
+Repeating group · NumInGroup 42530 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegReturnRateFXConversions (42530)](/fix/fields/tags-42400-42599#tag-42530-nolegreturnratefxconversions).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 42531 | [LegReturnRateFXCurrencySymbol](/fix/fields/tags-42400-42599#tag-42531) | String | Optional | Required if NoLegReturnRateFXConversions(42530) &gt; 0. |
-| 42532 | [LegReturnRateFXRate](/fix/fields/tags-42400-42599#tag-42532) | float | Optional | Required if NoLegReturnRateFXConversions(42530) &gt; 0. |
-| 42533 | [LegReturnRateFXRateCalc](/fix/fields/tags-42400-42599#tag-42533) | SettlCurrFxRateCalcCodeSet | Optional | The rate of exchange between the two currencies specified in LegReturnRateFXCurrencySymbol(42531). |
+| 42531 | [LegReturnRateFXCurrencySymbol](/fix/fields/tags-42400-42599#tag-42531-legreturnratefxcurrencysymbol) | String | Optional | Required if NoLegReturnRateFXConversions(42530) &gt; 0. |
+| 42532 | [LegReturnRateFXRate](/fix/fields/tags-42400-42599#tag-42532-legreturnratefxrate) | float | Optional | Required if NoLegReturnRateFXConversions(42530) &gt; 0. |
+| 42533 | [LegReturnRateFXRateCalc](/fix/fields/tags-42400-42599#tag-42533-legreturnratefxratecalc) | SettlCurrFxRateCalcCodeSet | Optional | The rate of exchange between the two currencies specified in LegReturnRateFXCurrencySymbol(42531). |
 
 </StickyTable>
 

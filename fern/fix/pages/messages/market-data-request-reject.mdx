@@ -3,7 +3,13 @@ title: "MarketDataRequestReject"
 subtitle: "The Market Data Request Reject is used when the broker cannot honor the Market Data Request, due to business or technical reasons. Brokers may choose to limit various parameters, such as the size of requests, whether just the top of book or…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType Y</Badge> <Badge intent="note" minimal>Market Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType Y · Market Data · Pre Trade · Added FIX.4.2
+</llms-only>
 
 ## Message structure
 
@@ -12,13 +18,13 @@ subtitle: "The Market Data Request Reject is used when the broker cannot honor t
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 262 | [MDReqID](/fix/fields/tags-200-399#tag-262) | String | **Required** | Must refer to the MDReqID of the request. |
+| 262 | [MDReqID](/fix/fields/tags-200-399#tag-262-mdreqid) | String | **Required** | Must refer to the MDReqID of the request. |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
-| 281 | [MDReqRejReason](/fix/fields/tags-200-399#tag-281) | MDReqRejReasonCodeSet | Optional | Reason for the rejection of a Market Data request. |
+| 281 | [MDReqRejReason](/fix/fields/tags-200-399#tag-281-mdreqrejreason) | MDReqRejReasonCodeSet | Optional | Reason for the rejection of a Market Data request. |
 | 816 | [MDRjctGrp](/fix/groups/md-rjct-grp) | Repeating group | Optional |  |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

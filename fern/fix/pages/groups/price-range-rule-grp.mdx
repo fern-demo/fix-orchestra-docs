@@ -3,9 +3,15 @@ title: "PriceRangeRuleGrp"
 subtitle: "The PriceRangeRulesGrp component is used to specify the price range rules for a given product group or complex."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 2550</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoPriceRangeRules (2550)](/fix/fields/tags-2400-2599#tag-2550).
+<llms-only>
+Repeating group · NumInGroup 2550 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoPriceRangeRules (2550)](/fix/fields/tags-2400-2599#tag-2550-nopricerangerules).
 
 ## Members
 
@@ -13,12 +19,12 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 2551 | [StartPriceRange](/fix/fields/tags-2400-2599#tag-2551) | Price | Optional | Required if NoPriceRangeRules(2550) &gt; 0. |
-| 2552 | [EndPriceRange](/fix/fields/tags-2400-2599#tag-2552) | Price | Optional | Upper boundary for price range. |
-| 2553 | [PriceRangeValue](/fix/fields/tags-2400-2599#tag-2553) | Price | Optional | Mutually exclusive with PriceRangePercentage(2554). |
-| 2554 | [PriceRangePercentage](/fix/fields/tags-2400-2599#tag-2554) | Percentage | Optional | Mutually exclusive with PriceRangeValue(2553). |
-| 2556 | [PriceRangeRuleID](/fix/fields/tags-2400-2599#tag-2556) | String | Optional | Can be used to provide an identifier so that the rule can be reference via the ID elsewhere. |
-| 2555 | [PriceRangeProductComplex](/fix/fields/tags-2400-2599#tag-2555) | String | Optional | Can be used to limit price range to specific product suite. |
+| 2551 | [StartPriceRange](/fix/fields/tags-2400-2599#tag-2551-startpricerange) | Price | Optional | Required if NoPriceRangeRules(2550) &gt; 0. |
+| 2552 | [EndPriceRange](/fix/fields/tags-2400-2599#tag-2552-endpricerange) | Price | Optional | Upper boundary for price range. |
+| 2553 | [PriceRangeValue](/fix/fields/tags-2400-2599#tag-2553-pricerangevalue) | Price | Optional | Mutually exclusive with PriceRangePercentage(2554). |
+| 2554 | [PriceRangePercentage](/fix/fields/tags-2400-2599#tag-2554-pricerangepercentage) | Percentage | Optional | Mutually exclusive with PriceRangeValue(2553). |
+| 2556 | [PriceRangeRuleID](/fix/fields/tags-2400-2599#tag-2556-pricerangeruleid) | String | Optional | Can be used to provide an identifier so that the rule can be reference via the ID elsewhere. |
+| 2555 | [PriceRangeProductComplex](/fix/fields/tags-2400-2599#tag-2555-pricerangeproductcomplex) | String | Optional | Can be used to limit price range to specific product suite. |
 
 </StickyTable>
 

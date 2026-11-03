@@ -3,11 +3,17 @@ title: "LegPaymentScheduleGrp"
 subtitle: "The LegPaymentScheduleGrp is a repeating subcomponent of the LegPaymentStream component used to specify notional and rate steps in the payment stream."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40374</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
+
+<llms-only>
+Repeating group · NumInGroup 40374 · Added FIX.5.0SP2
+</llms-only>
 
 The Fixing Lag Interval (LegPaymentScheduleFixingLagPeriod(41545) and LegPaymentScheduleFixingLagUnit(41546)) and the First Observation Offset Duration (LegPaymentScheduleFixingFirstObservationOffsetPeriod(41547) and LegPaymentScheduleFixingFirstObservationOffsetUnit(41548)) are used together. If the First Observation Offset Duration is specified, the observation starts the Fixing Lag Interval prior to each calculation. If the First Observation Offset Duration is not specified, the observation starts immediately preceeding each calculation.
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentSchedules (40374)](/fix/fields/tags-40200-40399#tag-40374).
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentSchedules (40374)](/fix/fields/tags-40200-40399#tag-40374-nolegpaymentschedules).
 
 ## Members
 
@@ -15,63 +21,63 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40375 | [LegPaymentScheduleType](/fix/fields/tags-40200-40399#tag-40375) | PaymentScheduleTypeCodeSet | Optional | Required if NoLegPaymentSchedules(40374) &gt; 0. |
-| 41533 | [LegPaymentScheduleXID](/fix/fields/tags-41400-41599#tag-41533) | XID | Optional | Identifier of this LegPaymentSchedule for cross referencing elsewhere in the message. |
-| 41534 | [LegPaymentScheduleXIDRef](/fix/fields/tags-41400-41599#tag-41534) | XIDREF | Optional | Reference to payment schedule elsewhere in the message. |
-| 40376 | [LegPaymentScheduleStubType](/fix/fields/tags-40200-40399#tag-40376) | PaymentStubTypeCodeSet | Optional | Indicates to which stub this schedule applies. |
-| 40377 | [LegPaymentScheduleStartDateUnadjusted](/fix/fields/tags-40200-40399#tag-40377) | LocalMktDate | Optional | The unadjusted date on which the value is adjusted, or calculated if a future value notional for certain non-deliverable interest rate swaps (e.g. Brazillian… |
-| 40378 | [LegPaymentScheduleEndDateUnadjusted](/fix/fields/tags-40200-40399#tag-40378) | LocalMktDate | Optional | The unadjusted end date of a cashflow payment. |
-| 40379 | [LegPaymentSchedulePaySide](/fix/fields/tags-40200-40399#tag-40379) | PaymentPaySideCodeSet | Optional | The side of the party paying the step schedule. |
-| 40380 | [LegPaymentScheduleReceiveSide](/fix/fields/tags-40200-40399#tag-40380) | PaymentPaySideCodeSet | Optional | The side of the party receiving the step schedule. |
-| 40381 | [LegPaymentScheduleNotional](/fix/fields/tags-40200-40399#tag-40381) | Amt | Optional | The notional value for this step schedule, or amount of a cashflow payment. |
-| 40382 | [LegPaymentScheduleCurrency](/fix/fields/tags-40200-40399#tag-40382) | Currency | Optional | The currency for this step schedule. Uses ISO 4217 currency codes. |
-| 40383 | [LegPaymentScheduleRate](/fix/fields/tags-40200-40399#tag-40383) | Percentage | Optional | The rate value for this step schedule. |
-| 40384 | [LegPaymentScheduleRateMultiplier](/fix/fields/tags-40200-40399#tag-40384) | float | Optional | A rate multiplier to apply to the floating rate. The multiplier can be less than or greater than 1 (one). This element should only be included if the multiplier… |
-| 40385 | [LegPaymentScheduleRateSpread](/fix/fields/tags-40200-40399#tag-40385) | PriceOffset | Optional | The spread value for this step schedule. |
-| 41535 | [LegPaymentScheduleRateCurrency](/fix/fields/tags-41400-41599#tag-41535) | Currency | Optional | The currency of the schedule rate. Uses ISO 4217 currency codes. |
-| 41536 | [LegPaymentScheduleRateUnitOfMeasure](/fix/fields/tags-41400-41599#tag-41536) | UnitOfMeasureCodeSet | Optional | The schedule rate unit of measure (UOM). |
-| 41537 | [LegPaymentScheduleRateConversionFactor](/fix/fields/tags-41400-41599#tag-41537) | float | Optional | The number multipled by the derived floating rate of the leg's payment schedule in order to arrive at the payment rate. If omitted, the schedule rate conversion… |
-| 41538 | [LegPaymentScheduleRateSpreadType](/fix/fields/tags-41400-41599#tag-41538) | PaymentStreamRateSpreadTypeCodeSet | Optional | Identifies whether the rate spread is an absolute value to be added to the index rate or a percentage of the index rate. |
-| 40386 | [LegPaymentScheduleRateSpreadPositionType](/fix/fields/tags-40200-40399#tag-40386) | PaymentStreamRateSpreadPositionTypeCodeSet | Optional | Identifies whether the rate spread is applied to a long or a short position. |
-| 40387 | [LegPaymentScheduleRateTreatment](/fix/fields/tags-40200-40399#tag-40387) | PaymentStreamRateTreatmentCodeSet | Optional | Specifies the yield calculation treatment for the step schedule. |
-| 40388 | [LegPaymentScheduleFixedAmount](/fix/fields/tags-40200-40399#tag-40388) | Amt | Optional | The explicit payment amount for this step schedule. |
-| 40389 | [LegPaymentScheduleFixedCurrency](/fix/fields/tags-40200-40399#tag-40389) | Currency | Optional | The currency of the fixed amount. Uses ISO 4217 currency codes. |
-| 41539 | [LegPaymentScheduleSettlPeriodPrice](/fix/fields/tags-41400-41599#tag-41539) | Price | Optional | The schedule settlement period price. |
-| 41540 | [LegPaymentScheduleSettlPeriodPriceCurrency](/fix/fields/tags-41400-41599#tag-41540) | Currency | Optional | The currency of the schedule settlement period price. Uses ISO 4217 currency codes. |
-| 41541 | [LegPaymentScheduleSettlPeriodPriceUnitOfMeasure](/fix/fields/tags-41400-41599#tag-41541) | UnitOfMeasureCodeSet | Optional | The settlement period price unit of measure (UOM). |
-| 41542 | [LegPaymentScheduleStepUnitOfMeasure](/fix/fields/tags-41400-41599#tag-41542) | UnitOfMeasureCodeSet | Optional | The schedule step unit of measure (UOM). |
-| 40390 | [LegPaymentScheduleStepFrequencyPeriod](/fix/fields/tags-40200-40399#tag-40390) | int | Optional | Conditionally required when LegPaymentScheduleStepFrequencyUnit(40391) is specified. |
-| 40391 | [LegPaymentScheduleStepFrequencyUnit](/fix/fields/tags-40200-40399#tag-40391) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when LegPaymentScheduleStepFrequencyPeriod(40390) is specified. |
-| 40392 | [LegPaymentScheduleStepOffsetValue](/fix/fields/tags-40200-40399#tag-40392) | Amt | Optional | The explicit amount that the notional changes on each step date. This can be a positive or negative amount. |
-| 40393 | [LegPaymentScheduleStepRate](/fix/fields/tags-40200-40399#tag-40393) | Percentage | Optional | The percentage by which the notional changes on each step date. The percentage is either a percentage applied to the initial notional amount or the previous… |
-| 40394 | [LegPaymentScheduleStepOffsetRate](/fix/fields/tags-40200-40399#tag-40394) | Percentage | Optional | The explicit amount that the rate changes on each step date. This can be a positive or negative value. |
-| 40395 | [LegPaymentScheduleStepRelativeTo](/fix/fields/tags-40200-40399#tag-40395) | PaymentScheduleStepRelativeToCodeSet | Optional | Specifies whether the LegPaymentScheduleStepRate(40393) or LegPaymentScheduleStepOffsetValue(40392) should be applied to the initial notional or the previous… |
+| 40375 | [LegPaymentScheduleType](/fix/fields/tags-40200-40399#tag-40375-legpaymentscheduletype) | PaymentScheduleTypeCodeSet | Optional | Required if NoLegPaymentSchedules(40374) &gt; 0. |
+| 41533 | [LegPaymentScheduleXID](/fix/fields/tags-41400-41599#tag-41533-legpaymentschedulexid) | XID | Optional | Identifier of this LegPaymentSchedule for cross referencing elsewhere in the message. |
+| 41534 | [LegPaymentScheduleXIDRef](/fix/fields/tags-41400-41599#tag-41534-legpaymentschedulexidref) | XIDREF | Optional | Reference to payment schedule elsewhere in the message. |
+| 40376 | [LegPaymentScheduleStubType](/fix/fields/tags-40200-40399#tag-40376-legpaymentschedulestubtype) | PaymentStubTypeCodeSet | Optional | Indicates to which stub this schedule applies. |
+| 40377 | [LegPaymentScheduleStartDateUnadjusted](/fix/fields/tags-40200-40399#tag-40377-legpaymentschedulestartdateunadjusted) | LocalMktDate | Optional | The unadjusted date on which the value is adjusted, or calculated if a future value notional for certain non-deliverable interest rate swaps (e.g. Brazillian… |
+| 40378 | [LegPaymentScheduleEndDateUnadjusted](/fix/fields/tags-40200-40399#tag-40378-legpaymentscheduleenddateunadjusted) | LocalMktDate | Optional | The unadjusted end date of a cashflow payment. |
+| 40379 | [LegPaymentSchedulePaySide](/fix/fields/tags-40200-40399#tag-40379-legpaymentschedulepayside) | PaymentPaySideCodeSet | Optional | The side of the party paying the step schedule. |
+| 40380 | [LegPaymentScheduleReceiveSide](/fix/fields/tags-40200-40399#tag-40380-legpaymentschedulereceiveside) | PaymentPaySideCodeSet | Optional | The side of the party receiving the step schedule. |
+| 40381 | [LegPaymentScheduleNotional](/fix/fields/tags-40200-40399#tag-40381-legpaymentschedulenotional) | Amt | Optional | The notional value for this step schedule, or amount of a cashflow payment. |
+| 40382 | [LegPaymentScheduleCurrency](/fix/fields/tags-40200-40399#tag-40382-legpaymentschedulecurrency) | Currency | Optional | The currency for this step schedule. Uses ISO 4217 currency codes. |
+| 40383 | [LegPaymentScheduleRate](/fix/fields/tags-40200-40399#tag-40383-legpaymentschedulerate) | Percentage | Optional | The rate value for this step schedule. |
+| 40384 | [LegPaymentScheduleRateMultiplier](/fix/fields/tags-40200-40399#tag-40384-legpaymentscheduleratemultiplier) | float | Optional | A rate multiplier to apply to the floating rate. The multiplier can be less than or greater than 1 (one). This element should only be included if the multiplier… |
+| 40385 | [LegPaymentScheduleRateSpread](/fix/fields/tags-40200-40399#tag-40385-legpaymentscheduleratespread) | PriceOffset | Optional | The spread value for this step schedule. |
+| 41535 | [LegPaymentScheduleRateCurrency](/fix/fields/tags-41400-41599#tag-41535-legpaymentscheduleratecurrency) | Currency | Optional | The currency of the schedule rate. Uses ISO 4217 currency codes. |
+| 41536 | [LegPaymentScheduleRateUnitOfMeasure](/fix/fields/tags-41400-41599#tag-41536-legpaymentschedulerateunitofmeasure) | UnitOfMeasureCodeSet | Optional | The schedule rate unit of measure (UOM). |
+| 41537 | [LegPaymentScheduleRateConversionFactor](/fix/fields/tags-41400-41599#tag-41537-legpaymentschedulerateconversionfactor) | float | Optional | The number multipled by the derived floating rate of the leg's payment schedule in order to arrive at the payment rate. If omitted, the schedule rate conversion… |
+| 41538 | [LegPaymentScheduleRateSpreadType](/fix/fields/tags-41400-41599#tag-41538-legpaymentscheduleratespreadtype) | PaymentStreamRateSpreadTypeCodeSet | Optional | Identifies whether the rate spread is an absolute value to be added to the index rate or a percentage of the index rate. |
+| 40386 | [LegPaymentScheduleRateSpreadPositionType](/fix/fields/tags-40200-40399#tag-40386-legpaymentscheduleratespreadpositiontype) | PaymentStreamRateSpreadPositionTypeCodeSet | Optional | Identifies whether the rate spread is applied to a long or a short position. |
+| 40387 | [LegPaymentScheduleRateTreatment](/fix/fields/tags-40200-40399#tag-40387-legpaymentscheduleratetreatment) | PaymentStreamRateTreatmentCodeSet | Optional | Specifies the yield calculation treatment for the step schedule. |
+| 40388 | [LegPaymentScheduleFixedAmount](/fix/fields/tags-40200-40399#tag-40388-legpaymentschedulefixedamount) | Amt | Optional | The explicit payment amount for this step schedule. |
+| 40389 | [LegPaymentScheduleFixedCurrency](/fix/fields/tags-40200-40399#tag-40389-legpaymentschedulefixedcurrency) | Currency | Optional | The currency of the fixed amount. Uses ISO 4217 currency codes. |
+| 41539 | [LegPaymentScheduleSettlPeriodPrice](/fix/fields/tags-41400-41599#tag-41539-legpaymentschedulesettlperiodprice) | Price | Optional | The schedule settlement period price. |
+| 41540 | [LegPaymentScheduleSettlPeriodPriceCurrency](/fix/fields/tags-41400-41599#tag-41540-legpaymentschedulesettlperiodpricecurrency) | Currency | Optional | The currency of the schedule settlement period price. Uses ISO 4217 currency codes. |
+| 41541 | [LegPaymentScheduleSettlPeriodPriceUnitOfMeasure](/fix/fields/tags-41400-41599#tag-41541-legpaymentschedulesettlperiodpriceunitofmeasure) | UnitOfMeasureCodeSet | Optional | The settlement period price unit of measure (UOM). |
+| 41542 | [LegPaymentScheduleStepUnitOfMeasure](/fix/fields/tags-41400-41599#tag-41542-legpaymentschedulestepunitofmeasure) | UnitOfMeasureCodeSet | Optional | The schedule step unit of measure (UOM). |
+| 40390 | [LegPaymentScheduleStepFrequencyPeriod](/fix/fields/tags-40200-40399#tag-40390-legpaymentschedulestepfrequencyperiod) | int | Optional | Conditionally required when LegPaymentScheduleStepFrequencyUnit(40391) is specified. |
+| 40391 | [LegPaymentScheduleStepFrequencyUnit](/fix/fields/tags-40200-40399#tag-40391-legpaymentschedulestepfrequencyunit) | CouponFrequencyUnitCodeSet | Optional | Conditionally required when LegPaymentScheduleStepFrequencyPeriod(40390) is specified. |
+| 40392 | [LegPaymentScheduleStepOffsetValue](/fix/fields/tags-40200-40399#tag-40392-legpaymentschedulestepoffsetvalue) | Amt | Optional | The explicit amount that the notional changes on each step date. This can be a positive or negative amount. |
+| 40393 | [LegPaymentScheduleStepRate](/fix/fields/tags-40200-40399#tag-40393-legpaymentschedulesteprate) | Percentage | Optional | The percentage by which the notional changes on each step date. The percentage is either a percentage applied to the initial notional amount or the previous… |
+| 40394 | [LegPaymentScheduleStepOffsetRate](/fix/fields/tags-40200-40399#tag-40394-legpaymentschedulestepoffsetrate) | Percentage | Optional | The explicit amount that the rate changes on each step date. This can be a positive or negative value. |
+| 40395 | [LegPaymentScheduleStepRelativeTo](/fix/fields/tags-40200-40399#tag-40395-legpaymentschedulesteprelativeto) | PaymentScheduleStepRelativeToCodeSet | Optional | Specifies whether the LegPaymentScheduleStepRate(40393) or LegPaymentScheduleStepOffsetValue(40392) should be applied to the initial notional or the previous… |
 | 40414 | [LegPaymentScheduleRateSourceGrp](/fix/groups/leg-payment-schedule-rate-source-grp) | Repeating group | Optional | LegPaymentScheduleRateSourceGrp is a repeating component within the LegPaymentScheduleGrp component used to identify primary and secondary rate sources. |
-| 40396 | [LegPaymentScheduleFixingDateUnadjusted](/fix/fields/tags-40200-40399#tag-40396) | LocalMktDate | Optional | The unadjusted fixing date. |
-| 40397 | [LegPaymentScheduleWeight](/fix/fields/tags-40200-40399#tag-40397) | float | Optional | Floating rate observation weight for cashflow payment. |
-| 40398 | [LegPaymentScheduleFixingDateRelativeTo](/fix/fields/tags-40200-40399#tag-40398) | int | Optional | Specifies the anchor date when the fixing date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
-| 40399 | [LegPaymentScheduleFixingDateBusinessDayConvention](/fix/fields/tags-40200-40399#tag-40399) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
+| 40396 | [LegPaymentScheduleFixingDateUnadjusted](/fix/fields/tags-40200-40399#tag-40396-legpaymentschedulefixingdateunadjusted) | LocalMktDate | Optional | The unadjusted fixing date. |
+| 40397 | [LegPaymentScheduleWeight](/fix/fields/tags-40200-40399#tag-40397-legpaymentscheduleweight) | float | Optional | Floating rate observation weight for cashflow payment. |
+| 40398 | [LegPaymentScheduleFixingDateRelativeTo](/fix/fields/tags-40200-40399#tag-40398-legpaymentschedulefixingdaterelativeto) | int | Optional | Specifies the anchor date when the fixing date is relative to an anchor date. See http://www.fixtradingcommunity.org/codelists#Relative\_To\_Date for values. |
+| 40399 | [LegPaymentScheduleFixingDateBusinessDayConvention](/fix/fields/tags-40200-40399#tag-40399-legpaymentschedulefixingdatebusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
 | 40927 | [LegPaymentScheduleFixingDateBusinessCenterGrp](/fix/groups/leg-payment-schedule-fixing-date-business-center-grp) | Repeating group | Optional | LegPaymentScheduleFixingDateBusinessCenterGrp is a repeating subcomponent within the LegPaymentScheduleGrp component. It is used to specify the set of business… |
-| 40401 | [LegPaymentScheduleFixingDateOffsetPeriod](/fix/fields/tags-40400-40599#tag-40401) | int | Optional | Conditionally required when LegPaymentScheduleFixingDatesOffsetUnit(40402) is specified. |
-| 40402 | [LegPaymentScheduleFixingDateOffsetUnit](/fix/fields/tags-40400-40599#tag-40402) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentScheduleFixingDatesOffsetPeriod(40401) is specified. |
-| 40403 | [LegPaymentScheduleFixingDateOffsetDayType](/fix/fields/tags-40400-40599#tag-40403) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative fixing date offset. |
-| 41543 | [LegPaymentScheduleFixingDayDistribution](/fix/fields/tags-41400-41599#tag-41543) | PaymentStreamPricingDayDistributionCodeSet | Optional | The distribution of fixing days. |
-| 41544 | [LegPaymentScheduleFixingDayCount](/fix/fields/tags-41400-41599#tag-41544) | int | Optional | The number of days over which fixing should take place. |
-| 40404 | [LegPaymentScheduleFixingDateAdjusted](/fix/fields/tags-40400-40599#tag-40404) | LocalMktDate | Optional | The adjusted fixing date. |
+| 40401 | [LegPaymentScheduleFixingDateOffsetPeriod](/fix/fields/tags-40400-40599#tag-40401-legpaymentschedulefixingdateoffsetperiod) | int | Optional | Conditionally required when LegPaymentScheduleFixingDatesOffsetUnit(40402) is specified. |
+| 40402 | [LegPaymentScheduleFixingDateOffsetUnit](/fix/fields/tags-40400-40599#tag-40402-legpaymentschedulefixingdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentScheduleFixingDatesOffsetPeriod(40401) is specified. |
+| 40403 | [LegPaymentScheduleFixingDateOffsetDayType](/fix/fields/tags-40400-40599#tag-40403-legpaymentschedulefixingdateoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative fixing date offset. |
+| 41543 | [LegPaymentScheduleFixingDayDistribution](/fix/fields/tags-41400-41599#tag-41543-legpaymentschedulefixingdaydistribution) | PaymentStreamPricingDayDistributionCodeSet | Optional | The distribution of fixing days. |
+| 41544 | [LegPaymentScheduleFixingDayCount](/fix/fields/tags-41400-41599#tag-41544-legpaymentschedulefixingdaycount) | int | Optional | The number of days over which fixing should take place. |
+| 40404 | [LegPaymentScheduleFixingDateAdjusted](/fix/fields/tags-40400-40599#tag-40404-legpaymentschedulefixingdateadjusted) | LocalMktDate | Optional | The adjusted fixing date. |
 | 41530 | [LegPaymentScheduleFixingDayGrp](/fix/groups/leg-payment-schedule-fixing-day-grp) | Repeating group | Optional | The LegPaymentScheduleFixingDayGrp is a repeating subcomponent of the LegPaymentScheduleGrp component used to detail periodic fixing days. |
-| 41545 | [LegPaymentScheduleFixingLagPeriod](/fix/fields/tags-41400-41599#tag-41545) | int | Optional | Conditionally required when LegPaymentScheduleFixingLagUnit(41546) is specified. |
-| 41546 | [LegPaymentScheduleFixingLagUnit](/fix/fields/tags-41400-41599#tag-41546) | PaymentStreamInflationLagUnitCodeSet | Optional | Conditionally required when LegPaymentScheduleFixingLagPeriod(41545) is specified. |
-| 41547 | [LegPaymentScheduleFixingFirstObservationDateOffsetPeriod](/fix/fields/tags-41400-41599#tag-41547) | int | Optional | Conditionally required when LegPaymentScheduleFixingFirstObservationDateOffsetUnit(41548) is specified. |
-| 41548 | [LegPaymentScheduleFixingFirstObservationDateOffsetUnit](/fix/fields/tags-41400-41599#tag-41548) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentScheduleFixingFirstObservationDateOffsetPeriod(41547) is specified. |
-| 40405 | [LegPaymentScheduleFixingTime](/fix/fields/tags-40400-40599#tag-40405) | LocalMktTime | Optional | The fxing time associated with the step schedule. |
-| 40406 | [LegPaymentScheduleFixingTimeBusinessCenter](/fix/fields/tags-40400-40599#tag-40406) | String | Optional | Business center for determining fixing time. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values. |
-| 40407 | [LegPaymentScheduleInterimExchangePaymentDateRelativeTo](/fix/fields/tags-40400-40599#tag-40407) | int | Optional | Specifies the anchor date when the interim exchange payment date is relative to an anchor date. See… |
-| 40408 | [LegPaymentScheduleInterimExchangeDatesBusinessDayConvention](/fix/fields/tags-40400-40599#tag-40408) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
+| 41545 | [LegPaymentScheduleFixingLagPeriod](/fix/fields/tags-41400-41599#tag-41545-legpaymentschedulefixinglagperiod) | int | Optional | Conditionally required when LegPaymentScheduleFixingLagUnit(41546) is specified. |
+| 41546 | [LegPaymentScheduleFixingLagUnit](/fix/fields/tags-41400-41599#tag-41546-legpaymentschedulefixinglagunit) | PaymentStreamInflationLagUnitCodeSet | Optional | Conditionally required when LegPaymentScheduleFixingLagPeriod(41545) is specified. |
+| 41547 | [LegPaymentScheduleFixingFirstObservationDateOffsetPeriod](/fix/fields/tags-41400-41599#tag-41547-legpaymentschedulefixingfirstobservationdateoffsetperiod) | int | Optional | Conditionally required when LegPaymentScheduleFixingFirstObservationDateOffsetUnit(41548) is specified. |
+| 41548 | [LegPaymentScheduleFixingFirstObservationDateOffsetUnit](/fix/fields/tags-41400-41599#tag-41548-legpaymentschedulefixingfirstobservationdateoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentScheduleFixingFirstObservationDateOffsetPeriod(41547) is specified. |
+| 40405 | [LegPaymentScheduleFixingTime](/fix/fields/tags-40400-40599#tag-40405-legpaymentschedulefixingtime) | LocalMktTime | Optional | The fxing time associated with the step schedule. |
+| 40406 | [LegPaymentScheduleFixingTimeBusinessCenter](/fix/fields/tags-40400-40599#tag-40406-legpaymentschedulefixingtimebusinesscenter) | String | Optional | Business center for determining fixing time. See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values. |
+| 40407 | [LegPaymentScheduleInterimExchangePaymentDateRelativeTo](/fix/fields/tags-40400-40599#tag-40407-legpaymentscheduleinterimexchangepaymentdaterelativeto) | int | Optional | Specifies the anchor date when the interim exchange payment date is relative to an anchor date. See… |
+| 40408 | [LegPaymentScheduleInterimExchangeDatesBusinessDayConvention](/fix/fields/tags-40400-40599#tag-40408-legpaymentscheduleinterimexchangedatesbusinessdayconvention) | BusinessDayConventionCodeSet | Optional | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to… |
 | 40928 | [LegPaymentScheduleInterimExchangeDateBusinessCenterGrp](/fix/groups/leg-payment-schedule-interim-exchange-date-business-center-grp) | Repeating group | Optional | LegPaymentScheduleInterimExchangeDateBusinessCenterGrp is a repeating subcomponent within the LegPaymentScheduleGrp component. It is used to specify the set of… |
-| 40410 | [LegPaymentScheduleInterimExchangeDatesOffsetPeriod](/fix/fields/tags-40400-40599#tag-40410) | int | Optional | Conditionally required when LegPaymentScheduleInterimExchangeDatesOffsetUnit(40411) is specified. |
-| 40411 | [LegPaymentScheduleInterimExchangeDatesOffsetUnit](/fix/fields/tags-40400-40599#tag-40411) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentScheduleInterimExchangeDatesOffsetPeriod(40410) is specified. |
-| 40412 | [LegPaymentScheduleInterimExchangeDatesOffsetDayType](/fix/fields/tags-40400-40599#tag-40412) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative interim exchange date offset. |
-| 40413 | [LegPaymentScheduleInterimExchangeDateAdjusted](/fix/fields/tags-40400-40599#tag-40413) | LocalMktDate | Optional | The adjusted interim exchange date. |
+| 40410 | [LegPaymentScheduleInterimExchangeDatesOffsetPeriod](/fix/fields/tags-40400-40599#tag-40410-legpaymentscheduleinterimexchangedatesoffsetperiod) | int | Optional | Conditionally required when LegPaymentScheduleInterimExchangeDatesOffsetUnit(40411) is specified. |
+| 40411 | [LegPaymentScheduleInterimExchangeDatesOffsetUnit](/fix/fields/tags-40400-40599#tag-40411-legpaymentscheduleinterimexchangedatesoffsetunit) | PaymentStreamPaymentDateOffsetUnitCodeSet | Optional | Conditionally required when LegPaymentScheduleInterimExchangeDatesOffsetPeriod(40410) is specified. |
+| 40412 | [LegPaymentScheduleInterimExchangeDatesOffsetDayType](/fix/fields/tags-40400-40599#tag-40412-legpaymentscheduleinterimexchangedatesoffsetdaytype) | PaymentStreamPaymentDateOffsetDayTypeCodeSet | Optional | Specifies the day type of the relative interim exchange date offset. |
+| 40413 | [LegPaymentScheduleInterimExchangeDateAdjusted](/fix/fields/tags-40400-40599#tag-40413-legpaymentscheduleinterimexchangedateadjusted) | LocalMktDate | Optional | The adjusted interim exchange date. |
 
 </StickyTable>
 

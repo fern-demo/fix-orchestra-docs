@@ -3,9 +3,15 @@ title: "StreamEffectiveBusinessCenterGrp"
 subtitle: "StreamEffectiveBusinessCenterGrp is a repeating subcomponent of the StreamEffectiveDate component used to specify the set of business centers whose calendars drive date adjustment. Used only to override the business centers defined in the…"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 40960</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoStreamEffectiveBusinessCenters (40960)](/fix/fields/tags-40800-40999#tag-40960).
+<llms-only>
+Repeating group · NumInGroup 40960 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoStreamEffectiveBusinessCenters (40960)](/fix/fields/tags-40800-40999#tag-40960-nostreameffectivebusinesscenters).
 
 ## Members
 
@@ -13,7 +19,7 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 40909 | [StreamEffectiveDateBusinessCenter](/fix/fields/tags-40800-40999#tag-40909) | String | Optional | Required if NoStreamEffectiveBusinessCenters(40960) &gt; 0. |
+| 40909 | [StreamEffectiveDateBusinessCenter](/fix/fields/tags-40800-40999#tag-40909-streameffectivedatebusinesscenter) | String | Optional | Required if NoStreamEffectiveBusinessCenters(40960) &gt; 0. |
 
 </StickyTable>
 

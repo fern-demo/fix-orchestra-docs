@@ -3,9 +3,15 @@ title: "LegPaymentStreamFormulaMathGrp"
 subtitle: "LegPaymentStreamFormulaMathGrp is a repeating subcomponent within the LegPaymentStreamFormula component. It is used to specify the set of formulas, sub-formulas and descriptions from which the rate is derived."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 42485</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentStreamFormulas (42485)](/fix/fields/tags-42400-42599#tag-42485).
+<llms-only>
+Repeating group · NumInGroup 42485 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegPaymentStreamFormulas (42485)](/fix/fields/tags-42400-42599#tag-42485-nolegpaymentstreamformulas).
 
 ## Members
 
@@ -13,9 +19,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 43110 | [LegPaymentStreamFormulaLength](/fix/fields/tags-43000-43199#tag-43110) | Length | Optional | Required if NoLegPaymentStreamFormulas(42485) &gt; 0. |
-| 42486 | [LegPaymentStreamFormula](/fix/fields/tags-42400-42599#tag-42486) | XMLData | Optional | Required if NoLegPaymentStreamFormulas(42485) &gt; 0. |
-| 42487 | [LegPaymentStreamFormulaDesc](/fix/fields/tags-42400-42599#tag-42487) | String | Optional | A description of the math formula in LegPaymentStreamFormula(42486). |
+| 43110 | [LegPaymentStreamFormulaLength](/fix/fields/tags-43000-43199#tag-43110-legpaymentstreamformulalength) | Length | Optional | Required if NoLegPaymentStreamFormulas(42485) &gt; 0. |
+| 42486 | [LegPaymentStreamFormula](/fix/fields/tags-42400-42599#tag-42486-legpaymentstreamformula) | XMLData | Optional | Required if NoLegPaymentStreamFormulas(42485) &gt; 0. |
+| 42487 | [LegPaymentStreamFormulaDesc](/fix/fields/tags-42400-42599#tag-42487-legpaymentstreamformuladesc) | String | Optional | A description of the math formula in LegPaymentStreamFormula(42486). |
 
 </StickyTable>
 

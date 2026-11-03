@@ -3,7 +3,13 @@ title: "OrderCancelReject"
 subtitle: "The order cancel reject message is issued by the broker upon receipt of a cancel request or cancel/replace request message which cannot be honored."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType 9</Badge> <Badge intent="note" minimal>Single General Order Handling</Badge> <Badge intent="tip" minimal>Trade</Badge> <Badge intent="success" minimal>Added FIX.2.7</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType 9 · Single General Order Handling · Trade · Added FIX.2.7
+</llms-only>
 
 ## Message structure
 
@@ -12,34 +18,34 @@ subtitle: "The order cancel reject message is issued by the broker upon receipt 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
-| 37 | [OrderID](/fix/fields/tags-0-199#tag-37) | String | **Required** | If CxlRejReason="Unknown order", specify "NONE". |
-| 2422 | [OrderRequestID](/fix/fields/tags-2400-2599#tag-2422) | int | Optional | Required if provided on the order cancel or cancel/replace request. Echo back the value provided by the requester. |
-| 198 | [SecondaryOrderID](/fix/fields/tags-0-199#tag-198) | String | Optional | Can be used to provide order id used by exchange or executing system. |
-| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
-| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11) | String | **Required** | Unique order id assigned by institution or by the intermediary with closest association with the investor. to the cancel request or to the replacement order. |
-| 583 | [ClOrdLinkID](/fix/fields/tags-400-599#tag-583) | String | Optional | Permits order originators to tie together groups of orders in which trades resulting from orders are associated for a specific purpose, for example the… |
-| 41 | [OrigClOrdID](/fix/fields/tags-0-199#tag-41) | String | Optional | ClOrdID(11) which could not be canceled/replaced. ClOrdID of the previous accepted order (NOT the initial order of the day) when canceling or replacing an… |
-| 39 | [OrdStatus](/fix/fields/tags-0-199#tag-39) | OrdStatusCodeSet | **Required** | OrdStatus value after this cancel reject is applied. If CxlRejReason = "Unknown Order", specify Rejected. |
-| 636 | [WorkingIndicator](/fix/fields/tags-600-799#tag-636) | WorkingIndicatorCodeSet | Optional | For optional use with OrdStatus = 0 (New) |
-| 586 | [OrigOrdModTime](/fix/fields/tags-400-599#tag-586) | UTCTimestamp | Optional | The most recent (or current) modification TransactTime (tag 60) reported on an Execution Report for the order. The OrigOrdModTime is provided as an optional… |
-| 66 | [ListID](/fix/fields/tags-0-199#tag-66) | String | Optional | Required for rejects against orders which were submitted as part of a list. |
-| 1 | [Account](/fix/fields/tags-0-199#tag-1) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
-| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
-| 581 | [AccountType](/fix/fields/tags-400-599#tag-581) | AccountTypeCodeSet | Optional | Type of account associated with an order |
-| 229 | [TradeOriginationDate](/fix/fields/tags-200-399#tag-229) | LocalMktDate | Optional | Used with Fixed Income for Muncipal New Issue Market. Agreement in principal between counter-parties prior to actual trade date. (Note tag # was reserved in FIX… |
-| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | Optional | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
-| 434 | [CxlRejResponseTo](/fix/fields/tags-400-599#tag-434) | CxlRejResponseToCodeSet | **Required** | Identifies the type of request that a Cancel Reject is in response to. |
-| 102 | [CxlRejReason](/fix/fields/tags-0-199#tag-102) | CxlRejReasonCodeSet | Optional | Code to identify reason for cancel rejection. |
-| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328) | String | Optional | Reason description for rejecting the transaction request. |
-| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664) | Length | Optional | Must be set if EncodedRejectText(1665) field is specified and must immediately precede it. |
-| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. |
-| 100 | [ExDestination](/fix/fields/tags-0-199#tag-100) | Exchange | Optional | Execution destination as defined by institution when order is entered. Valid values: See "Appendix 6-C" |
-| 1133 | [ExDestinationIDSource](/fix/fields/tags-1000-1199#tag-1133) | ExDestinationIDSourceCodeSet | Optional | The ID source of ExDestination |
+| 37 | [OrderID](/fix/fields/tags-0-199#tag-37-orderid) | String | **Required** | If CxlRejReason="Unknown order", specify "NONE". |
+| 2422 | [OrderRequestID](/fix/fields/tags-2400-2599#tag-2422-orderrequestid) | int | Optional | Required if provided on the order cancel or cancel/replace request. Echo back the value provided by the requester. |
+| 198 | [SecondaryOrderID](/fix/fields/tags-0-199#tag-198-secondaryorderid) | String | Optional | Can be used to provide order id used by exchange or executing system. |
+| 526 | [SecondaryClOrdID](/fix/fields/tags-400-599#tag-526-secondaryclordid) | String | Optional | Assigned by the party which originates the order. Can be used to provide the ClOrdID (11) used by an exchange or executing system. |
+| 11 | [ClOrdID](/fix/fields/tags-0-199#tag-11-clordid) | String | **Required** | Unique order id assigned by institution or by the intermediary with closest association with the investor. to the cancel request or to the replacement order. |
+| 583 | [ClOrdLinkID](/fix/fields/tags-400-599#tag-583-clordlinkid) | String | Optional | Permits order originators to tie together groups of orders in which trades resulting from orders are associated for a specific purpose, for example the… |
+| 41 | [OrigClOrdID](/fix/fields/tags-0-199#tag-41-origclordid) | String | Optional | ClOrdID(11) which could not be canceled/replaced. ClOrdID of the previous accepted order (NOT the initial order of the day) when canceling or replacing an… |
+| 39 | [OrdStatus](/fix/fields/tags-0-199#tag-39-ordstatus) | OrdStatusCodeSet | **Required** | OrdStatus value after this cancel reject is applied. If CxlRejReason = "Unknown Order", specify Rejected. |
+| 636 | [WorkingIndicator](/fix/fields/tags-600-799#tag-636-workingindicator) | WorkingIndicatorCodeSet | Optional | For optional use with OrdStatus = 0 (New) |
+| 586 | [OrigOrdModTime](/fix/fields/tags-400-599#tag-586-origordmodtime) | UTCTimestamp | Optional | The most recent (or current) modification TransactTime (tag 60) reported on an Execution Report for the order. The OrigOrdModTime is provided as an optional… |
+| 66 | [ListID](/fix/fields/tags-0-199#tag-66-listid) | String | Optional | Required for rejects against orders which were submitted as part of a list. |
+| 1 | [Account](/fix/fields/tags-0-199#tag-1-account) | String | Optional | Account mnemonic as agreed between buy and sell sides, e.g. broker and institution or investor/intermediary and fund manager. |
+| 660 | [AcctIDSource](/fix/fields/tags-600-799#tag-660-acctidsource) | AcctIDSourceCodeSet | Optional | Used to identify the source of the Account (1) code. This is especially useful if the account is a new account that the Respondent may not have setup yet in… |
+| 581 | [AccountType](/fix/fields/tags-400-599#tag-581-accounttype) | AccountTypeCodeSet | Optional | Type of account associated with an order |
+| 229 | [TradeOriginationDate](/fix/fields/tags-200-399#tag-229-tradeoriginationdate) | LocalMktDate | Optional | Used with Fixed Income for Muncipal New Issue Market. Agreement in principal between counter-parties prior to actual trade date. (Note tag # was reserved in FIX… |
+| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75-tradedate) | LocalMktDate | Optional | Indicates date of trading day. Absence of this field indicates current day (expressed in local time at place of trade). |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 434 | [CxlRejResponseTo](/fix/fields/tags-400-599#tag-434-cxlrejresponseto) | CxlRejResponseToCodeSet | **Required** | Identifies the type of request that a Cancel Reject is in response to. |
+| 102 | [CxlRejReason](/fix/fields/tags-0-199#tag-102-cxlrejreason) | CxlRejReasonCodeSet | Optional | Code to identify reason for cancel rejection. |
+| 1328 | [RejectText](/fix/fields/tags-1200-1399#tag-1328-rejecttext) | String | Optional | Reason description for rejecting the transaction request. |
+| 1664 | [EncodedRejectTextLen](/fix/fields/tags-1600-1799#tag-1664-encodedrejecttextlen) | Length | Optional | Must be set if EncodedRejectText(1665) field is specified and must immediately precede it. |
+| 1665 | [EncodedRejectText](/fix/fields/tags-1600-1799#tag-1665-encodedrejecttext) | data | Optional | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field. |
+| 100 | [ExDestination](/fix/fields/tags-0-199#tag-100-exdestination) | Exchange | Optional | Execution destination as defined by institution when order is entered. Valid values: See "Appendix 6-C" |
+| 1133 | [ExDestinationIDSource](/fix/fields/tags-1000-1199#tag-1133-exdestinationidsource) | ExDestinationIDSourceCodeSet | Optional | The ID source of ExDestination |
 | 453 | [Parties](/fix/groups/parties) | Repeating group | Optional | The Parties component block is used to identify and convey information on the entities both central and peripheral to the financial transaction represented by… |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 
 </StickyTable>

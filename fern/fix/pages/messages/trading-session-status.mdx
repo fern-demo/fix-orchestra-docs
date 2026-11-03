@@ -3,7 +3,13 @@ title: "TradingSessionStatus"
 subtitle: "The Trading Session Status provides information on the status of a market. For markets multiple trading sessions on multiple-markets occurring (morning and evening sessions for instance), this message is able to provide information on what…"
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType h</Badge> <Badge intent="note" minimal>Market Structure Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.4.2</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType h · Market Structure Reference Data · Pre Trade · Added FIX.4.2
+</llms-only>
 
 ## Message structure
 
@@ -13,30 +19,30 @@ subtitle: "The Trading Session Status provides information on the status of a ma
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
 | | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and… |
-| 335 | [TradSesReqID](/fix/fields/tags-200-399#tag-335) | String | Optional | Conditionally required when responding to a specific TradingSessionStatusRequest(35=g) |
-| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Market for which trading session applies |
-| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Market Segment for which trading session applies |
-| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75) | LocalMktDate | Optional | Business day for which trading session applies to. |
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | **Required** | Identifier for trading session |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
-| 338 | [TradSesMethod](/fix/fields/tags-200-399#tag-338) | TradSesMethodCodeSet | Optional | Method of trading |
-| 339 | [TradSesMode](/fix/fields/tags-200-399#tag-339) | TradSesModeCodeSet | Optional | Trading Session Mode |
-| 325 | [UnsolicitedIndicator](/fix/fields/tags-200-399#tag-325) | UnsolicitedIndicatorCodeSet | Optional | Set to 'Y' if message is sent unsolicited as a result of a previous subscription request. |
-| 340 | [TradSesStatus](/fix/fields/tags-200-399#tag-340) | TradSesStatusCodeSet | **Required** | State of the trading session. |
-| 1368 | [TradSesEvent](/fix/fields/tags-1200-1399#tag-1368) | TradSesEventCodeSet | Optional | Identifies an event related to the trading status of a trading session |
-| 2447 | [FastMarketIndicator](/fix/fields/tags-2400-2599#tag-2447) | Boolean | Optional | Indicates if trading session is in fast market. |
-| 567 | [TradSesStatusRejReason](/fix/fields/tags-400-599#tag-567) | TradSesStatusRejReasonCodeSet | Optional | Use with TradSesStatus(340) = 6(Request Rejected). |
-| 341 | [TradSesStartTime](/fix/fields/tags-200-399#tag-341) | UTCTimestamp | Optional | Starting time of the trading session |
-| 342 | [TradSesOpenTime](/fix/fields/tags-200-399#tag-342) | UTCTimestamp | Optional | Time of the opening of the trading session |
-| 343 | [TradSesPreCloseTime](/fix/fields/tags-200-399#tag-343) | UTCTimestamp | Optional | Time of the pre-close of the trading session |
-| 344 | [TradSesCloseTime](/fix/fields/tags-200-399#tag-344) | UTCTimestamp | Optional | Closing time of the trading session |
-| 345 | [TradSesEndTime](/fix/fields/tags-200-399#tag-345) | UTCTimestamp | Optional | End time of the trading session |
-| 1785 | [TradSesControl](/fix/fields/tags-1600-1799#tag-1785) | TradSesControlCodeSet | Optional | Indicates how control of trading session and subsession transitions are performed |
-| 387 | [TotalVolumeTraded](/fix/fields/tags-200-399#tag-387) | Qty | Optional | Total volume (quantity) traded. |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
+| 335 | [TradSesReqID](/fix/fields/tags-200-399#tag-335-tradsesreqid) | String | Optional | Conditionally required when responding to a specific TradingSessionStatusRequest(35=g) |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301-marketid) | Exchange | Optional | Market for which trading session applies |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300-marketsegmentid) | String | Optional | Market Segment for which trading session applies |
+| 75 | [TradeDate](/fix/fields/tags-0-199#tag-75-tradedate) | LocalMktDate | Optional | Business day for which trading session applies to. |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336-tradingsessionid) | TradingSessionIDCodeSet | **Required** | Identifier for trading session |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625-tradingsessionsubid) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
+| 338 | [TradSesMethod](/fix/fields/tags-200-399#tag-338-tradsesmethod) | TradSesMethodCodeSet | Optional | Method of trading |
+| 339 | [TradSesMode](/fix/fields/tags-200-399#tag-339-tradsesmode) | TradSesModeCodeSet | Optional | Trading Session Mode |
+| 325 | [UnsolicitedIndicator](/fix/fields/tags-200-399#tag-325-unsolicitedindicator) | UnsolicitedIndicatorCodeSet | Optional | Set to 'Y' if message is sent unsolicited as a result of a previous subscription request. |
+| 340 | [TradSesStatus](/fix/fields/tags-200-399#tag-340-tradsesstatus) | TradSesStatusCodeSet | **Required** | State of the trading session. |
+| 1368 | [TradSesEvent](/fix/fields/tags-1200-1399#tag-1368-tradsesevent) | TradSesEventCodeSet | Optional | Identifies an event related to the trading status of a trading session |
+| 2447 | [FastMarketIndicator](/fix/fields/tags-2400-2599#tag-2447-fastmarketindicator) | Boolean | Optional | Indicates if trading session is in fast market. |
+| 567 | [TradSesStatusRejReason](/fix/fields/tags-400-599#tag-567-tradsesstatusrejreason) | TradSesStatusRejReasonCodeSet | Optional | Use with TradSesStatus(340) = 6(Request Rejected). |
+| 341 | [TradSesStartTime](/fix/fields/tags-200-399#tag-341-tradsesstarttime) | UTCTimestamp | Optional | Starting time of the trading session |
+| 342 | [TradSesOpenTime](/fix/fields/tags-200-399#tag-342-tradsesopentime) | UTCTimestamp | Optional | Time of the opening of the trading session |
+| 343 | [TradSesPreCloseTime](/fix/fields/tags-200-399#tag-343-tradsespreclosetime) | UTCTimestamp | Optional | Time of the pre-close of the trading session |
+| 344 | [TradSesCloseTime](/fix/fields/tags-200-399#tag-344-tradsesclosetime) | UTCTimestamp | Optional | Closing time of the trading session |
+| 345 | [TradSesEndTime](/fix/fields/tags-200-399#tag-345-tradsesendtime) | UTCTimestamp | Optional | End time of the trading session |
+| 1785 | [TradSesControl](/fix/fields/tags-1600-1799#tag-1785-tradsescontrol) | TradSesControlCodeSet | Optional | Indicates how control of trading session and subsession transitions are performed |
+| 387 | [TotalVolumeTraded](/fix/fields/tags-200-399#tag-387-totalvolumetraded) | Qty | Optional | Total volume (quantity) traded. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText(355) field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field. |
 | | [Instrument](/fix/components/instrument) | Component | Optional | The Instrument component block contains all the fields commonly used to describe a security or instrument. Typically the data elements in this component block… |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 

@@ -2,9 +2,15 @@
 title: "TrdSessLstGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 386</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoTradingSessions (386)](/fix/fields/tags-200-399#tag-386).
+<llms-only>
+Repeating group · NumInGroup 386 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoTradingSessions (386)](/fix/fields/tags-200-399#tag-386-notradingsessions).
 
 ## Members
 
@@ -12,29 +18,29 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336) | TradingSessionIDCodeSet | **Required** | Identifier for Trading Session |
-| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
-| 1327 | [TradSesUpdateAction](/fix/fields/tags-1200-1399#tag-1327) | SecurityUpdateActionCodeSet | Optional | Specifies the action taken for the specified trading sessions. |
-| 207 | [SecurityExchange](/fix/fields/tags-200-399#tag-207) | Exchange | Optional | Market used to help identify a security. Valid values: See "Appendix 6-C" |
-| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301) | Exchange | Optional | Market for which Trading Session applies |
-| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300) | String | Optional | Market Segment for which Trading Session applies |
-| 1326 | [TradingSessionDesc](/fix/fields/tags-1200-1399#tag-1326) | String | Optional | Trading Session description |
-| 338 | [TradSesMethod](/fix/fields/tags-200-399#tag-338) | TradSesMethodCodeSet | Optional | Method of Trading |
-| 339 | [TradSesMode](/fix/fields/tags-200-399#tag-339) | TradSesModeCodeSet | Optional | Trading Session Mode |
-| 325 | [UnsolicitedIndicator](/fix/fields/tags-200-399#tag-325) | UnsolicitedIndicatorCodeSet | Optional | "Y" if message is sent unsolicited as a result of a previous subscription request. |
-| 340 | [TradSesStatus](/fix/fields/tags-200-399#tag-340) | TradSesStatusCodeSet | **Required** | State of trading session. |
-| 567 | [TradSesStatusRejReason](/fix/fields/tags-400-599#tag-567) | TradSesStatusRejReasonCodeSet | Optional | Used with TradSesStatus = "Request Rejected" |
-| 341 | [TradSesStartTime](/fix/fields/tags-200-399#tag-341) | UTCTimestamp | Optional | Starting time of trading session |
-| 342 | [TradSesOpenTime](/fix/fields/tags-200-399#tag-342) | UTCTimestamp | Optional | Time of the opening of the trading session |
-| 343 | [TradSesPreCloseTime](/fix/fields/tags-200-399#tag-343) | UTCTimestamp | Optional | Time of pre-close of trading session |
-| 344 | [TradSesCloseTime](/fix/fields/tags-200-399#tag-344) | UTCTimestamp | Optional | Closing time of trading session |
-| 345 | [TradSesEndTime](/fix/fields/tags-200-399#tag-345) | UTCTimestamp | Optional | End time of trading session |
-| 387 | [TotalVolumeTraded](/fix/fields/tags-200-399#tag-387) | Qty | Optional | Total volume (quantity) traded. |
+| 336 | [TradingSessionID](/fix/fields/tags-200-399#tag-336-tradingsessionid) | TradingSessionIDCodeSet | **Required** | Identifier for Trading Session |
+| 625 | [TradingSessionSubID](/fix/fields/tags-600-799#tag-625-tradingsessionsubid) | TradingSessionSubIDCodeSet | Optional | Optional market assigned sub identifier for a trading phase within a trading session. Usage is determined by market or counterparties. Used by US based futures… |
+| 1327 | [TradSesUpdateAction](/fix/fields/tags-1200-1399#tag-1327-tradsesupdateaction) | SecurityUpdateActionCodeSet | Optional | Specifies the action taken for the specified trading sessions. |
+| 207 | [SecurityExchange](/fix/fields/tags-200-399#tag-207-securityexchange) | Exchange | Optional | Market used to help identify a security. Valid values: See "Appendix 6-C" |
+| 1301 | [MarketID](/fix/fields/tags-1200-1399#tag-1301-marketid) | Exchange | Optional | Market for which Trading Session applies |
+| 1300 | [MarketSegmentID](/fix/fields/tags-1200-1399#tag-1300-marketsegmentid) | String | Optional | Market Segment for which Trading Session applies |
+| 1326 | [TradingSessionDesc](/fix/fields/tags-1200-1399#tag-1326-tradingsessiondesc) | String | Optional | Trading Session description |
+| 338 | [TradSesMethod](/fix/fields/tags-200-399#tag-338-tradsesmethod) | TradSesMethodCodeSet | Optional | Method of Trading |
+| 339 | [TradSesMode](/fix/fields/tags-200-399#tag-339-tradsesmode) | TradSesModeCodeSet | Optional | Trading Session Mode |
+| 325 | [UnsolicitedIndicator](/fix/fields/tags-200-399#tag-325-unsolicitedindicator) | UnsolicitedIndicatorCodeSet | Optional | "Y" if message is sent unsolicited as a result of a previous subscription request. |
+| 340 | [TradSesStatus](/fix/fields/tags-200-399#tag-340-tradsesstatus) | TradSesStatusCodeSet | **Required** | State of trading session. |
+| 567 | [TradSesStatusRejReason](/fix/fields/tags-400-599#tag-567-tradsesstatusrejreason) | TradSesStatusRejReasonCodeSet | Optional | Used with TradSesStatus = "Request Rejected" |
+| 341 | [TradSesStartTime](/fix/fields/tags-200-399#tag-341-tradsesstarttime) | UTCTimestamp | Optional | Starting time of trading session |
+| 342 | [TradSesOpenTime](/fix/fields/tags-200-399#tag-342-tradsesopentime) | UTCTimestamp | Optional | Time of the opening of the trading session |
+| 343 | [TradSesPreCloseTime](/fix/fields/tags-200-399#tag-343-tradsespreclosetime) | UTCTimestamp | Optional | Time of pre-close of trading session |
+| 344 | [TradSesCloseTime](/fix/fields/tags-200-399#tag-344-tradsesclosetime) | UTCTimestamp | Optional | Closing time of trading session |
+| 345 | [TradSesEndTime](/fix/fields/tags-200-399#tag-345-tradsesendtime) | UTCTimestamp | Optional | End time of trading session |
+| 387 | [TotalVolumeTraded](/fix/fields/tags-200-399#tag-387-totalvolumetraded) | Qty | Optional | Total volume (quantity) traded. |
 | | [TradingSessionRules](/fix/components/trading-session-rules) | Component | Optional |  |
-| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
-| 58 | [Text](/fix/fields/tags-0-199#tag-58) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
-| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
-| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
+| 60 | [TransactTime](/fix/fields/tags-0-199#tag-60-transacttime) | UTCTimestamp | Optional | Timestamp when the business transaction represented by the message occurred. |
+| 58 | [Text](/fix/fields/tags-0-199#tag-58-text) | String | Optional | Free format text string (Note: this field does not have a specified maximum length) |
+| 354 | [EncodedTextLen](/fix/fields/tags-200-399#tag-354-encodedtextlen) | Length | Optional | Must be set if EncodedText field is specified and must immediately precede it. |
+| 355 | [EncodedText](/fix/fields/tags-200-399#tag-355-encodedtext) | data | Optional | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field. |
 
 </StickyTable>
 

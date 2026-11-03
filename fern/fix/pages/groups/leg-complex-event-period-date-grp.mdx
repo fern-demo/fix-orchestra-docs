@@ -3,9 +3,15 @@ title: "LegComplexEventPeriodDateGrp"
 subtitle: "LegComplexEventPeriodDateGrp is a subcomponent of LegComplexEventPeriodGrp for specifying fixed period dates and times for an Asian or Strike Schedule option or trigger dates for a Barrier or Knock option."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41376</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegComplexEventPeriodDateTimes (41376)](/fix/fields/tags-41200-41399#tag-41376).
+<llms-only>
+Repeating group · NumInGroup 41376 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoLegComplexEventPeriodDateTimes (41376)](/fix/fields/tags-41200-41399#tag-41376-nolegcomplexeventperioddatetimes).
 
 ## Members
 
@@ -13,8 +19,8 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41377 | [LegComplexEventPeriodDate](/fix/fields/tags-41200-41399#tag-41377) | LocalMktDate | Optional | Required if NoLegComplexEventPeriodDateTimes(41376) &gt; 0. |
-| 41378 | [LegComplexEventPeriodTime](/fix/fields/tags-41200-41399#tag-41378) | LocalMktTime | Optional | Averaging time for an Asian option. |
+| 41377 | [LegComplexEventPeriodDate](/fix/fields/tags-41200-41399#tag-41377-legcomplexeventperioddate) | LocalMktDate | Optional | Required if NoLegComplexEventPeriodDateTimes(41376) &gt; 0. |
+| 41378 | [LegComplexEventPeriodTime](/fix/fields/tags-41200-41399#tag-41378-legcomplexeventperiodtime) | LocalMktTime | Optional | Averaging time for an Asian option. |
 
 </StickyTable>
 

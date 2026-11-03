@@ -2,9 +2,15 @@
 title: "ContAmtGrp"
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 518</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoContAmts (518)](/fix/fields/tags-400-599#tag-518).
+<llms-only>
+Repeating group · NumInGroup 518 · Added FIX.4.4
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoContAmts (518)](/fix/fields/tags-400-599#tag-518-nocontamts).
 
 ## Members
 
@@ -12,9 +18,9 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 519 | [ContAmtType](/fix/fields/tags-400-599#tag-519) | ContAmtTypeCodeSet | Optional | Must be first field in the repeating group. |
-| 520 | [ContAmtValue](/fix/fields/tags-400-599#tag-520) | float | Optional | Value of Contract Amount, e.g. a financial amount or percentage as indicated by ContAmtType (519). |
-| 521 | [ContAmtCurr](/fix/fields/tags-400-599#tag-521) | Currency | Optional | Specifies currency for the Contract amount if different from the Deal Currency - see "Appendix 6-A; Valid Currency Codes". |
+| 519 | [ContAmtType](/fix/fields/tags-400-599#tag-519-contamttype) | ContAmtTypeCodeSet | Optional | Must be first field in the repeating group. |
+| 520 | [ContAmtValue](/fix/fields/tags-400-599#tag-520-contamtvalue) | float | Optional | Value of Contract Amount, e.g. a financial amount or percentage as indicated by ContAmtType (519). |
+| 521 | [ContAmtCurr](/fix/fields/tags-400-599#tag-521-contamtcurr) | Currency | Optional | Specifies currency for the Contract amount if different from the Deal Currency - see "Appendix 6-A; Valid Currency Codes". |
 
 </StickyTable>
 

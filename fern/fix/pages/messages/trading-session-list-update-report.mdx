@@ -3,7 +3,13 @@ title: "TradingSessionListUpdateReport"
 subtitle: "The Trading Session List Update Report is used by marketplaces to provide intra-day updates of trading sessions when there are changes to one or more trading sessions."
 ---
 
+<llms-ignore>
 <Badge intent="info">MsgType BS</Badge> <Badge intent="note" minimal>Market Structure Reference Data</Badge> <Badge intent="tip" minimal>Pre Trade</Badge> <Badge intent="success" minimal>Added FIX.5.0</Badge>
+</llms-ignore>
+
+<llms-only>
+MsgType BS · Market Structure Reference Data · Pre Trade · Added FIX.5.0
+</llms-only>
 
 ## Message structure
 
@@ -13,7 +19,7 @@ subtitle: "The Trading Session List Update Report is used by marketplaces to pro
 |---|---|---|---|---|
 | | [StandardHeader](/fix/components/standard-header) | Component | **Required** | The standard FIX message header |
 | | [ApplicationSequenceControl](/fix/components/application-sequence-control) | Component | Optional | The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and… |
-| 335 | [TradSesReqID](/fix/fields/tags-200-399#tag-335) | String | Optional | Provided for a response to a specific Trading Session List Request message (snapshot). |
+| 335 | [TradSesReqID](/fix/fields/tags-200-399#tag-335-tradsesreqid) | String | Optional | Provided for a response to a specific Trading Session List Request message (snapshot). |
 | 386 | [TrdSessLstGrp](/fix/groups/trd-sess-lst-grp) | Repeating group | **Required** |  |
 | | [StandardTrailer](/fix/components/standard-trailer) | Component | **Required** | The standard FIX message trailer |
 

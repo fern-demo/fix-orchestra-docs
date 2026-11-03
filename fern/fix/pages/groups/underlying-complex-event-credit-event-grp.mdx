@@ -3,9 +3,15 @@ title: "UnderlyingComplexEventCreditEventGrp"
 subtitle: "The UnderlyingComplexEventCreditEventGrp is a repeating component within the UnderlyingComplexEventGrp component used to report applicable option credit events."
 ---
 
+<llms-ignore>
 <Badge intent="note">Repeating group</Badge> <Badge intent="info" minimal>NumInGroup 41716</Badge> <Badge intent="success" minimal>Added FIX.5.0SP2</Badge>
+</llms-ignore>
 
-Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingComplexEventCreditEvents (41716)](/fix/fields/tags-41600-41799#tag-41716).
+<llms-only>
+Repeating group · NumInGroup 41716 · Added FIX.5.0SP2
+</llms-only>
+
+Each repetition starts with the first member listed. The count of repetitions is sent in [NoUnderlyingComplexEventCreditEvents (41716)](/fix/fields/tags-41600-41799#tag-41716-nounderlyingcomplexeventcreditevents).
 
 ## Members
 
@@ -13,13 +19,13 @@ Each repetition starts with the first member listed. The count of repetitions is
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 41717 | [UnderlyingComplexEventCreditEventType](/fix/fields/tags-41600-41799#tag-41717) | String | Optional | Required if NoUnderlyingComplexEventCreditEvents(41716) &gt; 0. |
-| 41718 | [UnderlyingComplexEventCreditEventValue](/fix/fields/tags-41600-41799#tag-41718) | String | Optional | The credit event value appropriate to UnderlyingComplexEventCreditEventType(41717). See http://www.fixtradingcommunity.org/codelists#Credit\_Event\_Types for… |
-| 41719 | [UnderlyingComplexEventCreditEventCurrency](/fix/fields/tags-41600-41799#tag-41719) | Currency | Optional | Specifies the applicable currency when UnderlyingComplexEventCreditEventValue(41718) is an amount. Uses ISO 4217 currency codes. |
-| 41720 | [UnderlyingComplexEventCreditEventPeriod](/fix/fields/tags-41600-41799#tag-41720) | int | Optional | Conditionally required when UnderlyingComplexEventCreditEventUnit(41721) is specified. |
-| 41721 | [UnderlyingComplexEventCreditEventUnit](/fix/fields/tags-41600-41799#tag-41721) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when UnderlyingComplexEventCreditEventPeriod(41720) is specified. |
-| 41722 | [UnderlyingComplexEventCreditEventDayType](/fix/fields/tags-41600-41799#tag-41722) | ComplexEventDateOffsetDayTypeCodeSet | Optional | Specifies the day type for the complex credit events. |
-| 41723 | [UnderlyingComplexEventCreditEventRateSource](/fix/fields/tags-41600-41799#tag-41723) | int | Optional | Identifies the source of rate information used for credit events. See http://www.fixtradingcommunity.org/codelists#Credit\_Event\_Rate\_Source for code list of… |
+| 41717 | [UnderlyingComplexEventCreditEventType](/fix/fields/tags-41600-41799#tag-41717-underlyingcomplexeventcrediteventtype) | String | Optional | Required if NoUnderlyingComplexEventCreditEvents(41716) &gt; 0. |
+| 41718 | [UnderlyingComplexEventCreditEventValue](/fix/fields/tags-41600-41799#tag-41718-underlyingcomplexeventcrediteventvalue) | String | Optional | The credit event value appropriate to UnderlyingComplexEventCreditEventType(41717). See http://www.fixtradingcommunity.org/codelists#Credit\_Event\_Types for… |
+| 41719 | [UnderlyingComplexEventCreditEventCurrency](/fix/fields/tags-41600-41799#tag-41719-underlyingcomplexeventcrediteventcurrency) | Currency | Optional | Specifies the applicable currency when UnderlyingComplexEventCreditEventValue(41718) is an amount. Uses ISO 4217 currency codes. |
+| 41720 | [UnderlyingComplexEventCreditEventPeriod](/fix/fields/tags-41600-41799#tag-41720-underlyingcomplexeventcrediteventperiod) | int | Optional | Conditionally required when UnderlyingComplexEventCreditEventUnit(41721) is specified. |
+| 41721 | [UnderlyingComplexEventCreditEventUnit](/fix/fields/tags-41600-41799#tag-41721-underlyingcomplexeventcrediteventunit) | ProtectionTermEventUnitCodeSet | Optional | Conditionally required when UnderlyingComplexEventCreditEventPeriod(41720) is specified. |
+| 41722 | [UnderlyingComplexEventCreditEventDayType](/fix/fields/tags-41600-41799#tag-41722-underlyingcomplexeventcrediteventdaytype) | ComplexEventDateOffsetDayTypeCodeSet | Optional | Specifies the day type for the complex credit events. |
+| 41723 | [UnderlyingComplexEventCreditEventRateSource](/fix/fields/tags-41600-41799#tag-41723-underlyingcomplexeventcrediteventratesource) | int | Optional | Identifies the source of rate information used for credit events. See http://www.fixtradingcommunity.org/codelists#Credit\_Event\_Rate\_Source for code list of… |
 | 41724 | [UnderlyingComplexEventCreditEventQualifierGrp](/fix/groups/underlying-complex-event-credit-event-qualifier-grp) | Repeating group | Optional | The UnderlyingComplexEventCreditEventQualifierGrp is a repeating component within the UnderlyingComplexEventCreditEventGrp component used to specify qualifying… |
 
 </StickyTable>

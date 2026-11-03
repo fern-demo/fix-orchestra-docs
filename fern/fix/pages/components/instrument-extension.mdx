@@ -3,7 +3,13 @@ title: "InstrumentExtension"
 subtitle: "The InstrumentExtension component block identifies additional security attributes that are more commonly found for Fixed Income securities."
 ---
 
+<llms-ignore>
 <Badge intent="note">Component</Badge> <Badge intent="note" minimal>Common</Badge> <Badge intent="success" minimal>Added FIX.4.4</Badge>
+</llms-ignore>
+
+<llms-only>
+Component · Common · Added FIX.4.4
+</llms-only>
 
 ## Members
 
@@ -11,12 +17,12 @@ subtitle: "The InstrumentExtension component block identifies additional securit
 
 | Tag | Name | Type | Presence | Description |
 |---|---|---|---|---|
-| 668 | [DeliveryForm](/fix/fields/tags-600-799#tag-668) | DeliveryFormCodeSet | Optional | Identifies the form of delivery. |
-| 869 | [PctAtRisk](/fix/fields/tags-800-999#tag-869) | Percentage | Optional | Percent at risk due to lowest possible call. |
+| 668 | [DeliveryForm](/fix/fields/tags-600-799#tag-668-deliveryform) | DeliveryFormCodeSet | Optional | Identifies the form of delivery. |
+| 869 | [PctAtRisk](/fix/fields/tags-800-999#tag-869-pctatrisk) | Percentage | Optional | Percent at risk due to lowest possible call. |
 | 870 | [AttrbGrp](/fix/groups/attrb-grp) | Repeating group | Optional |  |
-| 2736 | [CommodityFinalPriceType](/fix/fields/tags-2600-2799#tag-2736) | CommodityFinalPriceTypeCodeSet | Optional | Final price type of the commodity as specified by the trading venue. |
+| 2736 | [CommodityFinalPriceType](/fix/fields/tags-2600-2799#tag-2736-commodityfinalpricetype) | CommodityFinalPriceTypeCodeSet | Optional | Final price type of the commodity as specified by the trading venue. |
 | 2734 | [IndexRollMonthGrp](/fix/groups/index-roll-month-grp) | Repeating group | Optional | Used for specifying multiple roll months in a given year for an index. |
-| 2738 | [NextIndexRollDate](/fix/fields/tags-2600-2799#tag-2738) | LocalMktDate | Optional | Next index roll date. |
+| 2738 | [NextIndexRollDate](/fix/fields/tags-2600-2799#tag-2738-nextindexrolldate) | LocalMktDate | Optional | Next index roll date. |
 | | [FloatingRateIndex](/fix/components/floating-rate-index) | Component | Optional | Used to identify the rate index for a floating rate coupon. |
 | 2746 | [ReferenceDataDateGrp](/fix/groups/reference-data-date-grp) | Repeating group | Optional | Used to carry the different date-time stamps related to the reference data entry. |
 
