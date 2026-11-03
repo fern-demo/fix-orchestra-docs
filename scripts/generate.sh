@@ -5,7 +5,7 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 REPO="${ORCHESTRA2DOC_REPO:-https://github.com/fern-demo/fix-orchestra.git}"
 BRANCH="${ORCHESTRA2DOC_BRANCH:-devin/1793657679-fern-mdx-output}"
 WORK="${ROOT}/.build/fix-orchestra"
-SPEC="${1:-${WORK}/repository-util/src/test/resources/OrchestraFIXLatest.xml}"
+SPEC="$(realpath "${1:-${ROOT}/fern/spec/OrchestraFIXLatest.xml}")"
 
 rm -rf "${WORK}" && git clone --depth 1 --branch "${BRANCH}" "${REPO}" "${WORK}"
 (cd "${WORK}" && mvn -q -B -DskipTests install && cd orchestra2doc && mvn -q -B -DskipTests package)
